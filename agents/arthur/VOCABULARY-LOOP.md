@@ -1495,8 +1495,149 @@ many tiles, many hands, crops that ripen by TIME and wither by neglect,
 a season log that remembers who harvested what, one 8KB comp, no
 script, no new verb, the growth family's own arithmetic doing the
 growing.
-- [ ] Music sequencer: step-grid composition on an instrument entity,
+- [x] Music sequencer: step-grid composition on an instrument entity,
       shared playback state, late-join sync.
+      DONE vocab-25 (2026-09-16): comp {type:"sequencer"} — reactSequencer
+      in server/sequencer.ts rides reactToUse's dispatch after tour (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts — `use` args ride verbatim so `steps` needed no
+      validator change). Contract in § SEQUENCERS CONTRACT implemented as
+      written. Evidence: tools/sequencertest.ts RED 20 failing (engine
+      absent; 26 pre-passing = shared math + shell gates, the honest vocab
+      class) then ALL PASS 46/46; sequencertest registered in the
+      servergate battery; servergate battery verdict recorded in the
+      vocab-25 ledger entry; mcpl manifest 28/0 + effective 42/0 + denoise
+      green after the agent.ts hunks (describeSequencer affordance,
+      exclusion-list entry). shared/sequencer.js shared verbatim by engine
+      + tests + browser realization + mcpl look(). Scratch worlds only; no
+      production world touched. No eye-check owed (zero new visuals — the
+      sound rides the existing music synth; headless matrix proves
+      protocol; an in-browser AUDIBLE read of a live loop is the one
+      remaining ear-check, same class as vocab-9/18).
+
+### SEQUENCERS CONTRACT (vocab lane — drafted and implemented vocab-25, 2026-09-16)
+
+**Trigger.** A sequencer is an entity carrying
+`comp {type:"sequencer", data:{...}}`. The action strings `seq` (aliases
+`sequence`, `pattern`), `start` (alias `run`), and `stop` (alias `pause`)
+are SEQUENCER vocabulary on the freeform `use {id, action}` path (the
+reactions doctrine: other action strings pass through untouched — a
+machine ignoring `use {action:"ring"}` is exactly correct; seq/start/stop
+are DISJOINT from all 19 prior families' actions). Attaching/removing the
+comp is builder (rank 1) — the author's standing decision that this thing
+plays, identical doctrine to the whole family.
+
+**State — the fold is the machine; the STEP is time-derived.** Three
+engine keys are the durable state: `steps` (the grid — ≤16 steps, each an
+array of ≤4 voices; a voice is a scale degree integer, a note-name
+string, a raw-hz float, or null = rest; cells ride VERBATIM-SANITIZED,
+NEVER hz-resolved — resolution is consume-time, so the fold is stable),
+`playing` (bool), `at` (the run anchor, ms epoch). Every seq/start/stop
+is ONE world-authored comp transition write
+`comp {id, type:"sequencer", data:{...authored, steps, playing, at}}`.
+ENGINE_KEYS are stripped from the authored carry at each write
+(weatherzone/vendor doctrine — a re-authored comp over a live machine can
+never smuggle a stale grid, run bit, or anchor). The CURRENT STEP is a
+pure function of fold + now: `stepAt(cfg, steps, playing, at, now)` in
+shared/sequencer.js (the doorYaw/stageAt closed-form doctrine) — late
+join, restart, replay, and fork all derive the same beat with ZERO
+traffic between steps. NOTHING else is stored anywhere.
+
+**Sound — the particles doctrine, applied to music.** The sound is a
+DERIVED PERCEPT, never a log entry, never a broadcast: each browser
+synthesizes its own notes through the music family's `playNoteAt` (the
+water/soundpost standing-loop doctrine — one shared AudioContext, the
+world-volume slider, distance attenuation, camera pan, all for free).
+The engine NEVER emits per-step traffic; a playing machine costs the log
+nothing after its start write. A late joiner resumes mid-pattern at the
+right step (the absolute step-count key k is fold-derived — no catch-up
+burst, silent seed then next transition sounds). A stopped machine is
+silent (stepAt i:-1 — no sound, no cost).
+
+**seq — writing the grid.** `use {action:"seq", steps:[…]}` — rank 0 +
+arm's reach: the grid is the community's pattern. The incoming array is
+sanitized through the same normalize (one arithmetic): >16 steps
+truncate, >4 voices truncate, unresolvable voices become rests (a wrong
+pitch must not kill the pattern — clamp-not-reject), everything noted in
+`sequencer-lint`. A seq while PLAYING keeps the anchor (grid swap mid-run
+— phase continuity; the run never stutters). An identical grid is a
+no-op (`the pattern is unchanged` — mint-nothing). Non-array steps skip
+fail-closed.
+
+**start/stop — running it.** Both rank 0 + arm's reach (anyone present —
+the author's published behavior). start writes `playing:true, at:now`
+(anchors the beat at this verb's sequencer clock); stop writes
+`playing:false` keeping the anchor (a future start re-anchors at its own
+now). start on playing / stop on stopped / start with no grid are no-ops
+that still log the `use` and skip with `sequencer-skip`.
+
+**Effects.** Every transition appends TWO entries, in order: the ONE comp
+transition write and a `say` (actor `world`, args `{text:<line>, id,
+sq:{seq|start|stop: true, who, at}, cause:<use seq>, by:<user>}` — the
+phrases/doors/vendor provenance grammar exactly). Line defaults: seq
+`"<who> writes a pattern"`, start `"the music begins"`, stop `"the music
+stops"` (authored `seqAt`/`startAt`/`stopAt` override, ≤200c clamped). A
+`sequencer-trigger` flight entry (kind `reaction`) records cause→effect.
+No other verb can be minted from a sequencer use — say + comp-on-self
+ONLY.
+
+**Authority/reach.** Using a machine is rank 0 (anyone present) plus the
+ARM'S-REACH gate (vPunt arithmetic): the user's LIVE pose within `reach`
+metres (authored, clamped [2,12], default 4) of the machine's LIVE
+position (lease stream pos if leased, folded pos otherwise).
+Out-of-reach use is a `sequencer-skip` naming the distance. Spectators
+bounce at the shell (`use` is spectator-gated there). Lock composes as
+for doors (lock refuses place/punt/spawn/comp/remove — not `use`): a
+locked machine still plays. Authority NEVER widens: effects are say +
+comp-on-self ONLY.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use or comp never
+re-fires. On restart the world folds grid + run bit + anchor — a machine
+playing at crash RESUMES at its anchor and every client keeps the beat
+(time held the truth; proven). Late join folds identical truth. The says
+read as history.
+
+**Rate/abuse boundaries (the whole abuse story is structural).** (a) The
+grid is bounded: ≤16 steps × ≤4 voices — the comp cannot grow
+unboundedly. (b) Transitions are verb-rate bounded (12/4s) and no-op
+closed. (c) The sound costs ZERO server traffic — no broadcast budget,
+no log weight, no presence spam; the abuse ceiling of a playing machine
+is one client-side oscillator per step. (d) bpm clamps [20,240]; sec
+[0.05,2] d0.35 (staccato); gain [0.05,1] d0.5. (e) The 8KB degrade keeps
+{steps, playing, at} + lint (fail closed against bloat, never against
+the hand).
+
+**Failure behavior.** Malformed comp → clamp + `sequencer-lint`
+(particles-lint doctrine): bpm/gain/sec/reach as above, wave ∈
+sine/square/sawtooth/triangle d sine, steps capped/noted, voices
+capped/noted, unresolvable voices → rests + noted, lines clamped 200c,
+unknown keys ride (the bag is public annotation). The authored shape
+rides VERBATIM in the engine's carry (regions doctrine). Missing entity
+→ silent pass-through. The whole reaction wrapped in try/catch (house
+rule 3 — no machine takes the server down).
+
+**Browser path.** `client/lib/sequencer.js` (the door.js/soundpost.js
+pattern — one import line in main.js beside soundpost, zero other edits
+to the pilot-dirty file): per frame, per machine, the same closed form
+(stepAt at serverNow()); on a step-count advance, play stepNotes through
+the music family's own playNoteAt. State is readable from any folded
+snapshot; scripts and future UI consume `comp.sequencer` without a new
+protocol surface. A visual tier (step lights, a grid panel) is
+deliberately deferred — protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the machine via `shared/sequencer.js
+describeSequencer` (the describeDoor pattern) — grid size, run state,
+and the derived step (derived at read time, so it is live), with the
+start/stop action hint. An agent drives the machine through the ordinary
+`use` verb.
+
+**Intent.** The world plays back. A plaza loop station a child can start,
+a garden bell pattern that runs all afternoon, a dance floor that keeps
+the beat through every crash and every late joiner — one 8KB comp, no
+script, no per-step traffic, the music family's synth doing the sounding,
+time itself keeping the sync.
 - [ ] Weather-lamp composition: lantern tours that obey weatherzones
       (lamps dim under rain windows, restore on release) — first
       affordance-pair composition.

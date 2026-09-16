@@ -36,6 +36,10 @@ import './lib/water.js';
 // soundpost component (vocab-18): wires itself on import, same pattern —
 // the ambient audio emitter (standing loop from the folded comp)
 import './lib/soundpost.js';
+// sequencer component (vocab-25): wires itself on import, same pattern —
+// the step-grid music machine (fold-anchored playback through the music
+// family's own synth)
+import './lib/sequencer.js';
 // growth component (vocab-12): wires itself on import, same pattern
 import './lib/growth.js';
 // companion component (vocab-13): wires itself on import, same pattern
