@@ -18447,3 +18447,85 @@ shared-budget use (D+0, E+0).
   tail running total 2370874 at gate). STANDING RECOMMENDATION
   carried unchanged (s182-s393): end the SURVEY lane or convert to a
   no-LLM monitor when attended.
+
+## Judged index (survey-395)
+
+- survey-395 (2026-09-16, ARRIVAL EPOCH, thirtieth tick of the
+  unfreeze — ZAI FALLBACK 3/3 landed disclosed (native vision ABSENT
+  from this cron session's tool catalog, tool_search fresh this tick:
+  sources = reprompt/terminal/zai-vision only; native-owed register rows
+  NOT discharged, cron-disclosed — survey-345/s387-s394 precedent):
+  gate ALL PASS real exit 0 FIRST TRY at tick-start HEAD ee97fde6
+  (struct-207 tip — the arrival's own placement commit; ledger law
+  EXACT 2370882); HEAD advanced mid-tick ee97fde6 -> ccd0d8d5
+  (sweep-282 arrival-epoch tick — SAME arrival independently classified
+  tuple-exact, foreign files only; gate RE-RUN at new HEAD ALL PASS
+  exit 0, polish-270 epoch law). Census via committed next-live-census
+  .ts exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B
+  BYTE-IDENTICAL), each 344 entities, each 226669B, each sha256-16
+  80d7954bf2b21f70. Set-diff vs survey-394 baseline (343,
+  4655f01e7c748ec5): +1 ARRIVAL nx-struct-viviani (-25.809895,
+  0.013415, 369.098699) yaw 3.735004599267865 (214deg procession
+  convention), lib store/6b7522f214db57ca.glb, comp {} / 0 departures /
+  0 lib flips / 0 pos-yaw-scale-comp drift on all 343 holders —
+  classified SIBLING WORK: struct-207's committed PLACED_VERIFIED tuple
+  verbatim (lib == struct-206 v1 bank pin 6b7522f2), the exact
+  predicted arrival (s394 named it). ARRIVAL-GATED JUDGE LAWFUL (s390/
+  s392 precedent): slice = the 1 new-bytes object (owner's own
+  acceptance was ZAI fallback — the independent read the arrival
+  needs). Live store bytes fetched curl UA HTTP 200 30656B
+  served-sha256 a00b5473efb7bb7 (lib 6b7522f2 = struct-206 v1 upload
+  sha, DRACO re-encode law — served != upload, struct-104 class);
+  render via NEW survey395-render-viviani.ts (survey392
+  -render-mandelbrot chassis verbatim incl. face-on night frame +
+  closeface; DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 7
+  frames reviews/survey395-viviani/ (ignored residue), served-bytes
+  bounds 3.400x3.350x3.400 grounded y~0 — EXACTLY struct-206's
+  committed envelope (D8 parity). Deterministic probe
+  (survey395-warm-probe.py, s392 chassis ported): night BINDING frame
+  EXACTLY 1 warm cluster 12px x539-541 y330-335 — s363 sole-bead law
+  PASS, coordinates IDENTICAL to struct-206's own committed probe;
+  night-face 2 clusters 95px x617-627 y303-318 + 4px x610-611
+  y310-312 = predicate-split of the ONE bead (same source-split class
+  the owner decode-discharged via D5 one-emissive-node; centers ~2px
+  apart inside the single bead). VERDICT: nx-struct-viviani CLEAN
+  11/11 — gameplay 18m 4/4 PASS (deliberate math monument; frame
+  x399-562 y250-408 + strap figure-eight + plinth read; upper loop
+  crisp against sky, apex (505,257); grounding chain unbroken, cast
+  shadow x302-378 y417-424; zero voids/breaks/z-fight; bead sighting
+  (531,327) lands INSIDE the probe's night cluster region) + closeface
+  4/4 PASS (construction traceable end-to-end: pole weld (478,118) ->
+  right bulge (648,250) -> bead (622,296) -> lower lens -> base
+  (470,462); frame square-complete 368x363px, top side at N pole;
+  stone-matte vs iron-sleek distinct; hollow deliberate, horizon
+  visible through openwork; zero seams; pole-junction congestion note
+  = owner's own disclosed family-consistent cosmetic class) + night-
+  face 3/3 PASS (sole light = the bead (617,310), tight halo confined
+  x608-628 y300-320; zero spill — strap arms black to within px of
+  bead, frame/plinth neutral; silhouette intact against navy sky).
+  Judge bead sightings (gameplay 531,327 / night-face 617,310) land
+  INSIDE the probe clusters — probe+judge concur. CONCURS struct-206
+  banked v1 ACCEPT (probe 8/8 + RED; decode 8/8 + RED; owner judge
+  ACCEPT ZAI-fallback, dash-squiggle finding falsified as true cast
+  shadow) + struct-207 PLACED_VERIFIED + sweep-282's independent
+  tuple-exact arrival classification — no defect, no candidate row.
+  Native re-judge debt on viviani v1 carries (already owed per
+  struct-206; board 20 owed unchanged: monkeysaddle gate, hypar row
+  22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+  melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix v1,
+  archispiral v1, nephroid v1, folium v1, rhodonea v1, versiera v2,
+  elliptic v3, mandelbrot v1, viviani v1). Pools: IMPROVE-PLAN md5
+  c0f569d0 unchanged (284th check); SURVEY CANDIDATES 0 OPEN rows; no
+  candidate row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0).
+  Foreign working-tree dirt at read = sibling lanes in flight (same
+  families as s394) — untouched. Index verified empty pre-commit (zero
+  staged files, shared-index law); append anchor grep-verified unique
+  pre-write (0 prior "survey-395" strings in any file; anchor count 1).
+  Census baseline for next tick: /tmp/survey395-census-a.json (344,
+  226669B, sha256-16 80d7954bf2b21f70 — byte-identical to sweep-282's
+  rewritten shared baseline). Zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use, ZERO ledger append
+  (loop law 4: append only when routing; CLEAN concurrence routes
+  nothing; ticks 211-394 precedent). STANDING RECOMMENDATION carried
+  unchanged (s182-s394): end the SURVEY lane or convert to a no-LLM
+  monitor when attended.
