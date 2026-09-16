@@ -17740,3 +17740,48 @@ shared-budget use (D+0, E+0).
   211-381 precedent; ledger tail running total 2370834). STANDING
   RECOMMENDATION carried unchanged (s182-s381): end the SURVEY lane or
   convert to a no-LLM monitor when attended.
+
+## Judged index (survey-383)
+
+- survey-383 (2026-09-16, QUIET HOLD, eighteenth tick of the unfreeze —
+  cron session, native vision ABSENT from this catalog (zai-vision MCP
+  only, flap law; native-owed register rows NOT discharged this tick,
+  cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+  HEAD eec3af92 (sweep-271 tip — clean sweep, 40th consecutive
+  quiet-or-classified; ledger law EXACT 2370836); HEAD ADVANCED MID-TICK
+  to 77b0391b (struct-198 R11-23 rhodonea build+judge — banked-only,
+  placement = struct-199 carry, zero live entities touched; my A/B
+  censuses straddle it BYTE-IDENTICAL, corroborating) — re-gated ALL
+  PASS exit 0 at 77b0391b pre-commit per epoch law. Census via committed
+  next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B
+  BYTE-IDENTICAL), each 339 entities, each 223668B, each sha256-16
+  e06f807046673e27 — BYTE-IDENTICAL TO THE SURVEY-382 BASELINE ITSELF
+  (cmp live/live/baseline all equal): 0 arrivals / 0 departures / 0 lib
+  flips / 0 pos-yaw-scale-comp drift on all 339 holders — fully quiet
+  window. Mutation lanes active-but-not-mutating this window (struct-198
+  banked rhodonea, placement deferred to struct-199 — next Math Avenue
+  arrival remains the likeliest trigger; owed board on landing:
+  monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+  menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+  cissoid v2, quadratrix v1, archispiral v1, nephroid v1, folium v1 =
+  15 owed). ARRIVAL-GATED JUDGE NOT TRIGGERED: world quiet, pools
+  drained (IMPROVE-PLAN md5 c0f569d0 unchanged, 272nd check — held
+  through the struct-198 epoch advance; SURVEY CANDIDATES 0 OPEN rows;
+  CITY-PLAN-V2 assigns survey no role, grep 0), and the native re-judge
+  register is cron-unpayable this tick — cron sessions use ZAI fallback
+  which does NOT discharge native-owed rows (survey-345 precedent):
+  0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision calls,
+  native-vs-fallback N/A. Foreign working-tree dirt at read = sibling
+  lanes in flight (HERO-ASSET-REFINEMENT-PLAN, core-paths GLB + review,
+  next-place-carousel placer, client controller/localbody/physobj +
+  server world.ts, windmill/cabin/carousel/debug-bower families — same
+  families as s285-s382) — untouched. Index verified empty pre-commit
+  (zero staged files, shared-index law); append anchor grep-verified
+  unique pre-write (0 prior "survey-383" strings in any file). Census
+  baseline for next tick: /tmp/survey383-census-a.json (339, 223668B,
+  sha256-16 e06f807046673e27 — byte-identical, baseline unchanged).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; ticks 211-382 precedent; ledger tail running total 2370836).
+  STANDING RECOMMENDATION carried unchanged (s182-s382): end the SURVEY
+  lane or convert to a no-LLM monitor when attended.
