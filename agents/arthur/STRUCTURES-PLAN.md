@@ -12831,3 +12831,83 @@ tracked), assets/mkv3-nephroid.ts (NEW, staged -f), reviews/
 struct194-nephroid/ (10 frames, ignored), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-194, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-195 (2026-09-15): NEPHROID PLACEMENT TICK — committed carry from
+## struct-194 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past archispiral, on-line step az94/r310
+
+195%3=2 placement-slot cadence WITH a takeable banked form (struct-194:
+"placement = struct-195 carry"; the 178..195 lane precedent — a banked form
+places on the next tick regardless of N%3, build+judge/place alternation
+held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..194): 14 owed — monkeysaddle v2 native-18m-PASS placement GATE,
+hypar row 22 native-only, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix
+v1, archispiral v1, nephroid v1 (fallback-judged acceptances, all placed or
+banked; nephroid placed THIS tick — debt stays owed). Gate ALL PASS real
+exit 0 tick-start at 1b6b4a32 (pressure-22) + RE-RUN clean immediately
+before the mutation at 3bb22848 (sibling commit city-159 landed mid-tick —
+read-only HOLD; epoch law; /tmp/struct195-gate2.txt, unpiped). Shard drained
+fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 24th tick, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-194 -> tag struct-195 (re-checked
+immediately before append).
+
+Local bytes re-verified sha256
+3557b1660affbd67214d811557ef1776a33eaa8606e1f52c71f2960d52af37bc ==
+struct-194 bank pin BEFORE upload (shasum -a 256, mtime Sep 15 20:22).
+
+SEAT (struct195-scan + struct195-select, fresh 337 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 34 forms; 38 math-family
+structs standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 -> archispiral300
+(~10m steps). 593 lawful band candidates; the nephroid takes the NEXT
+ON-LINE STEP: az94.0 r310.0, 10.0m step == cissoid->quadratrix->archispiral
+rhythm. NN 10.00 vs nx-struct-archispiral (law 8.0), SAT 5.50 vs
+nx-struct-archispiral at FINAL yaw (law 1.4), walk-clear 281.41.
+
+YAW LAW (struct-104 oblique-read, struct-194 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean
+(the melencolia/fourier/cissoid/quadratrix/archispiral convention). The
+outbound walker reads the construction face obliquely on approach; the
+5.10m cup span runs az124/304.
+
+TERRAIN (struct195-terrain-nephroid.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 5.10x0.50 ribbon): spread 11.3mm,
+PY = 0.049153.
+
+PLACEMENT (next-place-struct195.ts, struct193 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 337 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.25x1.63 at yaw 214):
+NN floor archispiral 10.00, SAT worst archispiral 5.50 — clean. 1 upload
+(content-addressed store/3557b1660affbd67.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 337 -> 338 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (bead
+emissive-in-GLB glow_ns_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: nephroid v1 stays OWED
+(fallback-judged acceptance, disclosed; probe L1 caustic identity +
+envelope-contact derivation + decode D3 ribbon law are the binding
+evidence); plus monkeysaddle gate, hypar row 22, kuen v3, catalan v1,
+clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+cissoid v2, quadratrix v1, archispiral v1 — 14 owed.
+
+Bill eye-check pointer: on Math Avenue past the archispiral — a stone cup
+facing an iron lamp-post: five rays frozen entering and reflecting, and
+inside the cup the curve their reflections trace — the nephroid, the same
+bright crescent that lives at the bottom of a coffee cup in the morning
+sun. Walk the rim: the ribbon's two arcs meet at a sharp point (the cusp)
+with one warm bead; after dark that bead is the only light, burning
+exactly where all the reflected rays touch.
+
+Files: struct195-scan-nephroid.ts + struct195-select-nephroid.ts +
+struct195-terrain-nephroid.ts + next-place-struct195.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-195,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
