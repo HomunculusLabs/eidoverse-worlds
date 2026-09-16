@@ -2021,9 +2021,181 @@ and a machine that keeps the beat through every crash. One vendored map
 riding an 8KB comp, no script, no new verb, the parents' contracts
 untouched.
 
-- [ ] Harvest festival script: composed choreography — bells schedule,
+- [x] Harvest festival script: composed choreography — bells schedule,
       weather window, lantern tour, vendor restock — one authored
       timeline driving four affordance families.
+      DONE vocab-29 (2026-09-16): comp {type:"festival"} — reactFestival in
+      server/festival.ts rides reactToUse's dispatch after sequencer (one
+      import + one dispatch hunk in reactions.ts) + FestivalEngine 1Hz sweep
+      on the BehaviorHost tick (the vocab-2/3/14/17/22 precedent; the same
+      two-hunk shape in behaviors.ts). Contract in § FESTIVALS CONTRACT
+      below implemented as written. The tour doctrine (vocab-22)
+      GENERALIZED: one authored timeline drives FOUR families through their
+      OWN doors — each family's transition lifted into an exported core
+      (bellToll, zoneGates+zoneWrite, tourTransitionCore,
+      vendorRestockCore — the igniteCompanion precedent; the user path now
+      calls the same cores, so parent behavior is byte-derived, proven by
+      belltest 37 + weatherzonetest 48 + vendortest 54 + vendorseqtest 33 +
+      tourtest 36 all re-run green after the refactor) and every family's
+      OWN gates still run under festival driving (zone menu/one-sky/strobe,
+      tour no-op + run cap, vendor no-op closure — proven by the resumed
+      arc's no-op assertions). Evidence: tools/festivaltest.ts RED 24
+      failing (engine absent; 17 pre-passing = shell gates + shared math,
+      the honest vocab class; the RED run itself caught one shared-math
+      gap — family cues with no member named now DROP at normalize) then
+      ALL PASS 43/43 (authoring bounce/begin comp+say with festival
+      provenance/cue-0 bell say/cue-1 zone ask with who:null + hold
+      shape/cue-2 tour begin through its own write/cue-3 restock full
+      shelf with who:null/cue-4 narration bell-grammar/one-comp-per-batch
+      arithmetic 6 total/late-join folds all four truths/pass-through/
+      halt holds/re-begin re-anchors/restart RESUME (crash after cue 0:
+      rain asked exactly once more, bell never re-tolled, arc completed
+      atCue:4)/family no-op closures hold under driving/unknown-position/
+      out-of-reach/spectator/no-op halts/run cap 1/second festival skips/
+      final restart mint-nothing); festivaltest registered in the
+      servergate battery (first battery run: sequencertest 15/1 +
+      vendorseqtest 28/1 — BOTH re-proven ALL PASS standalone (46/46,
+      33/33), the documented boot-contention class under battery load, my
+      engine touches neither); mcpl manifest 28/0 + effective + denoise
+      green after the agent.ts hunks (describeFestival affordance line,
+      exclusion-list entry). Scratch worlds only; no production world
+      touched. No eye-check owed (zero new visuals — every effect is a
+      parent family's own percept: chat says, the weather verb, lamp
+      companions, presence sounds).
+
+### FESTIVALS CONTRACT (vocab lane — drafted and implemented vocab-29, 2026-09-16)
+
+**Trigger.** A festival master is an entity carrying
+`comp {type:"festival", data:{...}}`. The action strings `begin` and `halt`
+are FESTIVAL vocabulary on the freeform `use {id, action}` path (the
+reactions doctrine: other action strings pass through untouched — a master
+ignoring `use {action:"ring"}` is exactly correct; begin/halt are DISJOINT
+from all 20 prior families' actions — a master post carries no tour comp,
+so a festival+tour hybrid on one entity stays unambiguous by comp key).
+Attaching/removing the comp is builder (rank 1) — the author's standing
+decision that this place choreographs four families, identical doctrine to
+the whole line.
+
+**Members — one per family, validated at fire.** The comp names at most
+one member entity per family: `bell`, `zone`, `tour`, `stall`. Members are
+validated at FIRE time (the tour line-member doctrine): a missing member
+or a comp-less entity skips with `festival-skip` naming it, and the
+timeline advances regardless — a dead member never stalls the show. A
+family cue whose family has no member named DROPS at normalize (a toll
+with no bell can never fire; noted by name).
+
+**State — the fold is the progress; TIME advances it.** The authored
+timeline is a static table: `cues` (≤12, sorted by `t` seconds-since-begin
+∈ [0,3600], each `{t, toll:true?, sky:"<state>"?, tour:"begin"|"halt"?,
+restock:true?, line?}` — at most one effect key per family plus one
+narration line; malformed effect keys DROP, never clamp — a clamped
+weather or op would drive the wrong transition), `reach` [2,12] d4,
+`beginAt`/`haltAt` lines ≤200c. The ENGINE writes exactly THREE progress
+keys — `playing` (bool), `atCue` (the last fired cue index, −1 = none),
+`at` (the begin anchor, ms epoch) — STRIPPED from the authored carry at
+every write (weatherzone/tour doctrine). The CURRENT cue is
+`cueAt(cues, playing, atCue, at, now)` IMPORTED from shared/tour.js (the
+closed form reads cues[k].t only — family-agnostic; one arithmetic, never
+re-implemented), so late join, restart, replay, and fork all derive the
+same standing cue with zero traffic between cues. NOTHING else is stored
+anywhere.
+
+**The sweep — transitions only, through each family's OWN doors.**
+FestivalEngine rides the 1Hz BehaviorHost tick (the bell/tour precedent).
+When the derived cue passes the folded marker, every crossed cue applies
+through its family's own transition (the vocab-22 doctrine generalized —
+one family drives another THROUGH that family's arithmetic):
+- `toll:true` → `bellToll` (server/bell.ts, exported) — the bell family's
+  own say + presence-plane strikes, pitch by the current world hour;
+- `sky:"<state>"` → `zoneWrite` through `zoneGates`
+  (server/weatherzone.ts, exported) — the zone family's own menu
+  boundary, one-sky law, and strobe closure all run: a festival cannot
+  strobe the sky any more than a hand can; an ask during another zone's
+  active hold skips; a same-state ask extends;
+- `tour:"begin"|"halt"` → `tourTransitionCore` (server/tour.ts,
+  exported) — with the tour family's OWN no-op closure (begin on playing
+  mints nothing) enforced by the festival tier before the call;
+- `restock:true` → `vendorRestockCore` (server/vendor.ts, exported) —
+  the full-shelf restore, no-op when the shelf already reads full;
+- `line` → ONE say (the bell grammar — `festival:{cue, at}`, NO
+  cause/by: TIME caused it).
+The fold re-anchors ONCE per sweep batch; sub-second cues coalesce
+(disclosed: the sweep is 1Hz). Halted festivals cost nothing.
+
+**Effects — the festival mints only its own two.** begin/halt append TWO
+entries, in order: the ONE comp transition write `{...authored, playing,
+atCue, at}` (begin re-anchors atCue:−1/at:now; halt keeps atCue/at
+frozen) and a `say` (actor `world`, args `{text:<line>, id,
+festival:{op:"begin"|"halt", who, at}, cause:<use seq>, by:<user>}` —
+the phrases/tour provenance grammar exactly). Line defaults `the festival
+begins` / `the festival halts` (authored beginAt/haltAt override).
+Family-driven transitions carry `who:null` and NO cause/by (the bell
+grammar: a human began the festival, but TIME tolled the bell) — they
+ride each family's existing world-authority transitions, exactly as a
+hand would have minted them. A `festival-trigger` flight entry (kind
+`reaction`) records cause→effect on hand transitions and sweep batches.
+
+**Authority — widened nothing.** begin/halt are rank 0 + the ARM'S-REACH
+gate (vPunt arithmetic): the user's LIVE pose within `reach` of the
+master's LIVE position (lease stream pos if leased, folded pos
+otherwise). Out-of-reach use is a `festival-skip` naming the distance.
+Spectators bounce at the shell. Attach is builder. No new verb, no new
+action string, no rank: the only writes the festival tier itself mints
+are its own comp-on-self + says; every family effect is the family's own
+transition through its own gates.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path and the live tick. On restart the fold
+carries playing/atCue/at — a festival playing at crash RESUMES at its
+anchor: the sweep fires only uncrossed cues (crossedCues from the FOLDED
+marker — a restart mid-festival never re-tolls a cue the fold already
+recorded; proven). A halted festival stays halted. Late join folds the
+standing cue plus every family's current state (each member's own comp) —
+the complete truth.
+
+**Rate/abuse boundaries.** (a) Run cap: FESTIVAL_RUN_CAP (1) festivals
+playing per world; a begin past the cap skips with `festival-cap`.
+(b) Sweep budget: at most 4 festival transition batches per sweep
+world-wide (festival-cap — caught next sweep). (c) Cues bounded by
+normalize (≤12; malformed effects drop). (d) begin/halt verb-rate bounded
+and no-op closed. (e) FAMILY gates run per cue — the zone's 30s hold
+floor and strobe closure bound even a festival's sky asks; the bell's
+say-per-toll is the bell family's own. (f) Lint once per boot per
+festival at the sweep (festival-lint); per-transition lint rides each use
+attempt (door doctrine).
+
+**Failure behavior.** Malformed comp → clamp + `festival-lint`
+(particles-lint doctrine): t clamped [0,3600], member ids must be strings
+(non-strings dropped + noted), cue effect keys drop when malformed
+(illegal weather, unknown tour op, non-true toll/restock — noted by
+name), cue lines ≤200c, unknown keys ride (the bag is public
+annotation). A cue with no surviving effect and no line is not a cue
+(dropped, noted). An empty cue list after filtering is a festival that
+can never fire (fail closed, noted). Missing members → `festival-skip`
+(the timeline advances). The whole reaction and every sweep step wrapped
+in try/catch (house rule 3 — no festival takes the server down).
+
+**Browser path.** ZERO client code: every effect is a parent family's
+own percept — chat says (logChat), the weather verb through the ordinary
+sky path, lamp companions (vocab-5 machinery), presence sounds (music.js
+synthesizes each bell strike). A visual tier for the master post is
+deliberately deferred — protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the says land in the
+agent inbox; `look()` lists the master via shared/festival.js
+`describeFestival` (the describeTour pattern) — run state, the derived
+cue (derived at read time, so it is live), and the four family members.
+An agent begins through the ordinary `use` verb.
+
+**Intent.** The world performs a season. A harvest festival whose bell
+tolls the opening, whose rain shrine wets the square for the lantern
+walk, whose stalls refill at dusk, whose closing line lands as chat —
+one authored timeline, four families driven through their own doors, the
+fold the only progress, TIME the only driver between cues. The
+composition doctrine (vocab-26/27/28) extended to its natural summit:
+not two parents deriving, but ONE choreographer conducting four families
+— and still zero new verbs, zero new ranks, zero new client code.
+
 - [ ] Trail markers: waypoint posts that pair with teleport beacons —
       use-action "guide me" walks the player-flag toward the linked
       beacon with cooldown.

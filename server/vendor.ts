@@ -134,6 +134,33 @@ function installPattern(
   }
 }
 
+/** The restock transition core — the comp write + say every restock mints,
+ *  shared verbatim by the user path (reactVendor, after its rank/reach/plan
+ *  gates) and the festival tier (vocab-29, who:null — TIME restocked). One
+ *  arithmetic, every caller. `item` null = the full-shelf restore. */
+export function vendorRestockCore(
+  w: VendorWorld,
+  cfg: ReturnType<typeof normalizeVendor>["cfg"],
+  id: string,
+  plan: ReturnType<typeof restockPlan>,
+  sales: { item: string; who: string; at: number }[],
+  who: string | null,
+  causeSeq: number | null,
+  now: number,
+) {
+  const comp = writeComp(w, id, composeCarry(cfg, plan.stock!, sales), "restock");
+  const line = cfg.restockAt ?? (plan.item
+    ? `${who ?? "the world"} restocks ${plan.item}`
+    : `${who ?? "the world"} restocks the stand`);
+  const say = w.append("world", "say",
+    { text: line, id, vd: { restock: plan.item ?? "all", who, at: now },
+      ...(causeSeq != null && who ? { cause: causeSeq, by: who } : {}) });
+  w.broadcast({ type: "log", entry: say });
+  w.debug("vendor-trigger", { entity: id, action: "restock", by: who ?? "time",
+    ...(causeSeq != null ? { cause: causeSeq } : {}), effect: comp.seq, say: say.seq, restock: plan.item ?? "all" });
+  return comp;
+}
+
 /** True when the action was VENDOR vocabulary (fired or legitimately
  *  skipped) — false means another evaluator owns it. Rides reactToUse's
  *  dispatch AFTER reactBoard. */
@@ -234,21 +261,14 @@ export function reactVendor(
       return true;
     }
     // no-op check: identical full table = nothing to restock (mint-nothing)
-    const sameTable = (x: Record<string, number>, y: Record<string, number>) =>
-      Object.keys(x).length === Object.keys(y).length && Object.entries(x).every(([k, v]) => y[k] === v);
-    if (sameTable(plan.stock, stock)) {
+    const sameTable = (x: Record<string, number> | null, y: Record<string, number>) =>
+      x != null && Object.keys(x).length === Object.keys(y).length
+      && Object.entries(x).every(([k, v]) => (y as Record<string, number>)[k] === v);
+    if (sameTable(plan.stock as Record<string, number> | null, stock as Record<string, number>)) {
       w.debug("vendor-skip", { entity: id, action, by: cause.actor, why: "the shelf is already full" });
       return true;
     }
-    const comp = writeComp(w, id, composeCarry(cfg, plan.stock, sales), "restock");
-    const line = cfg.restockAt ?? (plan.item
-      ? `${cause.actor} restocks ${plan.item}`
-      : `${cause.actor} restocks the stand`);
-    const say = w.append("world", "say",
-      { text: line, id, vd: { restock: plan.item ?? "all", who: cause.actor, at: now }, cause: cause.seq, by: cause.actor });
-    w.broadcast({ type: "log", entry: say });
-    w.debug("vendor-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
-      effect: comp.seq, say: say.seq, restock: plan.item ?? "all" });
+    vendorRestockCore(w, cfg, id, plan, sales, cause.actor, cause.seq, now);
     return true;
   } catch (err) {
     console.error(`[world:${w.name}] vendor reaction failed (never fatal)`, err);

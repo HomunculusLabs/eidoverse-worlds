@@ -63,6 +63,35 @@ type BellMem = {
 
 const MS_MIN_GAP_FLOOR = 10_000;
 
+/** ONE toll — the bell family's own transition (one say + n presence-plane
+ *  strikes, spaced ~sec·0.8), extracted from the engine's private path so
+ *  the festival tier (vocab-29) can drive a bell through the SAME
+ *  arithmetic: one truth, every caller (the igniteCompanion precedent). */
+export function bellToll(
+  w: BellWorld, id: string,
+  cfg: ReturnType<typeof normalizeBell>["cfg"],
+  slot: number, hour: number, now: number,
+) {
+  const line = cfg.line ?? `the bell tolls ${cfg.n}`;
+  const entry = w.append("world", "say",
+    { text: line, id, bell: { n: cfg.n, hour: slot, at: now } });
+  w.broadcast({ type: "log", entry });
+  const hz = tollHz(cfg, slot);
+  const ent = w.state.entities?.[id];
+  const p = Array.isArray(ent?.pos) && ent.pos.length >= 3 ? ent.pos.slice(0, 3) : [0, 0, 0];
+  for (let k = 0; k < cfg.n; k++) {
+    const fire = () => {
+      try {
+        w.broadcast({ type: "sound", id, note: { hz, sec: cfg.sec, gain: cfg.gain, wave: cfg.wave },
+          p, at: now, bell: { n: cfg.n, hour: slot, ...(k === 0 ? { first: true } : {}) } });
+      } catch { /* a strike must never take the server down */ }
+    };
+    if (k === 0) fire(); else setTimeout(fire, k * cfg.sec * 800);
+  }
+  w.debug("bell-trigger", { entity: id, hour: slot, worldHour: Math.round(hour * 100) / 100,
+    n: cfg.n, hz: Math.round(hz * 100) / 100, say: (entry as { seq?: number })?.seq });
+}
+
 export class BellEngine {
   private w: BellWorld;
   private mem = new Map<string, BellMem>();
@@ -145,25 +174,11 @@ export class BellEngine {
     return 0;
   }
 
-  /** ONE toll: one say + n presence-plane strikes, spaced ~sec·0.8. */
+  /** ONE toll: one say + n presence-plane strikes, spaced ~sec·0.8. The
+   *  family's own transition — exported as bellToll for the festival tier
+   *  (vocab-29, TIME-driven) so one arithmetic serves every caller. */
   private toll(id: string, cfg: ReturnType<typeof normalizeBell>["cfg"], slot: number, hour: number, now: number) {
-    const line = cfg.line ?? `the bell tolls ${cfg.n}`;
-    const entry = this.w.append("world", "say",
-      { text: line, id, bell: { n: cfg.n, hour: slot, at: now } });
-    this.w.broadcast({ type: "log", entry });
-    const hz = tollHz(cfg, slot);
-    const p = this.livePos(id);
-    for (let k = 0; k < cfg.n; k++) {
-      const fire = () => {
-        try {
-          this.w.broadcast({ type: "sound", id, note: { hz, sec: cfg.sec, gain: cfg.gain, wave: cfg.wave },
-            p, at: now, bell: { n: cfg.n, hour: slot, ...(k === 0 ? { first: true } : {}) } });
-        } catch { /* a strike must never take the server down */ }
-      };
-      if (k === 0) fire(); else setTimeout(fire, k * cfg.sec * 800);
-    }
-    this.w.debug("bell-trigger", { entity: id, hour: slot, worldHour: Math.round(hour * 100) / 100,
-      n: cfg.n, hz: Math.round(hz * 100) / 100, say: (entry as { seq?: number })?.seq });
+    bellToll(this.w, id, cfg, slot, hour, now);
   }
 
   /** The bell's LIVE position: folded pos (bells are static by nature; a

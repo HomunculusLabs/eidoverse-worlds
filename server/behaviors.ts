@@ -33,6 +33,10 @@ import { BellEngine, type BellWorld } from "./bell.ts";
 // (playing/atCue/at); the sweep applies crossed cues' lamp writes through
 // the lamp family's own comp transition and re-anchors the fold.
 import { TourEngine, type TourWorld } from "./tour.ts";
+// Festivals (vocab-29): swept on the same clock. The fold holds the
+// progress (playing/atCue/at); the sweep applies crossed cues through
+// each driven family's own doors and re-anchors the fold.
+import { FestivalEngine, type FestivalWorld } from "./festival.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -398,6 +402,11 @@ export class BehaviorHost {
    *  (playing/atCue/at); the sweep applies crossed cues' lamp writes and
    *  re-anchors. Halted tours cost nothing. */
   private tours: TourEngine | null = null;
+  /** Festivals (vocab-29): swept on the same clock — the fold holds the
+   *  progress; the sweep applies crossed cues through each driven family's
+   *  own doors (bell toll, zone ask, tour begin/halt, vendor restock) and
+   *  re-anchors. Halted festivals cost nothing. */
+  private festivals: FestivalEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -492,6 +501,14 @@ export class BehaviorHost {
       this.tours ??= new TourEngine(this.w as unknown as TourWorld);
       this.tours.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] tour sweep`, err); }
+
+    // Festivals (vocab-29) ride the same clock — the fold holds the
+    // progress; the sweep applies crossed cues through each driven
+    // family's own doors and re-anchors. Halted festivals cost nothing.
+    try {
+      this.festivals ??= new FestivalEngine(this.w as unknown as FestivalWorld);
+      this.festivals.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] festival sweep`, err); }
 
     // pressure-27: a world-wide per-tick FIRING budget — even 12 behaviors x
     // 16 legal timers can burn ~600ms of the 1s tick. Timers beyond the

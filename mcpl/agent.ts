@@ -92,6 +92,9 @@ import { describeSequencer } from "../shared/sequencer.js";
 // vocab-28: the vendor × sequencer composition's text-tier read (null for
 // plain stands, so every existing describeVendor caller is unchanged)
 import { describeSongstand } from "../shared/songstand.js";
+// The festival affordance line (vocab-29): names the run state, the
+// derived cue, and the four driven-family members.
+import { describeFestival } from "../shared/festival.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -2044,10 +2047,14 @@ export class WorldAgent {
       // text-tier read of the same folded comp the loop engine anchors
       // (derived at read time, so the step is live)
       if (c.sequencer) aff.push(describeSequencer(c.sequencer));
+      // a festival names its run state + derived cue + the four family
+      // members it choreographs — the text-tier read of the same folded
+      // comp the sweep anchors (look() derives at read time, so it is live)
+      if (c.festival) aff.push(describeFestival(c.festival));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

@@ -112,6 +112,74 @@ function theActiveHold(w: ZoneWorld, now: number): { id: string; data: Record<st
   return null;
 }
 
+/** The fold-truth gates every ask passes — menu, one-sky, strobe (the
+ *  weatherzone family's own boundaries, shared verbatim by the user path
+ *  (reactWeatherzone) and the festival tier (vocab-29): one law, every
+ *  caller). Returns {ok:false} after a skip debug entry, or
+ *  {ok:true, extending, hold} for a legal ask. */
+export function zoneGates(
+  w: ZoneWorld, cfg: ReturnType<typeof normalizeWeatherzone>["cfg"],
+  id: string, asked: string, by: string | null, now: number,
+): { ok: false } | { ok: true; extending: boolean; hold: { id: string; data: Record<string, any> } | null } {
+  // ---- menu boundary (fail closed: an empty menu can never fire) -----------
+  if (!cfg.states.includes(asked)) {
+    w.debug("zone-skip", { entity: id, action: asked, by,
+      why: `"${asked}" is not on this zone's menu (${cfg.states.join("|") || "empty"})` });
+    return { ok: false };
+  }
+  // ---- one-sky + strobe closure (fold truth at the ask) ---------------------
+  const hold = theActiveHold(w, now);
+  if (hold && hold.id !== id) {
+    w.debug("zone-skip", { entity: id, action: asked, by,
+      why: `one sky — "${hold.id}" holds ${hold.data.active} until ${Math.round((hold.data.until - now) / 1000)}s more` });
+    return { ok: false };
+  }
+  const extending = hold != null && hold.data.active === asked;   // same-state re-ask
+  if (hold && !extending) {
+    w.debug("zone-skip", { entity: id, action: asked, by,
+      why: `holding ${hold.data.active} — a state-changing ask mid-hold would strobe the sky` });
+    return { ok: false };
+  }
+  return { ok: true, extending, hold };
+}
+
+/** The ask's transition — displaced-sky derivation + the three writes
+ *  (weather, comp hold, say). The user path calls it through its own reach
+ *  gate; the festival tier (vocab-29) calls it with who:null — TIME asked.
+ *  One arithmetic, every caller. */
+export function zoneWrite(
+  w: ZoneWorld, cfg: ReturnType<typeof normalizeWeatherzone>["cfg"],
+  id: string, asked: string, who: string | null, causeSeq: number | null, now: number,
+  gates?: { extending: boolean; hold: { id: string; data: Record<string, any> } | null },
+) {
+  const g = gates ?? zoneGates(w, cfg, id, asked, who, now);
+  if ((g as { ok: boolean }).ok !== true) return false;
+  const gates2 = g as { extending: boolean; hold: { id: string; data: Record<string, any> } | null };
+  // ---- the displaced sky (kept from the FIRST arm; an extension never re-derives)
+  let { revertTo, policy } = gates2.extending
+    ? { revertTo: gates2.hold!.data.revertTo, policy: gates2.hold!.data.policy === true }
+    : displacedSky(w, now);
+
+  // ---- the transition: weather + comp hold + say ------------------------------
+  const authored: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(cfg.authored as Record<string, unknown>)) {
+    if (!ENGINE_KEYS.includes(k)) authored[k] = v;
+  }
+  const until = holdUntil(cfg, now);
+  const wx = w.append("world", "weather", { weather: asked });
+  w.broadcast({ type: "log", entry: wx });
+  const comp = w.append("world", "comp",
+    { id, type: "weatherzone", data: { ...authored, active: asked, until, revertTo, ...(policy ? { policy: true } : {}), at: now, who } });
+  w.broadcast({ type: "log", entry: comp });
+  const line = cfg.askAt ?? `the sky answers: ${asked}`;
+  const say = w.append("world", "say",
+    { text: line, id, zone: { state: asked, who, until, at: now },
+      ...(causeSeq != null && who ? { cause: causeSeq, by: who } : {}) });
+  w.broadcast({ type: "log", entry: say });
+  w.debug("zone-trigger", { entity: id, action: asked, by: who ?? "time", effect: wx.seq, comp: comp.seq, say: say.seq, until, revertTo });
+  return true;
+}
+
 /** True when the action was WEATHERZONE vocabulary (fired or legitimately
  *  skipped) — false means another evaluator owns it. Rides reactToUse's
  *  dispatch after companion, last. */
@@ -129,28 +197,8 @@ export function reactWeatherzone(
     const { cfg, notes } = normalizeWeatherzone(data);
     if (notes.length) w.debug("weatherzone-lint", { entity: id, notes });
     const now = cause.ts;
-    const asked = action;
-
-    // ---- menu boundary (fail closed: an empty menu can never fire) -----------
-    if (!cfg.states.includes(asked)) {
-      w.debug("zone-skip", { entity: id, action, by: cause.actor,
-        why: `"${asked}" is not on this zone's menu (${cfg.states.join("|") || "empty"})` });
-      return true;
-    }
-
-    // ---- one-sky + strobe closure (fold truth at the ask) ---------------------
-    const hold = theActiveHold(w, now);
-    if (hold && hold.id !== id) {
-      w.debug("zone-skip", { entity: id, action, by: cause.actor,
-        why: `one sky — "${hold.id}" holds ${hold.data.active} until ${Math.round((hold.data.until - now) / 1000)}s more` });
-      return true;
-    }
-    const extending = hold != null && hold.data.active === asked;   // same-state re-ask
-    if (hold && !extending) {
-      w.debug("zone-skip", { entity: id, action, by: cause.actor,
-        why: `holding ${hold.data.active} — a state-changing ask mid-hold would strobe the sky` });
-      return true;
-    }
+    const gates = zoneGates(w, cfg, id, action, cause.actor, now);
+    if (!gates.ok) return true;
 
     // ---- arm's reach (vPunt arithmetic) -----------------------------------------
     const me = livePoseOf(w, cause.actor);
@@ -161,28 +209,7 @@ export function reactWeatherzone(
       return true;
     }
 
-    // ---- the displaced sky (kept from the FIRST arm; an extension never re-derives)
-    let { revertTo, policy } = extending
-      ? { revertTo: hold!.data.revertTo, policy: hold!.data.policy === true }
-      : displacedSky(w, now);
-
-    // ---- the transition: weather + comp hold + say ------------------------------
-    const authored: Record<string, unknown> = {};
-    for (const [k, v] of Object.entries(cfg.authored as Record<string, unknown>)) {
-      if (!ENGINE_KEYS.includes(k)) authored[k] = v;
-    }
-    const until = holdUntil(cfg, now);
-    const wx = w.append("world", "weather", { weather: asked });
-    w.broadcast({ type: "log", entry: wx });
-    const comp = w.append("world", "comp",
-      { id, type: "weatherzone", data: { ...authored, active: asked, until, revertTo, ...(policy ? { policy: true } : {}), at: now, who: cause.actor } });
-    w.broadcast({ type: "log", entry: comp });
-    const line = cfg.askAt ?? `the sky answers: ${asked}`;
-    const say = w.append("world", "say",
-      { text: line, id, zone: { state: asked, who: cause.actor, until, at: now }, cause: cause.seq, by: cause.actor });
-    w.broadcast({ type: "log", entry: say });
-    w.debug("zone-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
-      effect: wx.seq, comp: comp.seq, say: say.seq, until, revertTo });
+    zoneWrite(w, cfg, id, action, cause.actor, cause.seq, now, gates as { extending: boolean; hold: { id: string; data: Record<string, any> } | null });
     return true;
   } catch (err) {
     console.error(`[world:${w.name}] weatherzone reaction failed (never fatal)`, err);

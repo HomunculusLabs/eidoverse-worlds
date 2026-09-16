@@ -84,6 +84,12 @@ import { reactTour } from "./tour.ts";
 // step-grid music machine. Same dispatch doctrine, last (a machine host
 // may also be any of the above).
 import { reactSequencer } from "./sequencer.ts";
+// The festival engine (vocab-29, § FESTIVALS CONTRACT): comp
+// {type:"festival"} owns the begin/halt action vocabulary — the composed
+// choreography driving bell/zone/tour/vendor through their own doors.
+// Same dispatch doctrine, last (a master post may also be any of the
+// above).
+import { reactFestival } from "./festival.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -218,6 +224,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // step-grid music machine. Same dispatch doctrine, last (a machine
     // host may also be any of the above).
     if (reactSequencer(w, cause, ent, id, action)) return;
+    // The festival slice (vocab-29, § FESTIVALS CONTRACT): comp
+    // {type:"festival"} owns the begin/halt action vocabulary — the
+    // composed choreography over four families. Same dispatch doctrine,
+    // last (a master post may also be any of the above).
+    if (reactFestival(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

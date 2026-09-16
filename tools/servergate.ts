@@ -145,6 +145,9 @@ const BATTERY: Row[] = [
   // vocab-28: the vendor-sequencer songstand matrix (§ SONGSTAND CONTRACT)
   // — same class: vendor × sequencer composition, scratch sequencer.
   { name: "vendorseqtest", tool: "tools/vendorseqtest.ts" },
+  // vocab-29: the festival matrix (§ FESTIVALS CONTRACT) — same class:
+  // the composed choreography over four families, scratch sequencer.
+  { name: "festivaltest", tool: "tools/festivaltest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

@@ -149,6 +149,40 @@ function applyCue(w: TourWorld, tourId: string, cfg: ReturnType<typeof normalize
   return n;
 }
 
+/** The begin/halt transition core — the ONE comp write + ONE say every
+ *  hand transition mints, shared verbatim by the user path (reactTour,
+ *  after its no-op/cap/reach gates) and the festival tier (vocab-29,
+ *  who:null — TIME began/halted it). One arithmetic, every caller. */
+export function tourTransitionCore(
+  w: TourWorld, id: string,
+  cfg: ReturnType<typeof normalizeTour>["cfg"],
+  data: Record<string, any>,
+  begin: boolean,
+  who: string | null,
+  causeSeq: number | null,
+  now: number,
+) {
+  const authored: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(cfg.authored as Record<string, unknown>)) {
+    if (!ENGINE_KEYS.includes(k)) authored[k] = v;
+  }
+  const atCue = begin ? -1 : Number(data.atCue ?? -1);
+  const anchor = begin ? now : Number(data.at ?? now);
+  const comp = w.append("world", "comp", {
+    id, type: "tour",
+    data: { ...authored, playing: begin, atCue, at: anchor, },
+  });
+  w.broadcast({ type: "log", entry: comp });
+  const line = begin ? (cfg.beginAt ?? "the lantern tour begins") : (cfg.haltAt ?? "the lantern tour halts");
+  const say = w.append("world", "say",
+    { text: line, id, tour: { op: begin ? "begin" : "halt", who, at: now },
+      ...(causeSeq != null && who ? { cause: causeSeq, by: who } : {}) });
+  w.broadcast({ type: "log", entry: say });
+  w.debug("tour-trigger", { entity: id, action: begin ? "begin" : "halt", by: who ?? "time",
+    ...(causeSeq != null ? { cause: causeSeq } : {}), effect: comp.seq, say: say.seq, playing: begin });
+  return comp;
+}
+
 /** True when the action was TOUR vocabulary (fired or legitimately skipped)
  *  — false means another evaluator owns it. Rides reactToUse's dispatch
  *  after vendor, last. */
@@ -195,23 +229,7 @@ export function reactTour(
     }
 
     // ---- the transition: ONE comp write + ONE say --------------------------
-    const authored: Record<string, unknown> = {};
-    for (const [k, v] of Object.entries(cfg.authored as Record<string, unknown>)) {
-      if (!ENGINE_KEYS.includes(k)) authored[k] = v;
-    }
-    const atCue = begin ? -1 : Number((data as Record<string, unknown>).atCue ?? -1);
-    const anchor = begin ? now : Number((data as Record<string, unknown>).at ?? now);
-    const comp = w.append("world", "comp", {
-      id, type: "tour",
-      data: { ...authored, playing: begin, atCue, at: anchor, },
-    });
-    w.broadcast({ type: "log", entry: comp });
-    const line = begin ? (cfg.beginAt ?? "the lantern tour begins") : (cfg.haltAt ?? "the lantern tour halts");
-    const say = w.append("world", "say",
-      { text: line, id, tour: { op: begin ? "begin" : "halt", who: cause.actor, at: now }, cause: cause.seq, by: cause.actor });
-    w.broadcast({ type: "log", entry: say });
-    w.debug("tour-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
-      effect: comp.seq, say: say.seq, playing: begin });
+    tourTransitionCore(w, id, cfg, data as Record<string, any>, begin, cause.actor, cause.seq, now);
     return true;
   } catch (err) {
     console.error(`[world:${w.name}] tour reaction failed (never fatal)`, err);
