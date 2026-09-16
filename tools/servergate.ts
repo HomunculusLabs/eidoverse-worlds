@@ -142,6 +142,9 @@ const BATTERY: Row[] = [
   // vocab-27: the book-plate bridge matrix (§ BOOKPLATE CONTRACT) — same
   // class: guestbook × plate derived composition, scratch sequencer.
   { name: "bookplatetest", tool: "tools/bookplatetest.ts" },
+  // vocab-28: the vendor-sequencer songstand matrix (§ SONGSTAND CONTRACT)
+  // — same class: vendor × sequencer composition, scratch sequencer.
+  { name: "vendorseqtest", tool: "tools/vendorseqtest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

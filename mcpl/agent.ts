@@ -89,6 +89,9 @@ import { describeTour } from "../shared/tour.js";
 // state, and the derived step (live at read time) — same shared-verbatim
 // pattern; the start/stop action hint rides the line.
 import { describeSequencer } from "../shared/sequencer.js";
+// vocab-28: the vendor × sequencer composition's text-tier read (null for
+// plain stands, so every existing describeVendor caller is unchanged)
+import { describeSongstand } from "../shared/songstand.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -2029,8 +2032,10 @@ export class WorldAgent {
       // read of the same folded comp the carve engine writes
       if (c.dedication) aff.push(describeDedication(c.dedication));
       // a vendor names its SHELF (live stock per ware) + grant-log count —
-      // the text-tier read of the same folded comp the grant engine writes
-      if (c.vendor) aff.push(describeVendor(c.vendor));
+      // the text-tier read of the same folded comp the grant engine writes.
+      // vocab-28: a stand with vendored PATTERN wares names them + the
+      // machine's live mark instead — the same derivation the sale installs.
+      if (c.vendor) aff.push(describeSongstand(c.vendor, c.sequencer) ?? describeVendor(c.vendor));
       // a tour names its run state + derived cue — the text-tier read of
       // the same folded comp the choreographer anchors (look() derives at
       // read time, so the cue is live)

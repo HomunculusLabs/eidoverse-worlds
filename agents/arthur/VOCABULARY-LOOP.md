@@ -1890,9 +1890,137 @@ contracts untouched, the fold still the only truth. This is the
 composition pattern the third queued pair (vendor-instrument economy)
 should copy: derive, do not mint.
 
-- [ ] Vendor-instrument economy: vending stands sell sequencer patterns;
+- [x] Vendor-instrument economy: vending stands sell sequencer patterns;
       stock, grant log, and playback state stay consistent across
       restart.
+      DONE vocab-28 (2026-09-16): the THIRD affordance-pair composition —
+      vendor (vocab-20) × sequencer (vocab-25) — a SONGSTAND. A vendor
+      comp with an authored `vendored: {ware: pattern}` map sells PATTERN
+      wares: the buy decrements the shelf through the vendor family's OWN
+      write (comp + say, byte-identical grammar) and installs the granted
+      grid on the SAME entity's sequencer comp through the machine
+      family's OWN compose — the tour doctrine (vocab-22) generalized:
+      one family drives another THROUGH that family's arithmetic. Engine
+      keys stripped fresh; `playing`/`at` preserved (phase continuity — a
+      running machine swaps grids without losing the beat); an
+      already-carried grid is not churned (the tour no-op doctrine). Fail
+      closed BEFORE any write: a broken pattern (sanitizes to nothing) or
+      a pattern ware on a machine-less stand skips with `vendor-skip`
+      (chime doctrine) — the shelf keeps its count, so the
+      shelf's-promise === machine's-truth invariant can never break (the
+      GREEN run itself caught the machine-less grant as a real defect and
+      the fix moved the gate before the write). Plain wares take the
+      vocab-20 path byte-identically; an absent `vendored` map = a plain
+      stand (every existing stand unchanged). NO new verbs, actions,
+      ranks, or clients: buying is the parent's own rank-0 + arm's-reach
+      use; running the purchase is the machine's own start/stop; ZERO
+      client code (the machine's realization is vocab-25's). shared/
+      songstand.js (patternWare/describeSongstand — pure, total, garbage-
+      safe; pattern sanitization through the machine family's OWN
+      normalize — one arithmetic) shared verbatim by engine + tests +
+      mcpl look(). MCPL: one agent.ts hunk (describeSongstand ??
+      describeVendor — a vendored stand names its pattern wares + the
+      machine's live mark). Evidence: tools/vendorseqtest.ts RED 16
+      failing (tier absent; 17 pre-passing = parents + shell gates, the
+      honest vocab class) then ALL PASS 33/33 (pattern caps/verbatim
+      cells/broken/malformed/describe rows + end-to-end: Δ4 pattern buy
+      with exactly ONE machine write, cfg + playback preserved, stock/
+      sales tables, carry verbatim, promise===truth, start/rebuy-no-
+      churn/phase-continuity, sold-out, plain Δ3, hand-seq-wins,
+      machine-less shelf-untouched skip, spectator, reach, restart stock+
+      log+playback identical with the same anchor, replay-mints-nothing,
+      fold parity, describe post-restart); vendortest 54 + sequencertest
+      46 + smoke 85 parents regression-clean; mcpl manifest 28/0 +
+      effective + denoise green. Scratch worlds only; no production
+      world touched. No eye-check owed (zero new visuals — the sound
+      rides vocab-25's synth; same standing ear-check class as
+      vocab-25). Full-battery verdict in the vocab-28 ledger entry.
+
+### SONGSTAND CONTRACT (vocab lane — drafted and implemented vocab-28, 2026-09-16)
+
+**The third affordance-pair composition: vendor (vocab-20) × sequencer
+(vocab-25).** A SONGSTAND is an entity carrying BOTH
+`comp {type:"vendor", data:{..., vendored: {ware: pattern}}}` and
+`comp {type:"sequencer"}`: the stand SELLS patterns — buying one
+decrements the shelf (the vendor family's own write, byte-identical
+grammar) and installs the granted grid on the machine (one
+sequencer-family write through the machine family's OWN compose). The
+composition is the vocab-26/27 doctrine ("derive, do not mint") extended
+by the tour precedent (vocab-22) to its natural next step: where
+weatherlamp/bookplate could couple with ZERO writes because the parents
+already wrote everything the pair needed, a SALE is a TRANSFER — the
+machine's truth must change at the moment of grant, so the one new write
+is a PARENT's own write (the sequencer family's compose), driven by the
+other parent at its own proven moment. No third engine, no reaction row,
+no sweep exists.
+
+**The vendored map.** `vendored: {ware: pattern}` rides VERBATIM in the
+vendor comp's authored carry (regions doctrine — unknown keys ride; a
+stand with no `vendored` map is a plain vocab-20 stand, byte-identical).
+A ware in `wares` AND in `vendored` is a PATTERN ware; a ware only in
+`wares` is a plain item grant. `patternWare(vendorData, ware)`
+(shared/songstand.js — pure, total, garbage-safe) classifies:
+`plain` (not vendored / absent / garbage map), `pattern` (steps
+sanitized through the MACHINE family's own normalizeSequencer grid caps
+— ≤16 steps, ≤4 voices, verbatim cells, unresolvables→rests; one
+arithmetic, never re-implemented), or `broken` (sanitizes to nothing —
+the stand cannot deliver it).
+
+**The install — through the machine family's own doors.** On a pattern
+grant the vendor engine composes the machine write EXACTLY as
+reactSequencer does: strip SEQUENCER_ENGINE_KEYS from the machine's
+authored carry, write `{...carry, steps: sold, playing, at}` — `playing`
+and `at` preserved verbatim (phase continuity: a RUNNING machine swaps
+grids mid-beat without stutter or re-anchor; a stopped one stays
+stopped — an authored grid never starts anything, authority never
+widens). A machine already carrying the sold grid is not churned (the
+tour no-op doctrine: rebuy while playing = the parents' Δ3 only, beat
+untouched). The write carries the standard 8KB degrade
+({steps, playing, at}) and is try/caught (house rule 3 — no sale takes
+the server down). A `songstand-trigger` flight entry (kind `reaction`)
+records cause→effect on every install.
+
+**Fail closed BEFORE any write (the invariant gate).** The
+shelf's-promise === machine's-truth invariant: a pattern ware that
+cannot deliver NEVER decrements the shelf. A `broken` pattern, or a
+pattern ware on a machine-less entity (no sequencer comp — the chime
+doctrine), skips with `vendor-skip` naming why, minting nothing. (The
+GREEN run caught the machine-less grant as a genuine defect — the first
+draft installed after the shelf write, letting the shelf promise what
+the machine never received; the fix moved the gate before the grant.)
+
+**Authority — the composition widened nothing.** Buying is the vendor
+family's own rank-0 + arm's-reach use; restocking is the vendor
+family's own builder act (a restocked pattern ware can be sold again);
+running the purchase is the machine family's own rank-0 start/stop. No
+new verb, no new action string, no new rank, no new client code (the
+machine's realization is vocab-25's own). The ONLY new write in the
+whole composition is the parent machine write at the moment of a
+delivered grant — world authority on comp-on-self, exactly one per
+pattern sale, after the vendor family's own proven gate.
+
+**Replay/restart — the parents' own doctrine, unchanged.** Replay-inert:
+the engine path runs ONLY from the live verb path. On restart the world
+folds stock, grant log, AND the machine's grid/run/anchor from the log —
+a machine playing a sold pattern at crash resumes at its anchor with the
+same beat (proven: kill/restart folds the identical pair, the same
+anchor, replay mints nothing). Late join and fork fold the same two
+comps; `patternWare` on the folded shelf === the machine's folded steps.
+
+**MCPL path.** `look()` lists a vendored stand via
+`describeSongstand(vendor, sequencer) ?? describeVendor(vendor)` — the
+pattern wares (broken ones named unplayable), the buy action, and the
+live mark when the machine carries a sold pattern (derived at read
+time). Plain stands read byte-identically to vocab-20.
+
+**Intent.** The world sells its music. A plaza loop stand where a child
+buys a nocturne with pocket change, a tavern jukeshop a builder stocks
+with the week's dances, a festival cart whose patterns sell out by dusk
+and restock at dawn — stock that empties, a grant log that remembers,
+and a machine that keeps the beat through every crash. One vendored map
+riding an 8KB comp, no script, no new verb, the parents' contracts
+untouched.
+
 - [ ] Harvest festival script: composed choreography — bells schedule,
       weather window, lantern tour, vendor restock — one authored
       timeline driving four affordance families.

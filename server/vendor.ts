@@ -35,6 +35,11 @@ import { rightsOf } from "./rights.ts";
 // and any future client consumer — the engine writes EXACTLY what
 // shared/vendor.js derives.
 import { VENDOR_ACTIONS, buyPlan, normalizeVendor, restockPlan, stockOf } from "../shared/vendor.js";
+// vocab-28: the vendor × sequencer composition (a SONGSTAND) — a vendored
+// ware's pattern classifies + sanitizes through ONE shared derivation; the
+// install itself drives the machine family's own compose (the tour doctrine)
+import { patternWare } from "../shared/songstand.js";
+import { SEQUENCER_ENGINE_KEYS, normalizeSequencer } from "../shared/sequencer.js";
 
 export type VendorWorld = {
   name: string;
@@ -80,6 +85,53 @@ function writeComp(w: VendorWorld, id: string, shape: Record<string, unknown>, w
   const comp = w.append("world", "comp", { id, type: "vendor", data });
   w.broadcast({ type: "log", entry: comp });
   return comp;
+}
+
+/** Install a sold pattern on the SAME entity's sequencer comp through the
+ *  machine family's OWN arithmetic (vocab-28 — the tour doctrine: one
+ *  family drives another through that family's doors). The machine write
+ *  composes the carry exactly as reactSequencer does — engine keys
+ *  stripped fresh, playing/at preserved (phase continuity: a running
+ *  machine swaps grids without losing the beat; a machine already
+ *  carrying the sold grid is not churned — the tour no-op doctrine).
+ *  The one authority here is the vendor family's own proven grant; the
+ *  write is comp-on-self ONLY (an authored grid never starts anything). */
+function installPattern(
+  w: VendorWorld,
+  id: string,
+  ent: { comp?: Record<string, unknown> },
+  steps: unknown[][],
+  cause: LogEntry,
+) {
+  const q = ent.comp?.sequencer;
+  if (q == null || typeof q !== "object") {
+    w.debug("vendor-skip", { entity: id, action: "buy", by: cause.actor,
+      why: `"${id}" carries no sequencer comp — the pattern ware cannot deliver (chime doctrine)` });
+    return;
+  }
+  try {
+    const { cfg, steps: cur, playing, at } = normalizeSequencer(q);
+    if (JSON.stringify(cur) === JSON.stringify(steps)) return;   // already the sold grid
+    const carry: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(cfg.authored as Record<string, unknown>)) {
+      if (!SEQUENCER_ENGINE_KEYS.has(k)) carry[k] = v;
+    }
+    const shape: Record<string, unknown> = { ...carry, steps, playing, at };
+    let data: Record<string, unknown> = shape;
+    if (JSON.stringify(shape).length > 8000) {
+      w.debug("sequencer-lint", { entity: id, notes: ["state write over 8KB — wrote minimal shape (songstand sale)"] });
+      const keep: Record<string, unknown> = {};
+      for (const k of ["steps", "playing", "at"]) if (k in shape) keep[k] = shape[k];
+      data = keep;
+    }
+    const comp = w.append("world", "comp", { id, type: "sequencer", data });
+    w.broadcast({ type: "log", entry: comp });
+    w.debug("songstand-trigger", { entity: id, by: cause.actor, cause: cause.seq,
+      effect: comp.seq, steps: steps.length });
+  } catch (err) {
+    console.error(`[world:${w.name}] songstand install failed (never fatal)`, err);
+    w.debug("reaction-error", { entity: id, action: "buy", by: cause.actor, error: String(err) });
+  }
 }
 
 /** True when the action was VENDOR vocabulary (fired or legitimately
@@ -130,6 +182,24 @@ export function reactVendor(
         return true;
       }
       if (!inReach()) return true;
+      // vocab-28: a vendored ware whose pattern sanitizes to nothing can
+      // never deliver — skip fail-closed (the chime doctrine), the shelf
+      // keeps its count (the stand cannot grant what it cannot play)
+      const pw = patternWare(data, plan.item);
+      if (pw.kind === "broken") {
+        w.debug("vendor-skip", { entity: id, action, by: cause.actor,
+          why: `"${plan.item}" has no playable pattern — the stand cannot deliver it` });
+        return true;
+      }
+      // ...and a PATTERN ware on a machine-less stand can never deliver
+      // either — the grant is refused BEFORE any write (a sale that
+      // decremented the shelf without installing the grid would break the
+      // shelf's-promise === machine's-truth invariant the family promises)
+      if (pw.kind === "pattern" && (ent.comp?.sequencer == null || typeof ent.comp.sequencer !== "object")) {
+        w.debug("vendor-skip", { entity: id, action, by: cause.actor,
+          why: `"${id}" carries no sequencer comp — the pattern ware cannot deliver (chime doctrine)` });
+        return true;
+      }
       // the FULL table every transition (the contract's shelf read):
       // every ware's live count, the bought ware decremented.
       const full = Object.fromEntries(Object.keys(cfg.wares).map((k) => [k, stockOf(cfg, stock, k)]));
@@ -142,6 +212,10 @@ export function reactVendor(
       w.broadcast({ type: "log", entry: say });
       w.debug("vendor-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
         effect: comp.seq, say: say.seq, item: plan.item, stock: plan.next });
+      // vocab-28: a PATTERN ware's grant installs its grid on the machine
+      // through the sequencer family's own compose (the tour doctrine) —
+      // ONE machine write per pattern grant, playing/at preserved
+      if (pw.kind === "pattern") installPattern(w, id, ent, pw.steps as unknown[][], cause);
       return true;
     }
 
