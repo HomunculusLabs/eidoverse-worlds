@@ -11749,3 +11749,49 @@ fresh, inn/tower-house @273, hall/bunkhouse @272, forge/potter @271,
 longhouse/garden-cottage @270 stalest standing pair at 4 sweeps; both walk
 tools ls-verified present on disk this tick: interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts).
+
+sweep-275: CLEAN SWEEP, arrival epoch tick (versiera), 44th consecutive
+quiet-or-classified. Tick-start HEAD cd3fb0d0 = struct-201 (versiera
+placement, PRE-tick); gate ALL PASS real exit 0 FIRST TRY, ledger law EXACT
+2370851. Census epoch A 341 vs committed sweep-274 baseline 340 (raw
+224265B sha16 0be489e53b514afd): exactly ONE domain-valid arrival
+nx-struct-versiera @ (-23.717201, 0.087218, 339.171777) yaw 3.735004599267865
+lib 5332575f22aff3de comp {} scale 1 — tuple-exact vs the committed struct-201
+ledger line-for-line AND independently corroborated by city-170's ACCOUNTED_NEW
+probe (d=0.0000, dyaw=0.0); 0 departures, ZERO drift on all 340 shared ids
+across all five semantic classes. Epoch B 20s-paced 341==341 BYTE-IDENTICAL
+to epoch A (sha16 62896227bb537876) — arrival settled. SAT fresh-live 303
+bbox non-light / 237 classified / 0 coverage holes, real exit 3 on exactly
+ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 (known Sev 2 routed
+artwalk b26 @ sweep-43, 231st sweep since routing, no escalation due — law
+keys severity-1); versiera ZERO new contacts (corroborates struct-201 NN
+10.00 SAT 5.12). Tier-1 81/81 ALL_PASS every leg real exit 0, run
+individually per the sweep-228 ceiling law — core 64/64 @ 0.380
+maxArrival, NW 5/5, NE 7/7, SW 5/5; versiera r340 Math Avenue 320m+ off
+every tier-1 leg (all r<20, no Math Avenue legs) so epoch-A walks stand by
+construction (sweep-53 precedent); folly class no walk owed per struct-201's
+own ledger. Tier-2 253rd cycle per committed sweep-274 pointer: longhouse
+6/6 ALL_PASS (dists 0.335/0.28/0.3456/0.2969/0.2763/0.2973) +
+garden-cottage 6/6 ALL_PASS (0.295/0.355/0.2851/0.3451/0.3265/0.3082), both
+real exit 0, tools ls-verified pre-run, match sweep-270-era records.
+Integrity: pins 15/15 ALL_PINS_OK bad:[] (229th consecutive clean);
+sweep89-battery 28/28 PASS exit 0 on fresh census-A bytes; interlane md5
+f6254cd0 stable; SWEEP-LOOP md5 a5fd4f4f read fresh. Baseline lawfully
+rewritten with asserted pre-write checks: 341 entities / 224864B / sha16
+62896227bb537876, post-rewrite drift ZERO (cmp byte-identical to epoch-B
+capture). Mid-tick interleave city-170 119c9da5 (60th lawful HOLD, zero
+mutations, its census 340->341 folding the accounted versiera arrival) —
+census A/B straddle it BYTE-IDENTICAL; gate re-run ALL PASS real exit 0 at
+119c9da5 before append, base re-read fresh. Pools drained: IMPROVE-PLAN
+c0f569d0 unchanged (251st check, 0 open), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, no reset role — audit-continues banner governs. Probe
+self-catches pre-verdict, three corrected with no repair owed: ledger-append
+argv (usage error, nothing appended, tail re-verified); diff chassis /tmp
+naming (FileNotFoundError before any comparison); baseline-rewrite run from
+agents/arthur cwd (write-line ENOENT AFTER asserts passed, re-run from repo
+ROOT). Foreign dirt untouched per ownership law. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits (D+1, E+1). Next
+tier-2 pair (sweep-276): hall + forge (254th cycle — LRU chain: longhouse/
+garden-cottage @275, row-cottage/observatory @274, inn/tower-house @273,
+hall/bunkhouse @272, forge/potter @271, hall/forge @269 stalest at 6 sweeps;
+tools interior-walk-hall.ts + interior-walk-forge.ts ls-verified this tick).
