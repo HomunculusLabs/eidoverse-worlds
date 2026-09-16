@@ -1965,8 +1965,11 @@ export class WorldAgent {
       // it — the text-tier read of the same folded comp the renderer swings
       if (c.door) aff.push(describeDoor(c.door));
       // a lamp names its STATE (lit/dark) and the use actions that move it;
-      // its companion light lists separately as (light) in the same census
-      if (c.lamp) aff.push(describeLamp(c.lamp));
+      // its companion light lists separately as (light) in the same census.
+      // vocab-26: under a weather dim (a rain hold, a wet forecast segment)
+      // a LIT lamp also names the hush — the text-tier read of the same
+      // factor the browser's rig multiplies (describeLamp's optional sky).
+      if (c.lamp) aff.push(describeLamp(c.lamp, this.skyState, Date.now()));
       // a guestbook names its SIZE (kept inscriptions) and the sign action;
       // entries themselves read from the folded comp (world_history traces
       // every signature's chain)

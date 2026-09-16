@@ -1638,9 +1638,152 @@ a garden bell pattern that runs all afternoon, a dance floor that keeps
 the beat through every crash and every late joiner — one 8KB comp, no
 script, no per-step traffic, the music family's synth doing the sounding,
 time itself keeping the sync.
-- [ ] Weather-lamp composition: lantern tours that obey weatherzones
+- [x] Weather-lamp composition: lantern tours that obey weatherzones
       (lamps dim under rain windows, restore on release) — first
       affordance-pair composition.
+      DONE vocab-26 (2026-09-16): the first affordance-pair COMPOSITION —
+      lamp (vocab-5) × weatherzone (vocab-14) — and it MINTS NOTHING. The
+      parents already write the weather verb (the zone's ask), the lamp
+      comp + companion light (the lamp's transition); what couples them is
+      ONE shared multiplier derived per consumer from (folded sky, now):
+      shared/weatherlamp.js (weatherDim ladder / dimAt / weatheredIntensity
+      — the doorYaw/stageAt closed-form doctrine ACROSS families; a
+      governing forecast BLENDS along the sky's own transitionSec via
+      effectiveSky's cursor, O(1), no tween state). Realization:
+      client/lib/weatherlamp.js (door.js pattern, one import line in
+      main.js beside sequencer) feeds lightrig's per-frame multiply —
+      the rig gains wxAware + setWeatherDim (default false/1: every
+      non-participating light unchanged; companions marked change-gated,
+      one rig patch per ignite, not per frame); mcpl look() passes
+      skyState to describeLamp's OPTIONAL (sky, now) pair — a lit lamp
+      under rain reads "— hushed by rain (60%)", dry/dark unchanged, all
+      existing callers untouched. Author's opt-out: wx:false on the lamp
+      comp (bag-annotation doctrine). Dim ≠ snuff: the fold's intensity is
+      never touched; restore is just the factor returning to 1 (no restore
+      path exists to get wrong). Evidence: tools/weatherlamptest.ts RED 7
+      absent-tier failures (+ 2 disclosed test-expectation fixes pre/
+      mid-GREEN: the zone ask writes 4 entries incl. the user's use — my
+      Δ forgot the audit entry; the forecast-blend probe must skip the
+      epoch-adjacent first segment where prevState is null) then ALL PASS
+      23/23 STANDALONE and IN-BATTERY (servergate --only weatherlamptest;
+      first battery run hit a boot-timeout under load — port moved
+      8999→9026 off the pressure-lane band + boot window 6s→15s);
+      servergate full battery 42/46 (weatherlamptest + every vocab suite
+      green incl. lamptest 34, sequencertest 46, gardentest 67; authtest
+      22/1 + support-lifecycle 15/7 + permtest 21/2 = the documented
+      pre-existing classes, vocab-1..25 identical); smoke 85/85 after one
+      GREEN-caught parse fix (TS `as any` casts in a plain-.js client
+      file — smoke's module-parse check caught it); forecast-test 77/77
+      (forecast.js untouched); mcpl manifest 28/0 + effective + denoise
+      green after the agent.ts hunk. Scratch worlds only; no production
+      world touched. No eye-check owed by contract (the visual dim is a
+      rig multiply every client already performs daily for dayness —
+      though Bill's in-browser read of a lantern hushing under a zone
+      hold remains the one standing perceptual confirmation, same
+      ear-check class as vocab-9/18/25).
+### WEATHERLAMP CONTRACT (vocab lane — drafted and implemented vocab-26, 2026-09-16)
+
+**The first affordance-pair COMPOSITION: lamp (vocab-5) × weatherzone
+(vocab-14).** A lit lamp's REALIZED intensity is dimmed by the current
+weather and restored when the sky releases — and the composition MINTS
+NOTHING. The parents already write everything the fold needs: the
+weatherzone family's ask writes the weather verb (the one-sky law), the
+lamp family's transition writes the comp + companion light + say. What
+couples them is ONE multiplier every consumer derives for itself from
+(folded sky, now) — the doorYaw/stageAt closed-form doctrine applied
+ACROSS families: a derived tier, never an engine, zero new verbs, zero
+new action strings, zero new log entries, zero traffic.
+
+**The ladder.** `weatherDim(state)` (shared/weatherlamp.js — pure, shared
+verbatim by browser wiring, text tier, and tests): dry states never dim
+(clear/fair/overcast = 1 — a lantern under a fair sky is a lantern);
+sunshower .85, rain .6, storm .45, cyclone .35, darkstorm .3; an UNKNOWN
+weather never dims — fail toward light, never toward darkness (a broken
+derivation must not black out the village at night).
+
+**The derivation.** `dimAt(sky, now)` — the factor for a folded sky at a
+moment, PURE (same sky + now → same factor on every runtime):
+- no sky → 1 (a world without weather never dims);
+- an authored weather (the weatherzone path under no forecast) → the
+  state's factor, instant (authored changes are instant, like the sky's
+  own authored path);
+- a governing forecast → the CURRENT segment's factor, and during the
+  sky's own transition window the factor BLENDS from the previous
+  segment's factor along the policy's transitionSec (one clock: the hush
+  eases in exactly as the rain does; mid-transition ≈ the mean of the two
+  states' factors). The blend reads `effectiveSky`'s own
+  `inTransition`/`seg.prevState`/`seg.startMs` — forecast.js's cursor
+  keeps it O(1); no state of its own, no tween.
+`weatheredIntensity(intensity, sky, now)` — what a consumer RENDERS:
+folded/base intensity × factor. The fold's own intensity field is NEVER
+changed by the weather: DIM ≠ SNUFF. The folded companion stays lit at
+its authored intensity (a builder inspecting a lamp reads its authored
+truth); the dim is a REALIZED quantity, exactly like dayness.
+
+**Restore semantics.** When the weatherzone hold expires (the fold-derived
+release, the sweep's own transition) the sky folds back to revertTo/clear
+and the factor returns to 1.0 — every consumer's multiply restores the
+full intensity with zero writes. A lamp snuffed mid-rain was dark the
+whole time; a lamp lit mid-rain lights hushed and brightens with the
+clearing. No restore path exists to get wrong: the factor is a function
+of the CURRENT fold, not of history.
+
+**Authority — the composition widened nothing.** The only verbs in the
+whole composition's lifecycle are the parents' own: the lamp family's
+`use {action:light|snuff|toggle}` (rank 0 + arm's reach) wrote the comp
+and the companion once; the weatherzone family's `use {action:"rain"}`
+(rank 0 + arm's reach, menu-bounded) wrote the weather + hold + say once.
+No new role, no new rank, no new capability surface, no new verb minted
+by the composition itself — ever. The author's opt-out rides the lamp
+comp's bag: `wx: false` (a beacon that must NOT hush — the bag is public
+annotation; unknown keys ride, door doctrine).
+
+**Replay behavior — there is none, by construction.** Replay-inert like
+all reactions, plus: the composition has no engine, no reaction row, no
+sweep — nothing exists to re-fire. On restart the fold carries the lamp
+comp + companion + sky exactly as the parents wrote them; every consumer
+re-derives the same factor at its own now. Late join, fork, reconnect:
+identical (proven by fresh-join reads of the folded bytes mid-hold and
+post-restart).
+
+**Failure behavior.** The derivation is total: unknown weather → 1, no
+sky → 1, malformed sky object → the authored path's `WEATHERS` guard → 1,
+forecast blend with no prevState (the epoch-adjacent first segment) →
+the target factor (nothing precedes the epoch; blending is vacuous). The
+browser wiring is change-gated (one rig patch per companion ignite, not
+per frame — the door.js settled-skip doctrine) and wrapped by the frame
+loop's existing subscriber guard. Nothing in this tier can mint, block,
+or crash.
+
+**Browser path.** `client/lib/weatherlamp.js` (the door.js/emitters.js
+pattern — one import line in main.js beside sequencer, zero other edits
+to pilot-dirty files): per frame, `dimAt(state.st.sky, serverNow())` →
+`lightrig.setWeatherDim(f)` — the rig's ONE per-frame multiply now reads
+`intensity × dayness-glow × wxFactor` for requests marked `wxAware`
+(default false: every non-participating light unchanged). Companions are
+marked on change: a standing `<host>·lamp` light gets `wxAware: true` at
+its first sight (and `false` if the host's comp authors `wx:false`); a
+dark lamp's absent request is retried harmlessly on its next ignite.
+Cost: one O(1) derivation + one entities scan per frame (trivially
+cheap); zero traffic, zero log writes, zero tween state.
+
+**MCPL path.** Same fold, same perception: `look()`'s lamp affordance
+line gains the hush read — `describeLamp(c.lamp, skyState, now)`
+(shared/lamp.js, extended with the OPTIONAL (sky, now) pair: a lit lamp
+under rain reads `— hushed by rain (60%)`; dark and dry lamps read
+EXACTLY as before, so every existing caller is unchanged). An agent
+perceives the dim the same way it perceives the rain itself — as the
+sky's folded truth — and acts through the parents' ordinary verbs.
+
+**Intent.** The world's lights answer its weather. A plaza of lanterns
+that hushes when the rain shrine asks, a harbor row that dims under the
+storm and brightens with the clearing, a festival that glows softer in
+the wet — affordances COMPOSING without a protocol change: the rain-lamp
+hush as one shared multiplier, the parents' contracts untouched, the
+fold still the only truth. This is the composition pattern every future
+pair (guestbook-inscription, vendor-sequencer) should copy: derive, do
+not mint.
+
 - [ ] Guestbook-inscription bridge: signing a guestbook can mint a
       dedication plaque line under the inscription plate's caps and rank
       rules.

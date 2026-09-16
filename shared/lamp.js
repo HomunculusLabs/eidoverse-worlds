@@ -12,6 +12,8 @@
 // toggle) is the only trigger that writes; late joiners, restarts and
 // replays fold the same truth from the log with no engine running at all.
 
+import { dimAt } from './weatherlamp.js';
+
 const ANCHOR_MAX = 8;                    // entity-local metres, ± per axis
 const INTENSITY_MIN = 0, INTENSITY_MAX = 60, INTENSITY_DEFAULT = 14;
 const RANGE_MIN = 1, RANGE_MAX = 40, RANGE_DEFAULT = 8;
@@ -123,9 +125,17 @@ export function lampLightArgs(cfgOrData, pos, yaw = 0) {
   };
 }
 
-/** Text-tier perception: one affordance fragment for look()/describers. */
-export function describeLamp(data) {
+/** Text-tier perception: one affordance fragment for look()/describers.
+ *  The optional (sky, now) pair (vocab-26 weather-lamp composition) adds
+ *  the hush read — a lit lamp under rain names the factor; dark and dry
+ *  lamps read exactly as before (pure, shared verbatim). */
+export function describeLamp(data, sky, now) {
   const { cfg } = normalizeLamp(data);
-  const on = (data && typeof data === "object" ? data : {}).on === true;
-  return `lamp: ${on ? "lit" : "dark"} (use {action:"light"|"snuff"|"toggle"}, ${cfg.reach}m reach)`;
+  const on = (data && typeof data === 'object' ? data : {}).on === true;
+  let out = `lamp: ${on ? 'lit' : 'dark'} (use {action:"light"|"snuff"|"toggle"}, ${cfg.reach}m reach)`;
+  if (on && sky && typeof sky === 'object') {
+    const f = dimAt(sky, typeof now === 'number' ? now : Date.now());
+    if (f < 1) out += ` — hushed by ${sky.weather ?? 'the weather'} (${Math.round(f * 100)}%)`;
+  }
+  return out;
 }

@@ -99,6 +99,9 @@ sun.shadow.normalBias = 0.02;
  *    keep       top priority — never outbid by distance
  *    authored   placed by a verb (beats inferred lamps)
  *    dayAware   dimmed by the sky's dayness like a lamp
+ *    wxAware    also dimmed by the weather (the weather-lamp composition,
+ *               vocab-26 — weatherlamp.js's factor, set by the browser
+ *               wiring; the rig just multiplies, like dayness)
  *    owner      release scope (entity:<id>) */
 const requests = new Map();
 let assignDirty = true;
@@ -107,7 +110,7 @@ export function requestLight(key, spec) {
   requests.set(key, {
     obj: null, offset: null, pos: null, mirror: null,
     color: 0xffd9a0, intensity: 16, range: 10, decay: 1.7,
-    keep: false, authored: false, dayAware: false, owner: null,
+    keep: false, authored: false, dayAware: false, wxAware: false, owner: null,
     ...spec, key, slot: -1,
   });
   assignDirty = true;
@@ -171,6 +174,13 @@ export function attachLamps(root, owner) {
 let dayness = 1;
 export function setDayness(d) { dayness = d; }
 const dayGlow = () => Math.pow(1 - dayness, 2);
+
+// The weather factor (vocab-26): one multiplier, set by the browser wiring
+// (client/lib/weatherlamp.js) from the folded sky — the same realized-dim
+// doctrine as dayness. Default 1: a rig that nobody wired never dims, and
+// an unknown weather never dims (fail toward light).
+let wxFactor = 1;
+export function setWeatherDim(f) { wxFactor = Number.isFinite(f) ? Math.min(1, Math.max(0, f)) : 1; }
 
 // ---- assignment -------------------------------------------------------------
 // Deterministic in (requests, camera): tier (keep/adopted → authored →
@@ -375,7 +385,10 @@ export function updateRig(now) {
     }
     worldPosOf(r, pl.position);
     pl.color.set(r.color);   // Color.set takes a Color, a hex, or a string
-    pl.intensity = r.intensity * (r.dayAware ? dayGlow() : 1);
+    // vocab-26: day-aware lights also answer the weather — the rain-lamp
+    // hush rides the same per-frame multiply (dayness × weather factor).
+    // wxAware defaults false, so every non-participating light is unchanged.
+    pl.intensity = r.intensity * (r.dayAware ? dayGlow() : 1) * (r.wxAware ? wxFactor : 1);
     pl.distance = r.range;
     pl.decay = r.decay;
   }

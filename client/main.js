@@ -40,6 +40,10 @@ import './lib/soundpost.js';
 // the step-grid music machine (fold-anchored playback through the music
 // family's own synth)
 import './lib/sequencer.js';
+// weather-lamp composition (vocab-26): wires itself on import, same
+// pattern — the rain-lamp hush (one weather factor into the rig's
+// per-frame multiply; the composition mints nothing)
+import './lib/weatherlamp.js';
 // growth component (vocab-12): wires itself on import, same pattern
 import './lib/growth.js';
 // companion component (vocab-13): wires itself on import, same pattern

@@ -136,6 +136,9 @@ const BATTERY: Row[] = [
   // vocab-25: the sequencer matrix (§ SEQUENCERS CONTRACT) — self-booting
   // scratch sequencer, same class.
   { name: "sequencertest", tool: "tools/sequencertest.ts" },
+  // vocab-26: the weather-lamp composition matrix (§ WEATHERLAMP CONTRACT)
+  // — self-booting scratch sequencer, same class.
+  { name: "weatherlamptest", tool: "tools/weatherlamptest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites
