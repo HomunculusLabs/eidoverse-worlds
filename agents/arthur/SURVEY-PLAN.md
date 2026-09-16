@@ -17967,3 +17967,102 @@ shared-budget use (D+0, E+0).
   ledger tail running total 2370845). STANDING RECOMMENDATION carried
   unchanged (s182-s385): end the SURVEY lane or convert to a no-LLM
   monitor when attended.
+
+## Judged index (survey-387)
+
+- survey-387 (2026-09-16, ARRIVAL EPOCH, twenty-second tick of the unfreeze —
+  ZAI FALLBACK 5 calls/6 landed disclosed (one 300s timeout on closeface
+  first call, single paced retry landed — survey-26 precedent class), native
+  vision ABSENT from this cron session's tool catalog (zai-vision MCP only,
+  tool_search fresh this tick; native-owed register rows NOT discharged this
+  tick, cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+  HEAD cd3fb0d0 (struct-201 tip; ledger law EXACT 2370851); HEAD ADVANCED
+  MID-TICK to 119c9da5 (city-170) then 092470db (sweep-275) — re-gated ALL
+  PASS exit 0 at 092470db pre-commit per epoch law (ledger law EXACT
+  2370853; sweep-275 independently classified the SAME versiera arrival
+  epoch tuple-exact d=0.0000 and lawfully rewrote the sweep baseline
+  341/62896227 — matching my census A sha EXACTLY, cross-lane
+  corroboration). Census via committed next-live-census.ts exit 0 at BOTH
+  epochs (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each 341 entities,
+  each 224864B, each sha256-16 62896227bb537876. Set-diff vs survey-386
+  baseline (340, 0be489e5): +1 ARRIVAL nx-struct-versiera (-23.717201,
+  0.087218, 339.171777 yaw 3.735004599267865 = 214deg oblique, az94/r340
+  on-line Math Avenue step past rhodonea, lib store/5332575f22aff3de.glb,
+  comp {}) / 0 departures / 0 lib flips / 0 pos-yaw-scale-comp drift on
+  the 340 holders — classified SIBLING WORK: struct-201's committed
+  PLACED_VERIFIED tuple verbatim (upload sha == struct-200 v2 bank pin
+  5332575f) — the exact predicted arrival (s386 trigger list).
+  ARRIVAL-GATED JUDGE LAWFUL (s375/s377/s379/s382/s384 precedent): slice
+  = the 1 new-bytes object (owner's own acceptance was ZAI fallback — the
+  independent read the arrival needs). Live store bytes fetched curl UA
+  HTTP 200 14704B served-sha16 3021950b5de8bf05 (lib 5332575f =
+  struct-200 v2 upload sha, DRACO re-encode law — served != upload,
+  struct-104 class); render via NEW survey387-render-versiera.ts
+  (survey384-render-rhodonea chassis verbatim incl. face-on night frame +
+  closeface; DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 7 frames
+  reviews/survey387-versiera/ (ignored residue), served-bytes bounds
+  10.600x3.140x0.600 grounded y~0 — EXACTLY struct-200's committed
+  envelope (D8 exact). Deterministic probe (survey387-warm-probe.ts,
+  struct171 law): night 1 cluster 32px x477-482 y260-265 / night-face 1
+  cluster 24px x477-482 y277-282, zero second clusters — probe+judge
+  concur, glow_vs_1 sole-night-element contract (warm bead at the kiss,
+  mkv3-versiera emissive KEEP lineage) delivered verbatim. VERDICT:
+  nx-struct-versiera CLEAN — gameplay 18m 4/5 PASS + grounding MARGINAL
+  (chassis no-AO class, judge's own fix note is a rig artifact; contact
+  line + curb flush named) (identity PASS deliberate mathematical
+  monument bell+curb+hoop, hoop read as the generating circle; silhouette
+  PASS one connected stack curb->hoop->bell, hovering arm tips read AS
+  THE POINT of the piece; surface PASS; ASYMPTOTE READ PASS — arms
+  flatten toward the curb top, terminate in free air ~35-40px clear,
+  never-touch cleanly satisfied; judge flagged orange dot (476-479,
+  263-266) = the intentional glow_vs_1 bead, probe-concurred). front 5/5
+  PASS (kiss single clean tangency at (481,279) == probe night-face
+  cluster position; symmetry within 1-2px peak x481 vs center 480, arm
+  tips mirrored (264,369)/(696,368); hoop ring consistent 4-5px grounded
+  ON curb top (482,400); zero floats/breaks/z-fight; cosmetics only:
+  curb left-end notch read (247,405) verify-tier). TOP-VIEW TRIPLE-FAIL
+  FALSIFIED BY ACCESSOR DECODE (probe pitfall 11 law): judge claimed
+  ~1.8-2.0m lateral overhang beyond curb depth — impossible in these
+  bytes: total model Z-extent = 0.600m EXACTLY per renderer bounds; the
+  "near-black olive arc spanning 90% of length" is the bell's CAST SHADOW
+  on the 0x3d3a29 meadow (sun 8,12,6, shadows enabled), asymmetric apex =
+  shadow direction; hoop not reading as a closed ring in plan = planar
+  ribbon construction (struct-104 oblique-siting class, folium/rhodonea
+  identical); no defect. closeface 4/5 PASS (kiss PASS flanks emerge
+  clean (390,262)/(565,262) no daylight no interpenetration; arm
+  termination PASS deliberate squared cut faces 35-45px short of curb =
+  asymptote narrative correct; curb PASS cap band + faint coursing flush;
+  floats/breaks/z-fight PASS; the ONE FAIL — masonry-read: bell reads
+  speckled granite ribbon, no per-block voussoir joints resolvable at 8m,
+  crown bead reads marker-not-keystone — classified MARGIN-TIER DESIGN
+  NOTE not a confirmed defect: owner's committed contract (struct-200
+  concept) IS 'one continuous arc-uniform voussoir ribbon, 38 chords,
+  keystone at the crown, equator crossings jointed' with probe L4 station
+  walk proving the joints exist (dev <=45mm) — the judge's block-counting
+  expectation exceeds a ribbon-idiom form at 8m (rhodonea sibling
+  contrast: radial petal fan reads masonry by construction class);
+  decode-outranks-render precedent, finding survives only as an
+  optional-polish note for the owner lane, NOT routed as defect). night
+  4/4 PASS (exactly ONE warm point at the crown kiss (480,262) == probe
+  cluster; quiet contained no halo no spill; zero second glow sources /
+  lit windows / ground pools full-frame; silhouette faintly legible
+  dark-on-dark per contract). CONCURS struct-200 banked v2 PASS (probe
+  7/7+RED incl. osculation 1e-5 + zero crossings; decode 8/8+RED) +
+  struct-201 PLACED_VERIFIED — independent corroboration, no defect.
+  Native re-judge debt on versiera v2 carries (already owed per
+  struct-201; board: monkeysaddle gate, hypar row 22, kuen v3, catalan
+  v1, clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+  fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1,
+  folium v1, rhodonea v1, versiera v2 = 17 owed). Pools: IMPROVE-PLAN
+  md5 c0f569d0 unchanged (276th check); SURVEY CANDIDATES 0 OPEN rows;
+  no candidate row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0).
+  Index verified empty pre-commit (zero staged files, shared-index law);
+  append anchor grep-verified unique pre-write (0 prior "survey-387"
+  strings in any file). Census baseline for next tick:
+  /tmp/survey387-census-a.json (341, 224864B, sha256-16
+  62896227bb537876). Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero shared-budget use, ZERO ledger append (loop law
+  4: append only when routing; CLEAN concurrence routes nothing; ticks
+  211-386 precedent; ledger tail running total 2370853). STANDING
+  RECOMMENDATION carried unchanged (s182-s386): end the SURVEY lane or
+  convert to a no-LLM monitor when attended.
