@@ -13262,3 +13262,84 @@ struct198-render-rhodonea.ts (NEW, tracked), assets/mkv3-rhodonea.ts
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-198,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-199 (2026-09-16): RHODONEA PLACEMENT TICK — committed carry from
+## struct-198 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past folium, on-line step az94/r330
+
+199%3=1 placement-slot cadence WITH a takeable banked form (struct-198:
+"placement = struct-199 carry"; the 178..199 lane precedent — a banked form
+places on the next tick regardless of N%3, build+judge/place alternation
+held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..198): 16 owed — monkeysaddle v2 native-18m-PASS placement GATE,
+hypar row 22 native-only, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix
+v1, archispiral v1, nephroid v1, folium v1, rhodonea v1 (fallback-judged
+acceptances, all placed or banked; rhodonea placed THIS tick — debt stays
+owed). Gate ALL PASS real exit 0 tick-start at e012220d (city-165; /tmp/
+struct-gate.out, GATE_EXIT:0) + RE-RUN clean immediately before the
+mutation, HEAD unchanged e012220d (epoch law honored, no sibling commit
+landed mid-tick). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged
+28th tick, 0 OPEN nx-struct rows). Ledger max re-derived struct-198 -> tag
+struct-199 (re-checked immediately before append).
+
+Local bytes re-verified sha256
+dd7b5a631ab4424c0a14ad606105e24b49d6968d0b335a38624da07c37404598 ==
+struct-198 bank pin BEFORE upload (shasum -a 256, mtime Sep 16 00:02);
+struct198-decode re-run this tick ALL PASS 9/9 (envelope D8 5.000x5.130x0.600
+cx/cz 0.0e+0 exact).
+
+SEAT (struct199-scan + struct199-select, fresh 339 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 36 forms; 40 math-family
+structs standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 -> archispiral300 ->
+nephroid310 -> folium320 (~10m steps). 595 lawful band candidates; the
+rhodonea takes the NEXT ON-LINE STEP: az94.0 r330.0, 10.0m step == the
+procession rhythm. NN 10.00 vs nx-struct-folium (law 8.0), SAT 5.96 vs
+nx-struct-folium at FINAL yaw (law 1.4), walk-clear 301.41.
+
+YAW LAW (struct-104 oblique-read, struct-198 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean
+(the melencolia/fourier/cissoid/quadratrix/archispiral/nephroid/folium
+convention). The outbound walker reads the construction face obliquely on
+approach; the 5.00m petal span runs az124/304.
+
+TERRAIN (struct199-terrain-rhodonea.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 5.00x0.60 ribbon): spread 3.4mm,
+PY = 0.084164.
+
+PLACEMENT (next-place-struct199.ts, struct197 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 339 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.24x1.65 at yaw 214):
+NN floor folium 10.00, SAT worst folium 5.96 — clean. 1 upload
+(content-addressed store/dd7b5a631ab4424c.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 339 -> 340 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (heart-bead
+emissive-in-GLB glow_rh_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: rhodonea v1 stays OWED (fallback-judged
+acceptance, disclosed; probe L2 kiss theorem 1e-6 + decode D5 ring law +
+D7 tip-kiss law are the binding evidence); plus monkeysaddle gate, hypar
+row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix v1,
+archispiral v1, nephroid v1, folium v1 — 16 owed.
+
+Bill eye-check pointer: on Math Avenue past the folium — a stone rose of
+seven petals growing from a bossed heart, every petal tip just touching
+one great iron circle: Grandi's rose, the flower mathematicians drew
+before botanists counted its kind. Walk a full circle: each petal meets
+the ring exactly at its point, never crossing. After dark: one warm point
+burning at the heart where all seven petals are born.
+
+Files: struct199-scan-rhodonea.ts + struct199-select-rhodonea.ts +
+struct199-terrain-rhodonea.ts + next-place-struct199.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-199,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
