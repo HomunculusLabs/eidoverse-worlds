@@ -18153,3 +18153,84 @@ shared-budget use (D+0, E+0).
   tail running total 2370858). STANDING RECOMMENDATION carried unchanged
   (s182-s388): end the SURVEY lane or convert to a no-LLM monitor when
   attended.
+
+## Judged index (survey-390)
+
+- survey-390 (2026-09-16, ARRIVAL EPOCH, twenty-fifth tick of the unfreeze —
+  ZAI FALLBACK 5/5 landed disclosed (native vision ABSENT from this cron
+  session's tool catalog, tool_search fresh this tick: sources =
+  reprompt/terminal/zai-vision only; flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed — survey-345/s387/s388/s389
+  precedent): gate ALL PASS real exit 0 FIRST TRY at tick-start HEAD
+  7b254b15 (pressure-28 tip; ledger law EXACT 2370860); HEAD ADVANCED
+  MID-TICK to a0721695 pre-commit — re-gated ALL PASS exit 0 at a0721695
+  per epoch law. Census via committed next-live-census.ts exit 0 at BOTH
+  epochs (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each 342 entities,
+  each 225466B, each sha256-16 4ca51a64ca38aed5 — byte-identical to
+  sweep-277's rewritten baseline. Set-diff vs survey-389 baseline (340->
+  341->342 chain: 341, 0be489e5) via /tmp/survey390-diff.py: +1 ARRIVAL
+  nx-struct-elliptic (-24.414766, 0.07436, 349.147418 yaw
+  3.735004599267865 = 214deg oblique, az94/r350 on-line Math Avenue step
+  past versiera, lib store/602519cffada3442.glb, comp {}) / 0 departures /
+  0 lib flips / 0 pos-yaw-scale-comp drift on all 341 holders — classified
+  SIBLING WORK: struct-203's committed PLACED_VERIFIED tuple verbatim
+  (upload sha == struct-202 v3 bank pin 602519cf), corroborated by
+  sweep-277 (arrival epoch, tuple-exact d=0.0000) and city-173 (fold
+  accounted) — the exact predicted arrival (s389 trigger list, elliptic
+  v1 new-owed on landing). ARRIVAL-GATED JUDGE LAWFUL (s375/s377/s379/
+  s382/s384/s387 precedent): slice = the 1 new-bytes object (owner's own
+  acceptance was ZAI fallback — the independent read the arrival needs).
+  Live store bytes fetched curl UA HTTP 200 12092B served-sha256
+  aca5a6cd (lib 602519cf = struct-202 v3 upload sha, DRACO re-encode law
+  — served != upload, struct-104 class); render via NEW
+  survey390-render-elliptic.ts (survey387-render-versiera chassis
+  verbatim incl. face-on night frame + closeface; DRACO-aware,
+  live-meadow ground 0x3d3a29) exit 0, 7 frames
+  reviews/survey390-elliptic/ (ignored residue), served-bytes bounds
+  5.400x5.161x1.100 grounded y~0 — EXACTLY struct-202's committed
+  envelope (D8 parity). Deterministic probe (survey390-warm-probe.ts,
+  struct171 law): night 1 cluster 34px x410-415 y375-381 / night-face 1
+  cluster 97px x366-376 y385-395, zero second clusters — probe+judge
+  concur, sole-bead law (one warm bead at P, the hidden third point on
+  the oval's low flank) delivered verbatim; judge bead sightings
+  gameplay (412,377) and night-face (370,390) land INSIDE the probe
+  clusters. VERDICT: nx-struct-elliptic CLEAN 5/5 — gameplay 18m PASS
+  (deliberate math monument read; all five elements individually legible
+  — plinth, oval, wing cut mid-flight, horizontal rod on two posts with
+  3/3 crossings gold-pinned, diagonal rod; silhouette continuous, the
+  suspended oval reads as intentional levitation BY the rods; grounded
+  with cast shadow; zero voids/breaks/z-fight) + front PASS (3/3
+  crossings pinned, both diagonal welds flush, bead on-axis within one
+  bead radius — committed probe perp 3.3e-16 outranks pixel
+  extrapolation, pitfall 11; oval symmetry ~2px) + night PASS (exactly
+  one warm point, quiet, no halo, no spill, zero second sources,
+  silhouette faintly legible) + night-face PASS (one warm point at the
+  oval's low flank, pins non-emissive, judge's faint-ground-shadow note
+  = chassis dim-sun artifact class, emissive casts no light in the rig)
+  + closeface 4/4-style PASS (6/6 through-pin faces proud of the stone —
+  v3's through-pin cure independently corroborated, v1/v2
+  embedded-collar occlusion class closed; both weld junctions flush, the
+  foreshortened upper weld outranked by committed decode D5 Q
+  span-covered; bead clean and seated at the oval's lowest flank;
+  masonry reads JOINTED voussoir blocks 10-12 + wing 6-7 — resolves the
+  struct-202 judge's ribbon-idiom expectation class; zero
+  floaters/interpenetration/z-fight/missing). CONCURS struct-202 banked
+  v3 PASS (probe 7/7 + RED; decode 9/9 + RED) + struct-203
+  PLACED_VERIFIED — independent corroboration, no defect. Native
+  re-judge debt on elliptic v3 carries (already owed per struct-203;
+  board: monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch
+  v1, menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+  cissoid v2, quadratrix v1, archispiral v1, nephroid v1, folium v1,
+  rhodonea v1, versiera v2, elliptic v3 = 18 owed). Pools: IMPROVE-PLAN
+  md5 c0f569d0 unchanged (279th check); SURVEY CANDIDATES 0 OPEN rows;
+  no candidate row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0).
+  Index verified empty pre-commit (zero staged files, shared-index law);
+  append anchor grep-verified unique pre-write (0 prior "survey-390"
+  strings in any file). Census baseline for next tick:
+  /tmp/survey390-census-a.json (342, 225466B, sha256-16
+  4ca51a64ca38aed5). Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero shared-budget use, ZERO ledger append (loop law
+  4: append only when routing; CLEAN concurrence routes nothing; ticks
+  211-389 precedent; ledger tail running total 2370860 at tick-start
+  gate). STANDING RECOMMENDATION carried unchanged (s182-s389): end the
+  SURVEY lane or convert to a no-LLM monitor when attended.
