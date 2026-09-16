@@ -11899,11 +11899,60 @@ cae6b928 unchanged, no reset role — audit-continues banner governs.
 Foreign dirt (windmill overhaul scratch, cabin/carousel prototype dirs,
 client/server engine files, fleet shells) = sibling work-in-flight,
 untouched. Zero world mutations, zero defect notes, zero uploads, zero
-verbs, zero comp edits (D+0, E+0). NEXT-PAIR POINTER CORRECTION (disclosed,
-sweep-59 rotation-repair class): the ledger prose's "hall + forge" is
-internally inconsistent — hall/forge was walked fresh @276; the true LRU
-chain is forge/potter @271 stalest (6 sweeps), hall/bunkhouse @272,
-inn/tower-house @273, longhouse/garden-cottage @275, hall/forge @276,
-row-cottage/observatory @277. Next tier-2 pair (sweep-278): FORGE +
-POTTER (256th cycle; both tools ls-verified present on disk this tick:
-interior-walk-forge.ts, interior-walk-potter.ts).
+verbs, zero comp edits (D+0, E+0). sweep-277 pointer: FORGE + POTTER (256th cycle; both tools ls-verified
+present on disk this tick: interior-walk-forge.ts, interior-walk-potter.ts).
+
+
+sweep-278: CLEAN SWEEP, fully-quiet steady-state tick (47th consecutive
+quiet-or-classified). Tick-start HEAD eef62689 = survey-390 (arrival epoch,
+zero mutations, zero ledger append per its entry); standing gate ALL PASS
+real exit 0 FIRST TRY (comp placers intact + HEAD prefix PASS lines + ALL
+PASS trailer, exit captured unpiped to /tmp/s278/gate log). Census 342==342
+at BOTH epochs (A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL
+to each other AND to the committed sweep-277 baseline (raw 225466B sha16
+4ca51a64ca38aed5, cmp-verified live-A vs live-B vs the on-disk baseline
+file): 0 arrivals, 0 departures, all five semantic drift classes EMPTY
+(pos/yaw/scale/kind/bbox, lib flips, compKeys); no snapshot rewrite owed
+(no-churn precedent — the committed file already describes the live world
+exactly). No sibling landed between epochs; HEAD unchanged across the whole
+tick at eef62689. Overlap: SAT fresh-live 304 bbox non-light / 237
+classified / 0 coverage holes, real exit 3 unpiped on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 234th sweep since routing, NOT
+new, no escalation due (law keys severity-1). Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 ALL_PASS maxDist 0.37999999999999723
+≈ 0.380 (next-walk-core-paths.ts; JSON parsed from first brace), NW 5/5
+(nw-approach1-walk.ts), NE 7/7 (ne-approach2-walk.ts), SW 5/5
+(sw-approach3-walk.ts); verdicts content-anchored on status strings +
+per-leg ok counts from raw files. Tier-2 256th cycle per the committed
+sweep-277 PLAN pointer — the plan tail's corrected pointer (forge + potter)
+overrides the sweep-277 ledger prose's internally-inconsistent
+"hall + forge" (hall/forge was walked fresh @276; rotation-repair class,
+sweep-59/277 precedent): forge 6/6 ALL_PASS (dists
+0.2608/0.307/0.3001/0.315/0.375/0.2607, interior-walk-forge.ts) + potter
+6/6 ALL_PASS (0.27/0.366/0.2953/0.2547/0.2497/0.3493,
+interior-walk-potter.ts; potter carries its improve-37 motion:pwheel comp —
+dists normal, corroborated by battery), both real exit 0, both tools
+ls-verified present on disk pre-run. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (232nd consecutive clean); sweep89-battery 28/28
+PASS exit 0 on fresh census-A bytes; interlane md5 f6254cd0 stable, read
+fresh this tick. Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (254th
+check; 0 SHARD EXECUTION sections, 0 open candidate rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs and was read fresh via the loop/plan
+reload (read-only curation only; no mutations by this lane in any case).
+Diff tool sweep278-census-diff.py folded from the committed sweep277
+chassis (sed-swap class: baseline header + /tmp phase naming updated;
+py lint clean by the write tool; clean exit 0 at BOTH epochs A/B unpiped
+on the real bytes). Foreign dirt in tree (windmill overhaul scratch,
+cabin/carousel prototype dirs, client/server engine files, fleet shells)
+is sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-279):
+hall + bunkhouse (257th cycle — LRU chain re-derived from committed plan
+pointers this tick: forge/potter @278 walked fresh, row-cottage/observatory
+@277, longhouse/garden-cottage @275, row-cottage/observatory @274,
+inn/tower-house @273, hall/bunkhouse @272 stalest standing pair at 6
+sweeps; both walk tools ls-verified present on disk this tick:
+interior-walk-hall.ts, interior-walk-bunkhouse.ts).
