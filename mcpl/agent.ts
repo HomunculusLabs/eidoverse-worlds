@@ -71,6 +71,9 @@ import { describeBoard } from "../shared/board.js";
 // The vendor affordance line (vocab-20): names the shelf (live stock per
 // ware), the grant-log count, and the buy action hint.
 import { describeVendor } from "../shared/vendor.js";
+// The tour affordance line (vocab-22): names the run state, the derived
+// cue, line/cue sizes, and the begin/halt actions.
+import { describeTour } from "../shared/tour.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -2001,10 +2004,14 @@ export class WorldAgent {
       // a vendor names its SHELF (live stock per ware) + grant-log count —
       // the text-tier read of the same folded comp the grant engine writes
       if (c.vendor) aff.push(describeVendor(c.vendor));
+      // a tour names its run state + derived cue — the text-tier read of
+      // the same folded comp the choreographer anchors (look() derives at
+      // read time, so the cue is live)
+      if (c.tour) aff.push(describeTour(c.tour));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

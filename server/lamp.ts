@@ -67,8 +67,11 @@ function livePoseOf(w: LampWorld & { clients?: Set<{ id: string; lastPose?: unkn
 
 /** Write the companion light + its carry mount at the host's live pose.
  *  Used by the use-transition AND the authoring-implies-lit reconcile —
- *  one arithmetic, two doors. No say here: callers own the provenance. */
-function igniteCompanion(w: LampWorld, id: string, data: unknown, ent: { pos?: number[]; yaw?: number }, why: string): void {
+ *  one arithmetic, two doors. No say here: callers own the provenance.
+ *  EXPORTED for the tour engine (vocab-22): its cue lamp writes ride
+ *  w.append, which bypasses runVerb's after hooks — the choreographer
+ *  must call the lamp family itself (one arithmetic, three doors). */
+export function igniteCompanion(w: LampWorld, id: string, data: unknown, ent: { pos?: number[]; yaw?: number }, why: string): void {
   const cid = lampLightId(id);
   const pos = lampLivePos(w, id, ent);
   const yaw = lampLiveYaw(w, id, ent);
@@ -81,8 +84,9 @@ function igniteCompanion(w: LampWorld, id: string, data: unknown, ent: { pos?: n
 }
 
 /** Remove a standing companion light (snuff / sweep paths). Silent when
- *  nothing stands — snuffing a dark lamp never mints a remove. */
-function removeCompanion(w: LampWorld, id: string, why: string): void {
+ *  nothing stands — snuffing a dark lamp never mints a remove.
+ *  EXPORTED for the tour engine (vocab-22) — the off cue's door. */
+export function removeCompanion(w: LampWorld, id: string, why: string): void {
   const cid = lampLightId(id);
   if (w.state.entities[cid]?.kind !== "light") return;
   const rm = w.append("world", "remove", { id: cid });

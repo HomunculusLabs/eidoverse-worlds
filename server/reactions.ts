@@ -66,6 +66,10 @@ import { reactBoard } from "./board.ts";
 // builder-gated restock. Same dispatch doctrine, last (a stand host may
 // also be any of the above).
 import { reactVendor } from "./vendor.ts";
+// The tour engine (vocab-22): comp {type:"tour"} owns the begin/halt action
+// vocabulary — the lantern-tour choreographer over the lamp family. Same
+// dispatch doctrine, last (a post host may also be any of the above).
+import { reactTour } from "./tour.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -181,6 +185,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // owns the buy/restock action vocabulary — the item grant with stock
     // counts and builder restock. Same dispatch doctrine, last.
     if (reactVendor(w, cause, ent, id, action)) return;
+    // The tour slice (vocab-22, § TOURS CONTRACT): comp {type:"tour"} owns
+    // the begin/halt action vocabulary — the lantern-tour choreographer
+    // over the lamp family. Same dispatch doctrine, last (a post host may
+    // also be any of the above).
+    if (reactTour(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

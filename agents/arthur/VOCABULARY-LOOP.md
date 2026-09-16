@@ -1042,8 +1042,164 @@ one 8KB comp, no script, no new verb.
       branch, describeChime affordance, exclusion-list entry). Scratch
       worlds only; no production world touched. No eye-check owed (zero
       client code — sound + chat both existing paths).
-- [ ] Lantern tour: scripted multi-entity light sequence with authored
+- [x] Lantern tour: scripted multi-entity light sequence with authored
       timeline.
+      DONE vocab-22 (2026-09-15): comp {type:"tour"} — reactTour in
+      server/tour.ts rides reactToUse's dispatch after vendor (one import +
+      one dispatch hunk in reactions.ts) + TourEngine 1Hz sweep on the
+      BehaviorHost tick (the vocab-2/3/14/17 precedent; the same two-hunk
+      shape in behaviors.ts). ZERO edits to verbs.ts / server.ts / world.ts.
+      Contract in § TOURS CONTRACT below implemented as written. Evidence:
+      tools/tourtest.ts RED 3 failing after matrix extension (33/36 — the
+      interrupted prior window's residue matrix passed 30/30 while cue lamp
+      comps NEVER ignited companions: applyCue wrote comps via w.append,
+      which bypasses runVerb's after hooks, so afterComp→lampOnComp never
+      ran — lamps read lit in the fold but cast no light; residue test
+      never checked the light tier) then ALL PASS 36/36 after the GREEN
+      fix (lamp.ts igniteCompanion/removeCompanion exported and called
+      directly from applyCue — one arithmetic, three doors; header claim
+      corrected to match reality); servergate battery incl. tourtest 36
+      registered (run evidence in the vocab-22 ledger entry); permtest
+      21/23 = the documented pre-existing mcpl/tokens.json-missing class
+      (vocab-1..21 identical); mcpl manifest 28/0 + agent.ts
+      describeTour affordance line + exclusion-list entry. Scratch worlds
+      only; no production world touched. No eye-check owed (zero client
+      code — the tour's effects are lamp companions every client already
+      renders; protocol only).
+      INTERRUPTED-WINDOW NOTE: a prior wakeup built engine+shared+test+
+      wiring (reactions/behaviors/mcpl/servergate) but died before RED/GREEN
+      verification, contract section, queue tick, ledger, or commit —
+      reconciled this tick per the struct-9 doctrine: residue re-verified
+      fresh, the defect it carried caught and cured by extending the
+      matrix BEFORE any acceptance, and the bookkeeping gap closed naming
+      the interruption honestly.
+
+### TOURS CONTRACT (vocab lane — drafted and implemented vocab-22, 2026-09-15)
+
+**Trigger.** A tour post is an entity carrying `comp {type:"tour", data:{...}}`.
+The action strings `begin` and `halt` are TOUR vocabulary on the freeform
+`use {id, action}` path (the reactions doctrine: other action strings pass
+through untouched — a post ignoring `use {action:"ring"}` is exactly
+correct; begin/halt are DISJOINT from all 15 prior families' actions).
+Attaching/removing the comp is builder (rank 1) — the author's standing
+decision that this place choreographs light, identical doctrine to
+reactions/phrases/region/door/lamp/guestbook/portal/music/plate/water/
+growth/companion/weatherzone/waystone/reservation/bell/soundpost/board/
+vendor/chime.
+
+**State — the fold is the progress; TIME advances it.** The authored
+timeline is a static table: `line` (member lamp entity ids, ≤8), `cues`
+(the timeline, ≤12, sorted by `t` seconds-since-begin ∈ [0,3600], each
+`{t, on?:[idx…], off?:[idx…], line?}` with line-relative lamp indexes),
+`reach` [2,12] d4, `beginAt`/`haltAt` lines ≤200c. The ENGINE writes
+exactly THREE progress keys — `playing` (bool), `atCue` (the last fired
+cue index, −1 = none), `at` (the begin anchor, ms epoch) — and STRIPS
+them from the authored carry at every write (weatherzone doctrine: a
+re-authored comp over a live tour can never smuggle stale progress). The
+CURRENT cue is a pure function of fold + now — `cueAt(cues, playing,
+atCue, at, now)` in shared/tour.js (the doorYaw/stageAt closed-form
+doctrine) — so late join, restart, replay, and fork all derive the same
+standing cue with zero traffic between cues. NOTHING else is stored
+anywhere.
+
+**The sweep — transitions only.** TourEngine rides the 1Hz BehaviorHost
+tick (the bell/weatherzone precedent). Each sweep derives the current cue
+from the folded anchor; when the derived cue passes the folded marker,
+it applies every crossed cue's lamp writes (crossedCues, (from,to]
+inclusive — sub-second choreography coalesces into one batch, disclosed:
+the sweep is 1Hz) and re-anchors the fold with ONE comp write per sweep
+batch. Cues with `line` and no indexes are PURE narration (ONE say each,
+`tour:{cue, at}` — the bell grammar: TIME caused it, no cause/by). Cues
+with no line mint no say. Halted tours cost nothing (the sweep skips
+them entirely).
+
+**The cue application — through the lamp family's own doors.** Each
+on/off index maps to a member lamp by authored id; the engine writes ONE
+world-authored `comp {id, type:"lamp", data:{...that lamp's authored
+shape, on, at}}` per lamp per cue (ride-verbatim, regions doctrine — the
+fold's own record of each lamp's truth) and COMPLETES the write through
+the lamp family's own companion doors: `igniteCompanion` (light + mount
+verbs — the vocab-5 derivation law) on ignite, `removeCompanion` on
+snuff, called directly from the engine because w.append bypasses
+runVerb's after hooks (a lamp that reads lit MUST cast light — the
+residue's original defect class, caught by the matrix extension). A
+member missing from the fold or carrying no lamp comp is noted
+(`tour-skip`) and skipped — a tour may be authored before its lamps
+spawn. An already-correct lamp is not churned (no-op write skip).
+
+**Effects.** begin/halt each append TWO entries, in order: the ONE comp
+transition write `{...authored, playing, atCue, at}` (begin re-anchors
+atCue:−1/at:now; halt keeps atCue/at frozen) and a `say` (actor `world`,
+args `{text:<line>, id, tour:{op:"begin"|"halt", who, at}, cause:<use
+seq>, by:<user>}` — the phrases/doors provenance grammar exactly). Line
+defaults `the lantern tour begins` / `the lantern tour halts` (authored
+beginAt/haltAt override). Sweep cue-lines mint ONE say each with
+`tour:{cue, at}` and NO cause/by (TIME caused it — the bell grammar). A
+`tour-trigger` flight entry (kind `reaction`) records cause→effect on
+every hand transition and every sweep batch. No other verb can be minted
+from a tour use beyond what the lamp family itself mints — the
+companions ARE the show.
+
+**Authority/reach.** Beginning and halting are rank 0 (anyone present —
+the author's published behavior) plus the ARM'S-REACH gate (vPunt
+arithmetic): the user's LIVE pose within `reach` metres of the post's
+LIVE position (lease stream pos if leased, folded pos otherwise).
+Out-of-reach use is a `tour-skip` naming the distance; an unknown
+position (no live pose on the presence plane) skips the same way.
+Spectators bounce at the shell (`use` is spectator-gated there). Lock
+composes as for doors (lock refuses place/punt/spawn/comp/remove — not
+`use`): a locked post still begins.
+
+**Rate/abuse boundaries.** (a) Run cap: at most 2 tours playing per
+world (TOUR_RUN_CAP; a begin past the cap skips with `tour-cap`).
+(b) Sweep budget: at most 4 tour transition batches per sweep world-wide
+(skips with `tour-cap` naming it — caught next sweep). (c) Per-cue
+writes already bounded by normalizeTour's caps (≤8 lamps, ≤12 cues).
+(d) begin/halt are verb-rate bounded (12/4s) and no-op closed (begin on
+playing, halt on halted mint nothing). (e) Lint fires at most once per
+boot per tour at the sweep (`tour-lint` — a sweep must never lint-spam);
+per-transition lint rides each reaction attempt (door doctrine).
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path and the live tick; folding a historical
+use, comp, or say never re-fires. On restart the fold carries
+playing/atCue/at — a tour playing at crash RESUMES at its anchor: the
+sweep derives the current cue and fires only what has not fired
+(crossedCues from the FOLDED marker — a restart mid-tour never re-lights
+a cue the fold already recorded). A halted tour stays halted. Late join
+folds the standing cue and the lamps' current lit state (each lamp's own
+comp) — the complete truth.
+
+**Failure behavior.** Malformed comp → clamp + `tour-lint`
+(particles-lint doctrine): line entries dropped when not entity-id
+strings, capped 8 (noted); cues dropped when t is not a number, capped
+12; on/off indexes DROP when outside the line (a clamped index would
+light the wrong lamp — noted by name); a cue that lights nothing, snuffs
+nothing, and says nothing is dropped; reach [2,12] d4; lines ≤200c;
+unknown keys ride (the bag is public annotation). An empty cue list
+after filtering is a tour that can never fire (fail closed, noted).
+Missing entity → silent pass-through. The whole reaction and every
+sweep step wrapped in try/catch (house rule 3 — no tour takes the
+server down).
+
+**Browser path.** ZERO client code: the tour's effects are LAMP
+COMPANIONS (vocab-5 machinery every client already renders — light
+entities, rig dayness, gizmo bulbs) and ordinary chat says (logChat).
+A visual tier for the post itself (a lit sign, a beacon column) is
+deliberately deferred — protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the says land in the
+agent inbox; `look()` lists the post via `shared/tour.js describeTour`
+(the describeDoor pattern) — run state, the derived cue (derived at
+read time, so it is live), line/cue sizes, and the begin/halt action
+hint. An agent begins through the ordinary `use` verb.
+
+**Intent.** The world performs. A lantern row that wakes lamp by lamp at
+dusk, a garden promenade lit in sequence, a festival path that guides a
+crowd — one authored timeline, one comp per transition, light as a
+choreographed sequence with zero per-frame traffic between cues, and the
+beginning of affordance COMPOSITION: the tour family driving the lamp
+family through the lamp family's own arithmetic.
 - [ ] Bench dedication: named plaque attachment with owner rank and text
       caps (extends inscription plate family).
 - [ ] Garden plot: plantable tile grid with per-tile state and harvest

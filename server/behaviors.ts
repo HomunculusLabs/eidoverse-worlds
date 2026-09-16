@@ -29,6 +29,10 @@ import { WeatherZoneEngine, type ZoneWorld } from "./weatherzone.ts";
 // Bells (vocab-17): swept on the same clock. The schedule is a static table
 // in the fold; time (hoursAt — the sun's own arithmetic) is the trigger.
 import { BellEngine, type BellWorld } from "./bell.ts";
+// Tours (vocab-22): swept on the same clock. The fold holds the progress
+// (playing/atCue/at); the sweep applies crossed cues' lamp writes through
+// the lamp family's own comp transition and re-anchors the fold.
+import { TourEngine, type TourWorld } from "./tour.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -372,10 +376,14 @@ export class BehaviorHost {
    *  the hold's truth (active && until > now); the sweep owns expiry
    *  transitions from folded truth alone — boot heal included. */
   private weatherzones: WeatherZoneEngine | null = null;
-  /** Bells (vocab-17): swept on the same clock. The schedule is a static
+  /** Bells (vocab-17): swept on the same clock — the schedule is a static
    *  table; the sweep reads the world clock and tolls crossed slots — one
    *  say + presence-plane strikes per toll, nothing persisted. */
   private bells: BellEngine | null = null;
+  /** Tours (vocab-22): swept on the same clock — the fold holds the progress
+   *  (playing/atCue/at); the sweep applies crossed cues' lamp writes and
+   *  re-anchors. Halted tours cost nothing. */
+  private tours: TourEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -462,6 +470,14 @@ export class BehaviorHost {
       this.bells ??= new BellEngine(this.w as unknown as BellWorld);
       this.bells.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] bell sweep`, err); }
+
+    // Tours (vocab-22) ride the same clock — the fold holds the progress
+    // (playing/atCue/at); the sweep applies crossed cues' lamp writes and
+    // re-anchors. Halted tours cost nothing.
+    try {
+      this.tours ??= new TourEngine(this.w as unknown as TourWorld);
+      this.tours.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] tour sweep`, err); }
 
     for (const inst of this.instances.values()) {
       for (let i = 0; i < inst.timers.length; i++) {
