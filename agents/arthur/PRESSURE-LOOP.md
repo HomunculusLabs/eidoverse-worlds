@@ -537,7 +537,40 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       (SELFTEST 41 gate families). Servergate: smoke 85/0 + leasetest 19/0
       on the fixed pinned worktree; main-tree boot-parse clean. Next head:
       whisper spam.)
-- [ ] Whisper spam: targeted messages cannot bypass the global rate budget.
+- [x] Whisper spam: targeted messages cannot bypass the global rate budget.
+      (pressure-26, 2026-09-16: worktree @ 7bdd6c58 + supplemented
+      untracked shared/pilot.js (pressure-23 disclosure), PORT 8975,
+      35.5s, 160 sockets — 24 posing performers @15Hz + 16 quiescent
+      embodied legs (8 satur + 1 burst + 1 fat + 6 fair) + 120 spec.
+      MEASURED PASS 2/2 identical runs, no patch. BURST: 200 whispers +
+      25 verb-says back-to-back → verdicts EXACT 60 (60/s global cap),
+      0/25 verb echoes same-second (the message wallet is SHARED across
+      types — whispers cannot buy extra verb budget), 1 rate-limit
+      recorder note, over-cap sends silent. SATURATION: 8 legs @58/s x
+      6s = 2784/2784 echoes p95 2-4ms (no starvation at 464/s
+      aggregate). FAT: 30x 3990-unit emoji whispers 30/30 author + 30/30
+      target p95 2-4ms, whole-string preserved, 0 spills to 158 other
+      sockets. GHOST-HOLD: 600 distinct absent keys → 20 returners
+      exactly-once 20/20, right-recipient 20/20, foreign 0, re-rejoin 0
+      (queue drained), delivery strictly after snapshot 20/20, dups 0.
+      PRIVACY: 0 whisper verb lines in log.jsonl, 0 raw-byte markers,
+      0 snapshot hits. Spectator-sender: 0 delivered / 0 echoed /
+      silence (drop is silent by design). Boundary: 4001→EXACT 4000-unit
+      slice; 240KB-wire giant echoes at the 4000-unit slice. Fairness:
+      mid-storm joins 14/14 p95 26-29ms, solo say p95 2-10ms, lights
+      2/2, fps p50 15.0-15.1, 0 seq gaps, roster 40 exact, final present
+      0, log 8/8 drift 0, HTTP probe p95 1-4ms, RSS +16-21MB, 0
+      suspicious lines. DISCLOSED product facts (design calls, not
+      patches): (1) the whisper text cap slices UTF-16 UNITS, so the
+      real ceiling is ~2000 emoji ≈ 8KB UTF-8, not 4000 chars ≈ 16KB;
+      (2) over-cap whisper drops are silent to the sender (only the
+      flight-recorder note marks them); (3) pendingWhispers keys are
+      unbounded (600 keys ≈ 180KB held, per-key cap 20 verified bounded).
+      tools/pressure-whisper.ts new (SELFTEST 39 bypass gates fire; 3
+      RED rounds en route were all harness accounting — fast-path frame
+      drop of whisper echoes, surrogate-pair unit math, scheduled-vs-
+      sent latency — server correct each time). Servergate: smoke 85/0
+      on the pinned tree. Production and live worlds untouched.)
 - [ ] Watchdog starvation: a stuck tick cannot block heartbeat/liveness
       paths.
 - [ ] Weather strobe under load: rapid weatherzone requests during peak
