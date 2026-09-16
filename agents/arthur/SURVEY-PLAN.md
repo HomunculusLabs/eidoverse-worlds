@@ -17666,3 +17666,77 @@ shared-budget use (D+0, E+0).
     ledger tail running total 2370832). STANDING RECOMMENDATION carried
     unchanged (s182-s380): end the SURVEY lane or convert to a no-LLM
     monitor when attended.
+
+## Judged index (survey-382)
+
+- survey-382 (2026-09-15, ARRIVAL EPOCH, seventeenth tick of the unfreeze —
+  ZAI FALLBACK 3 calls/3 landed disclosed, native vision ABSENT from this
+  cron session's tool catalog (zai-vision MCP only, flap law; native-owed
+  register rows NOT discharged this tick, cron-disclosed): gate ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD 078d1b70 (city-163 tip; ledger
+  law EXACT 2370834 — total +2 vs survey-381's 2370832, struct-197 folium
+  placement + city-163 HOLD, no survey dispute; HEAD ADVANCED MID-TICK to
+  5f8e19da sweep-270 — re-gated ALL PASS exit 0 pre-commit per epoch law).
+  Census via committed next-live-census.ts exit 0 at BOTH epochs (A/B,
+  20s-paced, cmp A==B BYTE-IDENTICAL), each 339 entities, each 223668B,
+  each sha256-16 e06f807046673e27. Set-diff vs survey-381 baseline (338,
+  24ac55a9): +1 ARRIVAL nx-struct-folium (-22.322072, 0.070261, 319.220496
+  yaw 3.735004599267865 = 214deg oblique, az94/r320 on-line Math Avenue
+  step past nephroid, lib store/317256d9738a914b.glb, comp {}) / 0
+  departures / 0 lib flips / 0 pos-yaw-scale-comp drift on the 338 holders
+  — classified SIBLING WORK: struct-197's committed PLACED_VERIFIED tuple
+  verbatim (sha == struct-196 bank pin 317256d9); independently
+  corroborated by sweep-270's own arrival-epoch census (same sha16
+  e06f807046673e27, tuple-exact vs f1ffcfad) and city-163's accounted
+  arrival. ARRIVAL-GATED JUDGE LAWFUL (s375/s377/s379 precedent): slice =
+  the 1 new-bytes object (owner's own acceptance was ZAI fallback — the
+  independent read the arrival needs). Live store bytes fetched curl UA
+  HTTP 200 9032B served-sha16 a164406373c833a5 (lib 317256d9 = struct-196
+  v1 upload sha, DRACO re-encode law — served != upload, struct-104
+  class); render via NEW survey382-render-folium.ts (survey379-render-
+  nephroid chassis verbatim incl. face-on night frame + closeface;
+  DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 7 frames reviews/
+  survey382-folium/ (ignored residue), served-bytes bounds 7.600x5.431x
+  0.600 grounded y~0 (R3.8 planar leaf-loop span, rail lintel to 5.43).
+  VERDICT: nx-struct-folium CLEAN — gameplay 18m CLEAN 5/5 (identity PASS
+  deliberate mathematical monument — teardrop loop + 3-post level rail +
+  node bead + grade curb all present; silhouette PASS one continuous
+  closed curve through the single node, zero detached/floating segments;
+  grounding PASS base flush + contact shadow x240-285 y457-467 — margin:
+  shadow left-end-only, directional; surface PASS zero z-fight/holes/
+  voids/strays; ASYMPTOTE READ PASS both tail tips stop visibly short of
+  the rail, 6-10px sky-gap slivers at 18m — approach-without-contact
+  legible at gameplay distance). closeface ~8-10m CLEAN 5/5 (one
+  continuous strand tip->node->loop->node->tip, no gaps; tip-rail
+  clearance 4-8px L / 5-10px R thin but open; bronze bead 14-16px seated
+  exactly at the node crossing on the center post; three posts ground
+  cleanly on the base deck; continuous ring cast shadow corroborates one
+  connected solid; margins cosmetic: apex tessellation notch x475-487
+  y2-12 low-poly faceting not a through-gap, tight tip clearance flagged
+  angle-watch). night-face PASS 4/4 — exactly ONE warm element (480,328)
+  7-9px at the node crossing, quiet contained, no bloom halo, no ground
+  pool, no second clusters; faint neutral plinth-top ambient named
+  grounding-not-glow by the judge. DETERMINISTIC PROBE
+  (survey382-warm-probe.ts, struct171 law): night 1 cluster 25px
+  x477-482 y329-334 / night-face 1 cluster 41px x476-483 y324-331, zero
+  second clusters — probe+judge concur, glow_as_1 sole-night-element
+  contract (bead at the NODE, mkv3-folium emissive 0x9a7030 @1.0 dusk
+  lineage) delivered verbatim. CONCURS struct-196 banked v1 PASS (probe
+  8/8 + RED, decode 10/10 + RED, ZAI 4-frame) + struct-197
+  PLACED_VERIFIED — independent corroboration, no defect. Native
+  re-judge debt on folium v1 carries (already owed per struct-196; board:
+  monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+  menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid
+  v2, quadratrix v1, archispiral v1, nephroid v1, folium v1 = 15 owed).
+  Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (271st check); SURVEY
+  CANDIDATES 0 OPEN rows; no candidate row (CLEAN); CITY-PLAN-V2 assigns
+  survey no role (grep 0). Index verified empty pre-commit (zero staged
+  files, shared-index law); append anchor grep-verified unique pre-write
+  (0 prior "survey-382" strings in any file). Census baseline for next
+  tick: /tmp/survey382-census-a.json (339, 223668B, sha256-16
+  e06f807046673e27). Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero shared-budget use, ZERO ledger append (loop law
+  4: append only when routing; CLEAN concurrence routes nothing; ticks
+  211-381 precedent; ledger tail running total 2370834). STANDING
+  RECOMMENDATION carried unchanged (s182-s381): end the SURVEY lane or
+  convert to a no-LLM monitor when attended.
