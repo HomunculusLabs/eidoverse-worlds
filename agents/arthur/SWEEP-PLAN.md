@@ -11231,3 +11231,59 @@ walked fresh, longhouse/garden-cottage @264, inn/tower-house @263,
 row-cottage/observatory @261, hall/bunkhouse @260 stalest standing pair at
 5 sweeps; both walk tools ls-verified present on disk this tick:
 interior-walk-hall.ts, interior-walk-bunkhouse.ts).
+
+sweep-266: CLEAN SWEEP, arrival epoch tick under the audit-continues
+banner (freeze lifted for struct+city lanes only, so the epoch was
+verified on its own bytes, not assumed; tick-start HEAD 489f517b =
+survey-377 archispiral arrival epoch — gate ALL PASS real exit 0 FIRST
+TRY on it, 99 PASS lines, exit captured unpiped). Census 337==337 at
+BOTH epochs (A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL
+to each other (raw 222466B sha16 e9462a80fb59fb08): exactly ONE arrival
+vs the committed sweep-265/264 baseline = nx-struct-archispiral @
+[-20.926942, 0.014409, 299.269215] yaw 3.735004599267865 lib
+d343609abd0d9377 scale 1 kind thing compKeys [] — tuple-exact vs the
+committed struct-193 ledger line adecc4e8 line-for-line (Math Avenue
+procession step az94 r300, past quadratrix; sweep-265's own epoch read
+336 PRE-placement, so this tick owns the baseline advance), 0 departures,
+all five semantic drift classes EMPTY (pos/yaw/scale/kind/bbox, lib
+flips, compKeys). THIRTY-FIFTH consecutive quiet-or-classified epoch
+pair. Baseline rewritten with asserted pre-write checks (diff exactly
+[arrival nx-struct-archispiral], drift ZERO) via sweep266-baseline-
+rewrite.py folded from the committed sweep264 chassis: 337 entities /
+sha16 e9462a80fb59fb08 / 222466B; next sweep's baseline; post-rewrite
+drift vs live ZERO (entity-set equality re-verified). Overlap: SAT
+fresh-live 299 bbox non-light / 237 classified / 0 coverage holes, real
+exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-
+mapboard -0.407 — known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 222nd sweep since routing, NOT new, no escalation due (law
+keys severity-1); archispiral adds ZERO new contacts, corroborating
+struct-193's own SAT 5.96 at final yaw. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually
+per the sweep-228 ceiling law — core 64/64 ALL_PASS @ 0.380
+(next-walk-core-paths.ts), NW 5/5 (nw-approach1-walk.ts), NE 7/7
+(ne-approach2-walk.ts), SW 5/5 (sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts. Archispiral sits
+r300 Math Avenue — 260m+ off every tier-1/tier-2 leg, walks unaffected
+by construction (sweep-53 precedent); folly class no walk owed per its
+own ledger. Tier-2 244th cycle per the committed sweep-265 pointer: hall
+8/8 ALL_PASS @ 0.3600 (interior-walk-hall.ts) + bunkhouse 6/6 ALL_PASS
+@ 0.3803 (interior-walk-bunkhouse.ts), both real exit 0 — match the
+sweep-260 records for the pair exactly; both tools ls-verified present
+on disk pre-run. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (220th consecutive clean); sweep89-battery 28/28 PASS exit 0 on
+fresh census-A bytes (python3 argv census-path form); interlane md5
+f6254cd0 stable, read fresh this tick. Pools drained: IMPROVE-PLAN md5
+c0f569d0 unchanged (242nd check; 0 SHARD EXECUTION sections, 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 assigns sweep no
+reset role — the audit-continues freeze banner governs and was read
+fresh this tick via the loop/plan reload. Diff tool sweep266-census-
+diff.py folded from the committed sweep265 chassis (sed swap only —
+py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on the real
+bytes). Zero world mutations, zero defect notes, zero uploads, zero
+verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2
+pair (sweep-267): row-cottage + observatory (245th cycle — LRU chain
+re-derived from committed pointers this tick: hall/bunkhouse @266
+walked fresh, forge/potter @265, longhouse/garden-cottage @264,
+inn/tower-house @263, row-cottage/observatory @261 stalest standing
+pair at 5 sweeps; both walk tools ls-verified present on disk this
+tick: interior-walk-row-cottage.ts, struct2-walk-observatory.ts).
