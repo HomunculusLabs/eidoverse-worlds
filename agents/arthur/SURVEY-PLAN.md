@@ -17785,3 +17785,85 @@ shared-budget use (D+0, E+0).
   routing; ticks 211-382 precedent; ledger tail running total 2370836).
   STANDING RECOMMENDATION carried unchanged (s182-s382): end the SURVEY
   lane or convert to a no-LLM monitor when attended.
+
+## Judged index (survey-384)
+
+- survey-384 (2026-09-16, ARRIVAL EPOCH, nineteenth tick of the unfreeze —
+  ZAI FALLBACK 5 calls/5 landed disclosed, native vision ABSENT from this
+  cron session's tool catalog (zai-vision MCP only, flap law; native-owed
+  register rows NOT discharged this tick, cron-disclosed): gate ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD 41f4b946 (struct-199 tip —
+  RHODONEA PLACED; ledger law EXACT 2370838); HEAD ADVANCED MID-TICK to
+  03084942 (sweep-272) then 5c61bf86 (pressure-25) — re-gated ALL PASS
+  exit 0 at 5c61bf86 pre-commit per epoch law (ledger law EXACT 2370841;
+  sweep-272 independently classified the same rhodonea arrival epoch and
+  lawfully rewrote the sweep baseline 340/0be489e5, cross-lane
+  corroboration). Census via committed next-live-census.ts exit 0 at BOTH
+  epochs (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each 340 entities,
+  each 224265B, each sha256-16 0be489e53b514afd. Set-diff vs survey-383
+  baseline (339, e06f8070): +1 ARRIVAL nx-struct-rhodonea (-23.019636,
+  0.084164, 329.196137 yaw 3.735004599267865 = 214deg oblique, az94/r330
+  on-line Math Avenue step past folium, lib store/dd7b5a631ab4424c.glb,
+  comp {}) / 0 departures / 0 lib flips / 0 pos-yaw-scale-comp drift on
+  the 339 holders — classified SIBLING WORK: struct-199's committed
+  PLACED_VERIFIED tuple verbatim (sha == struct-198 bank pin dd7b5a63)
+  — the exact predicted arrival (s383 trigger list). ARRIVAL-GATED JUDGE
+  LAWFUL (s375/s377/s379/s382 precedent): slice = the 1 new-bytes object
+  (owner's own acceptance was ZAI fallback — the independent read the
+  arrival needs). Live store bytes fetched curl UA HTTP 200 20332B
+  served-sha16 bc11f5241b07db1a (lib dd7b5a63 = struct-198 v1 upload
+  sha, DRACO re-encode law — served != upload, struct-104 class); render
+  via NEW survey384-render-rhodonea.ts (survey382-render-folium chassis
+  verbatim incl. face-on night frame + closeface; DRACO-aware, live-
+  meadow ground 0x3d3a29) exit 0, 7 frames reviews/survey384-rhodonea/
+  (ignored residue), served-bytes bounds 5.000x5.130x0.600 grounded y~0
+  — EXACTLY struct-198's committed envelope (D8 exact). VERDICT:
+  nx-struct-rhodonea CLEAN — gameplay 18m CLEAN 5/5 (identity PASS
+  deliberate mathematical monument — seven identical petals from a
+  bossed heart, wagon-wheel misread blocked by the amber boss; silhouette
+  PASS one coherent composition, zero detached/floating segments, post
+  ties rose to base; grounding PASS curb flush + attached cast shadow;
+  surface PASS zero z-fight/holes/voids; PETAL COUNT PASS — judge
+  counted 7 petals with tip coords, tips tangent to the ring, none
+  crossing none short, AND independently read ~51.4deg spacing == probe
+  L2 exact 51.43deg at 1e-9 — corroborating decode without being told
+  the value). front PASS 5/5 (kiss test 7/7: 5 verified + 2 probable
+  lower tips, any gap <=5px — RESOLVED BY CONSTRUCTION: decode D7 binds
+  all 7 kisses at 80mm congruent tip voussoirs; symmetry PASS pairs
+  match within 2-3px; judge independently derived cos(7theta) tip angles
+  at ~51.4deg intervals == a true rhodonea). night PASS 4/4 (exactly
+  ONE warm cluster at (478,317) == probe cluster x477-482 y315-320,
+  quiet hard-edged no halo no ground pool; 7-petal silhouette faintly
+  legible dark-on-dark; margin: bead reads ~5-8px vs 8-12px target —
+  quiet-direction, cosmetic, non-blocking; judge suggested +2-4px
+  optional nudge). night-face PASS 4/4 (exactly ONE warm cluster at
+  (480,287) ~8-10px, dead-center of ring/hub, crisp edge zero spill,
+  zero stray glow; probe concurs x474-485 y281-292). closeface 4/5 PASS
+  + 1 marginal-pass (masonry read PASS voussoir joints tight, tips taper
+  keystone caps; hub coverage PASS all 7 runs terminate into boss, no
+  daylight; ring kiss PASS 5/7 clean + lower 2 read ON the ring with
+  ~2-4px embedment read — probe L2 kiss theorem (7 tips |P-heart|==a at
+  1e-12, tangent at 1e-6) + decode D7 (7/7 kisses 80mm exact) falsify
+  any true gap/through-cross; contrast caveat is rig lighting, not
+  geometry; judge's bearing-pad suggestion = polish tier, not defect);
+  column+curb PASS grounded, ring low arc passes BEHIND column clearing
+  curb 5-10px no collision; floats/breaks/z-fight PASS none. CONCURS
+  struct-198 banked v1 PASS (probe 9/9+RED, decode 9/9+RED) + struct-199
+  PLACED_VERIFIED — independent corroboration, no defect. Native
+  re-judge debt on rhodonea v1 carries (already owed per struct-199;
+  board: monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch
+  v1, menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+  cissoid v2, quadratrix v1, archispiral v1, nephroid v1, folium v1,
+  rhodonea v1 = 16 owed). Pools: IMPROVE-PLAN md5 c0f569d0 unchanged
+  (273rd check); SURVEY CANDIDATES 0 OPEN rows; no candidate row (CLEAN);
+  CITY-PLAN-V2 assigns survey no role (grep 0). Index verified empty
+  pre-commit (zero staged files, shared-index law); append anchor
+  grep-verified unique pre-write (0 prior "survey-384" strings in any
+  file). Census baseline for next tick: /tmp/survey384-census-a.json
+  (340, 224265B, sha256-16 0be489e53b514afd). Zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use,
+  ZERO ledger append (loop law 4: append only when routing; CLEAN
+  concurrence routes nothing; ticks 211-383 precedent; ledger tail
+  running total 2370841). STANDING RECOMMENDATION carried unchanged
+  (s182-s383): end the SURVEY lane or convert to a no-LLM monitor when
+  attended.
