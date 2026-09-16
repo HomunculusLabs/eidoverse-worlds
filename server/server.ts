@@ -33,6 +33,7 @@ import { route, avatarRoster, pendingSnaps } from "./routes.ts";
 // The reference fold lives in shared/ (house rule 1 by construction; the
 // world folds with it in world.ts) — what remains here is the role ladder.
 import { ROLE_RANK } from "../shared/fold.js";
+import { pilotAuthority, pilotPose, pilotSample } from "../shared/pilot.js";
 // Seat profiles (#101, upstream): the store + its external-change poll are
 // wired; the proposal/countersign HTTP routes are NOT ported into the route
 // table yet — the feature is dormant here, not torn. (The crash this line
@@ -711,6 +712,12 @@ const server = Bun.serve({
                 .map(x => ({ surface: x.surface, gen: x.gen })),
             })),
           }));
+          // Rest state stays log-pure. Follow it with the current presence
+          // transforms, so a paused holder need not send again for a joiner.
+          for (const [id, L] of w.leases) if (L.lastState) {
+            ws.send(JSON.stringify({ type: "lease", op: "state", id, by: L.holder.id,
+              ...(L.mode ? { mode: L.mode } : {}), ...L.lastState }));
+          }
           sendGeomFollowup(w, c);
           if (!c.spectator) w.broadcast({ type: "arrive", id: c.id, avatar: c.avatar, agent: c.agent }, c);
           if (!c.spectator) w.bhv.onPresence("enter", c.id);
@@ -878,14 +885,42 @@ const server = Bun.serve({
             const v = (a as unknown[]).map(Number);
             return v.every(Number.isFinite) ? v : null;
           };
+          // Re-check live authored authority on EVERY message, including finals.
+          // A config/socket edit or dismount cannot turn an old grant into a bypass.
+          const existing = w.leases.get(id);
+          if (existing && ((existing.mode === "pilot" && pilotAuthority(w.state, id, existing.holder.id, existing.holder.spectator)?.signature !== existing.pilot?.signature)
+              || (existing.mode !== "pilot" && w.state.entities[id]?.comp?.pilot != null))) {
+            existing.holder.ws.send(JSON.stringify({ type: "lease", op: "lost", id, mode: existing.mode, why: "pilot authority changed" }));
+            w.settleLease(id); // freeze last accepted transform; never invent a return flight
+            if (op !== "claim") return;
+          }
           if (op === "claim") {
             if (!w.state.entities[id]) {
               ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: "no such entity" }));
               return;
             }
+            const opted = w.state.entities[id].comp?.pilot != null;
+            const pilot = pilotAuthority(w.state, id, c.id, c.spectator);
+            if ((opted || msg.mode != null) && (msg.mode !== "pilot" || !pilot)) {
+              ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: "pilot requires the designated mounted occupant and mode:pilot" }));
+              return;
+            }
             // physical play is USING the world (rank 0), like `use` — a
             // per-world knob can gate this later without protocol changes
-            const cur = w.leases.get(id);
+            let cur = w.leases.get(id);
+            const from = cur?.lastState ?? { p: w.state.entities[id].pos, yaw: w.state.entities[id].yaw ?? 0 };
+            if (pilot && !pilotPose(pilot.config, from)) {
+              ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: "pilot rest pose outside envelope" }));
+              return;
+            }
+            if (pilot && cur && cur.holder !== c) {
+              if (Date.now() - cur.lastAt <= 5000) {
+                ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: "pilot already held (no proximity takeover)" }));
+                return;
+              }
+              cur.holder.ws.send(JSON.stringify({ type: "lease", op: "lost", mode: "pilot", id, to: c.id }));
+              w.settleLease(id); cur = undefined;
+            }
             if (cur && cur.holder !== c) {
               const stale = Date.now() - cur.lastAt > 5000;
               // proximity take: you can take what you can reach — the ball
@@ -907,15 +942,31 @@ const server = Bun.serve({
               ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: "too many live leases — release something" }));
               return;
             }
-            w.leases.set(id, { holder: c, lastState: w.leases.get(id)?.lastState ?? null, lastAt: Date.now() });
-            ws.send(JSON.stringify({ type: "lease", op: "granted", id, ...(w.leases.get(id)!.lastState ? { from: w.leases.get(id)!.lastState } : {}) }));
-            w.broadcast({ type: "lease", op: "claimed", id, by: c.id }, c);
+            // Idempotent pilot claims must not reset elapsed time or refill budgets.
+            if (!(pilot && cur?.holder === c)) w.leases.set(id, { holder: c, lastState: w.leases.get(id)?.lastState ?? (pilot ? { p: [...w.state.entities[id].pos], yaw: w.state.entities[id].yaw ?? 0 } : null), lastAt: Date.now(), ...(pilot ? { mode: "pilot", pilot } : {}) });
+            ws.send(JSON.stringify({ type: "lease", op: "granted", id, ...(pilot ? { mode: "pilot" } : {}), ...(w.leases.get(id)!.lastState ? { from: w.leases.get(id)!.lastState } : {}) }));
+            w.broadcast({ type: "lease", op: "claimed", id, by: c.id, ...(pilot ? { mode: "pilot" } : {}) }, c);
             return;
           }
 
           const L = w.leases.get(id);
           if (!L || L.holder !== c) return;      // a lost holder's tail, dropped
 
+          if (L.mode === "pilot" && (op === "state" || op === "release")) {
+            const hasFinal = msg.p !== undefined || msg.yaw !== undefined || msg.q !== undefined;
+            if (op === "state" || hasFinal) {
+              const now = Date.now();
+              const accepted = pilotSample(L.pilot!.config, L.lastState, L.budget, L.lastAt, msg, now);
+              if (!accepted) {
+                ws.send(JSON.stringify({ type: "lease", op: "denied", mode: "pilot", id, why: "invalid pilot transform or travel budget", from: L.lastState }));
+                return;
+              }
+              L.lastState = accepted.state; L.budget = accepted.budget; L.lastAt = now;
+            }
+            if (op === "release") w.settleLease(id);
+            else w.broadcast({ type: "lease", op: "state", mode: "pilot", id, by: c.id, ...L.lastState }, c);
+            return;
+          }
           if (op === "state") {
             const p = sane(msg.p, 3);
             if (!p) return;
