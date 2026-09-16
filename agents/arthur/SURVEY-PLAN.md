@@ -18281,3 +18281,79 @@ shared-budget use (D+0, E+0).
   tail running total 2370864 at gate). STANDING RECOMMENDATION carried
   unchanged (s182-s390): end the SURVEY lane or convert to a no-LLM
   monitor when attended.
+
+## Judged index (survey-392)
+
+- survey-392 (2026-09-16, ARRIVAL EPOCH, twenty-seventh tick of the
+  unfreeze — ZAI FALLBACK 5/5 landed disclosed (native vision ABSENT
+  from this cron session's tool catalog, tool_search fresh this tick:
+  sources = reprompt/terminal/zai-vision only; native-owed register rows
+  NOT discharged this tick, cron-disclosed — survey-345/s387-s391
+  precedent): gate ALL PASS real exit 0 FIRST TRY at tick-start HEAD
+  c398cc60 (struct-205 tip — the arrival's own placement commit; ledger
+  law EXACT 2370872); HEAD UNCHANGED through the whole tick — no re-gate
+  due, epoch law. Census via committed next-live-census.ts exit 0 at
+  BOTH epochs (A/B, cmp A==B BYTE-IDENTICAL), each 343 entities, each
+  226071B, each sha256-16 4655f01e7c748ec5. Set-diff vs survey-391
+  baseline (342, 4ca51a64ca38aed5) via /tmp/survey392-diff.py: +1
+  ARRIVAL nx-struct-mandelbrot (-25.112331, 0.052746, 359.123058) yaw
+  3.735004599267865 (214deg oblique east-lean, procession convention),
+  lib store/8c21e6cb923e2aa3.glb, comp {} / 0 departures / 0 lib flips /
+  0 pos-yaw-scale-comp drift on all 342 holders — classified SIBLING
+  WORK: struct-205's committed PLACED_VERIFIED tuple verbatim (upload
+  sha == struct-204 v1 bank pin 8c21e6cb), the exact predicted arrival.
+  ARRIVAL-GATED JUDGE LAWFUL (s390 precedent): slice = the 1 new-bytes
+  object (owner's own acceptance was ZAI fallback — the independent read
+  the arrival needs). Live store bytes fetched curl UA HTTP 200 12120B
+  served-sha256 f1fb6f4145adf1e4 (lib 8c21e6cb = struct-204 v1 upload
+  sha, DRACO re-encode law — served != upload, struct-104 class);
+  render via NEW survey392-render-mandelbrot.ts (survey390
+  -render-elliptic chassis verbatim incl. face-on night frame +
+  closeface; DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 7 frames
+  reviews/survey392-mandelbrot/ (ignored residue), served-bytes bounds
+  5.200x2.878x0.900 grounded y~0 — EXACTLY struct-204's committed
+  envelope (D8 parity). Deterministic probe (survey392-warm-probe.py,
+  s390 chassis ported): night 1 cluster 32px x353-358 y337-342 /
+  night-face 1 cluster 99px x266-275 y321-331, zero second clusters —
+  probe+judge concur, sole-bead law (one glow bead at c=-2, the antenna
+  tip of the real-axis axle span [-2, 1/4]) delivered verbatim; judge
+  bead sightings gameplay (357,340) and night-face (270,326) land INSIDE
+  the probe clusters. VERDICT: nx-struct-mandelbrot CLEAN 5/5 —
+  gameplay 18m 6/6 PASS (deliberate math monument; heart ring
+  continuous sky-backed silhouette; cusp notch + tip spur read; wheel
+  tangent at exactly one point (486,340) at its horizontal diameter; rod
+  level y340 +/-1px full span; grounding + contact shadow; zero
+  voids/breaks/z-fight) + front 5/5 PASS (five elements complete;
+  perimeter traced unbroken; tangency at wheel-center height =
+  geometrically correct; bead seated flush; lobes ~8-9% asymmetry
+  sub-threshold margin) + closeface 5/5 PASS (voussoir joints resolved
+  upper-right arc with keystoning toward cusp; kiss clean no crush no
+  gap; rod y313 +/-1px over 545px; bead end-cap at (201,313); wheel
+  carried by axle reads supported not floating; watch-item rod pass-by
+  at ring crossing x485-515 = the owner's own disclosed free-flight
+  axle design, not a defect) + night 4/4 PASS (one quiet muted-ember
+  bead, no bloom skirt, monument darker-than-sky silhouette) +
+  night-face 4/4 PASS (one warm point, zero spill, non-emissive
+  stone/iron, plinth top-edge neutral). CONCURS struct-204 banked v1
+  ACCEPT (probe 7/7 + RED; decode 9/9 + RED; owner judge ACCEPT with 2
+  disclosed sev-2s: kiss-point rod occlusion decode-proven exact, cusp
+  masonry chunky = finite voussoirs) + struct-205 PLACED_VERIFIED —
+  independent corroboration, no defect. Native re-judge debt on
+  mandelbrot v1 carries (already owed per struct-205; board 19 owed
+  unchanged: monkeysaddle gate, hypar row 22, kuen v3, catalan v1,
+  clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+  fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1,
+  folium v1, rhodonea v1, versiera v2, elliptic v3, mandelbrot v1).
+  Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (281st check); SURVEY
+  CANDIDATES 0 OPEN rows; no candidate row (CLEAN); CITY-PLAN-V2
+  assigns survey no role (grep 0). Index verified empty pre-commit
+  (zero staged files, shared-index law); append anchor grep-verified
+  unique pre-write (0 prior "survey-392" strings in any file). Census
+  baseline for next tick: /tmp/survey392-census-a.json (343, 226071B,
+  sha256-16 4655f01e7c748ec5). Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use, ZERO ledger
+  append (loop law 4: append only when routing; CLEAN concurrence
+  routes nothing; ticks 211-391 precedent; ledger tail running total
+  2370872 at gate). STANDING RECOMMENDATION carried unchanged
+  (s182-s391): end the SURVEY lane or convert to a no-LLM monitor when
+  attended.
