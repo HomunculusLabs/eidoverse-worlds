@@ -11331,3 +11331,30 @@ hall/bunkhouse @266, forge/potter @265, longhouse/garden-cottage @264,
 inn/tower-house @263 stalest standing pair at 4 sweeps; both walk tools
 ls-verified present on disk this tick: interior-walk-inn.ts,
 interior-walk-tower-house.ts).
+
+sweep-267 ERRATUM (be17bf7b, survey-318 raced-inspection sub-class): the
+sweep-267 commit was intended to carry exactly THREE files (SWEEP-PLAN.md,
+IMPROVEMENTS.md, sweep267-census-diff.py) and the staged partition WAS
+inspected as its own separate step showing exactly those three — but the
+pressure lane staged TWO further files into the shared index in the seconds
+between that inspection and the commit, so be17bf7b as committed carries
+FIVE files: additionally server/server.ts (59 lines changed — uncommitted
+working-tree scratch that had sat in status since before this tick) and
+tools/pressure-mountthrash.ts (796 insertions, new file; pressure-22 class
+mount-thrash tool). Detection: post-commit `git show --stat HEAD` showed 5
+files vs the inspected 3. Repair decision per the survey-318 revert-race
+law: HEAD was still be17bf7b with nothing on top, BUT the pressure lane is
+demonstrably mid-commit-window (its files staged within the last minute;
+vocab-20 f559dbdb also landed mid-tick) — a soft-reset + restore-staged +
+re-commit sequence races pressure's imminent commit and, if it fires inside
+the window, either destroys a sibling commit from the shared branch or
+re-swaps the misattribution under pressure's prefix. History rewrite is
+therefore UNSAFE by the same reasoning survey-318 recorded; the sanctioned
+repair is this erratum. Content is correct and intended by its owning lane
+(no world mutation rides in those files; the live-world evidence in the
+sweep-267 entry is untouched — census/SAT/walks/integrity all ran against
+the LIVE world, not the repo). Attribution correction: server/server.ts +
+tools/pressure-mountthrash.ts belong to the pressure lane (pressure-22
+in flight); pressure's next tick should find its files already at HEAD and
+absorb per the interlane interleaving law. No ledger-total impact (both
+entries D+0/E+0). Recorded as sweep-267v in the ledger.
