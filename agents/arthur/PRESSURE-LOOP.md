@@ -476,8 +476,40 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       pin (authtest 22/23, permtest env-dep, support-lifecycle,
       behaviortest, publishtest) — not pressure-owned, flagged for
       sibling/ops. tools/pressure-snapshotbomb.ts SELFTEST 34 gates.)
-- [ ] Midnight rollover: day-boundary crossing during load keeps ledgers
+- [x] Midnight rollover: day-boundary crossing during load keeps ledgers
       and leases consistent.
+      (pressure-24, 2026-09-16: worktree @ 078d1b70, PORT 8977, 54s+restart,
+      160 anchors — 24 embodied @15Hz (guard-0..3 holding mid-ball-0..3
+      leases @10Hz) + 136 spec, + 4 roll witnesses + 6 fold probes. Owner
+      winds sky {hours 22.85, rate 720} = 0.2 world-hours/s → midnight
+      ~t+8.35s mid-load; bells mid-a[0]·mid-b[0.25]·mid-c[23.9]·mid-d
+      [23.96,0.04] (minGap 10); weather rain lands mid-roll t+9s (fold
+      rebase seam). MEASURED PASS 2/2 identical full runs, no patch:
+      tolls EXACTLY 1/1/1/1 at hours 0 / 0.25 / 23.9 / 23.96 (the
+      straddle pair coalesced one sweep — the (prev,24]∪[0,cur) wrap arm
+      held); toll grammar 4/4 time-caused; true world-hour at mid-b toll
+      0.0500-0.0542h from authored 0.25 (one sweep span, tol 0.21) — the
+      weather rebase never snapped the day; strikes 7/7 presence-plane,
+      first-markers 4/4; rebase |Δhours| 0.00000 vs hoursAt(pre-sky,
+      verbTs), rate 720 preserved; fold-equivalence 6/6 roll-window probes
+      == fold(log through covered); roster mid-roll exactly 28, 0 unknown;
+      witness arrive/leave 4/4 drift 0; leases settled 4/4 EXACTLY once
+      at pinned p3 through the roll, 196 lease states mid-roll (stream
+      alive), 0 ghost leases, final present 0; says 3/3 p95 5ms; fps p50
+      14.9, lat p95 9-10ms, 0 seq gaps across 136 spectators spanning the
+      roll; HTTP probe roll p95 4-8ms; SIGKILL restart boot 1/1, fold
+      EXACT-equal (covered==logMaxSeq via entries tail — throughSeq is -1
+      on every join in this build), toll drift 0, line drift 0; log 28/28
+      exact; RSS +17-19MB; 0 suspicious. Run-1 REDs all harness
+      accounting, server exact each time (witness-close raced anchor
+      teardown — pressure-6 observed-departure law; guard streams
+      continued past pinned p3; log expectation omitted the auto-owner
+      grant; restart identity read throughSeq=-1 which every join
+      carries). tools/pressure-midnight.ts (SELFTEST 36 gate families,
+      self-booting, fd-checked). Servergate: smoke 85/0 + belltest 37/0
+      on the pinned tree; authtest 22/23 = the pressure-23-disclosed
+      pre-existing discord-nick env case, not pressure-owned. Next head:
+      duplicate join race.)
 - [ ] Duplicate join race: same identity joining twice concurrently
       resolves to exactly one session.
 - [ ] Whisper spam: targeted messages cannot bypass the global rate budget.
