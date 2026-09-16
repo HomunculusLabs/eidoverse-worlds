@@ -11956,3 +11956,59 @@ pointers this tick: forge/potter @278 walked fresh, row-cottage/observatory
 inn/tower-house @273, hall/bunkhouse @272 stalest standing pair at 6
 sweeps; both walk tools ls-verified present on disk this tick:
 interior-walk-hall.ts, interior-walk-bunkhouse.ts).
+
+
+sweep-279: CLEAN SWEEP, fully-quiet steady-state tick (48th consecutive
+quiet-or-classified). Tick-start HEAD fae84070 = pressure-29 (scratch-only);
+standing gate ALL PASS real exit 0 FIRST TRY (98 PASS lines + ALL PASS
+trailer, ledger law EXACT 2370865 at entry, exit captured unpiped). Census
+342==342 at BOTH epochs (A/B, 20s-paced, next-live-census.ts chassis)
+BYTE-IDENTICAL to each other AND to the committed sweep-278 baseline (raw
+225466B sha16 4ca51a64ca38aed5, cmp-verified live-A vs live-B vs the
+on-disk baseline file): 0 arrivals, 0 departures, all five semantic drift
+classes EMPTY (pos/yaw/scale/kind/bbox, lib flips, compKeys); no snapshot
+rewrite owed (no-churn precedent — the committed file already describes
+the live world exactly). Mid-tick interleave city-176 b935c7a3 (66th lawful
+HOLD, zero mutations, its census 342=342 quiet) — census A/B straddle it
+byte-identical; standing gate re-run ALL PASS real exit 0 at b935c7a3 per
+the epoch law before append. Overlap: SAT fresh-live 304 bbox non-light /
+237 classified / 0 coverage holes, real exit 3 unpiped on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 235th sweep since routing, NOT
+new, no escalation due (law keys severity-1). Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 ALL_PASS @ 0.380 maxArrival
+(next-walk-core-paths.ts; JSON parsed from first brace), NW 5/5 (dists
+0.000/0.380/0.300/0.330/0.320, nw-approach1-walk.ts), NE 7/7 (0.000/0.290/
+0.320/0.290/0.380/0.250/0.310, ne-approach2-walk.ts), SW 5/5 (0.000/0.250/
+0.340/0.370/0.310, sw-approach3-walk.ts); verdicts content-anchored on
+status strings + per-leg ok counts + dists from raw files. Tier-2 257th
+cycle per the committed sweep-278 pointer: hall 8/8 ALL_PASS (dists
+0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310, interior-walk-hall.ts) +
+bunkhouse 6/6 ALL_PASS (0.245/0.300/0.3051/0.2472/0.3803/0.3131,
+interior-walk-bunkhouse.ts), both real exit 0, both tools ls-verified
+present on disk pre-run — match sweep-272/276-era records for the pair
+exactly. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[]
+(233rd consecutive clean); sweep89-battery 28/28 PASS exit 0 on fresh
+census-A bytes; interlane md5 f6254cd0 stable, read fresh this tick.
+Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (255th check; 0 SHARD
+EXECUTION sections, 0 open candidate rows), sweep owns no prefix;
+CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role (the
+audit-continues banner governs, read fresh via loop/plan reload). Diff
+tool sweep279-census-diff.py folded from the committed sweep278 chassis
+(sed swap only — py_compile clean; first invocation hit the /tmp
+phase-naming FileNotFoundError BEFORE any comparison ran, cp per chassis
+law — sweep-275/277 class, no repair owed). Probe self-catches
+pre-verdict: none beyond the diff-tool /tmp naming (corrected in-tick);
+ledger-max grep re-derived with a correct numeric sort before append.
+Foreign dirt in tree (windmill overhaul scratch, cabin/carousel prototype
+dirs, client/server engine files, fleet shells, debug-bower scripts) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-280):
+inn + tower-house (258th cycle — LRU chain re-derived from committed
+plan pointers this tick: hall/bunkhouse @279 walked fresh, forge/potter
+@278, row-cottage/observatory @277, longhouse/garden-cottage @275,
+row-cottage/observatory @274, inn/tower-house @273 stalest standing pair
+at 6 sweeps; both walk tools ls-verified present on disk this tick:
+interior-walk-inn.ts, interior-walk-tower-house.ts).
