@@ -13124,3 +13124,141 @@ Files: struct197-scan-folium.ts + struct197-select-folium.ts +
 struct197-terrain-folium.ts + next-place-struct197.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-197,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-198 (2026-09-16): R11-23 THE RHODONEA — BUILD+JUDGE TICK (Grandi's
+## rose k=7: kiss theorem proven 1e-6 before carving; area πa²/4 exact by
+## Green; probe 7/7 + RED; decode 9/9 + RED control; judged PASS on all four
+## frames — ZAI fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+198%3=0 refine-slot cadence, pool verified EMPTY fresh (no externally
+evidenced deficit open on any nx-struct- form; sweeps 269-271 fully quiet,
+city-162/163 holds green, no Bill verdict since 2026-09-09 R11 opening) —
+no takeable banked form (folium placed struct-197), owed native debts
+cron-unpayable (tool catalog carries only the zai-vision MCP, tool_search
+fresh this tick; same disclosed class as struct-169..197) — build tick per
+the 178..197 alternation, placement = struct-199 committed carry. Gate ALL
+PASS real exit 0 tick-start at 1025995c (survey-382; /tmp/struct198-gate.txt
+unpiped, GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0
+unchanged 27th tick, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-197 -> tag struct-198 (re-checked immediately before append; sweeps
+270-271 + vocab-22 interleaved mid-tick, none appended struct entries).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + census
+339): rhodonea 0/0/0 — named twice in kin-check notes (struct-194 "lituus/
+rhodonea/folium/strophoid/limacon 0 hits", struct-196 same list), never
+barred, never built; census confirms no nx-struct-rhodonea. Kin-checked
+fresh this tick: harmonickiss is a spherical-harmonics SURFACE
+(rho(th)=1.5|3cos²−1|, lathe) not a plane rose curve; enneper a minimal
+surface — different families, both on the S-walk. Register: the PLANE
+POLAR CURVE family carried no flower; Grandi 1728 continues the plane-curve
+register (cissoid→quadratrix→archispiral→nephroid→folium→rhodonea).
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): the
+rose r(θ)=a·cos(kθ), k=7 ODD, traces all 7 petals ONCE over θ∈[0,π] with
+SIGNED r; tips at 7θ=nπ where r′=−7a·sin(7θ)=0 — THE KISS THEOREM: at
+every tip the tangent is purely azimuthal, ⊥ radius, so a circle of
+radius a centered at the heart is kissed TANGENTIALLY by every petal tip
+(probe L2: |cos(tangent, radius)| ≤ 1e-6 at all 7). Total area EXACTLY
+πa²/4 (odd-k classic; probe L3: 4.1548 Green exact; one petal πa²/28).
+Tips 7-fold symmetric about the crown at π/2 + j·2π/7 (1e-9); closure
+θ=π == θ=0 (1e-12). No unproven theorem carved.
+
+CONCEPT (written before build): THE ROSE AND ITS CIRCLE. One equation
+split by material: r = a·cos 7θ. STONE carries the curve — one continuous
+arc-uniform voussoir ribbon (0.16×0.20 chord boxes, 143 stations, flanks
+0.30 / tip zones 0.12 — tip curvature radius a/k² = 47mm demanded the
+shorter step; every petal tip IS a voussoir joint, the kiss marked in
+masonry) tracing all seven petals in a single pass, crown petal straight
+up, plus the BOSS COLUMN (0.26² × 0.12→2.88, half-boss proud of the
+heart) that carries the rose from grade. IRON carries THE CIRCLE — a ring
+(torus r=a tube 0.045, in-plane) centered on the heart, kissed by all
+seven tips, carried by the column at its low point. Sole night element:
+one warm bead at the heart (glow_rh_1 KEEP, half-embedded +z, struct-52/
+188 occlusion-cure law) — where all seven petals are born. Envelope
+5.00×5.13×0.60 origin-centered; h 5.13 ≥ 2.2 real trimesh; footprint
+3.00 m² — folly class, exterior only, no walk owed. Nodes 3 (rh_stone +
+rh_iron + glow_rh_1). 145 pre-merge meshes → 143 voussoirs + curb +
+column + ring + bead.
+
+PROBE (struct198-probe-rhodonea.ts, tracked — the ONE contract; mk +
+decode import it): L1 polar identity 2.33e-13; L2 kiss theorem (7 tips
+on the circle |P−heart|==a 1e-12, tangent⊥radius 1e-6, crown up,
+7-fold directions, trace closure); L3 area πa²/4 + petal πa²/28 exact;
+L4 station walk (every tip a station, zone 0.12 flank 0.30 max 0.311,
+chord dev 15.1mm ≤ 45mm at ARC-midpoints); L5 ring+column seating (ring
+bottom (0,0.45) on the column span, low arc clears curb 0.165);
+L6 grounding (curb 0..0.24, column embed 0.12, bead half-embed, curve
+in curb band, stone floor ≥ 0.35 — down-flank tips 0.68); L7 envelope +
+folly class. RED control: mutant k=6 violates the identity by 2.300 —
+law detects.
+
+BUILD (agents/arthur/assets/mkv3-rhodonea.ts, staged -f): root identity
+(struct-188 law); world-frame voussoir helper; TorusGeometry in-plane
+(three.js torus lies in XY = the construction plane, verified in decode).
+Deterministic x2 byte-identical sha256
+dd7b5a631ab4424c0a14ad606105e24b49d6968d0b335a38624da07c37404598
+(59,624 B), mtime-verified. Nodes 3.
+
+DECODE (struct198-decode-rhodonea.ts, tracked) ALL PASS 9/9 + RED
+control (foreign folium bytes: 9 FAILs, exit 1): D1 census 3 nodes; D2
+curb 36 verts; D3 ribbon 3420 verts within 92mm of the dense rose, 180 at
+the heart; D4 boss column 60 verts, 0 unclassified (heart band ±0.30
+shared by design); D5 ring 1261/1261 iron verts on the circle r=2.3,
+16/16 azimuth bins; D6 bead center (0,2.750,0.130) exact + emissive;
+D7 tip law 7/7 kisses, gaps 80/80/80/80/80/80/80mm (congruent tip
+voussoirs), tips on circle exact; D8 envelope drift 0.0000 origin-
+centered; D9 named texMats rh_stone/rh_iron.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- gameplay 18m: PASS 4/4 — identity deliberate 7-petal rose monument
+  (7 petals counted with regions); all 7 tips contact the ring 1-3px, no
+  overshoot, no shortfall; grounding attached shadow; zero defects.
+  Rigor note: petal spacing read ~45° — decode-falsified (probe L2
+  51.43° exact at 1e-9; the 18m resolution floor, pitfall-11 class).
+- front: PASS 5/5 — continuity unbroken all 14 ribbon runs (shadow
+  silhouette corroborates); exactly 7 petals; the kiss at all 7 tips
+  (no air gap, no through-cross, tangent orientation read correct);
+  mirror symmetry ≤ 2-3px; zero defects. The judge INDEPENDENTLY read
+  the true 51.43° spacing at close range — "the sub-horizontal side
+  petals that distinguish a true 7-lobed rose from a 6- or 8-lobed
+  approximation" — corroborating decode against the gameplay note.
+- night: PASS 4/4 — light census EXACTLY ONE warm cluster frame-wide
+  (481,287 amber, 8-12px quiet, no bloom, hard 1-2px falloff edge);
+  7-petal silhouette legible dark-on-dark (lower petals threshold-
+  faint, disclosed — rig class); zero stray glow/artifacts.
+- closeface: PASS 4/4 — chord-box masonry read (8-12 blocks per leg,
+  tight joints); 14/14 hub terminations covered by the boss; column
+  occludes the ring's low arc correctly; zero floats/breaks/z-fights.
+  Watch-item (4-of-7 "clamp collars") falsified by construction: all
+  seven tip voussoirs are congruent chords (decode D7 identical 80mm
+  gaps) — the collars are light-facing artifacts of the rig's key
+  light, not hardware variance.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-199
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility; procession continues past folium r320), YAW LAW — the
+construction reads on the +Z face: oblique 30-40 deg off the approach
+walk per struct-104 (melencolia/fourier/cissoid/quadratrix/archispiral/
+nephroid/folium convention), terrain preflight over the TRUE rotated
+footprint, hash-gated plain spawn nx-struct-rhodonea, comp {}. Folly
+class — no walk owed. Native re-judge debt: rhodonea v1 joins the owed
+board (monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid
+v2, quadratrix v1, archispiral v1, nephroid v1, folium v1 — 16 owed with
+this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the folium
+— a stone rose of seven petals growing from a bossed heart, every petal
+tip just touching one great iron circle: Grandi's rose, the flower
+mathematicians drew before botanists counted its kind. Walk a full
+circle: each petal meets the ring exactly at its point, never crossing.
+After dark: one warm point burning at the heart where all seven petals
+are born.
+
+Files: struct198-probe-rhodonea.ts + struct198-decode-rhodonea.ts +
+struct198-render-rhodonea.ts (NEW, tracked), assets/mkv3-rhodonea.ts
+(NEW, staged -f), reviews/struct198-rhodonea/ (7 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-198,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
