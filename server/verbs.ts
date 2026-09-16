@@ -458,6 +458,13 @@ export const VERBS: Record<string, VerbRow> = Object.fromEntries(
 
 // ---- the shell -------------------------------------------------------------
 
+/** pressure-21: the entity/roles/bans dicts are plain objects, so these three
+ * strings are dict machinery rather than addresses. Refused at verb intake
+ * (see runVerb) — a reserved id must never become a log entry, because the
+ * fold's dict writes would pollute prototypes (measured: global Object.proto
+ * inheritance, unremovable ghosts, replay-bricked worlds). */
+const RESERVED_IDS = new Set(["__proto__", "constructor", "prototype"]);
+
 /** The entire `case "verb"` body: preamble → validator → append+broadcast →
  *  after hooks, in exactly the unsplit order. `verb` and `rawArgs` are the
  *  wire values untouched — msg.verb and msg.args exactly as parsed. */
@@ -481,6 +488,42 @@ export function runVerb(ctx: VerbCtx, verb: string, rawArgs: unknown): void {
   if (++c.verbCount > VERB_RATE) {
     if (c.verbCount === VERB_RATE + 1) w.debug("rate-limit", { who: c.id });
     c.ws.send(JSON.stringify({ type: "error", error: "slow down — verb rate limit" }));
+    return;
+  }
+  // pressure-21: ids are NAMES, not runtime internals. The fold stores
+  // entities/roles/bans in plain dicts, so the strings `__proto__`,
+  // `constructor`, and `prototype` are dict machinery, not addresses: a
+  // `__proto__` spawn re-aims the entity dict's prototype (an unremovable
+  // ghost — remove() no-ops), comp/place/motion/light onto it read the
+  // inherited Object.prototype and write the attacker's bag/pos onto it
+  // GLOBALLY (every innocent object in the process inherits the payload),
+  // a mount rider->`__proto__` + remove leaves a log entry whose replay
+  // fold THROWS (`gone.pos[0]` on a proto without pos) — an unbootable
+  // world after any crash that skipped the graceful fold — and grant/ban
+  // hit the same seam on the roles/bans maps. Refuse the whole class at
+  // the ONE seam every id-carrying verb crosses, before any validator or
+  // append: reserved keys, and (same seam, same doctrine as comp's 64-char
+  // slice) ids over 64 chars — a 60k-char spawn id otherwise rides every
+  // future joiner's snapshot for two verbs' worth of "work".
+  const rawId = (rawArgs as { id?: unknown } | undefined)?.id;
+  if (typeof rawId === "string") {
+    const id = rawId;
+    if (RESERVED_IDS.has(id)) {
+      w.debug("rejected", { who: c.id, verb: String(verb), why: `reserved id: ${id}` });
+      c.ws.send(JSON.stringify({ type: "error", error: `reserved id: "${id}" — ids are names, not runtime internals` }));
+      return;
+    }
+    if (id.length > 64) {
+      w.debug("rejected", { who: c.id, verb: String(verb), why: `id too long (${id.length} > 64)` });
+      c.ws.send(JSON.stringify({ type: "error", error: `id too long (${id.length} chars, 64 max) — big things belong in /upload and a short path` }));
+      return;
+    }
+  }
+  // mount/dismount also address by `to`; punt/force use no `id`.
+  const rawTo = (rawArgs as { to?: unknown } | undefined)?.to;
+  if (typeof rawTo === "string" && RESERVED_IDS.has(rawTo)) {
+    w.debug("rejected", { who: c.id, verb: String(verb), why: `reserved id (to): ${rawTo}` });
+    c.ws.send(JSON.stringify({ type: "error", error: `reserved id: "${rawTo}" — ids are names, not runtime internals` }));
     return;
   }
   // verb allow-list + per-world rights (rights.ts owns the ladder).

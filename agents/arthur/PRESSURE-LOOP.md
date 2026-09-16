@@ -399,8 +399,36 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       fire; harness fix after run 1: verdict-drain measurement was 0ms
       artifact — now computed from accepted-echo + refusal-arrival spans).
       Servergate smoke 85/0 pinned tree.)
-- [ ] Entity id squatting: hostile client cannot reserve ids to deny
+- [x] Entity id squatting: hostile client cannot reserve ids to deny
       service.
+      (pressure-21, 2026-09-16: worktree @ ee7d458c + fix, PORT 8984/8979,
+      32 embodied @15Hz + 136 spec + 12 late + 2 yard legs; hostile wave =
+      6 squat+lock + 11-verb reserved-id menu + 2x60k-char giant ids.
+      BASELINE RED — real defects, not theater: 10/11 reserved-id verbs
+      ACCEPTED. spawn __proto__ re-aims the entity dict prototype
+      (snapshot-invisible ghost; remove() silent no-op = unremovable);
+      comp/place/motion/light __proto__ write the attacker bag/pos onto
+      Object.prototype GLOBALLY (every innocent object inherits the
+      payload; a fresh entity's comp then vanishes from own-key
+      snapshots); mount-> __proto__ + remove leaves a log entry whose
+      replay fold THROWS — SIGKILL restart = the world UNBOOTABLE (join
+      fails server-side; a graceful-shutdown fold MASKS it by covering
+      the poison entry in the snapshot); grant/ban hit the same seam on
+      roles/bans. Giant ids ride every future joiner's snapshot (~120KB
+      for 2 verbs). FIX: one seam in runVerb's preamble (verbs.ts —
+      after the rate window, before validators/append): reserved ids
+      {__proto__, constructor, prototype} on args.id AND args.to →
+      exact "reserved id" refusal; ids >64 chars → exact length
+      refusal (comp already sliced 64; spawn never had a validator).
+      AFTER, identical conditions: 11/11 refused EXACT / 0 accepted /
+      0 silent (log-authoritative), canary purity bag 0 giant 0
+      (c1 121890B → 1494B), SIGKILL restart 2/2 both worlds bootable,
+      squat+lock denial recovered by design (unlock 6/6 + respawn
+      8/8), log drift 0/0, say p95 7ms, late joins 12/12 p95 27ms,
+      fps 14.8, 0 gaps, 0 suspicious. websocket-input slice extended
+      30→36 checks (RED 3-fail unfixed → 36/0 fixed); servergate smoke
+      85/0 + comptest 33/0 + locktest 13/0 + compfold 24/0 fixed tree.
+      tools/pressure-squat.ts SELFTEST RED-OK.)
 - [ ] Mount/dismount thrash: rapid mount cycling leaves no orphaned
       rider state.
 - [ ] Snapshot size bomb: worlds with 10k+ entities join without OOM or

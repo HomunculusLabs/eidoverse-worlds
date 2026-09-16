@@ -302,6 +302,73 @@ check("flight recorder notes the message-rate drops (no silent cap)",
   recEvents.some((e) => e.kind === "rate-limit"),
   JSON.stringify(recEvents.filter((e) => e.kind === "rate-limit")).slice(0, 160));
 
+// ---- pressure-21: reserved dict-key ids — refused at intake, never logged -------
+// The fold stores entities/roles/bans in plain dicts; `__proto__`,
+// `constructor`, `prototype` are dict machinery, not names. Unfixed: a
+// `__proto__` spawn re-aims the entity dict's prototype (unremovable ghost),
+// comp/place onto it write the attacker's bag onto Object.prototype GLOBALLY,
+// mount->`__proto__`+remove leaves a replay-throwing log entry (unbootable
+// world after a crash), and grant/ban hit the same seam on roles/bans. The
+// contract this block pins: every reserved-id verb gets the EXACT refusal,
+// nothing reaches log.jsonl, the socket survives, and a boundary-long
+// NON-reserved id (64 chars, hyphens) still authors.
+// note: grant/ban are owner-rank and REFUSED by rank before the id seam —
+// they are included in the log-purity check below (their ids must never
+// reach log.jsonl either way) but are NOT part of the refusal-count check.
+console.log("\n— reserved dict-key ids: refused explicitly, never logged —");
+const squat = await open("id-squat");
+squat.messages.length = 0;
+healthy.messages.length = 0;
+const reservedMenu: [string, Record<string, unknown>][] = [
+  ["spawn", { id: "__proto__", lib: "deco/bench.glb", pos: [1, 0, 1] }],
+  ["comp", { id: "__proto__", type: "pwnbag", data: { pwn: true } }],
+  ["place", { id: "__proto__", pos: [9, 9, 9], yaw: 1 }],
+  ["light", { id: "__proto__", pos: [0, 2, 0], color: "#ffb46b", intensity: 0.9, range: 5 }],
+  ["motion", { id: "__proto__", type: "spin", axis: [0, 1, 0], degPerSec: 10 }],
+  ["remove", { id: "__proto__" }],
+  ["spawn", { id: "constructor", lib: "deco/bench.glb", pos: [1, 0, 2] }],
+  ["spawn", { id: "prototype", lib: "deco/bench.glb", pos: [1, 0, 3] }],
+  ["mount", { id: "id-squat", to: "__proto__" }],
+  ["spawn", { id: "x".repeat(60_001), lib: "deco/bench.glb", pos: [0, 0, 0] }],
+];
+for (const [verb, args] of reservedMenu) squat.ws.send(JSON.stringify({ type: "verb", verb, args }));
+await Bun.sleep(300);
+// owner-rank verbs on reserved ids ride a SECOND window beat later (rank
+// refusal still proves the id never appended — the log check below covers
+// both), keeping this socket's 12/4s budget under the cap for the boundary
+// controls that follow.
+squat.ws.send(JSON.stringify({ type: "verb", verb: "grant", args: { id: "__proto__", role: "owner" } }));
+squat.ws.send(JSON.stringify({ type: "verb", verb: "ban", args: { id: "__proto__", reason: "probe" } }));
+await Bun.sleep(300);
+check("every reserved-id verb gets the exact refusal",
+  squat.messages.filter((m) => m.type === "error" && /reserved id: "(__proto__|constructor|prototype)" — ids are names/.test(String(m.error))).length >= 9,
+  JSON.stringify(squat.messages.filter((m) => m.type === "error")).slice(0, 240));
+check("over-length id gets the exact length refusal",
+  squat.messages.some((m) => m.type === "error" && /id too long \(60001 chars, 64 max\)/.test(String(m.error))),
+  JSON.stringify(squat.messages.filter((m: any) => m.type === "error")).slice(0, 240));
+check("reserved ids never reach the authored log",
+  !readFileSync(logPath, "utf8").split("\n").filter(Boolean).some((l) => {
+    try { const e = JSON.parse(l); return ["__proto__", "constructor", "prototype"].includes(String(e.args?.id ?? "")) || String(e.args?.id ?? "").length > 64; } catch { return false; }
+  }),
+  "reserved/oversize id found in log.jsonl");
+check("squatter's socket survives the refusals (refusal, not close)",
+  squat.closeCode === null, String(squat.closeCode));
+// the boundary control: a LEGAL 64-char id still authors end-to-end (fresh
+// socket — the squat socket's rate window is fully spent by the menu above)
+const squat2 = await open("id-squat2");
+const legal64 = "legal-" + "b".repeat(58);   // exactly 64 chars
+squat2.messages.length = 0;
+squat2.ws.send(JSON.stringify({ type: "verb", verb: "spawn", args: { id: legal64, lib: "deco/bench.glb", pos: [0, 0, 4], yaw: 0 } }));
+const legalEcho = await waitFor(squat2, () => squat2.messages.some((m) => m.type === "log" && m.entry?.verb === "spawn" && m.entry?.args?.id === legal64));
+check("boundary 64-char id still spawns (refusal is not overbroad)",
+  legalEcho, JSON.stringify(squat2.messages.slice(0, 3)).slice(0, 160));
+// and the squatter can still author normally after the refusals
+squat2.messages.length = 0;
+squat2.ws.send(JSON.stringify({ type: "verb", verb: "say", args: { text: "squat-after-refusals" } }));
+const squatSay = await waitFor(squat2, () => squat2.messages.some((m) => m.type === "log" && m.entry?.args?.text === "squat-after-refusals"));
+check("squatter authors normally after reserved-id refusals",
+  squatSay, JSON.stringify(squat2.messages.slice(0, 3)).slice(0, 160));
+
 cleanup();
 console.log(`\n${pass} passed, ${fail} failed\n`);
 process.exit(fail ? 1 : 0);
