@@ -13047,3 +13047,80 @@ staged -f), reviews/struct196-folium/ (7 frames, ignored),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-196,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-197 (2026-09-15): FOLIUM PLACEMENT TICK — committed carry from
+## struct-196 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past nephroid, on-line step az94/r320
+
+197%3=2 placement-slot cadence WITH a takeable banked form (struct-196:
+"placement = struct-197 carry"; the 178..197 lane precedent — a banked form
+places on the next tick regardless of N%3, build+judge/place alternation
+held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..196): 15 owed — monkeysaddle v2 native-18m-PASS placement GATE,
+hypar row 22 native-only, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix
+v1, archispiral v1, nephroid v1, folium v1 (fallback-judged acceptances, all
+placed or banked; folium placed THIS tick — debt stays owed). Gate ALL PASS
+real exit 0 tick-start at fa1cd90e (survey-381; /tmp unpiped terminal
+output) + RE-RUN clean immediately before the mutation, HEAD unchanged
+fa1cd90e (epoch law honored, no sibling commit landed mid-tick). Shard
+drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 26th tick, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-196 -> tag struct-197
+(re-checked immediately before append).
+
+Local bytes re-verified sha256
+317256d9738a914bd9828e62ab790cc8e8fe3e27791297919b83e7603fc1dd15 ==
+struct-196 bank pin BEFORE upload (shasum -a 256, mtime Sep 15 22:18).
+
+SEAT (struct197-scan + struct197-select, fresh 338 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 35 forms; 39 math-family
+structs standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 -> archispiral300 ->
+nephroid310 (~10m steps). 594 lawful band candidates; the folium takes the
+NEXT ON-LINE STEP: az94.0 r320.0, 10.0m step == the procession rhythm. NN
+10.00 vs nx-struct-nephroid (law 8.0), SAT 5.97 vs nx-struct-nephroid at
+FINAL yaw (law 1.4), walk-clear 291.41.
+
+YAW LAW (struct-104 oblique-read, struct-196 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean (the
+melencolia/fourier/cissoid/quadratrix/archispiral/nephroid convention). The
+outbound walker reads the construction face obliquely on approach; the
+7.60m arm span runs az124/304.
+
+TERRAIN (struct197-terrain-folium.ts): 9pt over the TRUE rotated footprint
+(literal corners of the 7.60x0.60 ribbon): spread 3.9mm, PY = 0.070261.
+
+PLACEMENT (next-place-struct197.ts, struct195 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 338 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 3.32x2.37 at yaw 214):
+NN floor nephroid 10.00, SAT worst nephroid 5.97 — clean. 1 upload
+(content-addressed store/317256d9738a914b.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 338 -> 339 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (node bead
+emissive-in-GLB glow_fs_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: folium v1 stays OWED (fallback-judged
+acceptance, disclosed; probe L1 cubic identity + decode D2/D3 curve ribbon
++ D5 asymptote rail are the binding evidence); plus monkeysaddle gate,
+hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix v1,
+archispiral v1, nephroid v1 — 15 owed.
+
+Bill eye-check pointer: on Math Avenue past the nephroid — a stone leaf
+riding above an X, its two trailing arms falling toward a level iron rail
+they never touch: Descartes' folium, the curve he and Fermat fought over.
+Stand at the bead: four strands cross at exactly 45 degrees. After dark:
+one warm point burning at the crossing.
+
+Files: struct197-scan-folium.ts + struct197-select-folium.ts +
+struct197-terrain-folium.ts + next-place-struct197.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-197,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
