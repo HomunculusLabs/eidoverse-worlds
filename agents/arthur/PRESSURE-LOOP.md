@@ -510,8 +510,33 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       on the pinned tree; authtest 22/23 = the pressure-23-disclosed
       pre-existing discord-nick env case, not pressure-owned. Next head:
       duplicate join race.)
-- [ ] Duplicate join race: same identity joining twice concurrently
+- [x] Duplicate join race: same identity joining twice concurrently
       resolves to exactly one session.
+      (pressure-25, 2026-09-16: worktree @08523754 + fix, PORT 8980, 18s, 178
+      anchors — 24 perf @15Hz + 137 spec + 16 gen1 duel legs + 1 re-claimer;
+      waves A (4 simultaneous duels mid-lease), B (clean-close rejoin race —
+      control), C (gen2→gen3 rapid double takeover), D (4 same-id spectators
+      under live bodies). BASELINE RED — real defect: the takeover block
+      marked the loser superseded and closed 4002 but performed NEITHER
+      durable act (its close handler early-returns for the unmapped socket):
+      mid-lease takeovers left leases ownerless forever (takeover settles
+      0/2 vs close control 1/1; ghost lease-state replayed to fresh joiners;
+      near's proximity take denied \"dead holder is animating it\"; authored
+      finals never committed — log 8/12 lines), and the loser's pose was
+      never persisted (successor restore 0/4 vs 4/4 control). FIX: takeover
+      now performs the close handler's two durable acts before unmap/close —
+      settle every loser-held lease (per-failure guards) + rememberPose, the
+      pressure-7 travel precedent applied to the takeover seam (+13 lines,
+      server/server.ts). AFTER identical conditions 2x GREEN: takeover
+      closes 12/12 @4002, restores A/B/C 4/4/4/4/4/4, takeover settles 2/2
+      at exact last-streamed windows + close 1/1 + near finals 2/2, log
+      12/12 exact, ghost lease replay 0, reclaims 2/2 p95 2ms, census 41
+      exact 0 dups 0 ghosts, arrives 57/57 leaves 45/45, final fold present
+      0 / lease states 0 / mounts 0, fps 15.1 lat p95 1ms 0 gaps, RSS +2MB,
+      0 suspicious. RED re-proof on reverted tree. tools/pressure-dupjoin.ts
+      (SELFTEST 41 gate families). Servergate: smoke 85/0 + leasetest 19/0
+      on the fixed pinned worktree; main-tree boot-parse clean. Next head:
+      whisper spam.)
 - [ ] Whisper spam: targeted messages cannot bypass the global rate budget.
 - [ ] Watchdog starvation: a stuck tick cannot block heartbeat/liveness
       paths.

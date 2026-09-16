@@ -656,6 +656,19 @@ const server = Bun.serve({
                   && !(other.spectator && (other.surface ?? "world") === "world")) {
                 other.superseded = true;
                 retiredGen = other.gen;
+                // Takeover must do the two durable acts a close does
+                // (pressure-7 fixed travel's copy of this gap; takeover had
+                // the same one): the loser's socket is unmapped below, so its
+                // close handler can never run them. Settle every lease the
+                // superseded session holds at its last streamed transform
+                // (per-lease guards — one failed settle must not strand the
+                // others or the rememberPose), then persist its pose. Same
+                // order and guards as the close handler.
+                for (const [lid, L] of [...w.leases]) if (L.holder === other) {
+                  try { w.settleLease(lid); } catch (err) { console.error(`[world:${w.name}] lease settle for ${lid} on takeover`, err); }
+                }
+                try { w.rememberPose(other.id, other.lastPose); } // sleep where you stood — takeover too
+                catch (err) { console.error(`[world:${w.name}] rememberPose for ${other.id} on takeover`, err); }
                 w.clients.delete(other);
                 clients.delete(other.ws);
                 other.ws.close?.(4002, "session takeover");
