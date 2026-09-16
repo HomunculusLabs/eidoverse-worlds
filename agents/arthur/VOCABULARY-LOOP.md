@@ -1020,7 +1020,28 @@ bread by noon, a tavern tap a builder refills, a ticket booth for the
 carousel, a fruit cart — an item grant with stock counts and a restock
 that belongs to the merchant, state in the fold, perception for free,
 one 8KB comp, no script, no new verb.
-- [ ] Door chime: proximity-linked sound on open/close, rate-capped.
+- [x] Door chime: proximity-linked sound on open/close, rate-capped.
+      DONE vocab-21 (2026-09-15): comp {type:"chime"} — ringChime in
+      server/chime.ts called from reactDoor's transition tail (ONE call
+      site in reactions.ts; no dispatch row of its own — no actions, bell
+      doctrine; ZERO edits to verbs.ts / server.ts / world.ts / browser).
+      Contract in § CHIMES CONTRACT implemented as written. Evidence:
+      tools/chimetest.ts RED 15 failing (engine absent) then ALL PASS
+      30/30; chimetest registered in the servergate battery; servergate
+      36/41 — every vocab + server suite green (chimetest 30, smoke 85,
+      comptest 33, compfold 24, behaviortest 27, worldops 23, locktest 13,
+      leasetest 19, modtest 23, doortest 28, lamptest 34, guestbooktest 35,
+      platetest 37, watertest 34, growthtest 43, companiontest 36,
+      musictest 38, portaltest 35, publishtest 28, phrasetest 17,
+      reservationtest 44, belltest 37, soundposttest 48, boardtest 59,
+      vendortest 54) with authtest 22/1 + support-lifecycle 15/7 +
+      permtest 21/2 = the documented pre-existing classes and
+      weatherzonetest + waystonetest BOTH re-proven ALL PASS standalone
+      (boot-timeout flakes under battery load). mcpl manifest 28/0 +
+      effective + denoise green after the agent.ts hunks (sound-case chime
+      branch, describeChime affordance, exclusion-list entry). Scratch
+      worlds only; no production world touched. No eye-check owed (zero
+      client code — sound + chat both existing paths).
 - [ ] Lantern tour: scripted multi-entity light sequence with authored
       timeline.
 - [ ] Bench dedication: named plaque attachment with owner rank and text

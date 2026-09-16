@@ -61,6 +61,10 @@ import { describeBell } from "../shared/bell.js";
 // The soundpost affordance line (vocab-18): names the timbre/pitch and
 // the sounding/muted state + action hint.
 import { describeSoundpost } from "../shared/soundpost.js";
+// The chime affordance line (vocab-21): names the open/close pitches and
+// the ring gap — the text-tier read of the same folded comp the door
+// engine rings.
+import { describeChime } from "../shared/chime.js";
 // The board affordance line (vocab-19): names the current notice's head,
 // the revision, kept history, and the post action hint.
 import { describeBoard } from "../shared/board.js";
@@ -742,6 +746,18 @@ export class WorldAgent {
                 ? `${msg.id} sounds again (by ${msg.by ?? "someone"})`
                 : `${msg.id} falls quiet (by ${msg.by ?? "someone"})`;
               this.gate.act(String(msg.by ?? msg.id), msg.soundpost.state === "start" ? "sounds" : "quiets", line);
+              break;
+            }
+            if (msg.chime) {
+              // A chiming door rang (vocab-21): one act line per ring,
+              // radius-gated like every ambient sense. The door's own say
+              // already narrated the transition; this is the sound's line.
+              if (!Array.isArray(msg.p)) break;
+              const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+              if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+              const chz = Number(msg.note?.hz);
+              this.gate.act(String(msg.by ?? msg.id), "chimes",
+                `${msg.id} chimes${chz > 0 ? ` (${hzName(chz)})` : ""}${msg.by ? ` — by ${msg.by}` : ""}`);
               break;
             }
             if (!msg.note || !Array.isArray(msg.p)) break;
@@ -1976,6 +1992,9 @@ export class WorldAgent {
       // a soundpost names its TIMBRE and sounding/muted state — the
       // text-tier read of the same folded comp the browser loop derives from
       if (c.soundpost) aff.push(describeSoundpost(c.soundpost));
+      // a chime names its OPEN/CLOSE pitches and ring gap — the text-tier
+      // read of the same folded comp the door engine rings on transitions
+      if (c.chime) aff.push(describeChime(c.chime, c.door != null));
       // a board names its CURRENT notice head + revision — the text-tier
       // read of the same folded comp the post engine writes
       if (c.board) aff.push(describeBoard(c.board));
@@ -1985,7 +2004,7 @@ export class WorldAgent {
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

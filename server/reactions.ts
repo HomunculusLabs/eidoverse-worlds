@@ -9,6 +9,10 @@ import type { LogEntry, WorldState } from "../shared/fold.js";
 // the server's lint and state writes carry exactly the numbers every
 // renderer derives from.
 import { normalizeDoor } from "../shared/door.js";
+// The chime engine (vocab-21): comp {type:"chime"} on a door rings one
+// presence-plane sound on the door's own transition — called from
+// reactDoor's transition tail; no dispatch row of its own (no actions).
+import { ringChime } from "./chime.ts";
 // The lamp derivation + clamps (shared/lamp.js — same shared-verbatim
 // pattern, vocab-5): companion id/anchor/params are one arithmetic across
 // engine, tests, and any future client consumer.
@@ -379,6 +383,13 @@ export function reactDoor(
   const say = w.append("world", "say",
     { text: line, id, door: { open: next, who: cause.actor, at: now }, cause: cause.seq, by: cause.actor });
   w.broadcast({ type: "log", entry: say });
+  // The chime slice (vocab-21, § CHIMES CONTRACT): a chiming door RINGS on
+  // its own transition — one presence-plane sound, no state, no new verbs.
+  // Called AFTER the door's own writes: the door engine's protocol is
+  // untouched, and this can only fire when the door's authorization (rank
+  // 0 + arm's reach) just passed. Chime-without-door is inert by silence
+  // (the door never transitions on a door-less entity).
+  ringChime(w, id, ent, next, cause.actor, now);
   w.debug("door-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
     effect: comp.seq, say: say.seq, open: next, kind: next ? "open" : "close" });
   return true;
