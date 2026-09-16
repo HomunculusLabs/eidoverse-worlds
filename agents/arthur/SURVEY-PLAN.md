@@ -17867,3 +17867,54 @@ shared-budget use (D+0, E+0).
   running total 2370841). STANDING RECOMMENDATION carried unchanged
   (s182-s383): end the SURVEY lane or convert to a no-LLM monitor when
   attended.
+
+## Judged index (survey-385)
+
+- survey-385 (2026-09-16, QUIET HOLD, twentieth tick of the unfreeze —
+  cron session, native vision ABSENT from this catalog (zai-vision MCP
+  only, flap law; native-owed register rows NOT discharged this tick,
+  cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+  HEAD e9d1a46d (city-167 tip — 57th lawful HOLD; ledger law EXACT
+  2370844, total +3 vs survey-384's 2370841: pressure-25, vocab-23
+  scratch-only, city-167 HOLD — none touch the production world; HEAD
+  UNCHANGED through the whole tick — no re-gate due, epoch law). Census
+  via committed next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced,
+  cmp A==B BYTE-IDENTICAL), each 340 entities, each 224265B, each
+  sha256-16 0be489e53b514afd — BYTE-IDENTICAL TO THE SURVEY-384 BASELINE
+  ITSELF (set-diff run programmatically on entity-id sets + full
+  kind/pos/yaw/scale/lib/color/intensity/range/bbox/comp field compare):
+  0 arrivals / 0 departures / 0 lib flips / 0 pos-yaw-scale-comp drift on
+  all 340 holders — fully quiet window. Mutation lanes active-but-not-
+  mutating this window (struct-199 rhodonea stands PLACED_VERIFIED at 340;
+  no banked-not-placed successor visible in foreign dirt; next Math
+  Avenue arrival remains the likeliest trigger; owed board on landing:
+  monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger
+  v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+  quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1 =
+  16 owed). ARRIVAL-GATED JUDGE NOT TRIGGERED: world quiet, pools drained
+  (IMPROVE-PLAN md5 c0f569d0 unchanged, 274th check; SURVEY CANDIDATES 0
+  OPEN rows; CITY-PLAN-V2 assigns survey no role, grep 0), and the native
+  re-judge register is cron-unpayable this tick — cron sessions use ZAI
+  fallback which does NOT discharge native-owed rows (survey-345
+  precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision
+  calls, native-vs-fallback N/A. Foreign working-tree dirt at read =
+  sibling lanes in flight (HERO-ASSET-REFINEMENT-PLAN, core-paths GLB +
+  review, next-place-carousel placer, client controller/localbody/physobj
+  + server world.ts, windmill/cabin/carousel/debug-bower families — same
+  families as s285-s384) — untouched. Index verified empty pre-commit
+  (zero staged files, shared-index law); append anchor grep-verified
+  unique pre-write (0 prior "survey-385" strings in any file). Census
+  baseline for next tick: /tmp/survey385-census-a.json (340, 224265B,
+  sha256-16 0be489e53b514afd — byte-identical, baseline unchanged).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; ticks 211-384 precedent; ledger tail running total 2370844).
+  STANDING RECOMMENDATION carried unchanged (s182-s384): end the SURVEY
+  lane or convert to a no-LLM monitor when attended. Self-catch this
+  tick: first append attempt (fuzzy patch) anchored on survey-379's
+  near-identical closing lines and landed mid-file — caught on post-
+  patch region re-read (survey-25/28 corruption class), repaired same
+  tick (379 closing restored verbatim, 17869 lines confirmed), re-
+  appended at TRUE end-of-file via python. LESSON: end-of-file appends
+  to this plan go through absolute python append, never fuzzy anchors —
+  every quiet-hold closing block is near-identical by construction.
