@@ -17918,3 +17918,52 @@ shared-budget use (D+0, E+0).
   appended at TRUE end-of-file via python. LESSON: end-of-file appends
   to this plan go through absolute python append, never fuzzy anchors —
   every quiet-hold closing block is near-identical by construction.
+
+## Judged index (survey-386)
+
+- survey-386 (2026-09-16, QUIET HOLD, twenty-first tick of the unfreeze —
+  cron session, native vision ABSENT from this catalog (zai-vision MCP
+  only, flap law; native-owed register rows NOT discharged this tick,
+  cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+  HEAD 334e8ed5 (pressure-26 tip — whisper spam rate budget MEASURED
+  PASS, no patch, scratch-only per its commit; ledger law EXACT
+  2370845 — total +1 vs survey-385's 2370844, pressure's own ledger
+  entry, no production world touch; HEAD UNCHANGED through the whole
+  tick — no re-gate due, epoch law). Census via committed
+  next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B
+  BYTE-IDENTICAL), each 340 entities, each 224265B, each sha256-16
+  0be489e53b514afd — BYTE-IDENTICAL TO THE SURVEY-385 BASELINE ITSELF
+  (set-diff run programmatically via /tmp/survey386-census-diff.py on
+  entity-id sets + full kind/pos/yaw/scale/lib/comp field compare):
+  0 arrivals / 0 departures / 0 lib flips / 0 pos-yaw-scale-comp drift
+  on all 340 holders — fully quiet window. Mutation lanes active-but-
+  not-mutating this window (struct-200 the Versiera v2 ACCEPTED BANKED
+  NOT PLACED — placement = struct-201 committed carry, so
+  nx-struct-versiera is the likeliest next arrival; owed board on
+  landing: monkeysaddle gate, hypar row 22, kuen v3, catalan v1,
+  clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+  fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1,
+  folium v1, rhodonea v1 = 16 owed, + versiera v2 new-owed on landing).
+  ARRIVAL-GATED JUDGE NOT TRIGGERED: world quiet, pools drained
+  (IMPROVE-PLAN md5 c0f569d0 unchanged, 275th check; SURVEY CANDIDATES
+  0 OPEN rows; CITY-PLAN-V2 assigns survey no role, grep 0), and the
+  native re-judge register is cron-unpayable this tick — cron sessions
+  use ZAI fallback which does NOT discharge native-owed rows
+  (survey-345 precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes
+  routed, 0 vision calls, native-vs-fallback N/A. Foreign working-tree
+  dirt at read = sibling lanes in flight (HERO-ASSET-REFINEMENT-PLAN +
+  STRUCTURES-PLAN + core-paths GLB/review + next-place-carousel
+  placer, client controller/localbody/physobj + server
+  reactions/world + servergate + mcpl/agent, windmill/cabin/carousel/
+  moon-moth/debug-bower/fleet families — same families as s285-s385)
+  — untouched. Index verified empty pre-commit (zero staged files,
+  shared-index law); append anchor grep-verified unique pre-write
+  (0 prior "survey-386" strings in any file). Census baseline for
+  next tick: /tmp/survey386-census-a.json (340, 224265B, sha256-16
+  0be489e53b514afd — byte-identical, baseline unchanged). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; CLEAN concurrence routes nothing; ticks 211-385 precedent;
+  ledger tail running total 2370845). STANDING RECOMMENDATION carried
+  unchanged (s182-s385): end the SURVEY lane or convert to a no-LLM
+  monitor when attended.
