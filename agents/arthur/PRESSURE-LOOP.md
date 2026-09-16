@@ -632,8 +632,34 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       tools/pressure-strobe.ts (SELFTEST 27 gates). Run-1 REDs = harness
       accounting x3, server exact every run. Servergate: smoke 85/0 +
       weatherzonetest 48/0 pinned tree. Next head: vendor burst.)
-- [ ] Vendor burst: 200 clients buying simultaneously — stock never goes
+- [x] Vendor burst: 200 clients buying simultaneously — stock never goes
       negative, grant log exactly-once.
+      (pressure-29, 2026-09-16: worktree @ 8b2e211e, PORT 8972, 23s+restart,
+      261 peak — 24 perf @15Hz (perf-1 the merchant HOLDS the stand, in reach
+      for both restock windows) + 24 spec + 178 in-reach buyers (pose-once,
+      golden-angle ring r2.2-3.4) + 12 far (~48m) + 3 specask + 20 late.
+      W1 THE BURST: 200 simultaneous `use {buy}` (headline tea, cap 40) →
+      EXACTLY 40 grants / 160 sold-out skips; W2 restock-full → {40,25,15};
+      W3 120 named rotating → 80 grants; W4 controls (20 garbage-item, 12
+      far, 3 spectator); W5a named restock tea+5, W5b 20 late buys → 5.
+      MEASURED PASS 2/2 identical runs, no patch: 125 grants (85/25/15),
+      comps≡says 125/125 adjacent pairs, duplicate-cause 0 (exactly-once per
+      use), shelf chain LEGAL at every write (0 negative, 0 over-cap, 0
+      non-integer, every grant a single −1 from its predecessor), sales ≤16
+      with sales[0] == this grant, vd.at == cause use ts 125/125, final
+      shelf {0,0,0}, garbage/far grants 0, spectator refusals 3/3 verbatim
+      0 log lines, granted buyers 89/89 + 88/88 witnessed own grant p95
+      160-173ms, fair+probe says 3/3 p95 7-10ms, fps p50 14.8, lat p95 4ms,
+      0 gaps, HTTP probe p95 7-10ms, log 635 == derived EXACT, SIGKILL
+      restart boot + fold EXACT-equal + shelf exact + drift 0 + present 0,
+      RSS +9-10MB, 0 suspicious lines. Run 1's 5 REDs were all harness
+      accounting (restocker walked out of reach; authored-comp absent-stock
+      = full-shelf doctrine mishandled by the chain checker; two counting
+      bugs) — server correct every run; the buy path is synchronous per
+      dispatch so the burst serializes to capacity exactly, and the
+      sold-out-skip is mint-nothing. tools/pressure-vendorburst.ts
+      (SELFTEST 39 gates). Servergate: smoke 85/0 + vendortest 54/0 pinned
+      tree. Next head: guestbook flood.)
 - [ ] Guestbook flood: sign-spam cannot blow the 8KB degrade path or the
       comp write budget.
 - [ ] Sequencer sync storm: 50 concurrent pattern edits converge to one
