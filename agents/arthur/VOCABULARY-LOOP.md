@@ -1044,6 +1044,19 @@ one 8KB comp, no script, no new verb.
 - [ ] Trail markers: waypoint posts that pair with teleport beacons —
       use-action "guide me" walks the player-flag toward the linked
       beacon with cooldown.
+- [ ] Campfire circle: multi-entity hearth — light it once, companion
+      seats warm, embers comp spins up, night-light spills to neighbors
+      (composition: lamps + growth + particles).
+- [ ] Puzzle door pair: two inscription plates that must both be set to
+      matching values within a window before the linked door unlinks —
+      late-join truth for linked state.
+- [ ] Observatory session: telescope affordance — use-action aligns to
+      the next scheduled celestial event, holds a shared observation
+      slot with occupancy.
+- [ ] Fountain wish: coin-toss interaction on water features with a
+      bounded wish log (extends water family, guestbook caps).
+- [ ] Echo wall: paired sound posts that relay a recorded say between
+      two points with delay and rate caps (extends sound family).
 
 ### CHIMES CONTRACT (vocab lane — drafted vocab-21, 2026-09-15)
 
