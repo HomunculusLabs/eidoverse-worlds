@@ -57,6 +57,11 @@ import { reactSoundpost } from "./soundpost.ts";
 // action vocabulary — the authored multi-line notice with revision history.
 // Same dispatch doctrine, last (a board host may also be any of the above).
 import { reactBoard } from "./board.ts";
+// The vendor engine (vocab-20): comp {type:"vendor"} owns the buy/restock
+// action vocabulary — the use-action item grant with stock counts and a
+// builder-gated restock. Same dispatch doctrine, last (a stand host may
+// also be any of the above).
+import { reactVendor } from "./vendor.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -168,6 +173,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // notice with revision history. Same dispatch doctrine, last (a board
     // host may also be any of the above).
     if (reactBoard(w, cause, ent, id, action)) return;
+    // The vendor slice (vocab-20, § VENDORS CONTRACT): comp {type:"vendor"}
+    // owns the buy/restock action vocabulary — the item grant with stock
+    // counts and builder restock. Same dispatch doctrine, last.
+    if (reactVendor(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

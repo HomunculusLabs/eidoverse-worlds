@@ -64,6 +64,9 @@ import { describeSoundpost } from "../shared/soundpost.js";
 // The board affordance line (vocab-19): names the current notice's head,
 // the revision, kept history, and the post action hint.
 import { describeBoard } from "../shared/board.js";
+// The vendor affordance line (vocab-20): names the shelf (live stock per
+// ware), the grant-log count, and the buy action hint.
+import { describeVendor } from "../shared/vendor.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -1976,10 +1979,13 @@ export class WorldAgent {
       // a board names its CURRENT notice head + revision — the text-tier
       // read of the same folded comp the post engine writes
       if (c.board) aff.push(describeBoard(c.board));
+      // a vendor names its SHELF (live stock per ware) + grant-log count —
+      // the text-tier read of the same folded comp the grant engine writes
+      if (c.vendor) aff.push(describeVendor(c.vendor));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

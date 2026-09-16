@@ -901,8 +901,125 @@ no new verb.
       unpost + clamp steps). Scratch worlds only; no production world
       touched. No eye-check owed (zero client code — chat + folded state
       only).
-- [ ] Vending stand: use-action item grant with stock counts and restock
+- [x] Vending stand: use-action item grant with stock counts and restock
       rank.
+      DONE vocab-20 (2026-09-15): comp {type:"vendor"} — reactVendor in
+      server/vendor.ts rides reactToUse's dispatch after board (one import
+      + one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts — `use` args ride verbatim so `item`/`n` needed
+      no validator change). Contract in § VENDORS CONTRACT implemented as
+      written. Evidence: tools/vendortest.ts RED 23 failing (engine
+      absent; 31 pre-passing = shared math + shell gates, the honest
+      vocab class) then ALL PASS 54/54 after the GREEN run caught TWO
+      genuine engine defects (partial stock table on buy — contract
+      promises the FULL shelf table every write; named restock +n
+      clamped at STOCK_MAX instead of the ware's capacity, cascading
+      into the no-op checks) — both cured in shared math + engine same
+      tick; one test-side ordering fix (reach/spectator probes must run
+      pre-restart, sockets die with the killed server — boardtest's own
+      placement). Servergate + ledger evidence in the vocab-20 ledger
+      entry. Scratch worlds only; no production world touched. No
+      eye-check owed (zero client code — chat + folded state only).
+
+### VENDORS CONTRACT (vocab lane — drafted and implemented vocab-20, 2026-09-15)
+
+**Trigger.** A vending stand is an entity carrying
+`comp {type:"vendor", data:{...}}`. The action strings `buy` and `restock`
+are VENDOR vocabulary on the freeform `use {id, action}` path (the
+reactions doctrine: other action strings pass through untouched — a stand
+ignoring `use {action:"ring"}` is exactly correct; buy/restock are
+DISJOINT from all 14 prior families' actions). Attaching/removing the comp
+is builder (rank 1) — the author's standing decision that this thing
+grants, identical doctrine to reactions/phrases/region/door/lamp/guestbook/
+portal/music/plate/water/growth/companion/weatherzone/waystone/reservation/
+bell/soundpost/board.
+
+**State — the fold is the state; two tables, two roles.** The AUTHORED
+`wares` menu `{name: capacity ≤8, capacity [0,999] d10}` rides VERBATIM in
+the engine's carry (regions doctrine — clamps are read-time derivations);
+capacity is the full-shelf level a restock restores to. The ENGINE's
+`stock` table (every ware's live count — the FULL table written on every
+transition) and `sales` grant log (newest-first
+`[{item,who,at},…]` capped at `salesCap` [1,128] d16 evicting the oldest,
+guestbook-entries doctrine) are the durable state: every buy/restock is
+ONE world-authored comp transition
+`comp {id, type:"vendor", data:{...authored, stock, sales}}`. ENGINE_KEYS
+(stock/sales) are STRIPPED from the authored carry at each engine write
+then composed fresh (weatherzone doctrine — a re-authed comp over a live
+stand can never smuggle a stale shelf or grant log). ABSENT stock = FULL
+shelf (the soundpost muted-absent doctrine — a freshly-authored stand is
+fully stocked). NOTHING else is stored anywhere.
+
+**Buy.** `use {action:"buy", item?}` — item defaults to the FIRST ware
+(the headline ware), `use {action:"buy"}` grants it. An unknown item or a
+zero count skips fail-closed with `vendor-skip` naming the ware ("sold
+out" / "not sold here"). A grant decrements the ware, prepends
+`{item, who, at}` to the log, writes ONE comp transition + ONE say
+(actor `world`, args `{text:<line>, id, vd:{item, who, at}, cause:<use
+seq>, by:<user>}` — the phrases/doors/boards provenance grammar exactly).
+Line default `"<who> buys <item>"` (authored `buyAt` overrides, ≤200c).
+
+**Restock — the merchant's act.** `use {action:"restock"}` restores EVERY
+ware to capacity; `use {action:"restock", item, n?}` fills one ware —
+`n` adds exactly n (clamped at the ware's capacity, never beyond), no `n`
+fills to capacity. RESTOCK IS BUILDER (rank 1, via rightsOf — the rights
+ladder answers, fold-derived; a visitor's restock skips with
+`vendor-skip` naming the boundary). Same two-entry write with
+`vd:{restock:<item|"all">, who, at}`; line default `"<who> restocks the
+stand"`. A no-op restock (the shelf already reads the plan) mints
+nothing.
+
+**Authority/reach.** Buying is rank 0 (anyone present — the author's
+published behavior, world authority on the effect only) plus the
+ARM'S-REACH gate (vPunt arithmetic): the user's LIVE pose within `reach`
+metres (authored, clamped [2,12], default 4) of the stand's LIVE position
+(lease stream pos if leased, folded pos otherwise). Out-of-reach use is a
+`vendor-skip` naming the distance. Spectators bounce at the shell (`use`
+is spectator-gated there). Lock composes as for doors (lock refuses
+place/punt/spawn/comp/remove — not `use`): a locked stand still sells.
+Effects are say + comp-on-self ONLY: no other verb can be minted from a
+grant.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use or comp never
+re-fires. On restart the world folds stock/sales from the log — the
+stand IS its log. `world_history {verbs:["use","comp","say"]}` traces
+every grant's chain (cause → comp+say with by).
+
+**Rate.** Grants are user-paced (the verb rate bounds `use`); each mints
+at most 2 entries (comp + say); sold-out, off-menu, out-of-reach uses and
+no-op restocks mint nothing. The grant log is capped at `salesCap`, so
+the comp never grows unboundedly with sales.
+
+**Failure behavior.** Malformed comp → clamp + `vendor-lint`
+(particles-lint doctrine): wares names sanitized (blank dropped + noted),
+wares capped at 8 (excess dropped + noted), capacity [0,999] d10, stock
+rows off-menu dropped + noted, `salesCap` [1,128] d16, `reach` [2,12] d4,
+lines clamped 200c, unknown keys ride (the bag is public annotation).
+The authored shape rides VERBATIM in the engine's carry (regions
+doctrine). Missing entity → silent pass-through. The 8KB degrade keeps
+{stock, sales} + lint (fail closed against bloat, never against the
+grant). The whole reaction wrapped in try/catch (house rule 3 — no stand
+takes the server down).
+
+**Browser path.** ZERO client code: the say arrives as ordinary chat
+(actor `world`); the shelf + grant log are readable from any folded
+snapshot (`state.entities[id].comp.vendor.stock/.sales`) — scripts and
+future UI consume it without a new protocol surface. A visible tier
+(shelf cards, item sprites) is deliberately deferred — protocol before
+UI decoration.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the stand via `shared/vendor.js
+describeVendor` (the describeDoor pattern) — the shelf (each ware's live
+count, derived at read time), the grant-log count, and the buy action
+hint. An agent buys through the ordinary `use` verb.
+
+**Intent.** The world hands you things. A bakery stall that runs out of
+bread by noon, a tavern tap a builder refills, a ticket booth for the
+carousel, a fruit cart — an item grant with stock counts and a restock
+that belongs to the merchant, state in the fold, perception for free,
+one 8KB comp, no script, no new verb.
 - [ ] Door chime: proximity-linked sound on open/close, rate-capped.
 - [ ] Lantern tour: scripted multi-entity light sequence with authored
       timeline.
