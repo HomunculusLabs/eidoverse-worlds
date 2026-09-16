@@ -609,9 +609,29 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       pressure-23-disclosed pre-existing classes — 27/0 here is the
       fixed-tree slice); main-tree boot-parse clean. Production and live
       worlds untouched.)
-- [ ] Weather strobe under load: rapid weatherzone requests during peak
+- [x] Weather strobe under load: rapid weatherzone requests during peak
       presence traffic — anti-strobe floor holds, no sky thrash to
       clients.
+      (pressure-28, 2026-09-16: worktree @ d4781710 + supplemented
+      untracked shared/pilot.js (pressure-23 disclosure), PORT 8973, 51s,
+      176 anchors — 24 embodied @15Hz + 152 spec; +24 storm legs (12
+      hoarder-embodied pose+ask @700ms x10 + 12 fresh stormers x55 rain
+      @90ms, 40 embodied peak). Zone authored holdSec 0.05 (deliberate
+      floor violation): 384/384 accepts, EVERY hold until−at == 30000ms
+      EXACT (0 violations, worst Δ 0ms), anchor err 1-3ms. Sky never
+      thrashed: fog verbs 0 across 144 landed state-changing asks (strobe
+      closure every time), clear verbs exactly 1 (the release, +814-933ms
+      post-expiry, witness observed live), rain verbs 384 == accepts
+      (log≡echo). Rain plane 546 sent / 18 refused (12/4s burst) / 528
+      landed / 384 accepted (264 same-state extends + 120 out-of-reach/
+      one-sky skips). Spectator asks 3/3 verbatim refusals, 0 use lines
+      authored. Fairness: says 5/5 p95 21-34ms, fps p50 14.9-15.0, lat
+      p95 9-15ms, 0 gaps, HTTP p95 2ms. SIGKILL restart boot 1/1, fold
+      EXACT-equal, 2+ sweeps minted nothing (drift 0/0), present 0. Log
+      1704 == derived EXACT. RSS +5-6MB. 0 suspicious. PASS, no patch.
+      tools/pressure-strobe.ts (SELFTEST 27 gates). Run-1 REDs = harness
+      accounting x3, server exact every run. Servergate: smoke 85/0 +
+      weatherzonetest 48/0 pinned tree. Next head: vendor burst.)
 - [ ] Vendor burst: 200 clients buying simultaneously — stock never goes
       negative, grant log exactly-once.
 - [ ] Guestbook flood: sign-spam cannot blow the 8KB degrade path or the
