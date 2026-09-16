@@ -13704,3 +13704,64 @@ staged -f), reviews/struct202-elliptic/ (9 frames, ignored),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-202,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-203 (2026-09-16): ELLIPTIC PLACEMENT TICK — committed carry from
+## struct-202 executed (nx-struct-elliptic v3 PLACED_VERIFIED live at the
+## next on-line Math Avenue step az94/r350; 10.0m rhythm held)
+
+Placement tick per the 178..202 alternation (build+judge struct-202 → place
+struct-203). Chassis: the proven struct-193/195/197/199/201 placement family,
+adapted to the elliptic envelope.
+
+- GATE: verify-repairs ALL PASS real exit 0 tick-start at 75ee25a7
+  (survey-389) + re-run clean immediately before mutation at the SAME HEAD
+  (no sibling commit landed between; epoch law held, one gate pass covers).
+- BANK PIN: village_elliptic3.glb shasum -a 256 == 602519cffada3442… (the
+  struct-202 v3 pin) re-verified on disk BEFORE upload; decode re-run fresh
+  this tick ALL PASS 9/9 (D1 4 nodes … D8 envelope 5.400x5.161x1.100
+  cx/cz 0.0e+0 … D9 texMats).
+- SCAN (struct203-scan-elliptic.ts, fresh census 341): axis 91.0° (20°
+  density window, 41 math forms); procession line az94.0 — eleven standing
+  members enneper r250 → … → folium r320 → rhodonea r330 → versiera r340,
+  all az94.0. Far band r342-370: 592 lawful (NN≥8, SAT≥1.4 @basis, walk≥3).
+  On-line step az94.0 r350.0 lawful: NN 10.00 (versiera), SAT 4.05 @basis
+  yaw, walk 321m.
+- SELECT (struct203-select-elliptic.ts): pinned az94.0 r350.0 → pos
+  (-24.414766, 349.147418); NN 10.00 vs nx-struct-versiera (law 8.0).
+  Oblique yaw band scan (struct-104 convention): FINAL yaw 214deg =
+  3.735004599267865 rad — the procession's exact standing convention
+  (identical to folium/rhodonea/versiera), +Z normal az304, 30° off the
+  az274 anti-travel sightline, east lean; SAT worst at FINAL yaw 4.80 vs
+  nx-struct-versiera (law 1.4).
+- TERRAIN (struct203-terrain-elliptic.ts, 9pt over the TRUE rotated
+  5.400x1.100 footprint): spread 3.2mm, PY = lowest = 0.074360 — flat.
+- PLACER (next-place-struct203.ts, hash-gated fresh-spawn chassis):
+  local sha == bank pin, wantLib store/602519cffada3442.glb; fresh census
+  341 → nx-struct-elliptic ABSENT (fresh-spawn contract); SAT preflight at
+  FINAL pose vs the fresh 341-entity set: symmetric footprint 2.55x1.97 at
+  yaw 3.7350, worst 4.80 (versiera); NN floor 10.00 (law 8). Upload OK
+  store/602519cffada3442.glb (content-addressed, 1 shared-budget upload);
+  1 paced spawn verb; PLACED_VERIFIED pos [-24.414766, 0.074360,
+  349.147418] yaw 3.735004599267865 lib store/602519cffada3442.glb
+  comp {} — census 342. Idempotent rerun: ALREADY_SEATED, zero verbs.
+- FOLLY CLASS: no walk owed (footprint 5.94m² solid monument). No comps
+  (sole night bead emissive-in-GLB, glow_el_1 KEEP).
+- NATIVE DEBT: board 18 owed unchanged — elliptic v3 stays owed
+  (ZAI-fallback judged acceptance from struct-202, disclosed; native
+  absent from cron catalog).
+- LEDGER: one append struct-203 (D+1, E+1). Self-caught same-tick: my
+  prose ended with a (D+1, E+1) pair → tool-appended pair doubled it, law
+  BROKEN at 2370860; repaired by stripping MY pair (tool's exactified pair
+  kept), re-verified ledger law EXACT + gate ALL PASS after repair.
+
+Bill eye-check pointer: on Math Avenue past the bell — a stone oval and a
+stone wing rising from one plinth, crossed by an iron line pinned to the
+stone at three points; a diagonal rod welds into the oval and climbs to the
+wing. Sight along the rod's edge: a single warm bead floats dead on its
+axis — the third point where the line meets the curve, hidden behind the
+rod's end. After dark: that bead is the only light.
+
+Files: struct203-scan-elliptic.ts + struct203-select-elliptic.ts +
+struct203-terrain-elliptic.ts + next-place-struct203.ts (NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-203,
+D+1 E+1). One upload + one verb (shared budget). Zero pushes.
