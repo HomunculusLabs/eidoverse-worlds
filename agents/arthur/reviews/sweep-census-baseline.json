@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 337,
+  "count": 338,
   "entities": [
     {
       "id": "beb4c791",
@@ -8148,6 +8148,42 @@
           0,
           1.315,
           0.35
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-nephroid",
+      "kind": "thing",
+      "pos": [
+        -21.624507,
+        0.049153,
+        309.244856
+      ],
+      "yaw": 3.735004599267865,
+      "scale": 1,
+      "lib": "store/3557b1660affbd67.glb",
+      "bbox": {
+        "min": [
+          -2.55,
+          0,
+          -0.25
+        ],
+        "max": [
+          2.55,
+          4.21,
+          0.25
+        ],
+        "size": [
+          5.1,
+          4.21,
+          0.5
+        ],
+        "center": [
+          0,
+          2.105,
+          0
         ]
       },
       "compKeys": [],

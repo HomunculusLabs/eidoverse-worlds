@@ -11358,3 +11358,69 @@ tools/pressure-mountthrash.ts belong to the pressure lane (pressure-22
 in flight); pressure's next tick should find its files already at HEAD and
 absorb per the interlane interleaving law. No ledger-total impact (both
 entries D+0/E+0). Recorded as sweep-267v in the ledger.
+
+sweep-268: CLEAN SWEEP, arrival epoch tick under the audit-continues
+banner (freeze lifted for struct+city lanes only, so the epoch was
+verified on its own bytes, not assumed; tick-start HEAD d221f8cd =
+vocab-20v queue-widen — read-only per its own entry; gate ALL PASS real
+exit 0 FIRST TRY on it, 99 PASS lines incl. the ALL PASS trailer, ledger
+law EXACT 2370830, exit captured unpiped). Census 338==338 at BOTH
+epochs (A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL to
+each other (raw 223069B sha16 24ac55a9f6d5ea6f): exactly ONE arrival vs
+the committed sweep-267/266 baseline = nx-struct-nephroid @
+[-21.624507, 0.049153, 309.244856] yaw 3.735004599267865 lib
+3557b1660affbd67 scale 1 kind thing compKeys [] — tuple-exact vs the
+committed struct-195 ledger line 0fb4dad2 line-for-line (Math Avenue
+procession step az94 r310, past archispiral; sweep-267's own epoch read
+337 PRE-placement, so this tick owns the baseline
+advance), corroborated by survey-379 bc55387b; 0 departures, all five
+semantic drift classes EMPTY (pos/yaw/scale/kind/bbox, lib flips,
+compKeys). THIRTY-SEVENTH consecutive quiet-or-classified epoch pair.
+Baseline rewritten with asserted pre-write checks (diff exactly [arrival
+nx-struct-nephroid], drift ZERO) via sweep268-baseline-rewrite.py folded
+from the committed sweep266 chassis: 338 entities / sha16
+24ac55a9f6d5ea6f / 223069B; next sweep's baseline; post-rewrite drift vs
+live ZERO (cmp byte-identical to the epoch-B capture). Overlap: SAT
+fresh-live 300 bbox non-light / 237 classified / 0 coverage holes, real
+exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-
+mapboard -0.407 — known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 224th sweep since routing, NOT new, no escalation due (law
+keys severity-1); nephroid adds ZERO new contacts, corroborating
+struct-195's own SAT 5.50 at final yaw. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually
+per the sweep-228 ceiling law — core 64/64 ALL_PASS @ 0.380
+(next-walk-core-paths.ts; [physics] banner parsed from first brace), NW
+5/5 (nw-approach1-walk.ts), NE 7/7 (ne-approach2-walk.ts), SW 5/5
+(sw-approach3-walk.ts); verdicts content-anchored on status strings +
+per-leg ok counts + maxArrival from raw files. Nephroid sits r310 Math
+Avenue — 280m+ off every tier-1/tier-2 leg, walks unaffected by
+construction (sweep-53 precedent); folly class no walk owed per its own
+ledger. Tier-2 246th cycle per the committed sweep-267 pointer: inn 6/6
+ALL_PASS @ 0.3640 (interior-walk-inn.ts) + tower-house 6/6 ALL_PASS @
+0.3765 (interior-walk-tower-house.ts), both real exit 0 — match the
+sweep-263 records for the pair exactly; both tools ls-verified present
+on disk pre-run. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (222nd consecutive clean); sweep89-battery 28/28 PASS real exit
+0 on fresh census-A bytes (python3 argv census-path form, unpiped);
+interlane md5 f6254cd0 stable, read fresh this tick. Pools drained:
+IMPROVE-PLAN md5 c0f569d0 unchanged (244th check; 0 SHARD EXECUTION
+sections, 0 open candidate rows), sweep owns no prefix; CITY-PLAN-V2
+assigns sweep no reset role — the audit-continues freeze banner governs
+and was read fresh this tick via the loop/plan reload. Diff tool
+sweep268-census-diff.py folded from the committed sweep267 chassis (sed
+swap only — py_compile clean, clean exit 0 at BOTH epochs A/B unpiped
+on the real bytes); baseline-rewrite tool sweep268-baseline-rewrite.py
+folded from the committed sweep266 chassis. Probe self-catch
+pre-verdict: first baseline-rewrite run executed from agents/arthur/
+against the repo-root-relative TARGET path — pre-write asserts PASSED,
+write failed FileNotFoundError, zero bytes touched; re-run bare from
+repo root, REWRITTEN confirmed + cmp byte-identical (cwd class, caught
+by the failure itself, no repair owed). Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-269): hall +
+forge (247th cycle — LRU chain re-derived from committed pointers this
+tick: inn/tower-house @268 walked fresh, row-cottage/observatory @267,
+hall/bunkhouse @266, forge/potter @265, longhouse/garden-cottage @264,
+hall/forge @262 stalest standing pair at 6 sweeps; both walk tools
+ls-verified present on disk this tick: interior-walk-hall.ts,
+interior-walk-forge.ts).
