@@ -14129,3 +14129,91 @@ struct206-warm-probe.py (NEW, tracked), assets/mkv3-viviani.ts (NEW, staged
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-206,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-207 (2026-09-16): VIVIANI PLACEMENT TICK — committed carry from
+## struct-206 executed (nx-struct-viviani v1 PLACED_VERIFIED live at the
+## next on-line Math Avenue step az94/r370; 10.0m rhythm held)
+
+207%3=0 refine-slot cadence WITH a takeable banked form (struct-206:
+"placement = struct-207 carry"; the 178..207 lane precedent — a banked form
+places on the next tick regardless of N%3, build+judge/place alternation
+held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..206): 20 owed — monkeysaddle gate, hypar row 22, kuen v3,
+catalan v1, clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1,
+folium v1, rhodonea v1, versiera v1, elliptic v3, mandelbrot v1, viviani v1
+(viviani placed THIS tick — debt stays owed). Gate ALL PASS real exit 0
+tick-start at 8fcd39c8 (city-180; unpiped terminal GATE_EXIT:0) + RE-RUN
+clean immediately before the mutation at the SAME HEAD (epoch law held, no
+sibling commit landed mid-tick). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged 33rd tick, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-206 -> tag struct-207 (re-checked immediately before append; law
+exact 2370880 -> 2370882).
+
+Local bytes re-verified sha256
+6b7522f214db57cab7caaf9d39838df561920ec3f621aef4dd1fcac46d422da6 ==
+struct-206 v1 bank pin BEFORE upload (shasum -a 256, mtime Sep 16 08:06);
+struct206-decode re-run this tick ALL PASS 8/8 (D7 envelope 3.400x3.350x
+3.400 origin-centered drift 0.00mm; D3 strap 4411 verts on-curve AND
+on-shell; D4 square law span 3.070 == 2R+rod, top at N-pole weld; D5 bead
+centroid == node ±5mm; D6 hollow 0/4531 deep verts).
+
+SEAT (struct207-scan + struct207-select, fresh 343 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 39 forms; 43 math-family
+structs standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 -> archispiral300 ->
+nephroid310 -> folium320 -> rhodonea330 -> versiera340 -> elliptic350 ->
+mandelbrot360 (~10m steps). 597 lawful band candidates r362-390; the
+viviani takes the NEXT ON-LINE STEP: az94.0 r370.0, 10.0m step == the
+procession rhythm. NN 10.00 vs nx-struct-mandelbrot (law 8.0), SAT 5.79 vs
+nx-struct-mandelbrot at FINAL yaw (law 1.4).
+
+YAW LAW (struct-104 oblique-read, struct-206 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean
+(the melencolia/fourier/cissoid/quadratrix/archispiral/nephroid/folium/
+rhodonea/versiera/elliptic/mandelbrot convention). The outbound walker
+reads the construction face obliquely on approach; the 3.40m square frame
+runs az124/304.
+
+TERRAIN (struct207-terrain-viviani.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 3.40x3.40 square): spread 15.0mm,
+PY = 0.013415.
+
+PLACEMENT (next-place-struct207.ts, struct205 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 343 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.36x2.36 at yaw 214):
+NN floor mandelbrot 10.00, SAT worst mandelbrot 5.79 — clean. 1 upload
+(content-addressed store/6b7522f214db57ca.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 343 -> 344 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class (11.56m² footprint solid monument) — no walk owed. Comp
+bag empty by contract (sole night bead emissive-in-GLB glow_vv_1 KEEP — no
+comp-wipe class on first spawn). Cosmetic inherited from the chassis: join
+log line prints msg.entities (0) instead of msg.state.entities (struct-104
+shape) — the authoritative post-place check is the fresh /geom re-read,
+which is green.
+
+Native debt board after this tick: viviani v1 stays OWED (fallback-judged
+acceptance, disclosed; probe L1 on-both-surfaces 2.2e-16 + decode D4 square
+law + D5 bead law are the binding evidence); plus monkeysaddle gate, hypar
+row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix v1,
+archispiral v1, nephroid v1, folium v1, rhodonea v1, versiera v1, elliptic
+v3, mandelbrot v1 — 20 owed.
+
+Bill eye-check pointer: on Math Avenue past the heart and the wheel — a
+hollow globe of iron: one strap sweeps a figure-eight over the top and
+under the bottom, crossing itself at a bright bead; the square frame
+around it is exactly as wide as the globe, its area the quadrable remainder
+of the 1692 window problem. Walk around it: the eight never leaves the
+sphere that isn't there. After dark: the bead at the crossing is the only
+light.
+
+Files: struct207-scan-viviani.ts + struct207-select-viviani.ts +
+struct207-terrain-viviani.ts + next-place-struct207.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-207,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
