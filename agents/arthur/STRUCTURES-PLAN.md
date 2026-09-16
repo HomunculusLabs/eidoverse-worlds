@@ -13765,3 +13765,153 @@ Files: struct203-scan-elliptic.ts + struct203-select-elliptic.ts +
 struct203-terrain-elliptic.ts + next-place-struct203.ts (NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-203,
 D+1 E+1). One upload + one verb (shared budget). Zero pushes.
+
+## struct-204 (2026-09-16): R11-26 THE MANDELBROT SET — BUILD+JUDGE TICK
+## (z → z² + c; the heart, the wheel, and the real line; three theorems
+## carved — λ(θ)=e^{iθ} machine-exact, μ(c)=4(1+c) closed form, M∩ℝ=[−2,¼];
+## probe 7/7 + RED; decode 9/9 + RED control; judged PASS all frames — ZAI
+## fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+204%3=0 refine slot, pool empty of payable items (the 18-debt native board
+is cron-unpayable — tool_search fresh this tick, catalog carries only the
+zai-vision MCP; same disclosed class as struct-169..203), nothing banked
+(tensegrity v6 behind Bill's eye-gate, not takeable) -> build+judge per the
+struct-165 precedent. Gate ALL PASS real exit 0 tick-start at 7b254b15
+(pressure-28; unpiped terminal GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-203 -> tag struct-204 (re-checked immediately before
+append).
+
+FORM SELECTION (fresh grep, all three ledgers + census 342): mandelbrot
+0/0/0 — never named, never barred, never built. Register: the fractal
+family (koch/sierpinski/menger/apollonian) is all GEOMETRIC recursion;
+this opens the ITERATION-DYNAMICS branch — the boundary between
+convergence and divergence itself. Kin-check fresh: pseudosphere/tractrix
+TAKEN (whisperhorn struct-82 is Beltrami's trumpet; slidingladder is the
+tractrix demo); klein/hopf BARRED (4D-descendant rule, struct-111/142);
+the cardioid's disclosed proximity to nephroid (both heart-ish) —
+different read class: a mechanical ring+wheel+axle, not an epicycloid
+ribbon. No standing form reads as a set skeleton.
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190):
+L1 THE HEART — the main cardioid boundary c(θ)=e^{iθ}/2−e^{2iθ}/4 with
+fixed-point multiplier λ=1−√(1−4c)=e^{iθ} EXACT to 2.70e-14 over 2401
+stations (the two-angle theorem: the parametrization IS the multiplier
+map); 240/240 on-curve critical orbits bounded (the boundary is IN the
+set); 12/12 normal-step frontier points have a repelling outward side and
+12/12 escape — the true frontier. L2 THE WHEEL — the period-2 bulb is
+EXACTLY the disc |c+1|≤1/4: the 2-cycle {z1,z2} satisfies z²+z+c+1=0 so
+the cycle multiplier is μ=4·z1·z2=4(1+c) CLOSED FORM; rim |μ|=1 to
+4.44e-16 over 720 stations; tangent to the cardioid at −3/4=cardioid(π)
+exact; center c=−1 superattracting (critical orbit 0→−1→0 exact, μ=0 —
+the critical point itself cycles); 7/9 outside-rim points escape. L3 THE
+REAL LINE — M∩ℝ=[−2,1/4]: cusp 1/4 bounded (parabolic), tip −2 bounded
+(orbit 0→−2→2→2 exact — lands on the repelling fixed point), 200/200
+interior bounded; 0.2501/0.251/−2.0001/−2.001 all escape. The rod spans
+the set's real slice exactly, nothing more.
+
+CONCEPT (written before build): THE HEART, THE WHEEL, AND THE REAL LINE.
+One equation's fate-map split by material. STONE carries THE HEART — the
+main cardioid boundary as one closed arc-uniform voussoir ribbon (28
+chords over 6 mark-to-mark arcs; |c'|=sin(θ/2) integrated in CLOSED FORM,
+circumference exactly 4 math units; joints at cusp/±shoulders(3/8 max-x)/
+top/tangency/bottom; max step 0.292m, worst chord dev 28.4mm), its bottom
+arc seated 8cm into the plinth top (cradle socket, 6 stations, post-embed
+class, disclosed). IRON carries THE WHEEL — the period-2 rim as a torus
+on the exact circle |c+1|=1/4, tangent to the heart at c=−3/4 (a
+quadruple point: cardioid ∩ rim ∩ rod) — and THE REAL LINE — the axle
+rod on y=0 spanning M∩ℝ=[−2,1/4]: butt-welded into the cusp stone
+(collinear + 6cm socketed), threaded through the wheel's rim at −3/4 and
+−5/4, then flying FREE through the invisible antenna region from −5/4 to
+−2, where the sole night bead terminates the rod at the set's leftmost
+point. Between the crossings the set continues there, invisibly, along
+the real axis — the rod carries that theorem. Sole night element: one
+warm bead at c=−2 (s363 sole-bead law). Envelope 5.20×2.88×0.90
+origin-centered; h 2.88 ≥ 2.2 real trimesh; footprint 4.68m² < 16 —
+folly class, no walk owed. Nodes 3 (ps_stone + ps_iron + glow_ps_1).
+
+PROBE (struct204-probe-mandelbrot.ts, tracked — the ONE contract; mk +
+decode import it): L1/L2/L3 as above; L4 station walk (closed-form arc,
+marks are joints, positional closure to 1e-9); L5 axle law (rod on y=0
+spanning [−2,1/4]; rim pierces at −3/4/−5/4 exact; cusp butt collinear +
+covered; rod clears the cardioid ≥0.351m and rim ≥0.159m outside the
+±0.35m sockets; bead rides the terminus); L6 grounding (plinth sole
+mass; cradle embed 8cm; wheel bottom 0.929m and bead 1.479m fly — the
+wheel and axle never touch the stone); L7 envelope + folly class. RED
+control: mutant sign-flipped parametrization violates λ==e^{iθ} by 2.449
+— law detects. TWO law-side self-catches cured pre-build (honest record):
+(a) λ-radial outward stepping fails near the cusp (dc/dλ=(1−λ)/2=0 there;
+10/12) → replaced with the GEOMETRIC normal-step frontier test; (b) L4's
+parametric end-station assert degenerates where |c'|→0 (bisection
+resolves θ only to 1e-8) → replaced with POSITIONAL closure asserts
+(1e-9) — position precision does not degenerate at the cusp.
+
+BUILD (agents/arthur/assets/mkv3-mandelbrot.ts, staged -f): root identity
+(struct-188 law); world-frame voussoir helper (versiera/elliptic chassis).
+Deterministic ×2 byte-identical sha256
+8c21e6cb923e2aa3caca6dc5ef49ec5d8d340f62daecd8e7e0a3cd7d4c3c152b
+(77,956 B), mtime-verified. Nodes 3. First-pass accept — no rejected
+geometry iterations this tick (both self-catches were law-side).
+
+DECODE (struct204-decode-mandelbrot.ts, tracked) ALL PASS 9/9 + RED
+control (foreign elliptic bytes: 9 FAILs, exit 1): D1 census 3 nodes;
+D2 plinth 84 verts; D3 heart 672 verts within 120mm of the dense
+cardioid, 5/5 mark joints, cradle embed 54 verts; D4 wheel 637 iron
+verts on the rim circle ± tube, tangency present; D5 axle 121 rod verts
+spanning [−2.375, 2.185], both rim pierces + cusp butt + antenna free
+flight present; D6 bead centroid == c=−2 terminus within 5mm (r 0.0720),
+emissiveFactor present; D7 iron-flies 0 verts below plinth-top+5cm; D8
+envelope drift 0.00mm; D9 named texMats ps_stone/ps_iron.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- gameplay 18m: PASS all four axes — reads deliberate mathematical
+  monument ("heart-and-wheel kinetic sculpture... both acceptable
+  readings"); the cusp dimple at (596,315) and the tangent wheel read
+  correctly; ring embedded in plinth with attached cast shadow; zero
+  floats. The flagged "orange cap" (352,335) is the DESIGNED sole night
+  bead (finial) — prompt had not named it; no defect.
+- closeface: PASS — voussoir joints read on BOTH faces at regular
+  ~30-40px rhythm; rod dead-horizontal ±1px and concentric with the
+  wheel center; material split stone/iron/bronze correct; zero
+  z-fighting/missing geometry. Two ACCEPT severity-2 items disclosed:
+  (a) the tangency kiss-point occluded BY the rod crossing it — the
+  exact tangency is decode-proven (D4: 637 verts on the circle,
+  cardioid(π) == rim point exact); (b) cusp masonry chunky at
+  (750,290-335) — a mathematical cusp rendered in finite voussoirs,
+  family-consistent.
+- night-face: PASS 3/3 — EXACTLY ONE warm point (269,325), 8-9px,
+  hard-edged, zero bloom/halo/ground pool; the bead does not act as an
+  illuminant (no specular on the facing rim); ring silhouette traceable
+  dark-on-dark. Disclosed watch (severity 2, engine dusk check class —
+  same as versiera's accepted night read): wheel/rod near threshold
+  against dark ground at night; the bead anchors the rod's line by
+  design.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-205
+committed carry: fresh census scan (8m NN law, district soft cap 6, Math
+Avenue eligibility; procession continues past elliptic r350), YAW LAW —
+the construction reads on the +Z face: oblique 30-40° off the approach
+walk per struct-104 convention, terrain preflight over the TRUE rotated
+footprint, hash-gated plain spawn nx-struct-mandelbrot, comp {}. Folly
+class — no walk owed. Native re-judge debt: mandelbrot v1 joins the owed
+board (monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid
+v2, quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1,
+versiera v1, elliptic v3 — 19 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the oval
+and the wing — a stone heart standing in a long curb, an iron wheel
+tangent at its waist and threaded by a horizontal iron axle that butts
+into the heart's dimple on the right and flies free on the left, ending
+in a single warm bead: the Mandelbrot set's coarse skeleton, the map of
+where z → z² + c settles and where it runs away. Walk the axle line: the
+rod crosses empty air exactly where the set's antenna lives, invisible,
+all the way out to the bead at −2.
+
+Files: struct204-probe-mandelbrot.ts + struct204-decode-mandelbrot.ts +
+struct204-render-mandelbrot.ts (NEW, tracked), assets/mkv3-mandelbrot.ts
+(NEW, staged -f), reviews/struct204-mandelbrot/ (9 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-204,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
