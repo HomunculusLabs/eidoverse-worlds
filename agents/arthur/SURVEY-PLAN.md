@@ -17506,5 +17506,77 @@ shared-budget use (D+0, E+0).
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use, ZERO ledger append (loop law 4: append only when
   routing; ticks 211-377 precedent; ledger tail running total
-  2370824). STANDING RECOMMENDATION carried unchanged (s182-s377): end
-  the SURVEY lane or convert to a no-LLM monitor when attended.
+  2370824). STANDING RECOMMENDATION carried unchanged (s182-s377):
+
+## Judged index (survey-379)
+
+- survey-379 (2026-09-15, ARRIVAL EPOCH, fourteenth tick of the
+  unfreeze — ZAI FALLBACK 2 calls/2 landed + 1 not-executed disclosed
+  (closeface 300s timeout x2, retry burned, fail-closed — no third
+  call), native vision ABSENT from this cron session's tool catalog
+  (zai-vision MCP only, flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed): gate ALL PASS real exit 0
+  FIRST TRY at tick-start HEAD 0fb4dad2 (struct-195 tip — NEPHROID
+  PLACED, 99 PASS lines incl. ledger law EXACT 2370830; gate re-ran
+  clean at 3bb22848 pre-mutation per its own entry; HEAD UNCHANGED
+  through the whole tick — no re-gate due, epoch law). Census via
+  committed next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced,
+  cmp A==B BYTE-IDENTICAL), each 338 entities, each 223069B, each
+  sha256-16 24ac55a9f6d5ea6f. Set-diff vs survey-378 baseline (337,
+  e9462a80): +1 ARRIVAL nx-struct-nephroid (-21.624507, 0.049153,
+  309.244856 yaw 3.735004599267865 = 214deg oblique, az94/r310
+  on-line step == cissoid->quadratrix->archispiral 10m rhythm, lib
+  store/3557b1660affbd67.glb, comp {}) / 0 departures / 0 lib flips /
+  0 pos-yaw-scale-comp drift on the 337 holders — classified SIBLING
+  WORK: struct-195's committed PLACED_VERIFIED tuple verbatim (Math
+  Avenue procession past archispiral; struct domain; lib == struct-194
+  bank pin 3557b166) — the exact predicted arrival (s378 trigger
+  list). ARRIVAL-GATED JUDGE LAWFUL (s375/s377 precedent): slice = the
+  1 new-bytes object (owner's own acceptance was ZAI fallback — the
+  independent read the arrival needs). Live store bytes fetched curl
+  UA HTTP 200 9044B served-sha16 d6fff1545e2e8d76 (lib 3557b166 =
+  struct-194 v1 upload sha, DRACO re-encode law — served != upload,
+  struct-104 class); render via NEW survey379-render-nephroid.ts
+  (survey377-render-archispiral chassis verbatim incl. face-on night
+  frame + closeface; DRACO-aware, live-meadow ground 0x3d3a29) exit 0,
+  7 frames reviews/survey379-nephroid/ (ignored residue), served-bytes
+  bounds 5.100x4.210x0.500 grounded y~0 (R2.55 footprint cup + post,
+  lintel to 4.21). VERDICT: nx-struct-nephroid CLEAN — gameplay 18m
+  CLEAN 5/5 (identity PASS deliberate mathematical monument —
+  post+lintel+semicircular cup coherent, not clutter; silhouette PASS
+  continuous, lintel terminus meets the arc spring, zero detached/
+  hovering segments; grounding PASS base flush below horizon + contact
+  shadow x235-350 y430-443; surface PASS zero z-fight/holes/strays;
+  rays+ribbon PASS — six iron rays read at y265..390, nephroid ribbon
+  pinches to its waist x525-565 then converges on the bead at
+  (530,330), deliberate; margin cosmetic: lintel-arc junction x480
+  y230 2-3px sky-nearly-shows). night-face PASS 4/4 — exactly ONE
+  warm element (570,312), INSIDE the deterministic warm-probe bbox,
+  bound at the cusp tip (590,325), quiet contained 8-10px no spill no
+  ground pool, rest correctly dark — glow_as_1 sole-night-element
+  contract delivered verbatim. DETERMINISTIC PROBE (survey379-warm-
+  probe.ts, struct171 law): night 1 cluster 25px x529-535 y330-335 /
+  night-face 1 cluster 102px x565-575 y308-318, zero second clusters —
+  probe+judge concur. closeface NOT EXECUTED (ZAI 300s timeout x2,
+  single paced retry burned, fail-closed disclosed; gameplay frame
+  already carried ray legibility + ribbon continuity + structure —
+  no defect signal from any executed view). CONCURS struct-194 banked
+  v1 PASS (probe L1 caustic identity + decode D3 ribbon law) +
+  struct-195 PLACED_VERIFIED — independent corroboration, no defect.
+  Native re-judge debt on nephroid v1 carries (already owed per
+  struct-195; board: monkeysaddle gate, hypar row 22, kuen v3, catalan
+  v1, clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+  fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1
+  = 14 owed). Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (268th
+  check); SURVEY CANDIDATES 0 OPEN rows; no candidate row (CLEAN);
+  CITY-PLAN-V2 assigns survey no role (grep 0). Index verified empty
+  pre-commit (zero staged files, shared-index law); append anchor
+  grep-verified unique pre-write (0 prior "survey-379" strings).
+  Census baseline for next tick: /tmp/survey379-census-a.json (338,
+  223069B, sha256-16 24ac55a9f6d5ea6f). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; CLEAN
+  concurrence routes nothing; ticks 211-378 precedent; ledger tail
+  running total 2370830). STANDING RECOMMENDATION carried unchanged
+  (s182-s378): end the SURVEY lane or convert to a no-LLM monitor
+  when attended.
