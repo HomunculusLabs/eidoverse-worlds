@@ -714,8 +714,33 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       (SELFTEST 46 breached gates fire). Servergate: smoke 85/0 +
       guestbooktest 35/0 on the pinned tree. Production and live worlds
       untouched.)
-- [ ] Sequencer sync storm: 50 concurrent pattern edits converge to one
+- [x] Sequencer sync storm: 50 concurrent pattern edits converge to one
       consistent playback state.
+      (pressure-31, 2026-09-16: worktree @ 893c1d10 + supplemented untracked
+      shared/pilot.js (pressure-23 disclosure), PORT 8970, 41s+SIGKILL-restart,
+      228 peak — 24 perf @15Hz + 136 spec + 8 embodied holders (golden ring
+      r2.4-3.3 < reach 4, pose-once) + 50 spectator-editors + 6 late + 4
+      staggered step-derivers. W1 t+8s: 58 simultaneous seq edits of ONE
+      canonical pattern → EXACTLY 1 write (single winner) + 7 logged no-op
+      skips + 50 refusals; W1B +40 re-fires → refusals only. W2 ×4 start/×4
+      stop/×4 start → EXACTLY 3 run transitions (start→stop→start), 9 same-
+      state no-ops. W3 t+17s: 48 simultaneous edits of C2 WHILE PLAYING → 1
+      write, grid swap anchor-PRESERVED. W4: 14 distinct back-to-back from a
+      fresh empty-window client → EXACT 12 writes + 2 "slow down" verbatim.
+      Chain exact: every engine comp use@k-1/say@k+1 cause-paired, 0 unknown
+      grids (all ∈ authored set), run flags exact, anchor constant except at
+      start transitions. Spectator edits 130/130 refused verbatim, 0
+      spec-authored lines. Fold probes 3/3 == fold(log through covered); final
+      snapshot fold-equal; 4 staggered derivers 4/4 same beat; SIGKILL restart
+      fold EXACT-equal + anchor identical (k=57 — time held the truth) + drift
+      0 + present 0. Fairness: says 3/3 p95 4ms, fps p50 15.2, lat p95 2ms,
+      0 gaps, log 81/81 drift 0, RSS +4MB, 0 suspicious. PASS, no patch —
+      one synchronous dispatch per verb serializes the storm by construction;
+      the fold-anchored closed form holds the beat. Run-1 FAILs were 2 harness
+      accounting bugs (say-shape discriminates run vs grid writes — comps
+      always carry steps; spec-refusal count missed W3's 40). tools/
+      pressure-seqsync.ts (SELFTEST 40 gates). Servergate smoke 85/0 +
+      sequencertest 46/0 pinned tree. Next head: full-vocabulary world.)
 - [ ] Full-vocabulary world: scratch world carrying every shipped comp
       family at once — join, fold, restart, replay all consistent.
 
