@@ -12123,3 +12123,73 @@ fresh, inn/tower-house @280, forge/potter @278, row-cottage/observatory
 @277, longhouse/garden-cottage @275 stalest standing pair at 6 sweeps;
 both walk tools ls-verified present on disk this tick:
 interior-walk-longhouse.ts, interior-walk-garden-cottage.ts).
+
+
+sweep-282: CLEAN SWEEP, arrival epoch tick (viviani), 51st consecutive
+quiet-or-classified. Tick-start HEAD 8fcd39c8 = city-180 (70th lawful HOLD,
+zero mutations); standing gate ALL PASS real exit 0 FIRST TRY (98 PASS
+lines + ALL PASS trailer, exit captured unpiped to /tmp/s282/gate.log).
+Census epoch A 343==343 BYTE-IDENTICAL to the committed sweep-281 baseline
+(raw 226071B sha16 4655f01e7c748ec5, cmp-verified live vs on-disk): 0
+arrivals, 0 departures, all five semantic drift classes EMPTY — struct-206
+Viviani bank carried no live placement yet. Mid-tick, struct-207 (@ ee97fde6)
+executed the committed carry: epoch B 344 with exactly ONE domain-valid
+arrival nx-struct-viviani @ (-25.809895, 0.013415, 369.098699) yaw
+3.735004599267865 lib 6b7522f214db57ca scale 1 kind thing comp {} —
+tuple-exact vs the committed struct-207 PLACED_VERIFIED ledger
+line-for-line (az94/r370 Math Avenue, NN 10.00 vs mandelbrot, SAT 5.79 at
+final yaw, terrain 15.0mm); 0 departures, ZERO drift on all 343 shared ids
+across all five semantic classes. All affected evidence re-taken fresh per
+the polish-270 epoch law before any verdict: SAT re-run at epoch B
+(306 bbox non-light / 237 classified / 0 coverage holes, real exit 3
+unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407
+— known Sev 2 routed artwalk b26 @ sweep-43, 238th sweep since routing, NOT
+new, no escalation due — law keys severity-1; viviani ZERO new contacts),
+standing gate re-run ALL PASS real exit 0 at ee97fde6 before append.
+Viviani r370 Math Avenue = 350m+ off every walked leg (all tier-1 legs
+r<20, no Math Avenue routes); folly class, no walk owed (struct-207's own
+ledger). Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0,
+legs run individually per the sweep-228 ceiling law — core 64/64 ALL_PASS
+maxArrival 0.380 (next-walk-core-paths.ts, JSON parsed from first brace),
+NW 5/5 @ dists 0.000/0.380/0.300/0.330/0.320 (nw-approach1-walk.ts), NE
+7/7 @ 0.000/0.290/0.320/0.290/0.380/0.250/0.310 (ne-approach2-walk.ts), SW
+5/5 @ 0.000/0.250/0.340/0.370/0.310 (sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + dists from raw
+files. Tier-2 260th cycle per the committed sweep-281 pointer: longhouse
+6/6 ALL_PASS (dists 0.335/0.280/0.346/0.297/0.276/0.297,
+interior-walk-longhouse.ts) + garden-cottage 6/6 ALL_PASS
+(0.295/0.355/0.285/0.345/0.326/0.308, interior-walk-garden-cottage.ts),
+both real exit 0, both tools ls-verified present on disk pre-run. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (236th consecutive
+clean); sweep89-battery 28/28 PASS exit 0 on fresh census-A bytes; interlane
+md5 f6254cd0 stable, read fresh this tick. Pools drained: IMPROVE-PLAN md5
+c0f569d0 unchanged (258th check; 0 SHARD EXECUTION sections, 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs and
+was read fresh via the loop/plan reload. Baseline lawfully rewritten RAW
+like-for-like with asserted pre-write checks (arrival-only diff, shared
+drift 0, sorted insert computed at index 267 between villarceau/voronoi):
+344 entities / 226669B / sha16 80d7954bf2b21f70; post-rewrite drift ZERO
+(epoch C read cmp byte-identical to the on-disk baseline — arrival settled,
+no further sibling change). Diff tool sweep282-census-diff.py folded from
+the committed sweep281 chassis (sed swap only; py_compile clean, clean exit
+0 at BOTH epochs A/B unpiped on the real bytes). Probe self-catches
+pre-verdict, three corrected with no repair owed: (a) first baseline-rewrite
+script carried a stale hardcoded insert-index (224, sweep-280's mandelbrot
+constant) — the assert correctly refused the write; index re-derived as
+computed-not-guessed (267) and the rewrite re-ran clean; (b) battery tool
+name probed as .ts where the committed tool is sweep89-battery.py (found
+via git log — diff-filter A); (c) first plan-edit anchor matched 13 sibling
+tool-list lines — re-anchored on asserted file-tail + duplicate-block
+guards. Foreign dirt in tree (windmill overhaul scratch, cabin/carousel
+prototype dirs, client/server engine files, fleet shells, debug-bower
+scripts, moon-moth dir, HERO-ASSET-REFINEMENT-PLAN, core-paths assets) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-283):
+forge + potter (261st cycle — LRU chain re-derived from committed plan
+pointers this tick: longhouse/garden-cottage @282 walked fresh,
+row-cottage/observatory @281, inn/tower-house @280, hall/bunkhouse @279,
+forge/potter @278 stalest standing pair at 4 sweeps; both walk tools
+ls-verified present on disk this tick: interior-walk-forge.ts,
+interior-walk-potter.ts).
