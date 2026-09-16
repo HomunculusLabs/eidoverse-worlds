@@ -429,8 +429,30 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       30→36 checks (RED 3-fail unfixed → 36/0 fixed); servergate smoke
       85/0 + comptest 33/0 + locktest 13/0 + compfold 24/0 fixed tree.
       tools/pressure-squat.ts SELFTEST RED-OK.)
-- [ ] Mount/dismount thrash: rapid mount cycling leaves no orphaned
+- [x] Mount/dismount thrash: rapid mount cycling leaves no orphaned
       rider state.
+      (pressure-22, 2026-09-16: worktree @ 248372a9 + fix, PORT 8986, 25s,
+      215 peak — 24 perf @15Hz + 172 spec + 14 thrash bodies + 5 late; 284
+      verbs across W1 steady-cycle x8, W2 hot-swap x6, W3 moving-host x4,
+      W4 spectator-refusal+promote, W5 back-to-back races, W6 vanish-while-
+      mounted x4 + return, W7 host-remove orphan stamps, W8 cargo entity
+      rider, W9 demote-while-mounted, W10 duplicate-mount idempotence.
+      BASELINE RED — real defect: a rider demoted to spectator on the live
+      socket kept its seat in st.mounts (census + final fold; log short
+      exactly 1 dismount). FIX: travel/role-change block now performs the
+      mounted body's durable act (own-key st.mounts probe → log-authored
+      dismount + broadcast, same guards). AFTER 2/2 identical runs ALL
+      GATES PASS: 284/284 verbs exact, author p95 10ms / seer echo p95 7ms,
+      0 rate refusals, census riders 6/6 (demoted gone), reconnect reseat
+      1/1, dormant trio exact, cargo ent.parent exact, final fold 0 live
+      riders / 0 entity riders, log drift 0/297, poses 43/43, fps 15.1,
+      lat p95 2ms, 0 gaps, 0 suspicious, RSS +2MB. tools/
+      pressure-mountthrash.ts (SELFTEST 39 gates, rate-audited plan).
+      Servergate smoke 85/0 + comptest 33/0 fixed pinned tree; main-tree
+      boot-parse clean. Harness bytes reached HEAD early inside sibling
+      sweep-267 be17bf7b (survey-318 interleaving, disclosed in ledger) —
+      this commit carries the fix hunk + queue tick. Next head: snapshot
+      size bomb.)
 - [ ] Snapshot size bomb: worlds with 10k+ entities join without OOM or
       unbounded latency.
 - [ ] Midnight rollover: day-boundary crossing during load keeps ledgers

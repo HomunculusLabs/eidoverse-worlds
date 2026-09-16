@@ -417,6 +417,27 @@ const server = Bun.serve({
           // still rtc- and attest-capable with no living primary, the exact
           // state the 4008 orphan refusal exists to prevent.
           if (c.world) {
+            // pressure-22 (mount thrash): the role-change seam runs this
+            // same travel block when a rider re-sends join with spectate:
+            // true on a live socket (demotion). It performed the old role's
+            // close acts — leases settled, pose remembered, leave
+            // broadcast — but never the THIRD durable act a mounted body
+            // owes: its dismount. The world then kept claiming a seat for
+            // a spectator (measured: demoted rider in st.mounts at census
+            // and at the final fold; the log short exactly one dismount).
+            // A body's seat belongs to the world it was embodied in —
+            // resolve the mount through the log, like any dismount, so the
+            // world's rider table stays a truth about present bodies.
+            // Same guards as every other durable act on this path.
+            if (!c.spectator) {
+              try {
+                const mounts = (c.world.state as { mounts?: Record<string, unknown> }).mounts;
+                if (mounts && Object.prototype.hasOwnProperty.call(mounts, c.id)) {
+                  const dm = c.world.append("world", "dismount", { id: c.id });
+                  c.world.broadcast({ type: "log", entry: dm });
+                }
+              } catch (err) { console.error(`[world:${c.world.name}] dismount for ${c.id} on travel/role change`, err); }
+            }
             // Travel must do the two durable acts a close does (pressure-7:
             // measured 9965ms stale-sweep settle + lost wake pose otherwise).
             // Same order and per-failure guards as the close handler: one
