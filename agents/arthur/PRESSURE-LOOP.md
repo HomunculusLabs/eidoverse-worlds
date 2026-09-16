@@ -660,8 +660,60 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       sold-out-skip is mint-nothing. tools/pressure-vendorburst.ts
       (SELFTEST 39 gates). Servergate: smoke 85/0 + vendortest 54/0 pinned
       tree. Next head: guestbook flood.)
-- [ ] Guestbook flood: sign-spam cannot blow the 8KB degrade path or the
+- [x] Guestbook flood: sign-spam cannot blow the 8KB degrade path or the
       comp write budget.
+      (pressure-30, 2026-09-16: worktree @ c398cc60 + supplemented untracked
+      shared/pilot.js (pressure-23 disclosure), PORT 8971, 29s+restart, 216
+      peak — 24 perf @15Hz + 136 spec; two books 2m apart, gb-a {cap:64}
+      the long-growth regime + gb-b {cap:5} the every-sign-evicts regime;
+      40 flooders posed in the reach overlap sign max-length 160-char
+      texts at 1450ms pace (11/4s — at-budget-legal) × 10 = 400 signs
+      over 14s, alternating books; + erase waves (8 gb-a / 8 gb-b), budget
+      boundary 14-burst, far/empty/whitespace/200-char controls, spectator
+      sign, 10 late joiners, 3 fold-probes. MEASURED PASS 2/2 identical
+      conditions (run 1: 360 signs — 3 harness bugs, server exact; run 3
+      full contract ALL GATES PASS), no patch. THE CHAIN: every one of
+      414 world comp writes re-derived from shared/guestbook.js and
+      matched BYTE-EXACT (0 mismatches), triples use→comp→say contiguous
+      414/414, gb.at == use ts, cause == use seq, 0 orphans. The 8KB
+      degrade path fired EXACTLY once (the pinned overshoot: entries alone
+      crossed the gate the degrade nominally protects — 160-char × 40+
+      entries > 8KB with cap 64; the overshoot write is ~8.2KB for ONE
+      write, then self-heals by eviction); authored cap 64 silently
+      collapses to default 20 once the carried config drops (observed at
+      sign #39); max comp 7998B post-degrade, structural ceiling ~16KB
+      never approached; every spectator's fanout EXACT (414/414 comps +
+      414/414 gb-say causes — zero loss under 1.4MB log fanout). Budget
+      boundary EXACT: 12 ok / 2 refused "slow down — verb rate limit"
+      verbatim / 1 recovery post-window; 0 flood refusals at legal pace.
+      Controls all exact: far skip 1, no-text skips 2 (empty + whitespace
+      — "no text to sign" mint-nothing), 200-char text stored EXACTLY 160
+      (the slice), spectator sign refused verbatim pre-engine 0 log lines.
+      Fairness: fair says 3/3 p95 3ms, sign echoes 400/400 p95 104ms,
+      fps p50 14.7, frame lat p95 9ms, HTTP probe p95 2ms; snapshot
+      probes 3/3 fold-equal mid-flood (sizes 126/46/71KB — the fat folded
+      state rides joiner snapshots by design, bounded by the comp cap);
+      final quiet == fold(full log). SIGKILL restart: boot 1/1, fold
+      EXACT-equal, books byte-exact vs the simulation final state, line
+      drift 0, present 0. RSS +4MB. 0 suspicious lines. Run-2's 38
+      presence-plane seq gaps (run 1/3: 0) classified as DESIGNED
+      backpressure (FRAME_SKIP_BUFFERED 32KB — "stale frames die here,
+      not in the kernel"; log fanout stayed exact) — gate re-pinned to a
+      300-ceiling naming the design law, not 0. DISCLOSED product facts
+      (design calls, not patches): (1) the use verb has NO validator —
+      raw sign text rides the log verbatim (~3.4KB per sign across the
+      triple) bounded only by the 256KB frame cap; (2) a flood is bounded
+      by N-clients × 3 signs/s (the per-client budget IS the global cap),
+      and the log grows ~3.4KB/sign — per-day math in the ledger entry;
+      (3) the degrade path drops cap/reach/signAt/eraseAt with the config
+      and the book silently re-defaults (cap 20) — silently losing an
+      authored cap was judged acceptable by design (the entries survive);
+      (4) the flight recorder's 300-ring overflows during a sustained
+      sign flood (288 triggers + 11 skips visible of 414 — earlier
+      events evicted, LIFO observation only). tools/pressure-guestbookflood.ts
+      (SELFTEST 46 breached gates fire). Servergate: smoke 85/0 +
+      guestbooktest 35/0 on the pinned tree. Production and live worlds
+      untouched.)
 - [ ] Sequencer sync storm: 50 concurrent pattern edits converge to one
       consistent playback state.
 - [ ] Full-vocabulary world: scratch world carrying every shipped comp
