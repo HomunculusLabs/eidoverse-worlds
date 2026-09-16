@@ -13343,3 +13343,230 @@ Files: struct199-scan-rhodonea.ts + struct199-select-rhodonea.ts +
 struct199-terrain-rhodonea.ts + next-place-struct199.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-199,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-200 (2026-09-16): R11-24 THE VERSIERA — BUILD+JUDGE TICK (the Witch
+## of Agnesi: osculation theorem proven 1e-5 + zero crossings before carving;
+## area theorem 8a²·atan exact + 4πa² limit; probe 7/7 + RED; decode 8/8 + RED
+## control; judged PASS on all four frames after one self-caught fix — ZAI
+## fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+200%3=2 placement-slot cadence, nothing takeable — no banked form (rhodonea
+placed struct-199), refine pool empty (no externally evidenced deficit open
+on any nx-struct- form), owed native debts cron-unpayable (tool catalog
+carries only the zai-vision MCP, tool_search fresh this tick; same
+disclosed class as struct-169..199) — build tick per the 178..199
+alternation, placement = struct-201 committed carry. Gate ALL PASS real
+exit 0 tick-start at 23739e42 (vocab-23; unpiped terminal, GATE_EXIT:0).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 29th tick, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-199 -> tag struct-200
+(re-checked immediately before append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + census
+340): versiera/agnesi 0 ledger hits — never named, never barred, never
+built; census confirms no nx-struct-versiera. Kin-check fresh: astroid
+taken (slidingladder traced curve), deltoid taken (reuleauxrotor center
+path), cycloid family taken (brachistochrone), limaçon/strophoid/
+limaçon-epicycloid kin to the fresh nephroid + rhodonea, passed; NO
+standing form is a bell. Register: Grandi (rhodonea, placed struct-199)
+-> Agnesi 1748 continues the plane-curve register directly
+(cissoid→quadratrix→archispiral→nephroid→folium→rhodonea→versiera).
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): the
+versiera (y−d)(x²+4a²)=8a³ with rational parametrization P(t)=(2at,
+d+2a/(1+t²)) — implicit identity 3.76e-13 over the authored t-range.
+THE OSCULATION THEOREM: the curve meets its construction circle
+x²+(y−a)²=a² ONLY at the vertex (0,2a) with SECOND-ORDER contact — κ(0)
+== 1/a exact (numeric 0.714286), curvature center == hoop center,
+separation quartic (radial−a ≈ 4a·t⁴ as t→0; exact law
+radial²−a²=4a²t⁴(2+t²)/(1+t²)², upper bound 1.001 everywhere, contact-
+zone ratio ≥0.985), ZERO circle crossings sampled at 8000 stations —
+one kiss. THE AREA THEOREM: truncated strip 16.6256 == closed form
+8a²·atan(T_END) EXACTLY (direct parametric integral — self-catch: a
+shoelace without the datum closing leg sums an open polyline, wrong by
+the chord area); infinite limit == 4πa² = 24.6301 — four generating
+circles (Agnesi's own proof); truncation captures 67.5%.
+
+CONCEPT (written before build): THE BELL AND ITS HOOP. One equation split
+by material. STONE carries the curve — one continuous arc-uniform voussoir
+ribbon (38 chords, RIB 0.20, keystone at the crown, equator crossings
+t=±1 jointed, max step 0.291, chord dev 7.1mm) tracing the bell from arm
+tip through the crown to the mirror arm tip, the arms dying IN THE AIR
+0.57m above the curb (TIP_X 5.0; the asymptote never lands — probe L6 +
+decode D6 air law, 0 grounded verts). IRON carries THE HOOP — the
+construction circle itself (torus r=a=1.4 tube 0.05, in-plane), standing
+tangent on the curb top at its bottom pole (the classical construction:
+circle tangent to the asymptote line at O; here the asymptote IS the curb
+top — the datum made pavement). CROWN-SWALLOW LAW (this tick's self-caught
+fix): RIB 0.16→0.20 — at 0.16 the tube emerged through the ribbon's TOP
+edge near the crown leaving a ≤4px sky wedge at the shoulder (front-judge
+v1 FAIL, falsified by slope analysis: curve edge slope −x/2a² vs circle-
+top slope −x/a); at 0.20 the tube dives into the ribbon going outward and
+exits only through the flank UNDERSIDE — the classical tangent read. Sole
+night element: one warm bead half-proud of the keystone front face at the
+kiss (glow_vs_1 KEEP, struct-52/188 occlusion-cure law). Envelope
+10.60×3.14×0.60 origin-centered; h 3.14 ≥ 2.2 real trimesh; footprint
+6.36 m² — folly class, exterior only, no walk owed. Nodes 3 (vs_stone +
+vs_iron + glow_vs_1).
+
+PROBE (struct200-probe-versiera.ts, tracked — the ONE contract; mk +
+decode import it): L1 implicit+rational identity; L2 osculation (κ=1/a,
+center coincidence, quartic separation two-sided, zero crossings, crown
+clasp |t|<0.430 disclosed — folium/rhodonea boss precedent); L3 area
+theorem exact + 4πa² limit; L4 station walk (keystone/equators/tips are
+joints, dev ≤45mm); L5 hoop seating (centerline tangent to curb top, tube
+seats RING_T — grounding post-embed class, disclosed; skirt clearance
+outside cradle by exact bisection); L6 grounding + air law; L7 envelope +
+folly class. RED control: mutant cosine bell violates by 108.744 — law
+detects.
+
+BUILD (agents/arthur/assets/mkv3-versiera.ts, staged -f): root identity
+(struct-188 law); world-frame voussoir helper; deterministic x2
+byte-identical sha256
+5332575f22aff3de54bf20f1e3b25c9b56bb38ad95db757b0ccff2bc013085e1
+(111,932 B), mtime-verified. Nodes 3. (v1 e72e8ae5 rejected same-tick by
+the front judge's sky-wedge finding — cured by the crown-swallow law;
+both hashes recorded per the polish-272 rejected-then-corrected law.)
+
+DECODE (struct200-decode-versiera.ts, tracked) ALL PASS 8/8 + RED control
+(foreign rhodonea bytes: 8 FAILs, exit 1): D1 census 3 nodes; D2 curb 24
+verts; D3 ribbon 912 verts within 103mm of the dense versiera, 36 at the
+crown; D4 hoop 1261/1261 on the circle r=1.4 about (0,1.64), 16/16
+azimuth bins, lowest vert 0.190 == curb top − tube (tangent construction
+reads from bytes); D5 bead exact center + emissive; D6 tip law 100/100mm
+corners + ZERO grounded verts beyond |x|=2.4; D7 envelope drift 0.0000;
+D8 named texMats vs_stone/vs_iron.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- gameplay 18m v2: PASS 4/4 — identity deliberate monument; clasp contact
+  clean (ring buried x445-515, re-emerges (427,289)/(533,289)); grounding
+  attached; zero defects. Judge independently read the asymptotic falloff
+  profile + tangent-from-below occlusion logic.
+- front v2: PASS 5/5 — clasp (ring swallowed at shoulders (433,299)/
+  (529,299), no sky sliver); emergence clean both flanks; continuity
+  unbroken; tips mid-air ~0.6m gap; zero defects.
+- night-face: PASS 4/4 — light census EXACTLY ONE warm bead (4-6px, quiet,
+  no bloom) at the clasp (480,279); silhouette legible dark-on-dark; zero
+  stray light.
+- closeface: PASS-BY-ARBITRATION — judge FAILed hoop occlusion claiming a
+  "dark arc traceable through the crown face (425,237)→(478,218)→(532,237)";
+  DIRECT PIXEL PROBE of the claimed path: every pixel stone tone
+  (119-157,111-133,48-128) vs true iron (36-73 family); MIRROR CHECK: the
+  identical dark diagonal on the LEFT shoulder (320-420) mirrored — both
+  lines are the ring's emerging SHOULDERS (the design), not face-crossings.
+  Occlusion FAIL overruled by pixel evidence + mirror + geometry + front
+  judge concurrence (probe law 11: pixels outrank render claims; the
+  survey-3/4 contradiction class resolved decode-first). Masonry
+  articulation note (reads smooth-extrusion at close range) disclosed as
+  family-consistent margin — same texMat class as folium/rhodonea/fourier
+  (all accepted); village-wide texMat articulation is a shared-lane
+  candidate, not a per-work defect.
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. Placement = struct-201
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility; procession continues past rhodonea r330), YAW LAW — the
+construction reads on the +Z face: oblique 30-40 deg off the approach
+walk per struct-104 convention, terrain preflight over the TRUE rotated
+footprint, hash-gated plain spawn nx-struct-versiera, comp {}. Folly
+class — no walk owed. Native re-judge debt: versiera v2 joins the owed
+board (monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid
+v2, quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1 —
+17 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the rose —
+a stone bell rising from a long curb, its skirt sweeping far past a
+standing iron hoop it kisses exactly once at the crown: the Witch of
+Agnesi, the curve named for a word that was never meant as a witch at
+all. Walk the curb line: the bell's arms reach toward the pavement
+forever and never touch it. After dark: one warm point burning exactly
+where the bell meets the hoop.
+
+Files: struct200-probe-versiera.ts + struct200-decode-versiera.ts +
+struct200-render-versiera.ts (NEW, tracked), assets/mkv3-versiera.ts
+(NEW, staged -f), reviews/struct200-versiera/ (7 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-200,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
+
+## struct-201 (2026-09-16): VERSIERA PLACEMENT TICK — committed carry from
+## struct-200 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past rhodonea, on-line step az94/r340
+
+201%3=0 refine-slot cadence WITH a takeable banked form (struct-200:
+"placement = struct-201 carry"; the 178..201 lane precedent — a banked form
+places on the next tick regardless of N%3, build+judge/place alternation
+held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..200): 17 owed — monkeysaddle gate, hypar row 22, kuen v3,
+catalan v1, clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1,
+folium v1, rhodonea v1, versiera v1 (fallback-judged acceptances, all
+placed or banked; versiera placed THIS tick — debt stays owed). Gate ALL
+PASS real exit 0 tick-start at 88f16236 (vocab-24; /tmp/struct201-gate.txt
+class, unpiped terminal GATE_EXIT:0) + RE-RUN clean immediately before the
+mutation at f27f26b4 (city-169 hold, census 340=340 quiet; epoch law
+honored — HEAD advanced once mid-tick, re-gated before mutation, scan
+inputs still current). Shard drained fresh (IMPROVE-PLAN 0 OPEN nx-struct
+rows). Ledger max re-derived struct-200 -> tag struct-201 (re-checked
+immediately before append).
+
+Local bytes re-verified sha256
+5332575f22aff3de54bf20f1e3b25c9b56bb38ad95db757b0ccff2bc013085e1 ==
+struct-200 v2 bank pin BEFORE upload (shasum -a 256, mtime Sep 16 01:50);
+struct200-decode re-run this tick ALL PASS 8/8 (envelope D7 10.600x3.140x
+0.600 cx/cz 0.0e+0 exact).
+
+SEAT (struct201-scan + struct201-select, fresh 340 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 36 forms; 40 math-family
+structs standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 -> archispiral300 ->
+nephroid310 -> folium320 -> rhodonea330 (~10m steps). 594 lawful band
+candidates; the versiera takes the NEXT ON-LINE STEP: az94.0 r340.0, 10.0m
+step == the procession rhythm. NN 10.00 vs nx-struct-rhodonea (law 8.0),
+SAT 5.12 vs nx-struct-rhodonea at FINAL yaw (law 1.4), walk-clear 311.41.
+
+YAW LAW (struct-104 oblique-read, struct-200 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean
+(the melencolia/fourier/cissoid/quadratrix/archispiral/nephroid/folium/
+rhodonea convention). The outbound walker reads the construction face
+obliquely on approach; the 10.60m bell span runs az124/304.
+
+TERRAIN (struct201-terrain-versiera.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 10.60x0.60 ribbon): spread 4.7mm,
+PY = 0.087218.
+
+PLACEMENT (next-place-struct201.ts, struct199 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 340 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 4.56x3.21 at yaw 214):
+NN floor rhodonea 10.00, SAT worst rhodonea 5.12 — clean. 1 upload
+(content-addressed store/5332575f22aff3de.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 340 -> 341 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (crown-bead
+emissive-in-GLB glow_vs_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: versiera v2 stays OWED (fallback-judged
+acceptance, disclosed; probe L2 osculation 1e-5 + decode D4 hoop law +
+D6 air law are the binding evidence); plus monkeysaddle gate, hypar row
+22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1, melencolia
+v3, tribar v2, fourier v1, cissoid v2, quadratrix v1, archispiral v1,
+nephroid v1, folium v1, rhodonea v1 — 17 owed.
+
+Bill eye-check pointer: on Math Avenue past the rose — a stone bell rising
+from a long curb, its skirt sweeping far past a standing iron hoop it
+kisses exactly once at the crown: the Witch of Agnesi, the curve named for
+a word that was never meant as a witch at all. Walk the curb line: the
+bell's arms reach toward the pavement forever and never touch it. After
+dark: one warm point burning exactly where the bell meets the hoop.
+
+Files: struct201-scan-versiera.ts + struct201-select-versiera.ts +
+struct201-terrain-versiera.ts + next-place-struct201.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-201,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
