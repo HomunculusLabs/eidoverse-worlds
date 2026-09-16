@@ -741,8 +741,38 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       always carry steps; spec-refusal count missed W3's 40). tools/
       pressure-seqsync.ts (SELFTEST 40 gates). Servergate smoke 85/0 +
       sequencertest 46/0 pinned tree. Next head: full-vocabulary world.)
-- [ ] Full-vocabulary world: scratch world carrying every shipped comp
+- [x] Full-vocabulary world: scratch world carrying every shipped comp
       family at once — join, fold, restart, replay all consistent.
+      (pressure-32, 2026-09-16: worktree @ ee97fde6 + supplemented
+      untracked shared/pilot.js (pressure-23 disclosure), PORT 8969, 40s,
+      160 anchors — 24 perf @15Hz (4 authors + 6 static users) + 136 spec
+      + seeder + 3 fold probes + midjoin + final + restart probe. ONE
+      world carrying ALL 28 comp families (sockets, reactions, particles,
+      motion x3 incl motion:part, lock, lamp, guestbook, plate, portal,
+      music, door+chime, water, growth, garden, companion, weatherzone,
+      waystone, reservation, board, vendor, bell, tour+3-lamp line,
+      sequencer, dedication, soundpost, ladder): 30 spawns + 33 comps by
+      4 builders at legal pace, then 29 use verbs across two transition
+      waves (light/snuff, open/close, flow/still, advance/tend, plant,
+      sign/erase, write, post/unpost, dedicate/retract, reserve/release,
+      buy, mute/unmute, seq/start, begin/halt, play, beacon, rain-ask,
+      push). MEASURED PASS run-3 ALL GATES, no patch: census 28/28 at ALL
+      FIVE probes (3 mid-traffic + final quiet + post-SIGKILL); log 160/160
+      EXACT (verb histogram reconciled line-by-line); fold probes 3/3 ==
+      fold(log through covered); final fold-equal; SIGKILL restart boot +
+      fold EXACT-equal + drift 0 + present 0 + census 28/28; 31 engine
+      markers 0 misses; 0 refusals at legal pace; anchors 160/160 p95
+      29ms; midjoin 2ms; says 2/2 p95 2ms; fps p50 15.1 lat p95 2ms
+      0 gaps; HTTP p95 1ms; RSS +2MB; 0 suspicious. Run-1/2 REDs were all
+      harness accounting (spread-array steps, garden tiles object-shape,
+      retract line:'', beacon opts ride use-args, seq pair double-mint) —
+      server correct every run. Disclosed contract facts: weatherzone ask
+      mints weather+comp+say (3 lines); beacon re-authors the comp
+      wholesale from use-args; ladder/lock/sockets/particles are data-only.
+      tools/pressure-fullvocab.ts (SELFTEST 26 gates). Servergate smoke
+      85/0 pinned tree @ ee97fde6 on PORT 8966 — smoke's default 8987
+      foreign-held (bun.exe, untouched; the one 84/85 was that collision).
+      QUEUE EXHAUSTED — all 32 scenarios seated; lane holds for Bill.)
 
 ## LAWS
 
