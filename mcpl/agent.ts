@@ -43,6 +43,10 @@ import { describeGuestbook } from "../shared/guestbook.js";
 // The plate affordance line (vocab-10): same shared-verbatim pattern —
 // look() names what a thing SAYS and the write action.
 import { describePlate } from "../shared/plate.js";
+// vocab-27: the guestbook × plate composition — a BRIDGED plate's line
+// names the mirror/pin (describeBookplate is null for plain plates, so
+// every non-bridged read is byte-identical to vocab-10).
+import { describeBookplate } from "../shared/bookplate.js";
 // The water affordance line (vocab-11): same pattern — look() names the
 // water STATE and the flow/still actions.
 import { describeWater } from "../shared/water.js";
@@ -1981,8 +1985,11 @@ export class WorldAgent {
       // text-tier read of the same folded comp the music engine sounds
       if (c.music) aff.push(describeMusic(c.music));
       // a plate names its INSCRIPTION and the write action — the text-tier
-      // read of the same folded comp the engine writes and the browser draws
-      if (c.plate) aff.push(describePlate(c.plate));
+      // read of the same folded comp the engine writes and the browser draws.
+      // vocab-27: a bridged plate names the REGISTER mirror (or its pin)
+      // instead — the same derivation the browser sprite draws, with the
+      // sign action for the crowd's path.
+      if (c.plate) aff.push(describeBookplate(c.plate, c.guestbook) ?? describePlate(c.plate));
       // water names its STATE (flowing/still) and the flow/still actions —
       // the text-tier read of the same folded comp the loop derives from
       if (c.water) aff.push(describeWater(c.water));

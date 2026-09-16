@@ -15,6 +15,9 @@ import { THREE, bus, camera } from './core.js';
 import { entities, comps } from './world.js';
 import { registerSystem } from './frame.js';
 import { normalizePlate } from '../../shared/plate.js';
+// vocab-27: the guestbook × plate composition — a bridged plate's surface
+// DERIVES from the book's newest inscription (derive, never mint).
+import { bookplateText } from '../../shared/bookplate.js';
 
 /** id -> { sprite: THREE.Sprite|null, want: string } — tracked plates.
  *  The sprite attaches once the entity's object exists (async GLB load:
@@ -79,11 +82,14 @@ function untrack(id) {
 
 // the bag arrives folded (join snapshot) or live (comp bus) — one path.
 // A data change redraws the sprite; a data null retires it.
+// vocab-27: `want` is the BRIDGE derivation — the plate's own pin when
+// present, else (bridged + blank) the book's newest words, so a tracked
+// plate's surface follows the register it faces. comps is synced by
+// models.js BEFORE the per-type emit, so the paired bag is already fresh.
 function onPlateComp(id, data) {
   if (data == null) { untrack(id); return; }
-  const { text } = normalizePlate(data);
+  const want = bookplateText(data, comps.get(id)?.guestbook) || '';
   const cur = plates.get(id);
-  const want = text || '';
   if (cur && cur.want === want) return;   // not a words change (reach, h…)
   if (cur) { if (cur.sprite) { cur.sprite.parent?.remove(cur.sprite); dispose(cur.sprite); cur.sprite = null; } }
   plates.set(id, { sprite: null, want });
@@ -91,6 +97,11 @@ function onPlateComp(id, data) {
 
 bus.on('comp', ({ id, type, data }) => {
   if (type === 'plate') onPlateComp(id, data);
+  // vocab-27: a guestbook write (or removal) re-derives a bridged plate's
+  // surface — the register's newest line becomes the sign with zero
+  // traffic; a book leaving darkens the mirror. Non-bridged entities are
+  // untracked-or-plain and re-derive to the same words they already read.
+  else if (type === 'guestbook') onPlateComp(id, comps.get(id)?.plate ?? null);
 });
 bus.on('entity', ({ id, kind }) => {
   if (kind === 'remove' || kind === 'demote') untrack(id);
@@ -101,13 +112,17 @@ function tickPlate() {
   for (const [id, p] of plates) {
     const obj = entities.get(id);
     if (!obj || obj.userData?.placeholder) continue;   // not loaded yet — retry next frame
-    // (re-)derive h from the live bag: a re-author can move the anchor
-    const data = comps.get(id)?.plate;
-    const { cfg, text } = data ? normalizePlate(data) : { cfg: null, text: '' };
-    if (!cfg || (text || '') !== p.want) { onPlateComp(id, data); continue; }
+    // (re-)derive h from the live bag: a re-author can move the anchor.
+    // vocab-27: the words gate is the BRIDGE derivation too — a bridged
+    // plate hangs (and keeps) its sprite for the register's newest line.
+    const bag = comps.get(id);
+    const data = bag?.plate;
+    const cfg = data ? normalizePlate(data).cfg : null;
+    const want = data ? (bookplateText(data, bag?.guestbook) || '') : '';
+    if (!cfg || want !== p.want) { onPlateComp(id, data); continue; }
     if (!p.sprite) {
-      if (!text) continue;                    // blank plate: nothing to hang
-      p.sprite = drawPlate(text);
+      if (!want) continue;                  // blank surface: nothing to hang
+      p.sprite = drawPlate(want);
       obj.add(p.sprite);
     }
     p.sprite.position.set(0, cfg.h, 0);

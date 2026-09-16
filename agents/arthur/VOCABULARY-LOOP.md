@@ -1784,9 +1784,112 @@ fold still the only truth. This is the composition pattern every future
 pair (guestbook-inscription, vendor-sequencer) should copy: derive, do
 not mint.
 
-- [ ] Guestbook-inscription bridge: signing a guestbook can mint a
+- [x] Guestbook-inscription bridge: signing a guestbook can mint a
       dedication plaque line under the inscription plate's caps and rank
       rules.
+      DONE vocab-27 (2026-09-16): realized as a DERIVED bridge, not a
+      minting one (the vocab-26 composition doctrine — "derive, do not
+      mint" — named this exact pair; a minting design would also be
+      semantically broken: the plate's own edit ladder would bounce the
+      second visitor's signature off a written surface). comp
+      {type:"guestbook"} × comp {type:"plate", bridge:true} on ONE
+      entity: the plate SURFACE reads the book's newest inscription,
+      clamped to the plate's own maxLen; the author's pinned text
+      outranks the crowd. shared/bookplate.js (bookplateText/
+      describeBookplate — pure, total, shared verbatim by browser
+      realization + mcpl text tier + tests). Evidence: tools/
+      bookplatetest.ts RED 16 failing (tier absent; 12 pre-passing =
+      parents' mints-nothing + shell gates, the honest vocab-13..26
+      class) then ALL PASS 28/28; bookplatetest registered in the
+      servergate battery; smoke 85/85 (client/lib/plate.js edits parse
+      clean); platetest 37/37 + guestbooktest 35/35 (parents
+      regression-clean); mcpl manifest 28/0 + effective 42/0 + denoise
+      green after the agent.ts hunk. ZERO edits to server.ts/world.ts/
+      verbs.ts/reactions.ts — narrower than even vocab-26. Scratch
+      worlds only; no production world touched. Eye-check OPEN:
+      in-browser visual read of a register bench (book's newest line on
+      the plate sprite).
+
+### BOOKPLATE CONTRACT (vocab lane — drafted and implemented vocab-27, 2026-09-16)
+
+**The second affordance-pair composition: guestbook (vocab-6) × plate
+(vocab-10).** An entity carrying BOTH `comp {type:"guestbook"}` and
+`comp {type:"plate", bridge:true}` is a register bench: the plate
+SURFACE reads the book's newest inscription — and the bridge MINTS
+NOTHING. The parents already write everything the fold needs: the book's
+family writes the entries comp transition + say on every signature; the
+plate's family writes its own comp transition when pinned. What couples
+them is ONE derivation every consumer runs on the same folded bytes —
+the vocab-26 weatherlamp doctrine ("derive, do not mint") applied to
+words instead of light: zero new verbs, zero new action strings, zero
+new log entries, zero traffic.
+
+**The derivation.** `bookplateText(plateData, guestbookData)`
+(shared/bookplate.js — pure, total, shared verbatim by the browser
+realization, the mcpl text tier, and the tests):
+- not a bridge (no/blank `bridge`) → the plate's OWN folded text,
+  byte-identical to vocab-10 behavior (existing surfaces unchanged);
+- bridged + pinned (folded `text`) → THE PIN: the author's standing sign
+  outranks the crowd's newest line (the plate's own words are the
+  author's act — a pinned register is titled, not mirroring);
+- bridged + blank → the book's NEWEST entry's words (entries fold
+  newest-first), clamped to the plate's OWN maxLen (the row's "under the
+  inscription plate's caps" honored: a 160c book line on a 40-max plate
+  reads 40c); an empty/absent book reads blank.
+
+Garbage in either bag never throws, never reads a word (the
+sanitizeGuestbookEntries/normalizePlate doctrines — malformed rows drop,
+clamp-not-reject).
+
+**The caps and rank rules — the row's own words, honored structurally.**
+The plate's caps apply verbatim because the plate IS the surface: maxLen
+clamps the derived words. The rank rules apply verbatim because the only
+WRITE surfaces stay the parents' own: a visitor's signature lands in the
+BOOK (rank 0 + arm's reach, the guestbook family's gate) and the mirror
+follows; the pinned surface keeps the plate family's edit-rank ladder
+(last writer owns their rewrite, others builder+, blank takes anyone's
+first words). No role widens, no reach widens, no new gate exists — the
+bridge widened nothing.
+
+**Replay behavior — none, by construction.** Replay-inert like all
+reactions, plus: the bridge has no engine, no reaction row, no sweep —
+nothing exists to re-fire. On restart the fold carries both comps
+exactly as the parents wrote them; every consumer re-derives the same
+words at its own now. Late join, fork, reconnect: identical (proven by
+fresh-join reads of the folded bytes, file-fold parity through
+shared/fold.js, and a kill/restart cycle that minted nothing).
+
+**Failure behavior.** The derivation is total (above); the composition
+is fail-closed by absence — remove either comp and the remaining parent
+behaves exactly as before (a plate alone reads its own text; a book
+alone keeps its entries unread on any surface). Nothing in this tier can
+mint, block, or crash.
+
+**Browser path.** Three small hunks in vocab-10's own
+`client/lib/plate.js` (zero new files, ZERO main.js edits — the plate
+import already stands): `want` becomes the bridge derivation; the comp
+listener re-derives on `guestbook` writes too (comps is synced by
+models.js before the per-type emit, so the paired bag is fresh); the
+frame tick's words gate compares the derived want. Redraw fires only on
+a WORDS change; position rides the entity; the nameplate fade law is
+inherited. A bridged plate hangs its sprite for the register's newest
+line with zero traffic after the parents' own writes.
+
+**MCPL path.** One hunk: `describeBookplate(c.plate, c.guestbook) ??
+describePlate(c.plate)` — a bridged plate's look() line names the
+MIRROR (words + the SIGN action) or the PIN (words + the write action);
+plain plates read byte-identically to vocab-10 (describeBookplate
+returns null for non-bridges, so every existing caller is unchanged).
+Agents act through the parents' ordinary verbs.
+
+**Intent.** The register bench. A trailhead lectern whose sign reads
+the last hiker's line, a wedding register bench, a summit log — the
+guestbook remembers many, the plate SAYS the newest, and the author can
+always title it. One bridge key, no script, no new verb — the parents'
+contracts untouched, the fold still the only truth. This is the
+composition pattern the third queued pair (vendor-instrument economy)
+should copy: derive, do not mint.
+
 - [ ] Vendor-instrument economy: vending stands sell sequencer patterns;
       stock, grant log, and playback state stay consistent across
       restart.

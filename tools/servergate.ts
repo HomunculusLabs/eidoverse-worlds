@@ -139,6 +139,9 @@ const BATTERY: Row[] = [
   // vocab-26: the weather-lamp composition matrix (§ WEATHERLAMP CONTRACT)
   // — self-booting scratch sequencer, same class.
   { name: "weatherlamptest", tool: "tools/weatherlamptest.ts" },
+  // vocab-27: the book-plate bridge matrix (§ BOOKPLATE CONTRACT) — same
+  // class: guestbook × plate derived composition, scratch sequencer.
+  { name: "bookplatetest", tool: "tools/bookplatetest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites
