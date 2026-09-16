@@ -11,7 +11,9 @@ re-place a host), `mile-N` (NEW `nx-mile-<dir>-<NNN>` approach-milestone
 pairs only — never touch a leg or its lamps), `improve-N` (objects named
 in the CURRENT committed round queue in IMPROVE-PLAN.md — the refinement
 era's primary lane; idle-guard: defers on any object another lane touched
-within 24h). Two observer
+within 24h), `fauna-N` (commons-next standing animals only —
+`nx-dress-goats`, `nx-dress-hens`, `nx-dress-hutch` fauna + new-species
+candidates per FAUNA-PLAN.md; one species per wakeup). Two observer
 lanes run beside them: `night-N` (ZERO world mutation — night-read audit,
 defects routed to owners) and `sweep-N` (ZERO world mutation — integrator
 audit; census/overlap/walk/integrity) and `survey-N` (read-only intake observer — continuous 18m native-vision read-quality judging; routes defect notes to owning plans + candidate rows to IMPROVE-PLAN; never mutates). Observer lanes write only their own
