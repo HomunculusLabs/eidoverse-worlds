@@ -17624,3 +17624,45 @@ shared-budget use (D+0, E+0).
   running total 2370831). STANDING RECOMMENDATION carried unchanged
   (s182-s379): end the SURVEY lane or convert to a no-LLM monitor
   when attended.
+
+  ## Judged index (survey-381)
+
+  - survey-381 (2026-09-15, QUIET HOLD, sixteenth tick of the unfreeze —
+    cron session, native vision ABSENT from this catalog (zai-vision MCP
+    only, flap law; native-owed register rows NOT discharged this tick,
+    cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+    HEAD 7e93916b (city-162 tip; ledger law EXACT 2370832 — total +1 vs
+    survey-380's 2370831, city's own HOLD entry, no production world
+    touch; HEAD UNCHANGED through the whole tick — no re-gate due, epoch
+    law). Census via committed next-live-census.ts exit 0 at BOTH epochs
+    (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each 338 entities, each
+    223069B, each sha256-16 24ac55a9f6d5ea6f — BYTE-IDENTICAL TO THE
+    SURVEY-380 BASELINE ITSELF: 0 arrivals / 0 departures / 0 lib flips /
+    0 pos-yaw-scale-comp drift on all 338 holders — fully quiet window.
+    Mutation lanes active-but-not-mutating this window (struct-195
+    nephroid stands PLACED_VERIFIED at 338; no banked-not-placed successor
+    visible in foreign dirt; next Math Avenue arrival remains the likeliest
+    trigger; owed board on landing: monkeysaddle gate, hypar row 22, kuen
+    v3, catalan v1, clebsch v1, menger v2, apollonian v1, melencolia v3,
+    tribar v2, fourier v1, cissoid v2, quadratrix v1, archispiral v1,
+    nephroid v1 = 14 owed). ARRIVAL-GATED JUDGE NOT TRIGGERED: world
+    quiet, pools drained (IMPROVE-PLAN md5 c0f569d0 unchanged, 270th
+    check; SURVEY CANDIDATES 0 OPEN rows; CITY-PLAN-V2 assigns survey no
+    role, grep 0), and the native re-judge register is cron-unpayable this
+    tick — cron sessions use ZAI fallback which does NOT discharge
+    native-owed rows (survey-345 precedent): 0 confirmed / 0 clean /
+    0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback N/A.
+    Foreign working-tree dirt at read = sibling lanes in flight
+    (HERO-ASSET-REFINEMENT-PLAN, core-paths GLB + review, next-place-
+    carousel placer, client controller — same families as s285-s380) —
+    untouched. Index verified empty pre-commit (zero staged files,
+    shared-index law); append anchor grep-verified unique pre-write
+    (0 prior "survey-381" strings in any file). Census baseline for next
+    tick: /tmp/survey381-census-a.json (338, 223069B, sha256-16
+    24ac55a9f6d5ea6f — byte-identical, baseline unchanged). Zero world
+    mutations, zero uploads, zero verbs, zero comp edits, zero
+    shared-budget use, ZERO ledger append (loop law 4: append only when
+    routing; CLEAN concurrence routes nothing; ticks 211-380 precedent;
+    ledger tail running total 2370832). STANDING RECOMMENDATION carried
+    unchanged (s182-s380): end the SURVEY lane or convert to a no-LLM
+    monitor when attended.
