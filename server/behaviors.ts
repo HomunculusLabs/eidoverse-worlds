@@ -77,6 +77,15 @@ const EMITS_PER_ACTIVATION = 8;
 const EMITS_PER_MINUTE = 40;
 const TIMER_MIN_S = Number(process.env.BHV_TIMER_MIN ?? 5);
 const MAX_BEHAVIORS_PER_WORLD = 12;
+const MAX_TIMERS_PER_BEHAVIOR = 16;    // pressure-27: registrations were
+// UNCAPPED — one ~40KB script registered 1600 timers; at the measured ~3ms
+// clean burn each, every all-due tick blocked the loop ~4.8s (fps 0 for four
+// straight seconds, HTTP p95 4.3s) while every PER-ACTIVATION gas contract
+// held. Per-activation gas bounds each timer; this bounds the fleet.
+const TICK_TIMER_BUDGET_MS = 100;      // pressure-27: even legal fleets must
+// not own the 1s tick — a world-wide per-tick budget for FIRING timers;
+// over-budget timers defer to the next tick (they keep their schedule
+// arithmetic, late by whole ticks instead of starving the presence plane)
 const RING_CAP = 200;
 const PAUSE_AFTER_ERRORS = 5;
 const KV_CAP_BYTES = 8192;
@@ -331,8 +340,13 @@ class Instance {
     if (!("error" in tr && tr.error)) {
       const secs: number[] = JSON.parse(this.ctx.dump(tr.value));
       tr.value.dispose();
+      if (secs.length > MAX_TIMERS_PER_BEHAVIOR) {
+        // pressure-27: cap with a note, silently-truncate would hide it
+        this.log(`⚠ ${secs.length} timers registered — keeping the first ${MAX_TIMERS_PER_BEHAVIOR} (cap)`);
+        this.w.debug("timer-cap", { behavior: this.id, registered: secs.length, kept: MAX_TIMERS_PER_BEHAVIOR });
+      }
       const now = Date.now();
-      this.timers = secs.map((s) => {
+      this.timers = secs.slice(0, MAX_TIMERS_PER_BEHAVIOR).map((s) => {
         const everyS = Math.max(TIMER_MIN_S, Number(s) || TIMER_MIN_S);
         return { everyS, next: now + everyS * 1000 };
       });
@@ -479,12 +493,21 @@ export class BehaviorHost {
       this.tours.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] tour sweep`, err); }
 
+    // pressure-27: a world-wide per-tick FIRING budget — even 12 behaviors x
+    // 16 legal timers can burn ~600ms of the 1s tick. Timers beyond the
+    // budget defer to the NEXT tick (schedule arithmetic keeps whole periods;
+    // the presence plane gets its frames back). No error, no strike — being
+    // late is the honest cost of sharing one clock.
+    let firedMs = 0;
     for (const inst of this.instances.values()) {
       for (let i = 0; i < inst.timers.length; i++) {
         const t = inst.timers[i];
         if (now >= t.next) {
           t.next = now + t.everyS * 1000;
+          if (firedMs >= TICK_TIMER_BUDGET_MS) continue;   // deferred, not dropped
+          const t0 = Date.now();
           inst.fireTimer(i);
+          firedMs += Date.now() - t0;
         }
       }
     }

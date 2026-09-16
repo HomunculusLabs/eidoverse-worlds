@@ -571,8 +571,44 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       drop of whisper echoes, surrogate-pair unit math, scheduled-vs-
       sent latency — server correct each time). Servergate: smoke 85/0
       on the pinned tree. Production and live worlds untouched.)
-- [ ] Watchdog starvation: a stuck tick cannot block heartbeat/liveness
+- [x] Watchdog starvation: a stuck tick cannot block heartbeat/liveness
       paths.
+      (pressure-27, 2026-09-16: worktree @ cd3fb0d0 + fix, PORT 8974,
+      163 sockets — 24 perf @15Hz + 2 quiescent + 1 owner author + 136 spec;
+      hostile fleet = ONE legal ~40KB script registering 1600 every-5s
+      timers x measured-clean ~3ms burns (~100k ops each — probes 2-8
+      proved this QuickJS strikes ANY over-deadline loop and quickjs
+      interrupts are level-triggered, so no try/catch shape can hide an
+      over-gas burn; the ONLY hostile aggregate is many CLEAN burns).
+      BASELINE RED — real starvation, not theater: every all-due tick
+      blocked the loop ~4.8s — fps p50 3.9 (timeline `2 0 0 0 0 1`),
+      HTTP probe p95 5503ms, say p95 4846ms, whisper 3845ms, use 3707ms,
+      tock 2157ms — while EVERY per-activation contract held (spin
+      while(1) 5/5 strikes -> loud pause, membomb OOM-strike, pong 0ms):
+      gas bounds each activation; NOTHING bounds the aggregate. FIX
+      (server/behaviors.ts, 3 narrow hunks): (1) MAX_TIMERS_PER_BEHAVIOR
+      16 — registrations capped at load, flight-recorder `timer-cap` note
+      names the count (never silent truncation); (2) TICK_TIMER_BUDGET_MS
+      100 — world-wide per-tick FIRING budget, over-budget timers defer
+      whole ticks (schedule arithmetic intact, no strikes); (3) roster
+      reflects the kept timers. AFTER, identical conditions 2x GREEN:
+      hostile fps p50 3.9->14.4/14.5, probe p95 5503->4/2ms, joins p95
+      3746->21/20ms, say 4846->8/4ms, whisper 3845->1ms, use 3707->8/9ms,
+      tock 2157->750/720ms, fleet timers 1600->16 + 1 cap note, gas
+      contracts intact (spin 5/5 pause 1, membomb 1), recovery fps 14.9
+      says 4-12ms, final present 0, log drift 0, 0 suspicious, RSS
+      +113-124MB (12 QuickJS VM floors + pose maps, workload-bounded).
+      RED re-proof on reverted tree (starvation + cap gates fire).
+      tools/pressure-watchdog.ts new (SELFTEST 26 gates; harness lessons:
+      debug requests on freshly-joined sockets race `!c.world` and drop —
+      use one long-lived debug socket; ring/reporter pulls must ride it;
+      bell tock accounting is distinct-text-based — the counter rides
+      rebuilds; upload-then-bind must pace the author's own 12/4s verb
+      budget). Servergate: smoke 85/0 + behaviortest 27/0 on the fixed
+      pinned worktree (behaviortest's 5 failures at this pin were
+      pressure-23-disclosed pre-existing classes — 27/0 here is the
+      fixed-tree slice); main-tree boot-parse clean. Production and live
+      worlds untouched.)
 - [ ] Weather strobe under load: rapid weatherzone requests during peak
       presence traffic — anti-strobe floor holds, no sky thrash to
       clients.
