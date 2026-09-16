@@ -12012,3 +12012,56 @@ plan pointers this tick: hall/bunkhouse @279 walked fresh, forge/potter
 row-cottage/observatory @274, inn/tower-house @273 stalest standing pair
 at 6 sweeps; both walk tools ls-verified present on disk this tick:
 interior-walk-inn.ts, interior-walk-tower-house.ts).
+
+
+sweep-280: CLEAN SWEEP, arrival epoch tick (mandelbrot), 49th consecutive
+quiet-or-classified. Tick-start HEAD 5900fa4e = survey-392; standing gate
+ALL PASS real exit 0 FIRST TRY (99 PASS lines incl. trailer, exit captured
+unpiped). Census epoch A 343 vs committed sweep-279 baseline 342: exactly
+ONE domain-valid arrival nx-struct-mandelbrot @ (-25.112331, 0.052746,
+359.123058) yaw 3.735004599267865 lib 8c21e6cb923e2aa3 scale 1 kind thing
+comp {} — tuple-exact vs the committed struct-205 PLACED_VERIFIED ledger
+line-for-line, corroborated by survey-392 + city-173/177 (my raw sha16
+4655f01e7c748ec5 matches survey-392's epoch-B byte-for-byte); 0 departures,
+ZERO drift on all 342 shared ids across all five semantic classes. Epoch B
+20s-paced 343==343 BYTE-IDENTICAL — arrival settled. SAT fresh-live at the
+arrival-inclusive set: 305 bbox non-light / 237 classified / 0 coverage
+holes, real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 (known Sev 2 routed artwalk b26 @ sweep-43,
+236th sweep since routing, no escalation due — law keys severity-1);
+mandelbrot ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually per the sweep-228
+ceiling law — core 64/64 @ 0.3800 maxArrival, NW 5/5 @ 0.38, NE 7/7 @ 0.38,
+SW 5/5 @ 0.37; mandelbrot r360 Math Avenue 340m+ off every walked leg (all
+r<20, no Math Avenue legs) — epoch-A walks stand by construction (sweep-53
+precedent); folly class no walk owed per struct-205's own ledger. Tier-2
+258th cycle per the committed sweep-279 pointer: inn 6/6 ALL_PASS
+(0.3200/0.3183/0.3409/0.3502/0.3640/0.2885) + tower-house 6/6 ALL_PASS
+(0.2450/0.2450/0.2625/0.3765/0.3742/0.3091), both real exit 0, tools
+ls-verified pre-run. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (234th consecutive clean); sweep89-battery 28/28 PASS exit 0 on
+fresh census-A bytes; interlane md5 f6254cd0 stable; SWEEP-LOOP md5
+a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN c0f569d0 unchanged (256th
+check, 0 open), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, no
+reset role — audit-continues banner governs. Baseline lawfully rewritten
+RAW like-for-like with asserted pre-write checks (arrival-only diff, shared
+drift 0, sorted insert at index 224): 343 entities / 226071B / sha16
+4655f01e7c748ec5; post-rewrite drift ZERO (fresh epoch-C read cmp
+byte-identical to the on-disk baseline). Diff tool sweep280-census-diff.py
+folded from the committed sweep279 chassis (sed swap only — py_compile
+clean, clean exit 0 at BOTH epochs unpiped on real bytes). Probe
+self-catches pre-verdict, both corrected with no repair owed: (a) NW walk
+extractor keyed `dist` where that tool emits `distance` (re-anchored on raw
+schema, sweep-48 class); (b) interior-walk extractor keyed `distance` where
+those tools emit `dist` (same class, opposite direction). Typo of record:
+the immutable ledger prose says "ne-appreach2-walk.ts" — the actual tool is
+ne-approach2-walk.ts, which ran 7/7 green (sweep-277 typo-of-record
+precedent, no repair owed). Foreign dirt in tree (windmill overhaul
+scratch, cabin/carousel prototype dirs, client/server engine files, fleet
+shells, debug-bower scripts) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads, zero
+verbs, zero comp edits (D+1, E+1). sweep-281 tier-2 pointer: ROW-COTTAGE +
+OBSERVATORY (259th cycle — LRU chain: inn/tower-house @280 walked fresh,
+forge/potter @278, row-cottage/observatory @277 stalest standing pair;
+tools interior-walk-row-cottage.ts + struct2-walk-observatory.ts
+ls-verified present on disk this tick).

@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 342,
+  "count": 343,
   "entities": [
     {
       "id": "beb4c791",
@@ -7932,6 +7932,42 @@
           0.017,
           3.519,
           0.029
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-mandelbrot",
+      "kind": "thing",
+      "pos": [
+        -25.112331,
+        0.052746,
+        359.123058
+      ],
+      "yaw": 3.735004599267865,
+      "scale": 1,
+      "lib": "store/8c21e6cb923e2aa3.glb",
+      "bbox": {
+        "min": [
+          -2.6,
+          0,
+          -0.45
+        ],
+        "max": [
+          2.6,
+          2.878,
+          0.45
+        ],
+        "size": [
+          5.2,
+          2.878,
+          0.9
+        ],
+        "center": [
+          0,
+          1.439,
+          0
         ]
       },
       "compKeys": [],
