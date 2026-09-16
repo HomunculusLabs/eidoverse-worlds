@@ -12679,3 +12679,155 @@ struct193-terrain-archispiral.ts + next-place-struct193.ts (all NEW,
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-193, D+1 E+1). One upload + one verb total (shared budget). Zero
 pushes.
+
+## struct-194 (2026-09-15): R11-20 THE NEPHROID — BUILD+JUDGE
+## TICK (cup-caustic theorem proven numerically AND algebraically before
+## carving — envelope identity to 4.6e-16; probe 9/9 + RED; decode 10/10 +
+## RED control; judged PASS on all four frames — ZAI fallback disclosed;
+## ACCEPTED BANKED NOT PLACED)
+
+194%3=2 placement-slot cadence, nothing takeable — no banked form
+(archispiral placed struct-193), refine pool empty (no externally
+evidenced deficit open on any nx-struct- form), owed native debts
+cron-unpayable (tool catalog carries only the zai-vision MCP,
+tool_search fresh this tick; same disclosed class as struct-169..193) —
+build tick per the 178..193 alternation, placement = struct-195
+committed carry. Gate ALL PASS real exit 0 tick-start at 9ac67e5a
+(vocab-19; /tmp gate output unpiped, GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 23rd tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-193 -> tag struct-194 (re-checked
+immediately before append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + census): nephroid named
+a 0/0/0 family gap TWICE (struct-130 and struct-133 next-queue notes) and
+never built — census 337 confirms no nx-struct-nephroid; struct-171's
+"cardioid/cassini BARRED (nephroid+lemniscate kin standing)" is the
+epicycloid-kin BAR for those two forms, not a nephroid build (the
+lemniscate seat stands; the nephroid does not). Kin-checked: witch of
+Agnesi honestly barred (bell-kin to galtonboard, struct-188); involute
+spiral-kin to the fresh archispiral (struct-193); lituus/rhodonea/
+folium/strophoid/limacon 0 hits; tractrix revolved = slidingladder.
+Register: caustic family genuinely unclaimed (no envelope-of-rays form
+stands).
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): the
+catacaustic of a circle for parallel rays IS the nephroid — verified
+NUMERICALLY (adjacent-reflected-ray intersections converge to the
+parametrization) and the envelope contact parameter derived by hand:
+t_contact(phi) = R·cos(phi)/2, X(phi) = P + t·d' == neph(phi) EXACTLY
+(identity: y = R·sin^3(phi), x = (R/4)(3cos(phi) − cos(3phi))); cusp at
+(R/2, 0) — adjacent rays cross at exactly that point; bulge R/sqrt2;
+rim endpoints (0, ±R) shared with the cup arc's own rim ends. One
+envelope-algebra sign slip (t = −cos/2 draft) was caught by the numeric
+ray-density ridge contradicting it — derivation corrected to match
+physics. No unproven theorem carved.
+
+CONCEPT (written before build): THE CUP CAUSTIC. Light enters a
+semicircular stone cup (R=2.0, 16 arc-uniform tangent voussoirs, 0.18
+x0.22) from an iron light-post west of it (0.24 sq, base embedded in the
+plinth course, top 4.12 carrying a lintel beam that spans to and embeds
+the arc's top-rim voussoir — the composition's close); five iron rays
+(k = 0, ±0.6, ±1.2) frozen as incident + reflected segments obeying the
+arc's TRUE specular normal; and their envelope — THE NEPHROID,
+a = R/4 = 0.5 — stands inside as a stone ribbon of 16 voussoirs (two
+half-chains sharing the exact cusp station, arc-uniform 0.40 with a 0.16
+cusp cap and 0.44 rim remainder; chord fidelity <= 45mm mid-dev, voussoir
+thickness covers). Sole night element: warm bead (glow_ns_1 KEEP, r0.07,
+emissive 0x9a7030 @ 1.0 dusk lineage) half-embedded at the cusp's front
+face (struct-52/188 occlusion-cure law). At night the caustic's sharp
+point burns. Envelope 5.10x4.21x0.50 y[0,4.21] origin-centered; h 4.21
+>= 2.2 real trimesh; footprint 2.55 m² — folly class, exterior only, no
+walk owed. Nodes 3 (ns_stone + ns_iron + glow_ns_1 KEEP).
+
+PROBE (struct194-probe-nephroid.ts, tracked — the ONE contract; mk +
+decode import it): L1 caustic identity worst 4.6e-16 m + adjacent rays
+cross at the cusp (1.000000, 0.000000); L2 cusp law (speed 0 at t=0,
+cusp (R/2,0), bulge R/sqrt2, rim == cup rim ends); L3 ray law (5 rays
+horizontal at exact heights, reflected reach 0.15m past contact, stay in
+cup); L4 station walk (cusp-adjacent 0.16 arc — a full 0.40 there spans
+105mm chord deviation, the archispiral winding-cap class — interior
+steps 0.400±2mm, rim remainder 0.440, all stations on-curve); L5 arc
+walk (16 arc-uniform voussoirs over the semicircle); L6 grounding
+(plinth 0..0.24, arc rim embeds 0.12, post base 0.12 embed, beam seats
+post top, bead at cup-centre height half-embedded +z); L7 envelope
+origin-centred; L8 collider honesty (folly, no walk). THREE self-catches
+en route, all RED->GREEN: (a) nephArc returned negative length on
+descending orientation — made orientation-agnostic; (b) halfStations
+bisection bracket broke for sign=-1 — rewritten in u=|t| space; (c)
+probe envelope max carried a needless +0.001 slop — mk's own envelope
+law caught the 1.1mm drift, made exact. ALL CHECKS PASS exit 0.
+
+BUILD (assets/mkv3-nephroid.ts, staged -f): root identity (struct-188
+law); planar voussoir helper (chord box in XY, thickness local-y, depth
+local-z); beam depth 0.22->0.18 (side faces sit strictly inside the rim
+voussoir's z-flanks — no coplanar face-fight). Deterministic x2
+byte-identical sha256
+3557b1660affbd67214d811557ef1776a33eaa8606e1f52c71f2960d52af37bc
+(59,336 B), mtime-verified. Nodes 3.
+
+DECODE (struct194-decode-nephroid.ts, tracked) ALL PASS 10/10 + RED
+control (foreign quadratrix bytes FAIL 10/10, exit 1): D1 census 3
+nodes; D2 cup-arc law (504 stone verts on the R-circle within 103mm);
+D3 caustic ribbon law (456 verts within 88mm of the dense a=R/4
+nephroid, 24 at the cusp); D4 union law (plinth 84 + arc 444 + nephroid
+264 pure + ~120 rim-band shared classified arc-first BY DESIGN — for t
+in [1.2, pi/2] the ribbon runs inside the arc's radial band, both curves
+hug the rim; D2/D3 are the exact per-curve laws; unclassified 0); D5
+iron ray law (5 reflected lines 60/48/48/48/48 verts on the true
+specular lines — k=0 shares its line with the incident tail,
+normal-incidence retracing by design; contact containment geometric per
+the struct-190 D4 boxes-carry-no-interior-verts law, perp 0.0um); D6
+post+beam (exclusion-based after ray removal — incident boxes issue from
+the post's face plane by design; beam west end-face embeds the post,
+east end-face beam-pure); D7 cusp+bead law (center == world cusp
+(1.000, 2.120, 0.080), emissive present); D8 rim-share law (24/24 verts
+at each shared rim (0, ±R)); D9 envelope drift 0.0001; D10 named
+texMats ns_stone/ns_iron (struct-38 law).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- front: PASS — identity deliberate mathematical monument; arc complete
+  with tight joints; ribbon unbroken, closed kidney read, merges into
+  the cup wall at both rims; centermost ray terminates precisely at the
+  cusp (the physically correct touch); zero floats; grounding attached.
+  Cosmetic margin disclosed: hairline step where the lintel meets the
+  arc's top block (in contact — seam, not gap). The judge read the
+  reflected segments as "struts bracing the ribbon" — they are the rays;
+  the physics read carries at walk-up.
+- gameplay 18m: PASS — "D"-form caustic folly reads unmistakably
+  authored; arc/ribbon/post+lintel all readable; bead just perceptible
+  (walk-up reward, correct behavior); grounded; zero distance-breaking
+  defects.
+- night: PASS — light census EXACTLY ONE warm point at the cusp, quiet
+  few-pixel footprint, no bloom, no stray glow; three-layer silhouette
+  legible dark-on-dark; rays faintest but traceable.
+- left (edge-on): PASS — coherent thin slab, no float, attached shadow
+  whose ribbed curvature is the diagnostic signature of intact panel
+  geometry.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-195
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility; procession continues past archispiral r300), YAW LAW — the
+construction reads on the +Z face: oblique 30-40 deg off the approach
+walk per struct-104 (melencolia/fourier/cissoid/quadratrix/archispiral
+convention), terrain preflight over the TRUE rotated footprint,
+hash-gated plain spawn nx-struct-nephroid, comp {}. Folly class — no
+walk owed. Native re-judge debt: nephroid v1 joins the owed board
+(monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid
+v2, quadratrix v1, archispiral v1 — 14 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the
+archispiral — a stone cup facing an iron lamp-post: five rays frozen
+entering and reflecting, and inside the cup the curve their reflections
+trace — the nephroid, the same bright crescent that lives at the bottom
+of a coffee cup in the morning sun. Walk the rim: the ribbon's two arcs
+meet at a sharp point (the cusp) with one warm bead; after dark that
+bead is the only light, burning exactly where all the reflected rays
+touch.
+
+Files: struct194-probe-nephroid.ts + struct194-decode-nephroid.ts (NEW,
+tracked), assets/mkv3-nephroid.ts (NEW, staged -f), reviews/
+struct194-nephroid/ (10 frames, ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-194, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
