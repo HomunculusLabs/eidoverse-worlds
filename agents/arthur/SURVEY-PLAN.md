@@ -18066,3 +18066,44 @@ shared-budget use (D+0, E+0).
   211-386 precedent; ledger tail running total 2370853). STANDING
   RECOMMENDATION carried unchanged (s182-s386): end the SURVEY lane or
   convert to a no-LLM monitor when attended.
+
+## Judged index (survey-388)
+
+- survey-388 (2026-09-16, QUIET HOLD, twenty-third tick of the unfreeze —
+  native vision ABSENT from this cron session's tool catalog (zai-vision
+  MCP only, tool_search fresh this tick; native-owed register rows NOT
+  discharged this tick, cron-disclosed — survey-345/s387 precedent): gate
+  ALL PASS real exit 0 FIRST TRY at HEAD 9d26dad2 (pressure-27 tip;
+  ledger law EXACT 2370858; HEAD re-check pre-commit per epoch law — see
+  below). Census via committed next-live-census.ts exit 0: 341 entities,
+  224864B, sha256-16 62896227bb537876 — BYTE-IDENTICAL to survey-387
+  baseline (set-diff via /tmp/survey388-diff.py: 0 arrivals / 0
+  departures / 0 pos-yaw-scale-lib-comp drift on all 341 holders; an
+  inline-heredoc parser block on the first diff attempt was retried via
+  the sanctioned saved-script path and executed clean). ARRIVAL-GATED
+  JUDGE LAW: world quiet + pools drained + native re-judge debt
+  cron-unpayable => NO slice judged this tick, do NOT manufacture
+  re-judging (survey-345 precedent, 23rd quiet-or-classified epoch):
+  0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision calls,
+  native-vs-fallback N/A. Pools: IMPROVE-PLAN md5 c0f569d0 unchanged
+  (277th check); SURVEY CANDIDATES 0 OPEN rows; no unjudged pool;
+  CITY-PLAN-V2 assigns survey no role (grep 0, s387 parity). Native debt
+  board unchanged at 17 owed (monkeysaddle gate, hypar row 22, kuen v3,
+  catalan v1, clebsch v1, menger v2, apollonian v1, melencolia v3,
+  tribar v2, fourier v1, cissoid v2, quadratrix v1, archispiral v1,
+  nephroid v1, folium v1, rhodonea v1, versiera v2). Foreign
+  working-tree dirt at read = sibling lanes in flight (HERO-ASSET-
+  REFINEMENT-PLAN + core-paths GLB/review + next-place-carousel placer,
+  client controller/localbody/physobj + server world, WINDMILL-OVERHAUL
+  + cabin-overhaul/ + carousel-horse-prototype/ + debug-bower* + fleet/
+  — same families as s285-s387) — untouched. Index verified empty
+  pre-commit (zero staged files, shared-index law); append anchor
+  grep-verified unique pre-write (0 prior "survey-388" strings in any
+  file). Census baseline for next tick: /tmp/survey388-census-a.json
+  (341, 224864B, sha256-16 62896227bb537876 — byte-identical, baseline
+  unchanged). Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use, ZERO ledger append (loop law 4: append
+  only when routing; CLEAN concurrence routes nothing; ticks 211-387
+  precedent; ledger tail running total 2370858 at gate). STANDING
+  RECOMMENDATION carried unchanged (s182-s387): end the SURVEY lane or
+  convert to a no-LLM monitor when attended.
