@@ -12911,3 +12911,139 @@ Files: struct195-scan-nephroid.ts + struct195-select-nephroid.ts +
 struct195-terrain-nephroid.ts + next-place-struct195.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-195,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-196 (2026-09-15): R11-21 THE FOLIUM OF DESCARTES — BUILD+JUDGE
+## TICK (cubic identity proven to 3.55e-15 before carving — loop area 3a²/2
+## exact by Green's theorem; probe 8/8 + RED; decode 10/10 + RED control;
+## judged PASS on all four frames — ZAI fallback disclosed; ACCEPTED BANKED
+## NOT PLACED)
+
+196%3=1 placement-slot cadence, nothing takeable — no banked form
+(nephroid placed struct-195), refine pool empty (no externally evidenced
+deficit open on any nx-struct- form), owed native debts cron-unpayable
+(tool catalog carries only the zai-vision MCP, tool_search fresh this
+tick; same disclosed class as struct-169..195) — build tick per the
+178..195 alternation, placement = struct-197 committed carry. Gate ALL
+PASS real exit 0 tick-start at dfcebd42 (vocab-20v2; unpiped terminal,
+GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged
+25th tick, 0 OPEN nx-struct rows). Ledger max re-derived struct-195 ->
+tag struct-196 (re-checked immediately before append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + census
+338): folium 0/0/0 — named once, in struct-194's own kin-check note
+("lituus/rhodonea/folium/strophoid/limacon 0 hits"), never built; census
+338 confirms no nx-struct-folium. Kin-check fresh this tick: arbelos/
+salinon remain passed-over-too-fresh (apollonian tangent-circle kin,
+struct-180, 16 ticks); elastica wave-kin competes with wave pergola
+(struct-65) + fourier ladder (struct-186); lissajous artwalk-chartership
+(refine-273 standing); limacon/strophoid epicycloid-kin to the fresh
+nephroid; spirals crowded (shelltower/spralfolly/archispiral). Register:
+NO standing form carries a SELF-INTERSECTING NODE CURVE with its
+ASYMPTOTE — the lemniscate crosses at center but nothing pairs a curve
+with its vanishing line. Descartes 1638 (the Fermat correspondence duel)
+— the math-art register continues (Durer->Penrose->Descartes).
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): the
+cubic x³+y³=3axy with parametrization x=3at/(1+t³), y=3at²/(1+t³) —
+verified NUMERICALLY (identity residual 3.55e-15 over the full authored
+t-range) and the loop area EXACTLY 3a²/2 by shoelace/Green (2.5348 vs
+2.5350 at a=1.30); loop vertex (3a/2, 3a/2) at t=1 exact; arms approach
+x+y+a=0 from the + side, world gap = a(t+1)²/((t²−t+1)√2) — quadratic in
+(t+1). THREE probe-taught self-catches en route: (a) node tangents are
+the COORDINATE AXES in math frame (y=x²/3a, x=y²/3a) — my draft said
+x+y=0, WRONG, corrected; (b) rotated into the diagonal-vertical world
+frame every branch leaves the node at EXACTLY 45° (|u/v|=1.0002 — the
+parabola separation is second-order) — a clean X, the design's mark;
+(c) the ∞-tail of the loop is 3a/T_END — T_LOOP_END=400 pins the closing
+voussoir within 1cm of the node.
+
+CONCEPT (written before build): THE LEAF AND ITS VANISHING LINE. One
+equation split by material: x³+y³=3axy. STONE carries the curve — one
+continuous voussoir ribbon from the arm tip, through the node X at eye
+height, around the closed leaf loop (vertex 5.36m), back through the
+node, out to the mirror arm tip (arc-uniform 0.30 with 0.14 node caps;
+L_STEP 0.30 not 0.40 — the folium's vertex curvature exceeds the
+nephroid's, probe caught 55.6mm mid-chord dev at 0.40); IRON carries the
+ASYMPTOTE x+y+a=0 — a level rail at y=1.681 on three posts, the center
+post rising through the rail to carry the node itself; the arms die in
+the air with an AUTHORED TIP_GAP 0.20m (first draft 0.13 — decode D8
+caught the voussoir corner grazing the rail top at 5mm; 0.20 leaves the
+readable ~75mm air sliver decode now pins at 76mm). Sole night element:
+one warm bead at the node X (glow_fs_1 KEEP, half-embedded +z face,
+struct-52/188 occlusion-cure law). The curve's diagonal x=y is the world
+vertical: leaf above, arms falling away below. Envelope 7.60x5.43x0.60
+y[0,5.431] origin-centered; h 5.43 >= 2.2 real trimesh; footprint
+4.56 m² — folly class, exterior only, no walk owed. Nodes 3 (fs_stone +
+fs_iron + glow_fs_1 KEEP). 40 voussoirs + curb + rail + 3 posts + bead.
+
+PROBE (struct196-probe-folium.ts, tracked — the ONE contract; mk + decode
+import it): L1 cubic identity 3.55e-15; L2 node X at (0,2.6) four 45°
+branches + vertex world (0,5.358) + loop area 2.5348==3a²/2; L3
+asymptote rail y=1.6808 == x+y+a=0 exactly, tips 130mm->200mm band,
+post clearance 0.99; L4 station walk (loop 23 stations caps 0.14 incl
+disclosed ∞-tail, arm 10 stations, tip remainder 0.322, chord dev <= 45mm
+at ARC-midpoints — t-midpoint was wrong near the node, another
+self-catch); L5 rail+posts seating; L6 grounding (curb 0..0.24, posts
+embed 0.12, bead half-embed); L7 envelope + folly class; L8 (in L7).
+RED control: mutant a=1.5 violates the cubic by 2.976 — law detects.
+
+BUILD (assets/mkv3-folium.ts, staged -f): root identity (struct-188
+law); world-frame voussoir helper (probe's worldPt applies the diagonal
+rotation + YC lift); deterministic x2 byte-identical sha256
+317256d9738a914bd9828e62ab790cc8e8fe3e27791297919b83e7603fc1dd15
+(59,412 B), mtime-verified. Nodes 3.
+
+DECODE (struct196-decode-folium.ts, tracked) ALL PASS 10/10 + RED
+control (foreign nephroid bytes: 11 FAILs, exit 1): D1 census 3 nodes;
+D2 curb law 24 verts; D3 curve ribbon law 864 verts within 92mm of the
+dense folium (loop+arms+mirror), 66 at the node X; D4 union 0
+unclassified; D5 asymptote rail 24 verts on the level line, span 7.400
+exact; D6 posts (center 24 to the node, outboard 24 rail-seat tops;
+rail-band exclusion by design); D7 node+bead exact center + emissive;
+D8 tip law 76mm min air gap > 20mm (the D8 class catch that raised
+TIP_GAP); D9 envelope drift 0.0000; D10 named texMats fs_stone/fs_iron.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- front: PASS 4/4 — identity deliberate mathematical monument; leaf loop
+  closed (apex V-seam cosmetic, reads mitered); X-crossing legible
+  through-itself; arms approach rail without contact (~10-14px clear);
+  grounded with contact shadow.
+- gameplay 18m: PASS 3/3 — identity authored folly; silhouette legible
+  (loop interior open to sky — reads LOOP not blob; rail silhouettes
+  against sky); grounding marginal (rig shadow minimal — rig lighting
+  class, not geometry; disclosed). Margins: post contrast low against
+  dark ground, stone texture banding at 18m, crossing angle compressed
+  (saved by the bead).
+- night: PASS 3/3 — light census EXACTLY ONE warm bead at the crossing
+  (8-10px, quiet, no bloom); dark silhouette legible; one gray streak
+  ~253,463 flagged non-luminous artifact.
+- closeface: PASS 4/4 — continuity unbroken loop+arms; true crossing
+  (orientation flips across the bead); arms end in air with 3-5px gap
+  (decode D8 binds it at 76mm); center post flush under the node;
+  zero floats.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-197
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility; procession continues past nephroid r310), YAW LAW — the
+construction reads on the +Z face: oblique 30-40 deg off the approach
+walk per struct-104 (melencolia/fourier/cissoid/quadratrix/archispiral/
+nephroid convention), terrain preflight over the TRUE rotated footprint,
+hash-gated plain spawn nx-struct-folium, comp {}. Folly class — no walk
+owed. Native re-judge debt: folium v1 joins the owed board (monkeysaddle
+gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+quadratrix v1, archispiral v1, nephroid v1 — 15 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the
+nephroid — a stone leaf riding above an X, its two trailing arms falling
+toward a level iron rail they never touch: Descartes' folium, the curve
+he and Fermat fought over. Stand at the bead: four strands cross at
+exactly 45 degrees. After dark: one warm point burning at the crossing.
+
+Files: struct196-probe-folium.ts + struct196-decode-folium.ts +
+struct196-render-folium.ts (NEW, tracked), assets/mkv3-folium.ts (NEW,
+staged -f), reviews/struct196-folium/ (7 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-196,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
