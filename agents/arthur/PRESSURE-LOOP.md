@@ -462,6 +462,17 @@ without Bill's explicit direction. Do not touch village or resident lanes.
 - [ ] Whisper spam: targeted messages cannot bypass the global rate budget.
 - [ ] Watchdog starvation: a stuck tick cannot block heartbeat/liveness
       paths.
+- [ ] Weather strobe under load: rapid weatherzone requests during peak
+      presence traffic — anti-strobe floor holds, no sky thrash to
+      clients.
+- [ ] Vendor burst: 200 clients buying simultaneously — stock never goes
+      negative, grant log exactly-once.
+- [ ] Guestbook flood: sign-spam cannot blow the 8KB degrade path or the
+      comp write budget.
+- [ ] Sequencer sync storm: 50 concurrent pattern edits converge to one
+      consistent playback state.
+- [ ] Full-vocabulary world: scratch world carrying every shipped comp
+      family at once — join, fold, restart, replay all consistent.
 
 ## LAWS
 
