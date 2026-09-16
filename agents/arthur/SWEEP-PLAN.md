@@ -11848,3 +11848,62 @@ inn/tower-house @273, hall/bunkhouse @272, forge/potter @271 —
 row-cottage/observatory stalest standing pair at 2 sweeps since its last
 fresh walk @274; both walk tools ls-verified present on disk this tick:
 interior-walk-row-cottage.ts, struct2-walk-observatory.ts).
+
+
+sweep-277: CLEAN SWEEP, arrival epoch tick (elliptic), 46th consecutive
+quiet-or-classified. Tick-start HEAD 75ee25a7 = survey-389; standing gate
+ALL PASS real exit 0 FIRST TRY (98 PASS lines, ledger law EXACT 2370858 at
+entry). Census epoch A 341==341 FULLY QUIET vs the committed sweep-276
+baseline — 0/0/0 across all five semantic classes, live byte-identical to
+the on-disk baseline (raw 224864B sha16 62896227bb537876). Mid-tick
+struct-203 (committed @ 431c8c3d, folded by city-173 @ 79f4745e) landed the
+ELLIPTIC CURVE folly: epochs B/C 341->342 with exactly ONE domain-valid
+arrival nx-struct-elliptic @ (-24.414766, 0.074360, 349.147418) yaw
+3.735004599267865 lib 602519cffada3442 comp {} — tuple-exact vs the
+committed struct-203 ledger line-for-line and the struct-202 BANKED sha
+(committed carry), corroborated by city-173's census fold; sorted insert at
+index 207 (beside ellipsecourt/enneper), 0 departures, ZERO drift on 341
+shared ids; epochs B==C byte-identical (sha16 4ca51a64ca38aed5) — settled.
+Epoch law honored: SAT re-run at the elliptic-inclusive set (304 bbox
+non-light / 237 classified / 0 coverage holes, exit 3 on ONLY R-121
+lamp-n|nx-town-mapboard -0.407 — known Sev 2 artwalk-routed @ sweep-43,
+233rd sweep since routing, no escalation due — law keys severity-1;
+elliptic ZERO new contacts, corroborates struct-203's own SAT 4.80);
+standing gate re-run ALL PASS real exit 0 at 79f4745e, ledger law EXACT
+2370860 post-absorb. Walks: elliptic r350 Math Avenue 330m+ off every
+tier-1/tier-2 leg (all r<20) — epoch-A walks stand by construction
+(sweep-53 precedent); folly class no walk owed per struct-203's own ledger.
+Tier-1 4/4 per-leg verified 81/81 ALL_PASS every leg real exit 0, legs run
+individually per the sweep-228 ceiling law — core 64/64 @ 0.380
+maxArrival, NW 5/5 (0.000/0.380/0.300/0.330/0.320), NE 7/7
+(0.000/0.290/0.320/0.290/0.380/0.250/0.310), SW 5/5
+(0.000/0.250/0.340/0.370/0.310). Tier-2 255th cycle per the committed
+sweep-276 pointer: row-cottage 6/6 ALL_PASS (0.2950/0.3681/0.3838/0.2940/
+0.3617/0.3066) + observatory 5/5 ALL_PASS (0.2800/0.3890/0.3030/0.3450/
+0.3140), both real exit 0, tools ls-verified pre-run. Integrity: pins
+15/15 ALL_PINS_OK bad:[] (231st consecutive clean); sweep89-battery 28/28
+PASS exit 0 on fresh census-A bytes (tool is the committed sweep89-battery
+.PY — the '.ts' in sweep-274/275/276 prose is a typo of record, no repair
+owed). Interlane md5 f6254cd0 stable, read fresh. Baseline lawfully
+rewritten RAW like-for-like (the committed convention since sweep-275)
+after two probe self-catches: first write used the sweep-89 projection
+format (139061B — caught by size-vs-prior probe), and the insert assert
+initially assumed tail-append (elliptic sorts at index 207) — both
+corrected before commit; final 342 entities / 225466B / sha16
+4ca51a64ca38aed5, ON-DISK == EPOCH-C cmp byte-identical, post-rewrite
+drift ZERO. Diff tool sweep277-census-diff.py folded from the sweep276
+chassis (sed swap only; the /tmp phase-naming self-catch recurred once at
+epoch B, cp'd per chassis law). Pools drained: IMPROVE-PLAN c0f569d0
+unchanged (253rd check, 0 open), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, no reset role — audit-continues banner governs.
+Foreign dirt (windmill overhaul scratch, cabin/carousel prototype dirs,
+client/server engine files, fleet shells) = sibling work-in-flight,
+untouched. Zero world mutations, zero defect notes, zero uploads, zero
+verbs, zero comp edits (D+0, E+0). NEXT-PAIR POINTER CORRECTION (disclosed,
+sweep-59 rotation-repair class): the ledger prose's "hall + forge" is
+internally inconsistent — hall/forge was walked fresh @276; the true LRU
+chain is forge/potter @271 stalest (6 sweeps), hall/bunkhouse @272,
+inn/tower-house @273, longhouse/garden-cottage @275, hall/forge @276,
+row-cottage/observatory @277. Next tier-2 pair (sweep-278): FORGE +
+POTTER (256th cycle; both tools ls-verified present on disk this tick:
+interior-walk-forge.ts, interior-walk-potter.ts).
