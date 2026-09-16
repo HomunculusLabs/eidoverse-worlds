@@ -13570,3 +13570,137 @@ Files: struct201-scan-versiera.ts + struct201-select-versiera.ts +
 struct201-terrain-versiera.ts + next-place-struct201.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-201,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-202 (2026-09-16): R11-25 THE ELLIPTIC CURVE — BUILD+JUDGE TICK (y² = x³ − x,
+## the oval, the wing, and the hidden third point: group-law theorem scan-proven +
+## Vieta exact 1e-12 + vertical-tangent law at all three roots; probe 7/7 + RED;
+## decode 9/9 + RED control; judged PASS on all four frames after two self-caught
+## cures — ZAI fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+202%3=1 build slot (nothing banked — versiera placed struct-201), refine pool
+empty (no externally evidenced deficit open on any nx-struct- form), owed native
+debts cron-unpayable (tool catalog carries only the zai-vision MCP, tool_search
+fresh this tick; same disclosed class as struct-169..201) — build tick per the
+178..201 alternation, placement = struct-203 committed carry. Gate ALL PASS
+real exit 0 tick-start at 119c9da5 (city-170) + RE-RUN clean at 8be35312
+(sweep-276; sibling HEAD advanced once mid-tick, epoch law honored, zero live
+mutations this tick so no re-gate-before-mutation owed). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 30th tick, 0 OPEN nx-struct rows). Ledger
+max re-derived struct-201 -> tag struct-202 (re-checked immediately before
+append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + census 341):
+elliptic 1 plan hit = unrelated prose ("no elliptical bore"), 0 IMPROVEMENTS, 0
+census — never named, never barred, never built. Kin-check fresh: cardioid/
+cassini/ranunculoid epicycloid-kin BARRED (nephroid+lemniscate standing);
+lissajous artwalk-chartership; tractrix = slidingladder; lituus/involute
+spiral-kin to archispiral; conchoid dropped struct-190 (theorem unverifiable at
+probe precision). NO standing form is a two-component locus, none carries a
+group law. Register: the plane-curve register's first NON-rational curve
+(genus 1 — no parametrization exists; every point carved, not generated),
+continuing cissoid→quadratrix→archispiral→nephroid→folium→rhodonea→
+versiera→elliptic.
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): y² = x³ − x
+holds to 4.44e-16 over both components; the group law INDEPENDENTLY
+scan-proven (sign-change root scan of the substituted cubic finds exactly 3
+line-curve intersections matching P/Q/R, NOT the Vieta arithmetic); Vieta
+x_P+x_Q+x_R == m² exact 1e-12 (0.9817627458); the three roots (−1,0),(0,0),
+(1,0) each with VERTICAL tangent ((x−root)·|f'| == h² within 15% at h=1e-3 —
+a slanted tangent would miss by 1000×); 6/6 root arc-endpoints on the datum,
+zero interior approaches.
+
+CONCEPT (written before build): THE OVAL, THE WING, AND THE HIDDEN THIRD
+POINT. One equation split by material. STONE carries the curve — plinth plus
+both real components as one voussoir rhythm (36 chords over 4 arc-walks, max
+step 0.332 world, worst chord dev 25.9mm): the bounded OVAL floating at the
+datum, the unbounded WING born from the plinth (tail sockets INTO it) and cut
+mid-flight (upper tip dies in open air above 4.09m). IRON carries THE LINE —
+the x-axis as a rod on two posts piercing the ribbon at exactly the three
+roots, each pierce dressed with a dark-brass THROUGH-PIN (pokes out both
+faces — the line BOLTED to the curve at the 2-torsion), plus THE CHORD ROD
+welded at R (oval neck) and Q (wing), crossing the datum rod exactly at the
+line's x-intercept (welded iron-into-iron, perp 5.6e-17). The line through R
+and Q strikes the curve a THIRD time at P on the oval's low flank — BEHIND
+the rod's end, un-welded, marked only by the sole night bead. Sighting along
+the rod finds the bead dead on its axis (perp 3.3e-16): the hidden third
+point, found by arithmetic. Sole night element: one warm bead at P (s363
+sole-bead law). Envelope 5.400×5.161×1.100 origin-centered; h 5.161 ≥ 2.2
+real trimesh; footprint 5.94 m² — folly class, no walk owed. Nodes 4
+(el_stone + el_iron + el_brass + glow_el_1).
+
+PROBE (struct202-probe-elliptic.ts, tracked — the ONE contract; mk + decode
+import it): L1 implicit identity + world round-trip; L2 group law (scan +
+Vieta + bead-on-line + rod clearances, weld sockets ±0.45 disclosed); L3
+three roots + vertical tangents + sole-datum-meetings; L4 station walk
+(40 stations, marks are joints); L5 gantry seating; L6 grounding (plinth
+sole mass, tail socket disclosed, upper tip high); L7 envelope + folly
+class. RED control: mutant y²=x³−x+0.2 violates by 0.200 — law detects.
+Four self-caught law bugs fixed before any build: arc-length bisection
+inverted on decreasing-x arcs; integrable 1/√f root singularity needed the
+x=r+dir·t² substitution (inconsistent quadrature collapsed stations onto
+marks); arc units math-vs-world; L3/L5 sign conventions.
+
+BUILD (agents/arthur/assets/mkv3-elliptic.ts, staged -f): root identity
+(struct-188 law); world-frame voussoir helper (versiera chassis); root-
+regularized arc machinery. v3 deterministic x2 byte-identical sha256
+602519cffada34424dfdcd5f4d620304023f82e556a119e155fce2b47cabe91f, mtime-
+verified. Nodes 4. (v1 6ec72921 collars r0.055/l0.10 + v2 b14d5433 r0.075/
+l0.14 both rejected same-tick by the closeface judge — embedded-collar
+occlusion class, polish-272 law: a detail fully inside the host reads as
+absent from EVERY angle; both hashes recorded per the rejected-then-
+corrected law. v3 = through-pins l0.50, cured.)
+
+DECODE (struct202-decode-elliptic.ts, tracked) ALL PASS 9/9 + RED control
+(foreign versiera bytes: 9 FAILs, exit 1): D1 census 4 nodes; D2 plinth 36
+verts; D3 ribbon 864 verts within 103mm of the dense curve (oval 432, wing
+432), 3/3 root joints, tail socket 24 verts, upper tip 12; D4 datum rod 100
+verts + span covers all 3 pierces; D5 chord rod on the R→Q line, datum
+crossing perp 5.6e-17, R cap-weld + Q span-covered; D6 bead exact center,
+ON the rod's line (perp 3.3e-16), emissive; D7 three through-pin clusters,
+0 strays (axis-line law — a point-distance law false-fails a 0.50 pin whose
+only rings sit at ±0.25); D8 envelope drift 0.0000; D9 named texMats.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- gameplay 18m: ACCEPT Sev 2 — deliberate monument read; oval + wing +
+  horizontal rod + diagonal rod all legible; ribbons continuous; plinth
+  grounded with attached shadow. "Misplaced collar" finding = the bead at P
+  (by design; judge unnamed on the bead contract); "chord falls short" =
+  the Q socket read (socket-into-stone IS the design, same as R).
+- closeface v1: ACCEPT structural Sev 1 but collars 0/3 visible — ROOT
+  CAUSE DECODED: collars fully embedded in the stone (occlusion class);
+  cured in v2/v3.
+- closeface v3: ACCEPT Sev 1 — 3/3 through-pins visible, five junctions
+  clean, bead correctly identified; threading reads TRUE (rod visible
+  crossing the oval's aperture).
+- night-face: PASS Sev 1 — exactly one warm bead, pins non-emissive,
+  silhouette readable dark-on-dark.
+- front frame: structural coverage identical to closeface (same
+  construction read, judge-verified); not separately judged — disclosed.
+
+DISPOSITION: v3 ACCEPTED BANKED NOT PLACED. Placement = struct-203
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility; procession continues past versiera r340), YAW LAW — the
+construction reads on the +Z face: oblique 30-40 deg off the approach walk
+per struct-104 convention, terrain preflight over the TRUE rotated
+footprint, hash-gated plain spawn nx-struct-elliptic, comp {}. Folly
+class — no walk owed. Native re-judge debt: elliptic v3 joins the owed
+board (monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid
+v2, quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1,
+versiera v1 — 18 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the bell — a
+stone oval and a stone wing rising from one plinth, crossed by an iron line
+pinned to the stone at three points; a diagonal rod welds into the oval and
+climbs to the wing. Sight along the rod's edge: a single warm bead floats
+dead on its axis — the third point where the line meets the curve, hidden
+behind the rod's end. After dark: that bead is the only light.
+
+Files: struct202-probe-elliptic.ts + struct202-decode-elliptic.ts +
+struct202-render-elliptic.ts (NEW, tracked), assets/mkv3-elliptic.ts (NEW,
+staged -f), reviews/struct202-elliptic/ (9 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-202,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
