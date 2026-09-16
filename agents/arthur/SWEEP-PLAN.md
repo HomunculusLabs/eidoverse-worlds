@@ -11584,3 +11584,66 @@ longhouse/garden-cottage @270, hall/forge @269, inn/tower-house @268,
 row-cottage/observatory @267, hall/bunkhouse @266 stalest standing pair
 at 5 sweeps; both walk tools ls-verified present on disk this tick:
 interior-walk-hall.ts, interior-walk-bunkhouse.ts).
+
+sweep-272: CLEAN SWEEP, arrival epoch tick (rhodonea), 41st consecutive
+quiet-or-classified. Tick-start HEAD e012220d = city-165 55th lawful HOLD;
+standing gate ALL PASS real exit 0 FIRST TRY (99 PASS lines incl. the ALL
+PASS trailer, exit captured unpiped). Census epoch A 339==339 BYTE-IDENTICAL
+to the committed sweep-271 baseline (raw 223668B sha16 e06f807046673e27,
+cmp-verified live vs on-disk). Between epochs A and B, struct-199 @ 41f4b946
+placed rhodonea LIVE: epoch B 339→340 with exactly ONE domain-valid arrival
+nx-struct-rhodonea @ [-23.019636, 0.084164, 329.196137] yaw 3.735004599
+lib dd7b5a631ab4424c comp {} scale 1, bbox 5×5.13×0.6 — tuple matches the
+committed struct-199 ledger line-for-line (Grandi's rose k=7, Math Avenue
+az94/r330 next on-line step past folium, NN 10.00, SAT 5.96, terrain 3.4mm,
+yaw 214deg oblique-read); 0 departures, ZERO drift on all 339 shared ids
+across all five semantic classes (pos/yaw/scale/kind/bbox, lib, compKeys).
+Epoch C 20s-paced 340==340 BYTE-IDENTICAL — arrival settled. All affected
+evidence re-taken fresh per the polish-270 epoch law before verdicts: SAT
+re-run at epoch B fresh-live (302 bbox non-light / 237 classified / 0
+coverage holes, real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard −0.407 — known Sev 2 routed artwalk b26 @
+sweep-43, 228th sweep since routing, NOT new, no escalation due; law keys
+severity-1; rhodonea ZERO new contacts, corroborating struct-199's own NN
+10.00), standing gate re-run ALL PASS real exit 0 at 41f4b946. Baseline
+lawfully rewritten: 224265B / 340 entities / sha16 0be489e53b514afd, with
+pre-write assertion (diff set == exactly [nx-struct-rhodonea arrival], 339
+shared ids zero drift — asserted green before the copy) and post-rewrite
+drift ZERO (fresh D-read byte-identical to the new baseline file). Walks:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually per the sweep-228 ceiling law — core 64/64 ALL_PASS @ 0.380
+maxArrival (next-walk-core-paths.ts), NW 5/5 @ 0.38 (nw-approach1-walk.ts),
+NE 7/7 @ 0.38 (ne-approach2-walk.ts), SW 5/5 @ 0.37 (sw-approach3-walk.ts);
+verdicts content-anchored on status strings + per-leg ok counts +
+maxArrival from raw files; physics-banner + support-seam abstentions = the
+known normalized diagnostic set, unchanged. Rhodonea sits r330 on Math
+Avenue — far outside every tier-1 leg (all r<20; the standing route list
+carries no Math Avenue legs), so epoch-A walks stand by construction
+(sweep-53 precedent); the SAT re-run covers the collision surface; folly
+class carries no walk per struct-199's own ledger. Tier-2 250th cycle per
+the committed sweep-271 pointer: hall 8/8 ALL_PASS @ 0.360
+(interior-walk-hall.ts) + bunkhouse 6/6 ALL_PASS @ 0.38031
+(interior-walk-bunkhouse.ts), both ls-verified present pre-run, both real
+exit 0, per-leg ok counts from raw files — match the sweep-235/266-era
+records for the pair exactly. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (226th consecutive clean); sweep89-battery 28/28 PASS
+exit 0 on fresh census-A bytes; interlane md5 f6254cd0 stable, read fresh
+this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN
+md5 c0f569d0 unchanged (248th check; 0 SHARD EXECUTION sections, 0 OPEN
+candidate rows — prose-only OPEN hits), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role (the audit-continues
+banner governs, read fresh). Probe self-catch pre-verdict: first attempt
+to count tier-2 per-leg ok fields keyed a non-existent "legs" field in the
+interior tools' schema (they emit results[] without a legs count) —
+re-anchored on per-result ok:true counts from the raw files, sweep-48
+class, corrected before any verdict. Foreign dirt in tree (windmill
+overhaul scratch, client/server engine files) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect notes,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use (D+1
+ledger row only, absorbed; E+1 baseline rewrite). Next tier-2 pair
+(sweep-273): inn + tower-house (251st cycle — LRU chain re-derived from
+committed pointers this tick: hall/bunkhouse @272 walked fresh,
+forge/potter @271, longhouse/garden-cottage @270, hall/forge @269,
+inn/tower-house @268 stalest standing pair at 4 sweeps; both walk tools
+ls-verified present on disk this tick: interior-walk-inn.ts,
+interior-walk-tower-house.ts).

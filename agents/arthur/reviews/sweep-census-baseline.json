@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 339,
+  "count": 340,
   "entities": [
     {
       "id": "beb4c791",
@@ -9909,6 +9909,42 @@
           "degPerSec": 2.5
         }
       }
+    },
+    {
+      "id": "nx-struct-rhodonea",
+      "kind": "thing",
+      "pos": [
+        -23.019636,
+        0.084164,
+        329.196137
+      ],
+      "yaw": 3.735004599267865,
+      "scale": 1,
+      "lib": "store/dd7b5a631ab4424c.glb",
+      "bbox": {
+        "min": [
+          -2.5,
+          0,
+          -0.3
+        ],
+        "max": [
+          2.5,
+          5.13,
+          0.3
+        ],
+        "size": [
+          5,
+          5.13,
+          0.6
+        ],
+        "center": [
+          0,
+          2.565,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
     },
     {
       "id": "nx-struct-rule30wall",
