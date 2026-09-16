@@ -13915,3 +13915,88 @@ struct204-render-mandelbrot.ts (NEW, tracked), assets/mkv3-mandelbrot.ts
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-204,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-205 (2026-09-16): MANDELBROT PLACEMENT TICK — committed carry from
+## struct-204 executed (nx-struct-mandelbrot v1 PLACED_VERIFIED live at the
+## next on-line Math Avenue step az94/r360; 10.0m rhythm held)
+
+205%3=2 placement-slot cadence WITH a takeable banked form (struct-204:
+"placement = struct-205 carry"; the 178..205 lane precedent — a banked form
+places on the next tick regardless of N%3, build+judge/place alternation
+held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh; same disclosed class as struct-169..204):
+19 owed — monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1,
+versiera v1, elliptic v3, mandelbrot v1 (mandelbrot placed THIS tick —
+debt stays owed). Gate ALL PASS real exit 0 tick-start at 49a33d04
+(vocab-27) + RE-RUN clean immediately before the mutation, HEAD unchanged
+(epoch law honored, no sibling commit landed mid-tick). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 31st tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-204 -> tag struct-205 (re-checked immediately
+before append).
+
+Local bytes re-verified sha256
+8c21e6cb923e2aa3caca6dc5ef49ec5d8d340f62daecd8e7e0a3cd7d4c3c152b ==
+struct-204 v1 bank pin BEFORE upload (shasum -a 256, mtime Sep 16 06:04);
+struct204-decode re-run this tick ALL PASS 9/9 (envelope D8 5.20x2.88x0.90
+origin-centered drift 0.00mm).
+
+SEAT (struct205-scan + struct205-select, fresh 342 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 38 forms; 42 math-family
+structs standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 -> archispiral300 ->
+nephroid310 -> folium320 -> rhodonea330 -> versiera340 -> elliptic350
+(~10m steps). 594 lawful band candidates r352-380; the mandelbrot takes
+the NEXT ON-LINE STEP: az94.0 r360.0, 10.0m step == the procession rhythm.
+NN 10.00 vs nx-struct-elliptic (law 8.0), SAT 6.18 vs nx-struct-elliptic at
+FINAL yaw (law 1.4).
+
+YAW LAW (struct-104 oblique-read, struct-204 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean (the
+melencolia/fourier/cissoid/quadratrix/archispiral/nephroid/folium/rhodonea/
+versiera/elliptic convention). The outbound walker reads the construction
+face obliquely on approach; the 5.20m heart span runs az124/304.
+
+TERRAIN (struct205-terrain-mandelbrot.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 5.20x0.90 slab): spread 15.1mm,
+PY = 0.052746.
+
+PLACEMENT (next-place-struct205.ts, struct203 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 342 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.41x1.83 at yaw 214):
+NN floor elliptic 10.00, SAT worst elliptic 6.18 — clean. 1 upload
+(content-addressed store/8c21e6cb923e2aa3.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 342 -> 343 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class (4.68m² footprint solid monument) — no walk owed. Comp
+bag empty by contract (sole night bead emissive-in-GLB glow_ps_1 KEEP — no
+comp-wipe class on first spawn). Cosmetic inherited from the chassis: join
+log line prints msg.entities (0) instead of msg.state.entities (struct-104
+shape) — the authoritative post-place check is the fresh /geom re-read,
+which is green.
+
+Native debt board after this tick: mandelbrot v1 stays OWED (fallback-judged
+acceptance, disclosed; probe L1/L2/L3 multiplier+cycle+real-line theorems +
+decode D4 wheel law + D6 bead law are the binding evidence); plus
+monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix
+v1, archispiral v1, nephroid v1, folium v1, rhodonea v1, versiera v1,
+elliptic v3 — 19 owed.
+
+Bill eye-check pointer: on Math Avenue past the oval and the wing — a stone
+heart standing in a long curb, an iron wheel tangent at its waist and
+threaded by a horizontal iron axle that butts into the heart's dimple on the
+right and flies free on the left, ending in a single warm bead: the
+Mandelbrot set's coarse skeleton, the map of where z -> z² + c settles and
+where it runs away. Walk the axle line: the rod crosses empty air exactly
+where the set's antenna lives, invisible, all the way out to the bead at −2.
+
+Files: struct205-scan-mandelbrot.ts + struct205-select-mandelbrot.ts +
+struct205-terrain-mandelbrot.ts + next-place-struct205.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-205, D+1 E+1). One upload + one verb total (shared budget). Zero
+pushes.
