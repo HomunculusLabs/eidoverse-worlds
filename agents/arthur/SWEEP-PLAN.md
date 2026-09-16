@@ -12065,3 +12065,61 @@ OBSERVATORY (259th cycle — LRU chain: inn/tower-house @280 walked fresh,
 forge/potter @278, row-cottage/observatory @277 stalest standing pair;
 tools interior-walk-row-cottage.ts + struct2-walk-observatory.ts
 ls-verified present on disk this tick).
+
+
+sweep-281: CLEAN SWEEP, fully-quiet steady-state tick (50th consecutive
+quiet-or-classified). Tick-start HEAD c28b3060 = survey-393 (29th unfreeze
+tick QUIET HOLD, zero mutations); standing gate ALL PASS real exit 0 FIRST
+TRY (98 PASS lines + ALL PASS trailer, exit captured unpiped to
+/tmp/s281/gate.log). Census 343==343 at BOTH epochs (A/B, 20s-paced,
+next-live-census.ts chassis) BYTE-IDENTICAL to each other AND to the
+committed sweep-280 baseline (raw 226071B sha16 4655f01e7c748ec5,
+cmp-verified live-A vs live-B vs the on-disk baseline file): 0 arrivals, 0
+departures, all five semantic drift classes EMPTY (pos/yaw/scale/kind/bbox,
+lib flips, compKeys); no snapshot rewrite owed (no-churn precedent — the
+committed file already describes the live world exactly). Mid-tick
+interleave vocab-28 b94866b0 (scratch-only per its own entry: shared/
+songstand.js pure tier + engine hunks + tools, D+5 E+0, zero live-world
+mutations) — census A/B straddle it byte-identical; standing gate re-run
+ALL PASS real exit 0 at b94866b0 per the epoch law before append. Overlap:
+SAT fresh-live 305 bbox non-light / 237 classified / 0 coverage holes, real
+exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+−0.407 — known Sev 2 routed artwalk b26 choreography @ sweep-43, 237th
+sweep since routing, NOT new, no escalation due (law keys severity-1).
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0,
+legs run individually per the sweep-228 ceiling law — core 64/64 ALL_PASS @
+0.380 maxArrival (next-walk-core-paths.ts, JSON parsed from first brace),
+NW 5/5 (nw-approach1-walk.ts), NE 7/7 (ne-approach2-walk.ts), SW 5/5
+(sw-approach3-walk.ts); verdicts content-anchored on status strings +
+per-leg ok counts from raw files. Tier-2 259th cycle per the committed
+sweep-280 pointer: row-cottage 6/6 ALL_PASS (dists
+0.2950/0.3681/0.3838/0.2940/0.3617/0.3066) + observatory circuit 5/5
+ALL_PASS (0.2800/0.3890/0.3030/0.3450/0.3140), both real exit 0, both
+tools ls-verified present on disk pre-run — match sweep-277-era records
+for the pair exactly. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (235th consecutive clean); sweep89-battery 28/28 PASS
+real exit 0 on fresh census-A bytes; interlane md5 f6254cd0 stable, read
+fresh this tick. Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (257th
+check; 0 SHARD EXECUTION sections, 0 open candidate rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs and was read fresh via the loop/plan
+reload. Probe self-catches pre-verdict, both corrected with no repair
+owed: (a) inline heredoc python blocked by the gateway parser — sanctioned
+retry via saved script file per the core law; (b) first ledger-law probe
+used a self-invented slice rule (last audit-balance marker, excluded
+lines) and false-MISMATCHed — corrected by copying the canonical law()
+from ledger-append.py verbatim, EXACT 2370879 before any verdict (sweep-36
+class). Diff tool sweep281-census-diff.py folded from the committed
+sweep280 chassis (sed-swap only: /tmp path + header; py_compile clean,
+clean exit 0 at BOTH epochs A/B unpiped on the real bytes). Foreign dirt
+in tree (windmill overhaul scratch, cabin/carousel prototype dirs,
+client/server engine files, fleet shells, debug-bower scripts, moon-moth
+dir) is sibling work-in-flight, untouched per the ownership law. Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-282):
+longhouse + garden-cottage (260th cycle — LRU chain re-derived from
+committed plan pointers this tick: row-cottage/observatory @281 walked
+fresh, inn/tower-house @280, forge/potter @278, row-cottage/observatory
+@277, longhouse/garden-cottage @275 stalest standing pair at 6 sweeps;
+both walk tools ls-verified present on disk this tick:
+interior-walk-longhouse.ts, interior-walk-garden-cottage.ts).
