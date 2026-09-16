@@ -1029,6 +1029,94 @@ one 8KB comp, no script, no new verb.
       interaction (extends growth stage family).
 - [ ] Music sequencer: step-grid composition on an instrument entity,
       shared playback state, late-join sync.
+- [ ] Weather-lamp composition: lantern tours that obey weatherzones
+      (lamps dim under rain windows, restore on release) — first
+      affordance-pair composition.
+- [ ] Guestbook-inscription bridge: signing a guestbook can mint a
+      dedication plaque line under the inscription plate's caps and rank
+      rules.
+- [ ] Vendor-instrument economy: vending stands sell sequencer patterns;
+      stock, grant log, and playback state stay consistent across
+      restart.
+- [ ] Harvest festival script: composed choreography — bells schedule,
+      weather window, lantern tour, vendor restock — one authored
+      timeline driving four affordance families.
+- [ ] Trail markers: waypoint posts that pair with teleport beacons —
+      use-action "guide me" walks the player-flag toward the linked
+      beacon with cooldown.
+
+### CHIMES CONTRACT (vocab lane — drafted vocab-21, 2026-09-15)
+
+**Trigger.** A chime is a DOOR'S companion, not its own action surface: an
+entity carrying BOTH `comp {type:"door", data:{...}}` and
+`comp {type:"chime", data:{...}}` rings when the DOOR TRANSITIONS. There
+are NO chime use actions (the bell doctrine: an event sounds it, not a
+hand — the door family owns open/close/toggle; the music family owns
+hand-played notes). The door's own authority and arm's-reach gate ARE the
+chime's trigger gate: no transition, no ring; a suppressed transition
+(out-of-reach skip, no-op) rings nothing. Attaching/removing the comp is
+builder (rank 1) — the author's standing decision that this door
+announces itself, identical doctrine to all 15 prior families. A chime
+comp on a door-less entity is legal annotation that can never fire
+(`chime-lint` notes it once per transition attempt — none exist).
+
+**State — none, ever (the bell doctrine).** The comp is a static authored
+table; no comp transitions are minted, no toll state is persisted. The
+FOLD carries only what the door already wrote (`door.open`/`door.at`);
+late joiners hear nothing from the past (presence-plane sound), read the
+door state from the fold, and know this door chimes from the standing
+comp.
+
+**Effects.** A door transition on a chiming door appends the door's own
+comp + say (unchanged — the door engine is not edited) and then rings:
+ONE `{type:"sound", id, note:{hz,sec,gain,wave}, p:[live pos], at, by,
+chime:{open, first:true}}` broadcast on the presence plane (the music/
+force doctrine: never logged, never folded, never replayed). The pitch is
+AUTHORED per direction: `openHz`/`closeHz` (note name or hz; defaults
+open E5 / close C5 — a rising pair, door answers differently than it
+asks). Distance attenuation stays the client's (music.js path).
+
+**Rate caps (the whole abuse story).** `minGap` real-seconds between one
+chime's rings (floor 2, clamp [2,3600], default 4), in-memory only (a
+restart re-arms — harmless, the door log is the truth); door uses are
+already verb-rate bounded (12/4s) and rank-0 + reach gated, so a chime
+can never ring faster than its door can legally transition; the sound is
+presence-plane — zero log traffic per ring, so even a thrashed door mints
+NOTHING the fold must carry.
+
+**Authority.** None of its own: the door's rank-0 + arm's-reach gate
+already authorized the transition; the ring is world authority on a
+presence-plane percept only (no verb can be minted from a ring).
+
+**Replay behavior.** Replay-inert like all reactions: folding a
+historical use/comp/say never re-fires; the engine runs ONLY from the
+live door-transition path. On restart the fold carries the door state and
+the chime table; the next LIVE transition rings again.
+
+**Failure behavior.** Malformed comp → clamp + `chime-lint`
+(particles-lint doctrine): hz clamps to the piano (music.js hzClamp), sec
+[0.05,3] d0.5, gain [0.05,1] d0.5, wave ∈ sine/square/sawtooth/triangle
+d sine, minGap [2,3600] d4, unknown keys ride (the bag is public
+annotation). A chime with no door on the entity → `chime-lint` naming
+why, once per boot per entity. The whole hook wrapped in try/catch (house
+rule 3 — no chime takes the server down).
+
+**Browser path.** ZERO client code: the ring is an ordinary
+{type:"sound"} message music.js already synthesizes (net.js case 'sound'
+→ bus → playNoteAt — position, attenuation, pan, world-volume slider all
+for free). Chime state needs no folded read — the comp is standing
+authoring, the sound is the percept.
+
+**MCPL path.** The `sound` case gains a `chime` branch: one act line per
+ring, radius-gated like every ambient sense — `<doorId> chimes (E5) — by
+<who>` through the denoiser. `look()` adds the affordance line via
+`shared/chime.js describeChime` (the describeBell pattern); the shared
+module is the one truth for clamps, pitch resolution, and the text tier.
+
+**Intent.** The door announces itself. A shop bell over the door, a
+temple gate that gongs, a house door that welcomes — sound without log
+weight, rate-capped, riding the authority the door already proved. One
+8KB comp, zero client code, no new verb, no new action string.
 
 ### PHRASES CONTRACT (vocab lane — drafted and implemented vocab-1, 2026-09-14)
 
