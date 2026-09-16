@@ -14000,3 +14000,132 @@ struct205-terrain-mandelbrot.ts + next-place-struct205.ts (all NEW,
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-205, D+1 E+1). One upload + one verb total (shared budget). Zero
 pushes.
+
+## struct-206 (2026-09-16): R11-27 VIVIANI'S CURVE — BUILD+JUDGE TICK (the globe,
+## the windows, and the square; theorems machine-verified: on-both-surfaces 2.2e-16,
+## the-eight closure 1.7e-16, window area S²(π−2) exact, quadrability remainder 4R²
+## exact; probe 8/8 + RED; decode 8/8 + RED control; judged PASS — ZAI fallback
+## disclosed; ACCEPTED BANKED NOT PLACED)
+
+206%3=2 build slot (mandelbrot placed struct-205; nothing banked — tensegrity v6
+behind Bill's eye-gate, not takeable), refine pool empty of payable items (the
+19-debt native board cron-unpayable — tool catalog carries only the zai-vision
+MCP, tool_search fresh this tick; same disclosed class as struct-169..205) ->
+build+judge per the 178..205 alternation. Gate ALL PASS real exit 0 tick-start
+at 5900fa4e (survey-392; unpiped terminal GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 32nd tick, 0 OPEN nx-struct rows). Ledger
+max re-derived struct-205 -> tag struct-206 (re-checked immediately before
+append).
+
+FORM SELECTION (fresh grep, all three ledgers + census 343): viviani 0/0/0 —
+never named, never barred, never built. Register: opens the SPHERICAL-CURVE
+branch — a space curve lying ON a sphere (no standing form is that: trefoil
+pinwheel + borromean are free-space knots; lemniscateseat is a flat furniture
+eight — proximity disclosed). Kin-check fresh: cassini BARRED (nephroid+
+lemniscate kin), lissajous artwalk-chartership, theodorus spiral-kin, dupin/
+cyclide/oloid zero clean presence (hyperboloid-substring near-miss named).
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): L1
+ON-BOTH-SURFACES — the parametrization x=cos(t)/2+1/2, y=sin(t)/2, z=sin(t/2)
+sits on the unit sphere AND the tangent cylinder (x−1/2)²+y²=1/4 to residuals
+2.2e-16/1.1e-16 over 4001 stations. L2 THE EIGHT — node double point at
+(1,0,0) exact, passes through BOTH poles on the axis exact, upper loop z≥0 /
+lower z≤0, loops separate 0.292 outside the 0.2 node ball. L3 THE WINDOW —
+each lobe area EXACTLY S²(π−2) = 2.5686 m² (numeric rel 3.3e-7); the pair =
+the classical Viviani window 4R²(π/2−1) = 5.1372 m². L4 THE QUADRABILITY —
+honest antipodal form (two self-caught rejections recorded: conflated slab
+rule; naive 90°-spaced four-window reading OVERLAPS — union 2.659R² remainder
+3.624R² NOT quadrable, rejected): each horizontal-axis window ∩ hemisphere is
+the half-bowtie (π−2)R²; two ANTIPODAL cylinders disjoint (measure zero); 2πR²
+− 2(π−2)R² = 4R² EXACT rel 4.1e-5 — THE SQUARE ON THE DIAMETER, quadrable.
+
+CONCEPT (written before build): THE GLOBE, THE WINDOWS, AND THE SQUARE. One
+idea: the 1692 dome-window problem closed into a globe. IRON carries THE EIGHT
+— a tube strap (r 0.05, 400 arc-uniform stations, closed, elliptic arc table
+no closed form) running exactly ON the sphere along Viviani's curve, a
+figure-eight through both poles self-crossed at the node — and THE SQUARE —
+the circumscribed frame (side 2R = 3.0 m == the diameter), area exactly 4R² =
+the quadrable remainder: hemisphere minus four windows, four teardrops of two
+antipodal bowties. STONE carries the plinth (3.4×3.4, footprint 11.56 m² <
+16 — FOLLY CLASS, no walk owed; h 3.35 real trimesh). Seat honesty (self-
+caught in translation): the circumscribed bottom side cannot ride at the S
+pole 8cm under the plinth top (fully buried rod); re-seat = bottom side a
+PROUD INLAID CHANNEL (top face +2cm above plinth top, no coplanar z-fight),
+S pole welds ON it; top rod's kiss IS the N pole (strap welds through it,
+designed); side rods socket 5cm into the plinth. Node rotated +45° about Y
+to the approach's front-right. Sole night element: one warm bead at the node
+(s363 sole-bead law). Envelope 3.400×3.350×3.400 origin-centered; nodes 3
+(ps_stone + ps_iron + glow_vv_1).
+
+PROBE (struct206-probe-viviani.ts, tracked — the ONE contract; mk + decode
+import it): L1–L4 as above; L5 strap table (monotone, closure 7.7e-16, max
+step 0.033 m); L6 the-square (side 3.0 exact, kisses ON sphere ±1e-9, top
+kiss == N pole, channel proud +2cm, side feet ≤5cm socketed); L7 seat +
+envelope + folly class; RED control (sign-flipped cylinder: law detects,
+2/4001). TWO integration self-catches cured pre-build (honest record, both
+in L3/L4); a THIRD composition catch (buried bottom rod) cured by the proud-
+channel re-seat before build — zero rejected build iterations.
+
+BUILD (agents/arthur/assets/mkv3-viviani.ts, staged -f): root identity
+(struct-188 law); world-frame voussoir/tube chassis (mandelbrot lineage).
+Deterministic ×2 byte-identical sha256
+6b7522f214db57cab7caaf9d39838df561920ec3f621aef4dd1fcac46d422da6, mtime-
+verified. Nodes 3.
+
+DECODE (struct206-decode-viviani.ts, tracked) ALL PASS 8/8 + RED control on
+mandelbrot bytes (5 FAILs, content verdict): D1 census 3 nodes; D2 plinth
+24/24; D3 strap 4411/4507 iron verts within tube+10mm of the dense curve AND
+on the sphere shell, N pole 107 / S pole 107 / node 221 verts, strap
+population 4367/4367 on-curve; D4 square rods [70,70,36,36], span 3.070 ==
+2R+rod, top at N-pole weld; D5 bead 315 verts centroid == node ±5mm r 0.0720
+emissive present; D6 hollow 0/4531 verts deep inside the globe; D7 envelope
+drift 0.00mm; D8 texMats ps_stone/ps_iron.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law disclosed;
+native re-judge owed, riding the owed board):
+- gameplay 18m: identity PASS (deliberate monument, frame + strap + node
+  read), silhouette PASS (upper loop crisp against sky, node X legible,
+  lower loop traceable at reduced contrast — disclosed margin), grounding
+  PASS. ONE defect finding — "orphaned dash squiggle" at (333–360, 417–422) —
+  FALSIFIED DETERMINISTICALLY (struct206-shadow-falsify.ts: sun at (8,12,6)
+  projects ironwork h 2.5–3.35 m to ground 120–180 px left of center; band
+  carries 12 dark px WITH shadows -> 0 WITHOUT; clean control band 0/0 both
+  states) — the squiggle IS the monument's true cast shadow, physical, not
+  geometry. Finding DEAD; no iteration spent.
+- closeface: PASS 4/4 — construction traceable end-to-end (top-rod weld ->
+  right lobe -> node bead -> lower lobe -> plinth), node reads proper X
+  occlusion (genuine 3D self-crossing), hollow reads deliberate (sky through
+  the arcs), materials clean (stone matte/chunky vs iron dark/sleek), zero
+  seams/z-fight; the cast shadow read as "doing valuable work". Cosmetic
+  notes disclosed: top-rod weld pinch nub, lower strap seats a touch embedded
+  — family-consistent.
+- night (struct206-warm-probe.py, survey392 chassis): gameplay frame EXACTLY
+  1 warm cluster (12 px, x539–541 y330–335) == the node — s363 sole-bead law
+  PASS on the binding frame. night-face 2 clusters = predicate-split of the
+  ONE bead (centers 11.5 px apart < 16.4 px bead diameter at closeface
+  scale; decode D5 proves exactly one emissive node) — SAME SOURCE, disclosed.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-207 committed
+carry: fresh census scan (8m NN law, district soft cap 6, Math Avenue
+eligibility; procession continues past mandelbrot r360), yaw law (frame reads
+on a face, node to the approach's front-right; oblique 30–40° per struct-104
+convention on the procession's standing 214° convention), terrain preflight
+over the TRUE rotated footprint, hash-gated plain spawn nx-struct-viviani,
+comp {}. Folly class — no walk owed. Native re-judge debt: viviani v1 joins
+the owed board (mandelbrot v1 placed struct-205 stays owed; board 20 owed
+with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the heart and
+the wheel — a hollow globe of iron: one strap sweeps a figure-eight over the
+top and under the bottom, crossing itself at a bright bead; the square frame
+around it is exactly as wide as the globe, its area the quadrable remainder
+of the 1692 window problem. Walk around it: the eight never leaves the
+sphere that isn't there.
+
+Files: struct206-probe-viviani.ts + struct206-decode-viviani.ts +
+struct206-render-viviani.ts + struct206-shadow-falsify.ts +
+struct206-warm-probe.py (NEW, tracked), assets/mkv3-viviani.ts (NEW, staged
+-f), reviews/struct206-viviani/ (11 frames incl. shadow controls, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-206,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
