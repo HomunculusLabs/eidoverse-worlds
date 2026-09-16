@@ -17369,3 +17369,94 @@ shared-budget use (D+0, E+0).
   routing; ticks 211-375 precedent; ledger tail running total
   2370822). STANDING RECOMMENDATION carried unchanged (s182-s375): end
   the SURVEY lane or convert to a no-LLM monitor when attended.
+
+## Judged index (survey-377)
+
+- survey-377 (2026-09-15, ARRIVAL EPOCH, twelfth of the unfreeze — ZAI
+  FALLBACK 3 calls/3 disclosed + 2 deterministic falsification probes,
+  native vision ABSENT from this cron session's tool catalog
+  (zai-vision MCP only, flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed): gate ALL PASS real exit 0 FIRST
+  TRY at tick-start HEAD ecfdd2f8 (city-156 tip, 98 PASS lines incl.
+  ledger law EXACT 2370824 — total +2 vs survey-376's 2370822 via
+  struct-193 D+1/E+1 + sweep-265 D+0; gate ran at tick-start HEAD so
+  epoch law clean). HEAD advanced mid-tick ecfdd2f8 -> 9ac67e5a
+  (vocab-19 message-boards, foreign lane, scratch-only per its commit
+  message; re-gated ALL PASS exit 0 at the NEW HEAD, 98 PASS lines incl.
+  ledger law, before commit). Census via committed next-live-census.ts
+  exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each
+  337 entities, each 222466B, each sha256-16 e9462a80fb59fb08. Set-diff
+  vs survey-376 baseline (336, a1eb375b): +1 ARRIVAL nx-struct-
+  archispiral (-20.926942, 0.014409, 299.269215 yaw 3.735004599267865
+  = 214deg oblique-yaw law, az94/r300 on-line step == fourier->
+  cissoid->quadratrix 10m rhythm, lib store/d343609abd0d9377.glb,
+  comp {}) / 0 departures / 0 lib flips / 0 pos-yaw-scale-comp drift on
+  the 336 holders — classified SIBLING WORK: struct-193's committed
+  PLACED_VERIFIED tuple verbatim (Math Avenue procession on-line step
+  past quadratrix; struct domain; lib == struct-192 banked v1 upload sha
+  d343609a) — the exact predicted arrival (s376 trigger list).
+  ARRIVAL-GATED JUDGE LAWFUL (s375 precedent): slice = the 1 new-bytes
+  object (owner's own judgment was ZAI fallback — independent read
+  exactly what the arrival needs). Live store bytes fetched curl UA
+  HTTP 200 16992B served-sha16 008ba855dac2804e (lib d343609a =
+  struct-192 v1 upload sha, DRACO re-encode law — served != upload,
+  struct-104 class); render via NEW survey377-render-archispiral.ts
+  (survey375-render-quadratrix chassis verbatim incl. face-on night
+  frame law — mast bead glow_as_1 caps the iron mast — + closeface
+  construction-read view, s365 close-face law; DRACO-aware, live-meadow
+  ground 0x3d3a29) exit 0, 7 frames reviews/survey377-archispiral/
+  (ignored residue), served-bytes bounds 4.100x2.320x4.100 grounded
+  y~0 — EXACTLY struct-192's committed envelope (R_MAX 2.05 footprint,
+  mast 2.25 + bead cap 2.32). VERDICT: nx-struct-archispiral CLEAN 3/3
+  — gameplay 18m CLEAN 4/4 (identity PASS deliberate mathematical
+  monument/folly — generic-spiral read at 18m acceptable, the
+  equal-spacing vs logarithmic distinction is walk-up tier by design;
+  silhouette PASS one continuous ascending coil hub->mast, zero
+  detached/floating segments; grounding PASS plinth flush + attached
+  contact shadow — margin: shadow faint against dark olive ground;
+  surface PASS zero z-fight/holes/voids/strays; DISCRIMINATING READ:
+  turn gaps measured ~16px right / ~14-15px left, NO outward
+  shrinkage — equal-spacing signature preserved, does NOT read
+  logarithmic, corroborating probe L2 equal-spacing 0.50265 spread
+  2.2e-16; rising trend legible ~68px rise over 3 turns; eye
+  terminates at the brass finial (489,285) as designed; margins
+  cosmetic: mast 2-3px thin shimmer risk, top-whorl horizontal briefly
+  competes with mast terminus). closeface ~8-10m CLEAN-after-
+  falsification — judge findings SPLIT: equal-spacing CONFIRMED
+  Archimedean (gaps 26-30/34-38/30-36px equal within error, no
+  monotonic trend — second independent equal-spacing read); "floating
+  outer terminus at (340,130)-small" + plinth interpenetration CLAIMS
+  FALSIFIED by deterministic corridor probe (survey377-junction-probe.
+  ts): walking x 690->495 along the band slope on the full-res frame,
+  ZERO sky-only columns from x673 (the band's outer silhouette edge —
+  the judge read the silhouette edge as a cut end-face) to the mast
+  x~500; only sky runs are 18 cols beyond the band edge (expected sky)
+  + 3 cols past the mast's far side; stone~11-31/col throughout — band
+  CONTINUOUS to the mast, probe-law-11 resolution (pixels outrank the
+  render claim, and decode D5 curve-end->mast-axis 0.0mm + D2 3D band
+  law already bind the same fact); "plinth interpenetration" at the
+  inner turn = the DESIGNED hub embed (probe L7: coil spring embeds
+  hub r0.17 plan+height) — not a defect. Suspect-block/inner-cluster
+  notes fall under the owner's own disclosed margins (blocky
+  segmentation reads deliberate masonry). night-face PASS via
+  deterministic probe: EXACTLY one warm cluster each frame (probe:
+  gameplay 32px bbox x486-493 y282-287, face-on 225px bbox x495-513
+  y199-214, zero spill, zero second clusters) = glow_as_1 sole-night-
+  element contract delivered verbatim, bead cleanly caps the mast
+  apex. CONCURS struct-192 banked v1 PASS (probe 9/9 + 4 self-catches
+  + decode 8/8 + RED control) + struct-193 PLACED_VERIFIED —
+  independent corroboration, no defect. Native re-judge debt on
+  archispiral v1 carries (already owed per struct-193; board:
+  monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+  menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+  cissoid v2, quadratrix v1, archispiral v1). Pools: IMPROVE-PLAN md5
+  c0f569d0 unchanged (266th check); SURVEY CANDIDATES 0 OPEN rows; no
+  candidate row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0).
+  Census baseline for next tick: /tmp/survey377-census-a.json (337,
+  222466B, sha256-16 e9462a80fb59fb08). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; CLEAN
+  concurrence routes nothing; ticks 211-376 precedent; ledger tail
+  running total 2370824). STANDING RECOMMENDATION carried unchanged
+  (s182-s376): end the SURVEY lane or convert to a no-LLM monitor when
+  attended.
