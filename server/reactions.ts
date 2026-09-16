@@ -40,6 +40,11 @@ import { reactWater } from "./water.ts";
 // tend action vocabulary — the plant lifecycle. Same dispatch doctrine,
 // last (a plant may also be watered/instrumented).
 import { reactGrowth } from "./growth.ts";
+// The garden engine (vocab-24, § GARDENS CONTRACT): comp {type:"garden"}
+// owns the plant/harvest/weed action vocabulary — the plantable tile
+// grid with time-derived per-tile ripeness (the growth family's bed).
+// Same dispatch doctrine (a bed may also host living plants).
+import { reactGarden } from "./garden.ts";
 // The companion engine (vocab-13): comp {type:"companion"} owns the
 // beacon/heel/stay/come/release action vocabulary — the animal follower.
 // Same dispatch doctrine, last (a companion may also be a growth host).
@@ -156,6 +161,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // owns the advance/tend action vocabulary — the plant lifecycle. Same
     // dispatch doctrine, last (a plant may also be watered/instrumented).
     if (reactGrowth(w, cause, ent, id, action)) return;
+    // The garden slice (vocab-24, § GARDENS CONTRACT): comp {type:"garden"}
+    // owns the plant/harvest/weed action vocabulary — the plantable tile
+    // grid. Same dispatch doctrine (a bed may also host living plants).
+    if (reactGarden(w, cause, ent, id, action)) return;
     // The companion slice (vocab-13, § COMPANIONS CONTRACT): comp
     // {type:"companion"} owns the beacon/heel/stay/come/release action
     // vocabulary — the animal follower. Same dispatch doctrine, last.

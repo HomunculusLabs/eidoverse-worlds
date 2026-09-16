@@ -49,6 +49,10 @@ import { describeWater } from "../shared/water.js";
 // The growth affordance line (vocab-12): same shared-verbatim pattern —
 // look() names the plant's current stage and the advance/tend actions.
 import { describeGrowth } from "../shared/growth.js";
+// The garden affordance line (vocab-24): same shared-verbatim pattern —
+// names the bed (planted/ripe counts derived at read time) + the
+// plant/harvest actions.
+import { describeGarden } from "../shared/garden.js";
 // The companion affordance line (vocab-13): names the follower, its owner,
 // and the heel/stay/come/release command vocabulary.
 import { describeCompanion, normalizeCompanion, followStep } from "../shared/companion.js";
@@ -1978,6 +1982,9 @@ export class WorldAgent {
       // growth names its CURRENT stage and the advance/tend actions — the
       // text-tier read of the same folded comp every runtime derives from
       if (c.growth) aff.push(describeGrowth(c.growth));
+      // a garden names its BED — planted/ripe counts derived at read time
+      // (live), the season-log count, and the plant/harvest actions.
+      if (c.garden) aff.push(describeGarden(c.garden));
       // a companion names itself, its OWNER, and the command vocabulary —
       // the text-tier read of the same folded comp the engine mints
       if (c.companion) aff.push(describeCompanion(c.companion));
@@ -2017,7 +2024,7 @@ export class WorldAgent {
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

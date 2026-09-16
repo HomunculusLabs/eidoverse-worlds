@@ -1327,8 +1327,174 @@ goats to come" on a plaza bench, a memorial tree, a founder's stone —
 one line, one owner, the ladder itself deciding who may maintain it,
 the log the only memory. One 8KB comp, no script, no new verb.
 
-- [ ] Garden plot: plantable tile grid with per-tile state and harvest
+- [x] Garden plot: plantable tile grid with per-tile state and harvest
       interaction (extends growth stage family).
+      DONE vocab-24 (2026-09-16): comp {type:"garden"} — reactGarden in
+      server/garden.ts rides reactToUse's dispatch after growth (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to
+      verbs.ts / server.ts / world.ts — `use` args ride verbatim so
+      `crop`/`tile` needed no validator change). Contract in § GARDENS
+      CONTRACT below implemented as written. Evidence: tools/gardentest.ts
+      RED 33 failing (engine absent; 34 pre-passing = shared math + shell
+      gates, the honest vocab class) then ALL PASS 67/67 after the GREEN
+      run caught ONE genuine engine defect (nearestTile returns {i,tile}
+      — the harvest pick read `.t` off the wrapper; cured same tick) and
+      three disclosed test-expectation fixes (nearest-empty from [0,0]
+      with tile 4 planted is tile 1; worldToLocal at yaw π/2 wants world
+      [2,0,-1] per the align-1 forward; the occupied-skip grep is "already
+      planted"). gardentest registered in the servergate battery;
+      servergate 39/44 — every vocab suite green (gardentest 67, smoke 85,
+      comptest 33, compfold 24, behaviortest 27, worldops 23, locktest 13,
+      leasetest 19, modtest 23, doortest 28, platetest 37, watertest 34,
+      growthtest 43, companiontest 36, musictest 38, portaltest 35,
+      publishtest 28, phrasetest 17, weatherzonetest 48, waystonetest 37,
+      reservationtest 44, belltest 37, soundposttest 48, boardtest 59,
+      vendortest 54, chimetest 30, tourtest 36, dedicationtest 57) with
+      lamptest 21/13 + guestbooktest join-timeout BOTH re-proven ALL
+      PASS standalone (34/34, 35/35 — boot-timeout/port-squatter class
+      under battery load, my first timed-out battery run's children
+      squatted shared port 8997; vocab-23's stash-proven sibling-dirt
+      class is NOT implicated this tick) and authtest + support-lifecycle
+      + permtest = the documented pre-existing classes (vocab-1..23
+      identical). shared/garden.js (normalize/tile math/stageIndexOf via
+      the growth family's own stageAt/describeGarden) shared verbatim by
+      engine + tests + mcpl look(); describeGarden affordance line +
+      exclusion-list entry in agent.ts. Scratch worlds only; no
+      production world touched. No eye-check owed (zero client code —
+      chat + folded state only; the crop-sprite visual tier is
+      deliberately deferred, protocol before UI decoration).
+
+### GARDENS CONTRACT (vocab lane — drafted and implemented vocab-24, 2026-09-16)
+
+**Trigger.** A garden plot is an entity carrying
+`comp {type:"garden", data:{...}}`. The action strings `plant`,
+`harvest`, and `weed` are GARDEN vocabulary on the freeform
+`use {id, action}` path (the reactions doctrine: other action strings
+pass through untouched — a bed ignoring `use {action:"ring"}` is exactly
+correct; plant/harvest/weed are DISJOINT from all 18 prior families —
+"weed", not "clear", because "clear" is a legal WEATHER STATE a
+weatherzone menu may legally carry; the waystone-disjointness doctrine).
+Attaching/removing the comp is builder (rank 1) — the author's standing
+decision that this ground grows, identical doctrine to the whole family.
+
+**State — the fold is the bed; ripeness is DERIVED FROM TIME.** The
+AUTHORED `crops` menu `{name: stages-ladder}` rides VERBATIM in the
+engine's carry (regions doctrine — the ladder is the growth family's own
+shape, crop-flavored defaults). The ENGINE's `tiles` table (per-tile
+plantings keyed by row-major index `"i" → {c, at, by}` — the FULL table
+written on every transition) and `harvests` season log (newest-first
+`[{tile, crop, who, at},…]` capped at `logCap` [1,64] d12 evicting the
+oldest, guestbook/vendor doctrine) are the durable state: every
+plant/harvest/weed is ONE world-authored comp transition
+`comp {id, type:"garden", data:{...authored, tiles, harvests}}`.
+ENGINE_KEYS (tiles/harvests) are STRIPPED from the authored carry at each
+engine write then composed fresh (weatherzone/vendor doctrine — a
+re-authored comp over a live bed can never smuggle a stale bed or season
+log). NOTHING else is stored anywhere. A tile's ripeness is
+`stageIndexOf(crops[c], at, now) === ladder.length-1` — the growth
+family's own `stageAt` imported and shared, never re-implemented
+(mirrored math stays mirrored), never tweened, never swept: past the
+ladder's total dwell the tile WILTS (unharvestable — a neglected crop
+withers; the growth family's wilt hold, per tile). A tile planted before
+a crash keeps growing through it, identical stage on every client.
+
+**Plant.** `use {action:"plant", crop?, tile?}` — rank 0. Crop defaults
+to the FIRST ware of the menu (the headline crop, vendor doctrine); an
+unknown crop skips fail-closed with `garden-skip` naming it ("not grown
+here"). Tile: an explicit `tile` is integer-or-skip (off-grid skips
+naming the grid; occupied skips naming the tile — a clamped index would
+plant the wrong furrow, the tour on/off doctrine); NO tile arg derives
+the NEAREST EMPTY tile to the user's entity-local pose (the browser path:
+a human walks to the furrow they mean — `/use` carries no args; the
+agent path: pass `tile` explicitly). A full bed skips ("the bed is
+full"). A write mints `{...carry, tiles:{...bed, [i]:{c, at, by}}, harvests}`
++ ONE `say` (actor `world`, args `{text:<line>, id, gd:{tile, crop, who,
+at}, cause:<use seq>, by:<user>}` — the phrases/doors/vendor provenance
+grammar exactly). Line default `"<who> plants <crop>"` (authored
+`plantAt` overrides, ≤200c).
+
+**Harvest.** `use {action:"harvest", tile?}` — rank 0. Tile: explicit
+integer-or-skip (empty skips "is empty"; unripe skips "not ripe yet");
+NO tile derives the NEAREST RIPE tile to the user's local pose. Nothing
+ripe skips fail-closed ("nothing ripe to harvest"). A harvest REMOVES
+the tile, prepends `{tile, crop, who, at}` to the season log, writes ONE
+comp + ONE say with `gd:{harvest:{tile, crop, who, at}}`. Line default
+`"<who> harvests <crop>"` (`harvestAt` overrides).
+
+**Weed — the gardener's act.** `use {action:"weed", tile?}` — BUILDER
+(rank 1, via rightsOf — the vendor-restock doctrine: a visitor's weed
+skips naming the boundary). Bare weed clears the WHOLE bed (log
+preserved); named weed clears one tile. An empty bed/empty tile is a
+no-op skip. Line default `"<who> weeds the bed"` / `"<who> weeds tile
+<i>"` (`weedAt` overrides). Weeding is how a wilted tile returns to
+plantable — time wilts, the gardener clears.
+
+**Authority/reach.** Planting and harvesting are rank 0 (anyone present
+— the author's published behavior, world authority on the effect only)
+plus the ARM'S-REACH gate TO THE TARGET TILE's WORLD CENTER (vPunt
+arithmetic): the tile's entity-local center (row-major, x=column,
+z=row, grid centered on the entity origin, `pitch` [0.4,4] d1.2 apart)
+rotated by the entity's LIVE pos+yaw (align-1 local→world; lease stream
+pos if leased). The hand goes to the furrow, not the fence. Bare weed
+gates reach at the entity origin (the fence line — it clears
+everything). `reach` authored, clamped [2,12], default 4. Out-of-reach
+use is a `garden-skip` naming the distance. Spectators bounce at the
+shell (`use` is spectator-gated there). Lock composes as for doors:
+a locked bed still grows (lock refuses place/punt/spawn/comp/remove —
+not `use`). Effects are say + comp-on-self ONLY: no other verb can be
+minted from a garden use.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use or comp never
+re-fires. On restart the world folds tiles/harvests from the log — the
+bed IS its log, and every tile's ripeness derives from its folded
+anchor + the clock: a tile planted pre-restart is FURTHER GROWN
+post-restart, zero traffic, zero engines. `world_history
+{verbs:["use","comp","say"]}` traces every planting's chain
+(cause → comp+say with by).
+
+**Rate.** Uses are user-paced (the verb rate bounds `use`); each mints
+at most 2 entries (comp + say); no-ops, skips, out-of-reach, and
+out-of-menu uses mint nothing. The bed is bounded by the grid (≤64
+tiles) and the season log by logCap (≤64) — the comp cannot grow
+unboundedly with traffic.
+
+**Failure behavior.** Malformed comp → clamp + `garden-lint`
+(particles-lint doctrine): cols/rows [1,8] d3, pitch [0.4,4] d1.2,
+crop ladders sanitized per the growth family's own clamps (dwell
+[0,86400] d300 crop-flavored, stages ≤8, names ≤24c), crops capped at 6
+(excess dropped + noted), tiles off the grid / off-menu / anchorless
+DROPPED + noted, `logCap` [1,64] d12, `reach` [2,12] d4, lines clamped
+200c, unknown keys ride (the bag is public annotation). The authored
+shape rides VERBATIM in the engine's carry (regions doctrine). Missing
+entity → silent pass-through. The 8KB degrade keeps {tiles, harvests}
++ lint (fail closed against bloat, never against the hand). The whole
+reaction wrapped in try/catch (house rule 3 — no bed takes the server
+down).
+
+**Browser path.** ZERO client code: the say arrives as ordinary chat
+(actor `world`); the bed + season log are readable from any folded
+snapshot (`state.entities[id].comp.garden.tiles/.harvests`) — scripts
+and future UI consume it without a new protocol surface. A visible tier
+(per-tile crop sprites scaled by the growth family's growthK, furrow
+decals) is deliberately deferred — protocol before UI decoration; the
+growth family's client/lib/growth.js already demonstrates the realization
+pattern for a future tier to copy.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the bed via `shared/garden.js
+describeGarden` (the describeDoor pattern) — grid size, planted/ripe
+counts (derived at read time, so they are live), season-log count, the
+crop menu, and the plant/harvest action hints. An agent plants through
+the ordinary `use` verb (passing `crop`/`tile` explicitly — the
+nearest-tile derivation is the browser human's path).
+
+**Intent.** The world grows what you plant. A kitchen garden by the
+bakery, a pumpkin patch for the festival, a child's first radish bed —
+many tiles, many hands, crops that ripen by TIME and wither by neglect,
+a season log that remembers who harvested what, one 8KB comp, no
+script, no new verb, the growth family's own arithmetic doing the
+growing.
 - [ ] Music sequencer: step-grid composition on an instrument entity,
       shared playback state, late-join sync.
 - [ ] Weather-lamp composition: lantern tours that obey weatherzones
