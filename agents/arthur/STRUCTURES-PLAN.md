@@ -14643,3 +14643,137 @@ Files: struct211-scan-arbelos.ts + struct211-select-arbelos.ts +
 struct211-terrain-arbelos.ts + next-place-struct211.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-211,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-212 (2026-09-17): R11-31 HIPPOCRATES' LUNES — BUILD+JUDGE TICK
+## (the first quadrature: two crescents that together equal a triangle;
+## theorems machine-exact: right angle 0.0e0, lune areas == c^2/8 == 4.000
+## to <1e-6, lunes sum == triangle == 8 exact; probe 8/8 + RED; decode 9/9
+## + RED control; judged PASS gameplay 4/4 + night 3/3 + closeface 4/4 —
+## ZAI fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+212%3=2 build slot per the 178..211 alternation (arbelos placed struct-211,
+bank empty — no takeable carry; refine pool empty of payable items: the
+22-debt native board cron-unpayable, tool_search FRESH this tick — catalog
+carries only terminal + zai-vision MCP; same disclosed class as
+struct-169..211). Gate ALL PASS real exit 0 tick-start at af5ce291
+(sweep-288; unpiped terminal GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 36th tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-211 -> tag struct-212 (re-checked immediately
+before append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN +
+CITY-PLAN-V2 + census 347): hippocrates 0/0/0, lune/lunes 0 hits
+everywhere; census carries no lune id. Register: joins the PLANE-REGION
+branch beside the arbelos as its CLASSICAL ROOT — era lineage walks the
+procession BACK one register: cissoid ~180 BC (struct-188) <- arbelos
+~250 BC (struct-210, Book of Lemmas) <- HIPPOCRATES OF CHIOS ~440 BC —
+the FIRST curvilinear quadrature in Greek mathematics, the theorem the
+whole construction-curve era grew toward. Kin-check fresh: salinon =
+arbelos tangent-circle kin (back-to-back, passed); strophoid = folium-kin;
+limacon = cardioid-kin; semicubical parabola = cissoid cusp-kin; caustic
+= nephroid-kin; cycloid family TAKEN (brachistochrone struct-119).
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): L1
+THALES — right angle at T exact (dot 0.0e0), legs 4m isosceles, all three
+corners ON the Thales circle r=2*sqrt(2) to 1e-12. L2 HORNS — each leg
+circle crosses the Thales circle at EXACTLY {corner, T} (algebraic
+crossings at [-2.828427,0]/[0,2.828427] etc.) — the crescent horns.
+L3 QUADRATURE — lune L 4.00000000 m^2, lune R 4.00000000 m^2, each ==
+c^2/8 == 4 == half the triangle (400k-station integration, <1e-6 rel);
+lunes sum 8.00000000 == triangle 8 exact — curved equals straight, the
+440 BC theorem machine-verified. L4 SPANS — triangle 154 voussoirs every
+span inside triSpan(yTop) exact + keystone; crescents 72+72 CONGRUENT BY
+CONSTRUCTION (right = exact mirror of LEFT's segmentation span-for-span;
+an independent cut breaks isosceles honesty — caught RED by the first
+law run); stepped-inner-boundary register (soundmirror): every course
+cut to the INTERSECTION of bottom+top region spans — box inside the true
+region at BOTH stations; baseline course = disclosed horn-wedge class
+(arbelos crotch-keel lineage, grounded by the B/C pins). L5 SEATING —
+base course + horn courses 8cm curb-embedded; pins bottom at baseline
+half-proud; bead at T socketed into the apex needle (morley class), the
+Thales arc passes through the bead center exact (five curves converge at
+T). L6 ARC-LENSES — sky lenses between triangle edges and arc open to
+1.172m (arbelos scoop class). RED control: 2% leg-radius error shifts
+crossings 0.04m + semidisc area 0.254 m^2 — laws detect. TWO first-pass
+law bugs self-caught RED-first (mirror segmentation; horn-wedge bottom
+station) + one build-contract tightening (apex needle starts at the last
+course top, no air cap; envelope yMax == ACTUAL top course 3.410 not the
+analytic 3.414) — all law-side, zero build iterations.
+
+CONCEPT: THE FIRST QUADRATURE. One idea: CURVED EQUALS STRAIGHT. STONE
+carries the right-isosceles triangle — stepped voussoir courses rising
+from a long curb (7.528x0.26x0.90) to an apex needle where five curves
+converge. BRASS carries the two lunes — stepped crescent courses in the
+SAME course rhythm (0.155m, 0.32m target, 12mm joints) as the triangle:
+same masonry language, different metal — the equality made material.
+IRON carries the Thales arc riding B-over-T-to-C (64 tangent segments,
+the sky compass that inscribes the triangle) + B/C compass-foot pins.
+Sole night element: one warm bead at T (s363 law). Envelope
+7.528x3.590x0.900 origin-centered; h 3.59 >= 2.2 real trimesh; curb
+footprint 6.78 m^2 < 16 — FOLLY CLASS, no walk owed. Nodes 4 (lu_stone +
+lu_iron + lu_brass + glow_lu_1).
+
+BUILD (agents/arthur/assets/mkv3-lunes.ts, staged -f): root identity
+(struct-188 law); arbelos/morley world-frame chassis. v1 deterministic
+x2 byte-identical sha256
+41af82ec0c20af4c1f7a2746b50da11e89a29e6a97f13e45833ca51c32a325e9
+(mtime-verified, 366 pre-merge meshes -> 3 buckets + 1 glow KEEP).
+
+DECODE (struct212-decode-lunes.ts, tracked) ALL PASS 9/9 + RED control
+(foreign arbelos bytes: 9 FAILs, exit 1): D1 census 4 nodes; D2 curb
+228 verts; D3 triangle 3720 plate verts 99.4% inside + 154/155 corner
+coverage incl. apex needle; D4 lunes 3456 brass verts 99.3% inside both
+regions + 144/144 corners; D5 arc 4364/4382 on the exact Thales circle +
+318 in B/C pins; D6 bead centroid == T within 2mm emissiveFactor present;
+D7 curb sole at grade 0.000, base/horn embeds 0.180 exact; D8 envelope
+drift 0.0000; D9 texMats lu_stone/lu_iron/lu_brass. One decode-law bug
+self-caught (D4 indexed y0/y1 on y/yTop objects — corner matcher NaN'd;
+the NaN sorted to a false 0/144 — fixed, GREEN 144/144, RED re-proven).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed, riding the
+owed board):
+- gameplay 18m: PASS 4/4 — identity (triangle + two inward crescents +
+  arc traced), silhouette continuous, grounding attached, overall quiet
+  math monument. Margins disclosed: dome cap nubs read slightly detached
+  (top course on tapered course — masonry-honest); bead pale in daylight
+  (night-binding by design); left horn tip ~1-2px hover (horns die at
+  B/C by design, pins ground); rig shadows flat.
+- night-face: PASS 3/3 — EXACTLY ONE warm point (~480,258) == the apex
+  bead, zero stray glow, silhouette traceable navy-vs-dark, ember-quiet
+  no bloom.
+- closeface: PASS 4/4 — masonry regular with joints stepping to the
+  apex; crescents true mirror images (course rhythm + shape match);
+  zero floating blocks (feet on curb, arc ends on lowest brass, apex cap
+  wedged stone-arc-brass); three materials distinct. Arc-over-horn
+  crossings at 2 stations = TRUE geometry (the arc IS the lunes' inner
+  boundary).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-213
+committed carry: fresh census scan (8m NN law, district soft cap 6, Math
+Avenue eligibility; procession continues past arbelos r390), YAW LAW —
+the construction reads on the +Z face: oblique 30-40 deg off the approach
+walk per struct-104 convention (the procession's standing 214 deg
+convention), terrain preflight over the TRUE rotated footprint,
+hash-gated plain spawn nx-struct-lunes, comp {}. Folly class — no walk
+owed. Native re-judge debt: lunes v1 joins the owed board (monkeysaddle
+gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1,
+versiera v1, elliptic v3, mandelbrot v1, viviani v1, morley v1, arbelos
+v1 — 23 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the
+shoemaker's blade — a long stone curb carrying a stepped triangle
+between two brass crescents, an iron compass-arc riding over all three:
+Hippocrates' lunes, the first curvilinear quadrature (~440 BC) — the two
+crescents together equal the triangle exactly, curved squared against
+straight. After dark: one warm bead burns at the apex where all five
+curves meet.
+
+Files: struct212-probe-lunes.ts + struct212-decode-lunes.ts +
+struct212-render-lunes.ts (NEW, tracked), assets/mkv3-lunes.ts (NEW,
+staged -f), reviews/struct212-lunes/ (9 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-212,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
