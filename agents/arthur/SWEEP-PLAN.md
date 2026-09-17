@@ -12570,3 +12570,91 @@ stalest standing pair is hall/bunkhouse @284 (4 sweeps) — forge/potter @288
 walked fresh, longhouse/garden-cottage @287, row-cottage/observatory @286,
 inn/tower-house @285; walk tools interior-walk-hall.ts,
 interior-walk-bunkhouse.ts — ls-verify both on disk before running).
+
+
+sweep-289: CLEAN SWEEP, arrival-fold + epoch-corrected tick (58th
+consecutive quiet-or-classified). Tick-start HEAD af5ce291 = sweep-288's
+own close; standing gate ALL PASS real exit 0 FIRST TRY (99 PASS lines,
+captured unpiped to /tmp/s289/gate.log). Census epoch A 347==347 FULLY
+QUIET vs the committed sweep-288 baseline — byte-identical (236256B,
+python sha256[:16] ee03e64a276879be; cmp-verified), 0 arrivals, 0
+departures, 0 drift on all five semantic classes (pos/yaw/scale/kind/bbox,
+lib, compKeys). Mid-tick the fauna lane landed fauna-5 (den fox @ 88ccdd58,
+now HEAD) — epoch B caught exactly ONE domain-valid arrival:
+nx-dress-se-fox-001 @ (72.62, -0.041, -9.66) yaw 5.052389 lib
+bc7376b3d17f1fad scale 1 kind thing, comp bag 3x motion:fox_{,head,tail} —
+tuple/lib/comps match the committed fauna-5 ledger line-for-line
+(PLACED_VERIFIED census 347->348 in its own prose); 0 departures, 0 drift
+on the 347 shared ids. All affected evidence re-taken fresh per the
+polish-270 epoch law: SAT re-run at epoch B, battery re-run at epoch B
+(with the pin raise below), gate re-run ALL PASS real exit 0 at 88ccdd58.
+Fox sits r73.3 az97 SE — 52m+ off every walked tier-1 leg; epoch-A walks
+stand by construction (sweep-53 precedent), SAT covers the collision
+surface, and fauna-5's own walk probe ALL_PASS 3/3 covers the meadow
+approach. Overlap: 310 bbox non-light / 239 classified / 0 coverage holes,
+real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26
+choreography @ sweep-43, 245th sweep since routing, NOT new, no escalation
+due (law keys severity-1); fox arrival ZERO new unclassified contacts.
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0,
+legs run individually per the sweep-228 ceiling law — core 64/64 ALL_PASS
+@ 0.380 maxArrival (next-walk-core-paths.ts; JSON parsed from first brace
+past the [physics] banner), NW 5/5 ALL_PASS (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + distances from
+raw files. Tier-2 267th cycle per the committed sweep-288 pointer: hall
+8/8 ALL_PASS (dists 0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310,
+interior-walk-hall.ts) + bunkhouse 6/6 ALL_PASS
+(0.245/0.300/0.305/0.247/0.380/0.313, interior-walk-bunkhouse.ts), both
+real exit 0, both tools ls-verified present on disk pre-run. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (243rd consecutive
+clean); sweep89-battery 28/28 PASS on epoch-B bytes after the lawful
+comp-bearing pin raise 25->26 (fauna-5 fox NEW comp-bearing entity,
+provenance documented in the tool comment, coverage-count law,
+sweep-285/287 precedent — the FAIL was first PROVED on live bytes
+(27/28) then raised; epoch-A bytes ran 28/28 under the pre-raise pin 25);
+comp-bearing live count 26 census-verified epoch B; interlane md5 86b2936f
+stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged (265th check, 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+and was read fresh via the loop/plan reload. Baseline lawfully rewritten
+RAW like-for-like (sweep289-baseline-rewrite.py, asserted pre-write: diff
+exactly [arrival nx-dress-se-fox-001]): 348 entities / 237763B / sha16
+62e15a427cbedfdc (python sha256[:16]); post-rewrite drift ZERO
+(byte-identical to censusB live, cmp-verified). Diff tool
+sweep289-census-diff.py folded from the committed sweep287 chassis (sed
+swap only; py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on
+the real bytes). BOOKKEEPING DISCLOSURE (sweep-288 omission class): the
+sweep-288 tick's census-diff + baseline-rewrite tools were never committed
+(exist only in /tmp/s288, verified via git ls-files) despite its plan row
+claiming the fold — this tick folds its tools from the committed sweep-287
+chassis and commits BOTH sweep-289 tools, restoring the tracked chain.
+TOOLING DISCLOSURE (invocation artifact, no evidence impact): this host's
+shasum CLI defaults to SHA-1 (KAT-proved: 'abc' -> a9993e36... = sha1,
+not sha256) — a bare `shasum` line therefore disagrees with python
+hashlib by construction; all lane sha16 pins are python sha256[:16]
+(openssl agrees with python on every file; cmp byte-identity governs
+rewrites). Caught mid-tick when the post-rewrite shasum cross-check
+printed a different sha16 than the script's own hashlib — root-caused to
+the CLI default before any verdict, no writer race, no duplicate lane
+instance (ps + mtime verified). Probe self-catches pre-verdict, all
+corrected with no repair owed: (a) approach-walk parsers keyed `dist`
+where the schema carries `distance` (NW/NE/SW re-derived from raw files);
+(b) interior-walk parsers keyed `distance` where the schema carries
+`dist` (hall/bunkhouse re-derived); both sweep-48 class, re-anchored on
+actual per-tool schema keys read from the raw files before any verdict.
+Foreign dirt in tree (windmill overhaul scratch, cabin/carousel prototype
+dirs, client/server engine files, fleet shells, debug-bower scripts,
+moon-moth dir, fauna tools, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP,
+core-paths assets) is sibling work-in-flight, untouched per the ownership
+law. Zero world mutations, zero defect notes, zero uploads, zero verbs,
+zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-290): inn + tower-house (268th cycle — LRU chain re-derived from
+committed plan pointers this tick: hall/bunkhouse @289 walked fresh,
+forge/potter @288, longhouse/garden-cottage @287, row-cottage/
+observatory @286, inn/tower-house @285 stalest standing pair at 4 sweeps;
+walk tools interior-walk-inn.ts, interior-walk-tower-house.ts — both
+ls-verified present on disk this tick).

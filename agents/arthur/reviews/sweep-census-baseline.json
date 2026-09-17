@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 347,
+  "count": 348,
   "entities": [
     {
       "id": "beb4c791",
@@ -5087,6 +5087,88 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-se-fox-001",
+      "kind": "thing",
+      "pos": [
+        72.62,
+        -0.041,
+        -9.66
+      ],
+      "yaw": 5.052389,
+      "scale": 1,
+      "lib": "store/bc7376b3d17f1fad.glb",
+      "bbox": {
+        "min": [
+          -0.354,
+          -0.001,
+          -0.17
+        ],
+        "max": [
+          0.545,
+          0.272,
+          0.231
+        ],
+        "size": [
+          0.899,
+          0.273,
+          0.401
+        ],
+        "center": [
+          0.096,
+          0.135,
+          0.031
+        ]
+      },
+      "compKeys": [
+        "motion:fox",
+        "motion:fox_head",
+        "motion:fox_tail"
+      ],
+      "comp": {
+        "motion:fox": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 3.4,
+          "phase": 0,
+          "t0": 1789678201706
+        },
+        "motion:fox_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.07,
+          "period": 5.2,
+          "phase": 1.7,
+          "t0": 1789678201706
+        },
+        "motion:fox_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.1,
+          "period": 2.8,
+          "phase": 2.6,
+          "t0": 1789678201706
+        }
+      }
     },
     {
       "id": "nx-dress-se-foxden-001",
