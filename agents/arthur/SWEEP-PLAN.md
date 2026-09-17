@@ -12368,3 +12368,77 @@ garden-cottage @282, row-cottage/observatory @281 stalest standing pair at 4
 sweeps; walk tools interior-walk-row-cottage.ts, struct2-walk-observatory.ts
 both ls-verified present on disk this tick).
 
+sweep-286: CLEAN SWEEP, arrival-fold tick (55th consecutive quiet-or-classified).
+Tick-start HEAD 7bb32ce = struct-209 (MORLEY PLACEMENT TICK, census 345->346 per
+its own ledger). Standing gate ALL PASS real exit 0 FIRST TRY at 5e22c0c5
+(vocab-31 committed PRE-tick; its entry is scratch-only, zero production-world
+mutations per its own prose). Census epochs A/B 20s-paced BYTE-IDENTICAL (raw
+234132B sha16 b12d1bcbfcf26ba1): 345->346 with exactly ONE domain-valid
+arrival — nx-struct-morley @ (-26.50746, -0.002271, 379.074339) yaw
+3.735004599267865 (= 214deg), lib a95b12958e032f69, scale 1, comp bag empty —
+tuple matches the committed struct-209 ledger line-for-line and the lib equals
+the struct-208 banked sha (deterministic build re-verified in that tick); 0
+departures, 0 drift on 345 shared ids across all five semantic classes
+(pos/yaw/scale/kind/bbox, lib, compKeys). Overlap: SAT fresh-live over the
+morley-inclusive set, 308 bbox non-light / 238 classified / 0 coverage holes,
+real exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 — known Sev 2 routed artwalk b26 choreography @ sweep-43, 242nd sweep
+since routing, NOT new, no escalation due (law keys severity-1); morley
+arrival ZERO new contacts (SAT set grew 307->308, classified 236->238 with the
+2 fauna contacts now inside the classified count, unclassified unchanged at
+exactly the one known pair). Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually per the sweep-228 ceiling law —
+core 64/64 ALL_PASS @ 0.380 maxArrival (next-walk-core-paths.ts; JSON parsed
+from first brace past the [physics] banner; support-seam stderr abstentions =
+the known normalized diagnostics set, unchanged), NW 5/5 ALL_PASS (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5 ALL_PASS
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts content-anchored on
+status strings + per-leg ok counts + distances from raw files. Morley sits
+r380 az94 — 360m+ off every walked leg; epoch-A walks stand by construction
+(sweep-53 precedent), SAT covers the collision surface. Tier-2 264th cycle
+per the committed sweep-285 pointer: row-cottage 6/6 ALL_PASS (dists
+0.295/0.368/0.384/0.294/0.362/0.307, interior-walk-row-cottage.ts) +
+observatory circuit 5/5 ALL_PASS (dists 0.280/0.389/0.303/0.345/0.314,
+struct2-walk-observatory.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (240th consecutive clean); sweep89-battery 28/28 PASS
+real exit 0 on fresh census-A bytes; interlane md5 86b2936f stable read
+fresh; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5
+c0f569d0 unchanged (262nd check, 0 open candidate rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs and was read fresh via the loop/plan
+reload. Baseline lawfully rewritten RAW like-for-like
+(sweep286-baseline-rewrite.py, asserted pre-write: diff exactly [arrival
+nx-struct-morley]): 346 entities / 234132B / sha16 b12d1bcbfcf26ba1;
+post-rewrite drift ZERO (baseline byte-identical to censusB live). Diff tool
+sweep286-census-diff.py folded from the committed sweep285 chassis (sed swap
+only; py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on the real
+bytes). Ledger self-catch PRE-COMMIT, corrected with no repair owed: my own
+fresh sweep-286 entry carried a garbled "5/6->5/5" observatory fragment (the
+raw tool output was 5/5 from the first parse; no 5/6 ever existed) — fixed by
+asserted-unique-anchor replace, law re-verified exact 2370900. Probe
+self-catches pre-verdict, all corrected with no repair owed: (a) fleet-pin
+tool probed as .py where the committed tool is struct18-fleet-pin-check.TS
+(found via git log --diff-filter A; sweep-282 battery-name class); (b)
+census-diff first invoked with a file path where the tool takes a phase
+letter (s285 chassis convention; FileNotFoundError trace, re-run clean);
+(c) approach/interior walk parsers keyed the wrong result-array name and
+distance key on first attempt — re-anchored on the actual per-tool schema
+keys read from the raw files before any verdict (sweep-48 class); (d) the
+[physics] banner prefix on all walk/census outputs handled by
+parse-from-first-brace (documented sweep-35 class); (e) the FIRST plan-block
+insert itself came out with five corrupted lines (adjacent-token-bleed,
+sweep-43/50/55 family) — caught by re-reading the written region
+immediately, replaced wholesale by this block pre-commit. Foreign dirt in
+tree (windmill overhaul scratch, cabin/carousel prototype dirs, client/server
+engine files, fleet shells, debug-bower scripts, moon-moth dir, fauna3 duck
+tools, HERO-ASSET-REFINEMENT-PLAN, core-paths assets) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-287): longhouse + garden-cottage
+(265th cycle — LRU chain re-derived from committed plan pointers this tick:
+row-cottage/observatory @286 walked fresh, inn/tower-house @285,
+hall/bunkhouse @284, forge/potter @283, longhouse/garden-cottage @282
+stalest standing pair at 4 sweeps; both walk tools ls-verified present on
+disk this tick: interior-walk-longhouse.ts, interior-walk-garden-cottage.ts).
