@@ -14217,3 +14217,126 @@ Files: struct207-scan-viviani.ts + struct207-select-viviani.ts +
 struct207-terrain-viviani.ts + next-place-struct207.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-207,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-208 (2026-09-17): R11-28 MORLEY'S TRISECTOR THEOREM — BUILD+JUDGE
+## TICK (the scalene triangle and the perfect heart; theorems machine-exact:
+## trisection 2.78e-16, equilateral spread 4.44e-16, closed form
+## 8R·sin(A/3)sin(B/3)sin(C/3) rel 1.31e-16; probe 7+1 RED; decode 9/9 +
+## RED control; judged PASS all frames — ZAI fallback disclosed; ACCEPTED
+## BANKED NOT PLACED)
+
+208%3=1 build slot (viviani placed struct-207, bank empty — tensegrity v6
+behind Bill's eye-gate, not takeable), refine pool empty of payable items
+(the 20-debt native board cron-unpayable — tool_search fresh this tick,
+catalog carries only the zai-vision MCP; same disclosed class as
+struct-169..207) — build+judge per the 178..207 alternation, placement =
+struct-209 committed carry. Gate ALL PASS real exit 0 tick-start at
+535696af (vocab-30; unpiped terminal GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 34th tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-207 -> tag struct-208 (re-checked
+immediately before append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN +
+CITY-PLAN-V2 + artwalk plans + census 344): morley/trisector 0 hits
+everywhere — never named, never barred, never built. Register: opens the
+CEVIAN-CONVERGENCE branch — lines from vertices whose crossings carve a
+perfect form; Morley 1899 (the theorem Euler's era missed): in ANY
+triangle the three adjacent-trisector intersections form an EXACT
+equilateral. Kin-check fresh: reuleaux = constant-width ROTOR, sierpinski
+= fractal — neither is a cevian form; astroid TAKEN (slidingladder
+envelope struct-95); deltoid exists only as carousel motion path;
+epicycloid kin BARRED (nephroid+lemniscate standing); scherk BARRED
+(saddle register), steiner BARRED (4D rule), ford circles kin to standing
+apollonian, heptadecagon reads "another circle" at 18m.
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): L1
+TRISECTION — the six rods cut every interior angle into exact thirds,
+worst sub-angle delta 2.78e-16 rad. L2 THE HEART — M_A/M_B/M_C sides
+equal to 4.44e-16, angles 60 deg to 8.88e-16, side == closed form
+8R·sin(A/3)sin(B/3)sin(C/3) to rel 1.31e-16 (0.849580 m). L3 CONVERGENCE
+— each corner on its two adjacent rod lines to 0.0e0; all other rods
+clear by 0.467 m. RED control: one trisector 0.02 rad off collapses the
+equilateral (spread 7.77) — law detects. ONE probe-side sign bug
+RED-caught pre-build (k=2 trisectors rotated away from the interior).
+
+CONCEPT: THE SCALENE TRIANGLE AND THE PERFECT HEART. One idea: any
+triangle hides a perfect one. STONE carries the scalene frame — a
+needle-pointed 40/60/80 gable (R=3, base 3.857 m, height 5.170 m) in
+voussoir rhythm (46 blocks, 0.31 m rhythm, joint 12mm), base course
+seated 8cm into a long curb plinth (4.557×0.26×0.90, cradle class,
+disclosed). IRON carries the six trisector chords (r 0.035, vertex ->
+opposite edge, forged heads r 0.0525 at the corners). BRASS carries the
+heart — the exact equilateral (three r-0.05 sides + three r-0.06 corner
+beads) riding the crossings. Sole night element: one warm bead r 0.07 at
+the topmost heart corner M_C (s363 sole-bead law). Envelope
+4.557×5.430×0.900 origin-centered; h 5.43 >= 2.2 real trimesh; footprint
+4.10 m² < 16 — FOLLY CLASS, no walk owed. Nodes 4 (mo_stone + mo_iron +
+mo_brass + glow).
+
+BUILD (agents/arthur/assets/mkv3-morley.ts, staged -f): root identity
+(struct-188 law); world-frame voussoir/tube chassis (viviani/elliptic
+lineage). v1 deterministic ×2 byte-identical sha256
+a95b12958e032f694fba4dc2b7272fea735beba984be028b1c1b51235f72aa8e
+(131,224 B), mtime-verified. First-pass accept — the mk's own envelope
+law caught a 12.5mm probe/mk mismatch (forged heads taller than the
+analytic budget) BEFORE any write; probe envelope corrected to model
+exactly what the mk builds; both builds landed clean.
+
+DECODE (struct208-decode-morley.ts, tracked) ALL PASS 9/9 + RED control
+(foreign viviani bytes: 9 FAILs, exit 1): D1 census 4 nodes; D2 plinth
+180 verts; D3 gable 948/948 stone verts within W/2+10mm of the three
+edge lines; D4 rods 978/978 iron verts on the six trisector lines,
+per-rod [276,276,214,260,214,268], forged heads 3×262; D5 heart 621/621
+brass verts on the three sides + 3×207 corner populations, side spans
+contained; D6 bead 315 verts centroid == M_C within 5mm r 0.0720
+emissiveFactor present; D7 plinth sole at grade, gable lowest course ==
+plinth top − 8cm exact, nothing dips; D8 envelope drift 0.00mm; D9 named
+texMats mo_stone/mo_iron/mo_brass. Three decode-law bugs self-caught
+(KEEP-name prefix match; head-ball membership; gable discriminator by
+edge-nearness not y-threshold) — all law-side, zero build iterations.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- gameplay 18m: PASS 4/4 — judge independently measured apex 39-40° /
+  left-base 60° / right-base 81° FROM PIXELS (the 40/60/80 design) and
+  traced all six rods in three exact pairs; brass heart legible
+  (x472-524 y365-408); base corners meet the curb flush; zero defects.
+  Margins disclosed: rod lower halves soften dark-on-dark vs olive
+  ground; glow bead 3-4px at 18m (engine dusk check class).
+- closeface: PASS 4/4 — voussoir courses regular on both rakes, sill
+  seats on the curb with a normal seam; all six rod ends terminate
+  on/inside stone, zero air-hangs; heart welds continuous at all three
+  crossings, glow bead clearly warm; materials clean stone/iron/brass.
+  Framing note: apex clipped by frame top (rig closeface framing; apex
+  junction verified in gameplay + decode D4 exact — not a defect).
+- night-face: PASS 3/3 — EXACTLY ONE warm cluster (6-8px at (476,380))
+  == the topmost heart corner; zero stray; silhouette traceable
+  dark-on-dark; bead reads ember-quiet, no bloom.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-209
+committed carry: fresh census scan (8m NN law, district soft cap 6, Math
+Avenue eligibility; procession continues past viviani r370), YAW LAW —
+the construction reads on the +Z face: oblique 30-40° off the approach
+walk per struct-104 convention (the procession's standing 214°
+convention), terrain preflight over the TRUE rotated footprint,
+hash-gated plain spawn nx-struct-morley, comp {}. Folly class — no walk
+owed. Native re-judge debt: morley v1 joins the owed board (monkeysaddle
+gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1,
+versiera v1, elliptic v3, mandelbrot v1, viviani v1 — 21 owed with this
+one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the globe —
+a long stone curb carrying a leaning needle-sharp triangle, six thin iron
+lines fanning from its corners in pairs, and at their crossings a small
+brass heart: Morley's trisector theorem, the perfect equilateral every
+triangle hides (1899, the theorem Euler's era missed). After dark: one
+warm bead burns at the heart's top corner.
+
+Files: struct208-probe-morley.ts + struct208-decode-morley.ts +
+struct208-render-morley.ts (NEW, tracked), assets/mkv3-morley.ts (NEW,
+staged -f), reviews/struct208-morley/ (9 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-208,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
