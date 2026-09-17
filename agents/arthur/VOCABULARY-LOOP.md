@@ -2796,10 +2796,170 @@ family's hold is the occupancy, and the sky narrates the event every
 client already perceives. One 8KB comp, no script, no new verb, no new
 client code.
 
-- [ ] Fountain wish: coin-toss interaction on water features with a
+- [x] Fountain wish: coin-toss interaction on water features with a
       bounded wish log (extends water family, guestbook caps).
+      DONE vocab-34 (2026-09-17): comp {type:"wish"} — reactWish in
+      server/wish.ts rides reactToUse's dispatch after observatory (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to
+      verbs.ts / server.ts / world.ts / behaviors.ts / browser — the say
+      is chat, the splash rides client/lib/music.js, the log rides the
+      fold). Contract in § WISHES CONTRACT below implemented as written:
+      the wish log IS the fold (ONE comp transition per toss, newest-
+      first, cap [1,64] d20 evicting the oldest through the GUESTBOOK
+      family's own guestbookTrim imported VERBATIM — mirrored-math law,
+      "guestbook caps" honored structurally); text OPTIONAL (a silent
+      wish is a legal toss — the family's one sanitizer deviation,
+      sanitizeWishEntries keeps wordless rows); the say NARRATES THE
+      TOSS, never the words (fold keeps them, world_history reads them,
+      ambient never shouts them); the coin is ONE presence-plane sound
+      derived from the paired WATER comp's own fold through
+      normalizeWater (splash into flowing water, DRY CLINK hz×1.5/
+      sec×0.5/gain×0.6 re-clamped on stone — derive, do not mint).
+      Evidence: tools/wishtest.ts RED 17 failing (engine absent; the RED
+      run itself caught one genuine shared-math defect — wave default
+      never materialized 'sine' — and one test-fixture bug) then ALL
+      PASS 41/41 after five disclosed test-expectation fixes (Δ counts
+      the logged use itself → 3 not 2; the clink math runs on the comp's
+      default hz 1568 → 2352/0.175/0.3; pass-through baseline 6; the
+      describe check passed the comp BAG where the water comp DATA was
+      owed; the trim fixture's tail is positionally-oldest); wishtest
+      registered in the servergate battery and 41/41 IN-BATTERY; full
+      battery 51/54 — every vocab suite green, the 3 failures exactly
+      the documented pre-existing classes (authtest + support-lifecycle
+      = pilot-lane sibling dirt, permtest = mcpl/tokens.json; vocab-13..
+      33 identical, my diff touches none of those seams); mcpl manifest
+      28/0 + effective + denoise green after the agent.ts hunks
+      (describeWish affordance, exclusion-list entry, sound-case wish
+      branch). Scratch worlds only; no production world touched. No
+      eye-check owed (zero client code — chat + a note music.js already
+      synthesizes + folded state; the standing in-browser AUDIBLE read
+      of a coin's plink is the same ear-check class as vocab-9/18/25,
+      deferred to Bill's browser).
 - [ ] Echo wall: paired sound posts that relay a recorded say between
       two points with delay and rate caps (extends sound family).
+
+### WISHES CONTRACT (vocab lane — drafted and implemented vocab-34, 2026-09-17)
+
+**Trigger.** A wishing water feature is an entity carrying
+`comp {type:"wish", data:{...}}` — the canonical site is a water feature
+(vocab-11): a plaza fountain, a well, a garden pool carrying BOTH
+`comp {type:"water"}` and `comp {type:"wish"}`. The action strings `wish`
+(alias `toss`) are WISH vocabulary on the freeform `use {id, action}` path,
+with the words riding the use's own args as `text` (OPTIONAL — a coin for a
+silent wish is a legal toss; the reactions doctrine: other action strings
+pass through untouched — a fountain ignoring `use {action:"ring"}` is
+exactly correct; wish/toss are DISJOINT from all 33 prior families'
+actions). Attaching/removing the comp is builder (rank 1) — the author's
+standing decision that this water takes wishes, identical doctrine to the
+whole family. A wish comp with no water comp beside it is a dry wishing
+well — legal, fully functional (the coin clinks, the log keeps the
+wishes).
+
+**State — the fold is the wish log (guestbook doctrine, guestbook caps).**
+Every toss is ONE world-authored comp transition write:
+
+```
+comp {id, type:"wish", data:{...authored, entries:[{who, text, at}, …]}}
+```
+
+`entries` newest-first, capped at `cap` (authored, clamped [1,64], default
+20 — at cap the OLDEST is evicted for the newcomer: a full fountain
+forgets its oldest wish, never refuses its newest); `text` OPTIONAL,
+clamped 160 chars (a silent wish carries `text:""`); `who` clamped 64;
+`at` the sequencer ts of the causing use. The trim is the GUESTBOOK
+family's own `guestbookTrim` imported verbatim (mirrored-math law — one
+trim arithmetic across both families). NOTHING else is stored anywhere —
+no in-memory state decides what a late joiner reads. The 8KB degrade side
+keeps `{entries:[new]}` + a lint note (fail closed against bloat, never
+against the wisher).
+
+**Wishes are narrated as TOSSES, never as words.** The say never carries
+the wish text: the fold keeps the words (public truth — world_history
+reads them), the AMBIENT perception does not shout them. `"<who> tosses a
+coin into the water"` is the whole story a bystander hears.
+
+**The coin sound — derived from the water's own fold (the composition
+doctrine: derive, do not mint).** The splash is a PRESENCE-PLANE one-shot
+(the music/chime force doctrine: never logged, never folded, never
+replayed): ONE `{type:"sound", id, wish:{toss:true}, note:{hz,sec,gain,
+wave}, p:[live pos], at, by, cause}` broadcast. The note is a PURE
+function of (wish cfg, folded water comp) — `coinNote` in shared/wish.js,
+with the water bit read through the WATER family's own `normalizeWater`
+(one arithmetic, never re-implemented):
+- water present AND flowing (`on:true`) → the SPLASH: authored `hz`
+  [200,4000] d1568 (G6), `sec` [0.05,3] d0.35, `gain` [0.05,1] d0.5,
+  `wave` d sine;
+- water absent OR stilled → the DRY CLINK: hz×1.5, sec×0.5, gain×0.6
+  (each re-clamped) — the coin on stone, not in water.
+A late joiner hears nothing from past wishes (history, not audio — the
+particles doctrine); the standing wish LOG is what the fold carries.
+
+**Effects.** A toss appends TWO entries, in order: the comp transition
+write and a `say` (actor `world`, args `{text:<line>, id, wish:{who, at},
+cause:<use seq>, by:<user>}` — the phrases/guestbook provenance grammar,
+MINUS the text key: the words are the fold's business). Line default
+`"<who> tosses a coin into the water"` when a water comp stands beside
+it, `"<who> tosses a coin"` on a dry well (authored `wishAt` overrides,
+≤200c clamped). Plus the ONE presence-plane sound above. A `wish-trigger`
+flight entry (kind `reaction`) records cause→effect. No other verb can
+be minted from a wish — say + comp-on-self ONLY.
+
+**Authority/reach.** Wishing is rank 0 (anyone present — the author's
+published behavior, world authority on the effect only) plus the
+ARM'S-REACH gate (vPunt arithmetic): the wisher's LIVE pose within
+`reach` metres (authored, clamped [2,12], default 4) of the feature's
+LIVE position (lease stream pos if leased, folded pos otherwise).
+Out-of-reach use is a `wish-skip` naming the distance. Spectators bounce
+at the shell (`use` is spectator-gated there). Lock composes as for
+doors (lock refuses place/punt/spawn/comp/remove — not `use`): a locked
+fountain still takes wishes. Moderation is the standing comp-authoring
+act itself (builder+ re-authors the comp; the cap evicts; no erase
+action exists — a wish is a coin already sunk).
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use or comp never
+re-fires and never re-sounds. On restart the world folds `entries` from
+the log — the fountain IS its log. `world_history
+{verbs:["use","comp","say"]}` traces every toss's chain (cause →
+comp+say with by). Late join reads the identical wish log with zero
+traffic.
+
+**Rate.** Tosses are user-paced (the verb rate bounds `use` — the
+guestbook bound exactly); each mints at most 2 entries (comp + say) + 1
+presence sound; out-of-reach tosses mint nothing. The log is bounded by
+cap, so the comp cannot grow unboundedly with wishes.
+
+**Failure behavior.** Malformed comp → clamp + `wish-lint`
+(particles-lint doctrine): cap [1,64] d20, reach [2,12] d4, hz [200,4000]
+d1568, sec [0.05,3] d0.35, gain [0.05,1] d0.5, wave ∈ sine/square/
+sawtooth/triangle d sine, lines clamped 200c, malformed entries rows
+dropped (a row without a wisher is not a wish), unknown keys ride (the
+bag is public annotation). Missing entity → silent pass-through. The
+whole reaction wrapped in try/catch (house rule 3 — no fountain takes
+the server down).
+
+**Browser path.** ZERO client code: the say arrives as ordinary chat
+(actor `world`, logChat); the splash is an ordinary `{type:"sound"}`
+note message client/lib/music.js already synthesizes (distance
+attenuation, pan, world-volume slider — the chime path); the wish log is
+readable from any folded snapshot (`state.entities[id].comp.wish.entries`)
+— scripts and future UI consume it without a new protocol surface. A
+visible tier (a coin glint, drifting motes) is deliberately deferred —
+protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; the `sound` case gains a `wish` branch (one act line per
+toss, radius-gated, denoised — `<id> takes a coin (by bob)`); `look()`
+lists the feature via `shared/wish.js describeWish` (the describeDoor
+pattern) — the wish count, the splash/clink derivation, and the wish
+action hint. An agent wishes through the ordinary `use` verb.
+
+**Intent.** The water keeps your secrets. A plaza fountain where a coin
+buys a wish nobody hears, a well at the crossroads, a garden pool — the
+toss is public (a say, a splash), the words are the fold's (narrated
+never, readable always), the oldest wish gives way to the newest. One
+8KB comp, no script, no new verb, the guestbook's own trim doing the
+remembering, the water family's own bit choosing the timbre.
 
 ### CHIMES CONTRACT (vocab lane — drafted vocab-21, 2026-09-15)
 

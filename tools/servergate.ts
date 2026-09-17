@@ -164,6 +164,11 @@ const BATTERY: Row[] = [
   // (reservation doctrine, fold-derived expiry, no sweep), scratch
   // sequencer.
   { name: "observatorytest", tool: "tools/observatorytest.ts" },
+  // vocab-34: the wish matrix (§ WISHES CONTRACT) — same class: the
+  // fountain wish (coin-toss on a water feature: guestbook-capped log,
+  // toss-narrating say, presence-plane coin derived from the water's own
+  // fold), scratch sequencer.
+  { name: "wishtest", tool: "tools/wishtest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

@@ -112,6 +112,10 @@ import { describePuzzle } from "../shared/puzzle.js";
 // sky), the session holder, and the observe action
 // (shared/observatory.js describeObservatory).
 import { describeObservatory } from "../shared/observatory.js";
+// The wish affordance line (vocab-34): same pattern — the wish count, the
+// splash/clink derivation off the paired water comp, and the wish action
+// (shared/wish.js describeWish).
+import { describeWish } from "../shared/wish.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -788,6 +792,18 @@ export class WorldAgent {
                 ? `${msg.id}'s water starts (by ${msg.by ?? "someone"})`
                 : `${msg.id}'s water goes quiet (by ${msg.by ?? "someone"})`;
               this.gate.act(String(msg.by ?? msg.id), msg.water.state === "start" ? "starts" : "quiets", line);
+              break;
+            }
+            if (msg.wish) {
+              // A coin was tossed (vocab-34): one act line per toss,
+              // radius-gated like every ambient sense — the splash/clink
+              // is the sound's own line; the say already narrated the
+              // toss (never the words). `by` names the wisher.
+              if (!Array.isArray(msg.p)) break;
+              const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+              if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+              this.gate.act(String(msg.by ?? msg.id), "wishes",
+                `${msg.id} takes a coin — plink${msg.by ? ` (by ${msg.by})` : ""}`);
               break;
             }
             if (msg.soundpost) {
@@ -2097,10 +2113,14 @@ export class WorldAgent {
       // read time from the folded sky — the same nextEvent the engine fired)
       // and the eyepiece session — the text-tier read of the same fold
       if (c.observatory) aff.push(describeObservatory(c.observatory, this.skyState));
+      // a wish names its kept-wish count and the splash/clink derivation —
+      // the text-tier read of the same folded comp the toss engine writes
+      // (the paired water comp chooses the timbre, derived at read time)
+      if (c.wish) aff.push(describeWish(c.wish, c.water));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle", "observatory"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle", "observatory", "wish"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

@@ -104,6 +104,11 @@ import { reactCampfire } from "./campfire.ts";
 // telescope session on the sky's own day-phase schedule (reservation
 // doctrine: fold-derived expiry, no sweep). Same dispatch doctrine, last.
 import { reactObservatory } from "./observatory.ts";
+// The wish engine (vocab-34, § WISHES CONTRACT): comp {type:"wish"} owns
+// the wish/toss vocabulary — the fountain wish (coin-toss on a water
+// feature, bounded wish log, guestbook trim verbatim). Same dispatch
+// doctrine, last (a wishing well may also be any of the above).
+import { reactWish } from "./wish.ts";
 // The puzzle observer (vocab-32, § PUZZLES CONTRACT): no dispatch row of
 // its own (no actions — the chime/bell doctrine); a hand OPENING a door
 // a linked puzzle does not yield is re-closed in reactDoor's transition
@@ -263,6 +268,12 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // telescope session on the sky's own schedule. Same dispatch doctrine,
     // last (a dome host may also be any of the above).
     if (reactObservatory(w, cause, ent, id, action)) return;
+    // The wish slice (vocab-34, § WISHES CONTRACT): comp {type:"wish"}
+    // owns the wish/toss vocabulary — the fountain wish (coin-toss on a
+    // water feature, bounded wish log, guestbook trim verbatim). Same
+    // dispatch doctrine, last (a wishing well may also be any of the
+    // above).
+    if (reactWish(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,
