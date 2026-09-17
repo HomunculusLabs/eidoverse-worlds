@@ -151,6 +151,10 @@ const BATTERY: Row[] = [
   // vocab-30: the trailmarker matrix (§ TRAILMARKERS CONTRACT) — same
   // class: the guided walk toward a waystone beacon, scratch sequencer.
   { name: "trailmarkertest", tool: "tools/trailmarkertest.ts" },
+  // vocab-31: the campfire matrix (§ CAMPFIRES CONTRACT) — same class:
+  // the multi-entity hearth (growth-ladder burn-down driving lamp +
+  // particles through their own doors), scratch sequencer.
+  { name: "campfiretest", tool: "tools/campfiretest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

@@ -94,6 +94,11 @@ import { reactFestival } from "./festival.ts";
 // guide vocabulary — the waypoint post paired to a waystone beacon. Same
 // dispatch doctrine, last (a marker post may also be any of the above).
 import { reactTrailmarker } from "./trailmarker.ts";
+// The campfire engine (vocab-31, § CAMPFIRES CONTRACT): comp
+// {type:"campfire"} owns the kindle/stoke/douse vocabulary — the
+// multi-entity hearth (growth-ladder burn-down driving lamp + particles
+// through their own doors). Same dispatch doctrine, last.
+import { reactCampfire } from "./campfire.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -238,6 +243,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // paired to a waystone beacon. Same dispatch doctrine, last (a marker
     // post may also be any of the above).
     if (reactTrailmarker(w, cause, ent, id, action)) return;
+    // The campfire slice (vocab-31, § CAMPFIRES CONTRACT): comp
+    // {type:"campfire"} owns the kindle/stoke/douse vocabulary — the
+    // multi-entity hearth. Same dispatch doctrine, last (a fire host may
+    // also be any of the above).
+    if (reactCampfire(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

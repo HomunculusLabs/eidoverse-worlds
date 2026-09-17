@@ -37,6 +37,11 @@ import { TourEngine, type TourWorld } from "./tour.ts";
 // progress (playing/atCue/at); the sweep applies crossed cues through
 // each driven family's own doors and re-anchors the fold.
 import { FestivalEngine, type FestivalWorld } from "./festival.ts";
+// Campfires (vocab-31, § CAMPFIRES CONTRACT): swept on the same clock.
+// The fold holds lit/at (the growth-ladder anchor); the sweep realizes
+// state crossings through the lamp + particles families' own doors and
+// tears down when the fire dies. A steady blaze costs nothing.
+import { CampfireEngine, type CampfireWorld } from "./campfire.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -407,6 +412,12 @@ export class BehaviorHost {
    *  own doors (bell toll, zone ask, tour begin/halt, vendor restock) and
    *  re-anchors. Halted festivals cost nothing. */
   private festivals: FestivalEngine | null = null;
+  /** Campfires (vocab-31): swept on the same clock — the fold holds
+   *  lit/at (the burn anchor); the sweep realizes state crossings
+   *  (kindling ramp steps, blaze→embers, →out) through the lamp +
+   *  particles families' own doors and tears down when the fire dies.
+   *  A steady blaze costs nothing. */
+  private campfires: CampfireEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -509,6 +520,15 @@ export class BehaviorHost {
       this.festivals ??= new FestivalEngine(this.w as unknown as FestivalWorld);
       this.festivals.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] festival sweep`, err); }
+
+    // Campfires (vocab-31) ride the same clock — the fold holds lit/at
+    // (the burn anchor); the sweep realizes state crossings through the
+    // lamp + particles families' own doors and tears down when the fire
+    // dies. A steady blaze costs nothing per sweep.
+    try {
+      this.campfires ??= new CampfireEngine(this.w as unknown as CampfireWorld);
+      this.campfires.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] campfire sweep`, err); }
 
     // pressure-27: a world-wide per-tick FIRING budget — even 12 behaviors x
     // 16 legal timers can burn ~600ms of the 1s tick. Timers beyond the

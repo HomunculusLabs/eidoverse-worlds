@@ -24,6 +24,7 @@ import { resolvePublishedKind, materializeKnobs as mkKnobs } from "../shared/pub
 // The lamp engine (vocab-5): reactLamp rides reactToUse's dispatch; the
 // comp/spawn/remove reconcilers ride the after hooks below.
 import { lampOnComp, lampOnRemove, lampOnSpawn } from "./lamp.ts";
+import { campfireOnComp } from "./campfire.ts";
 import { behaviorLimits } from "./behaviors.ts";
 import { ROLE_RANK, type LogEntry, type WorldState } from "../shared/fold.js";
 
@@ -392,6 +393,13 @@ function afterComp(ctx: VerbCtx, entry: LogEntry) {
   // null, ignite on on:true, reset on fresh shape). The engine's own comp
   // writes bypass runVerb (w.append), so this never recurses.
   if (type === "lamp") lampOnComp(ctx.w, entry);
+  // The campfire reconcile (vocab-31, § CAMPFIRES CONTRACT): a
+  // CLIENT-authored campfire comp (builder re-authors the table) —
+  // immediately re-derive the realization at the folded truth (a lit
+  // re-author re-lights the hearth; a null removes the fire and the
+  // sweep's orphan pass un-warms its seats). The engine's own writes
+  // bypass runVerb (w.append), so this never recurses.
+  if (type === "campfire") campfireOnComp(ctx.w, entry);
 }
 
 function afterModerate(ctx: VerbCtx, entry: LogEntry) {

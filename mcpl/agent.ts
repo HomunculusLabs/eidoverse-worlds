@@ -99,6 +99,10 @@ import { describeFestival } from "../shared/festival.js";
 // waystone beacon + the guide action (shared/trailmarker.js
 // describeTrailmarker).
 import { describeTrailmarker } from "../shared/trailmarker.js";
+// The campfire affordance line (vocab-31): same pattern — the live burn
+// state (derived at read time), seconds of fire left, and the
+// kindle/stoke/douse actions (shared/campfire.js describeCampfire).
+import { describeCampfire } from "../shared/campfire.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -2074,10 +2078,13 @@ export class WorldAgent {
       // action — the text-tier read of the same folded comp the engine
       // resolves at fire
       if (c.trailmarker) aff.push(describeTrailmarker(c.trailmarker));
+      // a campfire names its LIVE burn state + seconds of fire left —
+      // the text-tier read of the same folded comp the sweep realizes
+      if (c.campfire) aff.push(describeCampfire(c.campfire));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

@@ -2343,9 +2343,157 @@ family's own arithmetic drawing the line.
       lane's in-flight hunks (vocab-13 physobj precedent). Eye-check
       OPEN: in-browser visual read of a guided walk (body walking itself
       to the beacon rim, one keystroke takeover).
-- [ ] Campfire circle: multi-entity hearth — light it once, companion
+- [x] Campfire circle: multi-entity hearth — light it once, companion
       seats warm, embers comp spins up, night-light spills to neighbors
       (composition: lamps + growth + particles).
+      DONE vocab-31 (2026-09-17): comp {type:"campfire"} — reactCampfire in
+      server/campfire.ts rides reactToUse's dispatch after trailmarker (one
+      import + one dispatch hunk in reactions.ts) + campfireOnComp afterComp
+      row in verbs.ts + CampfireEngine 1Hz sweep on the BehaviorHost tick
+      (the vocab-2/3/14/17/22/29 precedent). ZERO edits to server.ts /
+      world.ts. Contract in § CAMPFIRES CONTRACT below implemented as
+      written: the growth family's own stageAt over a reverse two-stage
+      ladder (kindling→blaze, wilt-hold = EMBERS, out-crossing = burnSec —
+      mirrored-math law, one arithmetic), TWO engine keys (lit/at) stripped
+      at every write, hands mint ONLY the state (kindle/stoke/douse, rank 0
+      + vPunt arm's reach), the realization is DERIVED by the sweep through
+      the parents' own doors (hearth companion light + cargo mount, warm
+      seat lamp comps + companions carrying via-ownership markers, fire/
+      embers particles declaration; segment-gated — a steady blaze costs
+      nothing), the OUT crossing is a FOLD WRITE (death comp lit:false +
+      bell-grammar say, so restart never re-mints it), stoke moves the
+      anchor TOWARD now (fuel added = every crossing later) with the
+      re-kindling branch from embers landing mid-blaze, orphan pass un-warms
+      seats whose fire is gone (the lamp family's own remove hook already
+      owns hearth companions of removed hosts). Evidence: tools/
+      campfiretest.ts RED 22 failing (engine absent; 27 pre-passing = shared
+      math + shell gates, the honest vocab-13..30 class; the RED run itself
+      caught two test-cfg bugs — FAST lacked burnSec, the grow probe
+      under-ran the floors) then ALL PASS 49/49 × 3 consecutive standalone
+      runs; campfiretest registered in the servergate battery; mcpl
+      manifest 28/0 + effective + denoise green after the agent.ts hunks
+      (describeCampfire affordance, exclusion-list entry). Scratch worlds
+      only; no production world touched. No eye-check owed (zero new client
+      code — every percept is a parent family's own: light entities, lamp
+      companions, particles declarations, chat says; the standing
+      in-browser visual read of a lit hearth is the same ear-check class as
+      vocab-9/18/25, deferred to Bill's browser).
+
+### CAMPFIRES CONTRACT (vocab lane — drafted and implemented vocab-31, 2026-09-17)
+
+**Trigger.** A campfire is an entity carrying `comp {type:"campfire",
+data:{...}}`. The action strings `kindle`, `stoke`, and `douse` are
+CAMPFIRE vocabulary on the freeform `use {id, action}` path (the
+reactions doctrine: other action strings pass through untouched — a
+hearth ignoring `use {action:"ring"}` is exactly correct; kindle/stoke/
+douse are DISJOINT from all 30 prior families' actions). Attaching/
+removing the comp is builder (rank 1) — the author's standing decision
+that this ground burns, identical doctrine to the whole line.
+
+**State — TIME is the fuel; the growth family's own arithmetic burns it.**
+A fire is a REVERSE growth ladder: `stageAt` (shared/growth.js, IMPORTED —
+one arithmetic, never re-implemented) over `[kindling, blaze]`, where
+stageAt's wilt-hold reads as EMBERS and the out-crossing is `burnSec`
+(the total fuel) past the anchor. The comp carries exactly TWO engine
+keys — `lit` (bool) and `at` (the kindle anchor) — STRIPPED from the
+authored carry at every engine write then composed fresh (weatherzone
+doctrine). Everything else the engine stamps (`by` the last hand,
+`tLit`) rides as provenance. NOTHING else is stored anywhere: the fire's
+state at any moment is a pure function of (cfg, at, now), so late join,
+restart, replay, and fork all derive the same fire with zero traffic
+between crossings.
+
+**The ladder.** `burnSec` [15,14400] d1800 is the TOTAL fuel (kindle →
+out); `blazeSec` [2,14400] d900 the crown's length; `embersSec` [2,7200]
+d300 the dying glow; kindling = the remainder. Named stages that overrun
+the authored total GROW it (never silently shrink a stage the author
+named). A fire left alone ALWAYS dies inside 4h — there is no eternal
+fire, only a tended one.
+
+**Hands mint ONLY the state.** `kindle` (rank 0 + arm's reach, vPunt
+arithmetic, reach [2,12] d4) writes ONE comp `{...authored, lit:true,
+at:now, by, tLit}` + ONE say (`cf:{op, who, at}` + cause/by — the
+phrases/doors grammar); kindle on a burning fire is a no-op skip, kindle
+on OUT is a FRESH fire. `stoke` ADDS FUEL: the anchor moves TOWARD now
+by `stokeSec` [2,3600] d600 — every crossing (embers, out) moves later
+by exactly the fuel added — clamped at now; a stoke from EMBERS/OUT
+RE-KINDLES (fresh anchor landing mid-blaze — a fed dying fire roars
+straight back, no second kindling ramp). `douse` writes `lit:false` +
+its say; the next sweep tears the realization down. No-ops (stoke on
+cold, douse on cold) mint nothing. Spectators bounce at the shell; the
+comp is authored by builders only.
+
+**The realization — through the parents' own doors (the tour/festival
+doctrine).** The sweep (CampfireEngine, 1Hz BehaviorHost tick) derives
+each fire's state from the fold and realizes it ONLY at crossings:
+- the HEARTH companion light `<fire>·lamp` (the lamp family's own
+  companion grammar): ignite at first light + ONE cargo mount (host
+  motion rides the world's mount semantics — zero per-place traffic),
+  re-write at segment boundaries (kindling ramps smoothstep over
+  min(kindlingSec,60)s, quantized one write per 10s; blaze full; embers
+  at 35%), remove at out/douse — all `day:false` (fires burn at noon);
+- the WARM SEATS: every authored seat entity (≤8, validated id strings)
+  carries a lamp comp `{on:true, via:<fireId>, intensity:warm·level}` +
+  its companion — night-light SPILLS to the neighbors; the `via` marker
+  is ownership (a second fire never fights another's seat; teardown
+  un-warms ONLY its own; the orphan pass un-warms seats whose fire is
+  gone entirely);
+- the PARTICLES declaration on the fire itself: preset `fire` while
+  burning (authored `particles` opts riding the existing bounds — the
+  water-family doctrine: no fake presets, real ones re-tuned), `embers`
+  (quarter count, slower) while dying, nulled at out (a builder's own
+  non-fire emitter on the host is never touched).
+A steady blaze costs NOTHING per sweep — segment-gated writes only, at
+most 4 realization batches per sweep world-wide, plus the hearth churn
+gate (a standing light already reading the derived params is not
+re-written; a restart re-derives idempotently).
+
+**The OUT crossing is a DEATH, and deaths are written.** When a lit
+fire's derivation crosses out, the sweep writes ONE comp `{lit:false}`
+(keeping the anchor — history's last word) + ONE say in the BELL GRAMMAR
+(`cf:{out:true, at}`, NO cause/by — TIME killed it) + the teardown, so
+the fold records the death and a restart never re-mints it. Burning is
+resumable across crashes precisely because the death is a write, not a
+derivation.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path and the live tick; folding a historical
+use/comp/say/light never re-fires. On restart the fold carries lit/at;
+a fire burning at crash resumes at its derived state (the first sweep
+re-derives the realization idempotently — churn-gated), a dead fire
+stays dead, and the says read as history.
+
+**Failure behavior.** Malformed comp → clamp + `campfire-lint`
+(particles-lint doctrine): all scalars clamped to the ladders above,
+anchors ±8, colors 24-bit, seats validated-id/deduped/capped 8 with
+notes, lines (kindleAt/douseAt/stokeAt/burnAt) 200c, unknown keys ride
+(the bag is public annotation). Missing seat → `campfire-skip` (the
+fire still lights). Missing entity → silent pass-through. The whole
+reaction and every sweep step wrapped in try/catch (house rule 3 — no
+fire takes the server down). The 8KB degrade keeps the state patch +
+seats.
+
+**Browser path.** ZERO client code: every percept is a parent family's
+own — the hearth companion renders through the existing light machinery
+(rig dayness does not dim it; `day:false` is authored), warmed seats are
+lamp comps every client already realizes, particles render through the
+existing emitter registry, and the says land as ordinary chat. The fire
+state is readable from any folded snapshot
+(`state.entities[id].comp.campfire.lit/at`).
+
+**MCPL path.** Same log entries, same perception: the says land in the
+agent inbox; `look()` lists the hearth via `shared/campfire.js
+describeCampfire` (the describeDoor pattern) — the LIVE state and
+seconds of fire left, both derived at read time, with the stoke/douse
+hints. An agent tends through the ordinary `use` verb.
+
+**Intent.** The world gathers. A plaza hearth a child lights at dusk,
+benches that glow warm while the fire lives, embers that outlast the
+crowd, a death that folds — light it once and TIME does the tending,
+the lamp family does the lighting, the particles family does the
+burning, and the growth family's own arithmetic counts it down. One
+8KB comp, no script, no new verb, no new client code.
+
 - [ ] Puzzle door pair: two inscription plates that must both be set to
       matching values within a window before the linked door unlinks —
       late-join truth for linked state.
