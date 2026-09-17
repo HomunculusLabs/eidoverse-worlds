@@ -14340,3 +14340,91 @@ staged -f), reviews/struct208-morley/ (9 frames, ignored),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-208,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-209 (2026-09-17): MORLEY PLACEMENT TICK — committed carry from
+## struct-208 executed (nx-struct-morley v1 PLACED_VERIFIED live at the
+## next on-line Math Avenue step az94/r380; 10.0m rhythm held)
+
+209%3=2 placement slot per the 178..208 alternation (struct-208 banked
+morley with "placement = struct-209 carry"). Gate ALL PASS real exit 0
+tick-start at 38beef03 (fauna-3) + RE-RUN clean immediately before the
+mutation at the SAME HEAD (epoch law held, no sibling commit landed
+mid-tick). Shard state: IMPROVE-PLAN carries 0 OPEN nx-struct rows (same
+drained state as struct-204..208).
+
+Local bytes re-verified sha256
+a95b12958e032f694fba4dc2b7272fea735beba984be028b1c1b51235f72aa8e ==
+struct-208 v1 bank pin BEFORE upload (shasum -a 256, 131,224 B, mtime
+Sep 17 12:51); struct208-decode re-run this tick ALL PASS 9/9 (D1 4
+nodes; D3 gable 948/948 on edge lines; D4 rods 978/978 six exact thirds;
+D5 heart 621/621 + 3x207 corners; D6 bead centroid == M_C 5mm
+emissiveFactor present; D7 plinth sole at grade, gable lowest course ==
+plinth top - 8cm exact; D8 envelope 4.557x5.430x0.900 origin-centered
+drift 0.00mm; D9 texMats mo_stone/mo_iron/mo_brass).
+
+SEAT (struct209-scan + struct209-select, fresh 345 census — fauna-3
+ducks added since struct-208's 344): avenue axis re-derived FRESH =
+91.0 deg (20 deg density window, 40 forms; 44 math-family structs
+standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 -> archispiral300
+-> nephroid310 -> folium320 -> rhodonea330 -> versiera340 -> elliptic350
+-> mandelbrot360 -> viviani370 (~10m steps). 596 lawful band candidates
+r372-400; the morley takes the NEXT ON-LINE STEP: az94.0 r380.0, 10.0m
+step == the procession rhythm. NN 10.00 vs nx-struct-viviani (law 8.0),
+SAT 5.97 vs nx-struct-viviani at FINAL yaw (law 1.4).
+
+YAW LAW (struct-104 oblique-read, struct-208 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5 deg band scan maximizing SAT) puts the +Z
+face normal at az304 — 30 deg off the az274 anti-travel sightline, east
+lean (the procession's standing convention, now
+melencolia/fourier/cissoid/quadratrix/archispiral/nephroid/folium/
+rhodonea/versiera/elliptic/mandelbrot/viviani/morley). The outbound
+walker reads the construction face obliquely on approach; the 4.557m
+curb runs az124/304, the gable plane face the walker.
+
+TERRAIN (struct209-terrain-morley.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 4.557x0.900 curb rectangle): spread
+7.0mm, PY = -0.002271.
+
+PLACEMENT (next-place-struct209.ts, struct207 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 345 census; SAT/NN preflight re-run
+at FINAL pose vs same fresh set (symmetric footprint 2.14x1.65 at yaw
+214): NN floor viviani 10.00, SAT worst viviani 5.97 — clean. 1 upload
+(content-addressed store/a95b12958e032f69.glb) + 1 paced spawn over one
+WS join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on
+fresh re-read; census 345 -> 346 exactly. Idempotent rerun:
+ALREADY_SEATED, zero verbs. Folly class (4.10 sqm footprint, h 5.43 real
+trimesh) — no walk owed. Comp bag empty by contract (sole night bead
+emissive-in-GLB glow KEEP — no comp-wipe class on first spawn).
+
+LEDGER REPAIR (honest record): the struct-209 append triggered the law
+check via the h-1 class — my prose ENDED with a literal (D+1, E+1) and
+the tool appended its own exactified pair (2370893 -> 2370895, +2).
+Repaired in-tick by deleting the prose-side duplicate pair (tool's
+exactified pair retained); law re-verified EXACT 2336002 + 34893 ==
+2370895 via the tool's own law function. One wrong intermediate total
+(2370894, my arithmetic error while sweep-285's zero-sum doubled pair
+sat in the deltas) was caught by the same law check and corrected back
+before commit. Standing note: sweep-285's entry carries its own doubled
+(D+0, E+0) pair — zero-sum, law closes with it; foreign-lane (sweep)
+cosmetic, left untouched per the interlane boundary.
+
+Native debt board after this tick: morley v1 stays OWED (fallback-judged
+acceptance from struct-208, disclosed; probe L1-L3 theorems 2.78e-16/
+4.44e-16/1.31e-16 + decode D3-D6 are the binding evidence); plus
+monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger
+v2, apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1,
+versiera v1, elliptic v3, mandelbrot v1, viviani v1 — 21 owed.
+
+Bill eye-check pointer: on Math Avenue past the globe — a long stone
+curb carrying a leaning needle-sharp triangle, six thin iron lines
+fanning from its corners in pairs, and at their crossings a small brass
+heart: Morley's trisector theorem, the perfect equilateral every
+triangle hides (1899, the theorem Euler's era missed). After dark: one
+warm bead burns at the heart's top corner.
+
+Files: struct209-scan-morley.ts + struct209-select-morley.ts +
+struct209-terrain-morley.ts + next-place-struct209.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-209,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
