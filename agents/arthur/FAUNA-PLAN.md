@@ -15,6 +15,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | fox den | `nx-dress-se-foxden-001` | (73,-0.05,-10.5) yaw 4.712 | 856deec5 | static dressing (v17, dress-107 PLACED_VERIFIED) + **fox resident** `nx-dress-se-fox-001` (fauna-5, bc7376b3) at den-local (0.84,0.012,0.38) |
 | rabbit hutch | `nx-dress-hutch` | (38.5,0,-9.5) yaw -1.9 | f5f47791 → **c0a64ac4** (fauna-4) | static hutch, ZERO comps → **FIXED fauna-4** (english-lop + alert rabbits, 5 motion comps; ramp/lid/pop-hole furniture defects cured in-passing) |
 | duck pair | `nx-dress-ducks-001` | (8,-0.139,-91) yaw 0 | **c156b6a1** (fauna-3) | NEW 2026-09-17 — mallard pair on the reedpool W lobe, 6 motion comps (bob/orbit/pendulums) |
+| barn cat | `nx-dress-cat-001` | (40.7,-0.038,-7.5) yaw 3.216 | **0030ce54** (fauna-7) | NEW 2026-09-17 — tuxedo watch-cat in the coop-yard east pocket facing the flock, 4 motion comps (bob + 3 pendulums) |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -36,20 +37,23 @@ domain is commons-next `nx-dress-*` fauna only.
 4. **[CLOSED fauna-5] fox at the den.** A red fox curled asleep at the SE
    den mouth on the worn approach pad (new entity nx-dress-se-fox-001,
    v10 bc7376b3). Full record below.
-5. **[CANDIDATE fauna-6, build owed fauna-7] barn cat — new species.**
-   Homestead-first species all CLOSED (goats fauna-1, ducks fauna-3,
-   rabbits fauna-4), so the next homestead-native: ONE mouser cat.
-   18m identity = pointed-ear silhouette + curled tail tip + tail-ahead
-   posture; coat tabby or black-and-white (warm-hue isolation law, fox
-   fauna-5 kin). Chassis reuse: fox curled/sitting masses (broad forms,
-   NO stick limbs — fauna-5 rig law), rabbit-scale motion vocabulary
-   only (breathing bob + tail-tip flick + ear-flick swivel; all proven
-   part types, no new motion kinds). Entity id `nx-dress-cat-001` (fauna
-   domain, NEW — no existing cat entity in the 2026-09-17 census).
-   Siting at build tick per seat-scan law + fresh census; candidate
-   hosts (decided then): coop-yard edge (mouser story, busy with hens +
-   hutch), inn step (E working edge), or hearth apron (core r0-30,
-   highest traffic). One cat only — no zoo.
+5. **[CLOSED fauna-7] barn cat — new species.** The mouser built and
+   seated: a tuxedo watch-cat (nx-dress-cat-001, v12b 0030ce54) in the
+   coop-yard east pocket (40.7,-0.038,-7.5) yaw 3.216, facing the hen
+   flock across the yard. Full record below.
+6. **[CANDIDATE fauna-8, build owed fauna-9] barn owl — new species.**
+   Homestead species all CLOSED (goats/hens/ducks/rabbits/fox/cat), so
+   the next homestead-native: ONE barn owl roosting. 18m identity =
+   round-head silhouette + facial disc + upright posture at a roost
+   beam; encounter read = heart-shaped face + dark eyes. Chassis reuse:
+   fox/cat broad-mass rig law (NO stick limbs), duck/rabbit motion
+   vocabulary only (breathing bob + slow head-scan pendulum; all proven
+   part types). Entity id `nx-dress-owl-001` (fauna domain, NEW — no
+   existing owl in census). Siting at build tick per seat-scan law +
+   fresh census; candidate hosts (decided then): the barn (W working
+   edge r0-30 — an owl IN the barn gable is the homestead classic), the
+   inn's beam end (E working edge), or the watchpost (core, already
+   firelit). One owl only — no zoo.
 
 ## Per-species rebuild records
 
@@ -90,6 +94,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: 10 build versions, 6 judged rounds. 18m composite PASS 4/4 (v1 bytes, re-confirmed on v10 bytes after the silhouette changed). Encounter ultraface arc: v1 FAIL (standing read + tail invisible) → v2 fail (wrap on far flank occluded) → v3 fail (tail x-lane arithmetic error — segments under the torso) → v5 fail (v3's error persisted via unfixed offsets) → v6 fail (flank drape hides behind body face-on; cream chest read as deformed tail) → v7 3/5 (head/body/species PASS; thin diagonal read as dangling paw + tip wrong side) → v8 3/5 (drape lane INSIDE body z-span buried the chain again) → v9 2/5 (drape works; front run still disconnected sticks) → **v10 5/5 PASS** (broad bands, mass, zero gaps: "tail path legible... white-tipped tail doing the heaviest species-lifting work... classic sleeping-canid configuration"). Judge identity: ZAI fallback (glm vision) — native re-judge DEBT NATIVE-5 below.
 - Rig laws learned: (a) tail-chain arithmetic MUST be fox-frame (group origin offset −0.21 added) — tail-local numbers presented as world numbers buried two whole versions under the torso; (b) a wrap on the far flank or a lane inside the body z-span renders NOTHING face-on — the tail must cross the chest FRONT to read from the approach camera; (c) thin sticks read as paws/detached debris — broad overlapping bands carry connection; (d) a same-hue tail is invisible — the darker-rust sweep + cream tip is the readable curl.
 
+### cat — fauna-7 (2026-09-17) CLOSED
+- **v12b sha16 0030ce54d92e6785** (full: 0030ce54d92e6785a37f26bdcd3ae73a05c34a69af7462472036c3947d5f1205), NEW entity `nx-dress-cat-001` PLACED_VERIFIED at world (40.7,-0.038,-7.5) yaw 3.216 scale 1 — the coop-yard east pocket (mouser story: faces the hen flock center (34,-8) across the yard; plaza lane z≈-7.5 runs past 2.5m N). Terrain preflight flat (heightAt -0.0384, sub-mm spread); SAT preflight CLEAR nearest +2.046m (hutch; live rotated-OBB census law, 14 neighbors in 14m). Census 349→350 exactly, 5 verbs (upload+spawn+4 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m lane approach W→E, arrival 0.38m; foreign support-seam stderr = streamstones/logpile/lanternhook/skeps/temple, not ours), live bbox 0.554×0.424×0.335 == decode envelope.
+- Build: a TUXEDO cat in a watch-sit — near-black 0x17120e (warm, dark-hole law) with the warm-white 0xf4efe6 front: tapered bib shield (wide breast ±0.046, narrow throat ±0.026 — dark shoulders bound it both sides), white muzzle+chin, pink nose 0.03 proud, green side-set eyes (profile readers), two matched white paws with a dark toe-gap, ground-wrapped dark tail ending in the WHITE TIP receding lane-outward past the paw plane. Trodden-earth pad 0x71624c (fox-den family) derived from true extents. Anchors bcat/bcat_head/bcat_tail/bcat_ears (4 KEEP groups; `bcat` added to mergekit KEEP this tick — collision-proof prefix, bare `cat` would regex-collide with catenarygate/catalan).
+- Motion: 4 comps live — breathing bob (.006/3.6s, fourth village exercise of part bob) + head look-scan pendulum (Y-axis .12/6.5s) + tail lazy sway (.06/2.8s) + ear-flick (.18/2.4s axis [2,0,1]), phases staggered, epoch t0. Motion proven engine-true at yard framings (78px@18m band 470-483; 920px near band 445-492); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc: 12 build versions, 12 judged rounds (ZAI fallback, native debt NATIVE-6 below). 18m PASS ×2 (identity: sitting-cat silhouette + ears carrying; tuxedo whites disclosed sub-pixel at 15-20px, struct-45 kin — they read at the encounter distance). Near PASS ×2 (tuxedo reads, tail connected w/ white tip, ears). Ultraface anatomy arc (fill-lit probes, disclosed): v2 exposed a MIRRORED RUMP (bib contained, struct-52 class) → v3 frame-true rear → v4 flank-hug + dark legs (white-on-white smear) → v5 low-wrap + white legs → v6 bib widened → v7 ONE white column + tip at paws → v8 continuous bib + run clear → v9 paw split + tip past paws → v10 continuous plane → v11 tapered shield (bib-bounded YES, two matched paws YES first clean) → v12b tip+run DEPTH-separated (recede past paw plane). Final: muzzle/nose YES, bib-bounded YES, paws YES, ears YES, no floats, overall YES; **profile 5/5 PASS** (seated read, dark tail along ground, white tip at paws, connected at rear, no floats — the wrap's contract view, fauna-4 side-view law). Face-view tail-depth residual disclosed as framing-limited (0.6m-depth judgment on 4cm boxes at shared ground row; profile + near both testify connected).
+- Rig laws learned: (a) the cat FACES its flock — an "ultraface" camera placed east was a REAR view (judge's honest inventory caught it; face cameras stand on the yard side); (b) face-on views were BACKLIT by the rig sun (west) — whites rendered dim tan; anatomy probes carry a camera-side fill (disclosed; the game's own sun varies, a fill is inside the world envelope); (c) a wrap's tip cannot share the paws' screen column NOR the paw z-depth — it separates by DEPTH (recede past the paw plane) where z cannot; (d) the profile is the tail's contract view — the face view cannot testify on depth-connection (fauna-4 side-view law, confirmed); (e) pad sizes DERIVE from true cat extents (hand-tuned margins chased rotated corners twice).
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
@@ -99,6 +110,7 @@ domain is commons-next `nx-dress-*` fauna only.
 | NATIVE-3 | fauna-3 (2026-09-17) | duck pair v3 c156b6a1 18m gameplay + ultraface + right frames (`reviews/fauna3-ducks/new-{gameplay,ultraface,right}.png`) — fallback PASS arc stands until natively confirmed |
 | NATIVE-4 | fauna-4 (2026-09-17) | hutch rabbits v12 c0a64ac4 near + sitterface + sentinelface frames (`reviews/fauna4-hutch/new-{near,sitterface,sentinelface}.png`) — fallback PASS arc (18m framing-law disclosure) stands until natively confirmed |
 | NATIVE-5 | fauna-5 (2026-09-17) | den fox v10 bc7376b3 comp_gameplay + comp_ultraface + comp_near frames (`reviews/fauna5-fox/new-{comp_gameplay,comp_ultraface,comp_near}.png`) — fallback PASS arc (5/5 encounter + 4/4 18m) stands until natively confirmed |
+| NATIVE-6 | fauna-7 (2026-09-17) | barn cat v12b 0030ce54 yard_gameplay + yard_near + yard_ultraside + yard_ultraface frames (`reviews/fauna7-cat/new-{yard_gameplay,yard_near,yard_ultraside,yard_ultraface}.png`) — fallback PASS arc (18m + near + profile 5/5 + ultraface core) stands until natively confirmed |
 
 ## Rig law (learned fauna-1, hard way)
 
