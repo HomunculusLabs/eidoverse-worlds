@@ -67,7 +67,7 @@ check("court-smoke-live", any(k.startswith("particles") and isinstance(v, dict) 
 lights = [e for e in d["entities"] if e.get("kind") == "light"]
 compb = [e for e in d["entities"] if e.get("comp")]
 check("lights-38", len(lights) == 38)
-check("comp-bearing-21", len(compb) == 21)  # sweep-104 record: moonmoth + house-35_-22 arrivals + windmill millstone
+check("comp-bearing-23", len(compb) == 23)  # sweep-104 record 17->18 (moonmoth+house-35_-22+windmill millstone); sweep-104..282 era 21; sweep-283 record 21->23 (fauna-1 goats + fauna-2 hens motion comp bags, both census-verified with ledger-matched tuples)
 
 # this tick's classification pins
 wh = E.get("nx-struct-whisperhorn", {})
