@@ -36,6 +36,20 @@ domain is commons-next `nx-dress-*` fauna only.
 4. **[CLOSED fauna-5] fox at the den.** A red fox curled asleep at the SE
    den mouth on the worn approach pad (new entity nx-dress-se-fox-001,
    v10 bc7376b3). Full record below.
+5. **[CANDIDATE fauna-6, build owed fauna-7] barn cat — new species.**
+   Homestead-first species all CLOSED (goats fauna-1, ducks fauna-3,
+   rabbits fauna-4), so the next homestead-native: ONE mouser cat.
+   18m identity = pointed-ear silhouette + curled tail tip + tail-ahead
+   posture; coat tabby or black-and-white (warm-hue isolation law, fox
+   fauna-5 kin). Chassis reuse: fox curled/sitting masses (broad forms,
+   NO stick limbs — fauna-5 rig law), rabbit-scale motion vocabulary
+   only (breathing bob + tail-tip flick + ear-flick swivel; all proven
+   part types, no new motion kinds). Entity id `nx-dress-cat-001` (fauna
+   domain, NEW — no existing cat entity in the 2026-09-17 census).
+   Siting at build tick per seat-scan law + fresh census; candidate
+   hosts (decided then): coop-yard edge (mouser story, busy with hens +
+   hutch), inn step (E working edge), or hearth apron (core r0-30,
+   highest traffic). One cat only — no zoo.
 
 ## Per-species rebuild records
 
