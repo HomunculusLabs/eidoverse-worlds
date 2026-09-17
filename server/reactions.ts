@@ -109,6 +109,11 @@ import { reactObservatory } from "./observatory.ts";
 // feature, bounded wish log, guestbook trim verbatim). Same dispatch
 // doctrine, last (a wishing well may also be any of the above).
 import { reactWish } from "./wish.ts";
+// The echo listener (vocab-35, § ECHOES CONTRACT): comp {type:"echo"}
+// owns NO use actions (the bell/phrases doctrine) — it rides the SAY
+// path's tail, recording posed in-earshot speech and relaying it at the
+// pair partner after the authored delay.
+import { reactToSayEcho } from "./echo.ts";
 // The puzzle observer (vocab-32, § PUZZLES CONTRACT): no dispatch row of
 // its own (no actions — the chime/bell doctrine); a hand OPENING a door
 // a linked puzzle does not yield is re-closed in reactDoor's transition
@@ -351,6 +356,12 @@ export function reactToSay(w: ReactionWorld, cause: LogEntry): void {
   const raw = typeof a?.text === "string" ? a.text : "";
   try {
     if (!raw || raw.length > PHRASE_TEXT_CAP) return;   // bounded work; silence is legal
+    // The echo listener (vocab-35, § ECHOES CONTRACT): paired walls
+    // record posed in-earshot speech and relay it after the authored
+    // delay. Runs BEFORE the phrases sweep so a chatty room's phrase
+    // answers never consume an echo's cap budget — and its skips never
+    // shadow phrase matches.
+    reactToSayEcho(w, cause);
     let fired = 0;
     for (const [id, ent] of Object.entries(w.state.entities)) {
       const table = (ent as { comp?: Record<string, unknown> })?.comp?.phrases;

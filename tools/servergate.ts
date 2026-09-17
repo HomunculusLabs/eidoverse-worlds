@@ -169,6 +169,11 @@ const BATTERY: Row[] = [
   // toss-narrating say, presence-plane coin derived from the water's own
   // fold), scratch sequencer.
   { name: "wishtest", tool: "tools/wishtest.ts" },
+  // vocab-35: the echo-wall matrix (§ ECHOES CONTRACT) — same class:
+  // paired sound posts relaying a recorded say between two points with
+  // delay + cooldown caps (static comp table, say-path listener, relay
+  // says ARE the record), scratch sequencer.
+  { name: "echotest", tool: "tools/echotest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

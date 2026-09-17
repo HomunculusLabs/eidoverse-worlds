@@ -2835,8 +2835,158 @@ client code.
       synthesizes + folded state; the standing in-browser AUDIBLE read
       of a coin's plink is the same ear-check class as vocab-9/18/25,
       deferred to Bill's browser).
-- [ ] Echo wall: paired sound posts that relay a recorded say between
+- [x] Echo wall: paired sound posts that relay a recorded say between
       two points with delay and rate caps (extends sound family).
+      DONE vocab-35 (2026-09-17): comp {type:"echo"} — reactToSayEcho in
+      server/echo.ts rides the SAY path's tail inside reactToSay (one
+      import + one call hunk in reactions.ts, BEFORE the phrases sweep;
+      ZERO edits to verbs.ts / server.ts / world.ts / behaviors.ts /
+      browser / client — no use actions at all, the bell/phrases
+      doctrine). The comp is a STATIC AUTHORED TABLE (doors/portals
+      doctrine): ZERO comp transitions, ZERO persisted state — the relay
+      says ARE the record (world_history reads them; an in-flight relay
+      that dies with the process is a voice that never finished crossing
+      the valley). A live say by a PRESENT POSED actor within listen
+      [2,40] d8 metres is recorded, and after delaySec [0.5,30] d2 the
+      wall speaks the words back at its pair partner — the words VERBATIM
+      clamped 160 (repeating them IS the affordance; the wish family's
+      never-the-words rule is deliberately NOT this family's), say args
+      carrying echo{who,at} + cause = the recorded say's seq + by = the
+      SPEAKER (the phrases/doors provenance grammar), plus ONE
+      presence-plane note at the partner (music/force doctrine — never
+      logged, never folded, never replayed). The relay rides setTimeout
+      with pair re-resolved at fire (portal 'to' doctrine: missing
+      partner skips fail-closed; non-echo partner LEGAL — a plain bench
+      can be the far post; pair-to-self refused). Rate caps: cooldown
+      [1,60] d3 between RECORDINGS per wall; ECHO_CAP 3 walls per say
+      (phrases ANSWER_CAP doctrine); says past 500c are not speech to an
+      echo; world-authored says NEVER recorded — which closes the loop BY
+      CONSTRUCTION: two mutually-paired walls relay once and stop, no
+      ping-pong possible (proven with the far-wall placement). Unposed
+      actor = no record (arm's-reach arithmetic without a verb). Lint:
+      clamp + note (door-lint doctrine), malformed comp → silent wall,
+      never a crash. shared/echo.js (normalizeEcho/echoPair/echoText/
+      echoNote/describeEcho + ECHO_READ_CAP/ECHO_TEXT_MAX/ECHO_CAP)
+      shared verbatim by engine + tests + mcpl look(); mcpl agent.ts:
+      describeEcho affordance line (id-aware self-pair read) +
+      exclusion-list entry + sound-case echo branch (radius-gated act
+      line). Evidence: tools/echotest.ts RED 13 failing (engine absent;
+      25 pre-passing = shared math + shell gates, the honest vocab
+      class; RED itself caught one genuine shared-math defect —
+      normalizeEcho never linted a non-object comp) then ALL PASS 38/38
+      across two consecutive standalone runs after three disclosed
+      test-side expectation fixes (the log-purity grep matched comp
+      entries' "echo" key, not sound entries — verb+args discrimination;
+      the cooldown leg raced its own window boundary at block start —
+      settled; the ping-pong proof placed the second wall inside the
+      speaker's earshot so it legitimately heard him directly — moved to
+      40m so ONLY a world-actor relay could ever reach it, and none did);
+      echotest registered in the servergate battery, 38/38 IN-BATTERY;
+      full battery 52/55 — every vocab suite green, the 3 failures
+      exactly the documented pre-existing classes (authtest 22/1 +
+      support-lifecycle 15/7 = pilot-lane sibling dirt, permtest 21/2 =
+      mcpl/tokens.json absent; vocab-13..34 identical, my diff touches
+      none of those seams); mcpl manifest 28/0 + effective + denoise
+      green after the agent.ts hunks. Scratch worlds only; no production
+      world touched. No eye-check owed (zero client code — a relayed say
+      + a note music.js already synthesizes, both existing paths; the
+      in-browser AUDIBLE read of a returning echo is the same ear-check
+      class as vocab-9/18/25/34, deferred to Bill's browser).
+
+### ECHOES CONTRACT (vocab lane — drafted and implemented vocab-35, 2026-09-17)
+
+**Trigger.** An echo wall is an entity carrying `comp {type:"echo",
+data:{...}}`. There are NO use actions (the bell/phrases doctrine: a wall
+is a listener, not an instrument — the music family owns hand-played, the
+soundpost family owns standing loops, and this family owns heard speech).
+Any `use` on an echo wall passes through untouched. Attaching/removing
+the comp is builder (rank 1) — the author's standing decision that this
+place listens, identical doctrine to the whole family.
+
+**State — the comp is a static table; the relay says ARE the record.**
+The authored shape `{pair, listen, delaySec, cooldownSec, hz, sec, gain,
+wave, hzName?}` rides verbatim in the fold. ZERO comp transitions are
+ever minted, ZERO relay state is persisted anywhere: `world_history
+{verbs:["say"]}` reads every relay that ever fired, and an in-flight
+relay that dies with the process is simply a voice that never finished
+crossing the valley (a restart mints nothing — proven). The per-wall
+cooldown window lives in per-boot engine memory only, dropped on
+restart.
+
+**The ear.** A live say by a PRESENT, POSED actor is recorded when the
+speaker's live pose (presence plane, the livePoseOf helper) stands
+within `listen` metres (authored, clamped [2,40], default 8) of the
+wall's position. An unposed actor is not present — no record, no skip
+note (silence is legal). Says past ECHO_READ_CAP (500c, the phrases cap)
+are not speech to an echo. WORLD-AUTHORED says are never recorded — the
+wall never hears the world's own voice.
+
+**The relay.** After `delaySec` (authored, clamped [0.5,30], default 2)
+the wall speaks the recorded words back at its `pair` partner entity:
+ONE world-authored say `{text:<words VERBATIM, trimmed, clamped 160>,
+id:<pair>, echo:{who,at}, cause:<the recorded say's seq>, by:<the
+SPEAKER>}` (actor `world`, the phrases/doors provenance grammar) plus
+ONE presence-plane `{type:"sound", id:<pair>, echo:{return:true},
+note:{hz,sec,gain,wave}, p:<partner pos>, at, by}` (the music/force
+doctrine — never logged, never folded, never replayed; music.js
+synthesizes the hum with zero new client code). The words ride VERBATIM
+by design: repeating them IS the affordance — a whispering wall that
+whispered nothing would be a lie (the wish family's never-the-words rule
+is deliberately not this family's). Whitespace-only text relays nothing.
+The timer resolves the partner FRESH at fire (the portal 'to' doctrine):
+a pair missing from the fold skips fail-closed with `echo-skip`; a
+non-echo partner is LEGAL (the voice lands at a point in the world — a
+plain bench can be the far post); pair-to-self is refused at normalize.
+
+**Rate caps (the whole abuse story).** (a) Per-wall cooldown
+(`cooldownSec` clamped [1,60] d3) between RECORDINGS — a chatty room
+mints one relay per window, never a stream. (b) At most ECHO_CAP (3)
+walls record any single say (folded-state order, deterministic — the
+phrases ANSWER_CAP doctrine; skips name the cap). (c) The delay cap
+[0.5,30] bounds in-memory timer count by the world's say rate. (d) The
+verb rate bounds says themselves. (e) Loop closure is BY CONSTRUCTION:
+relay says are actor "world" ⇒ never recorded ⇒ two mutually-paired
+walls relay once and stop — no ping-pong, no echo-storm (proven).
+
+**Authority.** None taken. Listening is not a verb — nobody uses an
+echo wall; SPEAKING is the interaction, and saying is already rank 0 for
+every present body. Spectator says never reach this path (shell gate).
+Effects are say + presence-sound ONLY: no other verb can be minted from
+a recording. Authoring the comp is builder (rank 1) at the shell.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path. On restart the fold carries the comp (the
+wall listens again immediately) and the relay history stays in the log
+as says — each readable via world_history, none re-fired.
+
+**Failure behavior.** Malformed comp → clamp + `echo-lint`
+(particles-lint doctrine): listen [2,40] d8, delaySec [0.5,30] d2,
+cooldownSec [1,60] d3, hz [40,4000] d220 (a low hollow hum), sec
+[0.05,3] d0.6, gain [0.05,1] d0.3, wave ∈ {sine,square,sawtooth,
+triangle} d sine, pair ≤64c (junk/empty/self → null, the wall stays
+silent, named), non-object comp noted + treated as {}. Unknown keys
+ride (the bag is public annotation). The whole listener and every timer
+fire wrapped in try/catch (house rule 3 — no wall takes the server
+down).
+
+**Browser path.** ZERO client code: the relay lands as ordinary chat
+(actor `world` — logChat) and the hum is a `{type:"sound"}` note
+music.js already synthesizes. A visual tier for the wall itself (glyphs
+that light on record, a returning-wave shader) is deliberately deferred
+— protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the relay say lands
+in the agent inbox; the returning hum narrates as one radius-gated act
+line ("postB hums as an echo returns (by bob)"); `look()` lists the
+wall via `shared/echo.js describeEcho` (the describeDoor pattern) —
+partner, earshot, delay, and the speak-near-it hint. An agent is heard
+by walls exactly like anyone else: pose near the wall and say.
+
+**Intent.** The world remembers what you said, somewhere else. A
+whispering gallery across the plaza, a lookout post that carries the
+market's news to the docks, a riddle wall that answers at the far end
+of the garden — speech that crosses distance with a delay, one comp,
+no script, no new verb, the say path itself doing the carrying.
 
 ### WISHES CONTRACT (vocab lane — drafted and implemented vocab-34, 2026-09-17)
 

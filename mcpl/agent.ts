@@ -116,6 +116,10 @@ import { describeObservatory } from "../shared/observatory.js";
 // splash/clink derivation off the paired water comp, and the wish action
 // (shared/wish.js describeWish).
 import { describeWish } from "../shared/wish.js";
+// The echo affordance line (vocab-35): same pattern — the partner post,
+// the earshot, and the delay (shared/echo.js describeEcho). An echo wall
+// has no actions; the hint is to SPEAK near it.
+import { describeEcho } from "../shared/echo.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -804,6 +808,19 @@ export class WorldAgent {
               if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
               this.gate.act(String(msg.by ?? msg.id), "wishes",
                 `${msg.id} takes a coin — plink${msg.by ? ` (by ${msg.by})` : ""}`);
+              break;
+            }
+            if (msg.echo) {
+              // An echo returned (vocab-35): one act line per relay,
+              // radius-gated like every ambient sense — the returning hum
+              // is the sound's own line; the relay say itself already
+              // carried the words to the chat stream. `by` names the
+              // original speaker whose voice crossed back.
+              if (!Array.isArray(msg.p)) break;
+              const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+              if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+              this.gate.act(String(msg.by ?? msg.id), "echoes",
+                `${msg.id} hums as an echo returns${msg.by ? ` (by ${msg.by})` : ""}`);
               break;
             }
             if (msg.soundpost) {
@@ -2117,10 +2134,14 @@ export class WorldAgent {
       // the text-tier read of the same folded comp the toss engine writes
       // (the paired water comp chooses the timbre, derived at read time)
       if (c.wish) aff.push(describeWish(c.wish, c.water));
+      // an echo wall names its partner post, earshot, and delay — the
+      // text-tier read of the same folded comp the listener resolves at
+      // fire (no actions: the hint is to SPEAK near it)
+      if (c.echo) aff.push(describeEcho(c.echo, e.id));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle", "observatory", "wish"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle", "observatory", "wish", "echo"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);
