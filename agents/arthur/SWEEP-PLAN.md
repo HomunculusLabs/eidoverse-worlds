@@ -12506,3 +12506,67 @@ this tick: longhouse/garden-cottage @287 walked fresh, row-cottage/
 observatory @286, inn/tower-house @285, hall/bunkhouse @284, forge/potter
 @283 stalest standing pair at 4 sweeps; walk tools interior-walk-forge.ts,
 interior-walk-potter.ts — ls-verify both on disk before running).
+
+sweep-288: CLEAN SWEEP, arrival-fold tick (57th consecutive quiet-or-classified).
+Tick-start HEAD 30063ee1 = struct-211 (arbelos placement, census 346->347 per its
+own ledger; vocab-32 8999706c committed PRE-tick scratch-only per its own entry,
+zero production-world mutations). Standing gate ALL PASS real exit 0 FIRST TRY
+(98 PASS lines + ALL PASS trailer, captured unpiped to /tmp/s288/gate.log).
+Census epochs A/B 20s-paced BYTE-IDENTICAL (raw 236256B sha16 ee03e64a276879be):
+346->347 with exactly ONE domain-valid arrival — nx-struct-arbelos @
+(-27.205025, -0.022859, 389.04998) yaw 3.735004599267865 (= 214deg), lib
+1a0b3967a47bfa56 = struct-210 banked sha re-verified in that tick, scale 1, kind
+thing, comp bag empty — tuple matches the committed struct-211 ledger
+line-for-line (az94/r390 Math Avenue, NN 10.00 morley, SAT 6.19 proven by its
+own lane); 0 departures, 0 drift on 346 shared ids across all five semantic
+classes (pos/yaw/scale/kind/bbox, lib, compKeys). Overlap: SAT fresh-live over
+the arbelos-inclusive set, 309 bbox non-light / 238 classified / 0 coverage
+holes, real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26 choreography @
+sweep-43, 244th sweep since routing, NOT new, no escalation due (law keys
+severity-1); arbelos arrival ZERO new contacts (SAT set grew 308->309,
+unclassified unchanged at exactly the one known pair). Walks: tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run individually
+per the sweep-228 ceiling law — core 64/64 ALL_PASS @ 0.380 maxArrival
+(next-walk-core-paths.ts; JSON parsed from first brace past the [physics]
+banner; support-seam stderr abstentions = the known normalized diagnostics
+set, unchanged), NW 5/5 ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts); verdicts content-anchored on status strings + per-leg
+ok counts + distances from raw files. Arbelos sits r389 az94 — 370m+ off every
+walked leg; epoch-A walks stand by construction (sweep-53 precedent), SAT
+covers the collision surface. Tier-2 266th cycle per the committed sweep-287
+pointer: forge 6/6 ALL_PASS (dists 0.261/0.307/0.300/0.315/0.375/0.261,
+interior-walk-forge.ts) + potter 6/6 ALL_PASS (0.270/0.366/0.295/0.255/0.250/
+0.349, interior-walk-potter.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (242nd consecutive clean); sweep89-battery 28/28 PASS real
+exit 0 on fresh census-A bytes — comp-bearing pin 25 held exactly (fauna
+cohort complete: goats/hens/ducks/hutch; arbelos comp-neutral, live count 25
+census-verified); interlane md5 86b2936f stable, read fresh this tick;
+SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5 c0f569d0
+unchanged (264th check; 0 open candidate rows), sweep owns no prefix;
+CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs and was read fresh via the loop/plan
+reload. Baseline lawfully rewritten RAW like-for-like
+(sweep288-baseline-rewrite.py, asserted pre-write: diff exactly [arrival
+nx-struct-arbelos]): 347 entities / 236256B / sha16 ee03e64a276879be;
+post-rewrite drift ZERO (baseline byte-identical to censusB live). Diff tool
+sweep288-census-diff.py folded from the committed sweep287 chassis (sed swap
+only; py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on the real
+bytes). Probe self-catches pre-verdict: none this tick — all parsers
+re-anchored on actual per-tool schema keys read from the raw files before any
+verdict (sweep-48 class discipline held). Foreign dirt in tree (windmill
+overhaul scratch, cabin/carousel prototype dirs, client/server engine files,
+fleet shells, debug-bower scripts, moon-moth dir, fauna tools,
+HERO-ASSET-REFINEMENT-PLAN, core-paths assets) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect notes,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-289): hall + bunkhouse (267th cycle — LRU chain
+re-derived from committed plan pointers this tick, self-caught pre-commit:
+first write of this pointer wrongly named longhouse+garden-cottage; the true
+stalest standing pair is hall/bunkhouse @284 (4 sweeps) — forge/potter @288
+walked fresh, longhouse/garden-cottage @287, row-cottage/observatory @286,
+inn/tower-house @285; walk tools interior-walk-hall.ts,
+interior-walk-bunkhouse.ts — ls-verify both on disk before running).
