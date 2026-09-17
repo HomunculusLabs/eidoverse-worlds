@@ -14849,3 +14849,156 @@ Files: struct213-scan-lunes.ts + struct213-select-lunes.ts +
 struct213-terrain-lunes.ts + next-place-struct213.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-213,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-214 (2026-09-17): R11-32 THE OLOID — BUILD+JUDGE TICK
+## (the stone that rolls: the convex hull of two linked perpendicular
+## circles; theorems machine-exact: link Hopf-exact, hull surface ==
+## 4*pi*r^2 rel 1.69e-4, 957 true-support rulings; probe 8/8 + RED; decode
+## 9/9 + RED control; judged PASS gameplay 4/4 + night 3/3 + closeface 4/4
+## — ZAI fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+214%3=2 build slot per the 178..213 alternation (lunes placed struct-213,
+bank empty — no takeable carry; refine pool empty of payable items: the
+23-debt native board cron-unpayable, tool_search FRESH this tick — catalog
+carries only terminal + zai-vision MCP; same disclosed class as
+struct-169..213). Gate ALL PASS real exit 0 tick-start at d8975937
+(sweep-290; unpiped terminal GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 38th tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-213 -> tag struct-214 (re-checked immediately
+before append; law exact 2370905).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN +
+CITY-PLAN-V2 + census 349): oloid 0/0/0 — every textual mention is a
+"hyperboloid" substring (the struct-206 near-miss already named); never
+barred, never built, no census id. struct-206's kin-check recorded
+"dupin/cyclide/oloid zero clean presence" and it was never consumed.
+Register: opens the SPATIAL-SOLID branch — the first standing form that
+is a solid 3-D hull of linked curves (plates, globes, knots and open
+lattices stand; none is a hull; none rolls). Kin-check fresh: ruledtower =
+one-sheet-hyperboloid LATTICE (open silhouette, no rings — different
+read, disclosed); hypar = flat saddle canopy; viviani = closed sphere +
+space-curve eight (sphere read, not wedge — proximity disclosed);
+sphericon = the oloid's square cousin, 0 mentions, future kin. Era: Paul
+Schatz, 1929 — the procession's first 20th-century form, discovered by
+MECHANICAL EXPERIMENT (a cube's rotary development), the register's
+rolling-mechanics branch.
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): L1
+THE LINK — planes perpendicular exact; |O1-O2| = R exact (each center ON
+the other circle); C1 crosses C2's plane once inside (signed -1.450) and
+once outside (+1.450) — HOPF-LINKED; circles disjoint min gap 1.450 m.
+L2 THE AREA THEOREM — hull surface 26.4253 m^2 vs 4*pi*r^2 = 26.4208
+(rel 1.69e-4, inscribed slice-loft 400x72, disclosed class) — the oloid
+wears the sphere's skin, Schatz's theorem. L3 THE SUPPORT FAMILY — 957
+bitangent planes in the seated frame, worst violation -2.22e-16; each
+plane touches the hull along its ruling; the hull is the family's
+intersection. L4 THE TRAIL — the seat line + 3 marks are EXACT bitangent
+rulings (each the true support of a rolled position — the ruling family
+IS the roll's contact set), marching +0.62/1.24/1.65 m behind the seat
+with full lengths 2.51 m each, stylized wear 0.60/0.45/0.30 (disclosed).
+L5 THE SEAT — the stance chosen for the widest reading (hull WIDTH along
+the seat normal 2.900 = 2R); contact plane is a TRUE support (max dip
+-1.11e-16); first course bottom flat at curb top - 8cm. L6 COURSES — 130
+voussoir boxes TRUE-inscribed in the exact hull slice at BOTH stations
+(convex vertical-span cut: z-band = [max(alpha(x0),alpha(x1)),
+min(beta(x0),beta(x1))] — the AABB-of-clip method was caught RED twice
+and replaced); seat/crown wedge courses disclosed (area-ratio station
+rule, lunes horn-wedge lineage). L7 folly — volume 9.3151 m^3 numeric
+only (no closed form claimed, resolution-stable 2.12e-5); curb footprint
+15.17 m^2 < 16; stance height 3.178 >= 2.2 real trimesh. RED control: 2%
+radius error breaks the link + moves the sphere-skin target 4% — laws
+detect.
+
+SELF-CAUGHT LAW/BUILD BUGS THIS TICK (all RED-first, zero wasted builds):
+(a) the bitangent-family orientation flip carried a stale `bad` flag —
+half the family was silently dropped and slices leaked to the start box
+(caught by slice x-extent == -4R); (b) L3's worst-violation accumulator
+initialized to -Infinity (never updates — vacuous); (c) the bisection
+landing threshold > 1e-9 collapsed every roll tip to zero at th=0; (d)
+clipX cut inequalities inverted (empty intersection — zero courses); (e)
+boundary-band lower/upper classification read dz instead of the
+left-normal's dx; (f) micro-edges fell into the vertical branch; (g) the
+box cut needed the convex vertical-span method (corner-poke 5e-5 caught
+by L6); (h) decode D3 tested world-frame verts against seated-frame
+planes (54.8% false-negative — frame law added); (i) a full rigid-roll
+SIMULATION was built and honestly DISCARDED: the reseat-by-sampled-dip
+floats the body (saturating advance caught), and the honest replacement
+is L4's exact-ruling trail — no simulated motion is claimed, the marks
+are the form's own contact geometry.
+
+CONCEPT: A SOLID THAT ROLLS ON ITS WHOLE SKIN. STONE carries the hull —
+130 voussoir boxes in stepped courses rising from a long curb
+(4.461x0.26x3.40). BRASS carries the two generator CIRCLES — proud rings
+riding the surface (144 tangent segments each, tube 0.05), the linked
+pair that generates every ruling. IRON carries the roll TRAIL — the seat
+line (2.51 m at the live contact ruling, half-inlaid 12mm into the curb
+top) plus three worn bars at exact bitangent rulings marching back along
+the curb (1.51/1.13/0.75 m). Sole night element: one warm bead at the
+crown (0.531, 3.108, 0.000 — farthest point from the rolling plane;
+s363 law). Nodes 4 (oloid_0 stone + oloid_1 brass + oloid_2 iron +
+glow_ol_1).
+
+BUILD (agents/arthur/assets/mkv3-oloid.ts, staged -f): root identity
+(struct-188 law); lunes/arbelos world-frame chassis. v1 deterministic x2
+byte-identical sha256
+f76b1e8fe568b3b1454cd6646245a08bedf274d482ec17b4c91f7528028d1cee
+(mtime-verified, 423 pre-merge meshes -> 3 buckets + 1 glow KEEP).
+
+DECODE (struct214-decode-oloid.ts, tracked) ALL PASS 9/9 + RED control
+(foreign lunes bytes: 9 FAILs, exit 1): D1 census 4 nodes; D2 curb 120
+verts; D3 hull 3012/3024 inside the exact supporting-plane family (99.6%,
+wedge verts excluded disclosed) + 121/121 non-wedge corner coverage; D4
+rings 18432/18432 on the exact generator polylines; D5 trail 67 seat +
+69 bar verts; D6 bead centroid == crown within 2mm emissiveFactor
+present; D7 curb sole 0.000 + first course 0.180 embed; D8 envelope
+drift 0.0000; D9 texMats ol_stone/ol_iron/ol_brass.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed, riding the
+owed board):
+- gameplay 18m: PASS 4/4 — identity (deliberate carved math monument on
+  a rolling curb, not rubble, not a building), silhouette (continuous
+  curb-to-crown stepped mass, no floats/gaps), grounding (square contact
+  + unbroken line, iron seam at legibility edge), overall accept.
+  Margins disclosed: tilted ring reads edge-on as a diagonal rod at 18m
+  (closeface resolves it as the linked partner); trail bars sub-pixel at
+  18m (closeface reads all three, third faint); crown bead marginally
+  visible by day; rig lighting flat (chassis class).
+- night-face: PASS 3/3 — EXACTLY ONE warm point (~536,160) == the crown
+  bead, zero stray glow (rings/bars dark matte), silhouette traceable
+  navy-vs-dark.
+- closeface (~8m): PASS 4/4 — masonry regular with joint rhythm; BOTH
+  rings seated (large loop unambiguous, linked partner emerging from the
+  steps, never floating); trail bars deliberate decreasing; three
+  material families distinct; hull reads ONE convex solid. The judge's
+  own closing note: "the linked generating circles strongly identify the
+  intended form as an oloid."
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-215
+committed carry: fresh census scan (8m NN law, district soft cap 6, Math
+Avenue eligibility; procession continues past lunes r400), YAW LAW — the
+construction reads obliquely per struct-104 (the procession's standing
+214 deg convention; the 4.461m curb runs az124/304), terrain preflight
+over the TRUE rotated footprint, hash-gated plain spawn nx-struct-oloid,
+comp {}. Folly class — no walk owed. Native re-judge debt: oloid v1
+joins the owed board (monkeysaddle gate, hypar row 22, kuen v3, catalan
+v1, clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1,
+folium v1, rhodonea v1, versiera v1, elliptic v3, mandelbrot v1,
+viviani v1, morley v1, arbelos v1, lunes v1 — 24 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the lunes —
+a long stone curb carrying a carved solid between two brass rings: the
+oloid, the hull of two linked perpendicular circles (Schatz 1929), the
+form that rolls on its whole skin touching line after line; an iron line
+marks where it stands, three worn iron bars behind it where it came
+from; its surface area is exactly the sphere's for the same circles —
+the stone wears the sphere's skin. After dark: one warm bead burns at
+the crown.
+
+Files: struct214-probe-oloid.ts + struct214-decode-oloid.ts +
+struct214-render-oloid.ts (NEW, tracked), assets/mkv3-oloid.ts (NEW,
+staged -f), reviews/struct214-oloid/ (9 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-214,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
