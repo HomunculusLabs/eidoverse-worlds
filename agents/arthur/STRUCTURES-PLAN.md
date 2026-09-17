@@ -14428,3 +14428,138 @@ Files: struct209-scan-morley.ts + struct209-select-morley.ts +
 struct209-terrain-morley.ts + next-place-struct209.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-209,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-210 (2026-09-17): R11-30 THE ARBELOS — BUILD+JUDGE TICK (Archimedes'
+## shoemaker's blade and the twin circles; theorems machine-exact: twin
+## tangencies 4.44e-16, area pi*r1*r2 = pi*h^2/4 rel 4e-9, probe 7+1 RED;
+## decode 9/9 + RED control; judged PASS gameplay 4/4 + night 3/3 — ZAI
+## fallback disclosed (closeface timed out x2, one paced retry — decode
+## D3/D4/D5 carry its axes); ACCEPTED BANKED NOT PLACED)
+
+210%3=0 refine slot (morley placed struct-209, bank empty, refine pool empty
+of payable items — the 21-debt native board cron-unpayable, tool_search
+fresh this tick, catalog carries only the zai-vision MCP; same disclosed
+class as struct-169..209) — build+judge per the 178..209 alternation,
+placement = struct-211 committed carry. Gate ALL PASS real exit 0 tick-start
+at 5e22c0c5 (vocab-31; unpiped terminal GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 35th tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-209 -> tag struct-210 (re-checked immediately
+before append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + census 346):
+arbelos 0/0/0 as a BUILD — named only in kin-check pass-over notes
+("tangent-circle kin arbelos/salinon deliberately passed over as too-fresh",
+struct-182, 28 ticks ago — freshness window expired). Apollonian standing =
+a PACKED GASKET (recursively tangent discs), not an arbelos (one
+tangent-pair region + baseline) — different silhouette, different read.
+Register: opens the PLANE-REGION branch — no standing form IS a bounded
+arc-region. Era lineage: Diocles ~180 BC (cissoid struct-188) <-
+Archimedes ~250 BC, Book of Lemmas 4-5 — one register older, the classical
+root of the Greek construction-curve era.
+
+THEOREM VERIFICATION BEFORE CARVING (the conchoid law, struct-190): L1 TWIN
+TANGENCIES (BoL 5) — each twin tangent to its lobe arc (external), the
+outer arc (internal), and the vertical CD construction line, worst residual
+4.44e-16; twin radius == r1*r2/R exact; center heights == 2*sqrt(r*t)
+exact (the algebra (r+t)^2-(r-t)^2=4rt IS the theorem). Twins congruent,
+NOT mutually tangent (centerline gap 0.0635 — the honest asymmetric knife
+r1=1.7/r2=1.1, disclosed). L2 GEOMETRIC-MEAN HEIGHT (BoL 4) — D on the
+outer arc at 2*sqrt(r1*r2)=2.734958866235 exact; arbelos area == pi*r1*r2
+== pi*h^2/4 (the CD rectangle) to rel 4e-9 by 40k-station integration —
+the CD line IS the area, machine-verified. L3 ARC JOINTS — lobes meet the
+baseline at A/C/B exact, D on the arc exact, crown gaps 0.875m (region
+thins toward A/B, tallest at CD — the true arbelos profile, no mid-arc
+crossings). L4 COURSE LAWS — 123 voussoirs, every span inside
+region(yTop) exactly, stepped under-hang <= one course (soundmirror
+register, disclosed), keystone course spans the crown at x=R. L5 SEATING —
+the CROTCH KEEL: decode caught course-0 empty (the region meets the
+baseline in sub-cm slivers — the wedge opens as ~0.75y^2), so the stand is
+the wedge itself: five stepped stone boxes from a curb-embedded toe (8cm,
+morley base-course class) rising to the k=1 voussoir; A/B knife tips die
+in air BY DESIGN (versiera arm class, margins measured in L6). L6 sole rod
++ A/B/C pins half-inlaid (versiera hoop class); bead at D on the sky-arc.
+RED control: 2% r1 error shifts twin radius 0.005m — laws detect.
+
+CONCEPT: THE SHOEMAKER'S BLADE AND THE TWIN CIRCLES. STONE carries the
+region — the arbelos plate in horizontal voussoir courses between the
+outer arc and the two lobe arcs, on a long curb. BRASS carries the twins —
+two rings riding the face, each kissing all three boundaries, + the CD
+construction ruler pocketed toe-to-sky through the twin weld. IRON carries
+the sole (baseline datum rod A->B) + A/B/C joint pins. Sole night element:
+one warm bead at D (s363 law). Envelope 6.300x3.029x0.900 origin-centered;
+h 3.03 >= 2.2 real trimesh; curb footprint 5.67 m^2 < 16 — FOLLY CLASS, no
+walk owed. Nodes 4 (ab_stone + ab_iron + ab_brass + glow_ab_1).
+
+BUILD (agents/arthur/assets/mkv3-arbelos.ts, staged -f): root identity
+(struct-188 law); world-frame voussoir/tube chassis (morley lineage). v1
+deterministic x2 byte-identical sha256
+1a0b3967a47bfa560376c0c6b05e8b3e67bd2bd44f4a4ff61694e03fad6bb2ed
+(mtime-verified). TWO first-pass catches by the probe/decode laws BEFORE
+placement: (a) the mk's envelope law caught a probe/mk contract mismatch
+(probe z modeled the plate, mk builds the curb 0.90 deep) — probe
+corrected to the true envelope; (b) decode D7 caught the floating plate
+(course-0 empty at the baseline) -> the crotch keel cure (the blade
+standing on its edge). One decode-law bug class self-caught (D3 y-filter
+vs z-filter discrimination — morley's own documented trap, law-side).
+
+DECODE (struct210-decode-arbelos.ts, tracked) ALL PASS 9/9 + RED control
+(foreign morley bytes: 9 FAILs, exit 1): D1 census 4 nodes; D2 curb 84
+verts; D3 blade 3072/3072 verts in the arbelos band (100.0%) + corner
+coverage 123/123 voussoir boxes; D4 sole rod + pins [131,131,99]; D5
+twins 1078/1142 on the exact tori + 185 on the ruler; D6 bead centroid ==
+D within 5mm, r 0.0720, emissiveFactor present; D7 keel toe == curb top -
+8cm exact, rod+pin floors at the half-inlay classes; D8 envelope drift
+0.00mm; D9 texMats ab_stone/ab_iron/ab_brass.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed, riding the
+owed board):
+- gameplay 18m: PASS 4/4 — identity (arbelos reads: blade + scooped lobes
+  with sky through + brass twin arcs cresting + cusp tangent point on the
+  curb), silhouette (stepped crest continuous, rings attached, scoops
+  legitimate geometry), grounding (tangent point meets curb ~x508, contact
+  shadow attached), overall accept. Margins disclosed: (a) the brass ruler
+  sub-pixel at 18m (closeface/night-face both corroborate it present —
+  night judge traced it descending from the bead to the curb); (b) A/B end
+  tips sit a few px above the curb — the DESIGNED versiera arm class
+  (probe L6 discloses the numbers); (c) rings read as crested arcs where
+  the seated rings geometrically ride past the silhouette — truthful
+  seating, disclosed.
+- closeface: JUDGE UNAVAILABLE (provider timeout x2, one paced retry —
+  burned). Its axes are decode-carried at byte level: masonry regularity =
+  D3 123/123 corner-exact + 100% band membership; twin seating = D5 exact
+  torus surfaces; joints = D4 pins + D5 ruler span. Native re-judge owed
+  covers the visual read.
+- night-face: PASS 3/3 — EXACTLY ONE warm ember bead at (524,231) == D
+  (upper-center-right, the arc apex where the ruler terminates), zero
+  stray glow (rings read dark matte, no bloom, no second point), blade
+  silhouette traceable navy-vs-dark-stone incl. both lobe cutouts.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-211
+committed carry: fresh census scan (8m NN law, district soft cap 6, Math
+Avenue eligibility; procession continues past morley r380), YAW LAW — the
+construction reads on the +Z face: oblique 30-40 deg off the approach walk
+per struct-104 convention (the procession's standing 214 deg convention),
+terrain preflight over the TRUE rotated footprint, hash-gated plain spawn
+nx-struct-arbelos, comp {}. Folly class — no walk owed. Native re-judge
+debt: arbelos v1 joins the owed board (monkeysaddle gate, hypar row 22,
+kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1, melencolia v3,
+tribar v2, fourier v1, cissoid v2, quadratrix v1, archispiral v1,
+nephroid v1, folium v1, rhodonea v1, versiera v1, elliptic v3,
+mandelbrot v1, viviani v1, morley v1 — 22 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the trisector
+heart — a long stone curb carrying the shoemaker's blade: a stepped
+blade-shaped plate whose two lower scoops open to the sky, two brass rings
+seated in the blade's face each kissing the top arc, its scoop, and the
+vertical brass line between them, an iron datum rod along the curb.
+Archimedes' Book of Lemmas: the twin circles, and the construction line
+whose height is the geometric mean of the lobes. After dark: one warm bead
+burns where the line meets the sky-arc.
+
+Files: struct210-probe-arbelos.ts + struct210-decode-arbelos.ts +
+struct210-render-arbelos.ts (NEW, tracked), assets/mkv3-arbelos.ts (NEW,
+staged -f), reviews/struct210-arbelos/ (9 frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-210,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
