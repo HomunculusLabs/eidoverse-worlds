@@ -107,6 +107,11 @@ import { describeCampfire } from "../shared/campfire.js";
 // the live derived match state, and the solve window (shared/puzzle.js
 // describePuzzle).
 import { describePuzzle } from "../shared/puzzle.js";
+// The observatory affordance line (vocab-33): same pattern — the next
+// scheduled celestial event (derived live at read time from the folded
+// sky), the session holder, and the observe action
+// (shared/observatory.js describeObservatory).
+import { describeObservatory } from "../shared/observatory.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -2088,10 +2093,14 @@ export class WorldAgent {
       // a puzzle names its linked plates + door and the live derived match
       // state — the text-tier read of the same fold the engine reconciles
       if (c.puzzle) aff.push(describePuzzle(c.puzzle, this.entities));
+      // an observatory names the NEXT scheduled celestial event (derived at
+      // read time from the folded sky — the same nextEvent the engine fired)
+      // and the eyepiece session — the text-tier read of the same fold
+      if (c.observatory) aff.push(describeObservatory(c.observatory, this.skyState));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle", "observatory"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

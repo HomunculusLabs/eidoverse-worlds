@@ -2657,9 +2657,145 @@ welcome stones that must agree — two visitors writing the same words
 within the window, each at their own plate, the door answering the
 agreement. One 8KB comp, no script, no new verb, no engine keys — the
 fold already knew.
-- [ ] Observatory session: telescope affordance — use-action aligns to
+- [x] Observatory session: telescope affordance — use-action aligns to
       the next scheduled celestial event, holds a shared observation
       slot with occupancy.
+      DONE vocab-33 (2026-09-17): comp {type:"observatory"} — reactObservatory
+      in server/observatory.ts rides reactToUse's dispatch after campfire (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to
+      verbs.ts / server.ts / world.ts / behaviors.ts — the RESERVATION
+      doctrine, not the sweep doctrine: fold-derived expiry, no engine
+      beyond the live verb path). Contract in § OBSERVATORY CONTRACT
+      below implemented as written. Evidence: tools/observatorytest.ts
+      RED 28 failing (engine absent; 33 pre-passing = shared math + shell
+      gates, the honest vocab class; the RED run itself caught three
+      test-arithmetic bugs — rate-360 pacing, the mod-24 wrap, a float
+      strict-equality) then ALL PASS 61/61 × 3 consecutive runs after
+      GREEN caught ONE genuine engine defect (the release action was
+      missing from OBSERVATORY_ACTIONS — every release passed through
+      untouched; cured same tick, the vocab-16 hold-alias class);
+      observatorytest registered in the servergate battery (in-battery
+      PASS 61/61); mcpl manifest 28/0 + effective 42/0 + denoise green
+      after the agent.ts hunks (describeObservatory affordance line +
+      exclusion-list entry). Scratch worlds only; no production world
+      touched. No eye-check owed (zero client code — chat + folded state
+      only; the sky itself is the visual).
+
+### OBSERVATORY CONTRACT (vocab lane — drafted and implemented vocab-33, 2026-09-17)
+
+**Trigger.** An observatory is an entity carrying
+`comp {type:"observatory", data:{...}}`. The action strings `observe`
+(alias `look up`) and `release` are OBSERVATORY vocabulary on the freeform
+`use {id, action}` path (the reactions doctrine: other action strings pass
+through untouched — a dome ignoring `use {action:"ring"}` is exactly
+correct; observe/look up are DISJOINT from all 32 prior families;
+`release` is shared with reservation/companion — a hybrid entity decides
+by dispatch order, the standing family doctrine). Attaching/removing the
+comp is builder (rank 1) — the author's standing decision that this thing
+reads the sky, identical doctrine to the whole line.
+
+**The schedule — THE SKY IS THE EVENT TABLE (zero authored schedule,
+zero engine keys on the calendar).** The "scheduled celestial events" are
+the day-phase crossings every client already folds and narrates
+(dawn/day/dusk/night at hours 5/8/18/21 — `dayPhase`'s own bounds,
+imported). `nextEvent(sky, now, {horizonH})` (shared/observatory.js)
+derives the next crossing as a PURE function of (folded sky, now) by
+minute-scan + bisection over `hoursAt` — THE hour formula (forecast.js,
+imported; the mirrored-math law) — so late join, restart, replay, fork,
+browser, agent, and engine all derive the identical event with zero
+traffic and zero schedule writes. Fail closed: no sky, or a clock that
+does not move (fixed hour / rate 0) ⇒ no events, ever — a telescope
+without a moving sky reads nothing (the skip names which). `horizonH`
+[1,24] d12 is REAL-hours of look-ahead (the scan bound); `h` returns
+wrapped to [0,24).
+
+**State — the fold is the session; expiry is fold-derived (the RESERVATION
+doctrine, NOT the weatherzone sweep).** Every claim is ONE world-authored
+comp transition write `comp {id, type:"observatory", data:{...authored,
+heldBy, until, at, ev}}` — the log is the only durable state. ENGINE_KEYS
+(`heldBy/until/at/ev`) are stripped from the authored carry at every
+write then composed fresh (weatherzone/vendor doctrine). `ev`
+`{phase, atMs, h}` is the NEXT crossing derived AT FIRE — the session's
+raison d'être carried in the fold as the observed event (provenance
+snapshot; the LIVE "what's next" is always re-derived at read time by
+describe/look(), never trusted from `ev`). EXPIRY IS FOLD-DERIVED
+(`sessionActive(data, now)`): a lapsed session blocks NOTHING — the first
+use after expiry finds the eyepiece free. NO SWEEP ENGINE EXISTS: late
+join, restart, replay and fork read the same window from the log alone,
+and nothing ever writes a release for a session that lapsed while nobody
+watched.
+
+**Effects.** A claim appends TWO entries, in order: the comp transition
+write and a `say` (actor `world`, args `{text:<line>, id,
+obs:{who, phase, at:<ev.atMs>, until, op:"observe"}, cause:<use seq>,
+by:<user>}` — the phrases/reservation provenance grammar exactly). Line
+default `"<who> claims the eyepiece for <phase>"` (authored `line`
+overrides, ≤200c clamped). Release appends its own comp + say with
+`obs:{by, at, op:"release"}`; the holder releases at rank 0, another's
+release needs builder+ (the plate edit-rank doctrine: your claim is
+yours; an override is communal). No other verb can be minted from an
+observatory use — say + comp-on-self ONLY. An `observatory-trigger`
+flight entry (kind `reaction`) records cause→effect.
+
+**Authority/reach.** Observing is rank 0 (anyone present — the author's
+published behavior, world authority on the effect only) plus the
+ARM'S-REACH gate (vPunt arithmetic): the user's LIVE pose within `reach`
+metres (authored, clamped [2,12], default 4) of the dome's LIVE position
+(lease stream pos if leased, folded pos otherwise). Out-of-reach use is
+an `observatory-skip` naming the distance. Spectators bounce at the shell
+(`use` is spectator-gated there). Conflict: another's observe while held
+skips NAMING THE HOLDER + seconds — never silently steal, never queue;
+the holder's own observe re-anchors (extends until). Lock composes as for
+doors (lock refuses place/punt/spawn/comp/remove — not `use`): a locked
+dome still reads the sky.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use or comp never
+re-fires. On restart the world folds the session + the sky — every client
+re-derives the same next event from the same folded sky (the fold is the
+truth; `ev` rides as history). The says read as history.
+
+**Rate.** Claims are user-paced (the verb rate bounds `use`); each mints
+at most 2 entries (comp + say); no-ops, conflicts, out-of-reach, and
+fixed-sky uses mint nothing. The comp is bounded by the authored shape —
+it cannot grow with traffic.
+
+**Failure behavior.** Malformed comp → clamp + `observatory-lint`
+(particles-lint doctrine): `reach` [2,12] d4, `slotSec` [30,900] d300,
+`horizonH` [1,24] d12, `az` normalized to [0,360), lines clamped 200c,
+unknown keys ride (the bag is public annotation). Missing entity →
+silent pass-through. The 8KB degrade keeps {heldBy, until, at, ev} +
+lint (fail closed against bloat, never against the claimant). The whole
+reaction wrapped in try/catch (house rule 3 — no dome takes the server
+down).
+
+**Browser path.** ZERO client code: the say arrives as ordinary chat
+(actor `world`); the session + carried event are readable from any folded
+snapshot (`state.entities[id].comp.observatory.heldBy/.until/.ev`) —
+scripts and future UI consume it without a new protocol surface. The
+sky's own ambient lines (the day-phase narration every embodied agent
+already receives, tagged `eidoverse:weather`) ARE the event's
+perception. A visual tier (a telescope model aiming, an ocular UI) is
+deliberately deferred — protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the dome via `shared/observatory.js
+describeObservatory(data, skyState)` (the describeDoor pattern) — the
+next event derived LIVE at read time (phase, world-clock time, sun
+elevation via `elevDeg` — sky.js's own sun formula mirrored), minutes
+away, the holder + countdown when held, the observe hint when free, and
+the fail-closed reason when the sky is fixed or absent. An agent observes
+through the ordinary `use` verb.
+
+**Intent.** The world keeps appointments with its sky. An observatory
+dome on the hill whose eyepiece one person at a time may claim for the
+coming dusk, a sunrise platform at the village rim, a night-watch tower
+that names the minute dawn breaks — no authored schedule, no engine, no
+sweep: the sun's own folded clock is the calendar, the reservation
+family's hold is the occupancy, and the sky narrates the event every
+client already perceives. One 8KB comp, no script, no new verb, no new
+client code.
+
 - [ ] Fountain wish: coin-toss interaction on water features with a
       bounded wish log (extends water family, guestbook caps).
 - [ ] Echo wall: paired sound posts that relay a recorded say between

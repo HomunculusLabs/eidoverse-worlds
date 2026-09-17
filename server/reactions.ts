@@ -99,6 +99,11 @@ import { reactTrailmarker } from "./trailmarker.ts";
 // multi-entity hearth (growth-ladder burn-down driving lamp + particles
 // through their own doors). Same dispatch doctrine, last.
 import { reactCampfire } from "./campfire.ts";
+// The observatory engine (vocab-33, § OBSERVATORY CONTRACT): comp
+// {type:"observatory"} owns the observe/release vocabulary — the
+// telescope session on the sky's own day-phase schedule (reservation
+// doctrine: fold-derived expiry, no sweep). Same dispatch doctrine, last.
+import { reactObservatory } from "./observatory.ts";
 // The puzzle observer (vocab-32, § PUZZLES CONTRACT): no dispatch row of
 // its own (no actions — the chime/bell doctrine); a hand OPENING a door
 // a linked puzzle does not yield is re-closed in reactDoor's transition
@@ -253,6 +258,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // multi-entity hearth. Same dispatch doctrine, last (a fire host may
     // also be any of the above).
     if (reactCampfire(w, cause, ent, id, action)) return;
+    // The observatory slice (vocab-33, § OBSERVATORY CONTRACT): comp
+    // {type:"observatory"} owns the observe/release vocabulary — the
+    // telescope session on the sky's own schedule. Same dispatch doctrine,
+    // last (a dome host may also be any of the above).
+    if (reactObservatory(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

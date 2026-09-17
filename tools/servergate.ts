@@ -159,6 +159,11 @@ const BATTERY: Row[] = [
   // linked puzzle lock (plates + door composed through their own doors,
   // zero engine keys), scratch sequencer.
   { name: "puzzletest", tool: "tools/puzzletest.ts" },
+  // vocab-33: the observatory matrix (§ OBSERVATORY CONTRACT) — same
+  // class: the telescope session over the sky's own day-phase schedule
+  // (reservation doctrine, fold-derived expiry, no sweep), scratch
+  // sequencer.
+  { name: "observatorytest", tool: "tools/observatorytest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites
