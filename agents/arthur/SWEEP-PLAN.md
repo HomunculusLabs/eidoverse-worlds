@@ -12310,3 +12310,61 @@ forge/potter @283, longhouse/garden-cottage @282, row-cottage/observatory
 @281, inn/tower-house @280 stalest standing pair at 4 sweeps; both walk
 tools ls-verified present on disk this tick: interior-walk-inn.ts,
 interior-walk-tower-house.ts).
+sweep-285: CLEAN SWEEP, arrival-fold tick (54th consecutive quiet-or-classified).
+Tick-start HEAD 38beef03 = fauna-3 (ducks on the reedpool, NEW species entity
+nx-dress-ducks-001 PLACED_VERIFIED). Standing gate ALL PASS real exit 0 FIRST
+TRY (98 PASS lines + ALL PASS trailer). Census epochs A/B 20s-paced
+BYTE-IDENTICAL (raw 233527B sha16 44d6808a39d4f7ff): 344->345 with exactly ONE
+domain-valid arrival — nx-dress-ducks-001 @ (8, -0.139, -91) yaw 0, lib
+c156b6a12a935495, scale 1, comp bag 6x motion:duck_{a,b}_{,head,tail} — tuple
+matches the committed fauna-3 ledger line-for-line; 0 departures, 0 drift on
+344 shared ids across all five semantic classes. Overlap: SAT fresh-live over
+the ducks-inclusive set, 307 bbox non-light / 236 classified + 2
+fauna-classified ducks contacts / 0 coverage holes, real exit 3 unpiped on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2
+routed artwalk b26 choreography @ sweep-43, 241st sweep since routing, NOT
+new, no escalation due (law keys severity-1); ducks arrival ZERO new
+unclassified contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually per the sweep-228 ceiling law —
+core 64/64 ALL_PASS @ 0.380 maxArrival (next-walk-core-paths.ts; JSON parsed
+from first brace past the [physics] banner; support-seam stderr abstentions =
+the known normalized diagnostics set, unchanged), NW 5/5 (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/
+0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts); verdicts content-anchored on status strings + per-leg
+ok counts + distances from raw files. Tier-2 263rd cycle per the committed
+sweep-284 pointer: inn 6/6 ALL_PASS (dists 0.320/0.318/0.341/0.350/0.364/
+0.288, interior-walk-inn.ts) + tower-house 6/6 ALL_PASS (0.245/0.245/0.263/
+0.377/0.374/0.309, interior-walk-tower-house.ts), both real exit 0, both
+tools ls-verified present on disk pre-run. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (239th consecutive clean); sweep89-battery 28/28
+PASS real exit 0 on fresh census-A bytes — comp-bearing pin RAISED 23->24 with
+documented provenance (fauna-3 ducks motion comp bag, census-verified; the
+battery's own 23 pin false-FAILed first, corrected per the coverage-count law,
+sweep-283 precedent); interlane md5 86b2936f stable read fresh; SWEEP-LOOP
+md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged
+(261st check, 0 open candidate rows), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues freeze
+banner governs and was read fresh via the loop/plan reload. Baseline lawfully
+rewritten RAW like-for-like (sweep285-baseline-rewrite.py, asserted pre-write:
+diff exactly [arrival nx-dress-ducks-001]): 345 entities / 233527B / sha16
+44d6808a39d4f7ff; post-rewrite drift ZERO (baseline byte-identical to
+censusB live). Diff tool sweep285-census-diff.py folded from the committed
+sweep284 chassis (sed swap only; py_compile clean, clean exit 0 at epoch A on
+the real bytes). Probe self-catches pre-verdict, both corrected with no
+repair owed: (a) sweep89-battery invoked without its census argv the first
+time (IndexError; re-run with /tmp/s285/censusA.json); (b) the battery's
+comp-bearing-23 pin false-FAILed on the lawful ducks arrival — raised to 24
+with provenance per the coverage-count law. Foreign dirt in tree (windmill
+overhaul scratch, cabin/carousel prototype dirs, client/server engine files,
+fleet shells, debug-bower scripts, moon-moth dir, fauna3 duck tools,
+HERO-ASSET-REFINEMENT-PLAN, core-paths assets) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect notes,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-286): row-cottage + observatory circuit (264th cycle
+— LRU chain re-derived from committed plan pointers this tick: inn/tower-house
+@285 walked fresh, hall/bunkhouse @284, forge/potter @283, longhouse/
+garden-cottage @282, row-cottage/observatory @281 stalest standing pair at 4
+sweeps; walk tools interior-walk-row-cottage.ts, struct2-walk-observatory.ts
+both ls-verified present on disk this tick).
+
