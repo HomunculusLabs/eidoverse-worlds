@@ -13,7 +13,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | goat pen | `nx-dress-goats` | (34,0,13) yaw -1.2 | c47861e4 → **7e9af5a5** (fauna-1) | WORST — box-goats, floating heads, ZERO comps (motion lost to a re-place comp-wipe; tex-41's pin checks lib only), build bug: N/S post rows spacing R marched to x=9.6 (bbox 14.21m) → **FIXED fauna-1** |
 | hen | `nx-dress-hens` | (34,-0.0335,-8) yaw -1.8 | edc1a4c7 → **1ab461bd** (fauna-2) | WORST-NEXT — was ONE 0.4m hen micro-entity standing alone by the coop (the flock's b/c siblings were never spawned here); 7-seg cylinders, ZERO comps, frozen → **FIXED fauna-2** (three-hen flock) |
 | fox den | `nx-dress-se-foxden-001` | (73,-0.05,-10.5) yaw 4.712 | 856deec5 | static dressing (v17, dress-107 PLACED_VERIFIED) — no animal present; candidate: a fox presence at the den mouth (new species row below) |
-| rabbit hutch | `nx-dress-hutch` | (38.5,0,-9.5) yaw -1.9 | f5f47791 | static hutch, ZERO comps; rabbits live in old-commons pins only — candidate: hutch rabbits |
+| rabbit hutch | `nx-dress-hutch` | (38.5,0,-9.5) yaw -1.9 | f5f47791 → **c0a64ac4** (fauna-4) | static hutch, ZERO comps → **FIXED fauna-4** (english-lop + alert rabbits, 5 motion comps; ramp/lid/pop-hole furniture defects cured in-passing) |
 | duck pair | `nx-dress-ducks-001` | (8,-0.139,-91) yaw 0 | **c156b6a1** (fauna-3) | NEW 2026-09-17 — mallard pair on the reedpool W lobe, 6 motion comps (bob/orbit/pendulums) |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
@@ -29,9 +29,10 @@ domain is commons-next `nx-dress-*` fauna only.
 2. **[CLOSED fauna-3] pond ducks — new species.** A mallard pair
    (nx-dress-ducks-001, v3 c156b6a1) floating on the reedpool's open W lobe
    — concentric rider on the water host (struct-19 class). Full record below.
-3. **[CANDIDATE] hutch rabbits.** Rebuild the hutch model with 1-2 rabbit
-   anchors (ear-flick + nose-bob micro-motion), same pen language as the
-   goat yard.
+3. **[CLOSED fauna-4] hutch rabbits.** The hutch model rebuilt with two
+   creature rabbits — an english-lop loafer in a golden straw nest and an
+   upright alert sentinel — 5 motion comps live, same-tuple replace.
+   Full record below.
 4. **[CANDIDATE] fox at the den.** A fox presence at the SE den mouth
    (curled or peeking — small, low); motion: breathing bob only.
 
@@ -59,6 +60,14 @@ domain is commons-next `nx-dress-*` fauna only.
 - Rig law learned: ultra anatomy probes need a FACE-VISIBLE angle — a face-on camera behind the drake's tail sees no face; bills read in profile (45mm flat slab = ~1px end-on). Added `ultraface` view to the rig (camera −z).
 - Interrupted tick reconciled: fauna-3 was interrupted pre-place (artwalk-32 class — build/decode/5 renders on disk at 12:04-12:06, nothing live, ledger ignorant); this tick rebuilt ×2 (same v1 bytes), re-judged, iterated v2/v3, placed fresh. No live residue existed.
 
+### rabbits — fauna-4 (2026-09-17) CLOSED
+- **v12 sha16 c0a64ac43a695f67** (full: c0a64ac43a695f67798d2882791ec02797d3fc64aa7b3d7b325fad5a1698a672), same-tuple replace of `nx-dress-hutch` (38.5,0,-9.5) yaw -1.9 scale 1 via remove+respawn (riders checked: none parented, no mounts), census 346→346, 7 verbs (upload+remove+spawn+5 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m W approach through the coop-yard lane; the known foreign support-seam stderr lines are temple/stones/logpile, not ours), live bbox 1.65×1.331×1.432 (height DROPPED 18cm — the lid tower is gone), SAT preflight CLEAR (266 OBBs checked, nearest coop +1.188m; envelope law: new bbox contained in old, so pre-fauna-4 non-overlap holds unchanged).
+- Root defect cured: the model's two rabbits sat frozen (ZERO comps since placement — the tex-54 rabbit comps only ever landed in old commons) and the sitting rabbit sat INSIDE the compartment behind the solid wire strip — struct-52 occlusion class, invisible from every angle. Rebuild: **english-lop loafer** (near-white 0xecead8, long drop ears hanging below the chin OUTSIDE the silhouette — v7's short swing hid white-on-white; haunch, planted paws, muzzle/pink nose/dark eyes, tail puff) settled in a GOLDEN straw nest (0xe6c35c — the shared STRAW 0xd8ea70 yellow-green read "green blob" at distance) at the ramp foot; **upright alert sentinel** (agouti 0x9c966c, cream chest column + pale belly — the wild-rabbit underside showing in the upright pose, tall 18.5cm V-spread ears with near-white inner faces 8mm proud, haunches, planted paws, muzzle/nose/eyes, tail puff) beside the nest.
+- Furniture defects cured in-passing (side-view judge found them): the ramp's top end had floated 23mm below the sill since wakeup-84 (0.75 slab too short for the 0.70×0.45 triangle — now a full-length 0.822 slab meeting the sill flush, foot clearing ground, 3 grip cleats); the "open" lid was a 66° full-depth slab towering 44cm over the ridge (now half-depth at 43° hinged at the box back-top, a real opened lid, with a 90cm prop stick from the front sill through the compartment opening to the lid edge); a dark POP-HOLE doorway veneer at the ramp bay's floor level closes the ramp-to-door read (same idiom as the wire strips). Envelope gate caught and forced fixes at v2/v5/v7/v8/v9/v11 (nest dig, sitter moves, ear pokes, ramp corner, foot-straw) — final bbox contained exactly.
+- Motion: 5 comps live — 2 breathing bobs (sit amp .006/3.4s, alert amp .005/4.1s — SECOND village exercise of part `bob`) + sitter nibble head pendulum (.12/2.6s) + sentinel nod (.09/3.3s) + ear-flick (.22/2.0s on axis [2,0,1] — a swivel), phases staggered per individual, epoch t0. Motion proven engine-true at 18m (79px diff, band 494-521 = the rabbit band) and near (1058px); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc: 12 build versions. 18m identity: 4 FAILs (v1 grey specks → v3 cream-blended-into-straw → v4 white-still-blending + sub-pixel markers → v5 white-on-dark still sub-pixel) — then the judge's own math ("3-8 pixels each, below storytelling threshold"; rabbits ~2% of frame) invoked **struct-45 framing law**: internal anatomy judged at the ENCOUNTER distance (5m/near + 1.2m aimed probes), 18m judged for what 18m carries (hutch + bedding + life presence — reads "hutch with open bays" at distance; the residual disclosed). Near/probe arc: v6 lop-ear fail (flank-hiding) → v7 pale-inner-ear + ramp-block → v8 ramp-floats + lid-tower (side-view probe) → v9 one-ear occluded (0.9 yaw) → v10 **sitter PASS + sentinel PASS** → v11 composite (ramp gap band) → **v12 composite PASS** ("ramp runs ground-to-doorway, both rabbits read correctly, structurally clean"). Judge identity: ZAI fallback (glm vision) — cron lane has no native vision; native re-judge DEBT NATIVE-4 below.
+- Rig laws learned: (a) per-subject AIMED probes — the generic view frustum at 1.4m missed the sitter entirely (sitterface/sentinelface 6-arg view entries, camera + lookAt); (b) the side view is the honest ramp test — an away-descending incline foreshortens from every front angle (struct-104 kin), and the side judge is what exposed the 23mm sill gap + lid tower hiding since wakeup-84; (c) probe cameras must verify subject-in-frame before judging anatomy (v9's "no rabbit at all" was framing, not model).
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
@@ -66,6 +75,7 @@ domain is commons-next `nx-dress-*` fauna only.
 | NATIVE-1 | fauna-1 (2026-09-16) | goats v4 7e9af5a5 18m gameplay + closeface frames (`reviews/fauna1-goats/new-{gameplay,closeface}.png`) — fallback PASS stands until natively confirmed |
 | NATIVE-2 | fauna-2 (2026-09-17) | hens flock v4 1ab461bd 18m gameplay + near + ultra frames (`reviews/fauna2-hens/new-{gameplay,near,ultra}.png`) — fallback YES ("Ship it") stands until natively confirmed |
 | NATIVE-3 | fauna-3 (2026-09-17) | duck pair v3 c156b6a1 18m gameplay + ultraface + right frames (`reviews/fauna3-ducks/new-{gameplay,ultraface,right}.png`) — fallback PASS arc stands until natively confirmed |
+| NATIVE-4 | fauna-4 (2026-09-17) | hutch rabbits v12 c0a64ac4 near + sitterface + sentinelface frames (`reviews/fauna4-hutch/new-{near,sitterface,sentinelface}.png`) — fallback PASS arc (18m framing-law disclosure) stands until natively confirmed |
 
 ## Rig law (learned fauna-1, hard way)
 
