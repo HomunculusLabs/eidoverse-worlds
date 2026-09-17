@@ -12658,3 +12658,84 @@ forge/potter @288, longhouse/garden-cottage @287, row-cottage/
 observatory @286, inn/tower-house @285 stalest standing pair at 4 sweeps;
 walk tools interior-walk-inn.ts, interior-walk-tower-house.ts — both
 ls-verified present on disk this tick).
+
+
+sweep-290: CLEAN SWEEP, arrival-fold tick (59th consecutive
+quiet-or-classified). Tick-start HEAD e02538ee = fauna-6 (proposal tick,
+zero mutations per its own entry). Standing gate ALL PASS real exit 0 FIRST
+TRY (99 PASS lines, captured unpiped to /tmp/s290/gate.log). Census epochs
+A/B 20s-paced canonical byte-identical (next-live-census.ts projection,
+238367B sha16 39cb812dad59cf72): 348->349 with exactly ONE domain-valid
+arrival — nx-struct-lunes @ (-27.902589, -0.031168, 399.02562) yaw
+3.735004599267865 (= 214deg) lib 41af82ec0c20af4c = the struct-212 BANK PIN
+exact ("ACCEPTED BANKED NOT PLACED, placement = struct-213 carry" @
+856dd190), scale 1, kind thing, comp bag empty — the untracked
+next-place-struct213.ts in tree corroborates the tuple line-for-line (az94.0
+r400.0 next on-line step, 10m rhythm from arbelos r390, hash gate pins the
+same sha, SAT 5.36 vs arbelos at final yaw per its own header); 0
+departures, 0 drift on the 348 shared ids across ALL projection fields
+(pos/yaw/scale/kind/bbox/lib/comp/compKeys + light color/intensity/range —
+full comp payload deep-equal). Overlap: SAT fresh-live over the
+lunes-inclusive set, 311 bbox non-light / 239 classified / 0 coverage holes,
+real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26 choreography
+@ sweep-43, 246th sweep since routing, NOT new, no escalation due (law keys
+severity-1); lunes arrival ZERO new contacts. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 ALL_PASS @ 0.380 maxArrival
+(next-walk-core-paths.ts; JSON parsed from first brace past the [physics]
+banner; support-seam stderr abstentions = the known normalized diagnostics
+set, unchanged), NW 5/5 ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts); verdicts content-anchored on status strings + per-leg
+ok counts + distances from raw files. Lunes sits r400 az94 — 380m+ off every
+walked leg; epoch-A walks stand by construction (sweep-53 precedent), SAT
+covers the collision surface. Tier-2 268th cycle per the committed sweep-289
+pointer: inn 6/6 ALL_PASS (dists 0.320/0.318/0.341/0.350/0.364/0.288,
+interior-walk-inn.ts) + tower-house 6/6 ALL_PASS (0.245/0.245/0.263/0.377/
+0.374/0.309, interior-walk-tower-house.ts), both real exit 0, both tools
+ls-verified present on disk pre-run. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (244th consecutive clean); sweep89-battery 28/28
+PASS real exit 0 on fresh census-A bytes — comp-bearing pin 26 held exactly
+(lunes comp-neutral, live count 26 census-verified); interlane md5 86b2936f
+stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged (266th check; 0 open candidate
+rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep
+no reset role — the audit-continues freeze banner governs and was read fresh
+via the loop/plan reload. Baseline lawfully rewritten like-for-like
+(next-live-census.ts projection, sweep290-baseline-rewrite.py, asserted
+pre-write: diff exactly [arrival nx-struct-lunes], lunes bbox ==
+struct-212 decoded envelope 7.528x3.590x0.900): 349 entities / 238367B /
+sha16 39cb812dad59cf72; post-rewrite drift ZERO (baseline byte-identical to
+canonical census, cmp-verified). Diff tool sweep290-census-diff.py folded
+from the committed sweep289 chassis (sed swap only; py_compile clean, clean
+exit 0 at BOTH epochs A/B unpiped on the real bytes). Probe self-catches
+pre-verdict, all corrected with no repair owed: (a) sweep89-battery invoked
+as .ts where the committed tool is sweep89-battery.PY (Module-not-found,
+rerun clean 28/28 — sweep-282/286 tool-name class); (b) the RAW /geom curl
+capture was mistaken for the canonical census form — root-caused to the
+next-live-census.ts projection chassis (indent-2, count + derived compKeys,
+lights' parent/tris normalized out per the sweep-35 precedent) BEFORE any
+baseline write; the transient "server schema shift" hypothesis is RETRACTED
+— no server/world.ts change affected this tick's evidence, and the semantic
+diff (five projection classes) was computed on real bytes at both epochs
+either way; (c) the FIRST plan-block insert of this tick fuzzy-matched a
+chimera anchor and landed mid-file over sweep-288's historical pointer —
+caught by inspecting the git diff region immediately, file restored clean
+via git checkout before commit, re-inserted at the true tail verbatim-anchored
+(adjacent-token-bleed family, sweep-43/50/55 class; the sweep-288 pointer
+text verified intact post-restore). Foreign dirt in tree (windmill overhaul
+scratch, cabin/carousel prototype dirs, client/server engine files, fleet
+shells, debug-bower scripts, moon-moth dir, fauna tools,
+HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths assets) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-291): row-cottage + observatory
+(269th cycle — LRU chain re-derived from committed plan pointers this tick:
+inn/tower-house @290 walked fresh, hall/bunkhouse @289, forge/potter @288,
+longhouse/garden-cottage @287, row-cottage/observatory @286 stalest standing
+pair at 4 sweeps; walk tools interior-walk-row-cottage.ts,
+struct2-walk-observatory.ts — the interior-walk-observatory.ts name in older
+rows is a ghost, only struct2-walk-observatory.ts exists on disk; both
+ls-verified present this tick).
