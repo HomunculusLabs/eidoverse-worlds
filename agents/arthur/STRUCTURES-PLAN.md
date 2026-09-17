@@ -15002,3 +15002,79 @@ staged -f), reviews/struct214-oloid/ (9 frames, ignored),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-214,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-215 (2026-09-17): OLOID PLACEMENT TICK — committed carry from
+## struct-214 executed (nx-struct-oloid v1 PLACED_VERIFIED live at the
+## next on-line Math Avenue step az94/r410; 10.0m rhythm held)
+
+215%3=1 placement slot per the 178..214 alternation (struct-214 banked
+oloid with "placement = struct-215 carry"). Gate ALL PASS real exit 0
+tick-start at 4388fe50 (vocab-35) + RE-RUN clean immediately before the
+mutation at the SAME HEAD (epoch law held, no sibling commit landed
+mid-tick). Shard state: IMPROVE-PLAN carries 0 OPEN nx-struct rows
+(same drained state as struct-204..214; md5 c0f569d0 39th consecutive
+tick).
+
+Local bytes re-verified sha256
+f76b1e8fe568b3b1454cd6646245a08bedf274d482ec17b4c91f7528028d1cee ==
+struct-214 v1 bank pin BEFORE upload (shasum -a 256, this tick).
+
+SEAT (struct215-scan + struct215-select, fresh 350 census — unchanged
+from struct-214's bank-era 350): avenue axis re-derived FRESH = 91.0 deg
+(20 deg density window, 43 forms; 47 math-family structs standing).
+Procession read complete — gyroid240 -> enneper250 -> ... -> mandelbrot360
+-> viviani370 -> morley380 -> arbelos390 -> lunes400 (~10m steps, all
+az94.0). 599 lawful band candidates r402-430; the oloid takes the NEXT
+ON-LINE STEP: az94.0 r410.0, 10.0m step == the procession rhythm. NN
+10.00 vs nx-struct-lunes (law 8.0), SAT 4.84 vs nx-struct-lunes at FINAL
+yaw (law 1.4).
+
+YAW LAW (struct-104 oblique-read, struct-214 carry contract):
+3.735004599267865 (214deg, exhaustive 0.5 deg band scan maximizing SAT)
+puts the +Z face normal at az304 — 30 deg off the az274 anti-travel
+sightline, east lean (the procession's standing convention, now
+melencolia/fourier/cissoid/quadratrix/archispiral/nephroid/folium/
+rhodonea/versiera/elliptic/mandelbrot/viviani/morley/arbelos/lunes/
+oloid). The outbound walker reads the construction face obliquely on
+approach; the 4.461m curb runs az124/304, the hull's face plane reads
+to the walker.
+
+TERRAIN (struct215-terrain-oloid.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 4.461x3.400 curb rectangle): spread
+8.1mm, PY = -0.038535 (8cm cradle embed absorbs — morley/lunes class).
+
+PLACEMENT (next-place-struct215.ts, struct213 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 350 census; SAT/NN preflight re-run
+at FINAL pose vs same fresh set (symmetric footprint 2.80x2.66 at yaw
+214): NN floor lunes 10.00, SAT worst lunes 4.84 — clean. 1 upload
+(content-addressed store/f76b1e8fe568b3b1.glb) + 1 paced spawn over one
+WS join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on
+fresh re-read; census 350 -> 351 exactly. Idempotent rerun:
+ALREADY_SEATED, zero verbs. Folly class (15.17 sqm curb footprint, h
+3.178 real trimesh) — no walk owed. Comp bag empty by contract (sole
+night bead emissive-in-GLB glow KEEP — no comp-wipe class on first
+spawn).
+
+Native debt board after this tick: oloid v1 stays OWED (fallback-judged
+acceptance from struct-214, disclosed; probe L1-L7 theorems -2.22e-16 /
+1.69e-4 + decode D3-D6 are the binding evidence); plus monkeysaddle
+gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+quadratrix v1, archispiral v1, nephroid v1, folium v1, rhodonea v1,
+versiera v1, elliptic v3, mandelbrot v1, viviani v1, morley v1, arbelos
+v1, lunes v1 — 24 owed. Native absent from the cron catalog again this
+tick (tool_search fresh: terminal + zai-vision only — same disclosed
+cron-unpayable class as struct-169..214).
+
+Bill eye-check pointer: on Math Avenue past the lunes — a long stone
+curb carrying a carved solid between two brass rings: the oloid, the
+hull of two linked perpendicular circles (Schatz 1929), the form that
+rolls on its whole skin touching line after line; an iron line marks
+where it stands, three worn iron bars behind it where it came from; its
+surface area is exactly the sphere's for the same circles — the stone
+wears the sphere's skin. After dark: one warm bead burns at the crown.
+
+Files: struct215-scan-oloid.ts + struct215-select-oloid.ts +
+struct215-terrain-oloid.ts + next-place-struct215.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-215,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
