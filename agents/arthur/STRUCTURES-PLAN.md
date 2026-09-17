@@ -14777,3 +14777,75 @@ staged -f), reviews/struct212-lunes/ (9 frames, ignored),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-212,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-213 (2026-09-17): LUNES PLACEMENT TICK — committed carry from
+## struct-212 executed (nx-struct-lunes v1 PLACED_VERIFIED live at the
+## next on-line Math Avenue step az94/r400; 10.0m rhythm held)
+
+213%3=1 placement slot per the 178..212 alternation (struct-212 banked
+lunes with "placement = struct-213 carry"). Gate ALL PASS real exit 0
+tick-start at ad3d5652 (vocab-33) + RE-RUN clean immediately before the
+mutation at e02538ee (fauna-6 landed mid-tick between the two gate runs —
+epoch law held, gate re-run clean at the NEW HEAD before any mutation).
+Shard state: IMPROVE-PLAN carries 0 OPEN nx-struct rows (same drained
+state as struct-204..212; md5 c0f569d0 37th consecutive tick).
+
+Local bytes re-verified sha256
+41af82ec0c20af4c1f7a2746b50da11e89a29e6a97f13e45833ca51c32a325e9 ==
+struct-212 v1 bank pin BEFORE upload (shasum -a 256, this tick).
+
+SEAT (struct213-scan + struct213-select, fresh 348 census — fauna-6
+candidate appended by sibling, nothing placed): avenue axis re-derived
+FRESH = 91.0 deg (20 deg density window, 42 forms; 46 math-family structs
+standing). Procession read complete — gyroid240 -> enneper250 -> ... ->
+mandelbrot360 -> viviani370 -> morley380 -> arbelos390 (~10m steps, all
+az94.0). 596 lawful band candidates r392-420; the lunes takes the NEXT
+ON-LINE STEP: az94.0 r400.0, 10.0m step == the procession rhythm. NN
+10.00 vs nx-struct-arbelos (law 8.0), SAT 5.36 vs nx-struct-arbelos at
+FINAL yaw (law 1.4).
+
+YAW LAW (struct-104 oblique-read, struct-212 carry contract):
+3.735004599267865 (214deg, exhaustive 0.5 deg band scan maximizing SAT)
+puts the +Z face normal at az304 — 30 deg off the az274 anti-travel
+sightline, east lean (the procession's standing convention, now
+melencolia/fourier/cissoid/quadratrix/archispiral/nephroid/folium/
+rhodonea/versiera/elliptic/mandelbrot/viviani/morley/arbelos/lunes).
+The outbound walker reads the construction face obliquely on approach;
+the 7.528m curb runs az124/304, the triangle plane faces the walker.
+
+TERRAIN (struct213-terrain-lunes.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 7.528x0.900 curb rectangle): spread
+7.2mm, PY = -0.031168.
+
+PLACEMENT (next-place-struct213.ts, struct211 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 348 census; SAT/NN preflight re-run
+at FINAL pose vs same fresh set (symmetric footprint 3.37x2.48 at yaw
+214): NN floor arbelos 10.00, SAT worst arbelos 5.36 — clean. 1 upload
+(content-addressed store/41af82ec0c20af4c.glb) + 1 paced spawn over one
+WS join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on
+fresh re-read; census 348 -> 349 exactly. Idempotent rerun:
+ALREADY_SEATED, zero verbs. Folly class (6.78 sqm curb footprint, h
+3.59 real trimesh) — no walk owed. Comp bag empty by contract (sole
+night bead emissive-in-GLB glow KEEP — no comp-wipe class on first
+spawn).
+
+Native debt board after this tick: lunes v1 stays OWED (fallback-judged
+acceptance from struct-212, disclosed; probe L1-L5 theorems 0.0e0/1e-12/
+<1e-6 + decode D3-D6 are the binding evidence); plus monkeysaddle gate,
+hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix v1,
+archispiral v1, nephroid v1, folium v1, rhodonea v1, versiera v1,
+elliptic v3, mandelbrot v1, viviani v1, morley v1, arbelos v1 —
+23 owed.
+
+Bill eye-check pointer: on Math Avenue past the shoemaker's blade — a
+long stone curb carrying a stepped triangle between two brass crescents,
+an iron compass-arc riding over all three: Hippocrates' lunes, the first
+curvilinear quadrature (~440 BC) — the two crescents together equal the
+triangle exactly, curved squared against straight. After dark: one warm
+bead burns at the apex where all five curves meet.
+
+Files: struct213-scan-lunes.ts + struct213-select-lunes.ts +
+struct213-terrain-lunes.ts + next-place-struct213.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-213,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
