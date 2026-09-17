@@ -2494,9 +2494,169 @@ the lamp family does the lighting, the particles family does the
 burning, and the growth family's own arithmetic counts it down. One
 8KB comp, no script, no new verb, no new client code.
 
-- [ ] Puzzle door pair: two inscription plates that must both be set to
+- [x] Puzzle door pair: two inscription plates that must both be set to
       matching values within a window before the linked door unlinks —
       late-join truth for linked state.
+      DONE vocab-32 (2026-09-17): comp {type:"puzzle"} — server/puzzle.ts is
+      a PURE OBSERVER (chime/bell doctrine: NO action vocabulary, no
+      reactions.ts dispatch row) linking two plate entities (vocab-10) to a
+      door entity (vocab-4). The linked state — both plates same non-empty
+      HAND-written text, written within windowSec of each other — is a PURE
+      FUNCTION OF THE FOLD (shared/puzzle.js puzzleMatch — the doorYaw
+      doctrine at its purest: ZERO engine keys live on the puzzle comp);
+      the engine only ever reconciles the door family's OWN folded comp
+      ({...doorComp, open, at} — never a second door arithmetic) + ONE say
+      + the chime the door itself would ring. Three doors in: plate.ts's
+      write tail (ringChime call-site pattern; cause = the solving use),
+      reactDoor's transition tail in reactions.ts (a hand OPENING an
+      unsolved door is re-closed in the same reaction window — the lock
+      catches; closing is always legal), and the 1Hz PuzzleEngine sweep in
+      behaviors.ts (healing: an unsolved puzzle authored over a
+      standing-open door shuts within a second, bell grammar; holdOnly
+      mode — a matched door closed by a hand is FREE forever, the sweep
+      never re-opens; a same-text no-op plate write mints nothing and
+      never fires the tail). ZERO edits to verbs.ts / server.ts / world.ts.
+      Contract in § PUZZLES CONTRACT below implemented as written.
+      Evidence: tools/puzzletest.ts RED 14 failing (engine absent; the RED
+      run caught one genuine shared-math defect — an authored pre-carve
+      with no hand `at` matched because `?? 0` gave both stamps 0; cured by
+      requiring both stamps finite) then ALL PASS 32/32 after the GREEN
+      run caught one genuine engine design flaw (continuous
+      reconciliation made the sweep re-open a hand-closed SOLVED door —
+      fixed by the hold/full mode split: plate writes move the door both
+      ways, the sweep enforces only the shut side) plus four disclosed
+      test-expectation fixes (plate cap semantics, owned-world default
+      role = builder so the visitor bounce needs an explicit grant, the
+      no-op write needs fresh words post-restart, door reach needs the
+      walker at the door). doortest 28/28 + platetest 37/37 regression
+      clean on both touched seams; mcpl manifest 28/0 + effective 42/0 +
+      denoise 31/0 green after the agent.ts hunks (describePuzzle affordance
+      line + exclusion-list entry); servergate battery + ledger evidence in
+      the vocab-32 ledger entry. Scratch worlds only; no production world
+      touched. No eye-check owed (zero client code — the puzzle's effects
+      are door swings + plate sprites + chat, all existing paths).
+
+### PUZZLES CONTRACT (vocab lane — drafted and implemented vocab-32, 2026-09-17)
+
+**Trigger.** A puzzle is an entity carrying `comp {type:"puzzle",
+data:{...}}` — typically the door itself, or a keystone post beside it.
+The puzzle has NO action strings (the chime/bell doctrine): the use path
+on the puzzle host passes through untouched to other evaluators, and the
+SOLVING actions are the plate family's own `use {action:"write"}` — the
+puzzle is an OBSERVER of plate writes, not a new verb surface. This is
+the lane's purest composition: vocab-10 writes are the trigger, the
+vocab-4 door comp is the state, and the puzzle contributes ONLY the link
++ the derivation. Attaching/removing the comp is builder (rank 1) — the
+author's standing decision that this door answers to these plates,
+identical doctrine to the whole family.
+
+**State — the linked state is a PURE FUNCTION OF THE FOLD.** ZERO engine
+keys live on the puzzle comp: nothing is written to it, ever. The whole
+truth is derived, every read, by every runtime:
+
+```
+matched = plates[0].text == plates[1].text  (non-empty)
+          && both `at` stamps are finite (hand-written)
+          && |at[0] − at[1]| ≤ windowSec·1000
+```
+
+(shared/puzzle.js puzzleMatch — the doorYaw/stageAt closed-form doctrine).
+Late join, restart, replay, and fork all read the identical truth with
+zero traffic and zero sweep dependence: a late joiner derives the match
+from the two plate comps alone; the sweep only ever reconciles DRIFT (a
+door left ajar against the derivation). An authored pre-carve (plate text
+without a hand-written `at`) fails closed: the SOLUTION must be set by
+hands within the window — an author pre-carving both plates is setting
+the riddle, not solving it.
+
+**Effects.** The engine reconciles the door family's own comp toward the
+derivation — ONE world-authored `comp {id: doorId, type:"door",
+data:{...doorComp, open, at}}` (the door family's own write shape,
+regions doctrine — never a second door arithmetic) + ONE `say` (actor
+`world`, args `{text, id: doorId, pz:{open, who?, at}, cause?, by?}` —
+the phrases/doors provenance grammar exactly) + the chime the door
+itself would ring (ringChime, one arithmetic from the same tail).
+Hand-path reconciliations (plate-write tail, door-open catch) carry
+cause/by = the triggering use; sweep heals carry NEITHER (bell grammar —
+the standing rule caused it). No other verb can be minted from a puzzle:
+comp-on-door + say ONLY.
+
+**The three doors in (one engine, three call sites).**
+1. **Plate-write tail** (plate.ts, the ringChime call-site pattern): a
+   plate write that changes a linked puzzle's derivation reconciles its
+   door IMMEDIATELY, cause = the solving (or unsolving) use — the reward
+   lands the instant the second plate completes the match, and a broken
+   match re-closes an open door the same way.
+2. **Door-open catch** (reactDoor's transition tail in reactions.ts): a
+   hand OPENING a door whose puzzle does not (yet) yield is re-closed in
+   the same reaction window — the lock catches. The flicker (≤ swingSec)
+   is the honest physical story: the bolt shoots, the lock wins. Closing
+   is always legal, never fought.
+3. **The 1Hz sweep** (PuzzleEngine on the BehaviorHost tick, the
+   vocab-2/3/14/17/22/29/31 precedent) — holdOnly mode, healing only:
+   an unsolved puzzle authored over a standing-open door is shut within
+   a second (bell-grammar say); a matched door closed by a hand is FREE
+   forever (the sweep never re-opens — only plate words move a free
+   door); no churn when the door already reads the derivation (restart
+   idempotent).
+
+**Authority/reach.** Solving is the plate family's own ladder (blank
+plate takes anyone's first words rank 0; own rewrite rank 0; another's
+needs builder+; editable:true = public) + its arm's-reach gate — the
+puzzle adds NO gate of its own (the words must be reachable to write,
+the door to open; the link is a builder's table). The puzzle comp is
+authored/removed builder (rank 1) at the shell. The engine's
+world-authored writes bypass runVerb's rank gate by construction
+(w.append, actor "world" — the same authority every reaction effect
+carries). Authority never widens: comp-on-door + say only.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path and the live tick; folding a historical
+use, comp, or say never re-fires. On restart the fold IS the truth —
+every client derives the same match from the two plate comps, and the
+first sweep only heals drift (no churn). The says read as history.
+
+**Rate/abuse boundaries.** (a) The solver must WRITE the words: an
+author-carved pair never matches (fail closed). (b) windowSec clamped
+[5, 86400] d300 — the anti-coincidence bound; matching words written
+past the window do NOT unlock, and the why names the gap. (c) Plates
+exactly 2, distinct, sanitized (drop non-ids, dedupe, cap + noted); a
+malformed link is a can-never-fire comp (noted), never an assumed one.
+(d) The hand-open catch is verb-rate bounded (12/4s) and mints at most
+one reconciliation per door; the sweep is capped at 4 reconciliations
+per sweep world-wide. (e) The door write rides the door comp's own 8KB
+guard (degrade to the minimal shape). (f) Missing plates/doors skip
+fail-closed (puzzle-skip, once per reason per boot — a sweep must never
+spam).
+
+**Failure behavior.** Malformed comp → clamp + `puzzle-lint`
+(particles-lint doctrine): windowSec [5,86400] d300, plates sanitize/
+dedupe/cap-at-2 with notes, door must be an entity id (else noted,
+can-never-fire), lines (unlockAt/lockAt) clamped 200c, unknown keys ride
+(the bag is public annotation). Missing plate or door → silent skip
+with `puzzle-skip` (once per reason per boot at the sweep; hand paths
+never rate-cap). The whole engine wrapped in try/catch (house rule 3 —
+no puzzle takes the server down).
+
+**Browser path.** ZERO client code: the puzzle's effects are door swings
+(client/lib/door.js already realizes every door comp), plate sprites
+(client/lib/plate.js), and chat says (logChat) — all existing paths. A
+keystone visual tier (glowing runes when close, a beam when matched) is
+deliberately deferred — protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the says land in the
+agent inbox; `look()` lists the puzzle via shared/puzzle.js
+`describePuzzle` (the describeDoor pattern) — the link, the LIVE derived
+match state (derived at read time from the folded plates), and the solve
+hint with the window. An agent solves through the ordinary plate write
+verb.
+
+**Intent.** The world asks a question before it lets you in. Twin
+keystones at a garden gate, a riddle-door in the archive, a pair of
+welcome stones that must agree — two visitors writing the same words
+within the window, each at their own plate, the door answering the
+agreement. One 8KB comp, no script, no new verb, no engine keys — the
+fold already knew.
 - [ ] Observatory session: telescope affordance — use-action aligns to
       the next scheduled celestial event, holds a shared observation
       slot with occupancy.

@@ -37,6 +37,11 @@ import { rightsOf } from "./rights.ts";
 // text tier, and the browser realization — the engine writes EXACTLY what
 // shared/plate.js derives.
 import { normalizePlate, plateWriteAuthority } from "../shared/plate.js";
+// The puzzle observer (vocab-32, § PUZZLES CONTRACT): a plate write that
+// changes a linked puzzle's derivation reconciles its door in the same
+// reaction — the ringChime call-site pattern (the plate engine's protocol
+// is untouched; this fires only after the plate's own authorization).
+import { puzzleOnPlateWrite } from "./puzzle.ts";
 
 export type PlateWorld = {
   name: string;
@@ -140,6 +145,10 @@ export function reactPlate(
     w.broadcast({ type: "log", entry: say });
     w.debug("plate-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
       effect: comp.seq, say: say.seq, chars: text.length });
+    // The puzzle observer (vocab-32): a write that changes a linked
+    // puzzle's derivation reconciles its door in the same reaction — the
+    // ringChime call-site pattern, fired after the plate's own writes.
+    puzzleOnPlateWrite(w, id, cause.actor, cause.seq, now);
     return true;
   } catch (err) {
     console.error(`[world:${w.name}] plate reaction failed (never fatal)`, err);

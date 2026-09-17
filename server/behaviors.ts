@@ -42,6 +42,11 @@ import { FestivalEngine, type FestivalWorld } from "./festival.ts";
 // state crossings through the lamp + particles families' own doors and
 // tears down when the fire dies. A steady blaze costs nothing.
 import { CampfireEngine, type CampfireWorld } from "./campfire.ts";
+// Puzzles (vocab-32, § PUZZLES CONTRACT): swept on the same clock. The
+// linked state is a PURE function of the fold (zero engine keys); the
+// sweep owns healing — reconciling held doors to the derivation when a
+// hand or an author left them ajar. Steady state costs nothing.
+import { PuzzleEngine, type PuzzleWorld } from "./puzzle.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -418,6 +423,11 @@ export class BehaviorHost {
    *  particles families' own doors and tears down when the fire dies.
    *  A steady blaze costs nothing. */
   private campfires: CampfireEngine | null = null;
+  /** Puzzles (vocab-32): swept on the same clock — the linked state is a
+   *  pure function of the fold (zero engine keys); the sweep owns healing,
+   *  reconciling held doors to the derivation. Steady state costs
+   *  nothing. */
+  private puzzles: PuzzleEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -529,6 +539,15 @@ export class BehaviorHost {
       this.campfires ??= new CampfireEngine(this.w as unknown as CampfireWorld);
       this.campfires.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] campfire sweep`, err); }
+
+    // Puzzles (vocab-32) ride the same clock — the linked state is a pure
+    // function of the fold; the sweep owns healing (a door left ajar by a
+    // hand or an author is reconciled to the derivation within a second,
+    // bell grammar). Steady state costs nothing per sweep.
+    try {
+      this.puzzles ??= new PuzzleEngine(this.w as unknown as PuzzleWorld);
+      this.puzzles.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] puzzle sweep`, err); }
 
     // pressure-27: a world-wide per-tick FIRING budget — even 12 behaviors x
     // 16 legal timers can burn ~600ms of the 1s tick. Timers beyond the

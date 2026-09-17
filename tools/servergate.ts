@@ -155,6 +155,10 @@ const BATTERY: Row[] = [
   // the multi-entity hearth (growth-ladder burn-down driving lamp +
   // particles through their own doors), scratch sequencer.
   { name: "campfiretest", tool: "tools/campfiretest.ts" },
+  // vocab-32: the puzzle matrix (§ PUZZLES CONTRACT) — same class: the
+  // linked puzzle lock (plates + door composed through their own doors,
+  // zero engine keys), scratch sequencer.
+  { name: "puzzletest", tool: "tools/puzzletest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

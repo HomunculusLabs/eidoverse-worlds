@@ -99,6 +99,11 @@ import { reactTrailmarker } from "./trailmarker.ts";
 // multi-entity hearth (growth-ladder burn-down driving lamp + particles
 // through their own doors). Same dispatch doctrine, last.
 import { reactCampfire } from "./campfire.ts";
+// The puzzle observer (vocab-32, § PUZZLES CONTRACT): no dispatch row of
+// its own (no actions — the chime/bell doctrine); a hand OPENING a door
+// a linked puzzle does not yield is re-closed in reactDoor's transition
+// tail, below.
+import { puzzleOnDoorTransition } from "./puzzle.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -457,6 +462,11 @@ export function reactDoor(
   // 0 + arm's reach) just passed. Chime-without-door is inert by silence
   // (the door never transitions on a door-less entity).
   ringChime(w, id, ent, next, cause.actor, now);
+  // The puzzle observer (vocab-32): a hand OPENING a door a linked puzzle
+  // does not (yet) yield is re-closed in the same reaction window — the
+  // lock catches. Closing is always legal (never fought). Called after
+  // the door's own writes + chime, the same tail pattern.
+  puzzleOnDoorTransition(w, id, next, cause.actor, cause.seq, now);
   w.debug("door-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
     effect: comp.seq, say: say.seq, open: next, kind: next ? "open" : "close" });
   return true;
