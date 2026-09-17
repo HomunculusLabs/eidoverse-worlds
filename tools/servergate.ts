@@ -148,6 +148,9 @@ const BATTERY: Row[] = [
   // vocab-29: the festival matrix (§ FESTIVALS CONTRACT) — same class:
   // the composed choreography over four families, scratch sequencer.
   { name: "festivaltest", tool: "tools/festivaltest.ts" },
+  // vocab-30: the trailmarker matrix (§ TRAILMARKERS CONTRACT) — same
+  // class: the guided walk toward a waystone beacon, scratch sequencer.
+  { name: "trailmarkertest", tool: "tools/trailmarkertest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

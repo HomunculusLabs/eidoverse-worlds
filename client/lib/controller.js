@@ -13,6 +13,10 @@ import { ladderAt } from './ladder.js';
 import { chat } from './chat.js';
 import { isOverlayOpen, flashHint } from './ui.js';
 import { resolveFirstPersonAnchor, FP_FORWARD, FP_GAZE_AHEAD, FP_GAZE_DROP } from './fp_view.js';
+// trailmarker guidance (vocab-30): the standing guide updateMe steers
+// when no hand is on the stick (armed by client/lib/trailmarker.js's
+// puppet handler; one import, no other coupling).
+import { activeGuide, clearGuide, guideArrived } from './trailmarker.js';
 
 export const myState = {
   pos: new THREE.Vector3(0, 0, 0),
@@ -271,6 +275,37 @@ export function updateMe(dt, me) {
   let fwd = Number(held(MOVE_KEYS.fwd)) - Number(held(MOVE_KEYS.back));
   let strafe = Number(held(MOVE_KEYS.right)) - Number(held(MOVE_KEYS.left));
   if (touchState.moveX || touchState.moveZ) { strafe = touchState.moveX; fwd = -touchState.moveZ; }
+
+  // ---- trailmarker guidance (vocab-30): a standing guide steers the
+  // body when NO hand is on the stick; ANY movement input cancels it
+  // outright (consent is continuous — taking over is one keystroke).
+  // The walk rides this same ordinary physics path: colliders, gravity,
+  // terrain, island clamp all unchanged below. Arrival (within 0.6m) or
+  // the deadline auto-clears; the target always sits OUTSIDE the linked
+  // beacon's hop reach, so a guided walk never self-triggers the
+  // teleport it walks toward.
+  const guide = activeGuide(performance.now());
+  if (guide) {
+    if (Math.abs(fwd) > 0.08 || Math.abs(strafe) > 0.08 || touchState.moveX || touchState.moveZ) {
+      clearGuide();   // a hand on the stick outranks the guide
+    } else if (guideArrived(myState.pos.x, myState.pos.z)) {
+      clearGuide();   // arrived at the rim — the hop, if any, is your choice
+    } else {
+      const gdx = guide.x - myState.pos.x, gdz = guide.z - myState.pos.z;
+      const gd = Math.hypot(gdx, gdz);
+      if (gd > 1e-6) {
+        // walk toward the target in CAMERA space: _dir below applies
+        // R_y(camYaw) to (strafe, 0, -fwd) giving x'=c·s−sy·f, z'=−sy·s−c·f;
+        // solving for the desired world direction (dx, dz):
+        //   strafe = c·dx − sy·dz,  fwd = −(sy·dx + c·dz)
+        const cy = Math.cos(camYaw), sy = Math.sin(camYaw);
+        strafe = gdx * cy - gdz * sy;
+        fwd = -(gdx * sy + gdz * cy);
+        const m = Math.hypot(fwd, strafe) || 1;
+        fwd /= m; strafe /= m;
+      }
+    }
+  }
 
   const moving = Math.abs(fwd) > 0.08 || Math.abs(strafe) > 0.08;
   const running = keys.has('ShiftLeft') || keys.has('ShiftRight');

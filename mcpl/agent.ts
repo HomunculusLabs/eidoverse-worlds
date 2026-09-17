@@ -95,6 +95,10 @@ import { describeSongstand } from "../shared/songstand.js";
 // The festival affordance line (vocab-29): names the run state, the
 // derived cue, and the four driven-family members.
 import { describeFestival } from "../shared/festival.js";
+// The trailmarker affordance line (vocab-30): same pattern — the paired
+// waystone beacon + the guide action (shared/trailmarker.js
+// describeTrailmarker).
+import { describeTrailmarker } from "../shared/trailmarker.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -624,6 +628,21 @@ export class WorldAgent {
             // the same path a dropped socket already takes. The next snapshot
             // seats the body at the anchor (the restore branch below reads it
             // before any remembered sleep).
+            // A TRAILMARKER guide (vocab-30) is guidance, not travel: the
+            // body WALKS itself toward the beacon's rim (the target sits
+            // outside the beacon's hop reach — the hop stays a choice).
+            // Honoring is the body's own walkTo: collision-aware, ordinary
+            // presence. Checked BEFORE the waystone branch (a marker is
+            // not a stone).
+            if (msg.trailmarker) {
+              const p = Array.isArray(msg.trailmarker.p) ? msg.trailmarker.p : null;
+              if (p && p.length >= 2) {
+                this.walkTo(p[0], p[2]).catch(() => { /* a dropped walk is a stopped walk */ });
+              }
+              this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by ?? "world",
+                text: `(the trailmarker guides you toward the waystone${msg.by ? ` (${msg.by})` : ""})` } as any);
+              break;
+            }
             // A WAYSTONE hop (vocab-15) is INTRA-world travel: no rejoin,
             // no world change — the body stands at the anchor and the
             // ordinary presence tick streams it. Checked BEFORE the
@@ -2051,10 +2070,14 @@ export class WorldAgent {
       // members it choreographs — the text-tier read of the same folded
       // comp the sweep anchors (look() derives at read time, so it is live)
       if (c.festival) aff.push(describeFestival(c.festival));
+      // a trailmarker names its paired waystone beacon + the guide
+      // action — the text-tier read of the same folded comp the engine
+      // resolves at fire
+      if (c.trailmarker) aff.push(describeTrailmarker(c.trailmarker));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

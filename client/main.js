@@ -28,6 +28,10 @@ import './lib/portal.js';
 // waystone component (vocab-15): wires itself on import, same pattern —
 // the intra-world hop (applies the anchor to myState, one presence send)
 import './lib/waystone.js';
+// trailmarker component (vocab-30): wires itself on import, same
+// pattern — the guided walk toward a waystone beacon (arms a guideState
+// the controller steers; the body walks itself, the hop stays a choice)
+import './lib/trailmarker.js';
 import './lib/music.js';
 // plate component (vocab-10): wires itself on import, same pattern
 import './lib/plate.js';

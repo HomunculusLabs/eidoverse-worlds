@@ -2194,11 +2194,155 @@ one authored timeline, four families driven through their own doors, the
 fold the only progress, TIME the only driver between cues. The
 composition doctrine (vocab-26/27/28) extended to its natural summit:
 not two parents deriving, but ONE choreographer conducting four families
-— and still zero new verbs, zero new ranks, zero new client code.
+choreography — and still zero new verbs, zero new ranks, zero new client code.
 
-- [ ] Trail markers: waypoint posts that pair with teleport beacons —
+### TRAILMARKERS CONTRACT (vocab lane — drafted vocab-30, 2026-09-17)
+
+**Trigger.** A trailmarker is an entity carrying
+`comp {type:"trailmarker", data:{...}}`. The action strings `guide` (aliases
+`guide me`, `lead`) are TRAILMARKER vocabulary on the freeform use path (the
+reactions doctrine: other action strings pass through untouched — a marker
+ignoring `use {action:"ring"}` is exactly correct; guide/guide me/lead are
+DISJOINT from all 29 prior families' actions). Attaching/removing the comp
+is builder (rank 1) — the author's standing decision that this post leads
+walkers, identical doctrine to the whole line.
+
+**Pairing — the beacon family is the waystone (vocab-15).** The comp names
+its beacon `pair: "<waystone entity id>"` — REQUIRED, VALIDATED not clamped
+(the portal `to` doctrine: a clamped beacon would be a lie about where the
+trail goes). At fire the pair must resolve to an entity in the fold carrying
+`comp {type:"waystone"}`; a non-entity, a non-waystone, or the marker
+itself skips fail-closed with `trailmarker-skip` naming why — a broken
+trail dies at the post, never mid-walk.
+
+**State — none, ever (the waystone doctrine).** A marker is a STATIC TABLE
+in the fold: no comp transitions are minted, no occupancy, no walk state is
+persisted. Cooldown is in-memory per (world, walker) — the phrases
+doctrine; a restart forgets it, which is harmless (the log never moved
+anyone; the walker's own feet did).
+
+**The walk target — derived ONCE at fire, pure.** `guideTarget(markerPos,
+beaconPos, beaconReach, stop)` (shared/trailmarker.js — the shared-verbatim
+pattern; the beacon's reach read through the WAYSTONE family's own
+normalizeWaystone, one arithmetic never re-implemented): the point on the
+marker→beacon line `effStop = max(stop, beaconReach + 1)` metres short of
+the beacon — ALWAYS outside the beacon's hop reach, so a guided walk can
+never self-trigger the teleport it walks toward (arrival at the pad is a
+CHOICE: step inside reach and hop, or stand at the rim) — clamped to never
+sit behind the marker (an adjacent pair guides ≥2m forward, never
+backward), with the arrival yaw FACING the beacon. `stop` authored
+[3,12] default 5.
+
+**Effects — one say + one request, the walker walks THEMSELVES.** A fire
+appends exactly ONE log entry: `say` actor `world`, args
+`{text:<line>, id, tm:{to:<beacon id>, who, at}, cause:<use seq>,
+by:<user>}` — the phrases/waystone provenance grammar exactly. Line default
+`"<who> is guided toward the waystone"` (authored `line` overrides,
+≤200c). The guidance rides ONE puppet-channel request
+`{type:"puppet", trailmarker:{to, p:[target], yaw}, by:"<id>"}` ROUTED to
+the walker's socket — presence plane, never logged, never replayed. The
+puppet channel is the DESIGNED consent surface (DESIGN.md: each client
+owns its own avatar): honoring it means steering one's own body along the
+ordinary controller path; declining is free (fire-and-forget — the body
+stays). The engine NEVER moves anyone: failed-walk rollback is STRUCTURAL,
+no mid-walk state exists anywhere to unwind. A seated walker does not
+guide (`trailmarker-skip: unseat first`). A `trailmarker-trigger` flight
+entry (kind `reaction`) records cause→effect. No other verb can be minted.
+
+**Authority/reach.** Using a marker is rank 0 (anyone present) plus the
+ARM'S-REACH gate at the MARKER (vPunt arithmetic): the user's LIVE pose
+within `reach` metres (authored, clamped [2,12], default 4) of the marker's
+LIVE position (lease stream pos if leased, folded pos otherwise).
+Out-of-reach use is a `trailmarker-skip` naming the distance. Spectators
+bounce at the shell (`use` is spectator-gated there). Lock composes as for
+doors (lock refuses place/punt/spawn/comp/remove — not `use`): a locked
+marker still guides. Cooldown per (world, walker): one fire per
+`cooldownSec` (authored, clamped [2,60], default 10); skips do not consume
+the window.
+
+**Browser path — client/lib/trailmarker.js** (the waystone.js pattern —
+one import line in main.js beside waystone, zero other edits to
+pilot-dirty files): the module exposes `guideState {x, z, until}` and the
+puppet handler arms it (90s deadline); controller.js's `updateMe` gains
+ONE guidance block — when armed and NO movement key is held, it steers
+`myState` toward the target at ordinary walk speed through the ordinary
+physics path (colliders, gravity, terrain, island clamp all unchanged),
+auto-clears within 0.6m of the target or at the deadline, and ANY physical
+movement input (WASD/touch — a hand on the stick) CANCELS the guide
+outright: consent is continuous, taking over is one keystroke. The chat
+line lands via logChat. Zero traffic after the one request — the walk is
+ordinary presence packets every client already renders.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; the agent's puppet handler gains the trailmarker branch
+(BEFORE the waystone branch — a marker is not a stone): honoring is
+`this.walkTo(p[0], p[2])` — the body's own walk, collision-aware, arrival
+free-facing — plus one event line narrating the guidance. `look()` lists
+the marker via `shared/trailmarker.js describeTrailmarker` (the
+describeDoor pattern) — its beacon and the guide action hint.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live verb path; folding a historical use or say never re-fires
+and never re-sends a request. On restart the comp folds as authored; the
+says read as history; no puppet traffic reaches a fresh joiner. A late
+joiner sees the standing marker + beacon comps and the chat lines of past
+guidance — the complete truth. The walk itself is history only where the
+walker's own presence made it so.
+
+**Failure behavior.** Malformed comp → clamp + `trailmarker-lint`
+(particles-lint doctrine): `pair` validated not clamped, `reach` [2,12]
+d4, `cooldownSec` [2,60] d10, `stop` [3,12] d5, `line` 200c, unknown keys
+ride (the bag is public annotation). Missing entity → silent pass-through.
+The whole reaction wrapped in try/catch (house rule 3 — no marker takes
+the server down).
+
+**Intent.** The world walks beside you. A trailhead post whose spirit
+leads a child across the meadow to the shrine stone, a harbor guide that
+walks visitors to the return pad, a festival marker herding crowds to the
+beacon — guidance as invitation, arrival always by your own feet, the hop
+always your choice. One 8KB comp, no script, no new verb, the waystone
+family's own arithmetic drawing the line.
+
+- [x] Trail markers: waypoint posts that pair with teleport beacons —
       use-action "guide me" walks the player-flag toward the linked
       beacon with cooldown.
+      DONE vocab-30 (2026-09-17): comp {type:"trailmarker"} — reactTrailmarker
+      in server/trailmarker.ts rides reactToUse's dispatch after festival (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts / behaviors.ts). Contract in § TRAILMARKERS
+      CONTRACT above implemented as written: static table (waystone
+      doctrine), pair REQUIRED+VALIDATED (portal `to` doctrine),
+      guideTarget derives the stop-short point OUTSIDE the beacon's hop
+      reach through the WAYSTONE family's own normalizeWaystone (one
+      arithmetic, mirrored-math law), ONE say with tm{to,who,at}/cause/by
+      + ONE routed puppet request; the walker walks THEMSELVES — browser
+      client/lib/trailmarker.js (guideState armed by the puppet handler;
+      ONE guidance block in controller.js updateMe steering through the
+      ordinary physics path, ANY input cancels, arrival/deadline
+      auto-clears) + mcpl walkTo branch before waystone; describeTrailmarker
+      affordance + exclusion-list entry in agent.ts; one import line in
+      main.js beside waystone. Evidence: tools/trailmarkertest.ts RED 25
+      failing (engine absent; shared math 9 + shell gates pre-passing,
+      the honest vocab-13..29 class) then ALL PASS 47/47 — five
+      consecutive standalone runs + in-battery after one disclosed
+      GREEN-adjacent fix (a spawn-exec EAGAIN flake under machine load —
+      child exit=null, zero output — rooted with a stderr-visible probe
+      (3/3 clean at full restart fidelity: the server is robust, the
+      spawn was machine noise) and cured test-side with error capture +
+      one paced retry; one test-expectation fix: the controller consumes
+      activeGuide/clearGuide, guideState itself lives in the realization
+      module). servergate battery 46/50 — every vocab suite green incl.
+      trailmarkertest 47 registered, with authtest + support-lifecycle +
+      permtest = the documented pre-existing classes (vocab-13..29
+      identical) and the battery's one trailmarkertest failure the
+      spawn-flake class, re-proven ALL PASS standalone ×5 + in-battery
+      after the fix; mcpl manifest 28/0 + effective + denoise green.
+      Scratch worlds only; no production world touched. ONE disclosed
+      pilot-dirty seam: controller.js +35 (the guidance block + its
+      import) staged as an isolated cached patch beside the sibling
+      lane's in-flight hunks (vocab-13 physobj precedent). Eye-check
+      OPEN: in-browser visual read of a guided walk (body walking itself
+      to the beacon rim, one keystroke takeover).
 - [ ] Campfire circle: multi-entity hearth — light it once, companion
       seats warm, embers comp spins up, night-light spills to neighbors
       (composition: lamps + growth + particles).
