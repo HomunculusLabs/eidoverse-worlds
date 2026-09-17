@@ -67,7 +67,7 @@ check("court-smoke-live", any(k.startswith("particles") and isinstance(v, dict) 
 lights = [e for e in d["entities"] if e.get("kind") == "light"]
 compb = [e for e in d["entities"] if e.get("comp")]
 check("lights-38", len(lights) == 38)
-check("comp-bearing-23", len(compb) == 24)  # sweep-104 record 17->18 (moonmoth+house-35_-22+windmill millstone); sweep-104..282 era 21; sweep-283 record 21->23 (fauna-1 goats + fauna-2 hens); sweep-285 record 23->24 (fauna-3 ducks nx-dress-ducks-001 6x motion:duck_{a,b}_{,head,tail}, census-verified @ 38beef03, ledger-matched tuple)
+check("comp-bearing-23", len(compb) == 25)  # sweep-104 record 17->18 (moonmoth+house-35_-22+windmill millstone); sweep-104..282 era 21; sweep-283 record 21->23 (fauna-1 goats + fauna-2 hens); sweep-285 record 23->24 (fauna-3 ducks nx-dress-ducks-001 6x motion:duck_{a,b}_{,head,tail}, census-verified @ 38beef03, ledger-matched tuple); sweep-287 record 24->25 (fauna-4 hutch nx-dress-hutch same-tuple replace @ a3ac1590 — hutch previously ZERO comps, now 5x motion:rabbit_{sit,alert,sit_head,alert_head,alert_ears}, census-verified this tick)
 
 # this tick's classification pins
 wh = E.get("nx-struct-whisperhorn", {})

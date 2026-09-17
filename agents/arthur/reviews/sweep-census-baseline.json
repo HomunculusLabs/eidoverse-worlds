@@ -4378,7 +4378,7 @@
       ],
       "yaw": -1.9,
       "scale": 1,
-      "lib": "store/f5f47791dadb5abe.glb",
+      "lib": "store/c0a64ac43a695f67.glb",
       "bbox": {
         "min": [
           -0.62,
@@ -4386,23 +4386,95 @@
           -0.377
         ],
         "max": [
-          1.219,
-          1.515,
+          1.03,
+          1.331,
           1.055
         ],
         "size": [
-          1.839,
-          1.515,
+          1.65,
+          1.331,
           1.432
         ],
         "center": [
-          0.299,
-          0.758,
+          0.205,
+          0.666,
           0.339
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "compKeys": [
+        "motion:rabbit_alert",
+        "motion:rabbit_alert_ears",
+        "motion:rabbit_alert_head",
+        "motion:rabbit_sit",
+        "motion:rabbit_sit_head"
+      ],
+      "comp": {
+        "motion:rabbit_sit": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 3.4,
+          "phase": 0,
+          "t0": 1789671318348
+        },
+        "motion:rabbit_sit_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.12,
+          "period": 2.6,
+          "phase": 0.7,
+          "t0": 1789671318348
+        },
+        "motion:rabbit_alert": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.1,
+          "phase": 1.9,
+          "t0": 1789671318348
+        },
+        "motion:rabbit_alert_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.09,
+          "period": 3.3,
+          "phase": 2.4,
+          "t0": 1789671318348
+        },
+        "motion:rabbit_alert_ears": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 2,
+          "phase": 1.2,
+          "t0": 1789671318348
+        }
+      }
     },
     {
       "id": "nx-dress-milkstand",

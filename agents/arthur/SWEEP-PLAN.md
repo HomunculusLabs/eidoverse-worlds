@@ -12442,3 +12442,67 @@ row-cottage/observatory @286 walked fresh, inn/tower-house @285,
 hall/bunkhouse @284, forge/potter @283, longhouse/garden-cottage @282
 stalest standing pair at 4 sweeps; both walk tools ls-verified present on
 disk this tick: interior-walk-longhouse.ts, interior-walk-garden-cottage.ts).
+
+sweep-287: CLEAN SWEEP, classified-drift tick (56th consecutive
+quiet-or-classified). Tick-start HEAD a3ac1590 = fauna-4 (hutch rabbits —
+nx-dress-hutch same-tuple replace, PRE-tick commit; its own entry is
+ledger-matched at the top of IMPROVEMENTS.md). Standing gate ALL PASS real
+exit 0 FIRST TRY (98 PASS lines + ALL PASS trailer, captured unpiped to
+/tmp/s287/gate.log). Census epochs A/B 20s-paced BYTE-IDENTICAL (raw
+235652B sha16 c308cd2d133598cc): 346==346 with exactly ONE domain-valid
+drift field-set — nx-dress-hutch lib f5f47791dadb5abe->c0a64ac43a695f67
+at identical tuple (38.5, 0, -9.5) yaw -1.9 scale 1, bbox change, comp bag
+ZERO -> 5x motion:rabbit_{sit,alert,sit_head,alert_head,alert_ears} —
+tuple/comp contract matches the committed fauna-4 ledger line-for-line; 0
+arrivals, 0 departures, 0 drift on 345 shared ids across all five semantic
+classes. Baseline predates the flip (sweep-54 class, not an epoch
+correction). Overlap: SAT fresh-live over the new hutch bytes, 308 bbox
+non-light / 238 classified / 0 coverage holes, real exit 3 unpiped on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known
+Sev 2 routed artwalk b26 choreography @ sweep-43, 243rd sweep since
+routing, NOT new, no escalation due (law keys severity-1); hutch re-place
+ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually per the sweep-228 ceiling law —
+core 64/64 ALL_PASS @ 0.380 maxArrival (next-walk-core-paths.ts, JSON
+parsed from first brace past the [physics] banner), NW 5/5 ALL_PASS (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS (0.00/
+0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5 ALL_PASS
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts content-anchored
+on status strings + per-leg ok counts + distances from raw files. Tier-2
+265th cycle per the committed sweep-286 pointer: longhouse 6/6 ALL_PASS
+(dists 0.335/0.280/0.346/0.297/0.276/0.297, interior-walk-longhouse.ts) +
+garden-cottage 6/6 ALL_PASS (0.295/0.355/0.285/0.345/0.326/0.308,
+interior-walk-garden-cottage.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (241st consecutive clean); sweep89-battery 28/28 PASS
+real exit 0 on fresh census-A bytes — comp-bearing pin RAISED 24->25 with
+documented provenance (fauna-4 hutch motion comp bag, previously ZERO
+comps, census-verified; the battery's own 24 pin false-FAILed first,
+corrected per the coverage-count law, sweep-285 precedent); interlane md5
+86b2936f stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh.
+Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (263rd check; 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs and
+was read fresh via the loop/plan reload. Baseline lawfully rewritten RAW
+like-for-like (sweep287-baseline-rewrite.py, asserted pre-write: diff
+exactly [nx-dress-hutch lib+bbox+comps]): 346 entities / 235652B / sha16
+c308cd2d133598cc; post-rewrite drift ZERO (baseline byte-identical to
+censusB live). Diff tool sweep287-census-diff.py folded from the committed
+sweep286 chassis (sed swap only; py_compile clean, clean exit 0 at BOTH
+epochs A/B unpiped on the real bytes). Probe self-catches pre-verdict, all
+corrected with no repair owed: (a) core-walk parser keyed the `legs` int
+where the schema carries per-leg rows under `results` (re-anchored on the
+actual schema keys read from the raw file before any verdict, sweep-48
+class); (b) two workdir typos in terminal calls (exidoverse) exited 126
+before running anything — no evidence touched, rerun clean. Foreign dirt
+in tree (windmill overhaul scratch, cabin/carousel prototype dirs,
+client/server engine files, fleet shells, debug-bower scripts, moon-moth
+dir, fauna tools, HERO-ASSET-REFINEMENT-PLAN, core-paths assets) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-288): forge +
+potter (266th cycle — LRU chain re-derived from committed plan pointers
+this tick: longhouse/garden-cottage @287 walked fresh, row-cottage/
+observatory @286, inn/tower-house @285, hall/bunkhouse @284, forge/potter
+@283 stalest standing pair at 4 sweeps; walk tools interior-walk-forge.ts,
+interior-walk-potter.ts — ls-verify both on disk before running).
