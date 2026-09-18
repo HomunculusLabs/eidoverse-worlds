@@ -18,6 +18,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | barn cat | `nx-dress-cat-001` | (40.7,-0.038,-7.5) yaw 3.216 | **0030ce54** (fauna-7) | NEW 2026-09-17 — tuxedo watch-cat in the coop-yard east pocket facing the flock, 4 motion comps (bob + 3 pendulums) |
 | barn owl | `nx-dress-owl-001` | (48.8,-0.0295,4.2) yaw 2.89 | **a11e5432** (fauna-8) | NEW 2026-09-17 — barn owl on a timber raptor-perch T-post on the livery east lawn (sky-lane seat past the stable's SE corner), 3 motion comps (bob + 2 pendulums) |
 | robin | `nx-dress-robin-001` | (6.3,-0.0291,-86.35) yaw 3π/2 | **5ba5598f** (fauna-9) | NEW 2026-09-17 — European robin foraging on the grass OUTSIDE the reedpool N rim, facing the approach; 3 motion comps (bob + 2 pendulums) |
+| geese | `nx-dress-geese-001` | (7.9,-0.0408,-96.6) yaw 0.45 | **67a8406d** (fauna-11) | NEW 2026-09-18 — graylag goose pair (grazer + sentry) on the reedpool SW bank meadow, facing NNE across the water; 6 motion comps (2 bob + graze-tug + head-scan + 2 flicks) |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -55,24 +56,12 @@ domain is commons-next `nx-dress-*` fauna only.
    5ba5598f) on the grass OUTSIDE the reedpool N rim at (6.3,-86.35) yaw
    3π/2, facing the village approach. Full record below. (The prior
    window's in-basin seat was cured mid-tick — pool decode law recorded.)
-8. **[CANDIDATE fauna-10] geese — new species (homestead tier-2).**
-   A domestic graylag-goose pair, ONE entity `nx-dress-geese-001`:
-   white-and-grey bodies, LONG S-curved necks (the silhouette no village
-   animal owns), orange bills with pale nail, white rear/tail-knuckle over
-   grey wings, orange-pink legs. Two roles per individual: one GRAZER
-   (neck dipped, nibbling grass) + one SENTRY (neck tall, head-scan — the
-   farmyard-watchdog posture; the fox-den story writes itself). 18m
-   identity: white bodies on green meadow + neck-length silhouette (no
-   other villager has either). Build chassis: duck waterfowl construction
-   (hull/wing/tail/bill) at goose scale, broad forms (fauna-5 law).
-   Motion chassis (all proven part types): graze-dip pendulum (hen peck
-   family), sentry neck-scan (owl head-scan family), breathing bob, tail
-   flick — phases staggered per individual, epoch t0. Siting at build
-   tick via seat-scan law + fresh census; candidate seats (decide with
-   pool GLB radial decode, fauna-9 bank-raycast law): reedpool S/E bank
-   meadow 5–8m out (grazing geese beside the ducks' water — pond life
-   from every side: ducks W lobe, robin N rim, geese S/E bank), millrace
-   bank, or open pasture W of the goat pen.
+8. **[CLOSED fauna-11] geese — new species (homestead tier-2).** Built and
+   seated: a domestic graylag-goose pair, ONE entity `nx-dress-geese-001`
+   at the reedpool SW bank meadow (7.9,-0.0408,-96.6) yaw 0.45 — v7
+   67a8406d, 7 build versions, judge arc closed (closeface PASS + 18m
+   PASS). Full record below. The pool now lives from three sides: ducks
+   W lobe, robin N rim, geese SW bank.
 
 ## Per-species rebuild records
 
@@ -136,6 +125,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: 7 judged rounds, 6 build versions (ZAI fallback, native debt NATIVE-8 below). Encounter bank_near: r1 "brown lump, no red" (rear-quarter vantage + tan-leg specks) → rig ground fixed to the REAL meadow #4a5d33 (old brown ground fabricated brown-on-brown) → r2 "dangles below the pole" (TRUE: pool decode proved the seat INSIDE the water basin — water 0.140-to-r3.0, bank ring r3.5-4.0; the interrupted window's seat scan had mis-sited) → seat moved outside the N rim → r3 "shows the camera its back" (yaw law: facing = (cos,−sin); π/2 faces −z — 3π/2 needed) → r4 "dim red + no tail line + floating gap" → v4 red 0xe85840 + 54° tail + dark legs → r5 conditional PASS (breast first-thing-the-eye-picks-up; tail self-occluded face-on — fauna-4 law: the PROFILE is the tail's contract view) → **profile 5/5 PASS** (attached 54° cocked tail after the v5 re-seat on the rump — at 38°/54° the rotated base cleared the body ellipsoid into open air; group re-seated −0.048,0.098 + box 0.115 embedding 5mm inside) → **final encounter 5/5 PASS**. 18m: framing-limited disclosed (judge's own math: ~11×8px total — no 14cm songbird carries species identity at 18m; "the robin works as a reward for players who walk up" — encounter-space species, fauna-4/8 law).
 - Rig laws learned: (a) **review-rig ground must match the WORLD's ground** (client build.js meadow #4a5d33) — a generic brown rig ground fabricated a brown-on-brown failure that cost a build iteration; (b) **a review-rig ground plane must COVER the seat** — the reedpool sits at z≈−88, a ±80 plane put the robin in the void ("floating against sky" = rig bug, pitfall-0 kin); (c) **facing-yaw arithmetic**: facing = (cos yaw, −sin yaw) — verify the bib's world direction with the village transform BEFORE judging approach vantages (π/2 vs 3π/2 = back vs front, two judge rounds); (d) **a species-identity color must be pixel-probed, not assumed** — the plan's chosen red rendered at zero distinguishable pixels; the probe (hue/sat/val scan) found the truth and drove the 4-step cure; (e) **seats near water features need a bank-surface raycast** (pool GLB decode, radial profile) — "beside the reed clump" was IN the basin; (f) a tail's attachment must be judged in PROFILE (its contract view) — face-on self-occludes; and a rotated box's near-end must be checked against the BODY's ellipsoid at its own height, not assumed attached.
 
+### geese — fauna-11 (2026-09-18) CLOSED
+- **v7 sha16 67a8406d** (full: 67a8406dd63612ea5deafe7814e58d7b0cb77fca7207092824a0e06329cad913), NEW entity `nx-dress-geese-001` PLACED_VERIFIED at world (7.9,-0.0408,-96.6) yaw 0.45 scale 1 — the reedpool SW bank meadow (seat law: beside the water it lives on; the pool now lives from three sides — ducks W lobe, robin N rim, geese SW bank, facing NNE across the water toward the bridge foot). Terrain preflight at the FINAL tuple: 9pt spread 5.9mm. SAT preflight 5 neighbors: worst gap 0.875m vs the pool itself — recorded design adjacency (concentric-site class: grazing geese beside their water, struct-19 family); rim-face gap 1.54m ≥ 1.4 (exact member-box SAT from pool source decode: rim ellipse 4.55/3.05, S sill local x −1.2..1.2 z −4.0..−3.3 walkable furniture 0.59m clear, both masts (1.25,±3.8) > 1.4m); all other neighbors ≥ 1.4m. Census 354→355 exactly, 7 verbs (upload+spawn+6 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m S-meadow approach, arrival 0.28m; foreign support-seam stderr = temple-labyrinth/stones, not ours), live bbox 1.542×0.964×1.504 == decode envelope (1.617×0.964×1.504 pre-cull; place reports the culled mesh bbox — footprint/height match within furniture tolerance).
+- Build: a domestic graylag-goose pair (ONE entity) — white-cream hulls with grey mantle saddles + rounded ellipsoid wing plumage seated into the flanks + grey tail fans with white center blade, white breasts, white rump knuckles, orange bills with pale nail tips proud 8mm, dark side-set eyes, orange legs/feet (brightened 0xe08850 after the v4 dark-read). Two roles: GRAZER (neck a single smooth tube dipped near-vertical, bill among cut-grass stems at the meadow) + SENTRY (neck a smooth S-tube, head high, the farmyard watch posture). Ground-tie: 8 nibbled-grass cut stems at the grazer's bill point + 4 shed white down quills (grain law, fauna-2). Anchors goose_{a,b} + _head + _tail (6 KEEP groups; `goose_` added to mergekit KEEP this tick). ×1.25 group-local bake incl. joints (fauna-8 law); furniture placed POST-bake at final coords (the bake displaced the v1 furniture — caught by inspection).
+- Motion: 6 comps live — breathing bobs (.006/4.2s, .006/3.6s — sixth+seventh village exercise of part bob), grazer graze-tug neck pendulum (X-axis .30/3.2s), sentry head-scan pendulum (Y-axis .35/9.0s, owl scan family), 2 tail flicks (.26/1.7s, .22/2.0s); phases staggered, epoch t0. Motion proven engine-true at both framings (541px diff @ 18m band 416-518; 6707px near band 247-620); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc: 7 build versions, 5 judged rounds (ZAI fallback, native debt NATIVE-9 below). 18m v1 PASS-narrow (silhouette carries; white value muted) → closeface v1 FAIL 4 findings (taupe bodies, dark/mismatched legs, neck seam, box wings) → ISOLATION PROBE (two-box A/B through the exact build+export+rig pipeline, plain vs ×1.25-baked: byte-identical renders — bake exonerated; the dim-white read is the rig's backlit-sun class, fauna-7 law (b) — cured with the disclosed camera-side fill) + source fixes v5 (legs 0xe08850, wings thicker+deeper) → v5 closeface: bodies+legs PASS, neck seam persists (two butted cylinders = silhouette kink a blend sphere cannot cure) → **v6 rebuilt the necks as ONE smooth TubeGeometry per CatmullRom curve** (tangent-continuous; wings → seated ellipsoid plumage): wings/bodies/legs PASS but the sentry head FLOATED (kept the old two-segment endpoint hy 0.40 above the new tube terminus — sky through the gap) → **v7 re-seated the skull on the tube terminus: closeface PASS** (welded, S continuous, all secondary features intact) + **18m final PASS** (posture contrast carrying; white-on-green muted but holding; disclosed residuals: body value ~10-15% below ideal pop, grazer neck hidden at distance = posture-read, orange sub-pixel at 18m).
+- Rig/decode laws learned: (a) **a full SHA must be READ, never reconstructed from its 16-char prefix** — the placer's hash gate caught a fabricated tail before upload (fail-closed gate doing its job); (b) **furniture must be placed POST-bake** at final coords — the ×1.25 group-local bake multiplies entity-level furniture away from its subject; (c) **two butted cylinders cannot read as one neck** — the angle joint leaves a silhouette kink + shading step; a single TubeGeometry along a CatmullRom curve is the cure (and its head must be re-seated ON the new terminus, not the old endpoint); (d) box wing panels read as "stuck-on boxes" at close range — seated ellipsoids read as plumage; (e) the A/B isolation probe (identical pipeline, one variable) is the cheap decisive tool for shading-read disputes before iterating geometry.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
@@ -148,6 +144,7 @@ domain is commons-next `nx-dress-*` fauna only.
 | NATIVE-6 | fauna-7 (2026-09-17) | barn cat v12b 0030ce54 yard_gameplay + yard_near + yard_ultraside + yard_ultraface frames (`reviews/fauna7-cat/new-{yard_gameplay,yard_near,yard_ultraside,yard_ultraface}.png`) — fallback PASS arc (18m + near + profile 5/5 + ultraface core) stands until natively confirmed |
 | NATIVE-7 | fauna-8 (2026-09-17) | barn owl v6 a11e5432 yard_face + yard_bench_pm + yard_bench frames (`reviews/fauna8-owl/new-{yard_face,yard_bench_pm,yard_bench}.png`) — fallback PASS arc (encounter 6/6 + yard PM 5/5 + AM silhouette) stands until natively confirmed; the 18m road-end view is roof-occluded (encounter-space disclosure) |
 | NATIVE-8 | fauna-9 (2026-09-17) | robin v5 5ba5598f bank_near + lone_side + lone_face frames (`reviews/fauna9-robin/new-{bank_near,lone_side,lone_face}.png`) — fallback PASS arc (encounter 5/5 + profile 5/5; 18m framing-limited disclosed, encounter-space species) stands until natively confirmed |
+| NATIVE-9 | fauna-11 (2026-09-18) | geese v7 67a8406d closeface + gameplay frames (`reviews/fauna11-geese/new-{closeface,gameplay}.png`) — fallback PASS arc (closeface PASS welded/continuous; 18m PASS marginal, white-value residual disclosed) stands until natively confirmed |
 
 ## Rig law (learned fauna-1, hard way)
 
