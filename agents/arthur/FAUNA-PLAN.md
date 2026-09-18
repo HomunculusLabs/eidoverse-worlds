@@ -23,7 +23,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | sheep | `nx-dress-sheep-001` | (-27.5,-0.0517,-31.5) yaw 0.65 | **31a512ed** (fauna-13) | NEW 2026-09-18 — wool-cream ewe pair (grazer + tall watch) in a shepherd's fold (timber hurdles + mottled trodden pad) on the SW meadow W of the dyehouse, opening NE toward the dye yard; 6 motion comps (2 bob + graze-tug + head-scan + 2 flicks) |
 | pig | `nx-dress-pig-001` | (15.0,-0.021261,40.2) yaw 0.66 | **a4918702** (fauna-14) | NEW 2026-09-18 — British-saddleback sow pair (rooter with pale disk snout in the spoil + belly-flat wallower) in a timber sty corner with fresh-rooted earth patch + oak-litter acorn scatter, meadow S of the kiln yard, heads NE toward the mosaic-row visitor line; 6 motion comps (2 bob + root-dig + ear-flick + 2 tail-curl flicks) |
 | dovecote | `nx-dress-dovecote-001` | (-50.5,0.0367,62.55) yaw 2.577 | **8f33f97f** (fauna-16/17) | NEW 2026-09-18 — potence timber dovecote + collared-dove trio (entry-ledge perch / cap ridge / ground-feeding on windfalls) at the orchard-edge meadow, facing the stile visitor approach; 6 motion comps (2 bob + 2 Y-scan + bob + peck) |
-| dairy cow | `nx-dress-cow-001` (candidate, fauna-20) | TALL: ~(24.0,40.75) zone E of pig sty | TBD | **QUEUED fauna-20 (2026-09-18)** — the dairy chain's missing animal: `nx-dress-milkstand` (22.5,33.2) + `nx-dress-churn` (19.9,35.1) stand with no source animal (goats' milk is the cottage story; the milk stand reads trade). Census-backed: zone 6.4m clear of solids; artwalk b33 rider on milkstand = SAT-set member, never touched |
+| dairy cow | `nx-dress-cow-001` | (24,-0.02489,40.75) yaw 0.66 | **943beb2b** (fauna-21) | NEW 2026-09-18 — Jersey-class dairy cow pair at the meadow E of the pig sty (watch + grazer at the filled hay rack), 7 motion comps; the dairy chain's animal stands |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -143,31 +143,51 @@ domain is commons-next `nx-dress-*` fauna only.
     1.60), heap (−0.62, 0.36, 1.62) — nose bottom buries 10cm into the heap
     surface; verified zero verts in the wall's y-band) + A forward to z
     −0.10 (tail tip 10cm clear of the rail's north face).
-13. **[QUEUED fauna-20, 2026-09-18] dairy cow — homestead proposal (queue was
-    empty; loop law: propose ONE homestead species, append candidate, end
-    tick).** Village logic: the dairy chain stands at the kiln-yard corner —
-    `nx-dress-milkstand` (22.5, 33.2) yaw −2.4 + `nx-dress-churn` (19.9,
-    35.1) yaw −2.2 — with NO source animal: the goat pen (E district) carries
-    the cottage-milk story; the milk stand beside a churn in the working yard
-    reads as a TRADE whose animal is missing. Goats, ducks, bunnies, and the
-    tier-2 homestead set (cat, owl, robin, geese, sheep, pig, horses,
-    doves) are all already seated — the cow is the last unmilked classic of
-    Bill's homestead language. **Candidate zone (census-backed 2026-09-18,
-    fauna-20)**: open meadow E of the pig sty, center ~(24, 40.75) — 6.4m
-    clear of every solid (nearest: churn, pig sty, conoidfan at 14m);
-    artwalk riders b31/b32/b33 sit 5–7m away as film-class furniture
-    (b33 `nx-artwalk-b33-milking-order` rides the milkstand — SAT-set
-    member, NEVER touched: entity-domain law). Species sketch (next tick's
-    build): ONE entity `nx-dress-cow-001`, TRUE-SIZE (no group scales,
-    fauna-13 law) — a Jersey/Dexter-class dairy cow pair: grazer (tube neck
-    dipped, muzzle at a hay heap / grazing tufts) + standing watch (neck
-    up, Y-scan sentry family) — warm fawn coat 0xa9825a with pale udder +
-    dark muzzle band + dark hoof line + swishing tail (lateral axis [0,0,1],
-    shorse law) + ear-flick swivels; furniture: timber hay rack + trodden
-    pad + straw scatter (hurdle-seg chassis) + dropped hay wisps. Motion
-    ~6 comps (2 bob + graze-tug + Y-scan + ear-flick + tail swish),
-    phases staggered, epoch t0. Seat final at build tick by full
-    OBB-vs-OBB sweep + terrain preflight + live walk (seat-scan law).
+13. **[CLOSED fauna-21, 2026-09-18] dairy cow — proposed fauna-20, BUILT +
+    SEATED fauna-21 (2026-09-18).** ONE entity `nx-dress-cow-001`: a
+    Jersey-class dairy cow PAIR — cow_a standing watch (neck up, Y-scan
+    sentry) + cow_b grazing (tube neck dipped, muzzle in fallen-hay wisps) —
+    plus the livery furniture: timber hay rack (2 posts + 2 rails + braces)
+    with a FILLED hay volume between the rails cresting lumps over the top
+    rail, spill clumps, trodden pad, straw scatter. **v5 sha16 943beb2b1931d85e**
+    (full 943beb2b1931d85e45706eb863e746ff2a9ace4ff9ad040f3d413603ac8763f8 —
+    judge-SHIP bytes: 18m SHIP + closeface SHIP + profile SHIP + ultraface
+    SHIP; decode GREEN + RED control; 5430 tris / 29 calls; deterministic ×2).
+    7 motion comps live: 2 breathing bobs + watch Y-scan (.35/8.5s) +
+    ear-flick + graze-tug + 2 LATERAL tail swishes (axis [0,0,1] by the
+    sweep-probe law, shorse law). Engine-true motion pairs: 718px@18m band
+    418–539, 11015px near band 222–724. **Seat: (24, −0.02489, 40.75) yaw
+    0.66** — fauna21-seat-sweep best of 598 qualifying (worst solid gap
+    3.361m vs the pig sty — the pannage meadow's own adjacency); heads NE
+    toward the mosaic-row visitor line (pig law). Terrain 9pt spread 8.0mm,
+    PY = live heightAt −0.02489. Census 361→362 exactly, 8 verbs
+    (upload+spawn+7 comps), idempotent rerun 0 verbs, walk ALL_PASS 3/3
+    (18m NE visitor line, arrivals 0.00/0.34/0.31m), live bbox
+    3.1×1.552×2.925 == decode envelope. Village logic closed: the dairy
+    chain (milkstand 22.5,33.2 + churn 19.9,35.1) now has its source
+    animal grazing in sight. Build arc below.
+14. **[QUEUED fauna-22, 2026-09-18] donkey — homestead proposal (queue empty
+    after the cow; loop law: propose ONE homestead species, append
+    candidate, end tick).** Village logic: the homestead's guardian-verse
+    is now complete by district (cat/coop, owl+livery horses/stable,
+    geese+ducks+robin/pool, sheep/dyehouse, pig/kiln, doves/orchard,
+    cow/dairy) — but the WORKING guardian of Bill's own homestead
+    language, the one that guards the flocks, is missing: the **donkey**.
+    Goats/ducks/bunnies (the loop's named firsts) are all seated; the
+    donkey is the classic guardian companion of exactly the flocks this
+    village already pastures (guardian of sheep AND goats — a real-world
+    practice). Species sketch (next tick's build): ONE entity
+    `nx-dress-donkey-001`, TRUE-SIZE — a standard donkey pair or single:
+    watch stance (long ears — THE species marker, bigger relative to head
+    than any villager yet) + grazer; grey-dun coat 0x9a8f82 with the
+    shoulder cross (dark cross stripe — the breed marker), pale muzzle,
+    dark mane ridge + tail tuft; furniture: timber lean-to shelter or
+    simple rail + trodden pad. Motion ~6 comps (2 bob + Y-scan + ear-flick
+    [big, the marker] + graze-tug + tail-tuft swish), phases staggered.
+    Seat final at build tick by full OBB-vs-OBB sweep + terrain preflight
+    + live walk (seat-scan law). Candidate zone (census-backed next tick):
+    the paddock/flock edge nearest the sheep fold or goat pen — the
+    guardian stands with its flock.
 
 ## Per-species rebuild records
 
@@ -252,6 +272,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: 8 build versions, 5 judged rounds (ZAI fallback, native debt NATIVE-11 below). 18m arc: v3 FAIL ×2 (dark lumps; saddle on one body only; head-in-hull-band pose unreadable; near-black patch read as shadow) → v4 MARGINAL FAIL (both saddles read; fence fragments + detached smear) → v6 FAIL (rooting gesture illegible — judge's critique cross-checked against source arithmetic exposed the REAL defects: the v1 spoil heap crest 0.20 had BURIED the snout disk since v1, struct-52 occlusion-by-construction; and the sows were 30% undersized, struct-45) → v7/v8 TRUE-SIZE + unburied disk + corner return → **18m PASS** ("two dark low animals with white bands by a fence… gestalt delivers pigs in a sty corner reliably") + **closeface SHIP** (anatomy, saddle placement, pendant ears, disk snouts, belly-flat sprawl all YES; disclosed cosmetics: lying sow's band sits just behind mid-barrel — pose compression, judge called it acceptable; earth ellipse edge crisper than real dirt). Judge identity: ZAI fallback (glm vision) — cron lane has no native vision.
 - Rig/decode laws learned: (a) **a ground-tie prop can occlude the very marker it serves** — the spoil heap was sized to "meet the snout" but buried it; containment arithmetic (prop crest vs marker rim) must be computed BEFORE the build ships, struct-52 class at ground level; (b) **true-size is an identity requirement, not a nicety** — three 18m FAIL rounds traced mostly to a 30% scale undersize putting markers under 2px (struct-45); the ×bake + post-bake furniture chassis (fauna-8/11) fixes it in one pass; (c) a tilted cylinder's y-extent is (h/2)·cosθ + r·sinθ, not h/2 — decode caught the sprawled leg stubs digging −7.6mm; (d) the rig's `new THREE.GLTFLoader()` must use the bare import (chassis verbatim — a THREE.-qualified call throws and the page stalls to a blank-canvas timeout that looks like a rig bug); (e) a species-identity color must be chosen against its BACKGROUND member (dark disk on dark head = invisible; pale disk reads) — kin of the robin's bib law, applied to anatomy.
 
+### dairy cow — fauna-21 (2026-09-18) CLOSED
+- **v5 sha16 943beb2b1931d85e** (full 943beb2b1931d85e45706eb863e746ff2a9ace4ff9ad040f3d413603ac8763f8), NEW entity `nx-dress-cow-001` PLACED_VERIFIED at world (24, −0.02489, 40.75) yaw 0.66 scale 1 — the meadow E of the pig sty, heads NE (facing = (sin,cos) yaw law) toward the mosaic-row visitor line (pig law); hay rack shelters the grazer's SW flank. Seat = fauna21-seat-sweep best of 598 qualifying seats (25cm grid, decoded OBB center-offset (−0.150, +0.357)): worst solid gap 3.361m vs the pig sty (the pannage meadow's own design adjacency); artwalk b31/b32/b33 riders are film-class + SAT-set members, never touched (entity-domain law). Terrain preflight at the FINAL tuple: 9pt spread 8.0mm, PY = live heightAt −0.02489. Census 361→362 exactly, 8 verbs (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m NE visitor line, arrivals 0.00/0.34/0.31m), live bbox 3.1×1.552×2.925 == decode envelope (3.1×1.632×3.014 pre-cull).
+- Build: a Jersey-class dairy cow PAIR (ONE entity, TRUE-SIZE authored directly — no group scales, fauna-13/19 law): cow_a WATCH (tube neck up ~38°, Y-scan sentry, big lateral paddle ears on own keep-group) + cow_b GRAZER (tube neck dipped, muzzle in fallen-hay wisps at the composed nose terminus entity ≈ (−0.741, 0.24, 1.595) — decode-verified exact). Both: warm fawn hull+shoulder+rump 0xa9825a (plan-pinned identity value), near-white CREAM udder dropped below the belly silhouette between the hind legs (the 18m dairy lock — silhouette break beats value break), dark muzzle: pale cream RING torus (r 0.070/tube 0.015, ~20mm proud — dovecote collar law) + WIDE pale muzzle PATCH plate breaking the muzzle front (the 18m head lock) + dark nose leather, big lateral paddle ears at eye level with darker fawn tips, dark eyes with pale Jersey surrounds, dark hooves (the plan's dark hoof line), dock + fine cascade tail with dark switch tip. Furniture: timber hay rack (2 posts + 2 rails + 2 diagonal braces, stile family) with FILLED hay volume between the rails (bright STRAW lumps cresting OVER the top rail — silhouette break), spill clumps, TROD-family trodden pad, straw scatter at muzzle + rack + mid-pad. Anchors cow_a/_head/_ears/_tail + cow_b/_head/_tail (7 KEEP groups; `cow_` added to mergekit KEEP this tick — collision-proof prefix, only a comment word "rain-cowl" in mkv3-ring). 5430 tris, 29 draw calls.
+- Motion: 7 comps live — breathing bobs (.006/4.7s watch, .005/5.4s grazer — fourteenth+fifteenth village exercise of part bob), watch Y-axis head-scan (.35/8.5s, owl/goose/shorse sentry family), ear-flick swivel (axis [2,0,1] .20/2.3s), grazer graze-tug X-pendulum (.13/3.4s), 2 LATERAL tail swishes (axis [0,0,1] .34/2.7s + .28/2.3s — shorse law, sweep-probe verified clear of the rack at full amplitude); phases staggered, epoch t0. Motion proven engine-true at both framings on final bytes (718px diff @ 18m band 418–539; 11015px near band 222–724); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc (ZAI fallback, native debt NATIVE-14 below): 5 build versions, 8 judged rounds. 18m v1 SHIP first round (identity: pose contrast + fawn mass carrying) → profile v1 FAIL (watch cow throat through-gap — fauna-11 neck-weld class) → v2 throat weld (head buried deeper, jaw extended rearward over the tube terminus, fawn blend sphere at the junction) = profile SHIP → ultraface v2 FAIL (ears read as HORNS: crown-mounted boxes drooped by z-rotation −1.30) → v3 ears rebuilt as horizontal lateral paddles at EYE level (root inside skull, slight droop only, darker outer 35%) = ultraface SHIP + 18m re-judge FAIL (rack bays empty, hay = ground lump, "no value break at the head", udder non-functional) → v4 filled bays + muzzle patch + bigger udder = 18m FAIL narrow (udder doesn't resolve, bayfill swallowed both rails — fill front z 1.71 vs rail front 1.645: no rail line, "solid golden box") → v5 fill pulled to z-center 1.535 between the rails + 3 bright lumps cresting over the top rail + spill clumps + udder dropped to below-belly CREAM = **18m SHIP** (udder breaks the belly line on the watch cow; rack reads as timber frame holding hay; the spill-graze behavioral loop sells the managed dairy setup) + **closeface SHIP on final bytes** (both cows' muzzle plate+ring survive head-up AND head-down angles; udder reads as anatomy at the correct station; zero defects). Judge-noted non-blocking: grazer's udder cue doesn't resolve in head-down posture (compressed underbelly view — disclosed, the watch cow carries the herd read); teats unresolvable at 4.2m; eye scale polish.
+- Rig/decode laws learned: (a) **a fill volume between rails must NOT swallow the rails** — compute the fill's front face vs the rail plane BEFORE shipping (v4's 1.71 > 1.645 erased the frame read entirely; "hay box on legs" reads as a hopper, not a rack); (b) **an 18m species cue must break the SILHOUETTE, not just carry a value** (the v4 udder at correct value sat inside the belly outline and read as nothing; dropping it below the belly line made it read — judge: "silhouette break beats value break"); (c) **box ears mounted on the skull crown read as HORNS regardless of droop rotation** — cow ears belong at eye level, lateral, as horizontal paddles (orientation does the semantic work, not shape); (d) hay reads as held feed only when it CRESTS a readable rail line (bright lumps breaking a straight top-rail silhouette); (e) a wide pale muzzle PATCH plate (2.2× the ring's band width) is what makes the Jersey face read at 18m — the ring alone is encounter-scale only; (f) the chassis laws held first-try this tick (true-size authoring, tube neck, composed graze terminus, sweep probe, aimed views after the ultra taught fauna-19 law d again — the generic ultra framed the pair centroid's rear bodies; aimed ultraface at the watch head was required).
+
 ### stable horses — fauna-19 (2026-09-18) CLOSED
 - **v3 sha16 6ef0e86c1dc1774c** (full 6ef0e86c1dc1774c63e3617b8ec4861295cf90a6a7d65d18a44abe329663af5b), NEW entity `nx-dress-shorse-001` PLACED_VERIFIED at world (49.5, −0.03564, 0) yaw −1.75 scale 1 — the livery east yard, heads WSW (facing = (sin,cos) yaw law) toward the road-end approach; hitch rail shelters the local −z (NE) side. Seat = fauna19-seat-sweep best of 91 qualifying seats (25cm grid, decoded OBB center-offset): worst solid gap 1.637m vs the stable itself (the yard's own design adjacency — concentric-site class); owl post 2.9m+; road films end |x|≤20.6, so no walking-line conflict (lamp-in-path law checked against the road entity list). Terrain preflight at the FINAL tuple: 9pt spread 3.2mm, PY = live heightAt −0.03564. Census 359→360 exactly, 8 verbs (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (road-end→yard visitor line, arrivals 0.00/0.29/0.31m; foreign support-seam stderr = temple-labyrinth/skeps class, not ours), live bbox 3.1×1.959×3.319 == decode envelope.
 - Build: a draft-horse PAIR (ONE entity, TRUE-SIZE authored directly — no group scales, no bake pass needed): shorse_a WATCH (tube neck up ~42°, head-scan sentry, ear keep-group) + shorse_b GRAZER (tube neck dipped, muzzle buried 10cm into the hay heap). Both: deep chestnut hull+shoulder+rump (0x7a4526), CREAM feathered canons below chestnut uppers (the draft marker, sheep-cream family), dark hooves, dark mane serration along the crest, blaze plaque BREAKING the skull surface + muzzle stripe (struct-52 containment law), nose leather, side-set eyes, halter (noseband + cheek straps + poll band, rides the head), forelock between the ears, dock + tapering dark cascade tail. Furniture: hitch rail (2 posts + beam), coiled rope, water bucket + palette-water disc (housekit blue), hay manger (4 legs + trough + heaped golden hay under the composed muzzle), TROD-family trodden pad, straw scatter (golden 0xe6c35c — fauna-4 law). Anchors shorse_a/_head/_ears/_tail + shorse_b/_head/_tail (7 KEEP groups; `shorse_` added to mergekit KEEP this tick — collision-proof prefix, `horse_\d+` is carousel-taken). 4202 tris, 34 draw calls.
@@ -273,6 +300,7 @@ domain is commons-next `nx-dress-*` fauna only.
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-14 | fauna-21 (2026-09-18) | dairy cow v5 943beb2b gameplay + right + closeface + ultraface frames (`reviews/fauna21-cow/new-{gameplay,right,closeface,ultraface}.png`) — fallback arc stands (18m SHIP + profile SHIP + ultraface SHIP + closeface SHIP on final bytes; grazer-udder-in-head-down disclosed) until natively confirmed |
 | NATIVE-13 | fauna-19 (2026-09-18) | stable horses v3 6ef0e86c gameplay + near + right frames (`reviews/fauna19-shorse/new-{gameplay,near,right}.png`) — fallback arc stands (18m SHIP, near anatomy sound w/ minor neck-seam style note, profile tails attached + rail clearance judged; one judge timeout retried once) until natively confirmed |
 | NATIVE-1 | fauna-1 (2026-09-16) | goats v4 7e9af5a5 18m gameplay + closeface frames (`reviews/fauna1-goats/new-{gameplay,closeface}.png`) — fallback PASS stands until natively confirmed |
 | NATIVE-2 | fauna-2 (2026-09-17) | hens flock v4 1ab461bd 18m gameplay + near + ultra frames (`reviews/fauna2-hens/new-{gameplay,near,ultra}.png`) — fallback YES ("Ship it") stands until natively confirmed |
