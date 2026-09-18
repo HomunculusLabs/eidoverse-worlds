@@ -17,6 +17,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | duck pair | `nx-dress-ducks-001` | (8,-0.139,-91) yaw 0 | **c156b6a1** (fauna-3) | NEW 2026-09-17 — mallard pair on the reedpool W lobe, 6 motion comps (bob/orbit/pendulums) |
 | barn cat | `nx-dress-cat-001` | (40.7,-0.038,-7.5) yaw 3.216 | **0030ce54** (fauna-7) | NEW 2026-09-17 — tuxedo watch-cat in the coop-yard east pocket facing the flock, 4 motion comps (bob + 3 pendulums) |
 | barn owl | `nx-dress-owl-001` | (48.8,-0.0295,4.2) yaw 2.89 | **a11e5432** (fauna-8) | NEW 2026-09-17 — barn owl on a timber raptor-perch T-post on the livery east lawn (sky-lane seat past the stable's SE corner), 3 motion comps (bob + 2 pendulums) |
+| robin | `nx-dress-robin-001` | (6.3,-0.0291,-86.35) yaw 3π/2 | **5ba5598f** (fauna-9) | NEW 2026-09-17 — European robin foraging on the grass OUTSIDE the reedpool N rim, facing the approach; 3 motion comps (bob + 2 pendulums) |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -49,16 +50,11 @@ domain is commons-next `nx-dress-*` fauna only.
    on host churn; a freestanding post is the livery-native answer), NEW
    entity nx-dress-owl-001 at the sky-lane seat (48.8,-0.0295,4.2) yaw
    2.89 on the livery east lawn. Full record below.
-7. **[CANDIDATE fauna-9] robin — new species.** Next homestead-native
-   species (Bill's yard list): a European robin — the small
-   red-breasted songbird of garden lawns and pond edges. 18m/encounter
-   identity = the RED-ORANGE BREAST PATCH against brown-grey upperparts
-   (value-isolated on green grass, the fox/cat law); chassis reuse:
-   hen-scale broad masses, robin-red 0xb84a2e breast slab proud of a
-   round body, thin dark legs, tail cocked up. Siting at build tick per
-   seat-scan law: candidate hosts = the reedpool reeds SW margin (near
-   the ducks, water-edge foraging read), the inn garden beds, or the
-   potter's yard. One robin only — no zoo.
+7. **[CLOSED fauna-9] robin — new species.** Built and seated: a European
+   robin foraging at the water margin (NEW entity nx-dress-robin-001, v5
+   5ba5598f) on the grass OUTSIDE the reedpool N rim at (6.3,-86.35) yaw
+   3π/2, facing the village approach. Full record below. (The prior
+   window's in-basin seat was cured mid-tick — pool decode law recorded.)
 
 ## Per-species rebuild records
 
@@ -115,6 +111,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: v1/v3/v5 FAIL (dark-ornament read — each honestly diagnosed: 18m size, then shadow cone, then the contained face) → **v6: encounter anatomy PASS 6/6** (heart face YES w/ rim band, eyes YES, beak YES, two-tone YES, feet YES, defects NONE), **yard PM (8.4m bench, sunlit) PASS 5/5** (creature/owl/two-tone/grounded/place), **yard AM silhouette PASS** (backlit bird-on-post reads, head+tail carry). Judge identity: ZAI fallback (glm vision) — native re-judge DEBT NATIVE-7 below.
 - Rig laws learned: (a) **toGLB serializes group translation+rotation only — a group scale is silently DROPPED; bake scales group-locally after construction** (fauna-8's costliest lesson, three versions); (b) **nested same-center scaled spheres can swallow a contained sibling — every proud element needs its extent ARITHMETIC checked against the host's** (the v4 face was 97% inside the skull); (c) the sun AM/PM pair is now a rig fixture (`setSunPM`) — any east-of-building siting must judge both suns; (d) the motion-pixel band doubles as an X-coordinate locator (frameDiff pushes x, not y — the owl's true column was found with it); (e) the livery yard is an ENCOUNTER space — its 18m approach is roof-occluded, so identity gates at bench/near/face vantages, both suns.
 
+### robin — fauna-9 (2026-09-17) CLOSED
+- **v5 sha16 5ba5598fbca0ff46** (full: 5ba5598fbca0ff46d63822b810f1aed58f07e98675b69bf015f27390cb5284b2), NEW entity `nx-dress-robin-001` PLACED_VERIFIED at world (6.3,-0.029115,-86.35) yaw 3π/2 (facing +z N, the approach) scale 1 — grass OUTSIDE the reedpool N rim; terrain preflight 9pt spread 0.8mm PY −0.029115; rim face 0.63m clear (design adjacency: the robin forages beside the pond it lives on — concentric-site class, struct-19; the rim is the pool's own face). Census 352→353 exactly, 4 verbs (upload+spawn+3 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m N-lane approach, 4m encounter stop; foreign support-seam stderr = temple-labyrinth/yard/streamstones, not ours), live bbox 0.486×0.22×0.203 == decode envelope.
+- Build: a European robin FORAGING — head down-forward at the water margin, THE red-orange bib (0xe85840 after a 4-step judge arc: plan's 0xb84a2e fox-rust rendered BELOW ground value at bird scale — pixel probe: 0 red px; hen-comb 0xd2402e "invisible"; 0xe0503a "dim"; final reads "the single most saturated warm patch... anchors the eye immediately"), red throat/face wrap (species-true: robins wear red ON the face), olive-brown upperparts + darker wing seams, pale vent, big dark eyes, thin dark beak, grey-brown legs (darkened from hen-tan — tan read as detached specks), tail cocked 54° (species 45–60°), pale grub specks at the peck point (grain law). 15 nodes, 3 anchors (robin/_head/_tail), ×1.4 bake (owl marginality law).
+- Motion: 3 comps live — breathing bob (.006/3.6s), peck pendulum head (.30/3.8s axis z), tail flick (.16/2.4s axis z), phases staggered, epoch t0. Engine-true motion pairs on final bytes: 1041px bank_near band 459-500, 596px bridge_near band 441-496; rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc: 7 judged rounds, 6 build versions (ZAI fallback, native debt NATIVE-8 below). Encounter bank_near: r1 "brown lump, no red" (rear-quarter vantage + tan-leg specks) → rig ground fixed to the REAL meadow #4a5d33 (old brown ground fabricated brown-on-brown) → r2 "dangles below the pole" (TRUE: pool decode proved the seat INSIDE the water basin — water 0.140-to-r3.0, bank ring r3.5-4.0; the interrupted window's seat scan had mis-sited) → seat moved outside the N rim → r3 "shows the camera its back" (yaw law: facing = (cos,−sin); π/2 faces −z — 3π/2 needed) → r4 "dim red + no tail line + floating gap" → v4 red 0xe85840 + 54° tail + dark legs → r5 conditional PASS (breast first-thing-the-eye-picks-up; tail self-occluded face-on — fauna-4 law: the PROFILE is the tail's contract view) → **profile 5/5 PASS** (attached 54° cocked tail after the v5 re-seat on the rump — at 38°/54° the rotated base cleared the body ellipsoid into open air; group re-seated −0.048,0.098 + box 0.115 embedding 5mm inside) → **final encounter 5/5 PASS**. 18m: framing-limited disclosed (judge's own math: ~11×8px total — no 14cm songbird carries species identity at 18m; "the robin works as a reward for players who walk up" — encounter-space species, fauna-4/8 law).
+- Rig laws learned: (a) **review-rig ground must match the WORLD's ground** (client build.js meadow #4a5d33) — a generic brown rig ground fabricated a brown-on-brown failure that cost a build iteration; (b) **a review-rig ground plane must COVER the seat** — the reedpool sits at z≈−88, a ±80 plane put the robin in the void ("floating against sky" = rig bug, pitfall-0 kin); (c) **facing-yaw arithmetic**: facing = (cos yaw, −sin yaw) — verify the bib's world direction with the village transform BEFORE judging approach vantages (π/2 vs 3π/2 = back vs front, two judge rounds); (d) **a species-identity color must be pixel-probed, not assumed** — the plan's chosen red rendered at zero distinguishable pixels; the probe (hue/sat/val scan) found the truth and drove the 4-step cure; (e) **seats near water features need a bank-surface raycast** (pool GLB decode, radial profile) — "beside the reed clump" was IN the basin; (f) a tail's attachment must be judged in PROFILE (its contract view) — face-on self-occludes; and a rotated box's near-end must be checked against the BODY's ellipsoid at its own height, not assumed attached.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
@@ -126,6 +129,7 @@ domain is commons-next `nx-dress-*` fauna only.
 | NATIVE-5 | fauna-5 (2026-09-17) | den fox v10 bc7376b3 comp_gameplay + comp_ultraface + comp_near frames (`reviews/fauna5-fox/new-{comp_gameplay,comp_ultraface,comp_near}.png`) — fallback PASS arc (5/5 encounter + 4/4 18m) stands until natively confirmed |
 | NATIVE-6 | fauna-7 (2026-09-17) | barn cat v12b 0030ce54 yard_gameplay + yard_near + yard_ultraside + yard_ultraface frames (`reviews/fauna7-cat/new-{yard_gameplay,yard_near,yard_ultraside,yard_ultraface}.png`) — fallback PASS arc (18m + near + profile 5/5 + ultraface core) stands until natively confirmed |
 | NATIVE-7 | fauna-8 (2026-09-17) | barn owl v6 a11e5432 yard_face + yard_bench_pm + yard_bench frames (`reviews/fauna8-owl/new-{yard_face,yard_bench_pm,yard_bench}.png`) — fallback PASS arc (encounter 6/6 + yard PM 5/5 + AM silhouette) stands until natively confirmed; the 18m road-end view is roof-occluded (encounter-space disclosure) |
+| NATIVE-8 | fauna-9 (2026-09-17) | robin v5 5ba5598f bank_near + lone_side + lone_face frames (`reviews/fauna9-robin/new-{bank_near,lone_side,lone_face}.png`) — fallback PASS arc (encounter 5/5 + profile 5/5; 18m framing-limited disclosed, encounter-space species) stands until natively confirmed |
 
 ## Rig law (learned fauna-1, hard way)
 
