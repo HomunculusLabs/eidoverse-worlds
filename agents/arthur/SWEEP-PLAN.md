@@ -13106,3 +13106,65 @@ hall/bunkhouse @294, forge/potter @293, longhouse/garden-cottage @292
 stalest standing pair at 4 sweeps; walk tools interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts — both ls-verified present on disk this
 tick).
+sweep-297: CLEAN SWEEP, fully-quiet tick (66th consecutive
+quiet-or-classified). Tick-start HEAD ef7fe76e = sweep-296's own close;
+standing gate ALL PASS real exit 0 FIRST TRY (unpiped capture
+/tmp/s297-gate.log, 98 PASS lines + ALL PASS trailer). Census epochs A/B
+20s-paced canonical byte-identical (next-live-census.ts projection,
+242335B sha16 0220a3a9ed400960): 352==352 FULLY QUIET vs the committed
+sweep-296 baseline — 0 arrivals, 0 departures, 0 drift on all 352 shared
+ids across every projection field (pos/yaw/scale/kind/bbox/lib
+flips/compKeys); cmp-verified A==B; no baseline rewrite owed (the
+committed 0220a3a9ed400960 file stands as next sweep's baseline
+unchanged). Overlap: SAT fresh-live, 314 bbox non-light / 239 classified /
+0 coverage holes, real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26
+choreography @ sweep-43, 253rd sweep since routing, NOT new, no escalation
+due (law keys severity-1); census byte-stability means no epoch-B SAT
+re-run owed (nothing changed). Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+ALL_PASS max dist 0.380 (next-walk-core-paths.ts, JSON parsed from first
+brace past the [physics] banner; support-seam stderr abstentions = the
+known normalized diagnostics set, unchanged), NW 5/5 ALL_PASS
+(dists 0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + distances from
+raw files. Tier-2 275th cycle per the committed sweep-296 pointer:
+longhouse 6/6 ALL_PASS (dists 0.335/0.280/0.346/0.297/0.276/0.297,
+interior-walk-longhouse.ts) + garden-cottage 6/6 ALL_PASS
+(0.295/0.355/0.285/0.345/0.326/0.308, interior-walk-garden-cottage.ts),
+both real exit 0, both tools ls-verified present on disk pre-run.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (251st
+consecutive clean); sweep89-battery 28/28 PASS real exit 0 on fresh
+census-A bytes — comp-bearing pin 28 held exactly (live count 28
+census-verified); interlane md5 86b2936f stable, read fresh this tick;
+SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5
+c0f569d0 unchanged (273rd check; 0 open candidate rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role —
+the audit-continues freeze banner governs and was read fresh via the
+loop/plan reload. Diff tool sweep297-census-diff.py folded from the
+committed sweep296 chassis (sed swap needed two targeted path repairs —
+the blind rename left /tmp/s296 paths; caught by the tool's own
+FileNotFoundError before any verdict, sweep-54 pointer-class, fixed via
+asserted patch, py_compile clean, clean exit 0 at BOTH epochs A/B unpiped
+on the real bytes). Probe self-catches pre-verdict, corrected with no
+repair owed: (a) core-walk parser keyed results[].dist where the tool
+emits legs=count + results[] rows with per-leg dist (sweep-48 class,
+re-anchored on status + per-leg ok counts); (b) approach/tier-2 walk
+parser keyed dist where these tools emit distance (sweep-54 class —
+first read printed all-zero dists, re-extracted with the true key before
+any verdict); (c) first battery invocation ran the .py under bun
+(unterminated-string error), re-run under python3 per its shebang —
+probes only, no false verdicts issued. Foreign dirt in tree (windmill
+overhaul scratch, cabin/carousel prototype dirs, client/server engine
+files, fleet shells, debug-bower scripts, moon-moth dir, fauna tools,
+HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths assets) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-298):
+hall + bunkhouse (276th cycle — LRU chain re-derived from committed plan
+pointers this tick: longhouse/garden-cottage @297 walked fresh,
+row-cottage/observatory @296, inn/tower-house @295, hall/bunkhouse @294
+stalest standing pair at 3 sweeps; walk tools interior-walk-hall.ts,
+interior-walk-bunkhouse.ts — both ls-verified present on disk this tick).
