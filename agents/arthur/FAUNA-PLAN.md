@@ -21,6 +21,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | geese | `nx-dress-geese-001` | (7.9,-0.0408,-96.6) yaw 0.45 | **67a8406d** (fauna-11) | NEW 2026-09-17 — graylag goose pair (grazer + sentry) on the reedpool SW bank meadow, facing NNE across the water; 6 motion comps (2 bob + graze-tug + head-scan + 2 flicks) |
 | sheep | `nx-dress-sheep-001` | (-27.5,-0.0517,-31.5) yaw 0.65 | **31a512ed** (fauna-13) | NEW 2026-09-18 — wool-cream ewe pair (grazer + tall watch) in a shepherd's fold (timber hurdles + mottled trodden pad) on the SW meadow W of the dyehouse, opening NE toward the dye yard; 6 motion comps (2 bob + graze-tug + head-scan + 2 flicks) |
 | pig | `nx-dress-pig-001` | (15.0,-0.021261,40.2) yaw 0.66 | **a4918702** (fauna-14) | NEW 2026-09-18 — British-saddleback sow pair (rooter with pale disk snout in the spoil + belly-flat wallower) in a timber sty corner with fresh-rooted earth patch + oak-litter acorn scatter, meadow S of the kiln yard, heads NE toward the mosaic-row visitor line; 6 motion comps (2 bob + root-dig + ear-flick + 2 tail-curl flicks) |
+| dovecote | `nx-dress-dovecote-001` | (-50.5,0.0367,62.55) yaw 2.577 | **8f33f97f** (fauna-16/17) | NEW 2026-09-18 — potence timber dovecote + collared-dove trio (entry-ledge perch / cap ridge / ground-feeding on windfalls) at the orchard-edge meadow, facing the stile visitor approach; 6 motion comps (2 bob + 2 Y-scan + bob + peck) |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -87,34 +88,27 @@ domain is commons-next `nx-dress-*` fauna only.
     to clear the film's NE edge by 3.49m (pigs root beside art, never on
     it, sheep law); no E fieldpond exists in commons-next (it became the
     W reedpool).
-11. **[BUILD-COMPLETE fauna-16, PLACE-OWED] orchard dovecote + collared-dove
-    trio — proposed 2026-09-18 (fauna-15), BUILT fauna-16 (2026-09-18).**
-    ONE entity `nx-dress-dovecote-001`: potence-style timber dovecote (post
-    + gantry arm + leaning ladder + 4-square nesting box with 3 dark entry
-    holes + pyramidal cap) carrying the 18m read + three collared doves —
-    dove_a perched at the entry ledge, dove_b on the cap ridge, dove_c
-    ground-feeding on 6 windfall apples at a trodden patch. **v6 sha16
-    8f33f97f97b0e4de** (full 8f33f97f97b0e4de4a8a64961aca3dc02e59d3cd42b
-    fd5d5629adfa3dc53be3f — judge-arc-closed bytes: 18m SHIP + near SHIP +
-    collarprobe SHIP; decode GREEN + RED control; engine-true motion pairs
-    88px@18m band 480-512 + 1002px near band 481-591). 6 motion comps
-    authored (mirrored render/placer): dove_a/b bob + Y-scan pendulums,
-    dove_c bob + peck pendulum — phases staggered, epoch t0. **Seat:
-    (-50.5, 0.030, 62.75) yaw 2.577** (disc-scan verified: 1.85m worst solid
-    gap vs the espalier row OBB, 0.60m film gap to lavender-0040, 2.81m
-    center-dist from orchard-0033's easternmost DECODED trunk; PY = sibling
-    IDW 0.0346 − low-embed bias, terrain WS preflight blocked — DISCLOSED).
-    **PLACEMENT OWED fauna-17**: the production sequencer (eidoverse.billding.dev)
-    went fully down mid-tick (geom/version HTTP 502; it was up at tick start
-    — fresh census 358 + served-bytes decode both succeeded). The placer
-    `fauna16-place-dovecote.ts` IS the recovery path (every gate re-derives
-    fresh); run it first, then the walk probe `fauna16-walk-dovecote.ts`,
-    then close the row + ledger. Files: `assets/mkv3-dovecote1.ts`,
-    `fauna16-{site-scan,orchard33-trunkdecode,seat-scan.py,decode-dovecote,
-    render-dovecote,place-dovecote,walk-dovecote}.ts` + `next-terrain-
-    fauna16-dovecote.ts`; reviews `reviews/fauna16-dovecote/`. Village
-    logic: winter-orchard pairing — doves pick fallen fruit beside the bee
-    skeps, completing the orchard's living edge.
+11. **[CLOSED fauna-17] orchard dovecote + collared-dove trio — proposed
+    2026-09-18 (fauna-15), BUILT fauna-16 (2026-09-18), PLACED fauna-17
+    (2026-09-18).** ONE entity `nx-dress-dovecote-001`: potence-style
+    timber dovecote (post + gantry arm + leaning ladder + 4-square nesting
+    box with 3 dark entry holes + pyramidal cap) carrying the 18m read +
+    three collared doves — dove_a perched at the entry ledge, dove_b on
+    the cap ridge, dove_c ground-feeding on 6 windfall apples at a trodden
+    patch. **v6 sha16 8f33f97f97b0e4de** (full 8f33f97f97b0e4de4a8a64961a
+    ca3dc02e59d3cd42bfd5d5629adfa3dc53be3f — judge-arc-closed bytes: 18m SHIP
+    + near SHIP + collarprobe SHIP; decode GREEN + RED control; engine-true
+    motion pairs 88px@18m band 480-512 + 1002px near band 481-591). 6 motion
+    comps live. **Seat: (-50.5, 0.0367, 62.55) yaw 2.577** (fauna-17: the
+    fauna-16 seat (62.75) hard-stopped at 1.390m — sub-1.4 pinch law vs
+    orchard-rows-001; pure-north 0.2m move, 1266-candidate sweep, worst
+    solid 1.559m; PY = LIVE heightAt 0.0367 — the terrain door reopened, so
+    fauna-16's sibling-IDW 0.030 is superseded per its own law f). Census
+    358→359, 7 verbs, idempotent rerun 0 verbs, walk ALL_PASS 3/3 (18m
+    stile visitor line, arrivals 0.36/0.31m), live bbox 1.785×2.977×1.573 ==
+    decode envelope. Full record below. Village logic: winter-orchard
+    pairing — doves pick fallen fruit beside the bee skeps, completing the
+    orchard's living edge.
 
 ## Per-species rebuild records
 
@@ -199,13 +193,14 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: 8 build versions, 5 judged rounds (ZAI fallback, native debt NATIVE-11 below). 18m arc: v3 FAIL ×2 (dark lumps; saddle on one body only; head-in-hull-band pose unreadable; near-black patch read as shadow) → v4 MARGINAL FAIL (both saddles read; fence fragments + detached smear) → v6 FAIL (rooting gesture illegible — judge's critique cross-checked against source arithmetic exposed the REAL defects: the v1 spoil heap crest 0.20 had BURIED the snout disk since v1, struct-52 occlusion-by-construction; and the sows were 30% undersized, struct-45) → v7/v8 TRUE-SIZE + unburied disk + corner return → **18m PASS** ("two dark low animals with white bands by a fence… gestalt delivers pigs in a sty corner reliably") + **closeface SHIP** (anatomy, saddle placement, pendant ears, disk snouts, belly-flat sprawl all YES; disclosed cosmetics: lying sow's band sits just behind mid-barrel — pose compression, judge called it acceptable; earth ellipse edge crisper than real dirt). Judge identity: ZAI fallback (glm vision) — cron lane has no native vision.
 - Rig/decode laws learned: (a) **a ground-tie prop can occlude the very marker it serves** — the spoil heap was sized to "meet the snout" but buried it; containment arithmetic (prop crest vs marker rim) must be computed BEFORE the build ships, struct-52 class at ground level; (b) **true-size is an identity requirement, not a nicety** — three 18m FAIL rounds traced mostly to a 30% scale undersize putting markers under 2px (struct-45); the ×bake + post-bake furniture chassis (fauna-8/11) fixes it in one pass; (c) a tilted cylinder's y-extent is (h/2)·cosθ + r·sinθ, not h/2 — decode caught the sprawled leg stubs digging −7.6mm; (d) the rig's `new THREE.GLTFLoader()` must use the bare import (chassis verbatim — a THREE.-qualified call throws and the page stalls to a blank-canvas timeout that looks like a rig bug); (e) a species-identity color must be chosen against its BACKGROUND member (dark disk on dark head = invisible; pale disk reads) — kin of the robin's bib law, applied to anatomy.
 
-### dovecote — fauna-16 (2026-09-18) BUILD-COMPLETE, PLACE-OWED
+### dovecote — fauna-16 build / fauna-17 placement (2026-09-18) CLOSED
+- PLACEMENT (fauna-17): seat (-50.5, 0.0367, 62.55) yaw 2.577 scale 1 — the fauna-16 seat (62.75) hard-stopped at the placer's live SAT (1.390m vs orchard-rows-001, sub-1.4 pinch law; the fauna-16 disc-scan's 1.85m had used the disc proxy, the placer's full-envelope OBB is stricter and honest — post+ladder are ground solids at the same extents, no crown exemption available); pure-north 0.2m move, 1266-candidate sweep (10cm grid, r≤2.5m) against the LIVE census, worst solid 1.559m; PY = LIVE heightAt 0.0367 (terrain door reopened — fauna-16's sibling-IDW 0.030 superseded per its own law f); census 358→359 exactly, 7 verbs (upload+spawn+6 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 3/3 (18m stile visitor line, arrivals 0.36/0.31m), live bbox 1.785×2.977×1.573 == decode envelope.
 - **v6 sha16 8f33f97f97b0e4de** (full: 8f33f97f97b0e4de4a8a64961aca3dc02e59d3cd42bfd5d5629adfa3dc53be3f), deterministic ×2 (v1 76d994e8 → v2 dda0e8eb ladder-dig fix → v3 702d1931 brace+whitewash fix → v4 419d1bd4 collar ring v1 → v6 8f33f97f collar v2), decode GREEN (6 anchors, joints exact: dove_a 2.335/dove_b 2.905/dove_c 0.085; envelope −0.970..0.815 × −0.283..1.290 × −0.003..2.974) + RED control (pig bytes: zero dove_ anchors). 31 mesh nodes, 3102 tris, 32 draw calls.
 - Build: TRUE-SIZE (no group scales — fauna-13 law). Structure: post 2.25m + gantry arm + embedded brace + leaning ladder (rails inset 8mm — tilt-extent law) + 4-square nesting box + pyramidal cap + 3 proud dark entry holes + entry ledge + 2 whitewash drips UNDER the perch. Doves: slim body/small head/long tail, wing seams, breast suffusion, dark eyes, beak, feet on perched pair, peck-pitched head for the feeder (joint arithmetic composed). THE COLLAR arc: v3 torus misrotated into a fin AND swallowed (struct-52) → v4 proud seam-ring read as hairline groove → **v6: band length 0.018 + radius 0.033 (crest ~8mm) + dark plumage-brown 0x4a3d30** — collarprobe SHIP 4/4.
 - Judge arc (ZAI fallback, native debt NATIVE-12 below): **18m SHIP 5/5** (judged v2; v3–v6 deltas are encounter-scale, sub-5mm-at-18m, disclosed) + **near SHIP ×2** (v2 found brace-kiss + pole specks → both cured in v3, re-judged SHIP) + **collarprobe SHIP** (v4 FIX → v6 SHIP). Ground dove at 18m = encounter-reward disclosure (robin law).
 - Motion: 6 comps authored + engine-proven (render rig drives REAL motioneval.js + motion.js): dove_a/b bob (.005/3.9s, .005/4.4s) + Y-scan pendulums (.30/7.5s, .32/8.5s — owl/goose sentry family), dove_c bob (.004/4.8s) + peck pendulum (.26/2.9s); pairs 88px@18m band 480-512, 1002px near band 481-591.
 - Seat (disc-scan, struct-19 law): (-50.5, 62.75) yaw 2.577; worst solid 1.85m (espalier row), film 0.60m (lavender-0040), trunks 2.81m (decoded 41-trunk map — the 14.5m orchard bbox is crown overhead, meshes y 1.51..3.79). PY 0.030 = sibling-IDW 0.0346 with low-embed bias (terrain WS preflight blocked — 3 join timeouts, one paced retry; DISCLOSED, ±5mm error band, nothing height-sensitive at that scale).
-- **PLACEMENT OWED fauna-17** (sequencer outage mid-tick: geom/version 502; placer = recovery path, then walk probe, then close row + ledger).
+- PLACEMENT CLOSED (fauna-17, 2026-09-18): sequencer recovered from the fauna-16 mid-tick outage; the placer ran fresh (its SAT gate caught the sub-1.4 adjacency and hard-stopped — zero verbs — before the seat re-sweep above).
 - Rig/decode laws learned: (a) **a misrotated band torus = a fin in the wrong plane** — always derive the band-plane normal from the geometry it wraps, and verify proud-element extents ARITHMETICALLY (this collar was 100% invisible in v3); (b) **a proud-but-thin band reads as a groove** — species markers need band LENGTH along the limb axis + enough radial crest to break the silhouette + a color warm enough to read as plumage (void-black reads as a gap/shadow); (c) whitewash/lived-in marks must START at their physical source (under the perch) — free-floating specks on other faces read as render artifacts; (d) a diagonal brace must EMBED at both joints — a kissing brace reads detached (fauna-11 neck-weld kin, applied to timber); (e) trunk-column clustering uses the LOW ring (y<0.3) of merged trunk meshes — mid-height bands find zero verts (probe pitfall 1: end-face-only ring verts), and a 14.5m bbox can be pure crown overhead; (f) when the terrain-WS preflight is blocked, a sibling-IDW PY with low-embed bias + a ±5mm disclosure + a one-verb-pair recovery path is honest, but a live heightAt stays the law when the door reopens.
 
 ## Native re-judge debt (payable only in an interactive judge-capable session)

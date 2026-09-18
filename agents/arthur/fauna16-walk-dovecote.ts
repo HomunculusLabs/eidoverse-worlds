@@ -7,9 +7,9 @@ import { WorldAgent } from "../../mcpl/agent.ts";
 
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const fx = -50.5, fz = 62.75;
-const far: [number, number] = [-40.87, 47.54];   // 18m SE on the stile visitor line
-const atCote: [number, number] = [-48.36, 59.37]; // lane-side vantage 4m from the post
+const fx = -50.5, fz = 62.55;
+const far: [number, number] = [-40.87, 47.34];   // 18m SE on the stile visitor line
+const atCote: [number, number] = [-48.36, 59.17]; // lane-side vantage 4m from the post
 const route: [number, number][] = [far, atCote, far];
 const agent = new WorldAgent({ url: cfg.url, name: "arthur-fauna16-walk", world: "commons-next", avatar: cfg.avatar, agentToken: cfg.agentToken });
 const results: any[] = [];

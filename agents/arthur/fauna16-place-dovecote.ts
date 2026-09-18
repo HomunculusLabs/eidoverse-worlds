@@ -3,19 +3,17 @@
 // variant): absent → place; fully seated → zero verbs; our lib + want tuple
 // + 6 comps → interrupted-batch recovery. Any other state = hard stop.
 // Contract: nx-dress-dovecote-001 at the orchard-edge meadow
-// (-50.5, 0.030, 62.75) yaw 2.577 scale 1 — facing SE toward the stile/
-// visitor approach; 1.85m clear of the espalier row OBB (worst solid,
-// disc-scan verified), 0.60m film gap to lavender-0040, 2.6m+ from
-// orchard-0033's easternmost decoded trunk (-53.10, 62.08).
+// (-50.5, 0.0367, 62.55) yaw 2.577 scale 1 — facing SE toward the stile/
+// visitor approach; 1.559m clear of the espalier row OBB (worst solid —
+// fauna-17: the fauna-16 seat (62.75) hard-stopped at 1.390m, sub-1.4
+// pinch law; pure-north 0.2m move re-swept against the LIVE census),
+// lavender-0040 film exempt (h 0.55), 2.64m from orchard-0033's
+// easternmost decoded trunk (-53.10, 62.08).
 //
-// PY DISCLOSURE (terrain preflight WS-blocked — 3 join timeouts, one paced
-// retry): PY = 0.030 is a sibling-tuple IDW interpolation (orchard-rows
-// 0.034 @ 5.6m, lavender-0040 0.040 @ 10.9m, orchard-0033 0.025 @ 11.4m,
-// skeps 0.038 @ 8.5m → IDW 0.0346) with a deliberate LOW-EMBED bias so the
-// trodden patch seats INTO the grass (a floating film reads detached; a
-// sunk one reads trodden). Error band ±5mm; nothing in this build is
-// height-sensitive at that scale (2.25m post, grass-level furniture).
-// Recovery if wrong: remove+respawn, one verb pair.
+// PY DISCLOSURE (fauna-17): terrain WS door REOPENED (fauna-16's 3 join
+// timeouts cleared) — PY = 0.0367 is a LIVE heightAt at the FINAL tuple
+// (fauna16 law f: live heightAt outranks sibling-IDW; the fauna-16 IDW
+// 0.030 with low-embed bias is superseded). 5-pt spread 1.7mm.
 //
 // SAT notes: orchard-0033's 14.5m bbox is CROWN OVERHEAD (decoded meshes
 // y 1.51..3.79; ground solids are the 41-trunk decoded map, easternmost
@@ -28,7 +26,7 @@ import { createHash } from "node:crypto";
 const R = "/Users/t3rpz/projects/eidoverse-worlds", W = "commons-next", ID = "nx-dress-dovecote-001";
 const SHA = "8f33f97f97b0e4de4a8a64961aca3dc02e59d3cd42bfd5d5629adfa3dc53be3f";
 const LIB = `store/${SHA.slice(0, 16)}.glb`;
-const POS = [-50.5, 0.030, 62.75], YAW = 2.577, SCALE = 1;
+const POS = [-50.5, 0.0367, 62.55], YAW = 2.577, SCALE = 1;
 
 const cfg = JSON.parse(readFileSync(`${R}/agents/arthur/config.json`, "utf8"));
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
