@@ -898,6 +898,67 @@ next wake once the gateway answers.
   accent geometry, judge first); gold spire speckle; stairs contrast now
   largely cured by v6 wood.
 
+### polish-290 — carousel crown beacon (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-289 structural build (live was
+  `store/429cde23a16d1c17.glb`; polish-289's verified-served bytes
+  127a20bf…, 327KB — the first polish tick to pin the SERVED lineage
+  directly as input).
+- Survey (ZAI judge on exact live served bytes, night 18m + fresh 15-view
+  rig): polish-289's base fix held (stairs/plinth readable dark-warm,
+  lanterns brightest, zero new defects). Weakest failing night elements:
+  under-canopy ceiling void (KNOWN geometry-limited, polish-289 ray test —
+  occlusion, not emissive) and the DEAD-DARK CROWN: "crown as village
+  beacon" (criterion 6) fails outright — finial x475-492 reads as
+  silhouette only.
+- Decode (new probe `polish290-probe-crown.ts`): `carousel_gold_paint`
+  (spire/hub/valance armature + gold teeth) carries NO emissiveFactor and
+  is used by EXACTLY two nodes — `cr3_5` (241 verts, wy 4.58..6.77, the
+  topmost element; polish-272 overhang law satisfied by construction) +
+  `carousel_5` (68 verts, wy 4.53..4.83 lantern-ring trim). 100% crown
+  zone, zero ground-level usage → material edit is surgically scoped by
+  construction.
+- Change (ONE intervention, new production step
+  `carousel-horse-prototype/crown.ts`, materials.ts chassis): warm-gold
+  emissiveFactor [0.85, 0.55, 0.2] on `carousel_gold_paint` ONLY — night
+  beacon at the crown; ladder lanterns (glow3 lum≈0.80) > crown (0.62) >
+  ceiling (0.35) so the eight lantern dots stay decisively brightest. No
+  geometry/node/mesh/texture change; nodes 45, emissive set 6→7.
+  Build-law note: first polish write-step reading SERVED DRACO bytes
+  needed BOTH draco3d deps (decoder+encoder) registered.
+- Candidate `08ce1189b2d4b42bf969b09a8643486afaf0f6e72da8a8fedde69f9ea08a6ea3`,
+  A/B byte-identical ×2 (independent /tmp outputs), horse-solo closeup
+  controls 0 changed pixels across all four views (change provably
+  confined to the crown band y96..355), night warm px 4411→5987 (+36%),
+  crown-band goldBright 591→1901 night / 1067→2433 day, nearWhite=0 both
+  states (no clip, no glow-orb), 15/15 views clip-clean.
+- Judge verdicts (disclosed: ZAI fallback, no native vision this cron
+  session — same class as polish-285..289, native re-judge owed): NIGHT
+  PASS — finial reads as "muted warm-gold beacon clearly separated from
+  the night sky", lanterns remain brightest by far, "matte/dimly self-lit
+  gilded metal, not neon", zero new defects. DAY PASS — "natural sunlit
+  gilded metal… emissive genuinely faint and invisible in daylight",
+  silhouette crisp, no regressions.
+- Placed via sanctioned `deploy.ts --apply` (never legacy
+  next-place-carousel.ts): PLACED_VERIFIED, 1 upload + 8 verbs, 7-key comp
+  bag replayed verbatim; idempotent rerun ALREADY_TARGET_VERIFIED (0/0);
+  live census pin `store/08ce1189b2d4b42b.glb` @ (-18, 0.0001495, 18)
+  yaw 2.35619 exact, 7 comp keys. Served bytes sha == upload sha
+  (08ce1189…): the emissive roundtrips; decode confirms
+  `carousel_gold_paint` emissiveFactor exact [0.85,0.55,0.2], cr3_5
+  nonFinite=0, emissive set 7 exact.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-290-carousel-rim/`
+  (before/ = live served baseline + 15-view rig; after/ = crown candidate;
+  deploy-report.json + .verified.served.glb + baseline-entity.json).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path) — recorded here + ledger instead.
+  Not fabricated.
+- Next: judge-remaining candidates — (a) crown-hub/valance second-pass
+  warm rim (judge noted beacon rests on the finial alone; teeth still dark
+  maroon), (b) under-canopy rim-adjacent warm accent geometry for the
+  ceiling-void (geometry-limited; needs new geometry, judge first), (c)
+  gold spire speckle at 18m day; or re-survey plaza-core on fresh evidence.
+
 ### polish-288 — carousel canopy fabric night read (ACCEPTED, LIVE)
 
 - Subject: `nx-carousel` at the polish-287 night-coat build (live was
