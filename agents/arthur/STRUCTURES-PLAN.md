@@ -16737,3 +16737,79 @@ staged -f), reviews/struct231-ssd/ (9 frames, ignored — sha pins in this
 block are the durable record), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-231, D+0 E+0). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+
+## struct-232 (2026-09-18): R11-45 SSD PLACED — the struct-231 committed
+## carry executed (E-band az0-45 under-served district; E-terminus seat
+## beyond the ruled tower)
+
+232%3=2 placement slot with FULL bank (ssd v1 accepted struct-231) -> the
+committed carry: placement. Gate ALL PASS real exit 0 tick-start at 1b8e511d
+(fauna-26; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5
+7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived struct-231
+-> tag struct-232 (re-checked immediately before append). Native absent from
+the cron catalog all tick (tool_search fresh: terminal + zai-vision + 
+repoprompt only — same disclosed cron-unpayable class as struct-169..231;
+owed board stays 26 + csaszar v3 + ssd v1, now riding placement).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2
+reproduces the pinned sha exactly (38aa4c11345020ed...2d1921c, mtime
+verified, envelope line == probe contract). Decode 8/8 ALL PASS was the
+struct-231 tick's own real exit 0 on these exact bytes.
+
+SEAT (struct232-scan, fresh 368-entity census): district octant audit r66+
+placed the E octant az0-45 as the under-served district — ZERO struct forms
+standing. Seat az9.0 r66.0 (65.187430, 10.324675) as the E-band inner
+anchor: composes the E terminus ruledtower r58 az0 + ssd r66 az9 (two forms
+where the octant had none), mirroring the csaszar's r66 W-shoulder anchor.
+Band audit: 0 forms standing (soft cap 6; + ssd -> 1, NO exceedance). NN
+12.58 to nx-struct-ruledtower (law 8); dodecagon-exact SAT worst 3.63 vs
+nx-struct-ruledtower (law 1.4); walk-clear 37.41.
+
+YAW LAW (procession convention, struct-217/219/224/228): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel az189
++ 30deg east lean (struct-104 oblique band) -> yaw_deg = -129 -> 231.43 ->
+YAW = 4.039190 rad. Control: the same law at az94 reproduces struct-219's
+recorded newtonspheres yaw 146deg exactly. The SSD is 5-fold symmetric
+(72deg) — the yaw protects the judged read.
+
+TERRAIN (struct232-terrain-ssd.ts, this tick): 25pt over the TRUE rotated
+dodecagon (center + 12 vertices + 12 edge-mids at yaw), spread 7.6mm, PY =
+lowest = -0.031675 (m56; the dais-sole-at-grade build absorbs).
+
+SAT LAW (N=12 class, unit-tested before mutation): the dodecagonal dais
+R2.75 is the footprint (cage reach 2.817 at y >= 1.887, above avatar head
+height — 67mm overhang disclosed, cannot obstruct a ground walker). Exact
+convex-polygon SAT (edge-normal axes of both polys, max-gap law) replaces
+the square-bbox proxy — struct-19's disc law class. Disc neighbors keep
+point-to-polygon exact distance. Helper unit-tested distant (15.2500 = 
+20-2-2.75 exact), touching (0.0000), overlapping concentric (-5.7500 = 
+-(2.75+3) exact — the printed expectation -0.25 in my test harness was the
+apothem-vs-extent misread, same class as struct-228's own documented
+self-catch: the code was right, the test expectation was wrong), rotated
+control (0.4072 vs analytic 0.4216, sign/magnitude correct) — ALL PASS
+before the placer ran.
+
+PLACEMENT: next-place-struct232.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed), upload
+store/38aa4c11345020ed.glb (1 upload, shared budget), plain spawn 1 verb
+paced 1200ms, PLACED_VERIFIED pos [65.187430, -0.031675, 10.324675] yaw
+4.039190 comp {} census 368->369; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 6/6 CORE_ALL_PASS maxArrival 0.311m (two-way village
+approach on the az9 arrival line + reading-face vantage rim at 7m on the
+az219 face normal + full CW standoff circuit at 6m — no phantom collider;
+folly by presentation, the open cage is the sculpture).
+
+Bill eye-check pointer: on the E walk past the ruled tower — the octant
+that carried nothing now reads as a composed E terminus: the hyperboloid
+lattice tower, then the star. A star standing on its point on a
+twelve-sided dais — two rings of five spikes rising to one summit spike;
+every pentagram line drawn in iron, every star face filled in stone, a
+brass bead at every point. The idea: the golden ratio made visible — every
+star edge is exactly phi times the face's own side. After dark: a
+constellation of twelve, one star set into the dais itself.
+
+Files: struct232-scan-ssd.ts + struct232-terrain-ssd.ts +
+struct232-walk-ssd.ts + next-place-struct232.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-232,
+D+0 E+1). One upload, one verb. Zero pushes.
