@@ -16,6 +16,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | rabbit hutch | `nx-dress-hutch` | (38.5,0,-9.5) yaw -1.9 | f5f47791 → **c0a64ac4** (fauna-4) | static hutch, ZERO comps → **FIXED fauna-4** (english-lop + alert rabbits, 5 motion comps; ramp/lid/pop-hole furniture defects cured in-passing) |
 | duck pair | `nx-dress-ducks-001` | (8,-0.139,-91) yaw 0 | **c156b6a1** (fauna-3) | NEW 2026-09-17 — mallard pair on the reedpool W lobe, 6 motion comps (bob/orbit/pendulums) |
 | barn cat | `nx-dress-cat-001` | (40.7,-0.038,-7.5) yaw 3.216 | **0030ce54** (fauna-7) | NEW 2026-09-17 — tuxedo watch-cat in the coop-yard east pocket facing the flock, 4 motion comps (bob + 3 pendulums) |
+| barn owl | `nx-dress-owl-001` | (48.8,-0.0295,4.2) yaw 2.89 | **a11e5432** (fauna-8) | NEW 2026-09-17 — barn owl on a timber raptor-perch T-post on the livery east lawn (sky-lane seat past the stable's SE corner), 3 motion comps (bob + 2 pendulums) |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -41,19 +42,23 @@ domain is commons-next `nx-dress-*` fauna only.
    seated: a tuxedo watch-cat (nx-dress-cat-001, v12b 0030ce54) in the
    coop-yard east pocket (40.7,-0.038,-7.5) yaw 3.216, facing the hen
    flock across the yard. Full record below.
-6. **[CANDIDATE fauna-8, build owed fauna-9] barn owl — new species.**
-   Homestead species all CLOSED (goats/hens/ducks/rabbits/fox/cat), so
-   the next homestead-native: ONE barn owl roosting. 18m identity =
-   round-head silhouette + facial disc + upright posture at a roost
-   beam; encounter read = heart-shaped face + dark eyes. Chassis reuse:
-   fox/cat broad-mass rig law (NO stick limbs), duck/rabbit motion
-   vocabulary only (breathing bob + slow head-scan pendulum; all proven
-   part types). Entity id `nx-dress-owl-001` (fauna domain, NEW — no
-   existing owl in census). Siting at build tick per seat-scan law +
-   fresh census; candidate hosts (decided then): the barn (W working
-   edge r0-30 — an owl IN the barn gable is the homestead classic), the
-   inn's beam end (E working edge), or the watchpost (core, already
-   firelit). One owl only — no zoo.
+6. **[CLOSED fauna-8] barn owl — new species.** Built and seated: ONE barn
+   owl on its own timber raptor-perch T-post (the homestead owl-post
+   idiom — host decision at build tick: the stable has been re-placed by
+   two sibling lanes since its last local pin, so a rider there strands
+   on host churn; a freestanding post is the livery-native answer), NEW
+   entity nx-dress-owl-001 at the sky-lane seat (48.8,-0.0295,4.2) yaw
+   2.89 on the livery east lawn. Full record below.
+7. **[CANDIDATE fauna-9] robin — new species.** Next homestead-native
+   species (Bill's yard list): a European robin — the small
+   red-breasted songbird of garden lawns and pond edges. 18m/encounter
+   identity = the RED-ORANGE BREAST PATCH against brown-grey upperparts
+   (value-isolated on green grass, the fox/cat law); chassis reuse:
+   hen-scale broad masses, robin-red 0xb84a2e breast slab proud of a
+   round body, thin dark legs, tail cocked up. Siting at build tick per
+   seat-scan law: candidate hosts = the reedpool reeds SW margin (near
+   the ducks, water-edge foraging read), the inn garden beds, or the
+   potter's yard. One robin only — no zoo.
 
 ## Per-species rebuild records
 
@@ -101,6 +106,15 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: 12 build versions, 12 judged rounds (ZAI fallback, native debt NATIVE-6 below). 18m PASS ×2 (identity: sitting-cat silhouette + ears carrying; tuxedo whites disclosed sub-pixel at 15-20px, struct-45 kin — they read at the encounter distance). Near PASS ×2 (tuxedo reads, tail connected w/ white tip, ears). Ultraface anatomy arc (fill-lit probes, disclosed): v2 exposed a MIRRORED RUMP (bib contained, struct-52 class) → v3 frame-true rear → v4 flank-hug + dark legs (white-on-white smear) → v5 low-wrap + white legs → v6 bib widened → v7 ONE white column + tip at paws → v8 continuous bib + run clear → v9 paw split + tip past paws → v10 continuous plane → v11 tapered shield (bib-bounded YES, two matched paws YES first clean) → v12b tip+run DEPTH-separated (recede past paw plane). Final: muzzle/nose YES, bib-bounded YES, paws YES, ears YES, no floats, overall YES; **profile 5/5 PASS** (seated read, dark tail along ground, white tip at paws, connected at rear, no floats — the wrap's contract view, fauna-4 side-view law). Face-view tail-depth residual disclosed as framing-limited (0.6m-depth judgment on 4cm boxes at shared ground row; profile + near both testify connected).
 - Rig laws learned: (a) the cat FACES its flock — an "ultraface" camera placed east was a REAR view (judge's honest inventory caught it; face cameras stand on the yard side); (b) face-on views were BACKLIT by the rig sun (west) — whites rendered dim tan; anatomy probes carry a camera-side fill (disclosed; the game's own sun varies, a fill is inside the world envelope); (c) a wrap's tip cannot share the paws' screen column NOR the paw z-depth — it separates by DEPTH (recede past the paw plane) where z cannot; (d) the profile is the tail's contract view — the face view cannot testify on depth-connection (fauna-4 side-view law, confirmed); (e) pad sizes DERIVE from true cat extents (hand-tuned margins chased rotated corners twice).
 
+### owl — fauna-8 (2026-09-17) CLOSED
+- **v6 sha16 a11e5432c329e697** (full: a11e5432c329e697b2c2e02611c90297104e74b0a6b94117d48f75cde74282b9), NEW entity `nx-dress-owl-001` PLACED_VERIFIED at world (48.8,-0.0295,4.2) yaw 2.89 scale 1 — the sky-lane seat on the livery east lawn: past the stable's SE corner (bench sightline clear), clears the ruledtower's N edge z4.5 from both judge vantages, below wavepergola's S edge; terrain preflight flat (heightAt -0.0295, 2.3mm spread); SAT ≥1.4m all (b8 rail z-clear 1.525, stable corner 3.1, ruledtower 4.4). Census 351→352 exactly, 4 verbs (upload+spawn+3 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 3/3 (road-end→lawn→return, 0.31m arrival), live bbox 0.399×2.967×0.66 == decode envelope.
+- Build: a barn owl (Tyto alba) upright on its own timber raptor-perch T-post (post 2.35m + crossbeam + diagonal brace, the village timber family) — the homestead owl-post idiom. Bird: upright egg body in pale warm gold, cream breast proud, darker wing seam boxes at the sides, pale toe blocks gripping the beam, squarish tail dropping behind with pale terminal bar, round golden skull, neck fill, **the flat-box facial disc** (dark-gold rim box + cream face box 17mm proud of the skull front — the heart-face read), dark box eyes, horn beak. NO ear tufts (barn owls are famously earless — round head is THE species marker vs the cat's triangles).
+- Build arc (6 versions): v1 golden-palette → judge FAIL ×2 "dark ornament" → pixel arithmetic: **the facial plates sat INSIDE the skull (rim x-extent 0.080 vs skull 0.081, disc 0.084 — 97% swallowed, struct-52 class, decode arithmetic caught it)** → v5 spheres pushed proud — STILL dark (albedo probe: ambient-only reads the face BLACK) → root cause second half: **toGLB drops group scales at export** (v3's barnowl.scale.setScalar(1.3) never reached the GLB; group-local bake fix: positions ×1.3 + mesh scales ×1.3 AFTER construction, joints included — excluding them half-buries the skull) AND the sphere-plate combination never rendered authored colors in three — **v6 replaced the face with the cat's proven flat-box pattern** (rim box + face box) → cream renders at (185,176,152) in the same band as the cat's accepted whites. Final mass ×1.3 baked (0.36m bird — 18m marginality law).
+- Siting arc: first seat (47.6,1.6) judge-diagnosed **inside the stable's shadow cone** (PM-sun ray clears the 5.1m roof edge by only +0.10m at face height — the perch 1.9m off the wall sits in building shadow most of the day) → moved 1.2m east (48.8,1.6): ray clearance +1.90m BUT the road-end 18m view put the owl against the ruledtower's dark stone (8m-wide backdrop at 9.2m) → **sky-lane analysis**: the backdrop is sky iff the ruledtower (z-edge 4.5 at 9.2m) misses the owl's column from both vantages → seat moved to (48.8,4.2) — sky-backed from the bench AND the road-end view clears the tower's N edge. The 18m road-end view is stable-roof OCCLUDED (motion pair 0px — the corner roof blocks it); the livery yard is an encounter space and the identity gate ran at its real vantages (fauna-4 framing law).
+- Motion: 3 comps live — breathing bob (.006/4.0s, fifth village exercise of part bob), slow owl head-scan pendulum (Y-axis .35/9.0s — the species' famous head turn), tail settle twitch (.10/3.1s axis [2,0,1]); phases staggered, epoch t0. Motion proven engine-true (4931px diff @ 2.5m framing, band = the owl; the 18m road framing 0px = occlusion, not motion failure). Rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc: v1/v3/v5 FAIL (dark-ornament read — each honestly diagnosed: 18m size, then shadow cone, then the contained face) → **v6: encounter anatomy PASS 6/6** (heart face YES w/ rim band, eyes YES, beak YES, two-tone YES, feet YES, defects NONE), **yard PM (8.4m bench, sunlit) PASS 5/5** (creature/owl/two-tone/grounded/place), **yard AM silhouette PASS** (backlit bird-on-post reads, head+tail carry). Judge identity: ZAI fallback (glm vision) — native re-judge DEBT NATIVE-7 below.
+- Rig laws learned: (a) **toGLB serializes group translation+rotation only — a group scale is silently DROPPED; bake scales group-locally after construction** (fauna-8's costliest lesson, three versions); (b) **nested same-center scaled spheres can swallow a contained sibling — every proud element needs its extent ARITHMETIC checked against the host's** (the v4 face was 97% inside the skull); (c) the sun AM/PM pair is now a rig fixture (`setSunPM`) — any east-of-building siting must judge both suns; (d) the motion-pixel band doubles as an X-coordinate locator (frameDiff pushes x, not y — the owl's true column was found with it); (e) the livery yard is an ENCOUNTER space — its 18m approach is roof-occluded, so identity gates at bench/near/face vantages, both suns.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
@@ -111,6 +125,7 @@ domain is commons-next `nx-dress-*` fauna only.
 | NATIVE-4 | fauna-4 (2026-09-17) | hutch rabbits v12 c0a64ac4 near + sitterface + sentinelface frames (`reviews/fauna4-hutch/new-{near,sitterface,sentinelface}.png`) — fallback PASS arc (18m framing-law disclosure) stands until natively confirmed |
 | NATIVE-5 | fauna-5 (2026-09-17) | den fox v10 bc7376b3 comp_gameplay + comp_ultraface + comp_near frames (`reviews/fauna5-fox/new-{comp_gameplay,comp_ultraface,comp_near}.png`) — fallback PASS arc (5/5 encounter + 4/4 18m) stands until natively confirmed |
 | NATIVE-6 | fauna-7 (2026-09-17) | barn cat v12b 0030ce54 yard_gameplay + yard_near + yard_ultraside + yard_ultraface frames (`reviews/fauna7-cat/new-{yard_gameplay,yard_near,yard_ultraside,yard_ultraface}.png`) — fallback PASS arc (18m + near + profile 5/5 + ultraface core) stands until natively confirmed |
+| NATIVE-7 | fauna-8 (2026-09-17) | barn owl v6 a11e5432 yard_face + yard_bench_pm + yard_bench frames (`reviews/fauna8-owl/new-{yard_face,yard_bench_pm,yard_bench}.png`) — fallback PASS arc (encounter 6/6 + yard PM 5/5 + AM silhouette) stands until natively confirmed; the 18m road-end view is roof-occluded (encounter-space disclosure) |
 
 ## Rig law (learned fauna-1, hard way)
 
