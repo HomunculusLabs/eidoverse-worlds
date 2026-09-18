@@ -15,6 +15,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | fox den | `nx-dress-se-foxden-001` | (73,-0.05,-10.5) yaw 4.712 | 856deec5 | static dressing (v17, dress-107 PLACED_VERIFIED) + **fox resident** `nx-dress-se-fox-001` (fauna-5, bc7376b3) at den-local (0.84,0.012,0.38) |
 | rabbit hutch | `nx-dress-hutch` | (38.5,0,-9.5) yaw -1.9 | f5f47791 → **c0a64ac4** (fauna-4) | static hutch, ZERO comps → **FIXED fauna-4** (english-lop + alert rabbits, 5 motion comps; ramp/lid/pop-hole furniture defects cured in-passing) |
 | duck pair | `nx-dress-ducks-001` | (8,-0.139,-91) yaw 0 | **c156b6a1** (fauna-3) | NEW 2026-09-17 — mallard pair on the reedpool W lobe, 6 motion comps (bob/orbit/pendulums) |
+| stable horses | `nx-dress-shorse-001` | (49.5,-0.0356,0) yaw -1.75 | **6ef0e86c** (fauna-19) | NEW 2026-09-18 — draft-horse pair at the livery east yard (watch + grazer at the hay manger, hitch rail + bucket), 7 motion comps; the LAST animal-trade building now has its animal |
 | barn cat | `nx-dress-cat-001` | (40.7,-0.038,-7.5) yaw 3.216 | **0030ce54** (fauna-7) | NEW 2026-09-17 — tuxedo watch-cat in the coop-yard east pocket facing the flock, 4 motion comps (bob + 3 pendulums) |
 | barn owl | `nx-dress-owl-001` | (48.8,-0.0295,4.2) yaw 2.89 | **a11e5432** (fauna-8) | NEW 2026-09-17 — barn owl on a timber raptor-perch T-post on the livery east lawn (sky-lane seat past the stable's SE corner), 3 motion comps (bob + 2 pendulums) |
 | robin | `nx-dress-robin-001` | (6.3,-0.0291,-86.35) yaw 3π/2 | **5ba5598f** (fauna-9) | NEW 2026-09-17 — European robin foraging on the grass OUTSIDE the reedpool N rim, facing the approach; 3 motion comps (bob + 2 pendulums) |
@@ -109,30 +110,38 @@ domain is commons-next `nx-dress-*` fauna only.
     decode envelope. Full record below. Village logic: winter-orchard
     pairing — doves pick fallen fruit beside the bee skeps, completing the
     orchard's living edge.
-12. **[OPEN — candidate proposed fauna-18, 2026-09-18] stable horses — new
-    species (homestead tier-2).** The livery is the village's LAST animal-trade
-    building with no animal (census-grounded fauna-18: dyehouse→sheep,
-    kiln→pig, coop→hens+cat, orchard→doves, den→fox, pool→ducks+robin+geese
-    all seated; `nx-town-stable` (43,0,0) yaw −π/2 stands empty). Concept: a
-    draft-horse PAIR — one standing (head-scan watch) + one head-down at a
-    hay net / timber manger — TRUE-SIZE ~1.5m shoulder / ~2.2m body length,
-    the largest fauna yet and the strongest 18m identity candidate the lane
-    has taken. Build chassis: sheep/pig TRUE-SIZE law (no group scales, or
-    ×bake incl. joints if scaled); necks as ONE TubeGeometry per CatmullRom
-    curve (fauna-11 law c); furniture POST-bake at final coords; KEEP prefix
-    **`shorse_`** — mergekit's `horse_\d+` is TAKEN by the carousel horses and
-    must NOT be reused (collision-proof prefix law, bcat precedent). Motion
-    family: breathing bob + head-scan + ear-flick + the tail-SWISH (the
-    species signature at distance) + hoof-shift weight change; phases
-    staggered per individual. Siting (seat-scan law at the BUILD tick, this
-    row claims no tuple): candidate zone = livery yard + east lawn E of the
-    stable — live neighbors already in the set: stablebench (42,0,6),
-    nx-sign-stable-001 (40.9,0,0), owl post nx-dress-owl-001 (48.8,4.2),
-    artwalk b8 rail suspended at y2.22 (nvp-134 suspended-decor exemption
-    class). Single-horse fallback if the pair pinches the 1.4m law in the
-    yard. Alternatives considered and rejected: skep bees (micro — weak 18m
-    identity, robin framing law), donkey (redundant with horse at village
-    scale), cattle (no host building in commons-next).
+12. **[CLOSED fauna-19, 2026-09-18] stable horses — proposed fauna-18, BUILT +
+    SEATED fauna-19 (2026-09-18).** ONE entity `nx-dress-shorse-001`: a
+    draft-horse PAIR — shorse_a standing watch (neck up, Y-scan sentry) +
+    shorse_b grazing at a timber hay manger (tube neck dipped, muzzle in the
+    heap) — plus the livery furniture: hitch rail (2 posts + beam), coiled
+    rope, water bucket (palette-water disc 0x506a78), trodden pad, straw
+    scatter. **v3 sha16 6ef0e86c1dc1774c** (full 6ef0e86c1dc1774c63e3617b
+    8ec4861295cf90a6a7d65d18a44abe329663af5b — judge-SHIP bytes: 18m SHIP +
+    near anatomy + profile tails; decode GREEN + RED control; 4202 tris /
+    34 calls; deterministic ×2). 7 motion comps live: 2 breathing bobs +
+    watch Y-scan (.35/9.0s) + ear-flick + graze-tug + 2 LATERAL tail swishes
+    — axis [0,0,1] by the sweep-probe law (v1's axis [1,0,0] clipped the
+    rail beam at θ+0.32: tail z −1.556 vs beam band −1.445..−1.395; lateral
+    keeps the z-band fixed, clear at full amplitude, and is the species-true
+    motion). Engine-true motion pairs: 459px@18m band 413–531, 7953px near
+    band 176–676. **Seat: (49.5, −0.03564, 0) yaw −1.75** — fauna19-seat-sweep
+    best of 91 qualifying (worst solid gap 1.637m vs the stable itself — the
+    yard's own design adjacency; owl post 2.9m+; road films end |x|≤20.6, no
+    walking-line conflict per the lamp-in-path law). Terrain 9pt spread
+    3.2mm, PY = live heightAt −0.03564. Census 359→360 exactly, 8 verbs
+    (upload+spawn+7 comps), idempotent rerun 0 verbs, walk ALL_PASS 3/3
+    (road-end→yard visitor line, arrivals 0.00/0.29/0.31m), live bbox
+    3.1×1.959×3.319 == decode envelope. Village logic closed: the livery
+    was the LAST animal-trade building with no animal — the horses now
+    stand at their hitch rail in sight of the stable door. Build arc: v1
+    tail-through-rail + manger frame-miss (horse-local vs entity frames,
+    fox law a, caught by decode) → v2 tail aft-swing + trough north +0.14
+    (tail cleared; nose still west of trough) → v3 furniture under the
+    COMPOSED muzzle (nose (−0.66, 0.33..0.44, ≤1.74): trough (−0.60, 0.27,
+    1.60), heap (−0.62, 0.36, 1.62) — nose bottom buries 10cm into the heap
+    surface; verified zero verts in the wall's y-band) + A forward to z
+    −0.10 (tail tip 10cm clear of the rail's north face).
 
 ## Per-species rebuild records
 
@@ -217,6 +226,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: 8 build versions, 5 judged rounds (ZAI fallback, native debt NATIVE-11 below). 18m arc: v3 FAIL ×2 (dark lumps; saddle on one body only; head-in-hull-band pose unreadable; near-black patch read as shadow) → v4 MARGINAL FAIL (both saddles read; fence fragments + detached smear) → v6 FAIL (rooting gesture illegible — judge's critique cross-checked against source arithmetic exposed the REAL defects: the v1 spoil heap crest 0.20 had BURIED the snout disk since v1, struct-52 occlusion-by-construction; and the sows were 30% undersized, struct-45) → v7/v8 TRUE-SIZE + unburied disk + corner return → **18m PASS** ("two dark low animals with white bands by a fence… gestalt delivers pigs in a sty corner reliably") + **closeface SHIP** (anatomy, saddle placement, pendant ears, disk snouts, belly-flat sprawl all YES; disclosed cosmetics: lying sow's band sits just behind mid-barrel — pose compression, judge called it acceptable; earth ellipse edge crisper than real dirt). Judge identity: ZAI fallback (glm vision) — cron lane has no native vision.
 - Rig/decode laws learned: (a) **a ground-tie prop can occlude the very marker it serves** — the spoil heap was sized to "meet the snout" but buried it; containment arithmetic (prop crest vs marker rim) must be computed BEFORE the build ships, struct-52 class at ground level; (b) **true-size is an identity requirement, not a nicety** — three 18m FAIL rounds traced mostly to a 30% scale undersize putting markers under 2px (struct-45); the ×bake + post-bake furniture chassis (fauna-8/11) fixes it in one pass; (c) a tilted cylinder's y-extent is (h/2)·cosθ + r·sinθ, not h/2 — decode caught the sprawled leg stubs digging −7.6mm; (d) the rig's `new THREE.GLTFLoader()` must use the bare import (chassis verbatim — a THREE.-qualified call throws and the page stalls to a blank-canvas timeout that looks like a rig bug); (e) a species-identity color must be chosen against its BACKGROUND member (dark disk on dark head = invisible; pale disk reads) — kin of the robin's bib law, applied to anatomy.
 
+### stable horses — fauna-19 (2026-09-18) CLOSED
+- **v3 sha16 6ef0e86c1dc1774c** (full 6ef0e86c1dc1774c63e3617b8ec4861295cf90a6a7d65d18a44abe329663af5b), NEW entity `nx-dress-shorse-001` PLACED_VERIFIED at world (49.5, −0.03564, 0) yaw −1.75 scale 1 — the livery east yard, heads WSW (facing = (sin,cos) yaw law) toward the road-end approach; hitch rail shelters the local −z (NE) side. Seat = fauna19-seat-sweep best of 91 qualifying seats (25cm grid, decoded OBB center-offset): worst solid gap 1.637m vs the stable itself (the yard's own design adjacency — concentric-site class); owl post 2.9m+; road films end |x|≤20.6, so no walking-line conflict (lamp-in-path law checked against the road entity list). Terrain preflight at the FINAL tuple: 9pt spread 3.2mm, PY = live heightAt −0.03564. Census 359→360 exactly, 8 verbs (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (road-end→yard visitor line, arrivals 0.00/0.29/0.31m; foreign support-seam stderr = temple-labyrinth/skeps class, not ours), live bbox 3.1×1.959×3.319 == decode envelope.
+- Build: a draft-horse PAIR (ONE entity, TRUE-SIZE authored directly — no group scales, no bake pass needed): shorse_a WATCH (tube neck up ~42°, head-scan sentry, ear keep-group) + shorse_b GRAZER (tube neck dipped, muzzle buried 10cm into the hay heap). Both: deep chestnut hull+shoulder+rump (0x7a4526), CREAM feathered canons below chestnut uppers (the draft marker, sheep-cream family), dark hooves, dark mane serration along the crest, blaze plaque BREAKING the skull surface + muzzle stripe (struct-52 containment law), nose leather, side-set eyes, halter (noseband + cheek straps + poll band, rides the head), forelock between the ears, dock + tapering dark cascade tail. Furniture: hitch rail (2 posts + beam), coiled rope, water bucket + palette-water disc (housekit blue), hay manger (4 legs + trough + heaped golden hay under the composed muzzle), TROD-family trodden pad, straw scatter (golden 0xe6c35c — fauna-4 law). Anchors shorse_a/_head/_ears/_tail + shorse_b/_head/_tail (7 KEEP groups; `shorse_` added to mergekit KEEP this tick — collision-proof prefix, `horse_\d+` is carousel-taken). 4202 tris, 34 draw calls.
+- Motion: 7 comps live — 2 breathing bobs (.006/4.6s, .005/5.2s — twelfth+thirteenth village exercise of part bob), watch Y-axis head-scan (.35/9.0s, owl/goose sentry family), ear-flick swivel (axis [2,0,1] .18/2.4s), grazer graze-tug X-pendulum (.13/3.2s), 2 LATERAL tail swishes (axis [0,0,1] .32/2.6s + .26/2.2s — the species signature); phases staggered, epoch t0. Motion proven engine-true at both framings on final bytes (459px diff @ 18m band 413–531; 7953px near band 176–676); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc (ZAI fallback, native debt NATIVE-13 above; one gateway timeout retried once, paced): 18m SHIP (identity/carried-by pose split: head-up/head-down + chestnut mass + cream legs; no broken elements) → near anatomy sound (necks continuous, muzzle IN hay, feathering YES, mane YES, bucket occluded by rail-frame — minor) → profile (fauna-4 tail contract view): tails attached on both horses, no tail-through-rail in the STATIC pose. **The motion-sweep probe (new law below) caught what the static views could not: v1 tail comp axis [1,0,0] swept the tail THROUGH the rail beam at θ+0.32** (tail z −1.556 into the beam band −1.445..−1.395, y-bands overlapping). Cure: axis [0,0,1] LATERAL swish — z-band fixed, clear at full amplitude for both horses, and species-true (a horse swishes laterally). Judge-flagged near items decoded as framing artifacts: bucket visible in the profile view, rail overhang perception = perspective, stable's own SE corner.
+- Rig/decode laws learned: (a) **COMPOSE THE MOTION SWEEP BEFORE PLACING** — a comp pendulum's amp rotates the part through ±θ about its pivot; any furniture near the swept volume must be checked at BOTH extremes, not just the static pose (the static render passed while the running world would clip the rail every 2.6s); the exact comp transform (quaternion-multiply on base, pivot compensation) is runnable offline in bun+three against the final GLB — 3 poses settle it; (b) a pair's furniture arithmetic must be done in the ENTITY frame — compose horse-local joint pitches + the horse's own yaw/pos into entity coords BEFORE siting troughs/heaps (three consecutive frame misses here: v1 tail z, v1/v2 nose x — the decode's per-member boxes caught each); (c) mergekit keep-fold renames internal meshes `<group>_N` — anchor-set contracts check SUBSET (targets present), never exact-set equality; (d) the review rig's generic ultra view can center on the pair's centroid and miss per-subject anatomy — write per-subject AIMED views when judging a two-animal entity (fauna-4 law, scales with subject count).
+
 ### dovecote — fauna-16 build / fauna-17 placement (2026-09-18) CLOSED
 - PLACEMENT (fauna-17): seat (-50.5, 0.0367, 62.55) yaw 2.577 scale 1 — the fauna-16 seat (62.75) hard-stopped at the placer's live SAT (1.390m vs orchard-rows-001, sub-1.4 pinch law; the fauna-16 disc-scan's 1.85m had used the disc proxy, the placer's full-envelope OBB is stricter and honest — post+ladder are ground solids at the same extents, no crown exemption available); pure-north 0.2m move, 1266-candidate sweep (10cm grid, r≤2.5m) against the LIVE census, worst solid 1.559m; PY = LIVE heightAt 0.0367 (terrain door reopened — fauna-16's sibling-IDW 0.030 superseded per its own law f); census 358→359 exactly, 7 verbs (upload+spawn+6 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 3/3 (18m stile visitor line, arrivals 0.36/0.31m), live bbox 1.785×2.977×1.573 == decode envelope.
 - **v6 sha16 8f33f97f97b0e4de** (full: 8f33f97f97b0e4de4a8a64961aca3dc02e59d3cd42bfd5d5629adfa3dc53be3f), deterministic ×2 (v1 76d994e8 → v2 dda0e8eb ladder-dig fix → v3 702d1931 brace+whitewash fix → v4 419d1bd4 collar ring v1 → v6 8f33f97f collar v2), decode GREEN (6 anchors, joints exact: dove_a 2.335/dove_b 2.905/dove_c 0.085; envelope −0.970..0.815 × −0.283..1.290 × −0.003..2.974) + RED control (pig bytes: zero dove_ anchors). 31 mesh nodes, 3102 tris, 32 draw calls.
@@ -231,6 +247,7 @@ domain is commons-next `nx-dress-*` fauna only.
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-13 | fauna-19 (2026-09-18) | stable horses v3 6ef0e86c gameplay + near + right frames (`reviews/fauna19-shorse/new-{gameplay,near,right}.png`) — fallback arc stands (18m SHIP, near anatomy sound w/ minor neck-seam style note, profile tails attached + rail clearance judged; one judge timeout retried once) until natively confirmed |
 | NATIVE-1 | fauna-1 (2026-09-16) | goats v4 7e9af5a5 18m gameplay + closeface frames (`reviews/fauna1-goats/new-{gameplay,closeface}.png`) — fallback PASS stands until natively confirmed |
 | NATIVE-2 | fauna-2 (2026-09-17) | hens flock v4 1ab461bd 18m gameplay + near + ultra frames (`reviews/fauna2-hens/new-{gameplay,near,ultra}.png`) — fallback YES ("Ship it") stands until natively confirmed |
 | NATIVE-3 | fauna-3 (2026-09-17) | duck pair v3 c156b6a1 18m gameplay + ultraface + right frames (`reviews/fauna3-ducks/new-{gameplay,ultraface,right}.png`) — fallback PASS arc stands until natively confirmed |
