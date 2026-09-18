@@ -13506,3 +13506,69 @@ longhouse/garden-cottage @302 walked fresh, row-cottage/observatory @301,
 inn/tower-house @300, forge/potter @299, hall/bunkhouse @298 stalest
 standing pair at 4 sweeps; walk tools interior-walk-hall.ts,
 interior-walk-bunkhouse.ts — both ls-verified present on disk this tick).
+
+
+sweep-303: CLEAN SWEEP, arrival-fold tick (72nd consecutive
+quiet-or-classified). Tick-start HEAD 20fb6055 = struct-219's own
+newtonspheres placement close (ledger census 355->356 named there);
+standing gate ALL PASS real exit 0 FIRST TRY (unpiped direct run, 98 PASS
+lines + ALL PASS trailer, ledger law PASS 2370918, register 0 OPEN items).
+Census epoch A 355->356 vs the committed sweep-302 baseline (246892B sha16
+27c486d6): exactly ONE domain-valid arrival nx-struct-newtonspheres @
+(-29.995, -0.045, 428.953) yaw 2.548 (146deg east-lean) lib
+store/f8016bfab73aff2c.glb scale 1 kind thing comp {} — tuple matches the
+committed struct-219 ledger @ 20fb6055 line-for-line (sha f8016bfa banked
+by struct-218, disc-exact SAT 2.28, idempotent 0-verb rerun, rim walk
+7/7 maxArr 0.364 by its own lane); 0 departures, 0 drift on all 355
+shared ids across every projection field (id/pos/yaw/lib/scale/kind/bbox/
+compKeys — diff tool /tmp/s303-diff.py, committed sweep299 chassis
+path-hardcoded to its own window, probe artifact not a finding). Epoch B
+20s-paced re-read BYTE-IDENTICAL to A (sha16 6eed2c3729c78db6, cmp), HEAD
+unchanged 20fb6055 — single-epoch stable tick, no interleave. r430 W-NW
+Math Avenue — 400m+ off every tier-1/tier-2 walked leg, walks stand by
+construction (sweep-53 precedent). Overlap: SAT fresh-live 318 bbox
+non-light / 239 exempt-classified / 0 coverage holes, real exit 3 on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known
+Sev 2 routed artwalk b26 choreography @ sweep-43, 259th sweep since
+routing, NOT new, no escalation due (law keys severity-1); arrival added
+zero new contacts (struct-219's own disc-exact SAT corroborates). Walks:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs
+run individually per the sweep-228 ceiling law — core 64/64 ALL_PASS max
+dist 0.380 (next-walk-core-paths.ts, JSON parsed from first brace past
+the [physics] banner; support-seam stderr abstentions = the known
+normalized diagnostics set, unchanged), NW 5/5 ALL_PASS (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + distances from
+raw files (/tmp/s303-walkcheck.py, exit 0). Tier-2 281st cycle per the
+committed sweep-302 pointer: hall 8/8 ALL_PASS (dists
+0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310, interior-walk-hall.ts) +
+bunkhouse 6/6 ALL_PASS (0.245/0.300/0.305/0.247/0.380/0.313,
+interior-walk-bunkhouse.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (257th consecutive clean); sweep89-battery 28/28 PASS
+real exit 0 on fresh census-A bytes (note: tool lives at
+sweep89-battery.py, .ts path from a stale guess failed ls — probe
+artifact); comp-bearing pin 30 held exactly; interlane md5 86b2936f
+stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged (279th check; 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+and was read fresh via the loop/plan reload. Baseline lawfully rewritten
+like-for-like (/tmp/s303-baseline-rewrite.py, py_compile clean, asserted
+pre-write: diff exactly [arrival nx-struct-newtonspheres]): 356 entities
+/ 247480B / sha16 6eed2c3729c78db6; post-rewrite drift ZERO (baseline
+byte-identical to canonical census B, cmp-verified). Foreign dirt in
+tree (windmill overhaul scratch, cabin/carousel prototype dirs,
+client/server engine files, fleet shells, debug-bower scripts, moon-moth
+dir, fauna tools, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths
+assets) is sibling work-in-flight, untouched per the ownership law. Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-304):
+forge + potter (282nd cycle — LRU chain re-derived from committed plan
+pointers this tick: hall/bunkhouse @303 walked fresh,
+longhouse/garden-cottage @302, row-cottage/observatory @301,
+inn/tower-house @300, forge/potter @299 stalest standing pair at 4
+sweeps; walk tools interior-walk-forge.ts, interior-walk-potter.ts —
+both ls-verified present on disk this tick).

@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 355,
+  "count": 356,
   "entities": [
     {
       "id": "beb4c791",
@@ -9294,6 +9294,42 @@
         "center": [
           0,
           2.105,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-newtonspheres",
+      "kind": "thing",
+      "pos": [
+        -29.995283,
+        -0.045211,
+        428.952541
+      ],
+      "yaw": 2.548181,
+      "scale": 1,
+      "lib": "store/f8016bfab73aff2c.glb",
+      "bbox": {
+        "min": [
+          -5,
+          0,
+          -5
+        ],
+        "max": [
+          5,
+          5.519,
+          5
+        ],
+        "size": [
+          10,
+          5.519,
+          10
+        ],
+        "center": [
+          0,
+          2.759,
           0
         ]
       },

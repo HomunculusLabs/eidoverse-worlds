@@ -6225,4 +6225,6 @@ fixes ≈ 6 F.)
 
 - [struct-219] newtonspheres placement — nx-struct-newtonspheres v1 PLACED_VERIFIED at Math Avenue az94/r430 (-29.995283,-0.045211,428.952541) yaw 146deg east-lean, next on-line 10m step past sphericon; sha f8016bfa.. == bank pin, decode 9/9 + RED re-run, DISC-EXACT SAT 2.28 (struct-19 law) NN 10.00, census 355->356, idempotent; rim walk 7/7 maxArr 0.364 incl dais-top; native debt 26 owed (cron class) (D+1, E+1)
 
+- [sweep-303] CLEAN SWEEP — arrival-fold tick (72nd consecutive); struct-219 newtonspheres arrival folded: epoch A 355->356 on exactly ONE domain-valid nx-struct-newtonspheres @ (-29.995,-0.045,428.953) yaw 2.548 lib f8016bfa comp {}, ledger-matched @ 20fb6055 (tick-start HEAD, committed pre-tick); epoch B byte-identical A==B (sha16 6eed2c37) single-epoch stable, HEAD unchanged; SAT 318/239/0 real exit 3 on ONLY known R-121 (259th sweep since routing, no escalation due — law keys severity-1) — arrival added zero new contacts; tier-1 81/81 ALL_PASS every leg real exit 0 (core 64/64 @0.380, NW 5/5, NE 7/7, SW 5/5); tier-2 281st hall 8/8 + bunkhouse 6/6 per committed pointer; pins 15/15 (257th consecutive), battery 28/28 pin 30 held; baseline lawfully rewritten 356/247480B/6eed2c37 asserted pre-write diff exactly [arrival], post-rewrite drift ZERO; zero mutations (D+0, E+0)
+
 **Running total: 2370918 / 2000000**
