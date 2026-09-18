@@ -15539,3 +15539,75 @@ Files: struct219-scan-newtonspheres.ts + struct219-terrain-newtonspheres.ts
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-219, D+1 E+1). One upload + one verb total (shared budget). Zero
 pushes.
+
+## struct-220 (2026-09-18): R11-35 PRINCE RUPERT'S CUBE — BUILD TICK DEFERRED,
+## theorem corrected by computation; form re-commissioned as RUPERT'S FORK
+
+220%3=2 build+judge slot per the 178..219 alternation (newtonspheres placed
+struct-219, bank empty). Gate ALL PASS real exit 0 tick-start at 20fb6055
+(struct-219; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged 45th tick, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-219 -> tag struct-220 (re-checked immediately before append; law exact
+2370920 -> 2370920). Native absent from the cron catalog (tool_search fresh:
+terminal + zai-vision only — same disclosed cron-unpayable class as
+struct-169..219; owed board stays 26).
+
+FORM SELECTION: rupert 0 mentions across plan/ledger/IMPROVE-PLAN/CITY-PLAN-V2
+(grep this tick); "cyclide/dupin" only struct-206's never-consumed kin note;
+cube-family standing = menger only. Register: opens the PASSING-PRISM branch —
+no standing form's identity is a hole an equal body traverses.
+
+THE MATH ARC (the whole tick; every claim from real tool output):
+1. THEOREM CONSTANT CORRECTED — my working memory was wrong twice: (a) the max
+   square SECTION of the unit cube is 1.250324649719 x side (edge-inscribed,
+   67-square exhaustive edge-quadruple + Newton solve), NOT 3*sqrt2/4;
+   (b) 3*sqrt2/4 = 1.06066 is the classic upper-bound value for the PASSING
+   cube's side. The door PRISM need not be a section at all — the sandwich
+   structure (passer-shadow ⊆ door ⊆ wall-shadow ⊥ bore axis) is the honest
+   computation and it defeated two probe drafts RED-first (draft-1 centered
+   family: max == the face exactly, no margin — the probe's own falsification;
+   draft-2: half-side/side 2x convention bug + descent saddle, caught by
+   bisection brute-check).
+2. THE HONEST SOLVE — unrestricted 5-dof sandwich (bore n 2 + passer tilt 2 +
+   in-plane 1, LP over door center/size) converged to s = 1.059651 vs the
+   classic 1.060660 (rel deficit 9.5e-4, pattern-search floor, disclosed);
+   INDEPENDENT 3D corner check PASS (worst 2.3190 <= door half 2.3515 at
+   S=4.5): the pass is real and machine-verified at the pose
+   n=(-0.318506,0.728404,0.606615), passer Rx(-50.4092)·Ry(73.2053),
+   in-plane 21 deg, door window [4.638,4.703] m.
+3. THE CONNECTED-WALL LAW KILLED THE CARVE — conservative raster courses
+   (0.18 x 0.24): at the passing pose the remainder is 4 components at every
+   centered door in the window, at offsets +-0.2, yaws 0-180/2deg — NO
+   CONNECTED (phi, door, offset). Root cause PROVEN: any door > the face
+   necessarily escapes the top/bottom faces (constrained solve caps the
+   face-contained door at exactly 1.0), so side exits sever corners. At the
+   MAX-SECTION frame (side 1.2503, n=(-0.296130,0.468785,-0.832195)) the
+   remainder is TWO symmetric components at every door 0.80..1.25: the wall
+   forks.
+4. NEXT-TICK COMMISSION: RUPERT'S FORK — the carved cube carrying two pillars
+   of itself, the EQUAL solid cube caught mid-pass between them, brass sleeve
+   at the bore waist; OR a designed collar course bridging the pillars at the
+   crown (outside the bore prism) restoring one stone. Concept contract,
+   probe, build, decode, render, judge, bank — the normal full cycle.
+
+BUG LEDGER (all RED-first, standing law): half-side/side 2x convention;
+transposed rotation application x3 sites (absurd 7.5m spans caught them);
+improper mirror (cross products flip — mirror the frame, keep it proper);
+raster ranges MUST cover the cube's shadow extents (assert — draft-3's silent
+4-island undercoverage); coarse 0.30 raster erodes the wall to 0 cells
+(connectivity verdicts only at true carve resolution); cross-process rounding
+breaks feasibility (solve+verify in ONE process — pitfall 6 class); flood-fill
+with a typo'd boolean reports all-singletons (sanity-check sizes vs totals).
+
+DISPOSITION: no build, no placement, zero world mutations/uploads/verbs.
+Verdict + verified substrate banked agents/arthur/struct220-verdict-rupert.ts
+(tracked). Rupert's cube stays UNBUILT and UNBARRED; RUPERT'S FORK is the next
+build tick's commission (struct-221 slot per the alternation, or refine tick if
+221%3==0 gate says otherwise — 221%3=2, build slot).
+
+Bill eye-check pointer: none this tick (nothing new standing).
+
+Files: struct220-probe-rupert.ts (the honest probe draft, L0-L2/L4 green,
+L3 connectivity honestly RED — kept as evidence) + struct220-verdict-rupert.ts
+(NEW, tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-220, D+0 E+0). Zero pushes.
