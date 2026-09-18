@@ -23,6 +23,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | sheep | `nx-dress-sheep-001` | (-27.5,-0.0517,-31.5) yaw 0.65 | **31a512ed** (fauna-13) | NEW 2026-09-18 — wool-cream ewe pair (grazer + tall watch) in a shepherd's fold (timber hurdles + mottled trodden pad) on the SW meadow W of the dyehouse, opening NE toward the dye yard; 6 motion comps (2 bob + graze-tug + head-scan + 2 flicks) |
 | pig | `nx-dress-pig-001` | (15.0,-0.021261,40.2) yaw 0.66 | **a4918702** (fauna-14) | NEW 2026-09-18 — British-saddleback sow pair (rooter with pale disk snout in the spoil + belly-flat wallower) in a timber sty corner with fresh-rooted earth patch + oak-litter acorn scatter, meadow S of the kiln yard, heads NE toward the mosaic-row visitor line; 6 motion comps (2 bob + root-dig + ear-flick + 2 tail-curl flicks) |
 | dovecote | `nx-dress-dovecote-001` | (-50.5,0.0367,62.55) yaw 2.577 | **8f33f97f** (fauna-16/17) | NEW 2026-09-18 — potence timber dovecote + collared-dove trio (entry-ledge perch / cap ridge / ground-feeding on windfalls) at the orchard-edge meadow, facing the stile visitor approach; 6 motion comps (2 bob + 2 Y-scan + bob + peck) |
+| dairy cow | `nx-dress-cow-001` (candidate, fauna-20) | TALL: ~(24.0,40.75) zone E of pig sty | TBD | **QUEUED fauna-20 (2026-09-18)** — the dairy chain's missing animal: `nx-dress-milkstand` (22.5,33.2) + `nx-dress-churn` (19.9,35.1) stand with no source animal (goats' milk is the cottage story; the milk stand reads trade). Census-backed: zone 6.4m clear of solids; artwalk b33 rider on milkstand = SAT-set member, never touched |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -142,6 +143,31 @@ domain is commons-next `nx-dress-*` fauna only.
     1.60), heap (−0.62, 0.36, 1.62) — nose bottom buries 10cm into the heap
     surface; verified zero verts in the wall's y-band) + A forward to z
     −0.10 (tail tip 10cm clear of the rail's north face).
+13. **[QUEUED fauna-20, 2026-09-18] dairy cow — homestead proposal (queue was
+    empty; loop law: propose ONE homestead species, append candidate, end
+    tick).** Village logic: the dairy chain stands at the kiln-yard corner —
+    `nx-dress-milkstand` (22.5, 33.2) yaw −2.4 + `nx-dress-churn` (19.9,
+    35.1) yaw −2.2 — with NO source animal: the goat pen (E district) carries
+    the cottage-milk story; the milk stand beside a churn in the working yard
+    reads as a TRADE whose animal is missing. Goats, ducks, bunnies, and the
+    tier-2 homestead set (cat, owl, robin, geese, sheep, pig, horses,
+    doves) are all already seated — the cow is the last unmilked classic of
+    Bill's homestead language. **Candidate zone (census-backed 2026-09-18,
+    fauna-20)**: open meadow E of the pig sty, center ~(24, 40.75) — 6.4m
+    clear of every solid (nearest: churn, pig sty, conoidfan at 14m);
+    artwalk riders b31/b32/b33 sit 5–7m away as film-class furniture
+    (b33 `nx-artwalk-b33-milking-order` rides the milkstand — SAT-set
+    member, NEVER touched: entity-domain law). Species sketch (next tick's
+    build): ONE entity `nx-dress-cow-001`, TRUE-SIZE (no group scales,
+    fauna-13 law) — a Jersey/Dexter-class dairy cow pair: grazer (tube neck
+    dipped, muzzle at a hay heap / grazing tufts) + standing watch (neck
+    up, Y-scan sentry family) — warm fawn coat 0xa9825a with pale udder +
+    dark muzzle band + dark hoof line + swishing tail (lateral axis [0,0,1],
+    shorse law) + ear-flick swivels; furniture: timber hay rack + trodden
+    pad + straw scatter (hurdle-seg chassis) + dropped hay wisps. Motion
+    ~6 comps (2 bob + graze-tug + Y-scan + ear-flick + tail swish),
+    phases staggered, epoch t0. Seat final at build tick by full
+    OBB-vs-OBB sweep + terrain preflight + live walk (seat-scan law).
 
 ## Per-species rebuild records
 
