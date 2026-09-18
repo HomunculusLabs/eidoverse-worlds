@@ -16167,3 +16167,147 @@ struct226-walk-steinmetz.ts + next-place-struct226.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-226,
 D+0 E+1). One upload, one verb. Zero pushes.
 
+
+## struct-227 (2026-09-18): R11-41 THE CSÁSZÁR POLYHEDRON — BUILD+JUDGE TICK
+## (K7 on the torus: 7 vertices, 21 edges — every pair joined, NO DIAGONALS —
+## 14 faces, Euler 0; v3 judged PASS gameplay 4/4 + night 3/3 + closeface
+## PASS — ZAI fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+227%3=2 build+judge slot per the 178..226 alternation (steinmetz placed
+struct-226, bank empty). Gate ALL PASS real exit 0 tick-start at 4d7dd8b4
+(dress-156; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5
+7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived struct-226
+-> tag struct-227 (re-checked immediately before append). Native absent from
+the cron catalog all tick (tool_search fresh: terminal + zai-vision only —
+same disclosed cron-unpayable class as struct-169..226; owed board stays 26).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN-V2):
+csaszar/szilassi 0/0/0/0 — unnamed, unbarred, unbuilt. Register: opens the
+COMBINATORIAL-EXTREMAL branch — no standing form's identity is a
+graph-theoretic extremal property (steinmetz = intersection solid, newton-
+spheres = configuration, dodecahedron = platonic solid, boy = immersion —
+kin, disclosed). Era: Möbius 1861 combinatorial description; Császár 1949
+realization; the dual Szilassi (1977) named for a later round. The ONE idea:
+SEVEN POINTS, ALL ACQUAINTED — the polyhedron with NO diagonals, every vertex
+joined to every other (K7), smallest possible on a torus (h=(v−3)(v−4)/12=1
+only at v=7; next candidate v=12 unrealizable — Bokowski–Oliveira 2000).
+
+PARAMETRIZATION SECURED: Wikipedia article STL (commons Special:FilePath,
+fetched this tick, ASCII, 14 facets) BANKED at assets/csaszar-source.stl
+(sha256 0980a9a9707d9c4956996f6942db645ccd39550697b829ceac7763858ed17d20,
+3351B, staged -f); probe prefers /tmp then falls back to the banked copy
+(durability self-catch: a vanished /tmp must not break rebuilds — verified
+by rm'ing /tmp and re-running probe+mk+decode green, same sha).
+
+THEOREM VERIFICATION BEFORE CARVING (conchoid law, struct-190; probe ALL PASS
+real exit 0, laws T1-T9 + RED): T1 Euler 7−21+14=0 exact (genus 1); T2 21
+edges == C(7,2), 0 missing pairs — K7 complete, ZERO diagonals; T3 14 faces
+non-degenerate (smallest 0.941 m²); T4 every edge on exactly 2 faces — closed
+watertight surface; T5 14 distinct proper triangles of the 35 possible (the
+other 21 are the holes); T6 minimality h(7)=1; T7 non-convexity honest — 21
+dihedrals spread [56.9°, 164.6°], a K7 torus cannot be convex; T8 FACE-DOWN
+SEAT — foot face normal vertical to 5.7e-17, 3 foot beads socketed half-proud
+in the plinth top (bottoms 0.205 vs top 0.300), 4 crown beads aloft — all 7
+night stars above grade (dodecahedron struct-106 lineage); T9 SPARSE CAGE
+accounting — PLATED=[12,11,2,7,8] ARE the five smallest faces, stone 5.52 m²
+of 26.05 m² (21%), foot face excluded, max radial reach 2.169 < heptagon
+apothem 2.478−0.25.
+
+CONCEPT: SEVEN POINTS, ALL ACQUAINTED. IRON carries the complete graph — all
+21 edges as rods (r0.048), 6 meeting at every brass vertex bead (r0.095).
+STONE carries five membrane accents inset in the SMALLEST face bays (0.045
+reveal, 0.05 recess) + the SEVEN-sided heptagonal plinth (R2.75, one vertex
+aimed at the foot apex — the theme number below the theme count). Night
+contract: seven warm vertex stars (0x9a7030 @ 1.0, glow_cs_7 KEEP) — three
+half-proud in the plinth, four aloft. Folly class (open cage, walked around).
+
+DESIGN ARC (honest, judged RED->GREEN): v1 plated ALL 14 faces — ZAI judged
+"tetrahedral tent/sail, no cage" — TRUE AT SOURCE: the 14 faces tile the
+ENTIRE closed torus boundary (Euler T1!), a fully-plated shell can never read
+as woven. v2 plated fi%3===0 (5 faces, 10.2 m² incl. the 3.76 m² foot canvas)
+— judged "tent" again (foot canvas dominated). v3 = the SPARSE CAGE LAW: plate
+the five SMALLEST faces (5.52 m², 21%), foot bay + underside open, iron lane
+brightened 0x4a->0x6a, rods 0.042->0.048, beads 0.085->0.095 — judged PASS
+4/4 gameplay ("cage containing stone, not stone wearing a frame"), night 3/3
+(quiet constellation, no bloom), closeface PASS (joinery reads; the HIGH
+"only ~4 beads/9 rods visible" count finding is single-view occlusion,
+decode-answered: D3 proves 21/21 rods, D5 proves 7/7 bead clusters —
+probe-law-11 class, disclosed).
+
+SELF-CAUGHT LAW/BUILD BUGS THIS TICK (all RED-first, zero wasted uploads):
+(a) probe RED control v1 wrongly demanded Euler drift on face-duplication
+(absorbed edges keep V−E+F=0) — rewritten to the actually-detecting laws
+(manifold multiplicity + distinct-triple count); (b) mk v1 plates used node
+quaternion+position and the build died "below grade −1.58" — Box3.setFromObject
+unions each geometry's cached bounding-BOX corners under the node matrix, and
+a thin steeply-oriented plate's BOX corner flies ~1.9m below its true
+triangle; fix per dodecahedron struct-106 chassis: bake the face basis INTO
+THE GEOMETRY (applyMatrix4) — bounds vertex-true, root identity; (c) odd
+heptagon TRUE box is inherently asymmetric (x[−2.681,2.681] z[−2.750,2.478])
+— probe envelope rewritten analytic-true (PLINTH_BOX), mk centering law
+replaced by exact-extremes equality; mk maps shape-y to world MINUS-z
+(rotateX(−π/2)) — caught by the drift law (0.272 mirror), sign fixed; (d)
+decode D2 destructured [x,z] from [x,y,z] (axis slip — grabbed y); (e) decode
+D3 coverage was vacuous (CylinderGeometry default has NO mid ring) — mk now
+builds heightSegments 2 so mid-ring verts exist, and the coverage test was
+itself buggy (degenerate [mid,mid] segment -> NaN -> always false) — rewritten
+direct midpoint-distance; (f) D3/D7 false FAILs traced to a stale v2 GLB left
+by a grep-masked mk crash (missing PLATED import — always check the build's
+own wrote/envelope lines, not grep silence).
+
+BUILD (agents/arthur/assets/mkv3-csaszar.ts, staged -f): root identity
+(struct-188 law); texMat lanes cs_stone/cs_iron (struct-38 law); beads
+emissive 0x9a7030 @ 1.0 in-GLB (dusk lineage, struct-82). v3 deterministic x2
+byte-identical sha256
+299e6d7d0c0d9c1565d1958bf5d1a6eec61629243afb307fd3834d6bb507a72b
+(mtime-verified, 27 pre-merge meshes -> 2 buckets + 1 glow KEEP; 3 draw
+nodes). Envelope 5.36x2.34x5.23 TRUE box, sole at grade 0, foot face plane
+flush at plinth top 0.300 exact.
+
+DECODE (struct227-decode-csaszar.ts, tracked) ALL PASS real exit 0 (D1-D8 +
+RED): D1 census 3 nodes (csaszar_0/csaszar_1/glow_cs_7_0, mats cs_iron/
+cs_stone/glow2); D2 plinth 116 verts in the true heptagon prism, corners
+present, sole 0.000000; D3 rods 1575 iron verts, worst 42.00mm of the exact
+K7 segments (<=46), coverage 21/21; D4 plates 108 verts within the PLATED
+face-plane shells; D5 beads 7 clusters by analytic assignment (worst 85.0mm
+= bead radius), emissive present, sole night elements; D6 grounding sole
+0 + foot plane 0.300 exact; D7 envelope drift 0.00000; D8 texMats UV-complete
+2/2 lanes. RED control: foreign oloid bytes FAIL D1 + nonzero exit.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed, riding the owed
+board): gameplay 18m PASS 4/4 (identity/silhouette/grounding/overall —
+"woven sculpture, cage containing stone"); margins disclosed: squat aspect
+keeps a faint first-glance tent gestalt before the cage resolves (Medium),
+one membrane reads shadow-dark at 18m (Low-Med), base-ring beads near
+sub-pixel (Low), lower rods low-contrast on dark ground (Low), K7 edge-count
+unverifiable at range (Info — decode carries the mathematics). night PASS 3/3
+(exactly the 7-star constellation, no bloom; ~4-5 of 7 resolve at the single
+gameplay angle, occlusion — Minor). closeface PASS all four axes (joinery/
+families/silhouette/overall; apex knot slightly muddy — Med-Low; plinth side
+count ambiguous at angle — Med, decode D2 proves 7 exactly).
+
+DISPOSITION: v3 ACCEPTED BANKED NOT PLACED. Placement = struct-228 committed
+carry: fresh census scan — per struct-226's standing recommendation the E
+quadrant (az135-180) is the under-served district (1 form vs az90-135's 20+),
+seat there with 8m NN + soft-cap audit, heptagon TRUE-box SAT (not square-
+bbox — struct-19 disc law class), yaw law (oblique read, procession
+convention if E-spoke), terrain preflight over the TRUE rotated heptagon,
+hash-gated plain spawn nx-struct-csaszar, comp {}. Folly class — no walk owed
+beyond a ground circuit at placement. Native re-judge debt: csaszar v3 joins
+the owed board (board 26 + this one).
+
+Bill eye-check pointer (after placement): a seven-sided stone dais carrying
+a woven iron cage — every rod meets every other's endpoints; seven brass
+stars burn at the joints, three seated in the dais itself. The idea: seven
+points, all acquainted — the smallest torus that can be woven without a
+single diagonal. Count the rods at any one bead: six. After dark: a quiet
+constellation of seven.
+
+Files: struct227-probe-csaszar.ts + struct227-decode-csaszar.ts +
+struct227-render-csaszar.ts (all NEW, tracked), assets/mkv3-csaszar.ts (NEW,
+staged -f), assets/csaszar-source.stl (NEW, staged -f — parametrization
+banked), reviews/struct227-csaszar/ (9 frames, ignored — sha pins in this
+block are the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-227, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
