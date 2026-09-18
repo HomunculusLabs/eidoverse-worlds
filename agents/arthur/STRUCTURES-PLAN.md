@@ -15456,3 +15456,86 @@ assets/mkv3-newtonspheres.ts (NEW, staged -f), reviews/struct218-newtonspheres/
 (10 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one
 append struct-218, D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-219 (2026-09-18): NEWTONS SPHERES PLACEMENT TICK — committed carry
+## from struct-218 executed (nx-struct-newtonspheres v1 PLACED_VERIFIED live
+## at the next on-line Math Avenue step az94/r430; 10.0m rhythm held)
+
+219%3=1 placement slot per the 178..218 alternation (struct-218 banked the
+form with "placement = struct-219 committed carry"). Gate ALL PASS real exit
+0 tick-start at 75e31eaa (struct-218) + RE-RUN clean immediately before the
+mutation at cc6a0360 (sweep-302 landed mid-tick — epoch law honored, the
+sweep's 355-census quiet epoch already included the fauna robin+geese).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 43rd tick, 0 OPEN
+nx-struct rows).
+
+Local bytes re-verified sha256
+f8016bfab73aff2c2b50180f8350503f3f1982d996c66ffb999ed8944b44397b ==
+struct-218 v1 bank pin BEFORE upload (shasum -a 256, this tick), and
+struct218-decode re-run ALL PASS 9/9 + non-vacuous RED real exit 0 with D8
+envelope drift 0 (fresh binding: 10.000x5.519x10.000 disc, dais r 5.000
+exact, min y 0).
+
+SEAT (struct219-scan, fresh 355 census — 354 + fauna sheep proposal window):
+avenue axis re-derived FRESH = 91.0 deg (20 deg density window, 45 forms; 49
+math-family structs standing). Procession read complete — ... -> lunes400 ->
+oloid410 -> sphericon420 (~10m steps, all az94.0). 553 lawful band
+candidates r422-448 (DISC-EXACT SAT per struct-19 law — square-bbox SAT can
+never pass a 10m disc near neighbors; the scan chassis replaced OBB-square
+with exact disc-vs-OBB signed distance, yaw-independent); the newtonspheres
+takes the NEXT ON-LINE STEP: az94.0 r430.0, 10.0m step == the procession
+rhythm. NN 10.00 vs nx-struct-sphericon (law 8.0), disc gap 2.28 vs
+nx-struct-sphericon at FINAL pose (law 1.4).
+
+YAW LAW (inlay reads from the approach side, procession east-lean
+convention): 2.548181 (146 deg) puts local +Z (the seven-disc inlay band at
+INLAY_C 3.90) at world az304 = anti-travel az274 + 30 deg EAST lean
+(struct-104 oblique-read class; the procession's standing convention, now
+.../lunes/oloid/sphericon/newtonspheres). The dais is a perfect cylinder —
+SAT yaw-independent; only the inlay + icosa arrangement rotate.
+
+TERRAIN (struct219-terrain-newtonspheres.ts): 9pt over the TRUE disc rim
+(r5.0 center + 8 rim points, yaw-independent by disc symmetry): spread
+7.2mm, PY = -0.045211 (embed absorbs — morley/lunes/oloid/sphericon class).
+
+PLACEMENT (next-place-struct219.ts, struct217 fresh-spawn chassis with
+disc-exact SAT): hash gate green; entity ABSENT on fresh 355 census;
+disc-SAT/NN preflight re-run at FINAL pose vs same fresh set (NN floor
+sphericon 10.00, disc gap worst sphericon 2.28 — clean). 1 upload
+(content-addressed store/f8016bfab73aff2c.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple [-29.995283, -0.045211, 428.952541] yaw
+2.548181 scale 1 lib == wantLib comp {} on fresh re-read; census 355 -> 356
+exactly. Idempotent rerun: ALREADY_SEATED, zero verbs.
+
+WALK (struct219-walk-newtonspheres.ts, rim circuit owed by the carry
+contract): 7/7 ALL_PASS maxArrival 0.364m — two-way procession approach
+(az274 reading face, 0.364/0.310), 4-leg ground circuit CW at 8m standoff
+(0.304-0.313, no phantom collider), dais-top rim leg az304 (0.315 — the
+0.34m single rise WALKED cleanly despite the threshold-law disclosure; the
+inlay reading side is genuinely standable).
+
+Native debt board after this tick: newtonspheres v1 stays OWED
+(fallback-judged acceptance from struct-218, disclosed; probe L1-L8
+machine-exact evidence + decode D1-D9 non-vacuous are the binding evidence)
+— the owed board stays 26 (monkeysaddle gate, hypar row 22, kuen v3, catalan
+v1, clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2, fourier
+v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1, folium v1,
+rhodonea v1, versiera v1, elliptic v3, mandelbrot v1, viviani v1, morley v1,
+arbelos v1, lunes v1, oloid v1, sphericon v1, newtonspheres v1). Native
+absent from the cron catalog again this tick (tool_search fresh: terminal +
+zai-vision only — same disclosed cron-unpayable class as struct-169..218).
+
+Bill eye-check pointer: a round dais carrying a bag of twelve stone spheres
+with a warm glow burning in its heart — Newton's claim, Gregory's question,
+answered 260 years late: twelve can touch one, none can touch each other,
+and no thirteenth fits. At the rim, seven iron discs: six around one, the
+seventh impossible — in the plane the answer was always six. After dark: one
+warm heart seen through every window, entered through none. On Math Avenue's
+far procession — the next stone on the walk, past the sphericon (eleventh
+form on the r330..430 outer run).
+
+Files: struct219-scan-newtonspheres.ts + struct219-terrain-newtonspheres.ts
++ struct219-walk-newtonspheres.ts + next-place-struct219.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-219, D+1 E+1). One upload + one verb total (shared budget). Zero
+pushes.
