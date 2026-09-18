@@ -15243,3 +15243,77 @@ assets/mkv3-sphericon.ts (NEW, staged -f), reviews/struct216-sphericon/
 (9 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
 (one append struct-216, D+0 E+0). Zero world mutations, uploads, verbs,
 comp-edits, shared-budget use. Zero pushes.
+
+## struct-217 (2026-09-18): SPHERICON PLACEMENT TICK — committed carry from
+## struct-216 executed (nx-struct-sphericon v1 PLACED_VERIFIED live at the
+## next on-line Math Avenue step az94/r420; 10.0m rhythm held)
+
+217%3=1 placement slot per the 178..216 alternation (struct-216 banked the
+sphericon with "placement = struct-217 committed carry"). Gate ALL PASS real
+exit 0 tick-start at 7754b1d8 (fauna-9) + RE-RUN clean immediately before the
+mutation at bd247c72 (sweep-298 landed mid-tick — epoch law honored, the
+fauna robin was already in the scan's 353-entity set). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 42nd tick, 0 OPEN nx-struct rows).
+
+Local bytes re-verified sha256
+e8dffa7fc40892e9048d98bdc8a30dc8f4a77826f8288f7bb4402ba1756e659e ==
+struct-216 v1 bank pin BEFORE upload (shasum -a 256, this tick), and
+struct216-decode re-run ALL PASS 9/9 real exit 0 with D8 envelope drift
+0.0000 (fresh decode binding: 3.727x2.703x4.000 SYMMETRIC, min y 0).
+
+SEAT (struct217-scan + struct217-select, fresh 353 census — 352 + the fauna
+robin): avenue axis re-derived FRESH = 91.0 deg (20 deg density window, 44
+forms; 48 math-family structs standing). Procession read complete —
+gyroid240 -> ... -> lunes400 -> oloid410 (~10m steps, all az94.0). 598
+lawful band candidates r412-440; the sphericon takes the NEXT ON-LINE STEP:
+az94.0 r420.0, 10.0m step == the procession rhythm. NN 10.00 vs
+nx-struct-oloid (law 8.0), SAT 4.62 vs nx-struct-oloid at FINAL yaw
+(law 1.4).
+
+YAW LAW (struct-104 oblique-read, struct-216 carry contract):
+3.735004599267865 (214deg, exhaustive 0.5 deg band scan maximizing SAT)
+puts the +Z face normal at az304 — 30 deg off the az274 anti-travel
+sightline, east lean (the procession's standing convention, now
+.../arbelos/lunes/oloid/sphericon). The outbound walker reads the
+construction face obliquely on approach; the 3.727m curb runs az124/304.
+
+TERRAIN (struct217-terrain-sphericon.ts): 9pt over the TRUE rotated
+footprint (literal corners of the 3.727x4.000 curb rectangle): spread
+8.1mm, PY = -0.040422 (8cm cradle embed absorbs — morley/lunes/oloid
+class).
+
+PLACEMENT (next-place-struct217.ts, struct215 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 353 census; SAT/NN preflight re-run
+at FINAL pose vs same fresh set (symmetric footprint 2.66x2.70 at yaw
+214): NN floor oloid 10.00, SAT worst oloid 4.62 — clean. 1 upload
+(content-addressed store/e8dffa7fc40892e9.glb) + 1 paced spawn over one
+WS join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on
+fresh re-read; census 353 -> 354 exactly. Idempotent rerun:
+ALREADY_SEATED, zero verbs. Folly class (14.91 sqm curb footprint, stance
+2.655m real trimesh) — no walk owed. Comp bag empty by contract (sole
+night bead emissive-in-GLB glow KEEP — no comp-wipe class on first
+spawn).
+
+Native debt board after this tick: sphericon v1 stays OWED (fallback-judged
+acceptance from struct-216, disclosed; probe L1-L8 machine-exact evidence +
+decode D1-D9 are the binding evidence) — the owed board stays 25 (monkeysaddle
+gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+melencolia v3, tribar v2, fourier v1, cissoid v2, quadratrix v1, archispiral
+v1, nephroid v1, folium v1, rhodonea v1, versiera v1, elliptic v3, mandelbrot
+v1, viviani v1, morley v1, arbelos v1, lunes v1, oloid v1, sphericon v1).
+Native absent from the cron catalog again this tick (tool_search fresh:
+terminal + zai-vision only — same disclosed cron-unpayable class as
+struct-169..216).
+
+Bill eye-check pointer: on Math Avenue past the oloid — a long stone curb
+carrying a carved solid between two brass edges: the sphericon, a bicone cut
+in half with one half twisted a quarter-turn and reglued (Hirsch 1980), the
+form that rolls line-then-point-then-line on its whole skin; an iron line
+marks where it stands, spokes and a swept arc behind it record where it
+rolled; its skin is exactly the parent bicone's — the twist gave nothing
+back. After dark: one warm bead burns at the crown.
+
+Files: struct217-scan-sphericon.ts + struct217-select-sphericon.ts +
+struct217-terrain-sphericon.ts + next-place-struct217.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-217,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
