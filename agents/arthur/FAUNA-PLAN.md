@@ -87,12 +87,30 @@ domain is commons-next `nx-dress-*` fauna only.
     to clear the film's NE edge by 3.49m (pigs root beside art, never on
     it, sheep law); no E fieldpond exists in commons-next (it became the
     W reedpool).
-11. **[CANDIDATE fauna-15] ?? — next species proposal owed at the next
-    queue-empty wakeup** (homestead tier-3 candidates weighed when
-    proposed: beehive skep-cluster upgrade is dressing-lane-owned; a
-    dovecote, Guinea fowl, or peacock at the orchard edge are the
-    remaining homestead language; horse remains parked — rideable
-    expectations make it a bigger commission needing Bill's sign-off).
+11. **[CANDIDATE fauna-15] orchard dovecote + collared-dove trio — proposed
+    2026-09-18 (fauna-15 proposal tick, queue-empty law).** ONE entity
+    `nx-dress-dovecote-001`: a potence-style timber dovecote (post + ladder
+    + 4-square nesting box with entry holes, the village stile/timber
+    family) carrying the 18m read (robin law: structure carries distance,
+    doves reward approach), plus three collared doves — one perched at the
+    entry ledge, one on the roof ridge, one ground-feeding on fallen
+    orchard fruit at the base. Motion: perched/ridge doves breathing bob +
+    head-scan pendulums, ground dove peck pendulum + tail flicks, phases
+    staggered (6-8 comps, all proven part types). Seat: orchard edge NW
+    arc — candidate zone grass between `nx-dress-nw-orchard-rows-001`
+    (−48.06,67.53) and the skeps/hedge (roughly x −50..−44, z 55..62);
+    EXACT tuple owed to the build tick: terrain preflight + live SAT vs
+    orchard trees 0033/0046 canopies (14.5m crowns), gardens 0058/0045
+    beds, skeps, milestones nw-007/008, approach lamps, stile/hedge.
+    Village logic: winter-orchard pairing — doves pick fallen fruit beside
+    the bee skeps, completing the orchard's living edge. Species ID marks
+    for the close read: pale warm-grey coat, THE black neck collar,
+    dark eye, pinkish breast suffusion. Alternatives weighed: Guinea fowl
+    (reads as a third grey bird pair — geese/hens already seated), peacock
+    (estate tone, not homestead); horse stays parked (rideable
+    expectations, needs Bill's sign-off); milkyard dairy cow deferred
+    (implies a milking-scene commission at an artwalk-rider zone — bigger
+    than one tick).
 
 ## Per-species rebuild records
 
