@@ -84,6 +84,20 @@ const ALLOWED = new Set<string>([
   "nx-cultivation-lavender-0027|nx-dress-nw-stile-001",
   "nx-cultivation-lavender-0040|nx-dress-nw-hedge-001",
   "nx-cultivation-lavender-0040|nx-dress-nw-stile-001",
+  // sweep-308 (decode-of-record): fauna-17 dovecote seated at the orchard-
+  // edge meadow (-50.5, 62.55) yaw 2.577; the lavender-0040 bed's ~20x12m
+  // compound bbox (h 0.550, defeats E2 film threshold by 50mm) kisses the
+  // dovecote's full-envelope OBB at -0.016 (max separating-axis). Source-
+  // true decode of the EXACT live bytes (sweep308-dovecote-contact-decode
+  // chassis, sweep-74 law; local sha16 5e04ce4b (lavender) + 8f33f97f
+  // (dovecote) both prefix-verified == live lib): TRUE plan-view min
+  // separation 0.378m POSITIVE (wide-grid), no interpenetration anywhere;
+  // NW route true-footprint clearance: dovecote 10.952m, lavender 6.582m.
+  // Same farm-furniture-at-field-edge bedding class as the six sweep-74
+  // contacts (R-124). Evidence: SWEEP-PLAN sweep-308 row. Any pos/lib
+  // drift on either id re-surfaces as census drift at 16-hex precision
+  // and re-derives this class.
+  "nx-cultivation-lavender-0040|nx-dress-dovecote-001",
   // sweep-76: dress-99 offering niche seated flush against the labyrinth's
   // east outer wall — DESIGNED adjacency, declared in the placer/ledger
   // ("rider designed mount", anchor re-derived vs live host 2d3d2032).

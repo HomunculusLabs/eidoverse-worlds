@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 358,
+  "count": 359,
   "entities": [
     {
       "id": "beb4c791",
@@ -3936,6 +3936,122 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-dovecote-001",
+      "kind": "thing",
+      "pos": [
+        -50.5,
+        0.0367,
+        62.55
+      ],
+      "yaw": 2.577,
+      "scale": 1,
+      "lib": "store/8f33f97f97b0e4de.glb",
+      "bbox": {
+        "min": [
+          -0.97,
+          -0.003,
+          -0.283
+        ],
+        "max": [
+          0.815,
+          2.974,
+          1.29
+        ],
+        "size": [
+          1.785,
+          2.977,
+          1.573
+        ],
+        "center": [
+          -0.078,
+          1.485,
+          0.504
+        ]
+      },
+      "compKeys": [
+        "motion:dove_a",
+        "motion:dove_a_head",
+        "motion:dove_b",
+        "motion:dove_b_head",
+        "motion:dove_c",
+        "motion:dove_c_head"
+      ],
+      "comp": {
+        "motion:dove_a": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 3.9,
+          "phase": 0.2,
+          "t0": 1789739073862
+        },
+        "motion:dove_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.3,
+          "period": 7.5,
+          "phase": 0.5,
+          "t0": 1789739073862
+        },
+        "motion:dove_b": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.4,
+          "phase": 1.7,
+          "t0": 1789739073862
+        },
+        "motion:dove_b_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.32,
+          "period": 8.5,
+          "phase": 1.1,
+          "t0": 1789739073862
+        },
+        "motion:dove_c": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 4.8,
+          "phase": 1.3,
+          "t0": 1789739073862
+        },
+        "motion:dove_c_head": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.26,
+          "period": 2.9,
+          "phase": 0.8,
+          "t0": 1789739073862
+        }
+      }
     },
     {
       "id": "nx-dress-ducks-001",

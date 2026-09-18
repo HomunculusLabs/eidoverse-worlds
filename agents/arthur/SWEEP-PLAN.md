@@ -13818,3 +13818,88 @@ forge/potter @304, longhouse/garden-cottage @302 stalest standing pair
 at 5 sweeps; walk tools interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts — both ls-verified present on disk this
 tick).
+
+
+sweep-308: CLEAN SWEEP, arrival + epoch-correction tick (77th consecutive
+quiet-or-classified). Tick-start HEAD 9aae440b = fauna-16's build tick
+(dovecote BUILT, placement owed fauna-17 after a sequencer 502); standing
+gate ALL PASS real exit 0 FIRST TRY (unpiped /tmp/s308-gate.log, 98 PASS
+lines + ALL PASS trailer). Census epoch A 358==358 vs the committed
+sweep-307 baseline — BYTE-IDENTICAL by direct cmp (sha16 1b9ac38b, 0
+arrivals, 0 departures, 0 drift by construction; no rewrite owed at A).
+fauna-17 (dovecote placement, the owed recovery tick) landed mid-tick:
+epoch B 358->359 with exactly ONE domain-valid arrival
+nx-dress-dovecote-001 @ (-50.5, 0.0367, 62.55) yaw 2.577 lib
+8f33f97f97b0e4de scale 1 kind thing, comp bag exactly 6x
+motion:dove_{a,b,c}{,_head} — tuple matches the committed fauna-17 ledger
+@ 32ee5d77 line-for-line incl. placer pin (pure-north 0.2m re-seat from
+the fauna-16 disc-scan seat, live heightAt PY). Per the polish-270 epoch
+law all affected evidence was re-taken fresh before verdicts: epoch-B
+census, SAT re-run (which surfaced a NEW unclassified pair, classified
+below), NW re-walk (dovecote 10.952m off the route polyline — inside the
+re-verify band, sweep-58 precedent), standing gate re-run ALL PASS real
+exit 0 at 32ee5d77, battery re-run on census-B bytes. Epoch C 20s-paced
+re-read BYTE-IDENTICAL to B (cmp-verified, sha16 284bb034) — stable
+close. NEW CONTACT CLASSIFIED (not a defect):
+nx-cultivation-lavender-0040 | nx-dress-dovecote-001 square-SAT -0.016
+(the lavender bed's ~20x12m compound bbox, h 0.550 defeating the E2 film
+threshold by 50mm, kissing the dovecote's full-envelope OBB). Source-true
+decode of the EXACT live bytes (sweep308-dovecote-contacts-decode.ts,
+sweep-74 chassis; local sha16 5e04ce4b lavender + 8f33f97f dovecote both
+prefix-verified == live lib): TRUE plan-view min separation 0.378m
+POSITIVE (wide grid), no interpenetration; NW route true-footprint
+clearances dovecote 10.952m / lavender 6.582m; same
+farm-furniture-at-field-edge bedding class as the six sweep-74/R-124
+contacts. Standing-precedent exemption added to sweep-sat-next.ts with
+these numbers; SAT epoch C back to 321 bbox non-light / 241 classified /
+0 coverage holes, exit 3 on ONLY the known R-121 (264th sweep since
+routing, no escalation due — law keys severity-1). Walks: tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually per the sweep-228 ceiling law — core 64/64 ALL_PASS max
+dist 0.380 (next-walk-core-paths.ts, JSON parsed from first brace past
+the [physics] banner; support-seam stderr abstentions = the known
+normalized diagnostics set, unchanged), NW 5/5 ALL_PASS (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts; RE-WALKED AT EPOCH B
+over the dovecote-inclusive world), NE 7/7 ALL_PASS (0.00/0.29/0.32/
+0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5 ALL_PASS
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts). Tier-2 286th cycle per
+the committed sweep-307 pointer: longhouse 6/6 ALL_PASS (maxArrival
+0.346, dists 0.335/0.280/0.346/0.297/0.276/0.297,
+interior-walk-longhouse.ts) + garden-cottage 6/6 ALL_PASS (0.355, dists
+0.295/0.355/0.285/0.345/0.326/0.308, interior-walk-garden-cottage.ts),
+both real exit 0, both tools ls-verified present on disk pre-run.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (262nd
+consecutive clean); sweep89-battery 28/28 PASS real exit 0 —
+comp-bearing pin record 32->33 census-verified BEFORE the bump (live
+count 33, 33rd bearer = exactly the dovecote; first invocation correctly
+FAILed 32-vs-33 = expected classification, bump per the sweep-301 geese /
+304 sheep / 306 pig precedents, not a finding); interlane md5 86b2936f
+stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged (284th check; 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+and was read fresh via the loop/plan reload. Baseline lawfully rewritten
+like-for-like (committed convention = raw census bytes; asserted
+pre-write: diff exactly [arrival nx-dress-dovecote-001], counts
+358->359, zero shared-id drift on all 7 projection fields incl. comp):
+359 entities / 254590B / sha16 284bb03418a3801d; post-rewrite drift
+ZERO (baseline byte-identical to canonical census C, cmp-verified).
+Probe self-catches pre-verdict, corrected with no repair owed: (a) first
+OBB-draft of the contact classifier took the MIN separating-axis gap
+(the skill's own SAT law violation class) producing -3.79; corrected to
+MAX-gap -0.016 before any verdict. (b) the inline census-diff heredoc
+was blocked by the terminal gateway keyword heuristic — script saved to
+/tmp and run as a file per the sanctioned retry path (sweep-304 class).
+Foreign dirt in tree (windmill overhaul scratch, cabin/carousel
+prototype dirs, client/server engine files, fleet shells, debug-bower
+scripts, moon-moth dir, fauna tools + FAUNA-PLAN.md,
+HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths assets) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-309):
+forge + potter (287th cycle — LRU chain re-derived from committed plan
+pointers this tick: longhouse/garden-cottage @308 walked fresh,
+hall/bunkhouse @307, inn/tower-house @306, row-cottage/observatory @305,
+forge/potter @304 stalest standing pair at 4 sweeps; walk tools
+interior-walk-forge.ts, interior-walk-potter.ts — both ls-verified
+present on disk this tick).
