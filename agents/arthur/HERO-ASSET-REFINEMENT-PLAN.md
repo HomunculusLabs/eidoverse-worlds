@@ -841,6 +841,63 @@ next wake once the gateway answers.
   cream/red/gold absent after dark) — restrained fabric-emissive candidate;
   or re-survey plaza-core on fresh evidence.
 
+### polish-289 — carousel structural material truth (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-288 canopy build (live was
+  `store/e16a1bc002cb1650.glb`). Queue item named at polish-288's close
+  (stairs contrast) expanded by survey into the whole structural band.
+- Survey finding (ZAI judge + day-band pixel probe on exact live bytes):
+  plinth/rim/poles/stairs rendered flat near-black RGB(35,27,22) in DAY
+  (10:1 darker than ground) and a void at night. Center-horse night
+  occlusion (queue head) was judged RESOLVED — front grey horse ~95%
+  readable (polish-287/288 cures held).
+- Decode root cause: NINE primitives carried NO glTF material — legacy
+  v3 COLOR_0-only convention rendered as default-white-metal (near-black
+  without envmap; the polish-283 horse-darkness class): `cr3_0` (plinth),
+  `carousel_1` (rim+brass band), `carousel_2` (deck floor web + drop-pole
+  shafts + collars), `cr3_2` (mid web/poles), `cr3_3` (upper ribs/hub/
+  finial/valance armature), stair cheeks ×2 + treads ×2 (one shared mesh).
+- Change (ONE coherent intervention, new production step
+  `carousel-horse-prototype/materials.ts`, ceiling.ts chassis): assign
+  authored families — stone plinth (plain mat), brass hardware (plain),
+  wood stairs (carousel_wood texture + synthesized planar UVs) — with
+  COLOR_0 re-normalized to white so the material owns color.
+- Two build bugs caught by staging gates before any render/judge:
+  (a) shared-mesh second-touch on deduped treads → deterministic OOM kill,
+  fixed with an assigned-prims set; (b) normalized-UBYTE COLOR_0
+  `getArray()` returns RAW bytes — writing float 1 = 1/255 BLACK, which
+  multiplied v1-v4 outputs to near-invisibility; write 255.
+- v6 tuning (3 measured rounds: 35→45→255-clip→190-225): stone
+  [0.44,0.39,0.32] rough .85; brass [0.58,0.44,0.22] rough .5 metal .15.
+  Measured 18m reads: plinth risers 190-225 pale limestone, brass band
+  177-215 (lit) / 115-137 (shaded), wood treads 227 tan, night base
+  2→54-61 readable dark-warm; four horse coats + canopy + lanterns
+  byte-identical (horse-solo controls).
+- Candidate `429cde23a16d1c1750af3f86f42a40f4f22816fa2acf19cfd304230e9ae99b53`,
+  A/B byte-identical ×2, NaN scan clean, 15/15 views clip-clean, nodes 45
+  unchanged, materials 22→24 (+2 plain families).
+- Judge verdicts (disclosed: ZAI fallback, no native vision this cron
+  session — same class as polish-285..288, native re-judge owed): day
+  BASE READ: IMPROVED; night NIGHT BASE: IMPROVED (identity intact,
+  lanterns still brightest); aerial: IMPROVED (regression check clean).
+  A v4 judge "identical frames" verdict was falsified by pixel probes
+  (hashes differed; sensitivity limit on dark masses) — pixel probes
+  outrank prose.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED, 1 upload +
+  8 verbs, 7-key comp bag replayed verbatim; idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin
+  `store/429cde23a16d1c17.glb` @ (-18, 0.0001495, 18) yaw 2.35619 exact;
+  served DRACO bytes (sha 127a20bf…) decode with 0 material-nulls — the
+  cure survived the re-encode.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-289-carousel-centerhorse/`
+  (before/ = live baseline full rig; after/ = v6; deploy-report.json +
+  .verified.served.glb).
+- Next: ceiling-disc 18m dimness is GEOMETRY-LIMITED (ray test: ~50% of
+  the disc occluded by valance teeth from the 18m eye at ~11° grazing;
+  emissive cannot fix occlusion — a candidate needs rim-adjacent warm
+  accent geometry, judge first); gold spire speckle; stairs contrast now
+  largely cured by v6 wood.
+
 ### polish-288 — carousel canopy fabric night read (ACCEPTED, LIVE)
 
 - Subject: `nx-carousel` at the polish-287 night-coat build (live was
