@@ -1083,3 +1083,51 @@ next wake once the gateway answers.
 - Next: night plinth/brass-band value (judge-named, polish-289 v6 re-tune
   candidate); tan-horse vs panel value proximity (judge optimization
   note); or re-survey plaza-core on fresh evidence.
+
+### polish-293 — carousel structural night value (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-292 scenery build (live was
+  `store/c62a8bbd8e794a9d.glb`). Queue-head candidate from polish-292's
+  close: night plinth/brass-band value.
+- Defect (measured this tick, night band probe on exact live bytes):
+  after dark the plinth/base band (rows 396..432, world y 0..0.5) read
+  mean RGB (43,37,24) — luminance ~40 vs the lit interior's 140-175 and
+  even the valance teeth's ~90. The carousel's carrying structure
+  vanished into a void under the lit drum (criterion 6). Day was sound
+  (plinth 190-225, polish-289 v6) — a night-only value gap.
+- Change (ONE intervention, new production step
+  `carousel-horse-prototype/plinth.ts`, crown.ts chassis — emissive-only
+  edit on the two existing structural plain materials, no new lights, no
+  geometry, no nodes): `carousel_stone_plain` (sole user cr3_0 plinth)
+  → [0.050,0.034,0.018]; `carousel_brass_plain` (rim band + poles +
+  ribs/valance armature) → [0.055,0.036,0.014]. Night ladder:
+  lanterns .80 > crown .62 > scenery .26 > teeth .215 > brass .039 ≈
+  stone .036. Day impact ≈ +8/255 on 190-225 bases — invisible
+  (polish-287 law).
+- Candidate `0cdd7eedcc22b312c9b74702a2a4035fdc4b1a6da336a6440b078e65aebf0492`,
+  A/B byte-identical (independent /tmp rebuild). Nodes 47 / materials 25
+  unchanged. Horse-solo closeup controls 4/4 byte-IDENTICAL (edit
+  provably confined to structural mats). Night plinth rows lift
+  (43,37,24) → (77-82,65-68,42) warm-dominant; day maxDelta 22 across
+  11 views, extent inside the silhouette.
+- Judge verdicts (ZAI fallback, no native vision this cron session,
+  native re-judge owed — same class as polish-285..292): NIGHT PASS —
+  "no longer floating over a void — stands on a grounded, readable
+  base", hierarchy lanterns > interior > structure intact, zero new
+  defects. DAY PASS — natural sunlit material, "no emissive look,
+  oversaturation, or pasted-on luminance anywhere", clean pass.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED (1 upload +
+  8 verbs), 7-key comp bag replayed verbatim, idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/0cdd7eedcc22b312.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact. Served sha == upload sha:
+  served DRACO decode keeps all 11 emissive materials EXACT (incl. the
+  two new structural factors). Deploy notes: baseline-entity.json was
+  regenerated fresh from the live census (the copied polish-292 one
+  pinned a35f40f1 and would not validate); one transient gateway
+  failure absorbed by a single paced retry (DRY_RUN_READY on retry).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-293-carousel-plinth/`
+  (before/ = live build full 15-view rig + baseline GLB; after/ =
+  candidate + stats; deploy dry/apply/idem reports + verified served
+  bytes; polish293 probes: plinth bands, node decode, pixdiff).
+- Next: tan-horse vs scenery-panel value proximity (judge optimization
+  note, polish-292); or re-survey plaza-core on fresh evidence.
