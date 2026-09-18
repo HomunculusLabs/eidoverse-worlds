@@ -13903,3 +13903,79 @@ hall/bunkhouse @307, inn/tower-house @306, row-cottage/observatory @305,
 forge/potter @304 stalest standing pair at 4 sweeps; walk tools
 interior-walk-forge.ts, interior-walk-potter.ts — both ls-verified
 present on disk this tick).
+
+
+sweep-309: CLEAN SWEEP, classified double-interleave tick (78th
+consecutive quiet-or-classified). Tick-start HEAD 8e56d0e2; standing
+gate ALL PASS real exit 0 FIRST TRY (99 PASS lines, ledger law PASS,
+register 0 OPEN items). Census epoch A 359==359 vs the committed
+sweep-308 baseline (254590B sha16 284bb034): exactly ONE drift field =
+nx-carousel lib 1c0128b6->32932241 at identical tuple, comp bag exact 7
+unchanged = polish-285 warm-ceiling re-place @ 25b6f077 (ledger-named
+candidate 329322416e14bc03, PLACED_VERIFIED, served DRACO bytes keep
+ceiling node+material through re-encode 597864a6) — pre-tick commit,
+sweep-54 known-epoch class, domain-valid, not drift. Epoch B (20s-paced)
+caught exactly ONE mid-tick interleave: dress-151 @ 46949262 re-placed
+nx-dress-se-foxden-001 lib 856deec5->0ff1d071 at identical tuple
+(73,-0.0532,-10.5) yaw 4.7124 — its committed v21 foxden cure (recessed
+arch + EARTH collar, judged ~85% ACCEPT), ledger-matched line-for-line,
+domain-valid. Per the polish-270 epoch law all affected evidence was
+re-taken fresh before verdicts: SAT re-run at epoch B, standing gate
+re-run ALL PASS real exit 0 at 46949262, battery re-run, walk-band
+check (foxden r73.8 E-SE 56m+ off every tier-1/tier-2 leg — walks stand
+by construction, sweep-53 precedent; carousel bbox byte-identical per
+drift set, core walked fresh regardless). Epoch C 20s-paced re-read
+BYTE-IDENTICAL to B (cmp-verified, sha16 b2aa16ec) — stable close.
+Overlap: SAT fresh-live at both epochs, 321 bbox non-light / 241
+exempt-classified / 0 coverage holes, exit 3 on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2
+routed artwalk b26 choreography @ sweep-43, 265th sweep since routing,
+NOT new, no escalation due (law keys severity-1); both re-places added
+ZERO new entity contacts. Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually per the
+sweep-228 ceiling law — core 64/64 ALL_PASS max dist 0.380
+(next-walk-core-paths.ts, JSON parsed from first brace; support-seam
+stderr abstentions = the known normalized diagnostics set, unchanged),
+NW 5/5 ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts),
+NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts); verdicts content-anchored on status strings +
+per-leg ok counts + distances from raw files. Tier-2 287th cycle per
+the committed sweep-308 pointer: forge 6/6 ALL_PASS maxArrival 0.375
+(dists 0.261/0.307/0.300/0.315/0.375/0.261, interior-walk-forge.ts) +
+potter 6/6 ALL_PASS 0.366 (dists 0.270/0.366/0.295/0.255/0.250/0.349,
+interior-walk-potter.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (263rd consecutive clean); sweep89-battery 28/28
+PASS on census-A bytes with the carousel pin bumped
+1c0128b6->32932241 census-verified BEFORE the bump (first invocation
+correctly FAILed on the stale pin = expected classification, not a
+finding; sweep-301 geese / 304 sheep / 306 pig / 308 dovecote
+precedent); NOTE: a sibling subagent concurrently updated the battery's
+windmill/woodyard/beacon/angler pins to overhaul-era values (patch tool
+warning, file re-read post-edit, my carousel line verified in place) —
+battery on the current file is 28/28, foreign edits untouched per the
+ownership law; interlane md5 86b2936f stable, read fresh this tick;
+SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5
+c0f569d0 unchanged (285th check; 0 open candidate rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role —
+the audit-continues freeze banner governs and was read fresh via the
+loop/plan reload. Baseline lawfully rewritten like-for-like (committed
+convention = raw census bytes; asserted pre-write: diff exactly
+[nx-carousel.lib, nx-dress-se-foxden-001.lib], counts 359==359, zero
+other drift): 359 entities / 254590B / sha16 b2aa16ec7d551ee4;
+post-rewrite drift ZERO (baseline byte-identical to canonical census C,
+cmp-verified). Foreign dirt in tree (windmill overhaul scratch,
+cabin/carousel prototype dirs, client/server engine files, fleet
+shells, debug-bower scripts, moon-moth dir, fauna tools + FAUNA-PLAN,
+HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths assets) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-310): row-cottage + observatory circuit (288th cycle — LRU
+chain re-derived from committed plan pointers this tick:
+forge/potter @309 walked fresh, longhouse/garden-cottage @308,
+hall/bunkhouse @307, inn/tower-house @306, row-cottage/observatory
+@305 stalest standing pair at 4 sweeps; walk tools
+interior-walk-row-cottage.ts, struct2-walk-observatory.ts — both
+ls-verified present on disk this tick).
