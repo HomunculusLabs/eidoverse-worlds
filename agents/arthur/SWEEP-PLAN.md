@@ -13979,3 +13979,62 @@ hall/bunkhouse @307, inn/tower-house @306, row-cottage/observatory
 @305 stalest standing pair at 4 sweeps; walk tools
 interior-walk-row-cottage.ts, struct2-walk-observatory.ts — both
 ls-verified present on disk this tick).
+
+
+sweep-310: CLEAN SWEEP, fully-quiet byte-identical single-epoch tick (79th
+consecutive quiet-or-classified). Tick-start HEAD 09832683 (sweep-309's own
+close); standing gate ALL PASS real exit 0 FIRST TRY (98 PASS lines + ALL
+PASS trailer, ledger law PASS 2370926, register 0 OPEN items). Census
+epochs A/B canonical (next-live-census.ts, 254590B sha16 b2aa16ec,
+cmp-verified A==B): 359==359 (321 thing + 38 light) FULLY QUIET vs the
+committed sweep-309 baseline — 0 arrivals, 0 departures, 0 drift on all
+359 shared ids across every projection field, established by direct
+byte-identity (sha256 + cmp against the committed file, sweep-300/307
+precedent); no baseline rewrite owed (committed b2aa16ec stands as next
+sweep's baseline unchanged). HEAD unchanged across the whole tick — no
+sibling commit landed mid-tick (fauna-18's proposal at abfd6d23/8e56d0e2
+predates sweep-309's close and rides inside its ledger census note). Pool
+md5 drift explained and benign: IMPROVE-PLAN c0f569d0->7fa8a224 =
+dress-151's committed survey-74 row EXECUTED-annotation @ 46949262 (file
+clean in tree, grep-verified: zero OPEN SURVEY CANDIDATE rows, 286th
+check); sweep owns no prefix. CITY-PLAN-V2 cae6b928 unchanged, assigns
+sweep no reset role — the audit-continues freeze banner governs and was
+read fresh via the loop/plan reload. Overlap: SAT fresh-live at epoch A,
+321 bbox non-light / 240 exempt-classified / 0 coverage holes, real exit
+3 unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 — known Sev 2 routed artwalk b26 choreography @ sweep-43, 266th
+sweep since routing, NOT new, no escalation due (law keys severity-1);
+census byte-stability means no epoch-B SAT re-run owed (nothing changed).
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0, legs run individually per the sweep-228 ceiling law — core 64/64
+ALL_PASS max dist 0.380 (next-walk-core-paths.ts, JSON parsed from first
+brace; support-seam stderr abstentions = the known normalized diagnostics
+set, unchanged), NW 5/5 ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/
+0.31, ne-approach2-walk.ts), SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts); verdicts content-anchored on status strings +
+per-leg ok counts + distances from raw files (parser keyed wrong
+result-field once this tick — sweep-48 class, re-anchored from raw logs
+pre-verdict). Tier-2 288th cycle per the committed sweep-309 pointer:
+row-cottage 6/6 ALL_PASS (maxArrival 0.384, dists 0.295/0.368/0.384/
+0.294/0.362/0.307, interior-walk-row-cottage.ts) + observatory circuit
+5/5 ALL_PASS (maxArrival 0.389, dists 0.280/0.389/0.303/0.345/0.314,
+struct2-walk-observatory.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (264th consecutive clean); sweep89-battery 28/28
+PASS on census-A bytes — comp-bearing pin 32 held exactly (live count 32
+census-verified both epochs); interlane md5 86b2936f stable, read fresh
+this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Foreign dirt in tree
+(windmill overhaul scratch, cabin/carousel prototype dirs, client/server
+engine files, fleet shells, debug-bower scripts, moon-moth dir, fauna
+tools + FAUNA-PLAN, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP,
+core-paths assets) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-311): inn + tower-house (289th cycle — LRU chain
+re-derived from committed plan pointers this tick:
+row-cottage/observatory @310 walked fresh, forge/potter @309,
+longhouse/garden-cottage @308, hall/bunkhouse @307, inn/tower-house
+@306 stalest standing pair at 4 sweeps; walk tools
+interior-walk-inn.ts, interior-walk-tower-house.ts — both ls-verified
+present on disk this tick).
