@@ -708,15 +708,55 @@ lifted (recorded in the cron prompt; the plan's named core set is fully
 surveyed, so the resume queue = fresh evidence-driven re-survey of
 plaza-core under the artwalk language directive).
 
-polish-284: GATEWAY OUTAGE tick, fail-closed. Standing gate died on its
-first live fetch (verify-repairs.ts:16); direct probe: eidoverse.billding.dev
-HTTP 530 Cloudflare error 1033 (origin tunnel down) at ~08:40 EDT — gateway
-was alive at 08:20 (sweep-307's live walks). One paced retry failed
-identically → no census, no visual iteration, zero live-world claims, zero
-mutations. Local recovery work instead: closed the interrupted polish-283
+Local recovery work instead: closed the interrupted polish-283
 window's bookkeeping gap — committed its untracked production source
 (carousel-horse-prototype/, 316K, sole builder of live lib
 store/1c0128b61b510a5d) + tracked edits (plan note, legacy-guard placer
 hook, mergekit +dove_) + polish-271..282 evidence dirs incl. exact-byte
 baseline GLBs. Resume: fresh survey + first plaza-core visual iteration on
 next wake once the gateway answers.
+
+### polish-285 — carved-horse carousel warm ceiling (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-283 carved-horse fullset (live was
+  `store/1c0128b61b510a5d.glb`). First polish-lane visual iteration on the
+  new horse build (highest-value plaza-core subject after the September
+  verdict).
+- Defect (ZAI judge on exact live bytes, 18m): the under-canopy interior
+  was a pitch-black void — the fabric cone's dark bottom cap swallowed the
+  eight glow3 lanterns; night read "dark shed with horses / fireflies over
+  a black mass". Adjacent finding: same-color horse pairs merge at 18m
+  (projection, NOT contact — rollout decode already proved all six horse
+  AABBs separate; noted as future motif-geometry candidate).
+- Change (ONE intervention, new production step `carousel-horse-prototype/
+  ceiling.ts`): split the 16 down-normal cap triangles out of the merged
+  fabric bucket `cr3_4` (18 cap verts, capY 4.8098) and seat a warm self-lit
+  ceiling disc r 3.02 at y 4.7898 (2cm below the true cap plane, ribs/
+  lanterns stay above it). Base 0.87/0.76/0.58 warm cream; emissive tuned
+  0.38→[0.53, 0.31, 0.14] after the first judge pass read "just above
+  perception" (~3x dimmer than lanterns now). No new lights; fountain/
+  cistern/shrine lineage. Nodes 45→46 (documented: unique emissive material
+  cannot merge), draws 38→39.
+- Rejected intermediate: v1-v4 builds carried a NaN vertex (value-vs-index
+  bug in the split loop — `for (const k of keep)` passed VALUES to an
+  indexing helper). Caught by the review renderer's frustum gate + offline
+  NaN scan; never placed, fixed in v5.
+- Candidate `329322416e14bc0342ca9044d9acfe51c12020bbba8e42aa61d906199cc6d5e0`,
+  A/B byte-identical, NaN scan clean, 15/15 views clip-clean, bounds
+  unchanged. Judge verdict (disclosed: ZAI — no native vision tool in this
+  session): night "categorical fix, strong pass" — glow reads as a volume,
+  lantern hierarchy intact ~3x; day 18m no new defects, visibility
+  geometry-limited (shallow angle under valance) — accepted as the
+  night-criterion fix.
+- Placed via sanctioned `deploy.ts --apply` (never legacy
+  next-place-carousel.ts): PLACED_VERIFIED, 1 upload + 8 verbs, comp bag
+  (7 keys) replayed verbatim; idempotent rerun ALREADY_TARGET_VERIFIED
+  (0/0); live census exact pin; SERVED bytes decode: ceiling node +
+  material + emissive [0.53, 0.31, 0.14] survived the DRACO re-encode
+  (served sha 597864a6…, NaN scan clean).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-285-carousel-horses/`
+  (before/ = live baseline fullset + 15-view rig; after/ = candidate).
+- Next: judge-remaining candidates — horse pair separation at 18m (motif/
+  spacing, coordinate with artwalk phase log), gold spire speckle read,
+  stairs contrast; or re-survey plaza-core on fresh evidence.
+
