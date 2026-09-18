@@ -25,6 +25,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | dovecote | `nx-dress-dovecote-001` | (-50.5,0.0367,62.55) yaw 2.577 | **8f33f97f** (fauna-16/17) | NEW 2026-09-18 — potence timber dovecote + collared-dove trio (entry-ledge perch / cap ridge / ground-feeding on windfalls) at the orchard-edge meadow, facing the stile visitor approach; 6 motion comps (2 bob + 2 Y-scan + bob + peck) |
 | dairy cow | `nx-dress-cow-001` | (24,-0.02489,40.75) yaw 0.66 | **943beb2b** (fauna-21) | NEW 2026-09-18 — Jersey-class dairy cow pair at the meadow E of the pig sty (watch + grazer at the filled hay rack), 7 motion comps; the dairy chain's animal stands |
 | donkey | `nx-dress-donkey-001` | (−22.5,−0.05207,−34) yaw −1.11 | **783055bc** (fauna-23) | NEW 2026-09-18 — standard donkey pair (watch + grazer at straw) under a lean-to field shelter on the SW meadow, 1.433m from the sheep fold — the flocks' guardian stands with its flock; 7 motion comps |
+| turkey | `nx-dress-turkey-001` | (45.25,−0.03869,−6.5) yaw −1.15 | **5a3c1cf5** (fauna-24) | NEW 2026-09-18 — bronze turkey pair (tom in full strut display + foraging hen) in the poultry yard E of the hutch with roost beam + scratch pad, facing WNW toward the visitor lane; 7 motion comps — the barnyard's loudest bird joins the hens |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -202,25 +203,64 @@ domain is commons-next `nx-dress-*` fauna only.
     flank plates + darker cross + ear cant halved + watch +x (judge: X
     ears, fused pair) → v7 lighter DUN 0xa69c90 + taller flank plates
     (left-view shade-side cure) — 7 build versions, 7 judged rounds.
-15. **[QUEUED fauna-24, 2026-09-18] turkey — homestead proposal (queue
-    empty again after the donkey; loop law: propose ONE homestead
-    species, append candidate, end tick).** Village logic: the barnyard
-    BIRDS are now complete by district (hens/coop, doves/orchard, owl/
-    livery, robin+ducks+geese/pool) — but the loudest, most characterful
-    barnyard bird of Bill's homestead language is missing: the **turkey**.
+15. **[CLOSED fauna-24, 2026-09-18] turkey — proposed fauna-24, BUILT + SEATED
+    fauna-24 (2026-09-18).** ONE entity `nx-dress-turkey-001`: a bronze
+    turkey PAIR — turkey_a the TOM in full strut display (13-plume
+    fanned tail with pale-cream cresting caps, dropped wing curtains
+    with pale under-curtain, deep breast, raised blue-gray head with
+    snood over beak + wattle on chin + forward eyes) + turkey_b the HEN
+    foraging head-down at grit — plus the yard furniture: low roost beam
+    (2 posts + beam), scratch pad, grit + straw scatter. **v10 sha16
+    5a3c1cf516f8921c** (full 5a3c1cf516f8921cb67e9857ee0fd7f4b397d6e0
+    6891917b94213eddfe4e005 — judge-SHIP bytes: 18m SHIP on final bytes
+    ×2 + fanprobe SHIP + tomface SHIP rev5 + henface SHIP; decode GREEN
+    + RED control; 3370 tris / 25 calls; deterministic ×2). 7 motion
+    comps live: 2 breathing bobs + tom head-scan Y (.28/7.5s) + FAN
+    slow sway Y (.05/5.5s — the display breathes) + wing strut-shiver Z
+    (.05/1.1s) + hen peck X (.22/2.9s) + hen tail flick Z. Engine-true
+    motion pairs: 475px@18m band 430–526, 4685px near band 289–642.
+    **Seat: (45.25, −0.03869, −6.5) yaw −1.15** — fauna24-seat-sweep
+    best of 408 qualifying (worst solid gap 1.844m vs nx-town-stable —
+    the poultry yard's own design adjacency); pair faces WNW toward the
+    visitor lane (facing = (sin,cos) yaw law) — the fan plane faces the
+    lane reader; roost beam shelters the E weather side. Terrain 9pt
+    spread 2.0mm, PY = live heightAt −0.03869. Census 365→366 exactly
+    (sibling +1 mid-arc absorbed by fresh-census law), 8 verbs
+    (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated,
+    walk ALL_PASS 3/3 (18m coop-yard lane W→E, arrivals 0.00/0.30/0.31m),
+    live bbox 2.56×1.133×2.215 == decode envelope. Village logic
+    closed: the barnyard's loudest, most characterful bird stands beside
+    the hens — the poultry yard is complete. Build arc: v1 fan bands
+    invisible → v2 band 0xd9c9a6 (pixel probe + two-box A/B isolation:
+    material pipeline proven correct, value too dark — lit (120,100,70)
+    at meadow luminance) → v3 0xe8dcc2 pale cream (lit ≈(155,145,120),
+    reads from rear + both sides) → v4 cresting caps +0.045 past plume
+    ends + outer rays +0.03 → v6 wing stick-primaries DELETED for a
+    broad pale under-curtain (goose saddle law — sticks read as debris)
+    → v7 head ×1.2 + blend + eyes proud → v8 snood raised/wattle
+    lowered → v9 snood shortened to mid-beak + shards deleted → v10
+    head raised +60mm (breast-crest arithmetic: v9 wattle bottom 0.617
+    vs breast line 0.623 — occluded by construction; cleared to 0.677)
+    — 10 build versions, 8 judged rounds.
+16. **[QUEUED fauna-25, 2026-09-18] peacock — homestead proposal (queue
+    empty after the turkey; loop law: propose ONE homestead species,
+    append candidate, end tick).** Village logic: with the barnyard
+    complete (hens+ducks+geese+doves+owl+robin+turkey), the one SHOW
+    bird of the traditional village menagerie is missing — the peacock.
     Species sketch (next tick's build): ONE entity
-    `nx-dress-turkey-001`, TRUE-SIZE — a bronze-turkey pair or small
-    trio: tom in full strut display (fanned tail — THE marker, a fan of
-    ~12 dark band-tipped plumes + dropped wings + snood+wattle at the
-    breast) + hen foraging head-down; iridescent bronze body 0x6e5335,
-    barred wings, pale primary tips (the bronze edging), blue-gray head
-    with red wattles. Furniture: a low roost beam on two posts or a
-    scratch yard patch. Motion ~7 comps (strut is STATIC geometry + bob +
-    head-scan; fan tail slow sway; peck pendulum). Seat final at build
-    tick by full OBB-vs-OBB sweep + terrain preflight + live walk
-    (seat-scan law). Candidate zone (census-backed next tick): the
-    barnyard S of the coop (the poultry yard, beside the hens — turkeys
-    are the coop's classic companions).
+    `nx-dress-peacock-001`, TRUE-SIZE — a single cock in full display OR
+    a resting pair: THE tail train (a vertical eye-spotted fan is the
+    turkey's read already taken — the peacock's marker must differ: the
+    TRAIN trails BEHIND and ABOVE in a sweeping arc of ~20 plumes each
+    carrying a blue-green EYE, plus the royal-blue neck + crest crown of
+    tiny stems); body 0x2a5d8c blue, train plumes 0x3d6b4f green-bronze
+    with 0x1f8fa8 eye disks ringed gold. Furniture: a low stone plinth
+    or orchard-lawn seat. Motion ~6 comps (bob + crest-nod + train slow
+    sway + head-scan + tail flick + wing shuffle). Seat at build tick by
+    sweep + terrain + walk. Candidate zone: the orchard-edge meadow near
+    the dovecote (show birds belong where visitors stroll) or the inn
+    front lawn (the classic English-village peacock lawn) — census-backed
+    next tick.
 
 ## Per-species rebuild records
 
@@ -336,10 +376,18 @@ domain is commons-next `nx-dress-*` fauna only.
 - PLACEMENT CLOSED (fauna-17, 2026-09-18): sequencer recovered from the fauna-16 mid-tick outage; the placer ran fresh (its SAT gate caught the sub-1.4 adjacency and hard-stopped — zero verbs — before the seat re-sweep above).
 - Rig/decode laws learned: (a) **a misrotated band torus = a fin in the wrong plane** — always derive the band-plane normal from the geometry it wraps, and verify proud-element extents ARITHMETICALLY (this collar was 100% invisible in v3); (b) **a proud-but-thin band reads as a groove** — species markers need band LENGTH along the limb axis + enough radial crest to break the silhouette + a color warm enough to read as plumage (void-black reads as a gap/shadow); (c) whitewash/lived-in marks must START at their physical source (under the perch) — free-floating specks on other faces read as render artifacts; (d) a diagonal brace must EMBED at both joints — a kissing brace reads detached (fauna-11 neck-weld kin, applied to timber); (e) trunk-column clustering uses the LOW ring (y<0.3) of merged trunk meshes — mid-height bands find zero verts (probe pitfall 1: end-face-only ring verts), and a 14.5m bbox can be pure crown overhead; (f) when the terrain-WS preflight is blocked, a sibling-IDW PY with low-embed bias + a ±5mm disclosure + a one-verb-pair recovery path is honest, but a live heightAt stays the law when the door reopens.
 
+### turkey — fauna-24 (2026-09-18) CLOSED
+- **v10 sha16 5a3c1cf516f8921c** (full 5a3c1cf516f8921cb67e9857ee0fd7f4b397d6e06891917b94213eddfe4e005), NEW entity `nx-dress-turkey-001` PLACED_VERIFIED at world (45.25, −0.03869, −6.5) yaw −1.15 scale 1 — the poultry yard E of the hutch, pair facing WNW toward the visitor lane (the fan plane faces the lane reader by construction); roost beam shelters the E weather side. Terrain preflight at the FINAL tuple: 9pt spread 2.0mm, PY −0.03869. SAT preflight 19 neighbors: worst gap 1.844m (nx-town-stable — the yard's own design adjacency). Census 365→366 exactly (sibling +1 mid-arc absorbed), 8 verbs (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m coop-yard lane W→E, arrivals 0.00/0.30/0.31m; foreign support-seam stderr = temple/woodstack/skeps/logpile/ne-yard class, not ours), live bbox 2.56×1.133×2.215 == decode envelope (2.56×1.128×2.215 pre-rounding).
+- Build: a bronze turkey PAIR (ONE entity, TRUE-SIZE authored directly — fauna-13/19/21/23 law): turkey_a the TOM in full strut — deep-breasted three-mass body 0x6e5335 (hull + puffed breast + raised rear), 13-plume FAN in the vertical plane at the raised rear (0.078-wide plumes 0x4a3826, per-ray length variation ±0.03 + tilt ±0.07, outer rays +0.03 so their caps break against sky) each capped with a PALE-CREAM terminal band 0xe8dcc2 (0.155 long × 0.020 thick, cresting 45mm PAST the plume end — reads from both light sides), dropped wing curtains with broad pale under-curtains peeking at the trailing edge, dark beard tuft at the breast, raised blue-gray head 0x8fa3ac (×1.2 skull + neck blend) with snood 0xd24a38 draped over the beak top (ending mid-beak), separate wattle on the chin cleared 50mm above the breast line, forward-set dark eyes proud 5mm, thick pink-gray legs; turkey_b the HEN foraging — earth-brown 0x7d6248 hull + wing seams, ONE TubeGeometry neck dipped to pitch 0.85 with the head joint y set by pitch-arithmetic (deepest member +6mm), blue-gray head + small red wattle + dark beak at the grit, thickened legs. Furniture: roost beam (2 posts + beam, stile family, west-shifted off the hen's screen column), TROD-family scratch pad, 6 grain specks at the composed peck point, 3 straw wisps. Anchors turkey_a/_head/_fan/_wings + turkey_b/_head/_tail (7 KEEP groups; `turkey_` added to mergekit KEEP this tick — collision-proof prefix). 3370 tris, 25 draw calls.
+- Motion: 7 comps live — 2 breathing bobs (.006/4.3s tom, .005/4.7s hen — eighteenth+nineteenth village exercise of part bob), tom head-scan Y (.28/7.5s), FAN slow sway Y (.05/5.5s — the display breathes), wing strut-shiver Z (.05/1.1s), hen peck X (.22/2.9s), hen tail flick Z (.18/2.2s); phases staggered, epoch t0. Motion proven engine-true on final bytes at both framings (475px diff @ 18m band 430–526; 4685px near band 289–642); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc (ZAI fallback, native debt NATIVE-16 below): 10 build versions, 8 judged rounds. 18m v1 SHIP first round (fan carries) → fanprobe v1 FAIL (bands invisible — pixel probe confirmed ZERO tan px in the fan region) → **A/B isolation (two boxes, identical pipeline)**: material pipeline proven CORRECT, value 0xc9b896→0xd9c9a6 too dark (lit (120,100,70) = meadow luminance) → v3 0xe8dcc2 lit ≈(155,145,120) reads → fanprobe rev2 FAIL (shaded-side rays bandless + floating feather specks) → v4 cresting caps + grounded specks → fanprobe rev3 FAIL-narrow (wing primaries invisible, fragment cluster reads debris) → v6 stick-primaries DELETED for broad pale under-curtains + outer rays +0.03 → fanprobe rev4 **SHIP** (arc/bands/root/wings/defects all pass) → 18m re-SHIP on v6 bytes → tomface FAIL ×3 (blank face → eyes INSIDE skull z-span, struct-52; one red column → snood/wattle merged; wattle occluded by breastline — arithmetic proved 0.617 vs 0.623) → v7 head ×1.2 + eyes proud → v8 separation → v9 snood shortened + shards deleted → v10 head +60mm → tomface rev5 **SHIP** + henface **SHIP** (hen wattle sub-pixel disclosed; the tom's face carries the encounter red) + 18m final **SHIP** on v10 bytes.
+- Rig/decode laws learned: (a) **a lit-value probe must be calibrated to LIT pixels, not albedo** — COLOR_0 values render at ~0.75–0.85× under rig lighting; a probe window on albedo finds zero pixels and looks like a dead material (cost: one whole iteration); the two-box A/B through the exact build+export pipeline is the decisive instrument and doubles as the calibration source; (b) **a species-marker band must CREST past its plume** — an in-plane band on a thin box is visible only from its lit side; a proud cap reads from both (shorse blaze law, generalized to feathers); (c) **thin stick feathers below a curtain read as DEBRIS, not plumage** — broad connected two-tone masses carry (goose saddle law, third application); (d) **red-face anatomy stacks into one column when the snood tip reaches the beak bottom** — separate the two red shapes by height (snood ends mid-beak, wattle hangs from the chin BELOW the beak line), and clear the whole head subtree above the breast-crest line by arithmetic before judging; (e) **the 18m banding rhythm reads as a scalloped fringe, not distinct bars** — acceptable (silhouette carries), disclosed per the judge's own note; (f) judge-flagged "stray shards" for three rounds were the molted-feather props — decoration that reads as defect is defect; deleted.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-16 | fauna-24 (2026-09-18) | turkey v10 5a3c1cf5 gameplay + fanprobe + tomface + henface frames (`reviews/fauna24-turkey/new-{gameplay,fanprobe,tomface,henface}.png`) — fallback arc stands (18m SHIP on final bytes + fanprobe SHIP + tomface SHIP rev5 + henface SHIP; hen wattle sub-pixel + 18m fringe-not-bars residuals disclosed) until natively confirmed |
 | NATIVE-15 | fauna-23 (2026-09-18) | donkey v7 783055bc gameplay + right + left frames (`reviews/fauna23-donkey/new-{gameplay,right,left}.png`) — fallback arc stands (18m SHIP on final bytes + right SHIP + muzzle PASS + tails both confirmed; left-view FAIL pixel-probe-falsified at median lum 116; roundness residual disclosed) until natively confirmed |
 | NATIVE-14 | fauna-21 (2026-09-18) | dairy cow v5 943beb2b gameplay + right + closeface + ultraface frames (`reviews/fauna21-cow/new-{gameplay,right,closeface,ultraface}.png`) — fallback arc stands (18m SHIP + profile SHIP + ultraface SHIP + closeface SHIP on final bytes; grazer-udder-in-head-down disclosed) until natively confirmed |
 | NATIVE-13 | fauna-19 (2026-09-18) | stable horses v3 6ef0e86c gameplay + near + right frames (`reviews/fauna19-shorse/new-{gameplay,near,right}.png`) — fallback arc stands (18m SHIP, near anatomy sound w/ minor neck-seam style note, profile tails attached + rail clearance judged; one judge timeout retried once) until natively confirmed |
