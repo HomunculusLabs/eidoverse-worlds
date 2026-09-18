@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 364,
+  "count": 366,
   "entities": [
     {
       "id": "beb4c791",
@@ -2299,7 +2299,7 @@
       ],
       "yaw": 2.35619,
       "scale": 1,
-      "lib": "store/429cde23a16d1c17.glb",
+      "lib": "store/08ce1189b2d4b42b.glb",
       "bbox": {
         "min": [
           -3.55,
@@ -6901,6 +6901,150 @@
       "comp": {}
     },
     {
+      "id": "nx-dress-turkey-001",
+      "kind": "thing",
+      "pos": [
+        45.25,
+        -0.03869,
+        -6.5
+      ],
+      "yaw": -1.15,
+      "scale": 1,
+      "lib": "store/5a3c1cf516f8921c.glb",
+      "bbox": {
+        "min": [
+          -1.26,
+          -0.005,
+          -1.065
+        ],
+        "max": [
+          1.3,
+          1.128,
+          1.15
+        ],
+        "size": [
+          2.56,
+          1.133,
+          2.215
+        ],
+        "center": [
+          0.02,
+          0.561,
+          0.042
+        ]
+      },
+      "compKeys": [
+        "motion:turkey_a",
+        "motion:turkey_a_fan",
+        "motion:turkey_a_head",
+        "motion:turkey_a_wings",
+        "motion:turkey_b",
+        "motion:turkey_b_head",
+        "motion:turkey_b_tail"
+      ],
+      "comp": {
+        "motion:turkey_a": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4.3,
+          "phase": 0.3,
+          "t0": 1789762544321
+        },
+        "motion:turkey_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.28,
+          "period": 7.5,
+          "phase": 0,
+          "t0": 1789762544321
+        },
+        "motion:turkey_a_fan": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.05,
+          "period": 5.5,
+          "phase": 1.2,
+          "t0": 1789762544321
+        },
+        "motion:turkey_a_wings": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.05,
+          "period": 1.1,
+          "phase": 0.7,
+          "t0": 1789762544321
+        },
+        "motion:turkey_b": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.7,
+          "phase": 2.2,
+          "t0": 1789762544321
+        },
+        "motion:turkey_b_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 2.9,
+          "phase": 0.8,
+          "t0": 1789762544321
+        },
+        "motion:turkey_b_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.18,
+          "period": 2.2,
+          "phase": 1.5,
+          "t0": 1789762544321
+        }
+      }
+    },
+    {
       "id": "nx-dress-well",
       "kind": "thing",
       "pos": [
@@ -8943,6 +9087,42 @@
           -0.009,
           1.467,
           0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-csaszar",
+      "kind": "thing",
+      "pos": [
+        -63.116114,
+        -0.02747,
+        19.296533
+      ],
+      "yaw": 1.343904,
+      "scale": 1,
+      "lib": "store/299e6d7d0c0d9c15.glb",
+      "bbox": {
+        "min": [
+          -2.681,
+          0,
+          -2.75
+        ],
+        "max": [
+          2.681,
+          2.335,
+          2.478
+        ],
+        "size": [
+          5.362,
+          2.335,
+          5.228
+        ],
+        "center": [
+          0,
+          1.168,
+          -0.136
         ]
       },
       "compKeys": [],
