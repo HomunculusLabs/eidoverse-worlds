@@ -6293,4 +6293,6 @@ fixes ≈ 6 F.)
 
 - [sweep-313] CLEAN SWEEP — classified-flip single-interleave epoch-corrected tick (82nd consecutive quiet-or-classified); polish-288 carousel canopy-fabric night cure 01445878->e16a1bc0 identical tuple comp bag exact 7 bbox byte-identical ledger-matched @ dd7953c7; SAT 323/241/0 exit 3 on ONLY known R-121 (269th, no escalation due); tier-1 81/81 ALL_PASS, tier-2 291st longhouse+garden-cottage ALL PASS; pins 15/15 (267th), battery 28/28 RED-then-GREEN carousel-lib census-verified; gate ALL PASS exit 0 first try at 729dc132 + re-run dd7953c7; baseline rewritten 361/258001B/5c17a8c6 drift ZERO; zero mutations (D+0, E+0)
 
+- [dress-155] 44th post-close lawful HOLD: gate ALL PASS real exit 0 at 05d34e2d (sweep-313); probe HOLD_VERIFY_PASS census 361 steady +0/-0 with ONE classified move nx-carousel lib swap 01445878->e16a1bc0 identical tuple (polish-288 canopy night cure, polish domain, not routed); zero dress-domain drift, pins 5/5 EXACT worst 0.000035; prompt's stale dress-77 pending claim re-confirmed FALSE at source; siblings struct-225 banked-not-placed/polish-288/sweep-313 named foreign; shard EMPTY zero intake; Bill eye-gate 12cec3fa unchanged, bellows a/b/c + SW lamp a/b/c rulings owed; zero mutations (D+0, E+0) (D+0, E+0)
+
 **Running total: 2370932 / 2000000**
