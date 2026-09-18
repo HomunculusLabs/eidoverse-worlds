@@ -1,6 +1,75 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-151 — survey-74 foxden CURE (post-close, PLACED) + interrupted-window recovery claimed fresh
+
+- **Intake executed this tick**: survey-74 (IMPROVE-PLAN row, read fresh)
+  Sev-3 silhouette finding on `nx-dress-se-foxden-001` — dress-domain, my
+  SE fleet, actionable (not legacy-core, not Bill's call; dress-142 class).
+- **Interrupted-window recovery, disclosed**: a 09:23 window had claimed
+  dress-151 and died on gateway 502 mid-probe (`/tmp/dress151-out.txt`,
+  tag never landed; ledger max was dress-150). Claimed the tag fresh this
+  tick, re-derived anchors from committed sources only (sweep-308's
+  359-entity baseline replaced the tmp-rotated dress-150 capture). One
+  probe self-catch: first run failed on fleet count 30≠29 — resolved at
+  source: `nx-dress-se-fox-001` is fauna-5's den fox (district-shaped id,
+  FAUNA-PLAN row 15 pins it at the dress-built den); probe now carries the
+  explicit fauna-owned set. HOLD_VERIFY_PASS exit 0 (census 359 ==
+  baseline, +0/−0/0, pins 5/5, zero dress drift) — then intake converted
+  the hold into the cure cycle.
+- **Confirm-or-drop (ZAI fallback, cron class — native debt NATIVE-13)**:
+  both banked survey frames CONFIRMED (front ~90%: hole outside mound
+  silhouette, no mound above it, abutting-mesh edge break; gameplay
+  88/85/80%: dome face contains ZERO dark pixels — the opening read
+  lived entirely in the attached clumps). Source decode agreed before any
+  edit: at the arch's x (~0.34) the bank face is at grade — the arch
+  stood proud with nothing enclosing it; the fan's relief was y-0.012
+  circle films.
+- **Cure arc (4 judged rounds, all ZAI fallback)**: v18 cdaaf7bc close4
+  CURED ~85% (one enclosed opening, unified threshold, warm 0x1c1209,
+  zero floats) but approach18 split — entrance contained at primary read,
+  residual dark nubs (the v3 rim-ring chunks) + berm flat at 18m (no
+  value step pale-on-pale) + pad invisible. v19 52566524: rim-ring
+  DELETED (collar supersedes), SPOIL2 crest caps ride the berm spine,
+  scattered chunks bright + spine-clustered, TROD brightened — entrance
+  CURED 0.8, spoil ridge CURED 0.7, identity PASS 0.8, pad marginal. v20
+  6b683cb9: +z counter-lobe film deleted (one-way throw + apron cleared),
+  pads enlarged, tail cap. v21 0ff1d071f5f4daab: pad pushed forward off
+  the bank line + warmed one step (0x97836a) — **ACCEPT ~85%**, pad 70%
+  (judge's accept, watch item: pad–fan boundary under raking light),
+  zero regressions. All rebuilds deterministic ×2; decode ALL PASS every
+  round; envelope byte-identical v17→v21 (x −1.704..3.053, y −0.064..
+  0.800, z −2.411..2.708, center (0.675, 0.148)) — same-tuple re-place,
+  no re-siting. fauna-5 fox zone honored (collar x≤0.55, spoil −z, pads
+  y 0.011-0.012 beneath the sleeping fox).
+- **Re-place (dress-142 migration class)**:
+  `se-dress151-foxden-place.ts` — old-lib-or-new-lib gate, TRUE-dims OBB,
+  SAT preflight clear (no sub-1.4m adjacency), rim 70.69..76.39 ∈
+  [70,100] (city-plan band); remove+spawn 2 verbs **PLACED_VERIFIED**
+  exact tuple (73.0, −0.0532, −10.5) yaw 4.71238898038469 lib
+  `store/0ff1d071f5f4daab.glb`; fauna fox verified intact both passes;
+  idempotent rerun 0 verbs.
+- **Bookkeeping**: IMPROVE-PLAN survey-74 foxden row annotated
+  `[EXECUTED dress-151]` same tick; ledger dress-151 D+2 E+0; gate ALL
+  PASS real exit 0 at 3f32b8a4 pre-mutation; interlane 86b2936f
+  re-read fresh this tick.
+- **Lamp budget**: SE spend 0 of 8 — static unlit, no draw.
+- **Eye-check for Bill**: SE wild past the ruled tower at the south tree
+  line — the den mouth should now read as a dark opening set INTO the
+  earth bank (not a dark clump beside it), with a raised pale spoil
+  ridge thrown one way and a worn pad at the mouth. The sleeping fox is
+  untouched. Before/after:
+  `reviews/dress151-foxden-cure/before/` → `reviews/dress151-foxden-cure/v21/`.
+- **Blocked-on-Bill unchanged**: bellows a/b/c + SW lamp a/b/c rulings
+  still owed (eye-gate md5 12cec3fa) — either one-line ruling releases
+  further placement work.
+
+**True pin ids (copy from here, not prose):**
+`nx-dress-se-foxden-001` 0ff1d071 · `nx-dress-sw-lanternhook-001`
+639c5480 · `nx-dress-sw-seats-001` cb34bd36 ·
+`nx-dress-se-streamstones-001` aabbc23d ·
+`nx-dress-ne-timberyard-001` dfafb8c8
+
 ### dress-150 — lawful HOLD (40th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
@@ -1462,6 +1531,9 @@
 
 
 ## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
+- survey-74 foxden row EXECUTED dress-151 (cure v21 0ff1d071 re-placed
+  same tuple; see the dress-151 entry above). The remaining survey-74
+  findings route to non-dress domains.
 - survey-74 (2026-09-08, NATIVE first read, 18m gameplay, fresh live
   store bytes served-sha16 1f4e66dd on lib 856deec5,
   reviews/survey74-slice/foxden/{gameplay,front}.png):

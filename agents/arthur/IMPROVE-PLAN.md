@@ -1837,6 +1837,16 @@ served-sha16 pins, byte-identical to survey-62..73 pins where they stand):
   dress-domain: routes to DRESSING-PLAN intake, candidate row here for
   round-N+1 (improve intake surface per district precedent — dress lane
   owns execution). Evidence: reviews/survey74-slice/foxden/{gameplay,front}.png
+  [EXECUTED dress-151: both frames ZAI-CONFIRMED (front ~90%, gameplay
+  88/85/80%), source decode agreed — arch stood proud of the bank face
+  (face at grade at the arch's x), fan carried by y-0.012 films. Cure v21
+  0ff1d071f5f4daab re-placed same tuple: recessed arch + EARTH collar
+  (enclosing lumps over crown + proud cheeks), MOUTH warmed 0x1c1209,
+  threshold unified, dark rim-ring DELETED, tapering spoil berm with
+  bright crest spine (h 0.20→0.06), one-way throw enforced, worn pad
+  forward + warmed. ACCEPT ~85%, 4 judged rounds, native debt NATIVE-13
+  (cron class). PLACED_VERIFIED + idempotent 0 verbs; fox companion
+  verified intact.]
 
 funguslogs/snagdead/stones CLEAN first-reads (see SURVEY-PLAN judged index);
 mossbowls NOT JUDGED — store 404 x2 on lib 5d698bd5 (fail-closed, zero

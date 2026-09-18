@@ -58,8 +58,8 @@ def read_prim(prim):
 print("nodes:", len(g["nodes"]))
 # bucket by nearest authored color (COLOR_0 quantizes: 0x100b07 -> 0x010101 bytes)
 AUTHORED = {
-    "100b07": "MOUTH", "5a6e46": "TURF", "6b5a44": "EARTH", "7a6650": "EARTH2",
-    "8f7a58": "SPOIL", "9c8862": "SPOIL2", "7d7a72": "STONE", "71624c": "TROD",
+    "1c1209": "MOUTH", "5a6e46": "TURF", "6b5a44": "EARTH", "7a6650": "EARTH2",
+    "8f7a58": "SPOIL", "9c8862": "SPOIL2", "7d7a72": "STONE", "8a7862": "TROD",
 }
 def bucket_of(h):
     r, gg, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
