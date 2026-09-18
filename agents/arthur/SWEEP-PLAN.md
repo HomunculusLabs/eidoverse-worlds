@@ -13698,3 +13698,68 @@ forge/potter @304, hall/bunkhouse @303, longhouse/garden-cottage @302,
 inn/tower-house @300 stalest standing pair at 5 sweeps; walk tools
 interior-walk-inn.ts, interior-walk-tower-house.ts — both ls-verified
 present on disk this tick).
+
+
+sweep-306: CLEAN SWEEP, arrival-fold tick (75th consecutive
+quiet-or-classified). Tick-start HEAD 563d1508 = fauna-14's own pig sty
+placement close (ledger census 357->358 named there); standing gate ALL
+PASS real exit 0 FIRST TRY (98 PASS lines + ALL PASS trailer, ledger law
+PASS 2370921, register 0 OPEN items). Census epoch A 357->358 vs the
+committed sweep-305 baseline (249918B sha16 7f237a02): exactly ONE
+domain-valid arrival nx-dress-pig-001 @ (15.0, -0.021261, 40.2) yaw 0.66
+lib store/a49187024127dcd8.glb scale 1 kind thing, comp bag exactly 6x
+motion:pig_{a,b}_{,head,tail} (bob/pendulum/pendulum per member, shared
+t0 1789728967406) — tuple matches the committed fauna-14 ledger @
+563d1508 line-for-line incl. placer pin; 0 departures, 0 drift on all
+357 shared ids across id/pos/yaw/lib/scale/kind/bbox/compKeys. Epoch B
+20s-paced re-read byte-identical to A (252322B sha16 1b9ac38ba3df0d9f,
+cmp-verified), HEAD unchanged — single-epoch stable, no interleave. Pig
+r42.9 NE sits 18.93m from the NE approach polyline (seg 2 t=0.428) and
+27.9m/45.4m from the tier-2 targets (tower-house/inn) — OUTSIDE the
+re-verify band; all walks ran fresh this tick regardless (arrival is
+pre-tick committed, world state pig-inclusive for every leg). Overlap:
+SAT fresh-live 320 bbox non-light / 240 exempt-classified / 0 coverage
+holes, real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26
+choreography @ sweep-43, 262nd sweep since routing, NOT new, no
+escalation due (law keys severity-1); the arrival added ZERO new entity
+contacts, corroborating fauna-14's own decoded member-box SAT (worst
+3.164m harvest cart). Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually per the sweep-228 ceiling
+law — core 64/64 ALL_PASS max dist 0.380 (next-walk-core-paths.ts, JSON
+parsed from first brace past the [physics] banner; support-seam stderr
+abstentions = the known normalized diagnostics set, unchanged), NW 5/5
+ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW
+5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts). Tier-2
+284th cycle per the committed sweep-305 pointer: inn 6/6 ALL_PASS
+(maxArrival 0.364, interior-walk-inn.ts) + tower-house 6/6 ALL_PASS
+(0.3765, dists 0.245/0.245/0.2625/0.3765/0.3742/0.3091,
+interior-walk-tower-house.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (260th consecutive clean); sweep89-battery 28/28
+PASS real exit 0 — comp-bearing pin record 31->32 census-verified BEFORE
+the bump (live count 32, 32nd bearer = exactly the pig; first invocation
+correctly FAILed 31-vs-32 = expected classification, bump per the
+sweep-301 geese / sweep-304 sheep precedents, not a finding); interlane
+md5 86b2936f stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read
+fresh. Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (282nd check;
+0 open candidate rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928
+unchanged, assigns sweep no reset role — the audit-continues freeze
+banner governs and was read fresh via the loop/plan reload. Baseline
+lawfully rewritten like-for-like (committed convention = raw census
+bytes; asserted pre-write: diff exactly [arrival nx-dress-pig-001],
+counts 357->358, zero shared-id drift): 358 entities / 252322B / sha16
+1b9ac38ba3df0d9f; post-rewrite drift ZERO (baseline byte-identical to
+canonical census B, cmp-verified). Foreign dirt in tree (windmill
+overhaul scratch, cabin/carousel prototype dirs, client/server engine
+files, fleet shells, debug-bower scripts, moon-moth dir, fauna tools +
+FAUNA-PLAN.md, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths
+assets) is sibling work-in-flight, untouched per the ownership law. Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-307):
+hall + bunkhouse (285th cycle — LRU chain re-derived from committed
+plan pointers this tick: inn/tower-house @306 walked fresh,
+row-cottage/observatory @305, forge/potter @304, hall/bunkhouse @303
+stalest standing pair at 3 sweeps; walk tools interior-walk-hall.ts,
+interior-walk-bunkhouse.ts).
