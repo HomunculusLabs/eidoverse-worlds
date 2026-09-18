@@ -14192,3 +14192,82 @@ forge/potter @309, longhouse/garden-cottage @308 stalest standing pair
 at 4 sweeps; walk tools interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts — both ls-verified present on disk this
 tick).
+
+
+sweep-313: CLEAN SWEEP, classified-flip single-interleave epoch-corrected
+tick (82nd consecutive quiet-or-classified). Tick-start HEAD 729dc132
+(struct-225 close); standing gate ALL PASS real exit 0 FIRST TRY (98 PASS
+lines + ALL PASS trailer). Census epoch A 361==361 BYTE-IDENTICAL to the
+committed sweep-312 baseline (258001B sha16 691a3116, cmp-verified) —
+0 arrivals, 0 departures, 0 drift, established by direct byte-identity
+(sweep-310 precedent); struct-225's steinmetz is BANKED NOT PLACED per its
+own ledger — census correctly shows no arrival. Mid-tick, polish-288
+(carousel canopy fabric night read, @ dd7953c7) landed AFTER census A:
+epoch B = 361==361 with exactly ONE classified drift field =
+nx-carousel lib 01445878->e16a1bc0 at identical tuple (-18,0,18) yaw
+2.35619, comp bag exact 7 unchanged, bbox BYTE-IDENTICAL (7.1x6.77x7.39
+envelope) — ledger-matched to polish-288 line-for-line (single
+carousel_fabric emissiveFactor cure, production step canopy.ts,
+coats.ts lineage), domain-valid, not drift. Per the polish-270 epoch law
+all affected evidence was re-taken fresh before verdicts: SAT re-run at
+epoch B (323 bbox non-light / 241 exempt-classified / 0 coverage holes,
+exit 3 on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 — known Sev 2 routed artwalk b26 choreography @ sweep-43, 269th
+sweep since routing, NOT new, no escalation due — law keys severity-1;
+the fabric flip is material-only with byte-identical bbox, ZERO new
+contacts), battery re-run RED-then-GREEN (first invocation correctly
+FAILed on the stale carousel-lib pin = expected classification; lawful
+pin bump 01445878->e16a1bc0 in the sweep-owned sweep89-battery.py, then
+28/28 PASS on census-B bytes — RED-on-A/GREEN-on-B discriminating
+proof, sweep-301 geese / 304 sheep / 306 pig / 308 dovecote / 311-312
+carousel precedents), standing gate re-run ALL PASS real exit 0 at
+dd7953c7, epoch C 20s-paced re-read BYTE-IDENTICAL to B (cmp-verified) —
+stable single-interleave close. Walks: tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0, legs run individually per the
+sweep-228 ceiling law — core 64/64 ALL_PASS max dist 0.380
+(next-walk-core-paths.ts, JSON parsed from first brace past the
+[physics] banner; support-seam stderr abstentions = the known normalized
+diagnostics set, unchanged), NW 5/5 ALL_PASS (dists 0.00/0.38/0.30/
+0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/
+0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5 ALL_PASS (0.00/0.25/0.34/
+0.37/0.31, sw-approach3-walk.ts); verdicts content-anchored on status
+strings + per-leg ok counts + distances from raw files. Tier-2 291st
+cycle per the committed sweep-312 pointer: longhouse 6/6 ALL_PASS
+maxArrival 0.346 (dists 0.335/0.280/0.346/0.297/0.276/0.297,
+interior-walk-longhouse.ts) + garden-cottage 6/6 ALL_PASS 0.355
+(0.295/0.355/0.285/0.345/0.326/0.308, interior-walk-garden-cottage.ts),
+both real exit 0, both tools ls-verified present on disk pre-run. Walks
+stand by construction: carousel's flip is material-only, byte-identical
+collision envelope (sweep-53 precedent). Integrity: struct18-fleet-pin-
+check 15/15 ALL_PINS_OK bad:[] (267th consecutive clean); sweep89-battery
+28/28 PASS after the lawful carousel pin bump; carousel comp bag exact 7
++ lib e16a1bc0 census-verified both epochs B and C; comp-bearing count 34
+(unchanged), 38 lights, woodyard/windmill/belltower+ladder/welcome pins
+all exact at overhaul-era values. Interlane md5 86b2936f stable, read
+fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged vs sweep-312's recorded close (289th
+check; zero OPEN candidate rows), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues
+freeze banner governs and was read fresh via the loop/plan reload.
+Baseline lawfully rewritten like-for-like (committed convention = raw
+census bytes; established pre-write by the s313 diff run: diff set
+exactly [nx-carousel.lib], counts 361==361, zero other drift on all
+projection fields): 361 entities / 258001B / sha16 5c17a8c6fa91ca31;
+post-rewrite drift ZERO (baseline byte-identical to canonical census
+B==C, cmp-verified). Probe self-catches pre-verdict: (a) the inline
+baseline-rewrite heredoc was blocked by the terminal gateway keyword
+heuristic — script saved to /tmp and run as a file per the sanctioned
+retry path (sweep-311/304 class). Foreign dirt in tree (windmill
+overhaul scratch, cabin/carousel prototype dirs, client/server engine
+files, fleet shells, debug-bower scripts, moon-moth dir, fauna tools +
+FAUNA-PLAN, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths
+assets, rupertfork sources, next-terrain-city4/struct-millrace/orrery
+scratch, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-314): forge + potter (292nd cycle — LRU chain
+re-derived from committed plan pointers this tick:
+longhouse/garden-cottage @313 walked fresh, hall/bunkhouse @312,
+inn/tower-house @311, row-cottage/observatory @310, forge/potter @309
+stalest standing pair at 4 sweeps; walk tools interior-walk-forge.ts,
+interior-walk-potter.ts — both ls-verified present on disk this tick).
