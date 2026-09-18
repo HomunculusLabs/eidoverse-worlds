@@ -15078,3 +15078,168 @@ Files: struct215-scan-oloid.ts + struct215-select-oloid.ts +
 struct215-terrain-oloid.ts + next-place-struct215.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-215,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+
+## struct-216 (2026-09-17): R11-33 THE SPHERICON — BUILD+JUDGE TICK
+## (the oloid's square cousin: a bicone with a 90-degree apex, cut through its
+## axis, one half quarter-turned about the cut-plane normal and reglued at the
+## common square face; theorems machine-exact: birth square-coincidence, ridge
+## dihedral 90deg everywhere, skin 2*sqrt2*pi*R^2 == parent bicone EXACT,
+## 964 one-sided supports 4e-16, seat width == R*(1+1/sqrt2), unroll law
+## dpsi = dtheta/sqrt2 by the surface METRIC 1.2e-7; 75 corner-exact courses;
+## decode 9/9 + RED control; judged PASS gameplay 4/4 + front-trace 3/3 +
+## closeface 4/4 + night 3/3 — ZAI fallback disclosed; ACCEPTED BANKED NOT
+## PLACED)
+
+216%3=0 is nominally a refine slot, but the bank was empty (oloid placed
+struct-215), the refine pool is empty of payable items (the 24-debt native
+board cron-unpayable — tool_search FRESH this tick: catalog carries only
+terminal + zai-vision MCP; same disclosed class as struct-169..215), and the
+refine-cadence law's own escape clause ("unless the refine pool is empty, in
+which case build") applies. Gate ALL PASS real exit 0 tick-start at 56a15dce
+(sweep-293; unpiped terminal GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN
+md5 c0f569d0 unchanged 40th tick, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-215 -> tag struct-216 (re-checked immediately before
+append).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN-V2
++ census 351): sphericon 1 mention = struct-214's own register note ("the
+oloid's square cousin, 0 mentions, future kin") — unbarred, unbuilt, no
+census id. Register: opens the SQUARE-ROLLER branch of the rolling-mechanics
+family the oloid opened (Schatz 1929 -> Hirsch 1980); era David Hirsch,
+discovered from a paper model of a bicone twisted a quarter turn.
+
+THEOREM VERIFICATION BEFORE CARVING (struct216-probe-sphericon.ts, ALL PASS
+real exit 0): L1 THE BIRTH — the two half-bicones' cut faces are the SAME
+square {|x|+|z|<=R, y=0} (4-fold symmetric; the quarter-turn maps it onto
+itself); above the seam pure bicone-half, below pure rotated half. L2 THE
+EDGES — two exact semicircles radius R in perpendicular planes; waist-ridge
+exterior dihedral EXACTLY 90 deg at every point (45+45); the edge plane is
+NOT a support (14136 samples above / 14185 below) — no rest along an edge,
+every edge rest is a single point: the wobble is geometry. L3 THE SKIN —
+four half-band faces of 45-degree cones; total 4*(pi R^2/sqrt2) ==
+2*sqrt2*pi*R^2 == parent bicone lateral EXACTLY (rel 3.8e-16): the
+cut-twist-reglue conserves skin. L4 CONVEXITY — 100000 midpoint + 20000
+conv(E1 u E2) samples inside (numeric, disclosed); founds the exact corner
+law. L5 THE SUPPORT FAMILY + SEAT — 964 generator tangent planes one-sided
+in BOTH frames (worst 4.4e-16); seat = widest, width 2.475305 ==
+R*(1+1/sqrt2) EXACT; BOTH ruling ends on the ground (y=0.0e+0 each) — full
+sqrt2*R = 2.051 m line contact; stance height 2.655 m. L6 THE TRACE — the
+unroll law dpsi = dtheta/sqrt2 EXACT BY THE SURFACE METRIC (E=1, G=s^2/2 on
+X(s,t)=A+s(u+w)/sqrt2; developed rim rate = R/(sqrt2 R)); metric identity to
+1e-6 + chord quadrature of the TRUE rim curve to 1.2e-7 at two resolutions;
+a finite-tip roll SIMULATION was built and honestly DISCARDED (struct-214's
+discard class: naive per-step bisection is only first-order in the changing
+pivot; the metric law is exact); wake spoke at the EDGE-TRANSITION azimuth
+90/sqrt2 = 63.640 deg (the roll's last line-contact before the point
+wobble); spokes radiate the apex ground point at azimuths 78.00/63.64 deg,
+occluded portions disclosed; the rim's WAKE is the exact circle arc radius
+sqrt2*R about the apex point spanning [50, 125] deg, all on open ground —
+the oloid's straight bars could never draw this; L7 COURSES — 75 voussoir
+boxes, every box's 8 corners inside S by closed-form membership (EXACT given
+L4); cradle-clamp disclosure: the seat-line strip at y~0 is degenerate (the
+contact LINE), so the first boxed course may begin up to one band above the
+seat; L8 VOLUME 3.1375 m^3 numeric only (1.0292 r^3, resolution-stable
+3.2e-5); envelope 3.727x2.705x4.001; curb footprint 14.91 m^2 < 16, stance
+2.655 m >= 2.2 real trimesh — FOLLY CLASS, no walk owed. RED: 2% radius
+breaks skin conservation 4% + the glued squares — detected.
+
+SELF-CAUGHT LAW/BUILD BUGS THIS TICK (all RED-first): (a) FACES[3] w-vector
+t-reversal made the L2 dihedral test hit anti-parallel normals (worst
+deviation 90 deg); (b) L5 twist accumulator initialized to +Infinity
+(vacuous — struct-214 class (b) AGAIN); (c) the course loop's seed-history
+poisoning (k=0's degenerate-band bisection marched the global seed into the
+contact strip, collapsing later slices to slivers) — fixed with a
+GUARANTEED-INTERIOR analytic seed (vertical line over the contact midpoint
+to yExit, then convex lerp toward the crown); (d) the tip-simulation pivot
+frame bug family (rotations about the origin instead of the apex pivot line;
+bisected point-height instead of plane-dihedral) — three attempts, all
+honestly discarded for the exact metric law; (e) the probe envelope missed
+the brass tube's 10-gon cap-ring crest (TUBE*sin72 vs TUBE — mk envelope
+law caught it 3 times, final form exact); (f) decode D3 initially tested
+twist-frame planes against seated-frame verts (40% false-negative ->
+0.0% -> 100% after the exact vecSeat2/seatBound lift — struct-214 pitfall
+(h) reproduced and fixed).
+
+CONCEPT: A SOLID THAT ROLLS ON ITS WHOLE SKIN — LINE, THEN POINT, THEN
+LINE. STONE carries the solid (75 corner-exact voussoir courses). BRASS
+carries the two semicircular EDGES (144 tangent segments each, tube 0.05) —
+the interlocked perpendicular pair that IS the sphericon (E1's midpoint and
+E2's +z endpoint ground out exactly at the contact ruling's two ends). IRON
+carries the roll TRACE inlaid in the curb top: the seat line (live contact
+generator, 2.051 m, half-inlaid 12mm) + two wake spokes at exact unroll
+azimuths (78.00 deg and the edge-transition 63.640 deg) + the rim's wake
+arc (96 segments, exact radius sqrt2*R about the pivot apex point) — the
+fan the roll drew on the earth. Sole night element: one warm bead
+(glow_sp_1, 0x9a7030 @ 1.0) socketed at the crown. Nodes 4 (sphericon_0
+stone + sphericon_1 brass + sphericon_2 iron + glow_sp_1 KEEP).
+
+BUILD (agents/arthur/assets/mkv3-sphericon.ts, staged -f): root identity
+(struct-188 law); texMat lanes sp_stone/sp_iron/sp_brass (struct-38 law).
+v1 deterministic x2 byte-identical sha256
+e8dffa7fc40892e9048d98bdc8a30dc8f4a77826f8288f7bb4402ba1756e659e
+(mtime-verified, 463 pre-merge meshes -> 3 buckets + 1 glow KEEP).
+
+DECODE (struct216-decode-sphericon.ts, tracked) ALL PASS 9/9 real exit 0 +
+RED control (foreign lunes bytes: 9 FAILs, exit 1): D1 census 4 nodes; D2
+curb 72 verts; D3 solid 1752/1752 = 100.0% inside the exact
+supporting-plane family in the seated frame (corner coverage 71/75, the 4
+clamp-tapered crown boxes disclosed); D4 edges 18432/18432 on the two exact
+semicircle polylines; D5 trace 64 seat-line + 256 spoke + 6016 arc verts;
+D6 bead centroid within 2mm, emissiveFactor present; D7 curb sole 0.000 +
+cradle clamp 0.190 disclosed; D8 envelope drift 0.0000; D9 texMats.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed, riding the
+owed board):
+- gameplay 18m: PASS 4/4 — identity (deliberate carved monument on a
+  rolling curb), silhouette (continuous curb-to-crown, no floats),
+  grounding (contact seam + curb face; shadow faint — chassis class),
+  overall accept. Margins disclosed: sphericon-specific geometry muted at
+  18m (reads stepped dome; brass arc carries the hint — probe-discipline
+  law 5 class, identity "mathematical monument" holds), brass upper
+  terminus 1-2px ambiguity, iron spokes sub-pixel at 18m.
+- front (the trace side): PASS 3/3 — the ground fan reads as a deliberate
+  inlaid roll-diagram converging on the contact line; margin: low contrast
+  of iron-on-beige-curb (moderate; darken-iron candidate for a refine).
+- closeface ~8m: PASS 4/4 — masonry regular with joint rhythm; BOTH brass
+  edges seated (large loop unambiguous, tilted partner edge-on — profile
+  class); ONE convex solid; three material families + the single amber
+  bead distinct. Margins: arc crown standoff ~1 course (stepped-vs-smooth
+  discretization), partner edge-on at this azimuth.
+- night-face: PASS 3/3 — EXACTLY ONE warm point (565,202) == the crown
+  bead, ZERO stray glow (brass dark matte), silhouette traceable
+  navy-vs-dark.
+- back view judged as a directed probe: the judge read the brass E2 edge
+  (by design cresting the crown) as a "floating vertical hoop" —
+  misdirected prompt (the ground fan is front-side); the front re-judge
+  above carries the trace verdict. Disclosed.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-217
+committed carry: fresh census scan (8m NN law, district soft cap 6, Math
+Avenue eligibility; procession continues past oloid r410), YAW LAW — the
+construction reads obliquely per struct-104 (the procession's standing 214
+deg convention; the 3.727m curb runs az124/304), terrain preflight over
+the TRUE rotated footprint, hash-gated plain spawn nx-struct-sphericon,
+comp {}. Folly class — no walk owed. Native re-judge debt: sphericon v1
+joins the owed board (monkeysaddle gate, hypar row 22, kuen v3, catalan
+v1, clebsch v1, menger v2, apollonian v1, melencolia v3, tribar v2,
+fourier v1, cissoid v2, quadratrix v1, archispiral v1, nephroid v1,
+folium v1, rhodonea v1, versiera v1, elliptic v3, mandelbrot v1, viviani
+v1, morley v1, arbelos v1, lunes v1, oloid v1 — 25 owed with this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the oloid —
+a long stone curb carrying a carved solid between two brass edges: the
+sphericon, a bicone cut in half with one half twisted a quarter-turn and
+reglued (Hirsch 1980), the form that rolls line-then-point-then-line on
+its whole skin; an iron line marks where it stands, spokes and a swept
+arc behind it record where it rolled; its skin is exactly the parent
+bicone's — the twist gave nothing back. After dark: one warm bead burns
+at the crown.
+
+Files: struct216-probe-sphericon.ts + struct216-decode-sphericon.ts +
+struct216-render-sphericon.ts (all NEW, tracked),
+assets/mkv3-sphericon.ts (NEW, staged -f), reviews/struct216-sphericon/
+(9 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
+(one append struct-216, D+0 E+0). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
