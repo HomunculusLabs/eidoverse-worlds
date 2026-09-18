@@ -13382,3 +13382,75 @@ standing pair at 4 sweeps; walk tools interior-walk-row-cottage.ts +
 struct2-walk-observatory.ts — both ls-verified present on disk this
 tick).
 
+
+sweep-301: CLEAN SWEEP, arrival-fold tick (70th consecutive
+quiet-or-classified). Tick-start HEAD 72e45b43 = sweep-300's own close;
+standing gate ALL PASS real exit 0 FIRST TRY (unpiped /tmp/s301-gate.log,
+98 PASS lines + ALL PASS trailer). Census epoch A 354==354 BYTE-IDENTICAL
+to the committed baseline (244459B sha16 6ead1ab0f91827f3, cmp-verified) —
+fully quiet. Mid-tick the fauna lane landed the graylag geese = epoch B
+(355): exactly ONE domain-valid arrival nx-dress-geese-001 @ (7.9,
+-0.0408, -96.6) yaw 0.45 lib 67a8406dd63612ea scale 1 kind thing, comp
+bag exactly 6x motion:goose_{a,b}_{,head,tail} (bob / pendulum /
+pendulum per member), r96.9 S — 75m+ off every tier-1/tier-2 walked leg,
+walks stand by construction (sweep-53 precedent); tuple matches the
+committed ledger fauna-11 @ 6dceca9b (new HEAD, committed mid-tick) and
+the in-tree placer fauna11-place-geese.ts pin verbatim; 0 departures, 0
+drift on the 354 shared ids across every projection field. Epoch law
+honored — all affected evidence re-taken fresh before verdicts: SAT
+re-run at epoch B (317 bbox non-light / 239 classified / 0 coverage
+holes, real exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26 choreography @
+sweep-43, 257th sweep since routing, NOT new, no escalation due — law
+keys severity-1; geese added zero new contacts, corroborating fauna-11's
+own member-box SAT vs the reedpool source); battery re-run at epoch B
+with the comp-bearing pin bumped 29->30 (sweep-298 robin precedent,
+census-verified 30th = the geese exactly, 28/28 PASS — the superseded
+epoch-A read correctly showed 28/28 pre-arrival); standing gate re-run
+ALL PASS real exit 0 at 6dceca9b post-interleave. Walks: tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually — core 64/64 ALL_PASS max dist 0.380 (next-walk-core-paths.ts,
+JSON parsed from first brace past the [physics] banner; support-seam
+stderr abstentions = the known normalized diagnostics set, unchanged),
+NW 5/5 ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts),
+NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts),
+SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); tier-2
+279th cycle per the committed sweep-300 pointer: row-cottage 6/6
+ALL_PASS (dists 0.295/0.368/0.384/0.294/0.362/0.307,
+interior-walk-row-cottage.ts) + observatory circuit 5/5 ALL_PASS
+(0.280/0.389/0.303/0.345/0.314, struct2-walk-observatory.ts), both real
+exit 0, both tools ls-verified present on disk pre-run. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (255th consecutive
+clean); sweep89-battery 28/28 PASS real exit 0 at epoch B on the pinned
+bytes (comp-bearing pin 30); interlane md5 86b2936f stable, read fresh
+this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 c0f569d0 unchanged (277th check; 0 open candidate
+rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns
+sweep no reset role — the audit-continues freeze banner governs and was
+read fresh via the loop/plan reload. Baseline lawfully rewritten
+like-for-like (sweep301-baseline-rewrite.py, py_compile clean, asserted
+pre-write: diff exactly [arrival nx-dress-geese-001]): 355 entities /
+246892B / sha16 27c486d66945ac65; post-rewrite drift ZERO (baseline
+byte-identical to canonical census B, cmp-verified); battery 28/28 PASS
+on the committed baseline bytes with the bumped pin. Probe self-catches
+pre-verdict, corrected with no repair owed: (a) ad-hoc canonical
+projection (compKeys-only) produced a 142KB hash that did not match the
+committed convention — resolved by comparing RAW census bytes directly
+(the committed convention is the raw next-live-census.ts output),
+cmp-verified byte-identical; (b) first battery invocation at epoch B
+correctly printed the expected comp-bearing FAIL (29 vs 30 live) —
+resolved as the classification + pin bump per precedent, not a finding.
+Foreign dirt in tree (fauna-11 geese scratch set + FAUNA-PLAN.md
+modified, windmill overhaul scratch, cabin/carousel prototype dirs,
+client/server engine files, fleet shells, debug-bower scripts, moon-moth
+dir, fauna tools, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP,
+core-paths assets) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-302): longhouse + garden-cottage (280th cycle — LRU
+chain re-derived from committed plan pointers this tick:
+row-cottage/observatory @301 walked fresh, inn/tower-house @300,
+forge/potter @299, hall/bunkhouse @298, longhouse/garden-cottage @297
+stalest standing pair at 4 sweeps; walk tools interior-walk-longhouse.ts,
+interior-walk-garden-cottage.ts — both ls-verified present on disk this
+tick).
