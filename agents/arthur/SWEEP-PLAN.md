@@ -14271,3 +14271,97 @@ longhouse/garden-cottage @313 walked fresh, hall/bunkhouse @312,
 inn/tower-house @311, row-cottage/observatory @310, forge/potter @309
 stalest standing pair at 4 sweeps; walk tools interior-walk-forge.ts,
 interior-walk-potter.ts — both ls-verified present on disk this tick).
+
+
+sweep-314: CLEAN SWEEP, arrivals tick (83rd consecutive quiet-or-classified).
+Tick-start HEAD 7ced5e80 (struct-226 close); standing gate ALL PASS real
+exit 0 FIRST TRY (ledger law 2370935 exact, register 0 OPEN). Census epoch
+A 361->363 vs the committed sweep-313 baseline (258001B sha16 5c17a8c6):
+exactly TWO domain-valid arrivals, both PRE-tick committed —
+nx-dress-cow-001 @ (24,-0.02489,40.75) yaw 0.66 lib 943beb2b1931d85e,
+7 motion comps (cow_a/cow_b + heads/ears/tail) = fauna-21 dairy cow @
+704897f9, tuple matches its ledger line-for-line; nx-struct-steinmetz @
+(-32.087978,-0.032464,458.879463) yaw 2.548181 lib c3d56ac8f8eceacd
+comp {} = struct-226 bicylinder v1 Math Avenue az94 r460 @ 7ced5e80,
+tuple matches line-for-line incl. its own walk 6/6 0.310m; 0 departures,
+0 drift on all 361 shared ids across id/pos/yaw/lib/scale/kind/bbox/
+compKeys; 325 thing + 38 light. Epoch B 20s-paced re-read BYTE-IDENTICAL
+to A (cmp-verified, zero byte diffs, zero field diffs) — stable
+single-epoch close. Walk-band: steinmetz 440m+ off every tier-1 leg; the
+cow sits ~2m from the potter (26,40.5) — the potter tier-2 walk exercised
+that adjacency directly. Overlap: SAT fresh-live at epoch A, 325 bbox
+non-light / 242 exempt-classified (+1 = the cow's fauna adjacency) /
+0 coverage holes, exit 3 on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26
+choreography @ sweep-43, 270th sweep since routing, NOT new, no
+escalation due (law keys severity-1); both arrivals added zero
+unclassified contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually per the sweep-228 ceiling
+law — core 64/64 ALL_PASS max dist 0.380 (next-walk-core-paths.ts,
+support-seam stderr abstentions = the known normalized diagnostics set,
+unchanged), NW 5/5 ALL_PASS (0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts),
+NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts),
+SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + dists from raw
+files. Tier-2 292nd cycle per the committed sweep-313 pointer: forge 6/6
+ALL_PASS maxArrival 0.375 (dists 0.261/0.307/0.300/0.315/0.375/0.261,
+interior-walk-forge.ts) + potter 6/6 ALL_PASS 0.366
+(0.270/0.366/0.295/0.255/0.250/0.349, interior-walk-potter.ts), both real
+exit 0, both tools ls-verified present on disk pre-run; potter walked
+WITH the new cow live 2m away — no pinch, no seam. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (268th consecutive
+clean); sweep89-battery 28/28 PASS after the lawful comp-bearing pin bump
+34->35 — RED-then-GREEN (first invocation correctly FAILed 34-vs-35 =
+expected classification; 35th bearer = exactly the cow, 7 motion:cow_*
+census-verified epoch A), sweep-301 geese / 304 sheep / 306 pig / 308
+dovecote / 311 shorse precedents. Interlane md5 86b2936f stable, read
+fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged vs sweep-313's recorded close (290th
+check; zero OPEN candidate rows — the 19 grep "OPEN" hits are historical
+prose, class-checked this tick), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues
+freeze banner governs via loop/plan reload. Baseline lawfully rewritten
+like-for-like (committed convention = raw census bytes; pre-write
+assertion: diff set exactly [arrival nx-dress-cow-001, arrival
+nx-struct-steinmetz], counts 361->363, zero other drift): 363 entities /
+261361B / sha16 912573601b61b849; post-rewrite drift ZERO (cmp-verified
+vs census A; A==B byte-identical this tick).
+
+CORRECTION OF RECORD (disclosed against my own ledger entry, fabricate-
+check class): the appended sweep-314 ledger prose contains two prose
+defects, both caught by re-reading the durable sources BEFORE this plan
+block was written — (a) self-catch (b) claims the plan pointer row named
+"interior-wark-potter.ts": FALSE. The committed sweep-313 pointer row
+(line 14273) correctly reads interior-walk-potter.ts and always did; the
+invented "typo caught" narration is exactly the fabrication class the
+probe discipline exists to catch — the actual pre-walk verification
+(ls-verified both tools) was real and sufficient, the self-catch story
+was not. (b) "HERO-ASSET-REFINEMENT-PROTENTION-PLAN" is a garbled token;
+the real sibling file is HERO-ASSET-REFINEMENT-PLAN.md (untouched). The
+ledger entry is immutable at HEAD; this block is the correction of
+record. No evidence value was affected: all verdicts rest on tool output
+reproduced above, none on either prose defect.
+
+Probe self-catch pre-verdict (real, this tick): first battery invocation
+ran without the census-file argument — IndexError traceback, rerun
+correctly with /tmp/s314-censusA.json. Foreign dirt in tree (windmill
+overhaul scratch, cabin/carousel prototype dirs, client/server engine
+files, fleet shells, debug-bower scripts, moon-moth dir, fauna tools +
+FAUNA-PLAN, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths
+assets, rupertfork sources, next-terrain-city4/struct-millrace/orrery
+scratch, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-315): row-cottage + observatory (293rd cycle — LRU
+chain re-derived from committed plan pointers this tick: forge/potter
+@314 walked fresh, longhouse/garden-cottage @313, hall/bunkhouse @312,
+inn/tower-house @311, row-cottage/observatory @310 stalest standing pair
+at 4 sweeps; walk tools interior-walk-row-cottage.ts (present on disk,
+ls-verified this tick) and struct2-walk-observatory.ts (present on disk,
+ls-verified this tick — POINTER FIXED PRE-COMMIT: this block first named
+"interior-walk-observatory.ts", which does not exist; the tool that
+walked the observatory circuit at sweep-310 is struct2-walk-observatory.
+Third prose defect of the same fabricate-check class, caught by disk
+verification before the commit — the correction chain itself now
+carries its own correction-of-record; sweep-315's ledger pointer must
+read struct2-walk-observatory.ts).

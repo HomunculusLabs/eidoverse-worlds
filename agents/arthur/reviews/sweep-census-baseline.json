@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 361,
+  "count": 363,
   "entities": [
     {
       "id": "beb4c791",
@@ -3936,6 +3936,150 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-cow-001",
+      "kind": "thing",
+      "pos": [
+        24,
+        -0.02489,
+        40.75
+      ],
+      "yaw": 0.66,
+      "scale": 1,
+      "lib": "store/943beb2b1931d85e.glb",
+      "bbox": {
+        "min": [
+          -1.7,
+          -0.001,
+          -1.15
+        ],
+        "max": [
+          1.4,
+          1.551,
+          1.775
+        ],
+        "size": [
+          3.1,
+          1.552,
+          2.925
+        ],
+        "center": [
+          -0.15,
+          0.775,
+          0.312
+        ]
+      },
+      "compKeys": [
+        "motion:cow_a",
+        "motion:cow_a_ears",
+        "motion:cow_a_head",
+        "motion:cow_a_tail",
+        "motion:cow_b",
+        "motion:cow_b_head",
+        "motion:cow_b_tail"
+      ],
+      "comp": {
+        "motion:cow_a": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4.7,
+          "phase": 0.4,
+          "t0": 1789753425206
+        },
+        "motion:cow_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.35,
+          "period": 8.5,
+          "phase": 0,
+          "t0": 1789753425206
+        },
+        "motion:cow_a_ears": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.2,
+          "period": 2.3,
+          "phase": 1.2,
+          "t0": 1789753425206
+        },
+        "motion:cow_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.34,
+          "period": 2.7,
+          "phase": 0.6,
+          "t0": 1789753425206
+        },
+        "motion:cow_b": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 5.4,
+          "phase": 2,
+          "t0": 1789753425206
+        },
+        "motion:cow_b_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.13,
+          "period": 3.4,
+          "phase": 0.9,
+          "t0": 1789753425206
+        },
+        "motion:cow_b_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.28,
+          "period": 2.3,
+          "phase": 1.6,
+          "t0": 1789753425206
+        }
+      }
     },
     {
       "id": "nx-dress-dovecote-001",
@@ -12052,6 +12196,42 @@
         "center": [
           0,
           5.162,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-steinmetz",
+      "kind": "thing",
+      "pos": [
+        -32.087978,
+        -0.032464,
+        458.879463
+      ],
+      "yaw": 2.548181,
+      "scale": 1,
+      "lib": "store/c3d56ac8f8eceacd.glb",
+      "bbox": {
+        "min": [
+          -2.9,
+          0,
+          -2.9
+        ],
+        "max": [
+          2.9,
+          4.578,
+          2.9
+        ],
+        "size": [
+          5.8,
+          4.578,
+          5.8
+        ],
+        "center": [
+          0,
+          2.289,
           0
         ]
       },
