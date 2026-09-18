@@ -2,17 +2,35 @@
 // (committed carry from struct-220's verdict: "the carved cube carrying two pillars of
 // itself, the EQUAL solid cube caught mid-pass between them".)
 //
-// THE FORM (settled this tick; every claim from real tool output):
-//   The wall cube is bored along its HORIZONTAL DIAGONAL (1,0,1)/√2 with the CLASSIC
-//   door 3√2/4·S. At that door the raster remainder is exactly TWO equal grounded
-//   full-height knife-fins at the (−x,+z)/(+x,−z) corners — the door ate the wall;
-//   two blades remain. Through them, THE PASSER: a cube of side 1.0576·S — 5.8%
-//   BIGGER than the wall — in the solved tilted pose (the diagonal-slide family,
-//   b=−45° exactly), caught 58%-emerged at the mouth, its lowest corner riding
-//   12mm above grade while the wall sits raised on two foot pads (the honest
-//   demonstration: the wall must be lifted for the bigger cube to clear the floor).
-//   Brass: two warm beads on the fin tops (the sole night element). No sleeve —
-//   the waist plane is fully carved (recorded); no stone seats a ring.
+// THE FORM (v5 BUILT + REJECTED this tick; v6 commission recorded below — the ARC:
+//   three falsified iterations, every rejection caught BEFORE placement):
+//   v3 (tilted, nose-out 35%) REJECTED — corner-stance crest towers (L1 ≥ L2 law).
+//   v4 (FACE STANCE, exact identity fit s = DOOR−4mm, decode corner-match 0.00000)
+//   REJECTED — "passer indistinguishable from the wall (same texture, flush)".
+//   v5 (IRON passer + FLANK LAW station, decode ALL PASS 15/15) REJECTED from BOTH
+//   the world-frame and the bore vantage — and the bore rejection is GEOMETRIC, not
+//   cosmetic: from down-the-bore the passer's projected half-width (2.33m at ~10m)
+//   EXCEEDS the fins' outer-edge projection (3.18m at ~14m) — the bigger cube
+//   occludes both fins at the walker's own vantage. THE CONVERGED ROOT CAUSE (5
+//   judge rounds): the door-width/fins-width tension is INTRINSIC to s > S through
+//   a cube at the diagonal bore — a 1.03×S door leaves 0.85m fins, and ANY bigger-
+//   than-wall passer covers them from most angles; smaller doors widen the fins but
+//   shrink the bigger-than-wall margin toward zero. The two judge asks (visible fork
+//   + visible bigger cube) fight each other THROUGH the door size at fixed wall
+//   proportions. Material separation (v5, kept) solves figure-ground; it cannot
+//   solve occlusion.
+//
+// V6 COMMISSION (next build tick — a proportion redesign, not a patch): the wall
+//   becomes a DEEPER square-section prism (S×S×L, L ≈ 1.6–2.0×S along the bore —
+//   the sandwich/interval pass-proof is cross-section-based, length-agnostic, so
+//   the pass stays machine-true): the mouth becomes a real PORTAL with a dark
+//   throat (the depth read every judge asked for), the fins gain depth-mass and
+//   read from oblique angles at natural weight, and the door band is RE-CARVE-
+//   MAPPED for the wider-prong family (target fin width ≥ 1.2m) with the passer
+//   IRON at 1.02–1.03×S caught at the throat's thirdpoint. Nose-out, flank law,
+//   bed course, door-frame pads, beads, and the iron lane all carry forward. The
+//   monument's claim is stated honestly: a cube bigger than the wall's FACE passes
+//   through the wall — verified by the same interval law (region + kept-cell).
 //
 // STRUCT-221 CORRECTIONS OF RECORD (probe law 0c spirit):
 //   1. struct-220's "max section 1.250324649719 at n=(−0.2961,0.4688,−0.8322)" is
@@ -239,20 +257,43 @@ let PASS_S = 0, POSE = { a: 0, b: 0, g: 0 };
     PASS_S = lo - 0.004; // 4mm honest margin off the searched bound
     POSE = { a: flo.a, b: flo.b, g: flo.g };
 }
+// ---- S2b (v4, struct-222): the FACE-STANCE pivot — the tilted stance is geometrically dead ----
+// v2 (58% emerged) AND v3 (35% nose-out) were both REJECTED: the tilted passer stands on a
+// CORNER, so its crest (WALL_CY + PASS_YHALF, PASS_YHALF = (s/2)·Σ|row| > s/2 for every
+// non-identity rotation — L1 ≥ L2, face stance is the UNIQUE height minimizer) towers over
+// the fin crowns at EVERY station: v3's nose-out still blanketed the fork ("only ONE blade
+// visible; reads as a plank and a big cube"). No station fixes a stance problem.
+// THE PIVOT: at this door the FACE stance fits at the SAME size (a square of side ≤ door
+// passes a square door EXACTLY — the identity fit): PASS_S = DOOR − 4mm = 1.029×S, still
+// BIGGER than the wall. The nose is a true square face parallel to the door plane (the
+// strongest cube-identity read), its crest rides (PASS_S − S)/2 = 6.6cm ≈ 5px@18m over the
+// fin crowns (a whisper, vs the tilted stance's 102cm blanket), and the fins' outer edges
+// frame it from every azimuth. The tilted solve above is kept as the rejected-stance record.
+const TILT_S = PASS_S, TILT_POSE_DEG = { a: POSE.a*180/Math.PI, b: POSE.b*180/Math.PI, g: POSE.g*180/Math.PI };
+PASS_S = DOOR - 0.004;
+POSE = { a: 0, b: 0, g: 0 }; // stance LABEL only — RP below is the door-frame basis, not an Euler product
 export { PASS_S, POSE };
 export const PASS_RATIO = PASS_S / S;
-export const RP: M3 = mulM(rotAxis(NN, POSE.g), mulM(RYf(POSE.b), RXf(POSE.a)));
-export const POSE_DEG = { a: POSE.a*180/Math.PI, b: POSE.b*180/Math.PI, g: POSE.g*180/Math.PI };
-if (violationRel(RP, PASS_S) > 1e-6) throw Error(`S2 self-check: final pose violates`);
-if (PASS_S <= S) throw Error(`S2 the passer is NOT bigger than the wall (${PASS_S.toFixed(4)} vs ${S}) — the monument's claim fails; re-seat the design`);
+// RP = the door-frame basis as columns (local x→NN, y→UU, z→VV): proper rotation
+// (det = NN·(UU×VV) = NN·NN = 1, asserted), nose face ⊥ NN, flat bottom ⊥ UU.
+export const RP: M3 = [[NN[0], UU[0], VV[0]], [NN[1], UU[1], VV[1]], [NN[2], UU[2], VV[2]]];
+{
+    const det = dot3(NN, cross3(UU, VV));
+    if (Math.abs(det - 1) > 1e-12) throw Error(`S2b frame basis improper (det ${det})`);
+    for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++)
+        if (Math.abs(dot3([RP[0][j], RP[1][j], RP[2][j]], [RP[0][(j+1)%3], RP[1][(j+1)%3], RP[2][(j+1)%3]])) > 1e-12) throw Error(`S2b frame not orthogonal`);
+}
+export const POSE_DEG = { a: 0, b: 0, g: 0 }; // FACE STANCE — axes aligned to the door frame
+if (violationRel(RP, PASS_S) > 1e-6) throw Error(`S2b self-check: face-stance passer violates (square ⊆ door must fit EXACTLY)`);
+if (PASS_S <= S) throw Error(`S2b the passer is NOT bigger than the wall (${PASS_S.toFixed(4)} vs ${S}) — the monument's claim fails; re-seat the design`);
 
 // ---- heights resolve: the wall raised so the passer clears the grade ----------------------------------------
 let EXT_Y = 0;
 for (let j = 0; j < 3; j++) EXT_Y += Math.abs(RP[1][j]);
-export const PASS_YHALF = (PASS_S/2) * EXT_Y;  // center-to-lowest-corner drop of the tilted passer
+export const PASS_YHALF = (PASS_S/2) * EXT_Y;
 export const WALL_CY = PASS_YHALF + REVEAL;    // passer center rides the bore line at WALL_CY -> bottom at REVEAL
-export const PAD_H = WALL_CY - S/2;            // the raise: the wall's foot pads carry the fins
-if (PAD_H < 0.15) throw Error(`pad height ${PAD_H.toFixed(3)} suspiciously small — pose regression`);
+export const PAD_H = WALL_CY - S/2;            // the raise: v4 bed course (the tilted stance needed 1.04m; the face-stance passer's flat bottom clears the floor intrinsically)
+if (PAD_H < 0 || PAD_H > 1.2) throw Error(`pad height ${PAD_H.toFixed(3)} outside the bed-course band — pose regression`);
 export const O_W: V3 = [0, WALL_CY, 0];
 export const pOf = (u: number, v: number, t: number): V3 => [
     O_W[0] + u*UU[0] + v*VV[0] + t*NN[0],
@@ -336,9 +377,17 @@ export const WALL_BOXES: Box[] = [];
 }
 export const STATS = { boxes: WALL_BOXES.length, cells: CARVE.solid.size, comps: CARVE.comps.map(c => c.cells.length) };
 
-// ---- S4: the station — caught mid-pass at the mouth --------------------------------------------------------
+// ---- S4: the station — FACE-STANCE NOSE-OUT (v4, struct-222: tilted stance geometrically disproven) ----
 export const T_HI = Math.SQRT2 * (S/2);      // the mouth: the (x=+S/2, z=+S/2) corner edge
-export const T_ST = T_HI + 0.12 * S;
+// The v2/v3 tilted pose's crest always towers over the fin crowns (Σ|row| ≥ 1 →
+// PASS_YHALF ≥ s/2·√2 > S/2 at every tilted station — REJECTED twice). v4 = FACE
+// STANCE: the passer's local axes ALIGN with the door frame (x→NN, y→UU, z→VV), the
+// square nose face parallel to the door plane. Fit = the identity: a square of side
+// ≤ door passes a square door exactly. Nose 1.6m proud of the mouth (~34% emerged,
+// the judges' nose-out band), square silhouette fully INSIDE the fins' crown line.
+const tHalfExt = (PASS_S/2) * (Math.abs(dot3([RP[0][0],RP[1][0],RP[2][0]], NN))
+    + Math.abs(dot3([RP[0][1],RP[1][1],RP[2][1]], NN)) + Math.abs(dot3([RP[0][2],RP[1][2],RP[2][2]], NN)));
+export const T_ST = T_HI + 1.335 - tHalfExt;  // v5: nose 1.335m proud, tail IN the fin band (FLANK LAW below — the fins are WAIST-LOCAL, t ∈ [−0.59, 0.59])
 export const PASS_C: V3 = [O_W[0] + T_ST*NN[0], O_W[1] + T_ST*NN[1], O_W[2] + T_ST*NN[2]];
 const passerCornerLocal: V3[] = [];
 for (const sx of [1,-1]) for (const sy of [1,-1]) for (const sz of [1,-1]) passerCornerLocal.push([sx*PASS_S/2, sy*PASS_S/2, sz*PASS_S/2]);
@@ -362,6 +411,20 @@ let S4_FRAC = 0;
     S4_FRAC = frac;
 }
 export const EMERGED_FRAC = S4_FRAC;
+{
+    // FLANK LAW (v5, decode-rooted): the fins are WAIST-LOCAL (t ∈ [tFinLo, tFinHi] —
+    // the door is wider than the wall's diagonal section everywhere except near the
+    // waist), so the passer's TAIL must sit INSIDE the fin band or there is no flank
+    // read at all (v5-draft nose 2.2m: tail t 0.751 slid past every fin — 0.0m flank).
+    // Balance: nose out (S4 emergence) + tail-in (this law) pins the station window.
+    let tFinLo = Infinity, tFinHi = -Infinity;
+    for (const b of WALL_BOXES) { const t = invP(b.c)[2]; tFinLo = Math.min(tFinLo, t - b.s[1]/2); tFinHi = Math.max(tFinHi, t + b.s[1]/2); }
+    const tailT = T_ST - PASS_S/2;
+    if (tailT > tFinHi - 0.25) throw Error(`FLANK LAW: tail t ${tailT.toFixed(3)} not inside the fin band [${tFinLo.toFixed(3)}, ${tFinHi.toFixed(3)}] — no flank read (nose too far out)`);
+    const noseOut = (T_ST + PASS_S/2) - T_HI;
+    if (noseOut < 1.0) throw Error(`FLANK LAW: nose only ${noseOut.toFixed(3)}m proud — the mouth read needs ≥1.0m`);
+    console.log(`FLANK LAW: nose ${(noseOut).toFixed(3)}m proud, tail t ${tailT.toFixed(3)} inside fin band [${tFinLo.toFixed(3)}, ${tFinHi.toFixed(3)}] (flank ${(tFinHi - tailT).toFixed(3)}m)`);
+}
 {
     // station-solid honesty: every passer point inside the wall's AABB lies in the door prism
     // (by the stone-clearance law this also means it touches no kept fin cell)
@@ -436,11 +499,32 @@ export const BEAD_R = 0.07;
         const outX = (x0 + x1) / 2 >= 0 ? 1 : -1;   // outward signs from the fin's corner
         const outZ = (z0 + z1) / 2 >= 0 ? 1 : -1;
         if (outX === outZ) throw Error(`S5 fin not on an anti-diagonal corner (x sign ${outX}, z sign ${outZ}) — frame regression`);
-        const px0o = outX > 0 ? x0 : x0 - M;
-        const px1o = outX > 0 ? x1 + M : x1;
-        const pz0o = outZ > 0 ? z0 : z0 - M;
-        const pz1o = outZ > 0 ? z1 + M : z1;
-        PADS.push({ c: [(px0o+px1o)/2, finBot/2, (pz0o+pz1o)/2], s: [px1o-px0o, finBot, pz1o-pz0o] });
+        // v4 PAD LAW (S5 exact-SAT RED catch): the v2/v3 AXIS-ALIGNED pad filled the
+        // fin footprint's diagonal corner into the bore's |v| band — the high tilted
+        // passer cleared it on Y, the low face-stance passer does NOT. The honest pad
+        // is a DOOR-FRAME box (axes UU/NN/VV like the fin cells): its inner v edge IS
+        // the fin's own inner |v| edge (> doorHalf >= the passer's reach), so the pad
+        // clears the passer for EVERY station of the slide — by the same |v| law that
+        // guards the fins, not by a vantage-dependent height.
+        let vLo = Infinity, vHi = -Infinity, tLo = Infinity, tHi = -Infinity;
+        WALL_BOXES.forEach((b, i) => {
+            if (boxComp[i] !== ci) return;
+            const [, v, t] = invP(b.c);
+            vLo = Math.min(vLo, v - b.s[2] / 2); vHi = Math.max(vHi, v + b.s[2] / 2);
+            tLo = Math.min(tLo, t - b.s[1] / 2); tHi = Math.max(tHi, t + b.s[1] / 2);
+        });
+        const vSign = (vLo + vHi) >= 0 ? 1 : -1;
+        const vIn = vSign > 0 ? vLo : vHi;            // inner edge (nearest the bore)
+        const vOut = (vSign > 0 ? vHi : vLo) + vSign * M; // outer edge + margin
+        const padV0 = Math.min(vIn, vOut), padV1 = Math.max(vIn, vOut);
+        const padT0 = tLo - M, padT1 = tHi + M;
+        PADS.push({
+            // u measured from O_W (world y = WALL_CY + u): the pad spans world
+            // [0, finBot] -> u-center = finBot/2 − WALL_CY (DECODE-CAUGHT class:
+            // pOf(finBot/2) alone floats the pad at mid-wall — O_W is the bore center).
+            c: pOf(finBot / 2 - WALL_CY, (padV0 + padV1) / 2, (padT0 + padT1) / 2),
+            s: [finBot, padT1 - padT0, padV1 - padV0],  // [u: height, t: along NN, v: along VV]
+        });
         // ON-FIN law (fixed): bead at the fin's TRUE top (u-run max), footprint center
         BEADS.push([(x0+x1)/2, finTop + BEAD_R*0.4, (z0+z1)/2]);
     }
@@ -492,8 +576,11 @@ const grow = (p: V3) => { for (let i = 0; i < 3; i++) { ENV.min[i] = Math.min(EN
     };
     for (const b of WALL_BOXES) for (const p of cornersOf(b)) grow(p);
     for (const c of passerCornerLocal) grow(passCorner(c));
-    for (const pad of PADS) { grow([pad.c[0]-pad.s[0]/2, 0, pad.c[2]-pad.s[2]/2]); grow([pad.c[0]+pad.s[0]/2, PAD_H, pad.c[2]+pad.s[2]/2]); }
-    for (const bd of BEADS) { grow([bd[0]-BEAD_R, bd[1]-BEAD_R, bd[2]-BEAD_R]); grow([bd[0]+BEAD_R, bd[1]+BEAD_R, bd[2]+BEAD_R]); }
+    for (const pad of PADS) for (const su of [-pad.s[0]/2, pad.s[0]/2]) for (const st of [-pad.s[1]/2, pad.s[1]/2]) for (const sv of [-pad.s[2]/2, pad.s[2]/2])
+        grow([pad.c[0] + su*UU[0] + st*NN[0] + sv*VV[0], pad.c[1] + su*UU[1] + st*NN[1] + sv*VV[1], pad.c[2] + su*UU[2] + st*NN[2] + sv*VV[2]]);
+    // NOTE: the beads' contribution is measured live from the merged GLB (three.js
+    // Box3.setFromObject); the probe's analytic corner AABB of a sphere INFLATES by
+    // (1−1/√3)·r per axis — removed here to match the real rendered envelope exactly.
 }
 if (ENV.min[1] < -1e-9) throw Error(`S6 below grade ${ENV.min[1]}`);
 export const ENVELOPE = { min: [...ENV.min] as V3, max: [...ENV.max] as V3 };
@@ -508,9 +595,37 @@ export function redChecks(): void {
     // RED-1: perturb the max-section axis 1 deg -> the max square section must shrink
     const nP = norm3(applyM(rotAxis([1,0,0], Math.PI/180), MAXSEC_N));
     if (!(centeredSquareSide(nP) < MAXSEC_SIDE - 1e-6)) throw Error(`RED-1 vacuous`);
-    // RED-2: perturb the passer pose 2 deg -> the pass must break
-    const Rbad = mulM(rotAxis([0,0,1], 2*Math.PI/180), RP);
-    if (violationRel(Rbad, PASS_S) <= 1e-6) throw Error(`RED-2 vacuous: 2-deg-perturbed passer still passes`);
+    // RED-2: stance-control (v4, non-vacuous): the face-stance fit is EXACT — a +2.5cm
+    // VV-offset passer must CLASH the kept fin boxes (its v interval [−s/2+off, s/2+off]
+    // crosses the fins' inner |v| band 2.3258; both are door-frame axis-aligned, so
+    // overlap ⟺ interval overlap — direct arithmetic on the carve boxes).
+    // (Recorded geometry: the naive "inside wall shadow AND outside door" region is
+    // EMPTY at this door — the door (half 2.3175) is WIDER than the wall's own v-shadow
+    // (±2.25), which is exactly why the wall forks. The 2-deg-rotation control of
+    // v1/v2/v3 is likewise vacuous at face stance — rotated regions leave the shadow.)
+    {
+        const off = 0.025;
+        const uLo = -PASS_S/2, uHi = PASS_S/2;
+        const vLo = -PASS_S/2 + off, vHi = PASS_S/2 + off;
+        const tLo = T_ST - PASS_S/2, tHi = T_ST + PASS_S/2;
+        let clash = false;
+        for (const b of WALL_BOXES) {
+            const [bu, bv, bt] = invP(b.c);
+            const oU = Math.min(uHi, bu + b.s[0]/2) - Math.max(uLo, bu - b.s[0]/2);
+            const oV = Math.min(vHi, bv + b.s[2]/2) - Math.max(vLo, bv - b.s[2]/2);
+            const oT = Math.min(tHi, bt + b.s[1]/2) - Math.max(tLo, bt - b.s[1]/2);
+            if (oU > 1e-9 && oV > 1e-9 && oT > 1e-9) { clash = true; break; }
+        }
+        if (!clash) throw Error(`RED-2 vacuous: +2.5cm-offset passer still clears every fin box — the exact-fit claim unproven`);
+        // and the base passer (offset 0) must clear them all (the fit itself)
+        for (const b of WALL_BOXES) {
+            const [bu, bv, bt] = invP(b.c);
+            const oU = Math.min(uHi, bu + b.s[0]/2) - Math.max(uLo, bu - b.s[0]/2);
+            const oV = Math.min(PASS_S/2, bv + b.s[2]/2) - Math.max(-PASS_S/2, bv - b.s[2]/2);
+            const oT = Math.min(tHi, bt + b.s[1]/2) - Math.max(tLo, bt - b.s[1]/2);
+            if (oU > 1e-9 && oV > 1e-9 && oT > 1e-9) throw Error(`RED-2 base clash: the seated passer overlaps fin box at (${bu.toFixed(2)},${bv.toFixed(2)},${bt.toFixed(2)}) — fit regression`);
+        }
+    }
     // RED-3: the fork is the DIAGONAL axis's own: the TRUE max-section axes QUARTER and the
     // axis-aligned bore ANNIHILATES at this door (carve-map findings, re-proven live)
     const { e1, e2 } = sectionPoly(MAXSEC_N);
@@ -535,10 +650,10 @@ export function redChecks(): void {
 if (import.meta.main) {
     redChecks();
     console.log(`S1 max square section (FRESH): ${MAXSEC_SIDE.toFixed(9)} == 3√2/4 ${CLASSIC.toFixed(9)} (classic; struct-220's 1.2503 RETRACTED — non-planar artifact, correction of record)`);
-    console.log(`S2 the passer: ${PASS_S.toFixed(4)} m = ${PASS_RATIO.toFixed(5)}x S — ${((PASS_RATIO-1)*100).toFixed(2)}% BIGGER than the wall, tilted pose a ${POSE_DEG.a.toFixed(2)} b ${POSE_DEG.b.toFixed(2)} g ${POSE_DEG.g.toFixed(2)} deg (b = −45 exact family), whole-pass region condition verified`);
+    console.log(`S2 the passer: ${PASS_S.toFixed(4)} m = ${PASS_RATIO.toFixed(5)}x S — ${((PASS_RATIO-1)*100).toFixed(2)}% BIGGER than the wall, FACE STANCE (axes = door frame; exact identity fit through the square door; whole-pass region condition verified). REJECTED-STANCE RECORD (v2/v3): tilted pose a ${TILT_POSE_DEG.a.toFixed(2)} b ${TILT_POSE_DEG.b.toFixed(2)} g ${TILT_POSE_DEG.g.toFixed(2)} deg at s ${TILT_S.toFixed(4)} — crest towers over the fin crowns at every station (L1 ≥ L2), twice judge-rejected`);
     console.log(`S3 the fork: diagonal bore (1,0,1)/√2, door ${DOOR.toFixed(4)} m = ${(DOOR/S).toFixed(5)}x the face — TWO grounded full-height fins ${STATS.comps.join(" / ")} cells, ${STATS.boxes} merged boxes (max-section axes quarter: 4; axis-aligned annihilates: 0)`);
     console.log(`S4 station: caught mid-pass at t ${T_ST.toFixed(3)} (mouth ${T_HI.toFixed(3)}), ${(EMERGED_FRAC*100).toFixed(0)}% emerged; floor-ride exact (bottom ${REVEAL*1000}mm above grade); wall raised ${PAD_H.toFixed(4)} m on its pads (the honest demo)`);
-    console.log(`S5 pads 2 (exact-SAT clear of the passer body, verified), fin-top beads 2 (on-fin law); sleeve RETIRED — the waist plane is fully carved (recorded)`);
+    console.log(`S5 pads 2 (exact-SAT clear of the passer body, verified; contact y ${(PADS[0].c[1]+PADS[0].s[0]/2).toFixed(4)}), fin-top beads 2 (on-fin law); sleeve RETIRED — the waist plane is fully carved (recorded)`);
     console.log(`S6 envelope x[${ENVELOPE.min[0].toFixed(2)},${ENVELOPE.max[0].toFixed(2)}] y[${ENVELOPE.min[1].toFixed(2)},${ENVELOPE.max[1].toFixed(2)}] z[${ENVELOPE.min[2].toFixed(2)},${ENVELOPE.max[2].toFixed(2)}] — asymmetric BY DESIGN (seat with the TRUE bbox); ${STATS.boxes} fin boxes = ${STATS.boxes*24} verts`);
     console.log(`RED 1-6 PASS`);
     console.log(`ALL PASS`);

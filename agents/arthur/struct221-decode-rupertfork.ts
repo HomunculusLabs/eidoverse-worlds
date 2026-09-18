@@ -27,24 +27,22 @@ const CLASSIC = 3 * Math.SQRT2 / 4;
 const DOOR = 1.03 * S;
 const doorHalf = DOOR / 2;
 const REVEAL = 0.012;
-const PASS_S = 4.6308;                     // probe-printed (1.02907x S)
-const PAD_H = 1.0365;                      // probe-printed raise
-const WALL_CY = S / 2 + PAD_H;              // 3.2865
+const PASS_S = 4.6310;                     // probe-printed v4 (DOOR − 4mm, face stance)
+const PAD_H = 0.0775;                      // probe-printed v4 bed course
+const WALL_CY = S / 2 + PAD_H;              // 2.3275
 const NN: V3 = [Math.SQRT1_2, 0, Math.SQRT1_2];
 const T_HI = Math.SQRT2 * (S / 2);
-const T_ST = T_HI + 0.12 * S;
+// v5 (struct-222): iron passer (material separation), FLANK-LAW station: nose 1.335m
+// proud, tail inside the waist-local fin band; T_ST = T_HI + 1.335 − s/2
+const T_ST = T_HI + 1.335 - PASS_S / 2;
 const deg = Math.PI / 180;
-// RP rebuilt from the probe-printed pose (a -90, b -90, g 90 deg — verified == probe RP to 1e-6)
-const RX = (t: number): V3[] => [[1,0,0],[0,Math.cos(t),-Math.sin(t)],[0,Math.sin(t),Math.cos(t)]];
-const RY = (t: number): V3[] => [[Math.cos(t),0,Math.sin(t)],[0,1,0],[-Math.sin(t),0,Math.cos(t)]];
-const rotAxis = (ax: V3, t: number): V3[] => { const c = Math.cos(t), s = Math.sin(t), C = 1 - c;
-    return [[c+ax[0]*ax[0]*C, ax[0]*ax[1]*C-ax[2]*s, ax[0]*ax[2]*C+ax[1]*s],
-            [ax[1]*ax[0]*C+ax[2]*s, c+ax[1]*ax[1]*C, ax[1]*ax[2]*C-ax[0]*s],
-            [ax[2]*ax[0]*C-ax[1]*s, ax[2]*ax[1]*C+ax[0]*s, c+ax[2]*ax[2]*C]]; };
-const mulM = (A: V3[], B: V3[]): V3[] => { const o: V3[] = [[0,0,0],[0,0,0],[0,0,0]]; for (let i=0;i<3;i++) for (let j=0;j<3;j++) o[i][j] = A[i][0]*B[0][j] + A[i][1]*B[1][j] + A[i][2]*B[2][j]; return o; };
-const RP = mulM(rotAxis(NN, 90*deg), mulM(RY(-90*deg), RX(-90*deg)));
+const RP: V3[] = [
+    [NN[0], 0, -Math.SQRT1_2],
+    [0, 1, 0],
+    [NN[2], 0, Math.SQRT1_2]];
+const CONTACT = 0.1801;  // probe v4: fin raster bottom == pad top (contact plane)
 const PASS_C: V3 = [T_ST*NN[0], WALL_CY + T_ST*NN[1], T_ST*NN[2]];
-const ENV_W: [number, number, number] = [8.94, 6.56, 8.94]; // probe contract size
+const ENV_W: [number, number, number] = [7.57, 4.64, 7.57]; // v5 probe contract size (iron passer, flank-law station)
 
 // ---- collect meshes with world verts ----
 interface M { name: string; mat: string; world: THREE.Vector3[]; emissiveRGB: [number, number, number] }
@@ -62,6 +60,10 @@ root.traverse((o: any) => {
     meshes.push({ name: o.name, mat: o.material?.name ?? "?", world, emissiveRGB: e ? [e.r, e.g, e.b] : [0,0,0] });
 });
 const stoneWorld = meshes.filter(m => m.mat === "rf_stone").flatMap(m => m.world);
+// v5: the passer is its own texMat lane (rf_iron — material separation); passer checks
+// use the iron mesh, not the stone bucket.
+const ironWorld = meshes.filter(m => m.mat === "rf_iron").flatMap(m => m.world);
+const passerPool = ironWorld.length ? ironWorld : stoneWorld;
 
 // analytic passer box membership (rotated frame)
 const inPasserBox = (p: THREE.Vector3): boolean => {
@@ -87,14 +89,13 @@ const CK = (name: string, ok: boolean, detail: string) => { if (!ok) FAILS++; co
 
 // ---- D2 the fins (analytic assignment: in-wall-cube, NOT in the passer box) ----
 {
-    const passerVerts = stoneWorld.filter(inPasserBox);
+    const passerVerts = passerPool.filter(inPasserBox);
     const rest = stoneWorld.filter(p => !inPasserBox(p));
-    // NOTE: pads rise TO the blades' raster bottom — the contact plane y≈1.2365 is
+    // NOTE: pads rise TO the blades' raster bottom — the contact plane y≈CONTACT is
     // SHARED (pad top face == fin bottom face, by construction). The kept-cell law
     // therefore scopes to stone STRICTLY ABOVE the contact plane (+0.5mm); verts AT
     // the plane are contact verts (their clearance is proven by D2-contact + D4 +
-    // the probe's S5 AABB-disjoint law, not by the |v| test).
-    const CONTACT = 1.1391;  // probe fin raster bottom == pad top (v2 constants)
+    // the probe's S5 |v| law, not by the |v| test).
     const finVerts = rest.filter(p => p.y > CONTACT + 0.0005);
     const padVerts = rest.filter(p => p.y < CONTACT - 0.0005);
     CK("D2 populations", passerVerts.length >= 20 && finVerts.length >= 120 && padVerts.length >= 20,
@@ -121,19 +122,15 @@ const CK = (name: string, ok: boolean, detail: string) => { if (!ok) FAILS++; co
 
 // ---- D3 pads (bodies below the contact plane + outward fringe beyond the wall footprint) ----
 {
-    const padVerts = stoneWorld.filter(p => !inPasserBox(p) && p.y < 1.1386);
+    const padVerts = stoneWorld.filter(p => !inPasserBox(p) && p.y < CONTACT - 0.0005);
     const p1 = padVerts.filter(p => p.x > 0.5 && p.z < -0.5).length;
     const p2 = padVerts.filter(p => p.x < -0.5 && p.z > 0.5).length;
     let yMin = Infinity;
     for (const p of padVerts) yMin = Math.min(yMin, p.y);
     // outward fringe: pad verts beyond the wall footprint (the 12cm margin) prove the
-    // pads poke OUTWARD (never under the bore)
-    const fringe = stoneVertsOutward();
-    function stoneVertsOutward() {
-        let n = 0;
-        for (const p of stoneWorld) if (!inPasserBox(p) && p.y < 1.1396 && (Math.abs(p.x) > 2.26 || Math.abs(p.z) > 2.26)) n++;
-        return n;
-    }
+    // pads poke OUTWARD (never under the bore) — v4 door-frame pads, contact plane
+    let fringe = 0;
+    for (const p of padVerts) if (Math.abs(p.x) > 2.26 || Math.abs(p.z) > 2.26) fringe++;
     CK("D3 pads", p1 >= 12 && p2 >= 12 && Math.abs(yMin) < 0.002 && fringe >= 12,
         `pad bodies (+x,−z): ${p1}, (−x,+z): ${p2}, grade ${yMin.toFixed(4)}, outward-fringe verts ${fringe} (>2.26 — pads poke out, never under the bore)`);
 }
@@ -149,13 +146,13 @@ const CK = (name: string, ok: boolean, detail: string) => { if (!ok) FAILS++; co
     let worst = 0;
     for (const c of corners) {
         let best = Infinity;
-        for (const p of stoneWorld) best = Math.min(best, p.distanceTo(c));
+        for (const p of passerPool) best = Math.min(best, p.distanceTo(c));
         worst = Math.max(worst, best);
     }
     CK("D4 passer pose", worst < 0.005,
-        `all 8 analytic corners matched to stone verts (worst ${worst.toFixed(5)} m) — the bigger cube, pose a−90 b−90 g90, ${PASS_S.toFixed(4)} m = ${(PASS_S/S).toFixed(5)}x the wall`);
+        `all 8 analytic corners matched to iron-passer verts (worst ${worst.toFixed(5)} m) — the bigger cube, FACE STANCE, ${PASS_S.toFixed(4)} m = ${(PASS_S/S).toFixed(5)}x the wall`);
     // floor ride
-    const passerVerts = stoneWorld.filter(inPasserBox);
+    const passerVerts = passerPool.filter(inPasserBox);
     let yMin = Infinity;
     for (const p of passerVerts) yMin = Math.min(yMin, p.y);
     CK("D4 floor ride", Math.abs(yMin - REVEAL) < 0.002,
@@ -193,8 +190,8 @@ const CK = (name: string, ok: boolean, detail: string) => { if (!ok) FAILS++; co
     const p1 = gv.filter(p => p.x + p.z > 0).length;
     const p2 = gv.filter(p => p.x + p.z < 0).length;
     const yTop = gv.length ? Math.max(...gv.map(p => p.y)) : 0;
-    CK("D6 two beads", p1 > 100 && p2 > 100 && yTop > 5.0,
-        `bead verts split ${p1}/${p2} across the anti-diagonal, top y ${yTop.toFixed(2)} (on the fin tops, above the wall crown plane)`);
+    CK("D6 two beads", p1 > 100 && p2 > 100 && yTop > 4.0,
+        `bead verts split ${p1}/${p2} across the anti-diagonal, top y ${yTop.toFixed(2)} (on the fin crowns — v4 face-stance heights, above the passer's 4.64m crest plane)`);
 }
 
 // ---- D7 min-y ----

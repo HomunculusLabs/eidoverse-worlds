@@ -15717,3 +15717,97 @@ assets/mkv3-rupertfork.ts (NEW, staged -f), reviews/struct221-rupertfork/
 (12 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one
 append struct-221, D+0 E+0). Zero world mutations, uploads, verbs,
 comp-edits, shared-budget use. Zero pushes.
+
+## struct-222 (2026-09-18): R11-36 RUPERT'S FORK — THREE-ITERATION FALSIFICATION ARC
+## (v3 nose-out, v4 face-stance pivot, v5 iron+flank-law) — all judged REJECT
+## pre-placement, root cause CONVERGED; v6 deep-prism commission recorded
+
+222%3=0 refine slot taken as build under the empty-pool escape clause (refine pool
+empty of payable items 40+ ticks: native board cron-unpayable, eye-gates Bill's —
+struct-216 precedent). Gate ALL PASS real exit 0 tick-start at 9aae440b (fauna-16).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-221 -> tag struct-222 (re-checked immediately before
+append). Bank empty; struct-221's committed carry: "v3 nose-out recomposition".
+
+FORM SELECTION: rupertfork already commissioned (struct-220 verdict + struct-221
+v2 REJECT with the judges' fix list). Register: BORED-REMAINDER branch stays open
+(no standing form's identity is a wall split by a door).
+
+THE ARC (every iteration probe ALL PASS + RED-first before judging; every rejection
+caught BEFORE any upload — zero world mutations this tick):
+
+1. v3 NOSE-OUT (T_ST = T_HI − 0.30·tHalfExt, 35% emerged, tilted pose kept) —
+   probe ALL PASS + RED 1-6, rebuild deterministic ×2 sha 881836a871230bbb…,
+   decode 15/15, 12 frames rendered. Judged (ZAI fallback, native absent from cron
+   catalog fresh — same disclosed class as struct-169..221; owed board 26): REJECT
+   2/2 primary vantages. NEW LAW discovered: the tilted (corner-stance) passer's
+   crest (WALL_CY + PASS_YHALF) ALWAYS towers over the fin crowns (WALL_CY + S/2)
+   because PASS_YHALF = (s/2)·Σ|row1| ≥ (s/2)·√2 > S/2 for any tilted rotation (L1
+   ≥ L2; face stance is the unique minimizer) — the overhang is geometrically
+   unavoidable at the tilted stance; NO station fixes it.
+2. v4 FACE-STANCE PIVOT — the passer's local axes ALIGN with the door frame
+   (local x→NN, y→UU, z→VV; det asserted +1; the tilted Euler solve kept as the
+   rejected-stance record). Fit = the identity: a square of side ≤ door passes a
+   square door exactly; PASS_S = DOOR − 4mm = 4.6310m = 1.02911×S. THREE RED-first
+   catches this iteration: (a) the old 2-deg-rotation RED-2 control is PROVABLY
+   VACUOUS at face stance (rotated corner regions exit the wall shadow — replaced
+   with direct interval clash: +2.5cm VV offset must clash a fin box, base must
+   clear all — live); (b) recorded geometry: the wall-shadow∩outside-door region is
+   EMPTY (door half 2.3175 > wall v-shadow ±2.25 — exactly why the wall forks);
+   (c) S5 exact-SAT caught the axis-aligned pads filling the fin footprint's
+   diagonal corner into the bore's |v| band (cleared the tilted passer on height,
+   NOT the low face-stance one) — pads redesigned as DOOR-FRAME boxes whose inner
+   v-edge IS the fin's inner edge (|v| law, clear at every station); (d) envelope
+   drift RED caught pOf(finBot/2) floating pads at mid-wall (u is measured from
+   O_W = the bore center, not grade) — fixed to finBot/2 − WALL_CY, contact y
+   0.1801. Build sha 35cf970961bd41bd… ×2, decode ALL PASS 15/15 (corner match
+   0.00000 — the identity fit is EXACT; pad-body/outward-fringe/glow thresholds
+   all re-derived for the new contact plane). Judged: REJECT — "reads as a stone
+   box with a thin fin stuck on its left edge; the passer is indistinguishable
+   from the wall (same texture, flush surfaces)".
+3. v5 IRON + FLANK LAW — material separation (both judges' converged ask): the
+   passer becomes DARK IRON texMat rf_iron (0x4a4a50 lineage — sphericon/
+   newtonspheres standing palette; figure-ground, not near-black). Station first
+   deepened to nose 2.2m — RED-2 fired vacuous, and the debug interval print
+   exposed WHY: THE FINS ARE WAIST-LOCAL (t ∈ [−0.59, 0.59] — the door is wider
+   than the wall's diagonal section everywhere except near the waist), so the
+   passer's tail had slid PAST the fin band entirely (zero flank). FLANK LAW
+   encoded (tail must sit inside the fin band with ≥0.25m overlap; nose ≥1.0m
+   proud): station re-seated nose 1.335m proud, flank 0.703m, 29% emerged. Build
+   sha 4f45679c305a1429… ×2, decode ALL PASS 15/15 (iron lane added; passer
+   checks on the rf_iron mesh; RED +3cm 3.95m detected). Judged: gameplay REJECT
+   ("two unrelated boxes — a dark crate plus a thin wall stub") + bore-vantage
+   REJECT (the decisive one): from down-the-bore the passer's projected
+   half-width (2.33m at ~10m) EXCEEDS the fins' outer-edge projection (3.18m at
+   ~14m) — the bigger cube occludes both fins at the walker's own vantage.
+
+ROOT CAUSE, CONVERGED ACROSS 5 JUDGE ROUNDS: the door-width/fins-width tension is
+INTRINSIC to s > S through a cube at the diagonal bore — a 1.03×S door leaves
+0.85m fins, and ANY bigger-than-wall passer covers them from most angles; a
+smaller door widens the fins but shrinks the bigger-than-wall margin toward zero.
+The two judge asks (visible fork + visible bigger cube) fight each other THROUGH
+the door size at fixed wall proportions. Material separation solves figure-ground;
+it cannot solve occlusion.
+
+V6 COMMISSION (recorded in the probe header): the wall becomes a DEEPER
+square-section prism (S×S×L, L ≈ 1.6–2.0×S along the bore — the sandwich/interval
+pass-proof is cross-section-based, length-agnostic, so the pass stays
+machine-true): a real PORTAL throat (the depth read every judge asked for), fins
+with depth-mass, door band RE-CARVE-MAPPED for the wider-prong family (target fin
+width ≥ 1.2m), passer IRON at 1.02–1.03×S at the throat's thirdpoint. Nose-out,
+flank law, bed course, door-frame pads, beads, iron lane all carry forward.
+
+DISPOSITION: NOT PLACED (never place a rejected form). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Native re-judge debts: rupertfork
+v3/v4/v5 fallback-judged REJECTS (disclosed; the decode/probe evidence is
+machine-exact and the rejections are conservative — native confirmation would only
+re-close the same verdicts). The owed board stays 26 + the arc's rejects.
+
+Bill eye-check pointer: none this tick (nothing new standing).
+
+Files: struct221-probe-rupertfork.ts + struct221-decode-rupertfork.ts +
+struct221-render-rupertfork.ts (all tracked, iterated in place this tick),
+assets/mkv3-rupertfork.ts (tracked, staged -f), reviews/struct222-rupertfork-v3/
++ v4/ + v5/ (36 frames total, ignored — sha pins in this block are the durable
+record: v3 881836a8…, v4 35cf9709…, v5 4f45679c…), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-222, D+0 E+0). Zero pushes.

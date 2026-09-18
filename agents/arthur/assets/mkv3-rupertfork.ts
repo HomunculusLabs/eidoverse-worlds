@@ -19,7 +19,7 @@ import { mergeByMaterial } from "./mergekit.ts";
 import { writeFileSync } from "node:fs";
 import {
     WALL_BOXES, PADS, BEADS, BEAD_R, PASS_C, PASS_S, RP, ENVELOPE,
-    PASS_RATIO, POSE_DEG, EMERGED_FRAC, PAD_H,
+    PASS_RATIO, POSE_DEG, EMERGED_FRAC, PAD_H, UU, NN, VV,
 } from "../struct221-probe-rupertfork.ts";
 
 // ---- materials ----------------------------------------------------------------------------------------
@@ -55,17 +55,31 @@ const g = new THREE.Group();
         g.add(mesh);
     }
     for (const p of PADS) {
-        const pad = new THREE.Mesh(new THREE.BoxGeometry(p.s[0], p.s[1], p.s[2]), stoneTex);
+        // v4: pads are DOOR-FRAME boxes (axes UU/NN/VV, same as the fin cells) —
+        // s = [u: height, t: along NN, v: along VV]; inner v edge == the fin's own
+        // inner edge, so the pad clears the passer at every station (|v| law).
+        const geo = new THREE.BoxGeometry(1, 1, 1);
+        const m = new THREE.Matrix4().makeBasis(
+            new THREE.Vector3(p.s[0]*UU[0], p.s[0]*UU[1], p.s[0]*UU[2]),
+            new THREE.Vector3(p.s[1]*NN[0], p.s[1]*NN[1], p.s[1]*NN[2]),
+            new THREE.Vector3(p.s[2]*VV[0], p.s[2]*VV[1], p.s[2]*VV[2]));
+        const pad = new THREE.Mesh(geo, stoneTex);
+        pad.applyMatrix4(m);
         pad.position.set(p.c[0], p.c[1], p.c[2]);
         g.add(pad);
     }
     console.log(`fins+pads: ${WALL_BOXES.length} fin boxes (two full-height knives at the anti-diagonal corners) + ${PADS.length} foot pads (h ${PAD_H.toFixed(3)} — the raise that lets the bigger cube clear the floor)`);
 }
 
-// ---- stone: the passer — the bigger cube, caught mid-pass ------------------------------------------------
+// ---- stone: the passer — the bigger cube, caught mid-pass (v5: DARK IRON — material separation, the judges' converged fix) ----
 {
+    // v5: the passer becomes dark iron (standing family palette — sphericon/
+    // newtonspheres 0x4a4a50 lineage): figure-ground separation from the stone wall
+    // (both judges: "the passer is indistinguishable from the wall — same texture").
+    // The monument's subject is the PASSER; the procession's iron accent marks it.
+    const ironTex = texMat("rf_iron", [0x4a4a50, 0x3f3f45, 0x55555c], { rough: 0.8, metal: 0.35, scale: 1.5, weights: [3, 1, 1], cell: 20, seed: 76 });
     const geo = new THREE.BoxGeometry(PASS_S, PASS_S, PASS_S);
-    const mesh = new THREE.Mesh(geo, stoneTex);
+    const mesh = new THREE.Mesh(geo, ironTex);
     const m = new THREE.Matrix4().makeBasis(
         new THREE.Vector3(RP[0][0], RP[1][0], RP[2][0]),
         new THREE.Vector3(RP[0][1], RP[1][1], RP[2][1]),
@@ -73,7 +87,7 @@ const g = new THREE.Group();
     mesh.applyMatrix4(m);
     mesh.position.set(PASS_C[0], PASS_C[1], PASS_C[2]);
     g.add(mesh);
-    console.log(`passer: ${PASS_S.toFixed(4)} m cube = ${PASS_RATIO.toFixed(5)}x the wall (BIGGER), pose a ${POSE_DEG.a.toFixed(1)} b ${POSE_DEG.b.toFixed(1)} g ${POSE_DEG.g.toFixed(1)} deg, ${(EMERGED_FRAC*100).toFixed(0)}% emerged past the mouth, bottom riding 12mm above grade`);
+    console.log(`passer: ${PASS_S.toFixed(4)} m cube = ${PASS_RATIO.toFixed(5)}x the wall (BIGGER), FACE STANCE, DARK IRON (rf_iron — material separation), ${(EMERGED_FRAC*100).toFixed(0)}% emerged past the mouth, bottom riding 12mm above grade`);
 }
 
 // ---- brass: the two fin-top beads (KEEP — sole night element) ----------------------------------------------
