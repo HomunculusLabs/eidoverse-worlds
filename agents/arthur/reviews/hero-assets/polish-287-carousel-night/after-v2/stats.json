@@ -1,0 +1,338 @@
+{
+  "label": "LOCAL EXACT-BYTE REVIEW, NOT IN-WORLD",
+  "horse": "horse_2",
+  "opaqueSort": "source traversal",
+  "bounds": {
+    "min": [
+      -3.549999952316284,
+      -2.384185793236071e-9,
+      -3.549999952316284
+    ],
+    "max": [
+      3.549999952316284,
+      6.769926071166992,
+      3.839999997615814
+    ],
+    "size": [
+      7.099999904632568,
+      6.769926073551178,
+      7.389999949932099
+    ]
+  },
+  "nodes": 46,
+  "drawMeshes": 39,
+  "namedNodes": [
+    "cr3_0",
+    "cr3_1",
+    "cr3_2",
+    "cr3_3",
+    "cr3_4",
+    "cr3_5",
+    "cr3_6",
+    "cr_stairs",
+    "cr_tread_0",
+    "cr_tread_1",
+    "cr_tread_2",
+    "cr_stair_cheek_-068",
+    "cr_stair_cheek_068",
+    "carousel",
+    "carousel_0",
+    "carousel_1",
+    "carousel_2",
+    "carousel_3",
+    "carousel_4",
+    "carousel_5",
+    "horse_0",
+    "horse_0_0",
+    "horse_0_1",
+    "horse_0_2",
+    "horse_0_3",
+    "horse_0_4",
+    "horse_2",
+    "horse_2_0",
+    "horse_2_1",
+    "horse_2_2",
+    "horse_2_3",
+    "horse_2_4",
+    "horse_4",
+    "horse_4_0",
+    "horse_4_1",
+    "horse_4_2",
+    "horse_4_3",
+    "horse_4_4",
+    "horse_6",
+    "horse_6_0",
+    "horse_6_1",
+    "horse_6_2",
+    "horse_6_3",
+    "horse_6_4",
+    "carousel_ceiling_node"
+  ],
+  "materials": [
+    "(unnamed)",
+    "carousel_blanket",
+    "carousel_bone_paint",
+    "carousel_ceiling_glow",
+    "carousel_fabric",
+    "carousel_gold_paint",
+    "carousel_wood",
+    "glow3",
+    "horse_0_cream_paint",
+    "horse_0_saddle_leather",
+    "horse_0_teal_blanket",
+    "horse_4_cream_paint",
+    "horse_4_saddle_leather",
+    "horse_4_teal_blanket",
+    "horse_6_rose_paint",
+    "horse_6_saddle_leather",
+    "horse_6_teal_blanket",
+    "prototype_brass",
+    "prototype_cream_paint",
+    "prototype_hair_hoof",
+    "prototype_saddle_leather",
+    "prototype_teal_blanket"
+  ],
+  "sha256": "0144587820eb5e67062a6c57c3fe4dfb84760b79b5d675f2187420117693e61e",
+  "framing": {
+    "front": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        0,
+        3.7234999908208852,
+        15.149499897360801
+      ],
+      "quaternion": [
+        -0.03790284827009527,
+        0,
+        0,
+        0.9992814288742757
+      ]
+    },
+    "right": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        15.149499897360801,
+        3.7234999908208852,
+        0
+      ],
+      "quaternion": [
+        -0.02680136103806917,
+        0.7065986746707831,
+        0.02680136103806917,
+        0.706598674670783
+      ]
+    },
+    "back": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        0,
+        3.7234999908208852,
+        -15.149499897360801
+      ],
+      "quaternion": [
+        0,
+        0.9992814288742757,
+        0.03790284827009527,
+        0
+      ]
+    },
+    "left": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        -15.149499897360801,
+        3.7234999908208852,
+        0
+      ],
+      "quaternion": [
+        -0.02680136103806917,
+        -0.7065986746707831,
+        -0.02680136103806917,
+        0.706598674670783
+      ]
+    },
+    "gameplay": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        0,
+        1.65,
+        18
+      ],
+      "quaternion": [
+        0.025602572522263153,
+        0,
+        0,
+        0.9996722004138368
+      ]
+    },
+    "aerial": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        8.498499942421914,
+        9.606999934911729,
+        8.498499942421914
+      ],
+      "quaternion": [
+        -0.24176386422414003,
+        0.3693483653524728,
+        0.10014187145336632,
+        0.8916858328742728
+      ]
+    },
+    "top": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        0,
+        15.888499892354012,
+        0.001
+      ],
+      "quaternion": [
+        -0.7070802294679001,
+        0,
+        0,
+        0.7071333319082208
+      ]
+    },
+    "night": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        0,
+        1.65,
+        18
+      ],
+      "quaternion": [
+        0.025602572522263153,
+        0,
+        0,
+        0.9996722004138368
+      ]
+    },
+    "motion-a": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        0,
+        3.7234999908208852,
+        15.149499897360801
+      ],
+      "quaternion": [
+        -0.03790284827009527,
+        0,
+        0,
+        0.9992814288742757
+      ]
+    },
+    "motion-b": {
+      "vertices": 212504,
+      "clipped": 0,
+      "scope": "full model",
+      "camera": [
+        0,
+        3.7234999908208852,
+        15.149499897360801
+      ],
+      "quaternion": [
+        -0.03790284827009527,
+        0,
+        0,
+        0.9992814288742757
+      ]
+    },
+    "boarding": {
+      "vertices": 52163,
+      "clipped": 0,
+      "scope": "horse_2 under-canopy closeup",
+      "camera": [
+        7,
+        2.6,
+        7
+      ],
+      "quaternion": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    "horse-side": {
+      "vertices": 52163,
+      "clipped": 0,
+      "scope": "isolated horse_2",
+      "camera": [
+        3.5,
+        1,
+        0.1
+      ],
+      "quaternion": [
+        -0.018366325167912916,
+        0.6987504296350247,
+        0.017951320557231445,
+        0.7149043749166364
+      ]
+    },
+    "horse-front": {
+      "vertices": 52163,
+      "clipped": 0,
+      "scope": "isolated horse_2",
+      "camera": [
+        0,
+        1.05,
+        3.5
+      ],
+      "quaternion": [
+        -0.03299199809490741,
+        0,
+        0,
+        0.9994556158538035
+      ]
+    },
+    "horse-threequarter": {
+      "vertices": 52163,
+      "clipped": 0,
+      "scope": "isolated horse_2",
+      "camera": [
+        2.65,
+        1.45,
+        2.65
+      ],
+      "quaternion": [
+        -0.0770698515233758,
+        0.3830904531488588,
+        0.03209452076843077,
+        0.919930369337273
+      ]
+    },
+    "horse-rear": {
+      "vertices": 52163,
+      "clipped": 0,
+      "scope": "isolated horse_2",
+      "camera": [
+        2.65,
+        1.25,
+        -2.65
+      ],
+      "quaternion": [
+        -0.021666415829025377,
+        0.9231005730372553,
+        0.052586718588931894,
+        0.3803295091252624
+      ]
+    }
+  }
+}

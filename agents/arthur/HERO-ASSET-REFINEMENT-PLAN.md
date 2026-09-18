@@ -806,3 +806,37 @@ next wake once the gateway answers.
   contrast, night navy-horse threshold (occlusion-not-color class from the
   judge note); or re-survey plaza-core on fresh evidence.
 
+
+### polish-287 — carousel night coat identity (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-286 rose-coat build (live was dfad459e492d9727).
+- Defect (ZAI judge on exact live bytes, night frame): after dark only the bone
+  horse read at 18m — rose invisible, blue a dark mass, gold muted (criterion 6
+  failing 3 of 4 coats; lantern dots + ceiling carried the whole night).
+- Change (ONE intervention, new production step `carousel-horse-prototype/
+  coats.ts`): faint same-hue emissiveFactor on exactly the three failing body
+  materials — gold [0.26,0.16,0.05] (v1 [0.15,0.10,0.06] judged "reads cream",
+  retuned in-tick per polish-285 precedent), blue [0.07,0.12,0.17], rose
+  [0.30,0.05,0.04]. No new lights (fountain-274/cistern-281/shrine-278/
+  ceiling-285 lineage); bone control prototype_cream_paint untouched.
+- Candidate `0144587820eb5e67…` A/B byte-identical; night pixel probes:
+  blue-dominant 0→1807 px, warm 2697→4514; day diff confined to the three
+  coats (horse_2 control closeups + top view = 0 changed px); 15/15 views
+  clip-clean. Judge verdict (ZAI fallback, no native vision this cron session,
+  native re-judge owed): four readable coats, "painted wood with mild
+  self-illumination, not glow-orbs", lanterns still brightest, no new
+  defects, "passes as a night read".
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED (1 upload + 8
+  verbs), 7-key comp bag replayed verbatim, idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0), live census pin `store/0144587820eb5e67.glb`
+  at the exact tuple; served DRACO bytes keep all three emissiveFactors
+  exact; nodes 45 unchanged.
+- Evidence: `reviews/hero-assets/polish-287-carousel-night/` (before/ = live
+  build 15-view rig + stats; after/ = rejected v1 gold, disk-only, not
+  committed; after-v2/ = accepted).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no such
+  working exists in the current Excalibur layout); recorded here + ledger +
+  rollout artifact tree instead. Not fabricated.
+- Next: canopy fabric night read (judge: canopy is the darkest large object,
+  cream/red/gold absent after dark) — restrained fabric-emissive candidate;
+  or re-survey plaza-core on fresh evidence.
