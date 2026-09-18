@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 367,
+  "count": 369,
   "entities": [
     {
       "id": "beb4c791",
@@ -6105,6 +6105,124 @@
           "period": 2.4,
           "phase": 1.4,
           "t0": 1789706242876
+        }
+      }
+    },
+    {
+      "id": "nx-dress-rooster-001",
+      "kind": "thing",
+      "pos": [
+        31.25,
+        -0.02772,
+        -9
+      ],
+      "yaw": -1.3,
+      "scale": 1,
+      "lib": "store/af35212ecbb7ba5f.glb",
+      "bbox": {
+        "min": [
+          -0.219,
+          0,
+          -0.752
+        ],
+        "max": [
+          0.217,
+          1.02,
+          0.413
+        ],
+        "size": [
+          0.436,
+          1.02,
+          1.165
+        ],
+        "center": [
+          -0.001,
+          0.51,
+          -0.169
+        ]
+      },
+      "compKeys": [
+        "motion:roost_a",
+        "motion:roost_a_comb",
+        "motion:roost_a_head",
+        "motion:roost_a_tail",
+        "motion:roost_a_wing"
+      ],
+      "comp": {
+        "motion:roost_a": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4.4,
+          "phase": 0.1,
+          "t0": 1789772317520
+        },
+        "motion:roost_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.3,
+          "period": 7.5,
+          "phase": 0,
+          "t0": 1789772317520
+        },
+        "motion:roost_a_comb": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.12,
+          "period": 3.2,
+          "phase": 1.4,
+          "t0": 1789772317520
+        },
+        "motion:roost_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.08,
+          "period": 5.5,
+          "phase": 1.2,
+          "t0": 1789772317520
+        },
+        "motion:roost_a_wing": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.05,
+          "period": 1.6,
+          "phase": 0.7,
+          "t0": 1789772317520
         }
       }
     },
@@ -12656,6 +12774,42 @@
         "center": [
           0,
           5.162,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-ssd",
+      "kind": "thing",
+      "pos": [
+        65.18743,
+        -0.031675,
+        10.324675
+      ],
+      "yaw": 4.03919,
+      "scale": 1,
+      "lib": "store/38aa4c11345020ed.glb",
+      "bbox": {
+        "min": [
+          -2.817,
+          0,
+          -2.75
+        ],
+        "max": [
+          2.817,
+          6.482,
+          2.75
+        ],
+        "size": [
+          5.634,
+          6.482,
+          5.5
+        ],
+        "center": [
+          0,
+          3.241,
           0
         ]
       },
