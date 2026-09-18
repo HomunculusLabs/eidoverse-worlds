@@ -16311,3 +16311,88 @@ banked), reviews/struct227-csaszar/ (9 frames, ignored — sha pins in this
 block are the durable record), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-227, D+0 E+0). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+
+## struct-228 (2026-09-18): R11-41 CSÁSZÁR PLACED — the struct-227
+## committed carry executed (under-served az135-185 band; W-shoulder
+## constellation seat)
+
+228%3=0 refine slot taken as the placement carry under the empty-pool
+escape clause (refine pool empty of payable items 40+ ticks: native board
+cron-unpayable, struct-216/222/225 precedent; placement of an
+already-judged bank is not a new form). Gate ALL PASS real exit 0
+tick-start at 0a1a4313 (polish-289; unpiped GATE_EXIT:0). Shard drained
+fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger
+max re-derived struct-227 -> tag struct-228 (re-checked immediately before
+append; law exact 2370938). Native absent from the cron catalog all tick
+(tool_search fresh: terminal + zai-vision only — same disclosed
+cron-unpayable class as struct-169..227; owed board stays 26 + csaszar v3).
+
+NAMING HONESTY (recorded, binds the block): struct-226/227's carry called
+az135-180 "the E quadrant" — a dialect slip, NOT the law. The LAW is the az
+RANGE 135-180 (math atan2(z,x); by compass this band is the SW/W reach —
+the millrace lives here at az175 r77, city-4 "NW quadrant W shoulder").
+This tick seated in the az RANGE the carry committed to; no compass claim.
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2
+reproduces the pinned sha exactly (299e6d7d0c0d9c15…507a72b, mtime
+verified); struct227-decode re-run on the exact bytes ALL PASS D1-D8 real
+exit 0 (3 nodes, heptagon plinth sole at grade, 21/21 rods, 7/7 bead
+clusters, envelope drift 0).
+
+SEAT (struct228-scan, fresh 364-entity census): committed band az135-185
+r66-115 scanned with heptagon-EXACT polygon SAT — 2476 lawful candidates.
+Seat az163.0 r66.0 (-63.116114, 19.296533) chosen as the innermost
+CONSTELLATION anchor (18-40m to both millrace + screwwell): the W-shoulder
+shelf reads as a rising rhythm csaszar r66 -> millrace az175 r77 ->
+screwwell az180 r88, not a singleton in an empty field. NN 10.50 to
+nx-struct-honeycombscreen (law 8); SAT worst 2.99 vs
+nx-cultivation-lavender-0006 (law 1.4); walk-clear 37.41. Band audit: 2
+struct forms standing (soft cap 6; +csaszar -> 3, NO exceedance).
+
+YAW LAW (procession convention, struct-217/219/224): local az α -> world
+az (α − yaw). Judged reading face local az90 at world az13 = anti-travel
+az343 + 30deg east lean (struct-104 oblique band) -> yaw_deg = 77 ->
+YAW = 1.343904 rad. Control: the same law at az94 reproduces struct-219's
+recorded newtonspheres yaw 146deg exactly. The K7 cage is asymmetric (no
+fold to preserve) — the yaw protects the judged read.
+
+TERRAIN (struct228-terrain-csaszar.ts, this tick): 15pt over the TRUE
+rotated heptagon (center + 7 vertices + 7 edge-mids at yaw), spread 7.2mm,
+PY = lowest = -0.027470 (m01; the bank's 7cm embed law absorbs).
+
+SAT LAW (new for this footprint, unit-tested before mutation): the
+heptagonal plinth R2.75 is the footprint (cage reach 2.169 < apothem
+2.478−0.25); exact convex-polygon SAT (edge-normal axes of both polys,
+max-gap law) replaces the square-bbox proxy — struct-19's disc law class:
+the proxy false-fails an asymmetric heptagon. Disc neighbors keep the
+point-to-polygon exact distance. Helper unit-tested distant (16.3189 =
+20−2.681−1 exact), touching (−0.0001), overlapping (−0.2031), rotated
+control (+15.77) — ALL PASS before the placer ran. Probe-law-6 class
+self-catch: my first unit-test expectations used the apothem where the
+x-axis projection is the VERTEX extent (2.681) — the code was right, the
+test was wrong; corrected RED-first.
+
+PLACEMENT: next-place-struct228.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed), upload
+store/299e6d7d0c0d9c15.glb (1 upload, shared budget), plain spawn 1 verb
+paced 1200ms, PLACED_VERIFIED pos [-63.116114, -0.027470, 19.296533] yaw
+1.343904 comp {} census 364->365; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 6/6 CORE_ALL_PASS maxArrival 0.31m (two-way village
+approach on the az163 arrival line + reading-face vantage rim13 at 7m on
+the az13 face normal + full CW standoff circuit — no phantom collider;
+folly by presentation, the open cage is the sculpture).
+
+Bill eye-check pointer: on the W-shoulder walk past the lavender beds —
+the shelf now reads csaszar -> millrace -> screwwell rising away from the
+village; the nearest work is a seven-sided stone dais carrying a woven
+iron cage — every rod meets every other's endpoints, and seven brass
+stars burn at the joints, three seated in the dais itself. The idea:
+seven points, all acquainted — the smallest torus that can be woven
+without a single diagonal. Count the rods at any one bead: six. After
+dark: a quiet constellation of seven.
+
+Files: struct228-scan-csaszar.ts + struct228-terrain-csaszar.ts +
+struct228-walk-csaszar.ts + next-place-struct228.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-228,
+D+0 E+1). One upload, one verb. Zero pushes.
