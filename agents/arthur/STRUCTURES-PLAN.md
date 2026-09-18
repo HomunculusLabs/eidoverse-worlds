@@ -16518,3 +16518,95 @@ parametrization banked for any future attempt), reviews/struct229-szilassi/
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-229,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits, shared-budget
 use. Zero pushes.
+
+
+## struct-230 (2026-09-18): R11-43 SZILASSI ROUND-REALIZATION ATTEMPT — path (a)
+## EXECUTED AND CLOSED ON EVIDENCE (nothing built, nothing placed — honest record)
+
+230%3=2 build+judge slot with EMPTY bank (szilassi v1 rejected struct-229)
+→ the committed carry: path (a) of struct-229's three banked lawful paths,
+the self-authored round realization. Gate ALL PASS real exit 0 tick-start at
+2c3df9d7 (dress-160; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN
+md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-229 → tag struct-230 (re-checked immediately before append). Native
+absent from the cron catalog all tick (tool_search fresh: terminal +
+zai-vision only — same disclosed cron-unpayable class as struct-169..229;
+owed board stays 26 + császár v3).
+
+THE PARAMETERIZATION (the round-realization attempt's core): the 7 hexagonal
+FACES are the parameters — unit normal (θ, φ) + offset d per face. Every one
+of the 14 vertices is the intersection of its 3 incident faces (topology
+inherited verbatim from the banked STL), so PLANARITY IS EXACT BY
+CONSTRUCTION and hole-axis = +y by construction.
+
+THE INSTRUMENTS (all RED-first, all banked in struct230-probe-szilassi-round.ts):
+- EXACT per-face axis clearance: distance from the y-axis to a face =
+  distance from the origin to the face's xz-projection (convex polygon,
+  analytic q0 minimizer + point-in-polygon + nearest projected edge). No
+  sampling, no blind spots.
+- HOLE-COLUMN law upgraded to exact plate-volume geometry: vertical ray ∩
+  plane + even-odd hexagon containment in the xz-projection — independent of
+  triangulation, matching what the GLB builds. RED: seats the ORIGINAL CMG
+  Lee realization by the same pipeline and DETECTS the proven v1 defect
+  (disc r=0.020 m, 4 covering faces); refuses to bless if it ever passes.
+- Hard lawful rejects in the sampler: simple hexagons (bow-ties forbidden —
+  their fans cross the hole), vertex separations, fold floor (dihedral ≥26°,
+  the v1 jack-read guard), edge-length caps, non-incident edge-edge
+  clearance, triad determinants, y-extent, membrane inradius.
+
+THE ATTACKS (all executed, all failed lawfully):
+1. Hinge-growth coordinate descent from the original planes: the optimizer
+   opened per-face clearances to 0.24 normalized but PAID in bow-tie
+   crossings (10), a 13.4° crease, and a 3.76 m runaway edge — exactly the
+   classes the hard rejects then forbade; with law enforced, no gradient.
+2. Wavy-torus template initialization (C7-combinatorial Császár on a wavy
+   torus → 14 dual centroids → alternating projection onto exact planarity;
+   STL↔template isomorphism found by label search): every template projects
+   to a fixed point whose dual still lacks the hole — its triangles are too
+   central; the dual's faces cover the axis.
+3. LS-CENTROID ring inversion (choose 14 round ring centroids, solve the
+   least-squares primal whose dual centroids best match, project): the
+   centroid map's image EXCLUDES round rings (worst residual 1.82
+   normalized, standalone debug struct230-debug-ls.ts) — and starts diverge
+   in projection (degenerate triad at iter 0). First build of the 7×7
+   normal-equations solve was a 21×21 dimension bug (rows 7..20 zeroed →
+   null pivot → every solve null): caught by the standalone debug, fixed,
+   and the conclusion re-derived — the residual stands.
+4. ROUND-PLANE ANSATZ grid (96 points: tilt τ, fan split, twist, offset
+   ratio, phase): ZERO lawful survivors — kills crossings×48 +
+   degenerate-triad×48, nothing else.
+5. THE INTERPOLATION EXPERIMENT (deciding instrument): a continuous family
+   from the original planes toward round two-fan planes (normals slerped,
+   offsets lerped, 21 steps). EVERY step is LAWLESS (t=1.00 degenerate).
+   VERDICT: NO lawful+clearing state exists along the arc — the lawful
+   region is DISCONNECTED from roundness under this parameterization.
+
+WHAT THIS ADDS TO THE REGISTER (the deliverable): struct-229 proved the sole
+public realization cannot present genus 1 from any angle. struct-230 extends
+the proof: the crookedness is not an artifact of the public file — it
+SURVIVES DIRECT RE-AUTHORING. Four independent instrumented attacks (plane
+re-parameterization with exact-clearance objective, template construction,
+LS inversion, ansatz grid) plus the interpolation arc converge: every state
+that opens the hole violates a build law (bow-tie faces whose plates cross
+the hole, degenerate vertex triads), and every lawful state keeps the hole
+covered. Path (a) is CLOSED. Path (b) — the Heawood-graph cage (14 junction
+beads, 21 rods, the seven cells read as cage openings) — remains the only
+live Szilassi option, with the disclosed judged risk (rod crossings in the
+dual of a crooked primal). Path (c) — drop — is the standing default: the
+pairing stands complete with the császár alone (struct-228), which carries
+the theorem's identity cleanly.
+
+DISPOSITION: nothing built, nothing judged, nothing placed (D+0 E+0). Next
+tick: fresh form selection (grep plan + IMPROVEMENTS + IMPROVE-PLAN +
+CITY-PLAN-V2 for unnamed/unbarred/unbuilt); Heawood cage only as a
+deliberate future commission.
+
+Bill eye-check pointer: none — nothing new stands. The standing császár
+(struct-228) carries its own pointer unchanged.
+
+Files: struct230-probe-szilassi-round.ts (NEW, the full instrumented
+attempt — optimizer, templates, ansatz, interpolation, laws T1-T9 + 2 RED
+controls) + struct230-debug-ls.ts (NEW, standalone LS diagnosis),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-230,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits, shared-budget
+use. Zero pushes.
