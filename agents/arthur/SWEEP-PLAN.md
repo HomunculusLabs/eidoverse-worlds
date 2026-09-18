@@ -14038,3 +14038,84 @@ longhouse/garden-cottage @308, hall/bunkhouse @307, inn/tower-house
 @306 stalest standing pair at 4 sweeps; walk tools
 interior-walk-inn.ts, interior-walk-tower-house.ts — both ls-verified
 present on disk this tick).
+
+
+sweep-311: CLEAN SWEEP, arrival + classified-flip single-epoch tick (80th
+consecutive quiet-or-classified). Tick-start HEAD 1692eefb = fauna-19's
+stable-horses close; standing gate ALL PASS real exit 0 FIRST TRY (98 PASS
+lines + ALL PASS trailer). Census epoch A 359->360 vs the committed
+sweep-310 baseline (254590B sha16 b2aa16ec): exactly ONE domain-valid
+arrival nx-dress-shorse-001 @ (49.5,-0.03564,0) yaw -1.75 lib
+6ef0e86c1dc1774c scale 1 kind thing, comp bag exactly 7x
+motion:shorse_{a,b}{,_head,_tail} + shorse_a_ears (2 LATERAL tail swishes
+axis [0,0,1]) — tuple matches the committed fauna-19 ledger @ 1692eefb
+line-for-line incl. live heightAt PY and KEEP +shorse_; plus exactly ONE
+drift field = nx-carousel lib 32932241->dfad459e at identical tuple, comp
+bag exact 7 unchanged, bbox BYTE-IDENTICAL = polish-286 rose-coat
+re-place @ e92828a6 (paint-only horse_6 0xa8433c, A/B controls
+byte-identical, change provably confined) — both ledger-matched,
+domain-valid, not drift. Epoch B 20s-paced re-read BYTE-IDENTICAL to A
+(cmp-verified) — stable single-epoch close. Walk-band check: shorse min
+13.57m (inn waypoints) / carousel min 6.93m (core-carousel route) but
+carousel's change is PAINT-ONLY with byte-identical bbox — collision
+envelope unchanged, all walks stand by construction (sweep-53 precedent).
+Overlap: SAT fresh-live at epoch A, 322 bbox non-light / 241
+exempt-classified / 0 coverage holes, exit 3 on exactly ONE unclassified
+= R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26
+choreography @ sweep-43, 267th sweep since routing, NOT new, no
+escalation due (law keys severity-1); the shorse arrival added ZERO new
+entity contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually per the sweep-228 ceiling
+law — core 64/64 ALL_PASS max dist 0.380 (next-walk-core-paths.ts, JSON
+parsed from first brace past the [physics] banner; support-seam stderr
+abstentions = the known normalized diagnostics set, unchanged), NW 5/5
+ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW
+5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + distances from
+raw files. Tier-2 289th cycle per the committed sweep-310 pointer: inn
+6/6 ALL_PASS maxArrival 0.364 (dists 0.320/0.318/0.341/0.350/0.364/
+0.288, interior-walk-inn.ts) + tower-house 6/6 ALL_PASS 0.377
+(0.245/0.245/0.263/0.377/0.374/0.309, interior-walk-tower-house.ts),
+both real exit 0, both tools ls-verified present on disk pre-run.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (265th
+consecutive clean); sweep89-battery 28/28 PASS with TWO pins
+census-verified BEFORE the bump — carousel lib 32932241->dfad459e
+(polish-286) and comp-bearing 33->34 (34th bearer = exactly the shorse;
+first invocation correctly FAILed on both stale pins = expected
+classification, RED-then-GREEN, bump per the sweep-301 geese / 304
+sheep / 306 pig / 308 dovecote precedents); interlane md5 86b2936f
+stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh.
+Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged vs sweep-310's
+recorded close (287th check; zero OPEN candidate rows grep-verified
+at sweep-310, file unchanged since), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues
+freeze banner governs and was read fresh via the loop/plan reload.
+Baseline lawfully rewritten like-for-like (committed convention = raw
+census bytes; established pre-write by the s311 diff run: diff set
+exactly [arrival nx-dress-shorse-001, nx-carousel.lib], counts
+359->360, zero other drift on all 7 projection fields): 360 entities /
+257399B / sha16 bb5620df92401340; post-rewrite drift ZERO (baseline
+byte-identical to canonical census A==B, cmp-verified). Probe
+self-catches pre-verdict: (a) first census parse assumed a top-level
+list, printed ents 3 from the dict's meta keys — schema re-read, entity
+map derived from d['entities'], sweep-48 schema-key class. (b) approach
+walk dist extraction keyed 'dist' where those tools emit 'distance'
+(zero-dists giveaway, sweep-310 same-class) — re-anchored from raw logs
+before verdicts. (c) the inline census-diff heredoc was blocked by the
+terminal gateway keyword heuristic — script saved to /tmp and run as a
+file per the sanctioned retry path (sweep-304 class). Foreign dirt in
+tree (windmill overhaul scratch, cabin/carousel prototype dirs,
+client/server engine files, fleet shells, debug-bower scripts,
+moon-moth dir, fauna tools + FAUNA-PLAN, HERO-ASSET-REFINEMENT-PLAN,
+VOCABULARY-LOOP, core-paths assets, rupertfork sources) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-312): hall +
+bunkhouse (290th cycle — LRU chain re-derived from committed plan
+pointers this tick: inn/tower-house @311 walked fresh,
+row-cottage/observatory @310, forge/potter @309,
+longhouse/garden-cottage @308, hall/bunkhouse @307 stalest standing
+pair at 4 sweeps; walk tools interior-walk-hall.ts,
+interior-walk-bunkhouse.ts — both ls-verified present on disk this
+tick).

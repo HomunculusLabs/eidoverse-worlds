@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 359,
+  "count": 360,
   "entities": [
     {
       "id": "beb4c791",
@@ -2299,7 +2299,7 @@
       ],
       "yaw": 2.35619,
       "scale": 1,
-      "lib": "store/329322416e14bc03.glb",
+      "lib": "store/dfad459e492d9727.glb",
       "bbox": {
         "min": [
           -3.55,
@@ -6141,6 +6141,150 @@
           "period": 2.2,
           "phase": 1.5,
           "t0": 1789724178483
+        }
+      }
+    },
+    {
+      "id": "nx-dress-shorse-001",
+      "kind": "thing",
+      "pos": [
+        49.5,
+        -0.03564,
+        0
+      ],
+      "yaw": -1.75,
+      "scale": 1,
+      "lib": "store/6ef0e86c1dc1774c.glb",
+      "bbox": {
+        "min": [
+          -1.5,
+          -0.001,
+          -1.509
+        ],
+        "max": [
+          1.6,
+          1.958,
+          1.81
+        ],
+        "size": [
+          3.1,
+          1.959,
+          3.319
+        ],
+        "center": [
+          0.05,
+          0.979,
+          0.15
+        ]
+      },
+      "compKeys": [
+        "motion:shorse_a",
+        "motion:shorse_a_ears",
+        "motion:shorse_a_head",
+        "motion:shorse_a_tail",
+        "motion:shorse_b",
+        "motion:shorse_b_head",
+        "motion:shorse_b_tail"
+      ],
+      "comp": {
+        "motion:shorse_a": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4.6,
+          "phase": 0.3,
+          "t0": 1789746287033
+        },
+        "motion:shorse_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.35,
+          "period": 9,
+          "phase": 0,
+          "t0": 1789746287033
+        },
+        "motion:shorse_a_ears": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 1.1,
+          "t0": 1789746287033
+        },
+        "motion:shorse_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.32,
+          "period": 2.6,
+          "phase": 0.5,
+          "t0": 1789746287033
+        },
+        "motion:shorse_b": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 5.2,
+          "phase": 1.9,
+          "t0": 1789746287033
+        },
+        "motion:shorse_b_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.13,
+          "period": 3.2,
+          "phase": 0.8,
+          "t0": 1789746287033
+        },
+        "motion:shorse_b_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.26,
+          "period": 2.2,
+          "phase": 1.5,
+          "t0": 1789746287033
         }
       }
     },
