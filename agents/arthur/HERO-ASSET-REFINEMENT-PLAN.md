@@ -3,6 +3,10 @@
 Lane: `polish-N`. Entity: `nx-carousel` (polish-only per INTERLANE-PROTOCOL).
 Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 
+## Direct commission — carved-horse rollout (polish-283, live)
+
+Bill's approved cream v2 now covers all four horses at `store/1c0128b61b510a5d.glb`. All seats corrected to model-rest Y=3.035, relative yaw=0; actual four-station rides verified rotation/bob, geometry alignment and native hop-off (auxiliary images, NOT native PASS). 137 tests pass. Production source: `carousel-horse-prototype/`; final contract/evidence: Excalibur `artifacts/reports/carousel-horse-rollout/rollout.md` and `final-live-state.json`. Do not rebuild/re-place legacy assets: use hash/from-lib gated `deploy.ts`, never `next-place-carousel.ts` or conflicting historical `assets/` writers. Preserve final tuple, motion roots and corrected component bag. `commons/av-carousel` unchanged. No new automated scope or loop stop is implied; this direct commission is finished.
+
 ## Baseline at campaign start (polish-258)
 
 - Live tuple: `nx-carousel` @ pos `[-18, 0.00014950061063032772, 18]`, yaw `2.35619`, scale 1.
@@ -696,3 +700,23 @@ queue at plaza-core landmarks, now with the standing artwalk language
 directive active: motif geometry may join hero refinement where it serves
 readability at gameplay distance (coordinated with the artwalk lane's
 phase B log to avoid motif collisions per building).
+
+## SEPTEMBER VERDICT + polish-284 outage tick (2026-09-18)
+
+Bill's September wave verdict: all ten accepted, keep improving — hold
+lifted (recorded in the cron prompt; the plan's named core set is fully
+surveyed, so the resume queue = fresh evidence-driven re-survey of
+plaza-core under the artwalk language directive).
+
+polish-284: GATEWAY OUTAGE tick, fail-closed. Standing gate died on its
+first live fetch (verify-repairs.ts:16); direct probe: eidoverse.billding.dev
+HTTP 530 Cloudflare error 1033 (origin tunnel down) at ~08:40 EDT — gateway
+was alive at 08:20 (sweep-307's live walks). One paced retry failed
+identically → no census, no visual iteration, zero live-world claims, zero
+mutations. Local recovery work instead: closed the interrupted polish-283
+window's bookkeeping gap — committed its untracked production source
+(carousel-horse-prototype/, 316K, sole builder of live lib
+store/1c0128b61b510a5d) + tracked edits (plan note, legacy-guard placer
+hook, mergekit +dove_) + polish-271..282 evidence dirs incl. exact-byte
+baseline GLBs. Resume: fresh survey + first plaza-core visual iteration on
+next wake once the gateway answers.

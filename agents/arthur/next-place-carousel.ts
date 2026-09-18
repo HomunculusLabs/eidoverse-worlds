@@ -13,6 +13,7 @@
 // doing what the packet's intent always meant.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { assertLegacyCarouselPin } from "./carousel-horse-prototype/legacy-guard";
 
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
@@ -48,6 +49,7 @@ if (sha !== REVIEWED_SHA) die(`reviewed hash mismatch: ${sha}`);
 const before = await geom();
 const live = before[ID];
 if (!live) die(`${ID} missing before placement`);
+assertLegacyCarouselPin(live.lib, REVIEWED_LIB);
 const captured: Record<string, any> = structuredClone(live.comp ?? {});
 const keys = Object.keys(captured).sort();
 if (!eq(keys, EXPECTED_KEYS)) die(`component bag drift: ${JSON.stringify(keys)}`);
