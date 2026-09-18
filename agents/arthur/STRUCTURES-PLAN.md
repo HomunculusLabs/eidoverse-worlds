@@ -16099,3 +16099,71 @@ struct225-render-steinmetz.ts (all NEW, tracked), assets/mkv3-steinmetz.ts
 in this block are the durable record), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-225, D+0 E+0). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-226 (2026-09-18): R11-40 STEINMETZ PLACED — the struct-225
+## committed carry executed (Math Avenue on-line continuation past rupertfork)
+
+226%3=1 placement slot per the 178..225 alternation; bank = struct-225's v1
+ACCEPTED (sha c3d56ac8f8eceacd…, BANKED NOT PLACED). Gate ALL PASS real
+exit 0 tick-start at 704897f9 (fauna-21; unpiped GATE_EXIT:0). Shard drained
+fresh (IMPROVE-PLAN md5 7fa8a224, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-225 -> tag struct-226 (re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search fresh —
+same disclosed cron-unpayable class as struct-169..225; owed board stays
+26 + steinmetz v1).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2 reproduces
+the pinned sha exactly (c3d56ac8f8eceacd610416d3eb78e9af612274fad4c430f6bd-
+13f0216beca702, mtime-verified); struct225-decode re-run on the exact bytes
+ALL PASS 8/8 real exit 0 (envelope 5.8x4.578x5.8 origin-centered, sole at
+grade, hoops on the exact circles, bead at crown).
+
+SEAT (struct226-scan, fresh 362-entity census): procession az94 continues ->
+... -> newtonspheres r430 -> rupertfork r445 -> STEINMETZ az94.0 r460.0
+ON-LINE EXACT (-32.087978, 458.879463), the 15m rhythm step from rupertfork
+per struct-224's widened rhythm. NN 15.00 to nx-struct-rupertfork (law 8.0);
+4-axis OBB-SAT at the final yaw worst 4.91 (rupertfork; law 1.4) — placer
+re-proved against the FRESH live set pre-mutation. Walk-clear 400m+ class
+(no approach lane this far out; circuit walk carries approach proof).
+
+SOFT-CAP DISCLOSURE (honest, binding R11 law "per-district soft cap 6,
+rotate to under-served district when hit"): the far-procession segment
+(r>=380) stood at 6 by strict count (7 counting morley at r380.0 nominal);
+steinmetz is the corridor's next form under the CITY-PLAN "one coherent
+procession" composition law + struct-225's explicitly committed carry naming
+this seat family. HARD laws all hold (NN 8 / SAT 1.4 / walk 3.0). Octant
+audit fresh: az135-180 (E) r66+ carries 1 form vs az90-135's 20+14 — the
+NEXT R11 commission should rotate to the E quadrant (recorded as the
+standing recommendation).
+
+YAW LAW (procession convention, struct-217/219/224): local az α -> world az
+(α − yaw). Construction face local az90 at world az304 = anti-travel az274
++ 30deg east lean -> yaw_deg 146 -> YAW = 2.548181 rad (struct-219
+newtonspheres family precedent; 4-fold symmetric, 146 ≡ 56 mod 90,
+convention-literal kept).
+
+TERRAIN (struct226-terrain-steinmetz.ts, this tick): 9pt over the TRUE
+rotated square (center + 4 corners + 4 edge-mids at yaw), spread 5.2mm,
+PY = lowest = -0.032464 (corner++x/z; embed absorbs).
+
+PLACEMENT: next-place-struct226.ts hash-gated (local sha re-verified
+pre-place), upload store/c3d56ac8f8eceacd.glb (1 upload, shared budget),
+plain spawn 1 verb paced 1200ms, PLACED_VERIFIED pos
+[-32.087978, -0.032464, 458.879463] yaw 2.548181 comp {} census 362->363;
+idempotent rerun ALREADY_SEATED 0 verbs. Ground circuit walk 6/6
+CORE_ALL_PASS maxArrival 0.310m (gap-threading approach two-way at the
+construction-face vantage + full CW standoff circuit — no phantom collider;
+folly by presentation).
+
+Bill eye-check pointer: on Math Avenue past the walled gate — the next work
+is a stepped square tower whose courses shrink by the circle law, widest at
+the waist; two thin brass hoops ride its edges and cross at the crown under
+one warm bead. The idea: two invisible cylinders crossing at right angles —
+this is the stone they share. Every slice is a square; the corner seams are
+the groin vault's own curves. After dark: one quiet warm point at the crown.
+
+Files: struct226-scan-steinmetz.ts + struct226-terrain-steinmetz.ts +
+struct226-walk-steinmetz.ts + next-place-struct226.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-226,
+D+0 E+1). One upload, one verb. Zero pushes.
+
