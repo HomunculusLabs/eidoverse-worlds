@@ -16396,3 +16396,125 @@ Files: struct228-scan-csaszar.ts + struct228-terrain-csaszar.ts +
 struct228-walk-csaszar.ts + next-place-struct228.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-228,
 D+0 E+1). One upload, one verb. Zero pushes.
+
+
+## struct-229 (2026-09-18): R11-42 THE SZILASSI POLYHEDRON — BUILD+JUDGE TICK,
+## v1 REJECTED ON JUDGED+EVIDENCE GROUNDS (unplaceable realization proven;
+## register proof banked; NOTHING placed — honest record)
+
+229%3=1 placement slot with EMPTY bank (császár placed struct-228) → build+judge
+tick per the struct-227 precedent. Gate ALL PASS real exit 0 tick-start at
+75cb29bc (fauna-24; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN
+md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-228 → tag struct-229 (re-checked immediately before append). Native
+absent from the cron catalog all tick (tool_search fresh: terminal +
+zai-vision only — same disclosed cron-unpayable class as struct-169..228;
+owed board stays 26 + császár v3).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN-V2):
+szilassi carries exactly ONE prior mention — struct-227's own selection line
+naming "the dual Szilassi (1977) named for a later round". Unnamed elsewhere,
+unbarred, explicitly committed as a future form. THE COMMITTED CARRY, EXECUTED.
+
+THE PAIRING (the concept contract): Császár = the theorem's SKELETON (K7, all
+21 vertex-pairs joined); Szilassi = its SKIN (7 hexagonal cells, all 21
+face-pairs touching — C(7,2)=21=E). Same combinatorial heart, V↔F dual,
+14−21+7=0. One idea: SEVEN CELLS, ALL NEIGHBORS — stone membranes, iron seam
+rods at every meeting line, seven brass lamps (a lamp in every room), shared
+heptagonal dais language.
+
+PARAMETRIZATION SECURED: Wikipedia Szilassi article STL (commons
+Special:FilePath, fetched this tick, BINARY, 28 facets = 7 planar hexes × 4
+triangles, CMG Lee realization) BANKED at assets/szilassi-source.stl sha256
+0aa6e566512c5aa2… (probe prefers /tmp, falls back to the banked copy —
+struct-227 durability law).
+
+PROBE (struct229-probe-szilassi.ts, tracked) ALL PASS real exit 0, laws
+P0+T1..T9+RED: P0 parse 14 verts/28 facets/7 coplanar groups of 4; T1 Euler
+14−21+7=0; T2 complete face adjacency — all 21 pairs share EXACTLY one edge;
+T3 all faces 6-cycles (hexagons); T4 manifold 2-per-edge watertight; T5 all
+vertex degrees 3 (the dual's signature); T6 minimality (Szilassi 1977,
+f=7 first works); T7 dihedrals 28.1°..139.8° honest non-convexity; T8 donut
+seat (cov-min axis → vertical, ring embedded 0.03 into plinth top, 7 lamps
+proud, closest lamp pair 0-3 relaxed in-plane to exactly the 0.220 law);
+T9 reach 2.219 < heptagon apothem budget. RED loop-corruption detected.
+
+BUILD v1 (assets/mkv3-szilassi.ts, staged -f): 21 iron seam rods r0.032
+(baked vertex-true), 7 stone hex membranes inset 0.045 flush at face planes
+(sz_stone/sz_iron texMat lanes), glow_sz_7 KEEP (7 lamps, emissive 0x9a7030
+@1.0), heptagonal plinth shared language. Deterministic ×2 byte-identical
+sha256 9ff4e2b5838902c1f732742329a8b05fc10c964810b80405304b7c45f1602dbe.
+DECODE (struct229-decode-szilassi.ts) 8/8 ALL PASS real exit 0 (D1 census,
+D2 plinth, D3 seams 21/21 worst 32mm, D4 membranes in face-plane shells,
+D5 lamps 7/7 clusters sole-night, D6 grounding embed exact, D7 envelope drift
+0.00021, D8 texMats). RED control = the DUAL's own GLB (village_csaszar3)
+fails D1 cleanly (exit 1). Self-caught RED-first this tick: probe export
+ordering, decode `cos` typo + fail-closed early exit, envelope TRUE-top law
+(inclined rod cap disc rim hi+R·√(1−axisY²), not hi+R — decode caught the
+8.5mm overshoot; mk rods then BAKED, Box3 corner law struct-227 class).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick, disclosed;
+no native debt OWED on a REJECTED build — the debt board is unchanged):
+gameplay 18m 1/4 — GROUNDING PASS only; IDENTITY/SILHOUETTE/OVERALL FAIL:
+reads "spiky folded-plate cluster / jack / origami", NOT a donut; center
+reads broken/missing geometry. Top view: hole ABSENT (continuous surface
+across the aperture region), plates read coplanar with the dais, only ~2 of
+7 lamps resolve. The judge's own prescription: "a correct Szilassi viewed
+from above its hole axis shows a through-hole and an internal inverted
+triangular structure" — this realization does not.
+
+FALSIFICATION AT SOURCE (probe-law-11 class — numbers outrank renders, and
+here they CORROBORATE the judge three ways):
+(1) SEAT-AXIS EXHAUSTIVE OPTIMIZATION: global hole-clearance optimum over a
+72×36 direction grid + hill-climb = the model-y axis itself (min vertex
+distance-to-axis 103.0 vs max radius 252 — a partial, crooked tunnel); the
+covariance-min seat had used a WORSE axis (96.5). No orientation seats a
+donut: axial extents 480/504/508 ≈ CUBE.
+(2) AFFINE FLATTEN TEST: squash y×0.45 + widen xz×1.15 — surface min radius
+from the axis = 0.0 (a face SPANS the bent tunnel). No vertical line threads
+it, at any flattening: affine maps move the covering surface down with the
+tunnel; coverage is invariant. Affine rescue impossible.
+(3) SILHOUETTE RAYCAST (the decisive instrument): Möller–Trumbore coverage
++ flood fill over 400 fibonacci directions, 52×52 cells — ZERO enclosed
+empty cells from ANY direction, original AND flattened. RED-validated on an
+analytic torus (436 hole cells along axis; edge-on leakage bias is
+false-HOLE, so the zero is conservative). The public CMG Lee realization of
+the Szilassi polyhedron CANNOT present its genus-1 topology from any viewing
+angle — the hole is a crooked tunnel that never aligns with itself.
+Corroborated: the same raycast finds the császár cage also silhouette-closed
+(that structure never needed a hole read — its judged identity was "woven
+cage", which is why it passed).
+
+Wikipedia carries exactly ONE realization file (the STL banked; the article's
+own 3D viewer embeds the same bytes); no alternative parametrization exists
+on the page or in its commons category.
+
+DISPOSITION: v1 REJECTED. Nothing placed, nothing uploaded, zero live
+mutations (D+0 E+0). The register proof is banked here for the NEXT attempt
+— struct-22 infeasibility class. Three lawful paths forward (recorded; next
+build tick selects):
+(a) SELF-AUTHORED ROUND REALIZATION — treat the 14 vertex positions as
+    variables, optimize roundness (max hole clearance / min extent spread)
+    under face-planarity + no-self-crossing constraints; a genuine numerical
+    project, one full build+judge arc;
+(b) SZILASSI CAGE — the Heawood-graph presentation (14 junction beads at the
+    dual nodes, 21 rods; the SEVEN CELLS read as the cage's openings, every
+    pair of openings sharing a rod). Buildable from the banked császár STL
+    by dualization, but REQUIRES a rod-crossing check first (the crooked
+    primal likely yields a crossing dual) and inherits crookedness — judged
+    risk high;
+(c) DROP the form — the pairing stands complete with the császár alone; the
+    R11 register gains the proof that its dual is unpresentable from public
+    parametrizations.
+
+Bill eye-check pointer: none — nothing new stands. The standing császár
+(struct-228) carries its own pointer unchanged.
+
+Files: struct229-probe-szilassi.ts + struct229-decode-szilassi.ts +
+struct229-render-szilassi.ts (all NEW, tracked), assets/mkv3-szilassi.ts
+(NEW, staged -f), assets/szilassi-source.stl (NEW, staged -f —
+parametrization banked for any future attempt), reviews/struct229-szilassi/
+(9 frames, ignored — sha pins in this block are the durable record),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-229,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits, shared-budget
+use. Zero pushes.
