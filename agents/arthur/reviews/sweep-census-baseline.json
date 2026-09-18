@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 360,
+  "count": 361,
   "entities": [
     {
       "id": "beb4c791",
@@ -2299,7 +2299,7 @@
       ],
       "yaw": 2.35619,
       "scale": 1,
-      "lib": "store/dfad459e492d9727.glb",
+      "lib": "store/0144587820eb5e67.glb",
       "bbox": {
         "min": [
           -3.55,
@@ -11671,6 +11671,42 @@
         "center": [
           0,
           3.615,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-rupertfork",
+      "kind": "thing",
+      "pos": [
+        -31.041631,
+        -0.04643,
+        443.916002
+      ],
+      "yaw": 1.762783,
+      "scale": 1,
+      "lib": "store/8013175fb28a0df1.glb",
+      "bbox": {
+        "min": [
+          -5.48,
+          0,
+          -5.48
+        ],
+        "max": [
+          5.48,
+          5.143,
+          5.48
+        ],
+        "size": [
+          10.96,
+          5.143,
+          10.96
+        ],
+        "center": [
+          0,
+          2.572,
           0
         ]
       },

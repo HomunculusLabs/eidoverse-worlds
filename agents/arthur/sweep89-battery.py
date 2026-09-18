@@ -21,7 +21,7 @@ def lib(e):
 
 # carousel
 car = E.get("nx-carousel", {})
-check("carousel-lib-dfad459e492d9727", lib("nx-carousel") == "dfad459e492d9727")  # polish-286 rose coat re-place (horse_6 paint-only), sweep-311 bump; prior polish-285 warm ceiling 329322416e14bc03 sweep-309
+check("carousel-lib-0144587820eb5e67", lib("nx-carousel") == "0144587820eb5e67")  # polish-287 night-coat re-place (emissive three body coats), sweep-312 bump; prior polish-286 rose coat dfad459e492d9727 sweep-311
 ck = sorted((car.get("comp") or {}).keys())
 check("carousel-comp-exact-7", ck == sorted(["motion:carousel", "motion:horse_0", "motion:horse_2", "motion:horse_4", "motion:horse_6", "particles:smoke", "sockets"]))
 

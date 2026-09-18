@@ -14119,3 +14119,76 @@ longhouse/garden-cottage @308, hall/bunkhouse @307 stalest standing
 pair at 4 sweeps; walk tools interior-walk-hall.ts,
 interior-walk-bunkhouse.ts — both ls-verified present on disk this
 tick).
+
+
+sweep-312: CLEAN SWEEP, arrival + classified-flip single-epoch tick (81st
+consecutive quiet-or-classified). Tick-start HEAD 24e4d0d1 (struct-224
+close); standing gate ALL PASS real exit 0 FIRST TRY (ledger law 2370932,
+register 0 OPEN). Census epoch A 360->361 vs the committed sweep-311
+baseline (257399B sha16 bb5620df): exactly ONE domain-valid arrival
+nx-struct-rupertfork @ (-31.04163, -0.04643, 443.916) yaw 1.762783 lib
+8013175fb28a0df1 comp {} — tuple matches the committed struct-224 ledger
+line-for-line incl. the 101deg yaw + r445 Math Avenue continuation; plus
+exactly ONE drift field = nx-carousel lib dfad459e->01445878 at identical
+tuple, comp bag exact 7 unchanged, bbox BYTE-IDENTICAL = polish-287
+night-coat re-place (emissive three body coats) — both ledger-matched,
+domain-valid, not drift. Epoch B 20s-paced re-read BYTE-IDENTICAL to A
+(cmp-verified) — stable single-epoch close. Walk-band check: rupertfork
+350m+ off every tier-1 leg; carousel's change is material-only with
+byte-identical bbox — all walks stand by construction (sweep-53
+precedent). Overlap: SAT fresh-live at epoch A, 323 bbox non-light / 241
+exempt-classified / 0 coverage holes, exit 3 on exactly ONE unclassified
+= R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26
+choreography @ sweep-43, 268th sweep since routing, NOT new, no escalation
+due (law keys severity-1); the rupertfork arrival added ZERO new entity
+contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg
+real exit 0, legs run individually per the sweep-228 ceiling law — core
+64/64 ALL_PASS max dist 0.380 (next-walk-core-paths.ts, JSON parsed from
+first brace past the [physics] banner; support-seam stderr abstentions =
+the known normalized diagnostics set, unchanged), NW 5/5 ALL_PASS (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + distances from
+raw files. Tier-2 290th cycle per the committed sweep-311 pointer: hall
+8/8 ALL_PASS maxArrival 0.360 (dists 0.285/0.360/0.280/0.265/0.340/
+0.260/0.335/0.310, interior-walk-hall.ts) + bunkhouse 6/6 ALL_PASS
+0.380 (0.245/0.300/0.305/0.247/0.380/0.313,
+interior-walk-bunkhouse.ts), both real exit 0, both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (266th consecutive clean); sweep89-battery 28/28 PASS
+after the lawful carousel-lib pin bump dfad459e->01445878 — RED-then-
+GREEN, first invocation correctly FAILed on the stale pin (expected
+classification), census-verified live at 01445878 both epochs with comp
+bag exact 7, sweep-301 geese / 304 sheep / 306 pig / 308 dovecote / 311
+carousel precedents. Interlane md5 86b2936f stable, read fresh this tick;
+SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5
+7fa8a224 unchanged (288th check; zero OPEN SURVEY CANDIDATE rows
+grep-verified), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+and was read fresh via the loop/plan reload. Baseline lawfully rewritten
+like-for-like (committed convention = raw census bytes; pre-write
+established by the s312 diff run: diff set exactly [arrival
+nx-struct-rupertfork, nx-carousel.lib], counts 360->361, zero other
+drift on all projection fields): 361 entities / 258001B / sha16
+691a31162b004677; post-rewrite drift ZERO (baseline byte-identical to
+canonical census A, cmp-verified). Probe self-catches pre-verdict: (a)
+the census diff script keyed 'comps' where the schema uses
+'comp/compKeys' — comp-bag checks re-derived from live fields, sweep-56
+class; (b) core walk dist extraction assumed a top-level 'legs' list —
+schema carries legs:int + results:list, re-anchored on results, sweep-48
+schema-key class (approach/interior tools keyed 'dist' vs 'distance',
+fallback handled). Foreign dirt in tree (windmill overhaul scratch,
+cabin/carousel prototype dirs, client/server engine files, fleet shells,
+debug-bower scripts, moon-moth dir, fauna tools + FAUNA-PLAN,
+HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths assets,
+rupertfork sources) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-313): longhouse + garden-cottage (291st cycle — LRU
+chain re-derived from committed plan pointers this tick: hall/bunkhouse
+@312 walked fresh, inn/tower-house @311, row-cottage/observatory @310,
+forge/potter @309, longhouse/garden-cottage @308 stalest standing pair
+at 4 sweeps; walk tools interior-walk-longhouse.ts,
+interior-walk-garden-cottage.ts — both ls-verified present on disk this
+tick).
