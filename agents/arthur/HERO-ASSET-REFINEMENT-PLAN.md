@@ -898,7 +898,56 @@ next wake once the gateway answers.
   accent geometry, judge first); gold spire speckle; stairs contrast now
   largely cured by v6 wood.
 
+### polish-291 — carousel night valance ember (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-290 crown-beacon build (live was
+  `store/08ce1189b2d4b42b.glb`). Queue-head candidate named at polish-290's
+  close: valance teeth still dark maroon at night.
+- Defect: the 8 FABRIC teeth share `carousel_fabric` (polish-288 emissive
+  lum≈0.06, ~14x below the ceiling) while the 8 gold teeth got the
+  polish-290 beacon — the eave line strobes gold/maroon instead of reading
+  as a lit festoon ring.
+- Decode (polish291-probe-teeth2.ts): fabric teeth = the 48 cr3_4 triangles
+  touching the tip row — 48 tip verts at EXACTLY y 4.580 r 3.080 in 8
+  clusters spaced 45° (matching cr3_5's gold tip row: the 16-tooth valance);
+  weld row y 4.860; cr3_4 has NO UV (corner-texel sampling; factor
+  [1,1,1,1] + unnamed baseColorTexture own the look).
+- Change (ONE intervention, new production step `valance.ts`, ceiling.ts
+  chassis): split the 48 teeth triangles into `cr_valance_glow` with
+  `carousel_valance_glow` = full clone of carousel_fabric + ember
+  emissiveFactor [0.35,0.17,0.09] (lum≈0.215: cone 0.06 < teeth < ceiling
+  0.36 < crown 0.62 < lanterns 0.86). Triangle conservation asserted.
+  v1 REJECTED at pixel-diff: the clone omitted the baseColorTexture —
+  teeth rendered white in day (~1000 warm px lost/view); v2 carries every
+  channel (texture reference shared, asserted). Nodes 45→46, materials
+  23→24 (documented: unique emissive material cannot merge).
+- Candidate `a35f40f1925ce93bffdee46d7d60c7f8f3d2de0be45996c86f237c91ffdc1bc1`,
+  A/B byte-identical ×2. Horse-solo controls 0 changed px; night warm
+  5987→6754; day warm +36..+46 (faint emissive only); changed px confined
+  to the eave band.
+- Judge verdicts (ZAI fallback, no native vision this cron session, native
+  re-judge owed — same class as polish-285..290): NIGHT PASS — lit garland
+  read on the visible arc, rear arc correctly occluded at eye height,
+  hierarchy lanterns > finial > teeth intact, restrained self-illuminated
+  fabric not glow-orbs, zero new defects. DAY PASS — invisible change,
+  natural festive fabric.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED, 1 upload +
+  8 verbs, 7-key comp bag replayed verbatim; idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin
+  `store/a35f40f1925ce93b.glb` @ (-18, 0.0001495, 18) yaw 2.35619 exact.
+  Served sha == upload sha (a35f40f1…): served decode keeps the valance
+  material + emissive + texture, 48 tris, 0 non-finite, nodes 46 /
+  materials 24, emissive set 8 exact.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-291-carousel-valance/`
+  (before/ = live baseline full 15-view rig + baseline GLB; after/ =
+  valance v2 candidate; deploy reports + verified served bytes).
+- Next: judge-remaining candidates — (a) under-canopy rim-adjacent warm
+  accent geometry for the ceiling-void (geometry-limited, needs new
+  geometry, judge first), (b) gold spire speckle at 18m day; or
+  re-survey plaza-core on fresh evidence.
+
 ### polish-290 — carousel crown beacon (ACCEPTED, LIVE)
+
 
 - Subject: `nx-carousel` at the polish-289 structural build (live was
   `store/429cde23a16d1c17.glb`; polish-289's verified-served bytes
