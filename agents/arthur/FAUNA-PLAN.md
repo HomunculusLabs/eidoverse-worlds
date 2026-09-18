@@ -109,6 +109,30 @@ domain is commons-next `nx-dress-*` fauna only.
     decode envelope. Full record below. Village logic: winter-orchard
     pairing — doves pick fallen fruit beside the bee skeps, completing the
     orchard's living edge.
+12. **[OPEN — candidate proposed fauna-18, 2026-09-18] stable horses — new
+    species (homestead tier-2).** The livery is the village's LAST animal-trade
+    building with no animal (census-grounded fauna-18: dyehouse→sheep,
+    kiln→pig, coop→hens+cat, orchard→doves, den→fox, pool→ducks+robin+geese
+    all seated; `nx-town-stable` (43,0,0) yaw −π/2 stands empty). Concept: a
+    draft-horse PAIR — one standing (head-scan watch) + one head-down at a
+    hay net / timber manger — TRUE-SIZE ~1.5m shoulder / ~2.2m body length,
+    the largest fauna yet and the strongest 18m identity candidate the lane
+    has taken. Build chassis: sheep/pig TRUE-SIZE law (no group scales, or
+    ×bake incl. joints if scaled); necks as ONE TubeGeometry per CatmullRom
+    curve (fauna-11 law c); furniture POST-bake at final coords; KEEP prefix
+    **`shorse_`** — mergekit's `horse_\d+` is TAKEN by the carousel horses and
+    must NOT be reused (collision-proof prefix law, bcat precedent). Motion
+    family: breathing bob + head-scan + ear-flick + the tail-SWISH (the
+    species signature at distance) + hoof-shift weight change; phases
+    staggered per individual. Siting (seat-scan law at the BUILD tick, this
+    row claims no tuple): candidate zone = livery yard + east lawn E of the
+    stable — live neighbors already in the set: stablebench (42,0,6),
+    nx-sign-stable-001 (40.9,0,0), owl post nx-dress-owl-001 (48.8,4.2),
+    artwalk b8 rail suspended at y2.22 (nvp-134 suspended-decor exemption
+    class). Single-horse fallback if the pair pinches the 1.4m law in the
+    yard. Alternatives considered and rejected: skep bees (micro — weak 18m
+    identity, robin framing law), donkey (redundant with horse at village
+    scale), cattle (no host building in commons-next).
 
 ## Per-species rebuild records
 
