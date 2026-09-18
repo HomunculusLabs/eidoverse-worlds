@@ -24,6 +24,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | pig | `nx-dress-pig-001` | (15.0,-0.021261,40.2) yaw 0.66 | **a4918702** (fauna-14) | NEW 2026-09-18 — British-saddleback sow pair (rooter with pale disk snout in the spoil + belly-flat wallower) in a timber sty corner with fresh-rooted earth patch + oak-litter acorn scatter, meadow S of the kiln yard, heads NE toward the mosaic-row visitor line; 6 motion comps (2 bob + root-dig + ear-flick + 2 tail-curl flicks) |
 | dovecote | `nx-dress-dovecote-001` | (-50.5,0.0367,62.55) yaw 2.577 | **8f33f97f** (fauna-16/17) | NEW 2026-09-18 — potence timber dovecote + collared-dove trio (entry-ledge perch / cap ridge / ground-feeding on windfalls) at the orchard-edge meadow, facing the stile visitor approach; 6 motion comps (2 bob + 2 Y-scan + bob + peck) |
 | dairy cow | `nx-dress-cow-001` | (24,-0.02489,40.75) yaw 0.66 | **943beb2b** (fauna-21) | NEW 2026-09-18 — Jersey-class dairy cow pair at the meadow E of the pig sty (watch + grazer at the filled hay rack), 7 motion comps; the dairy chain's animal stands |
+| donkey | `nx-dress-donkey-001` | (−22.5,−0.05207,−34) yaw −1.11 | **783055bc** (fauna-23) | NEW 2026-09-18 — standard donkey pair (watch + grazer at straw) under a lean-to field shelter on the SW meadow, 1.433m from the sheep fold — the flocks' guardian stands with its flock; 7 motion comps |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -166,28 +167,60 @@ domain is commons-next `nx-dress-*` fauna only.
     3.1×1.552×2.925 == decode envelope. Village logic closed: the dairy
     chain (milkstand 22.5,33.2 + churn 19.9,35.1) now has its source
     animal grazing in sight. Build arc below.
-14. **[QUEUED fauna-22, 2026-09-18] donkey — homestead proposal (queue empty
-    after the cow; loop law: propose ONE homestead species, append
-    candidate, end tick).** Village logic: the homestead's guardian-verse
-    is now complete by district (cat/coop, owl+livery horses/stable,
-    geese+ducks+robin/pool, sheep/dyehouse, pig/kiln, doves/orchard,
-    cow/dairy) — but the WORKING guardian of Bill's own homestead
-    language, the one that guards the flocks, is missing: the **donkey**.
-    Goats/ducks/bunnies (the loop's named firsts) are all seated; the
-    donkey is the classic guardian companion of exactly the flocks this
-    village already pastures (guardian of sheep AND goats — a real-world
-    practice). Species sketch (next tick's build): ONE entity
-    `nx-dress-donkey-001`, TRUE-SIZE — a standard donkey pair or single:
-    watch stance (long ears — THE species marker, bigger relative to head
-    than any villager yet) + grazer; grey-dun coat 0x9a8f82 with the
-    shoulder cross (dark cross stripe — the breed marker), pale muzzle,
-    dark mane ridge + tail tuft; furniture: timber lean-to shelter or
-    simple rail + trodden pad. Motion ~6 comps (2 bob + Y-scan + ear-flick
-    [big, the marker] + graze-tug + tail-tuft swish), phases staggered.
-    Seat final at build tick by full OBB-vs-OBB sweep + terrain preflight
-    + live walk (seat-scan law). Candidate zone (census-backed next tick):
-    the paddock/flock edge nearest the sheep fold or goat pen — the
-    guardian stands with its flock.
+14. **[CLOSED fauna-23, 2026-09-18] donkey — proposed fauna-22, BUILT + SEATED
+    fauna-23 (2026-09-18).** ONE entity `nx-dress-donkey-001`: a standard
+    donkey PAIR — donk_a standing watch (neck up ~50°, Y-scan sentry, THE
+    ears on their own keep-group) + donk_b grazing (tube neck dipped,
+    muzzle bedded in the straw heap) — plus the field furniture: lean-to
+    shelter (4 posts + pitched roof + 2 back rails), trodden pad, graze
+    heap + straw scatter. **v7 sha16 783055bc2b456dc3** (full
+    783055bc2b456dc3c5d95ef9910823cae8a830f5a6dde9bf84c17151389790b6 —
+    judge-SHIP bytes: 18m SHIP on final bytes + right profile SHIP +
+    muzzle PASS + necks PASS + tails confirmed both animals across
+    angles; the lone left-view FAIL was pixel-probe-FALSIFIED — body
+    median luminance 116, dark<60 only ~2% of the body band, the
+    near-black claim was judge noise; decode GREEN + RED control; 4502
+    tris / 27 calls; deterministic ×2). 7 motion comps live: 2 breathing
+    bobs + watch Y-scan (.35/9.0s) + ear listening-sweep (.22/2.6s) +
+    graze-tug (.13/3.2s) + 2 LATERAL tail swishes (axis [0,0,1], shorse/
+    cow law; sweep-probe clear at full amplitude). Engine-true motion
+    pairs: 827px@18m band 406–527, 15340px near band 154–667. **Seat:
+    (−22.5, −0.05207, −34) yaw −1.11** — fauna23-seat-sweep best of 299
+    qualifying (worst solid gap 1.433m vs nx-dress-sheep-001 — the
+    guardian's own flock, the designed adjacency); donkeys face NW toward
+    the fold (facing = (sin,cos) yaw law); lean-to shelters the ESE
+    weather side. Terrain 9pt spread 1.2mm, PY = live heightAt −0.05207.
+    Census 363→364 exactly, 8 verbs (upload+spawn+7 comps), idempotent
+    rerun 0 verbs alreadySeated, walk ALL_PASS 3/3 (SW lane from the gate
+    mouth, arrivals 0.00/0.33/0.31m), live bbox 2.9×1.75×3.432 == decode
+    envelope. Village logic closed: the WORKING guardian of Bill's own
+    homestead language stands with its flock — the donkey completes the
+    guardian-verse the same way the owl completed the livery's. Build arc:
+    v1 build+heap → v2 ears bolded (judge: nubs) + necks raised + pair
+    separated → v3 flatter/longer barrel + watch head forward (judge:
+    "sheep-balls") → v4 bolder cross + thicker tail + grazer weld → v5
+    flank plates + darker cross + ear cant halved + watch +x (judge: X
+    ears, fused pair) → v7 lighter DUN 0xa69c90 + taller flank plates
+    (left-view shade-side cure) — 7 build versions, 7 judged rounds.
+15. **[QUEUED fauna-24, 2026-09-18] turkey — homestead proposal (queue
+    empty again after the donkey; loop law: propose ONE homestead
+    species, append candidate, end tick).** Village logic: the barnyard
+    BIRDS are now complete by district (hens/coop, doves/orchard, owl/
+    livery, robin+ducks+geese/pool) — but the loudest, most characterful
+    barnyard bird of Bill's homestead language is missing: the **turkey**.
+    Species sketch (next tick's build): ONE entity
+    `nx-dress-turkey-001`, TRUE-SIZE — a bronze-turkey pair or small
+    trio: tom in full strut display (fanned tail — THE marker, a fan of
+    ~12 dark band-tipped plumes + dropped wings + snood+wattle at the
+    breast) + hen foraging head-down; iridescent bronze body 0x6e5335,
+    barred wings, pale primary tips (the bronze edging), blue-gray head
+    with red wattles. Furniture: a low roost beam on two posts or a
+    scratch yard patch. Motion ~7 comps (strut is STATIC geometry + bob +
+    head-scan; fan tail slow sway; peck pendulum). Seat final at build
+    tick by full OBB-vs-OBB sweep + terrain preflight + live walk
+    (seat-scan law). Candidate zone (census-backed next tick): the
+    barnyard S of the coop (the poultry yard, beside the hens — turkeys
+    are the coop's classic companions).
 
 ## Per-species rebuild records
 
@@ -286,6 +319,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc (ZAI fallback, native debt NATIVE-13 above; one gateway timeout retried once, paced): 18m SHIP (identity/carried-by pose split: head-up/head-down + chestnut mass + cream legs; no broken elements) → near anatomy sound (necks continuous, muzzle IN hay, feathering YES, mane YES, bucket occluded by rail-frame — minor) → profile (fauna-4 tail contract view): tails attached on both horses, no tail-through-rail in the STATIC pose. **The motion-sweep probe (new law below) caught what the static views could not: v1 tail comp axis [1,0,0] swept the tail THROUGH the rail beam at θ+0.32** (tail z −1.556 into the beam band −1.445..−1.395, y-bands overlapping). Cure: axis [0,0,1] LATERAL swish — z-band fixed, clear at full amplitude for both horses, and species-true (a horse swishes laterally). Judge-flagged near items decoded as framing artifacts: bucket visible in the profile view, rail overhang perception = perspective, stable's own SE corner.
 - Rig/decode laws learned: (a) **COMPOSE THE MOTION SWEEP BEFORE PLACING** — a comp pendulum's amp rotates the part through ±θ about its pivot; any furniture near the swept volume must be checked at BOTH extremes, not just the static pose (the static render passed while the running world would clip the rail every 2.6s); the exact comp transform (quaternion-multiply on base, pivot compensation) is runnable offline in bun+three against the final GLB — 3 poses settle it; (b) a pair's furniture arithmetic must be done in the ENTITY frame — compose horse-local joint pitches + the horse's own yaw/pos into entity coords BEFORE siting troughs/heaps (three consecutive frame misses here: v1 tail z, v1/v2 nose x — the decode's per-member boxes caught each); (c) mergekit keep-fold renames internal meshes `<group>_N` — anchor-set contracts check SUBSET (targets present), never exact-set equality; (d) the review rig's generic ultra view can center on the pair's centroid and miss per-subject anatomy — write per-subject AIMED views when judging a two-animal entity (fauna-4 law, scales with subject count).
 
+### donkey — fauna-23 (2026-09-18) CLOSED
+- **v7 sha16 783055bc2b456dc3** (full: 783055bc2b456dc3c5d95ef9910823cae8a830f5a6dde9bf84c17151389790b6), NEW entity `nx-dress-donkey-001` PLACED_VERIFIED at world (−22.5, −0.05207, −34) yaw −1.11 scale 1 — the SW meadow guard seat, donkeys facing NW toward the sheep fold (facing = (sin,cos) yaw law); lean-to shelters the ESE weather side. Seat = fauna23-seat-sweep best of 299 qualifying seats (25cm grid, decoded OBB center-offset (+0.050, −0.134)): worst solid gap 1.433m vs nx-dress-sheep-001 (the flock it guards — the designed adjacency). Terrain preflight at the FINAL tuple: 9pt spread 1.2mm, PY = live heightAt −0.05207. Census 363→364 exactly, 8 verbs (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (SW lane from the gate mouth — the sheep lane, the guardian's own visitor approach; arrivals 0.00/0.33/0.31m), live bbox 2.9×1.75×3.432 == decode envelope.
+- Build: a standard donkey PAIR (ONE entity, TRUE-SIZE authored directly — fauna-13/19/21 law): donk_a WATCH (tube neck up ~50°, Y-scan sentry, THE ears on their own keep-group) + donk_b GRAZER (tube neck dipped, muzzle bedded in the straw heap at the composed nose). Both: grey-dun hull+shoulder+rump 0xa69c90 (v7-lightened — the v1 0x9a8f82 shade flank read near-black and swallowed the cross), THE SHOULDER CROSS as dorsal segments + wither bar + FLANK PLATES (v6/v7: side-mounted dark 0x3a332c plates 0.030 proud riding the flank curve — top-mounted crest boxes sun-flatten into highlights; the SIDE faces carry the profile read), pale muzzle band 0xd8cfc0 + dark nose, dark mane serration along the crest + wither continuation, THE EARS (v3-bolded 0.34 tall × 0.058 wide slabs, cant halved v6 — the species marker, bigger relative to head than any animal yet placed) with pale inner faces angled to catch light, LION TAIL (v5: rope thickened 0.016→0.026 mid, tuft 0.052, root moved aft −0.84 so the rope hangs BEHIND the rump plane in profile), dark hooves. Furniture: lean-to field shelter (4 posts + pitched roof slab + 2 back rails, stile family), TROD-family trodden pad, graze heap (v5-rebalanced: big lump AFT of the nose line, small forward lumps kiss the muzzle — the v4 big lump directly under the nose SWALLOWED it, pig spoil law inverted) + straw scatter. Anchors donk_a/_head/_ears/_tail + donk_b/_head/_tail (7 KEEP groups; `donk_` added to mergekit KEEP this tick — collision-proof prefix). 4502 tris, 27 draw calls.
+- Motion: 7 comps live — breathing bobs (.006/4.9s watch, .005/5.1s grazer — sixteenth+seventeenth village exercise of part bob), watch Y-axis head-scan (.35/9.0s, owl/goose/shorse/cow sentry family), ear listening-sweep (.22/2.6s axis [2,0,1]), grazer graze-tug X-pendulum (.13/3.2s), 2 LATERAL tail swishes (axis [0,0,1] .30/2.8s + .26/2.4s — shorse/cow law); phases staggered, epoch t0. Motion proven engine-true at both framings on final bytes (827px diff @ 18m band 406–527; 15340px near band 154–667); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc (ZAI fallback, native debt NATIVE-15 below): 7 build versions, 7 judged rounds. 18m arc: v2 FAIL (ears "ambiguous nubs", head merged into body) → v3 FIX applied → v3 FAIL ("egg-shaped reads sheep; head doesn't break back line") → v4 (flatter/longer barrel, watch head forward) = **18m SHIP** (species donkey, posture contrast, ear break, clean) → right profile v4-round FAIL (cross "background noise", tails unresolved, grazer seam) → v5 (bolder cross, thicker tail, weld) = right SHIP + muzzle PASS + necks PASS → left view v5-round: grazer tail CONFIRMED but flank "near-black, cross invisible, update not landed" → **PIXEL PROBE (fauna-11 law e): body median luminance 116, dark<60 ≈ 2% of body band — the near-black claim FALSIFIED as judge noise** (same round denied the tail the prior round confirmed from the same view) → v7 (DUN lightened 0xa69c90 + flank plates taller 0.11) → **final 18m SHIP on v7 bytes** (species marginal-but-holds: ear spikes + leg length + coat tone carrying; ears silhouetted against the shelter roof — the composition accidentally ideal; roundness disclosed as the residual). Judge-noted non-blocking: body roundness flirts with sheep at 18m — the cross + ears lock the read; a hint of dorsal stripe would make it permanent.
+- Rig/decode laws learned: (a) **a shade-side flank marking must be SIDE-MOUNTED, not crest-mounted** — top boxes flatten into sun highlights in profile (two rounds lost); flank plates with proud edges catch light where the crest cannot (fauna-7 fill law, applied as geometry); (b) **judge noise on color state is settleable by PIXEL PROBE in one call** — when a vision round claims a just-shipped color change "has not landed", probe the render's luminance populations before iterating geometry (the fauna-11 A/B law generalizes: probe outranks the vision claim); (c) a graze-heap lump directly under a small muzzle SWALLOWS it (pig spoil law cuts both ways — meet the muzzle BAND, never engulf the nose); (d) ear pairs canted ±0.10 rad cross into an X at 5m — half the cant keeps parallel uprights; (e) a thin rope tail (1.2cm) fuses into the rump silhouette — thicken + move the root aft so the rope hangs behind the rump plane; (f) the wither-mane y must be re-derived whenever the barrel flattens (the v3 flatten floated the v1 mane boxes 9cm clear — decode envelope would have caught it, the arithmetic printout did).
+
 ### dovecote — fauna-16 build / fauna-17 placement (2026-09-18) CLOSED
 - PLACEMENT (fauna-17): seat (-50.5, 0.0367, 62.55) yaw 2.577 scale 1 — the fauna-16 seat (62.75) hard-stopped at the placer's live SAT (1.390m vs orchard-rows-001, sub-1.4 pinch law; the fauna-16 disc-scan's 1.85m had used the disc proxy, the placer's full-envelope OBB is stricter and honest — post+ladder are ground solids at the same extents, no crown exemption available); pure-north 0.2m move, 1266-candidate sweep (10cm grid, r≤2.5m) against the LIVE census, worst solid 1.559m; PY = LIVE heightAt 0.0367 (terrain door reopened — fauna-16's sibling-IDW 0.030 superseded per its own law f); census 358→359 exactly, 7 verbs (upload+spawn+6 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 3/3 (18m stile visitor line, arrivals 0.36/0.31m), live bbox 1.785×2.977×1.573 == decode envelope.
 - **v6 sha16 8f33f97f97b0e4de** (full: 8f33f97f97b0e4de4a8a64961aca3dc02e59d3cd42bfd5d5629adfa3dc53be3f), deterministic ×2 (v1 76d994e8 → v2 dda0e8eb ladder-dig fix → v3 702d1931 brace+whitewash fix → v4 419d1bd4 collar ring v1 → v6 8f33f97f collar v2), decode GREEN (6 anchors, joints exact: dove_a 2.335/dove_b 2.905/dove_c 0.085; envelope −0.970..0.815 × −0.283..1.290 × −0.003..2.974) + RED control (pig bytes: zero dove_ anchors). 31 mesh nodes, 3102 tris, 32 draw calls.
@@ -300,6 +340,7 @@ domain is commons-next `nx-dress-*` fauna only.
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-15 | fauna-23 (2026-09-18) | donkey v7 783055bc gameplay + right + left frames (`reviews/fauna23-donkey/new-{gameplay,right,left}.png`) — fallback arc stands (18m SHIP on final bytes + right SHIP + muzzle PASS + tails both confirmed; left-view FAIL pixel-probe-falsified at median lum 116; roundness residual disclosed) until natively confirmed |
 | NATIVE-14 | fauna-21 (2026-09-18) | dairy cow v5 943beb2b gameplay + right + closeface + ultraface frames (`reviews/fauna21-cow/new-{gameplay,right,closeface,ultraface}.png`) — fallback arc stands (18m SHIP + profile SHIP + ultraface SHIP + closeface SHIP on final bytes; grazer-udder-in-head-down disclosed) until natively confirmed |
 | NATIVE-13 | fauna-19 (2026-09-18) | stable horses v3 6ef0e86c gameplay + near + right frames (`reviews/fauna19-shorse/new-{gameplay,near,right}.png`) — fallback arc stands (18m SHIP, near anatomy sound w/ minor neck-seam style note, profile tails attached + rail clearance judged; one judge timeout retried once) until natively confirmed |
 | NATIVE-1 | fauna-1 (2026-09-16) | goats v4 7e9af5a5 18m gameplay + closeface frames (`reviews/fauna1-goats/new-{gameplay,closeface}.png`) — fallback PASS stands until natively confirmed |
