@@ -15811,3 +15811,167 @@ assets/mkv3-rupertfork.ts (tracked, staged -f), reviews/struct222-rupertfork-v3/
 + v4/ + v5/ (36 frames total, ignored — sha pins in this block are the durable
 record: v3 881836a8…, v4 35cf9709…, v5 4f45679c…), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-222, D+0 E+0). Zero pushes.
+
+## struct-223 (2026-09-18): R11-37 RUPERT'S FORK — SIX-ITERATION ARC v6..v11 (deep prism,
+## plug, caps, gate heads, four lamps) — v11 ACCEPTED BANKED NOT PLACED; placement =
+## struct-224 committed carry
+
+223%3=1 build+judge slot per the 178..222 alternation (bank empty; struct-222's committed
+carry: the v6 deep-prism commission). Gate ALL PASS real exit 0 tick-start at 8e56d0e2
+(fauna-18; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-222 -> tag struct-223 (re-checked immediately
+before append; law exact 2370929). Native absent from the cron catalog all tick
+(tool_search fresh: terminal + zai-vision only — same disclosed cron-unpayable class as
+struct-169..222; owed board stays 26).
+
+THE V6 FORM (probe struct223-probe-rupertfork6.ts, ALL PASS + RED 1-6): the wall is the
+SQUARE FACE SxS swept along its diagonal for L = 2.0*S — the same 1.03*S door now carves
+a THROUGH-PORTAL: TWO full-length fins (0.864m true thickness, 4.5m tall, 8.935m long =
+99.3 pct of the bore) flanking a 4.635m-clear x 9m-deep throat. The deep prism's section
+is the 4.5 x 6.36 rectangle: its max square section is exactly S, so the door exceeds
+EVERY planar cut perpendicular to the bore — the bore is honestly a prism, not a cut.
+Commission-note deviation recorded with arithmetic: fin width >= 1.2m is UNREACHABLE
+with a square face + bigger-than-face passer (finWidth = S*sqrt(1/2) - doorHalf = 0.864;
+>= 1.2 needs door < S) — the mass target is met by depth instead (full-length walls,
+~13x the v5 fin volume; rasterized 0.714m, disclosed).
+
+THE JUDGED ARC (ZAI fallback every round, native cron-absent, flap law disclosed; every
+rejection caught BEFORE any upload — zero world mutations this tick):
+- v6 NOSE-OUT station (nose 1.335m proud): GAMEPLAY REJECT (the protruding plug fills
+  the door from the 45-degree flank; throat + far fin hidden — "two abutting boxes") +
+  BORE PASS (axial framing holds: wall strips flank the cube — the v5 rejection view
+  now reads). Root cause converged with both panels: the plug must read as intersecting
+  a throat, not protruding from a facade.
+- v7/v8 THE PLUG (judge-directed re-seat): passer WHOLLY inside the throat, nose 0.55m
+  shy of the near mouth; far mouth 3.82m open to sky. v8 adds coursed CROWN-RESTORATION
+  caps (one course per fin restoring the raster shave to the region's true top 4.5775 —
+  finished full-height walls; my own decode law caught single-box caps carrying no
+  mid-length verts, so the cap is segmented 0.45m — also a joint rhythm). Judged
+  GAMEPLAY REJECT at dead-flank: composition fails to close (findings split into real —
+  nothing connects the fins at flank — vs perspective-inherent, falsified by decode:
+  walls equal 4.5775 within 1mm, "25-30 pct lower" = 15 pct subtense at 15m vs 17.7m
+  range; "stray orange block" = the designed brass bead; "slit" = the 14mm disclosed
+  sub-pixel seam).
+- v9/v10 GATE HEADS (composition closure that PRESERVES the theorem): one gate per
+  mouth — shoulder blocks seated on the caps (rising S/2 -> doorHalf+0.40 over each
+  fin's own v-band, outside the door prism) + a beam whose UNDERSIDE IS the channel
+  ceiling (u bottom == doorHalf exactly): the plug's crest (u 2.3155) clears the beams
+  by the SAME 2mm door-fit margin it clears the door — the pass stays machine-TRUE with
+  the gate built (probe law: no gate box enters the live door prism; beam headroom
+  check). Night judge caught the 2-lamp scheme's blind vantage (far-gate bead hidden
+  behind the near gate head) -> FOUR lamps, one per beam corner (town-gates idiom,
+  struct-26/272 lineage): any azimuth reads >= 2.
+- v11 THE WALLED GATE: judged GAMEPLAY PASS (identity ONE composition, equal walls,
+  gate heads as built closure, iron door deliberately placed; continuous cast shadow
+  cited as assembly proof) + NIGHT PASS (3-of-4 lamps visible at the test azimuth, zero
+  bloom, tight halos). Disclosed margins: the bright band over the door is the 2mm
+  exact-fit head seam (the theorem's own margin, antialiased — not fixable without
+  killing the pass claim); iron texture reads cobble at 18m (refine-pool candidate,
+  material identity not contract-critical).
+
+BINDING EVIDENCE: probe ALL PASS + RED 1-6 (cube-vs-prism carve contrast law; +10cm
+v-offset clash control caught my own double-offset vacuity RED-first); decode 18/18
+ALL PASS real exit 0 (fins kept-cell |v| 2.3258 > doorHalf 2.3175; 8 analytic corners
+worst 0.00000; bore void 0; fin-on-plinth contact 0.0000; gate crests exact 5.045;
+envelope 10.96 x 5.14 x 10.96). v11 sha256
+8013175fb28a0df1a2a90d267c6d7b7109a157adc4b3bbc0c6e79ccf4b1fb7a9
+deterministic x2 (intermediate pins: v6 49d6eb6a, v7 ff366014, v8 e922aa51, v9/v10
+3d1dbd00 — rejected/replaced iterations in reviews/ git history only).
+
+DISPOSITION: v11 ACCEPTED BANKED NOT PLACED. Placement = struct-224 committed carry:
+fresh census scan (8m NN law, district soft cap 6, Math Avenue eligibility; procession
+continues past newtonspheres r430), yaw law (the gate faces read obliquely per
+struct-104; the 10.96m span runs az4/184 at yaw 0 — oblique band), terrain preflight
+over the TRUE rotated footprint, hash-gated plain spawn nx-struct-rupertfork, comp {}.
+Folly class by presentation (entering the throat means walking INTO the plug) — no walk
+owed; if seated walkable around, a circuit walk at placement.
+
+Bill eye-check pointer (after placement): a long walled gate on the avenue — two full-
+length stone walls with a beam over each mouth and a dark iron door set just inside the
+near one; look closely: the door is a CUBE, it is BIGGER than the wall's own face, and
+it is INSIDE the wall — the wall rides small plinths and the cube's floor sits below
+the wall's base while its crest clears the beam by the same sliver it clears the door.
+After dark: four warm lamps, one on each beam corner.
+
+Files: struct223-probe-rupertfork6.ts + struct223-decode-rupertfork6.ts +
+struct223-render-rupertfork6.ts (all NEW, tracked), assets/mkv3-rupertfork.ts
+(REWRITTEN this tick, staged -f), reviews/struct223-rupertfork{,6,7,8,10,11}/
+(frames per iteration, ignored — sha pins in this block are the durable record),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-223, D+0 E+0).
+Zero world mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-224 (2026-09-18): R11-38 RUPERT'S FORK v11 PLACED — the placement
+## carry executed (Math Avenue on-line continuation past newtonspheres)
+
+224%3=1 placement slot per the alternation; bank = struct-223's v11 ACCEPTED
+(sha 8013175fb28a0df1…, BANKED NOT PLACED). Gate ALL PASS real exit 0
+tick-start at e0b956a8 (sweep-311; piped GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 7fa8a224 — sibling annotation drift only; 0 OPEN nx-struct
+rows). Ledger max re-derived struct-223 (grep tail confirmed).
+
+INTERRUPTED-WINDOW RECOVERY (struct-9 class, named honestly): struct-223's
+ledger append landed but its window died BEFORE commit — plan block,
+REWRITTEN mkv3-rupertfork.ts, and struct223-{probe,decode,render}-rupertfork6
+sat uncommitted. The ledger entry rode sibling commit 1692eefb (fauna-19;
+grep count exactly 1 — normal interleaving per the interleave law, not loss).
+Recovery per law: (a) deterministic rebuild x2 reproduces the pinned v11 sha
+exactly (8013175f… x2 this tick — the local source still produces the banked
+bytes); (b) decode re-run ALL PASS 18/18 on the exact bytes; (c) placement
+executed; (d) THIS commit carries the deferred struct-223 files + both plan
+blocks, naming the interruption.
+
+SEAT (struct224-scan, fresh 360 census): procession az94 continues ->
+morley380 -> arbelos390 -> lunes400 -> oloid410 -> sphericon420 ->
+newtonspheres430 -> RUPERTFORK az94.0 r445.0 ON-LINE EXACT (-31.041631,
+-0.046430, 443.916002) yaw 1.762783 (101deg). The 10m rhythm is honestly
+WIDENED to 15m: the v11 square span's half-diagonal (5.48*sqrt2 = 7.754m) +
+dais r5.0 + law 1.4m forces center distance >= 14.15m — r445 is the first
+whole-meter lawful step (rupertfork is the far procession's largest form;
+disclosed). NN 15.00 (law 8), square-vs-disc EXACT gap 4.01 (law 1.4).
+
+YAW LAW (carry-note arithmetic corrected at source, disclosed): the
+struct-223 carry said "the 10.96m span runs az4/184 at yaw 0" — that does not
+cohere with the decoded frame (root identity, bore NN = local az45; probe
+S6). Re-derived from the judged-PASS vantage + procession convention: local
+az α -> world az (α − yaw) [verified against struct-219: yaw 146deg put local
++Z az90 at world az304]; mouth local az45 -> world az304 = anti-travel az274
++ 30deg east lean. YAW = 101deg = 1.762783. Near mouth 30deg oblique to the
+approaching viewer (struct-104 oblique band); wall faces az259/349 diamonds.
+An in-tick draft yaw (259deg, from world = local + yaw) was WRONG, caught by
+the struct-219 cross-check before any placement, named in the scan header.
+
+SAT LAW (new, struct-19 both-directions extension): the procession family are
+~10m DAIS (disc) forms — a square-bbox proxy on a round neighbor FALSE-PASSES
+on-line seats (r442: proxy gap 1.52 vs disc-exact 0.87). The scan + placer
+carry an EXACT square-vs-disc override for the known disc neighbors
+(newtonspheres/sphericon dais r5.0); 4-axis OBB-SAT max-gap for square
+neighbors. Live worst 4.01 (newtonspheres, disc-exact).
+
+TERRAIN (struct224-terrain-rupertfork.ts, this tick): 9pt over the TRUE
+rotated square (center + 4 corners + 4 edge-mids at yaw), spread 16.0mm,
+PY = lowest = -0.046430 (mid+z; embed absorbs).
+
+PLACEMENT: next-place-struct224.ts hash-gated (local sha re-verified
+pre-place), upload store/8013175fb28a0df1.glb (1 upload, shared budget),
+plain spawn 1 verb paced 1200ms, PLACED_VERIFIED pos
+[-31.041631, -0.046430, 443.916002] yaw 1.762783 comp {} census 360->361;
+idempotent rerun ALREADY_SEATED 0 verbs. Ground circuit walk 6/6
+CORE_ALL_PASS maxArrival 0.332m (approach two-way near-mouth reading face +
+full CW standoff circuit — no phantom collider; folly by presentation, the
+throat is the plug).
+
+Bill eye-check pointer: walk Math Avenue's procession out past the thirteen
+spheres — the next work is a LONG WALLED GATE standing square across the
+line: two full-length stone walls, a beam over each mouth, and a dark IRON
+door set just inside the near one. Look closely: the door is a CUBE, it is
+BIGGER than the wall's own face, and it is INSIDE the wall — the wall rides
+small plinths and the cube's floor sits below the wall's base while its crest
+clears the beam by the same sliver it clears the door. After dark: four warm
+lamps, one on each beam corner.
+
+Files: struct224-scan-rupertfork.ts + struct224-terrain-rupertfork.ts +
+struct224-walk-rupertfork.ts + next-place-struct224.ts (all NEW), plus the
+deferred struct-223 set committed here (struct223-probe/decode/render-
+rupertfork6.ts NEW-tracked, assets/mkv3-rupertfork.ts REWRITTEN v6..v11),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-224,
+D+0 E+1). One upload, one verb. Zero pushes.
