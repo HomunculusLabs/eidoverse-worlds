@@ -13572,3 +13572,77 @@ longhouse/garden-cottage @302, row-cottage/observatory @301,
 inn/tower-house @300, forge/potter @299 stalest standing pair at 4
 sweeps; walk tools interior-walk-forge.ts, interior-walk-potter.ts —
 both ls-verified present on disk this tick).
+
+
+sweep-304: CLEAN SWEEP, arrival-fold tick (73rd consecutive
+quiet-or-classified). Tick-start HEAD 221e3912 = fauna-13's own sheep
+placement close (ledger census 356->357 named there); standing gate ALL
+PASS real exit 0 FIRST TRY (unpiped /tmp/s304-gate.log, 98 PASS lines +
+ALL PASS trailer, ledger law PASS, register 0 OPEN items). Census epoch A
+356->357 vs the committed sweep-303 baseline (247480B sha16 6eed2c37):
+exactly ONE domain-valid arrival nx-dress-sheep-001 @ (-27.5, -0.0517,
+-31.5) yaw 0.65 lib store/31a512ed7195f27a.glb scale 1 kind thing, comp
+bag exactly 6x motion:sheep_{a,b}_{,head,tail} (bob/pendulum/pendulum per
+member, shared t0 1789724178483) — tuple matches the committed fauna-13
+ledger @ 221e3912 line-for-line incl. placer pin; 0 departures, 0 drift on
+all 356 shared ids across id/pos/yaw/lib/scale/kind/bbox. Epoch B 20s-paced
+re-read byte-identical to A (249918B sha16 7f237a02bba63d2b, cmp-verified),
+HEAD unchanged — single-epoch stable, no interleave. Sheep r41.8 SW sits
+2.82m from the SW approach polyline (START (-14.53,-19.1) -> END
+(-42.98,-56.52), nearest point (-25.25,-33.21) t=0.377) — INSIDE the
+re-verify band, so every walk ran fresh this tick, no inherited legs
+(sweep-58 band precedent applied as full re-walk). Overlap: SAT fresh-live
+319 bbox non-light / 240 exempt-classified / 0 coverage holes, real exit 3
+unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407
+— known Sev 2 routed artwalk b26 choreography @ sweep-43, 260th sweep since
+routing, NOT new, no escalation due (law keys severity-1); the arrival
+added ZERO new entity contacts, corroborating fauna-13's own decoded
+member-box SAT (worst 2.458m); conservative bbox-envelope lower bound to
+the SW walking line = 0.48m (envelope includes hurdles/pad), the live walk
+is the governing proof and it passed clean. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 ALL_PASS max dist 0.380
+(next-walk-core-paths.ts, JSON parsed from first brace past the [physics]
+banner; support-seam stderr abstentions = the known normalized diagnostics
+set, unchanged), NW 5/5 ALL_PASS (dists 0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/
+0.31, ne-approach2-walk.ts), SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) walked directly past the sheep with zero deviation.
+Tier-2 282nd cycle per the committed sweep-303 pointer: forge 6/6 ALL_PASS
+(maxArrival 0.375, dists 0.261/0.307/0.300/0.315/0.375/0.261,
+interior-walk-forge.ts) + potter 6/6 ALL_PASS (0.366, dists
+0.270/0.366/0.295/0.255/0.250/0.349, interior-walk-potter.ts), both real
+exit 0, both tools ls-verified present on disk pre-run. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (258th consecutive
+clean); sweep89-battery 28/28 PASS real exit 0 with the comp-bearing pin
+record 30->31 census-verified (live count 31, 31st bearer = exactly the
+sheep, geese + all prior fauna bearers confirmed live; the first
+invocation correctly FAILed 30-vs-31 = expected classification, bump per
+the sweep-301 geese precedent, not a finding); interlane md5 86b2936f
+stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged (280th check; 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+and was read fresh via the loop/plan reload. Baseline lawfully rewritten
+like-for-like (committed convention = raw census bytes; asserted
+pre-write: diff exactly [arrival nx-dress-sheep-001], counts 356->357,
+zero shared-id drift): 357 entities / 249918B / sha16 7f237a02bba63d2b;
+post-rewrite drift ZERO (baseline byte-identical to canonical census B,
+cmp-verified). Probe self-catches pre-verdict, corrected with no repair
+owed: (a) first battery invocation without the census argv (tool takes the
+path — IndexError, probe artifact); (b) tier-2 walk parser keyed
+legs/distance where the schema uses maxArrival/results[].dist (re-derived
+from raw files, sweep-48 class); (c) the inline census-diff heredoc was
+blocked by the terminal gateway keyword heuristic — script saved to /tmp
+and run as a file per the sanctioned retry path. Foreign dirt in tree
+(windmill overhaul scratch, cabin/carousel prototype dirs, client/server
+engine files, fleet shells, debug-bower scripts, moon-moth dir, fauna
+tools + FAUNA-PLAN.md, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP,
+core-paths assets) is sibling work-in-flight, untouched per the ownership
+law. Zero world mutations, zero defect notes, zero uploads, zero verbs,
+zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-305): row-cottage + observatory circuit (283rd cycle — LRU chain
+re-derived from committed plan pointers this tick: forge/potter @304
+walked fresh, hall/bunkhouse @303, longhouse/garden-cottage @302,
+row-cottage/observatory @301 stalest standing pair at 3 sweeps; walk
+tools interior-walk-row-cottage.ts, struct2-walk-observatory.ts).

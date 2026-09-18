@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 356,
+  "count": 357,
   "entities": [
     {
       "id": "beb4c791",
@@ -5775,6 +5775,132 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-sheep-001",
+      "kind": "thing",
+      "pos": [
+        -27.5,
+        -0.0517,
+        -31.5
+      ],
+      "yaw": 0.65,
+      "scale": 1,
+      "lib": "store/31a512ed7195f27a.glb",
+      "bbox": {
+        "min": [
+          -1.931,
+          0,
+          -2.612
+        ],
+        "max": [
+          2.345,
+          0.967,
+          1.512
+        ],
+        "size": [
+          4.276,
+          0.968,
+          4.125
+        ],
+        "center": [
+          0.207,
+          0.484,
+          -0.55
+        ]
+      },
+      "compKeys": [
+        "motion:sheep_a",
+        "motion:sheep_a_head",
+        "motion:sheep_a_tail",
+        "motion:sheep_b",
+        "motion:sheep_b_head",
+        "motion:sheep_b_tail"
+      ],
+      "comp": {
+        "motion:sheep_a": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4.4,
+          "phase": 0.3,
+          "t0": 1789724178483
+        },
+        "motion:sheep_a_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.16,
+          "period": 3.4,
+          "phase": 1.1,
+          "t0": 1789724178483
+        },
+        "motion:sheep_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.3,
+          "period": 1.9,
+          "phase": 0.7,
+          "t0": 1789724178483
+        },
+        "motion:sheep_b": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 3.8,
+          "phase": 2.2,
+          "t0": 1789724178483
+        },
+        "motion:sheep_b_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.35,
+          "period": 9,
+          "phase": 0,
+          "t0": 1789724178483
+        },
+        "motion:sheep_b_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.26,
+          "period": 2.2,
+          "phase": 1.5,
+          "t0": 1789724178483
+        }
+      }
     },
     {
       "id": "nx-dress-stablebench",
