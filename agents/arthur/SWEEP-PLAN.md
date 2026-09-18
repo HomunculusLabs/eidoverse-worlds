@@ -902,8 +902,26 @@ content-addressed, remove+spawn PLACED_VERIFIED + idempotent by its lane with a
 this tick: epoch-B SAT re-run over the new seat shows BOTH dial contacts gone —
 unclassified set collapsed 3 -> 1 (R-121 only); no new contact at (6,-45);
 walked-leg affectedness classified quantitatively (new seat min 31.5m from any
-tier-1/tier-2 leg point — epoch-A walks unaffected by construction). Register
+tier-1/tier-2 leg point — epoch-A walks unaffected by construction). 
+Register
 closed; R-123 no longer part of the standing unclassified set.
+
+R-125 (Sev 2, fauna — routed FAUNA-PLAN defect note, sweep-319 2026-09-18)
+PEACOCK SEATED INSIDE LAVENDER BED — TRUE PLANT-THROUGH-SOLID
+INTERPENETRATION. nx-dress-peacock-001 (fauna-25 v8 c9425f51b43a71a1) @
+(-47.5, 0.04167, 60) yaw 2.58 sits INSIDE nx-cultivation-lavender-0040's
+(5e04ce4b) planted area — 43,799 of 82,176 lavender verts within the
+peacock's +8m window. Source-true decode of EXACT live bytes
+(sweep319-peacock-contacts-decode.ts, kept in-tree; local sha16 == live
+lib prefix both; FULL node-hierarchy TRS, pitfall-4 chassis): lavender
+PLANT bodies (y>0.15) vs peacock PLINTH band 0.004m, vs BIRD body 0.001m —
+plant-through-solid, materially different from every R-124-class contact
+(all POSITIVE separations). NOT walk-blocking: NW route END ~10.2m away,
+re-walked this tick 5/5 ALL_PASS @ 0.38. Visual defect at a hero seat:
+display-bird geometry intersecting plant geometry. Suggested cure:
+re-seat 1.5-2m NE along the bed edge toward the dovecote, or shrink the
+local lavender cluster under the plinth. Escalation law keys Sev 1 — none
+due; second consecutive unaddressed sweep triggers the re-note.
 
 | sweep-49 | 2026-09-07 | 262→263 (+1 domain-valid arrival nx-struct-ruledtower @ (58,−0.0426,0) yaw 0 lib 4070ecc4d8f1d0e6 comp {} = struct-50 @ 990ddeb, tuple matches its committed ledger line-for-line; ONE lib flip nx-craft-hamlet-0028 032b6e24→44d78463 at identical tuple with embers comp live (particles key verified in comp JSON) = improve-25 @ 6df80eb, EPOCH-CORRECTION class — landed after first census, all affected evidence re-taken fresh (census2, SAT re-run, NE re-walked 7/7, gate re-run ALL PASS exit 0 at 6df80eb); live bbox y-span 13.311→4.724 confirms the family-cure took; 0 departures, 0 unexplained drift; snapshot rewritten normalized sha16 55af543ec07eef46, diff exactly +1 entity block +1 lib flip +count, post-rewrite drift ZERO) | exit 3 on exactly ONE unclassified = R-121 lamp-n\\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical per drift set, sixth sweep since routing, no escalation due — law keys Sev 1); 225 bbox non-light, 233 classified, 0 coverage holes | tier-1 81/81 ALL_PASS real exit 0 each (core 64/64 ok max-arr 0.38; NW 5/5; NE 7/7 epoch A + re-run 7/7 epoch B; SW 5/5) + tier-2 27th cycle bunkhouse 6/6 @ 0.380 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK (8th consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet-0007/0015/0028 embers all live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370320 at append, standing gate ALL PASS real exit 0 at tick-start a3344f1 + re-run at 6df80eb post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 
@@ -14649,3 +14667,37 @@ observatory @315, longhouse/garden-cottage @313 stalest standing pair at
 5 sweeps; walk tools interior-walk-longhouse.ts + interior-walk-garden-
 cottage.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 + 1567B Aug 30).
+
+
+sweep-319: FINDING tick (arrival + R-125 routed; 88th consecutive
+quiet-or-classified). Tick-start HEAD 7dbef664; gate ALL PASS real exit 0
+FIRST TRY (ledger law 2370942). Census A 366->367: +1 domain-valid arrival
+nx-dress-peacock-001 @ (-47.5,0.04167,60) yaw 2.58 lib c9425f51b43a71a1,
+6x motion:peacock{,_crest,_head,_tail,_train,_wings} = fauna-25 @ ea1bbb50
+ledger-matched line-for-line; ONE classified drift nx-carousel
+08ce1189b2d4b42b->a35f40f1925ce93b identical tuple+comp (polish-291 night
+valance ember, bbox byte-identical); 0 departures, 0 unexplained drift.
+dress-161 (33333add) zero-mutation interleave corroborated both; epoch B
+== A byte-identical; gate re-run ALL PASS exit 0 at 33333add. SAT
+329/243/0 exit 3 on TWO: known R-121 (275th, no escalation due) + NEW
+peacock|lavender-0040 -3.149 → decoded + routed R-125 Sev 2 fauna (TRUE
+plant-through-solid: plant vs plinth 0.004m, vs bird 0.001m; peacock
+seated INSIDE the lavender-0040 planted area — see register + FAUNA-PLAN
+defect note; NOT walk-blocking, NW END 10.2m re-walked 5/5). Tier-1 81/81
+ALL_PASS real exit 0 each (core 64/64 @ 0.380; NW 5/5 @ 0.38 re-walked
+peacock-inclusive per sweep-308 band; NE 7/7 @ 0.38; SW 5/5 @ 0.37).
+Tier-2 297th longhouse 6/6 @ 0.346 + garden-cottage 6/6 @ 0.355 ALL PASS.
+Pins 15/15 (273rd); battery RED->GREEN two lawful bumps (comp-bearing
+37->38 = peacock; carousel-lib a35f40f1), final 28/28; lights 38. Pools:
+IMPROVE 7fa8a224 (295th), CITY-V2 cae6b928 — unchanged. Baseline
+rewritten with pre-write assertion (diff exactly [arrival peacock,
+carousel.lib]): 367 ents / 270179B / sha16 9b24d4f71bd67b29, post-rewrite
+drift ZERO. Probe self-catches disclosed: raw-accessor decode chassis
+(pitfall-4 rewrite, verdict unchanged); 241^2-cell grid timeout
+(bbox-prefilter cure); sibling-cron modify warning on battery first patch
+investigated (single edit, 28 checks verified). Zero world mutations, one
+file-write defect note routed. Next tier-2 pair (sweep-320): inn +
+tower-house (298th cycle — LRU chain: longhouse/garden-cottage @319,
+hall/bunkhouse @318, forge/potter @317, inn/tower-house @316 stalest at 3;
+tools interior-walk-inn.ts + interior-walk-tower-house.ts, verify present
+on disk pre-run).

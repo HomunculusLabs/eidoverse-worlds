@@ -471,6 +471,33 @@ falsification record. Always pixel-count unique colors before judging.
 Kin (fauna-3): ultra anatomy probes need a face-visible angle — see the
 ducks record above.
 
+
+## SWEEP DEFECT NOTE (sweep-319, 2026-09-18) — R-125 Sev 2, fauna-owned
+
+**nx-dress-peacock-001 (fauna-25 v8 c9425f51b43a71a1) TRUE INTERPENETRATION
+with nx-cultivation-lavender-0040 (5e04ce4b).** Source-true decode of exact
+live bytes (sweep319-peacock-contacts-decode.ts, kept in-tree, hash-gated
+2/2: local sha16 == live lib prefix on both libs; full node-hierarchy TRS
+decode): the peacock was seated @ (-47.5, 0.04167, 60) yaw 2.58 INSIDE the
+lavender bed's planted area — 43,799 of 82,176 lavender verts fall within the
+peacock's +8m window. Unlike every R-124-class contact (all POSITIVE
+separations, adjacency-only), the discriminating y-band decomposition reads:
+lavender PLANT bodies (y>0.15) vs peacock PLINTH band (y<0.2): **0.004m**;
+vs peacock BIRD body: **0.001m** — plant-through-solid interpenetration.
+Siting commentary: fauna-25's ledger says "on a stone plinth at the
+orchard-edge stroll seat beside the dovecote" — the intended seat was BESIDE
+the bed, the actual tuple lands inside the planting. The bed is not a
+walk-blocking defect (NW route END ~10.2m away, re-walked this tick 5/5
+ALL_PASS @ 0.38 — no route impact); severity is visual: display-bird
+geometry intersecting plant geometry at its hero seat. Suggested cure (any
+one): re-seat 1.5-2m NE along the bed edge toward the dovecote, or shrink
+the local lavender cluster under the plinth. Evidence chain: square-SAT gap
+-3.149 (bbox inflation artifact, pitfall-0b) → source-true decode decisive.
+Probe self-catch disclosed: first decode used raw accessors without node
+transforms (peacock y read -0.130..1.053 vs census 0..1.688 — contradiction
+caught pre-verdict, chassis rewritten with full TRS per pitfall-4; verdict
+unchanged: 0.000m both ways).
+
 ## Decoder law (learned fauna-2)
 
 Part-anchored builds put pose offsets in CHILD frames: a pecking head's
