@@ -15975,3 +15975,127 @@ deferred struct-223 set committed here (struct223-probe/decode/render-
 rupertfork6.ts NEW-tracked, assets/mkv3-rupertfork.ts REWRITTEN v6..v11),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-224,
 D+0 E+1). One upload, one verb. Zero pushes.
+
+## struct-225 (2026-09-18): R11-39 THE STEINMETZ SOLID — BUILD+JUDGE TICK (the
+## bicylinder: two cylinders crossing at right angles, their shared heart in
+## stepped square courses; theorems machine-exact; judged PASS night 3/3 +
+## gameplay 4/4 + closeface 4/4 — ZAI fallback disclosed; ACCEPTED BANKED NOT
+## PLACED)
+
+225%3=0 refine slot taken as build under the empty-pool escape clause (refine
+pool empty of payable items 40+ ticks: native board cron-unpayable,
+struct-216/222 precedent). Gate ALL PASS real exit 0 tick-start at 647dc42c
+(sweep-312; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5
+7fa8a224, 0 OPEN nx-struct rows). Ledger max re-derived struct-224 -> tag
+struct-225 (re-checked immediately before append; law exact 2370932). Native
+absent from the cron catalog all tick (tool_search fresh: terminal + zai-vision
+only — same disclosed cron-unpayable class as struct-169..224; owed board
+stays 26).
+
+FORM SELECTION: steinmetz/bicylinder 0 mentions across plan/ledger/
+IMPROVE-PLAN/CITY-PLAN-V2 (grep this tick). Register: opens the
+INTERSECTION-SOLID branch — the first standing form that IS the intersection
+of two bodies (oloid/sphericon are hulls of curves, rupertfork is a carved
+remainder, menger is removal-by-iteration; none is an intersection, disclosed).
+Kin-check fresh: the four corner seams are the groin-vault edges (architecture
+lineage, never a standing form); sphericon is its rotating-square cousin (kin
+noted for the register).
+
+THEOREM VERIFICATION BEFORE CARVING (conchoid law, struct-190): L1 SQUARE LAW
+— every horizontal slice of the bicylinder is a perfect square, side
+2*sqrt(R^2-y^2); all 34 course boxes TRUE-inscribed under BOTH cylinders
+(worst corner excursion 0.000000 mm). L2 VOLUME — 16R^3/3 = 56.7893 m^3; the
+inscribed staircase converges from below with error ratio 4.06 per 4x
+refinement (O(1/n) stable; my first threshold law was wrong and was
+corrected RED-first — the ratio, not the absolute gap, is the stability
+signature). L3 SEAM ELLIPSES — the corner path lies on both cylinders to
+8.9e-16, in the diagonal planes, horizontal semi-axis R*sqrt2 exact. L4 HOOP
+LAW — each course's binding-face edge midpoints lie EXACTLY on the generator
+circles (0 mm); the two brass hoops are 145-vertex polylines on those exact
+circles, planar to 0. L5 SEAT — first KEPT course bottom embedded 7cm below
+plinth top (oloid 8cm lineage). L6 envelope 5.8x4.578x5.8, h 4.58 >= 2.2 real
+trimesh, footprint 33.6 m^2; surface theorem 16R^2 = 77.44 m^2 (4 groin
+patches, reported not integrated). RED control: R+2% breaks the hoop law by
+195mm and moves the volume target 6.1% — laws detect.
+
+SELF-CAUGHT LAW/BUILD BUGS THIS TICK (all RED-first, zero wasted builds):
+(a) NaN tip course — 36*DELTA float-overruns 2R by 1 ulp, sqrt(negative) made
+a NaN box and NaN < 0.02 is false so it was KEPT (clamp + NaN-guard added);
+(b) SEAT FRAME — course 0 is the degenerate tip (w=0, skipped), so seating
+the datum from the tip's bottom left the first meaty course FLOATING 6.2cm
+above the plinth top: EMBED is now measured from the FIRST KEPT course's
+bottom (DATUM = PLINTH_H - EMBED + R - DELTA); (c) decode D3 plinth-vert leak
+(filtering course verts by y both leaked plinth top-face verts — excursion
+exactly the plinth corner value 7.6012 — AND dropped the embedded bottom
+face, 268/272; replaced with an x/z-extent filter under the course max
+half-width 2.2); (d) decode D4 wrote a planarity law for TUBES (|z|<1e-9
+matched almost nothing — a tube's verts are never in-plane); replaced with
+point-to-polyline distance <= TUBE (oloid D4 lineage), worst 0.0450 = the
+tube radius itself, segment coverage 288/288; (e) bead centroid tolerance
+2mm -> 5mm (sphere-vertex centroid noise 2.5mm); (f) texMat law scoped to
+the stone/brass LANES (the glow bead is a plain emissive material by lineage,
+no TEXCOORD_0 by design).
+
+CONCEPT: TWO CYLINDERS' SHARED HEART. STONE carries the intersection — 34
+square courses whose sides follow the circle law, on a square plinth (the
+square theme doubled: every slice square, the seat square). BRASS carries
+the two generator hoops riding the binding-face edge midpoints, crossing at
+the crown. Sole night element: one warm bead at the crown crossing (s363
+sole-bead law). Nodes 3 (steinmetz_0 stone + steinmetz_1 brass + glow_sm_1).
+
+BUILD (agents/arthur/assets/mkv3-steinmetz.ts, staged -f): root identity
+(struct-188 law); oloid/lunes world-frame chassis. v1 deterministic x2
+byte-identical sha256
+c3d56ac8f8eceacd610416d3eb78e9af612274fad4c430f6bd13f0216beca702
+(mtime-verified, 323 pre-merge meshes -> 2 buckets + 1 glow KEEP).
+
+DECODE (struct225-decode-steinmetz.ts, tracked) ALL PASS 8/8 + RED control
+(foreign oloid bytes: FAIL fires, exit 1): D1 census 3 nodes; D2 plinth 36
+verts span-exact sole-at-grade; D3 solid 816 course verts inside both
+cylinders, corner coverage 272/272; D4 hoops 18432 verts within TUBE of the
+exact polylines, planarity 0 over tube, segments 288/288; D5 bead centroid ==
+crown within 2.5mm, emissiveFactor present, sole night element; D6 grounding
+sole 0.000000 + embed 7.0cm == probe; D7 envelope drift 0.00000; D8 texMats
+sm_stone/sm_brass lanes UV-complete.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed, riding the owed
+board):
+- night: PASS 3/3 — exactly ONE warm point at the crown, hoops read dark
+  matte edge-on, zero bloom/stray glow.
+- gameplay 18m: PASS 4/4 — identity (deliberate carved math monument, not
+  rubble/building/pillar), silhouette (continuous stepped mass, widest at
+  the waist, no floats/gaps), grounding (plinth flat, attached shadow),
+  overall accept. Margins disclosed: profile hoop below 18m legibility (the
+  edge-on centerline carries the brass read — same class as oloid's tilted
+  ring), lower courses near ground tone.
+- closeface ~8m: PASS 4/4 — joint rhythm + shrink law, centerline meridian
+  seated on the face, three families distinct, one-solid read. Margins
+  disclosed: courses read fine striations at this count (36 over 4.4m), face
+  view carries dome ambiguity (the bicylinder identity is carried by the
+  construction lines — presentation-tier, same class as prior avenue forms).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-226 committed
+carry: fresh census scan (8m NN law, district soft cap 6, Math Avenue az94
+on-line continuation past rupertfork r445 — rhythm law: procession steps
+15m from rupertfork per struct-224's widened rhythm), YAW LAW (construction
+face reads obliquely per struct-104; the 5.8m square runs its face 30deg off
+the anti-travel sightline, east lean, procession convention), terrain
+preflight over the TRUE rotated footprint, hash-gated plain spawn
+nx-struct-steinmetz, comp {}. Folly class — no walk owed; circuit walk at
+placement if seated walkable. Native re-judge debt: steinmetz v1 joins the
+owed board (board 26 + this one).
+
+Bill eye-check pointer (after placement): on Math Avenue past the walled
+gate — a stepped square tower whose courses shrink by the circle law,
+widest at the waist; two thin brass hoops ride its edges and cross at the
+crown under one warm bead. The idea: two invisible cylinders crossing at
+right angles — this is the stone they share. Every slice is a square; the
+corner seams are the groin vault's own curves.
+
+Files: struct225-probe-steinmetz.ts + struct225-decode-steinmetz.ts +
+struct225-render-steinmetz.ts (all NEW, tracked), assets/mkv3-steinmetz.ts
+(NEW, staged -f), reviews/struct225-steinmetz/ (9 frames, ignored — sha pins
+in this block are the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-225, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
