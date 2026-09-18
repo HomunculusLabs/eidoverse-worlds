@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 363,
+  "count": 364,
   "entities": [
     {
       "id": "beb4c791",
@@ -4078,6 +4078,150 @@
           "period": 2.3,
           "phase": 1.6,
           "t0": 1789753425206
+        }
+      }
+    },
+    {
+      "id": "nx-dress-donkey-001",
+      "kind": "thing",
+      "pos": [
+        -22.5,
+        -0.05207,
+        -34
+      ],
+      "yaw": -1.11,
+      "scale": 1,
+      "lib": "store/783055bc2b456dc3.glb",
+      "bbox": {
+        "min": [
+          -1.4,
+          -0.001,
+          -1.837
+        ],
+        "max": [
+          1.5,
+          1.749,
+          1.595
+        ],
+        "size": [
+          2.9,
+          1.75,
+          3.432
+        ],
+        "center": [
+          0.05,
+          0.874,
+          -0.121
+        ]
+      },
+      "compKeys": [
+        "motion:donk_a",
+        "motion:donk_a_ears",
+        "motion:donk_a_head",
+        "motion:donk_a_tail",
+        "motion:donk_b",
+        "motion:donk_b_head",
+        "motion:donk_b_tail"
+      ],
+      "comp": {
+        "motion:donk_a": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4.9,
+          "phase": 0.3,
+          "t0": 1789757681548
+        },
+        "motion:donk_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.35,
+          "period": 9,
+          "phase": 0,
+          "t0": 1789757681548
+        },
+        "motion:donk_a_ears": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 2.6,
+          "phase": 1.1,
+          "t0": 1789757681548
+        },
+        "motion:donk_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.3,
+          "period": 2.8,
+          "phase": 0.5,
+          "t0": 1789757681548
+        },
+        "motion:donk_b": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 5.1,
+          "phase": 2.2,
+          "t0": 1789757681548
+        },
+        "motion:donk_b_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.13,
+          "period": 3.2,
+          "phase": 0.8,
+          "t0": 1789757681548
+        },
+        "motion:donk_b_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.26,
+          "period": 2.4,
+          "phase": 1.5,
+          "t0": 1789757681548
         }
       }
     },
