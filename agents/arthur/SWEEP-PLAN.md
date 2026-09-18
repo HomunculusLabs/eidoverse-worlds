@@ -13168,3 +13168,80 @@ pointers this tick: longhouse/garden-cottage @297 walked fresh,
 row-cottage/observatory @296, inn/tower-house @295, hall/bunkhouse @294
 stalest standing pair at 3 sweeps; walk tools interior-walk-hall.ts,
 interior-walk-bunkhouse.ts — both ls-verified present on disk this tick).
+
+sweep-298: CLEAN SWEEP, epoch-corrected tick (67th consecutive
+quiet-or-classified). Tick-start HEAD 019c3fff = struct-216's close;
+standing gate ALL PASS real exit 0 FIRST TRY (unpiped capture
+/tmp/s298-gate.log, 98 PASS lines + ALL PASS trailer, ledger law PASS).
+Census epoch A 352==352 FULLY QUIET vs the committed sweep-295 baseline
+(canonical projection byte-identical, 242335B sha16 0220a3a9ed400960):
+0 arrivals, 0 departures, 0 drift on all 352 shared ids across every
+projection field (pos/yaw/scale/kind/bbox/lib flips/compKeys). Mid-tick
+the fauna lane landed the European robin — epoch B (243852B): exactly
+ONE domain-valid arrival nx-dress-robin-001 @ (6.3, -0.029115, -86.35)
+yaw 3pi/2 lib 5ba5598fbca0ff46 scale 1 kind thing, comp bag exactly
+3x motion:robin{,_head,_tail} (bob / pendulum / pendulum, shared epoch
+t0), r86.6 S — 66m+ off every tier-1 leg, walks stand by construction
+(sweep-53 precedent). Tuple matches the in-tree placer
+fauna9-place-robin.ts pin verbatim (work-in-flight at epoch B read,
+ledger-matched to fauna-9 @ 7754b1d committed mid-tick, PLACED_VERIFIED
+352->353 per its own message); 0 departures, 0 unexplained drift on the
+352 shared ids. Epoch law honored — all affected evidence re-taken
+fresh before verdicts: SAT re-run at epoch B (315 bbox non-light / 239
+classified / 0 coverage holes, real exit 3 on exactly ONE unclassified
+= R-121 lamp-n | nx-town-mapboard -0.407 — known Sev 2 routed artwalk
+b26 choreography @ sweep-43, 254th sweep since routing, NOT new, no
+escalation due — law keys severity-1; the robin's own placer carried
+SAT-clean on TRUE dims per fauna-9's message, and the fleet re-run
+corroborates: no new contacts); battery re-run at epoch B with the
+comp-bearing pin bumped 28->29 (sweep-295 fauna-arrival precedent,
+census-verified 29th = the robin exactly, epoch-B 28/28 PASS — the
+superseded epoch-A read correctly shows 27/28 pre-arrival); standing
+gate re-run ALL PASS real exit 0 at 7754b1d post-interleave. Walks:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0,
+legs run individually — core 64/64 ALL_PASS max dist 0.380
+(next-walk-core-paths.ts, JSON parsed from first brace past the
+[physics] banner; support-seam stderr abstentions = the known
+normalized diagnostics set, unchanged), NW 5/5 ALL_PASS (dists
+0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); tier-2
+276th cycle per the committed sweep-297 pointer: hall 8/8 ALL_PASS
+(dists 0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310,
+interior-walk-hall.ts) + bunkhouse 6/6 ALL_PASS
+(0.245/0.300/0.305/0.247/0.380/0.313, interior-walk-bunkhouse.ts),
+both real exit 0, both tools ls-verified present on disk pre-run.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (252nd
+consecutive clean); sweep89-battery 28/28 PASS real exit 0 at epoch B
+and on the committed baseline bytes post-rewrite; interlane md5
+86b2936f stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read
+fresh. Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (274th
+check; 0 open candidate rows), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues
+freeze banner governs and was read fresh via the loop/plan reload.
+Baseline rewritten with asserted pre-write (sweep298-baseline-rewrite.py,
+py_compile clean, diff set exactly [arrival nx-dress-robin-001]):
+353 ents / 243852B / sha16 3d7307b61482ca56, post-rewrite drift ZERO
+at both epochs (diff tool re-run A and B clean), battery 28/28 PASS on
+the committed baseline bytes. Diff tool sweep298-census-diff.py folded
+from the committed sweep297 chassis (clean two-path swap, py_compile
+clean, clean exit 0 at BOTH epochs unpiped on the real bytes). Probe
+self-catches pre-verdict, corrected with no repair owed: (a) first
+battery invocation ran without the census argument (tool's own
+IndexError before any verdict, re-run with the path); (b) battery pin
+comparison run on superseded epoch-A bytes printed the expected FAIL
+(comp-bearing 29 vs pin-then-28) — resolved as the classification, not
+a finding, pin bumped per precedent. Foreign dirt in tree (fauna-9
+robin scratch set + FAUNA-PLAN.md modified, windmill overhaul scratch,
+cabin/carousel prototype dirs, client/server engine files, fleet
+shells, debug-bower scripts, moon-moth dir, fauna tools,
+HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths assets) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-299): forge + potter (277th cycle — LRU chain re-derived from
+committed plan pointers this tick: hall/bunkhouse @298 walked fresh,
+longhouse/garden-cottage @297, row-cottage/observatory @296,
+inn/tower-house @295, forge/potter @293 stalest standing pair at 5
+sweeps; walk tools interior-walk-forge.ts, interior-walk-potter.ts —
+both ls-verified present on disk this tick).

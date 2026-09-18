@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 352,
+  "count": 353,
   "entities": [
     {
       "id": "beb4c791",
@@ -5231,6 +5231,88 @@
           "period": 3.1,
           "phase": 2.2,
           "t0": 1789694261923
+        }
+      }
+    },
+    {
+      "id": "nx-dress-robin-001",
+      "kind": "thing",
+      "pos": [
+        6.3,
+        -0.029115,
+        -86.35
+      ],
+      "yaw": 4.71238898038469,
+      "scale": 1,
+      "lib": "store/5ba5598fbca0ff46.glb",
+      "bbox": {
+        "min": [
+          -0.178,
+          0,
+          -0.101
+        ],
+        "max": [
+          0.308,
+          0.22,
+          0.101
+        ],
+        "size": [
+          0.486,
+          0.22,
+          0.203
+        ],
+        "center": [
+          0.065,
+          0.11,
+          0
+        ]
+      },
+      "compKeys": [
+        "motion:robin",
+        "motion:robin_head",
+        "motion:robin_tail"
+      ],
+      "comp": {
+        "motion:robin": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 3.6,
+          "phase": 0,
+          "t0": 1789706242876
+        },
+        "motion:robin_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.3,
+          "period": 3.8,
+          "phase": 0.6,
+          "t0": 1789706242876
+        },
+        "motion:robin_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.16,
+          "period": 2.4,
+          "phase": 1.4,
+          "t0": 1789706242876
         }
       }
     },
