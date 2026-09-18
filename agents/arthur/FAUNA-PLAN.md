@@ -55,6 +55,24 @@ domain is commons-next `nx-dress-*` fauna only.
    5ba5598f) on the grass OUTSIDE the reedpool N rim at (6.3,-86.35) yaw
    3π/2, facing the village approach. Full record below. (The prior
    window's in-basin seat was cured mid-tick — pool decode law recorded.)
+8. **[CANDIDATE fauna-10] geese — new species (homestead tier-2).**
+   A domestic graylag-goose pair, ONE entity `nx-dress-geese-001`:
+   white-and-grey bodies, LONG S-curved necks (the silhouette no village
+   animal owns), orange bills with pale nail, white rear/tail-knuckle over
+   grey wings, orange-pink legs. Two roles per individual: one GRAZER
+   (neck dipped, nibbling grass) + one SENTRY (neck tall, head-scan — the
+   farmyard-watchdog posture; the fox-den story writes itself). 18m
+   identity: white bodies on green meadow + neck-length silhouette (no
+   other villager has either). Build chassis: duck waterfowl construction
+   (hull/wing/tail/bill) at goose scale, broad forms (fauna-5 law).
+   Motion chassis (all proven part types): graze-dip pendulum (hen peck
+   family), sentry neck-scan (owl head-scan family), breathing bob, tail
+   flick — phases staggered per individual, epoch t0. Siting at build
+   tick via seat-scan law + fresh census; candidate seats (decide with
+   pool GLB radial decode, fauna-9 bank-raycast law): reedpool S/E bank
+   meadow 5–8m out (grazing geese beside the ducks' water — pond life
+   from every side: ducks W lobe, robin N rim, geese S/E bank), millrace
+   bank, or open pasture W of the goat pen.
 
 ## Per-species rebuild records
 
