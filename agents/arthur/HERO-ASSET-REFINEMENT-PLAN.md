@@ -1055,3 +1055,31 @@ next wake once the gateway answers.
   (judge-named), ceiling-disc 18m dimness (judge-named), gold spire
   speckle read, stairs contrast; or re-survey plaza-core on fresh
   evidence.
+
+### polish-292 — carousel interior scenery ring (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-291 valance build (live was a35f40f1).
+- Defect (judge ×2 + pixels): under-canopy vertical volume read as a dark
+  cavity ("lit lampshade over a void") — night rows 285..300 measured 0 warm
+  px except the pole; lantern dots floated disembodied. Day spire-speckle
+  candidate FALSIFIED this tick (finial judged clean — no edit made).
+- Change (ONE intervention, new step `carousel-horse-prototype/scenery.ts`,
+  ceiling.ts chassis): 16 cream scenery panels r 2.6, y 3.00..4.28, 16° arc
+  + 6.5° slits (far lanterns flicker through), static scene-level node —
+  spin subtree/sockets/motion untouched. Emissive [0.40,0.24,0.11]
+  (lanterns .80 > crown .62 > ceiling .36 > scenery .26 > teeth .215).
+  Clearances decode-proven: web ≤2.16, lanterns 2.90..3.10, heads ≤2.75.
+- Candidate `c62a8bbd8e794a9d…` A/B byte-identical; 15/15 clip-clean; nodes
+  46→47. Night void-band warm 44→4025 px (frame +85%); day top view 6 px;
+  horse-solo controls 4/4 byte-identical. Judge night PASS (classic
+  carousel read restored, lanterns brightest, restrained) + day PASS
+  (scenery not wall, horses dominant). ZAI fallback disclosed, native
+  re-judge owed (same class as polish-285..291).
+- Placed via `deploy.ts --apply`: PLACED_VERIFIED (1 upload + 8 verbs),
+  7-key comp bag verbatim, idempotent 0/0, live pin
+  `store/c62a8bbd8e794a9d.glb` exact; served sha == upload sha, served
+  decode keeps node/material/emissive, 0 non-finite.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-292-carousel/`.
+- Next: night plinth/brass-band value (judge-named, polish-289 v6 re-tune
+  candidate); tan-horse vs panel value proximity (judge optimization
+  note); or re-survey plaza-core on fresh evidence.
