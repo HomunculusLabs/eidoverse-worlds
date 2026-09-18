@@ -26,7 +26,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | dairy cow | `nx-dress-cow-001` | (24,-0.02489,40.75) yaw 0.66 | **943beb2b** (fauna-21) | NEW 2026-09-18 — Jersey-class dairy cow pair at the meadow E of the pig sty (watch + grazer at the filled hay rack), 7 motion comps; the dairy chain's animal stands |
 | donkey | `nx-dress-donkey-001` | (−22.5,−0.05207,−34) yaw −1.11 | **783055bc** (fauna-23) | NEW 2026-09-18 — standard donkey pair (watch + grazer at straw) under a lean-to field shelter on the SW meadow, 1.433m from the sheep fold — the flocks' guardian stands with its flock; 7 motion comps |
 | turkey | `nx-dress-turkey-001` | (45.25,−0.03869,−6.5) yaw −1.15 | **5a3c1cf5** (fauna-24) | NEW 2026-09-18 — bronze turkey pair (tom in full strut display + foraging hen) in the poultry yard E of the hutch with roost beam + scratch pad, facing WNW toward the visitor lane; 7 motion comps — the barnyard's loudest bird joins the hens |
-| peacock | `nx-dress-peacock-001` | (−47.5,0.04167,60.0) yaw 2.58 | **c9425f51** (fauna-25) | NEW 2026-09-18 — the show bird: single cock in full display (tilted-dome train of 21 gold-ringed teal eyespot plumes, NOT the turkey's vertical fan) on a stone plinth at the orchard-edge stroll seat beside the dovecote; 6 motion comps |
+| peacock | `nx-dress-peacock-001` | (−43.3,0.03399,69.7) yaw −2.318 (**fauna-27 re-seat**, was (−47.5,0.04167,60.0) yaw 2.58) | **c9425f51** (fauna-25) | NEW 2026-09-18 — the show bird: single cock in full display (tilted-dome train of 21 gold-ringed teal eyespot plumes, NOT the turkey's vertical fan) on a stone plinth; 6 motion comps; RE-SEATED fauna-27 (R-125 cure — see queue row 18) |
 | rooster | `nx-dress-rooster-001` | (31.25,−0.02772,−9) yaw −1.3 | **af35212e** (fauna-26) | NEW 2026-09-18 — the flock's cock: single bird, tall serrated red comb + gold hackle mantle + 2-tier sickle fountain cresting just below the comb, at the coop-yard sentinel seat between the lane and his hens; 5 motion comps — the hen flock's missing bird stands |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
@@ -348,15 +348,30 @@ domain is commons-next `nx-dress-*` fauna only.
     v11 smooth ladder + 2-tier (height/sweep arithmetic recomposed ×2)
     → v12 half-step lesser tier + straw deleted = tailprobe PASS. 12
     build versions, 12 judged rounds.
-18. **[QUEUED fauna-27, 2026-09-18] peacock re-seat — sweep-319 defect
-    R-125 (Sev 2, fauna-owned).** Source-true decode: the peacock's
-    plinth intersects the lavender bed's plant bodies at 0.004-0.001m
-    (43,799 lavender verts inside the peacock's +8m window). Cure (next
-    tick): re-seat 1.5-2m NE along the bed edge toward the dovecote
-    (sweep + terrain + remove+respawn same law), or shrink the local
-    lavender cluster under the plinth. Evidence in the SWEEP DEFECT
-    NOTE above; the peacock's motion comps must be re-applied after any
-    re-place (comp-wipe law).
+18. **[CLOSED fauna-27, 2026-09-18] peacock re-seat — R-125 CURED.** The
+    peacock RE-SEATED via remove+respawn (same v8 bytes c9425f51, NO
+    upload): **(−43.3, 0.03399, 69.7) yaw −2.318** — fauna27-seat-sweep
+    best of 2 qualifying under the NEW bed-rectangle gate (census-bbox
+    planting envelopes of BOTH lavender beds ≥0.25m: worst 0.511m = 1.44m
+    beyond bed-0040's planted edge); worst solid 1.401m vs the espalier
+    rows (the orchard show-corner designed adjacency); 5.23m off the
+    stroll polyline (stile→dovecote→rows, lamp-in-path law). Terrain 9pt
+    spread 1.27mm, PY 0.03399 = live heightAt. Yaw −2.318 turns the
+    display to face the dovecote/stroll side (dot 0.991 to the
+    seat→dovecote direction) — **falsified by render BEFORE mutation
+    (struct-104/152 law): candidate 18° front-oblique judged FRONT/READS/
+    clean vs true-rear control BACK — discriminating (ZAI fallback glm
+    vision; native debt NATIVE-27)**. The v1 render rig had the camera
+    pinned at rig +z = the yawed model's REAR (judge caught the inversion
+    — the falsification discipline working exactly as designed; rig law
+    recorded below). 8 verbs (remove+spawn+6 comps, comp-wipe law),
+    census 369→369, idempotent rerun ALREADY_SEATED zero verbs, walk
+    ALL_PASS 3/3 (stile-side 16.5m approach → rows-side 4.5m encounter
+    vantage; foreign support-seam stderr = temple/skeps/logpile class).
+    Post tuple + full 6-comp bag verified exact, bbox == decode envelope.
+    Village logic preserved: show birds belong where visitors stroll —
+    the seat stays on the orchard-edge stroll continuation (dovecote →
+    espalier display end), out of the planting.
 19. **[QUEUED fauna-28 proposal, 2026-09-18] peahen — homestead species
     (queue-empty proposal, fauna-24 cadence).** Village logic: the
     peacock (fauna-25) displays his train at the orchard-edge stroll
@@ -504,12 +519,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Build: a single cock in full display (ONE entity, TRUE-SIZE authored directly — fauna-13/19/21/23/24 law): THE TRAIN a TILTED DOME of 21 dark-green plumes (TRAIN 0x3d6b4f), each shaft a true-length box (0.95–1.17m, per-plume variation + roll) tipped with a NESTED SPHERE-LENS eyespot (dark fringe lens + GOLD ring lens + teal EYE disk, stacked outward along the shaft — spheres have no back face; the flat-plate version read dark from the shade side), sweeping up and BEHIND (crest 1.683m, span 1.807m, z −0.740 — deliberately NOT the turkey's vertical banded fan; the tilted dome is the differentiating silhouette). GOLD_E/EYE_E carry a faint same-hue emissive glint (0.75 intensity — polish-274 moonlit-read kin: the dome self-shades its leeward arc, killing the dapple at 0 emissive; judge-confirmed NATURAL, no bloom). Bird: royal-blue body 0x2f659e (lifted from plan's 0x2a5d8c after the 18m judge read "dark/navy") + proud breast, ONE TubeGeometry neck (fauna-11 law c), LATERAL 7-stem crest fan with teal dots (fore-aft fan projected to a single column from the front — judge "lone antenna"; v8 lateral rebuild), dark beak proud, eyes with white face patches (ellipsoid-tested proud), gray-brown legs + spread feet. Furniture: mottled stone plinth (foot ring + drum) + step stone (the show-bird pedestal — silhouette lifted above the grass line); ground lens-ring + molted feather props DELETED (judge read as debris, turkey law f). Anchors peacock/_head/_crest/_train/_wings/_tail (6 KEEP groups; bare `peacock` added to mergekit KEEP this tick — the `peacock_` I first authored MISSED the bare group name and the unmerged scale-spheres exploded the envelope ±1.125, fauna-8 toGLB scale-drop class, decode caught it). 7574 tris, 15 draw calls.
 - Motion: 6 comps live — breathing bob (.005/4.8s — twentieth village exercise of part bob), head Y-scan sentry (.30/8.0s, owl/goose family), crest nod (.12/3.4s, NESTED inside the head group so it rides the scan), train slow sway Y (.04/6.0s — the display breathes, turkey fan law), wing strut-shiver Z (.05/1.3s), tail props flick (.10/2.6s); phases staggered, epoch t0. Motion proven engine-true on final bytes at both framings (1325px diff @ 18m band 405–527; 11257px near band 210–652); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
 - Judge arc (ZAI fallback, native debt NATIVE-17 below): 8 build versions, 6 judged rounds. 18m v4 SHIP first round (silhouette+dome+blue carry; eyespots sub-pixel disclosed) → trainprobe v4 FAIL (flat eyespot plates dark on shade-side arc + stray molted-feather triangle) → v5 sphere-lenses + lens-ring → shade-side still "bare sticks" → **PIXEL PROBE (fauna-23 law b)**: right-half gold 4px vs left 705px — the shade-side loss is REAL (self-shading, not plate backs; my sphere-impossibility hypothesis honestly falsified) → v6 same-hue glint + debris deleted (129px) → v7 lenses +15% + glint 0.75 (330px) = **trainprobe SHIP rev3** (both arcs lensed, NATURAL glint) → faceprobe v7 FAIL (crest "lone antenna" — TRUE: fore-aft fan projects to one column front-on; camera also 1.8m too far, fauna-19 law d) → v8 lateral crest + reframed camera = **faceprobe SHIP rev2** (7 stems, dots visible, contiguous) + **18m re-SHIP on final bytes** (brighter royal blue confirmed; eyespot glint sub-pixel at 18m disclosed as distance-limited, identity unaffected).
-- Rig/decode laws learned: (a) **a bare-prefix KEEP alternative must match the BARE group name** — `peacock_` does not match `peacock`; an unmatched keep-group exports with scale-carrying spheres intact and toGLB drops the scales (fauna-8 law in a new costume; the envelope gate caught ±1.125 before any upload); (b) **the dome self-shades its own leeward arc** — a radial display's shade-side markers die under a single sun; the same-hue emissive glint (moonlit-read kin) restores the dapple without a glow read (judge-confirmed NATURAL at 0.75); (c) **a radial crest fans LATERALLY, not fore-aft** — a sagittal fan projects to a single column from the approach face; species anatomy must be authored for the READER's plane; (d) **unnamed top-level groups survive mergekit unmerged** (fauna-13 law c struck again in v5's lens wrappers — direct meshes only); (e) the pixel probe once more outranked my geometry argument — probe first, then argue (the probe confirmed the judge AGAINST me this time; the discipline held both directions).
+- Rig/decode laws learned: (a) **a bare-prefix KEEP alternative must match the BARE group name** — `peacock_` does not match `peacock`; an unmatched keep-group exports with scale-carrying spheres intact and toGLB drops the scales (fauna-8 law in a new costume; the envelope gate caught ±1.125 before any upload); (b) **the dome self-shades its own leeward arc** — a radial display's shade-side markers die under a single sun; the same-hue emissive glint (moonlit-read kin) restores the dapple without a glow read (judge-confirmed NATURAL at 0.75); (c) **a radial crest fans LATERALLY, not fore-aft** — a sagittal fan projects to a single column from the approach face; species anatomy must be authored for the READER's plane; (d) **unnamed top-level groups survive mergekit unmerged** (fauna-13 law c struck again in v5's lens wrappers — direct meshes only); (e) the pixel probe once more outranked my geometry argument — probe first, then argue (the probe confirmed the judge AGAINST me this time; the discipline held both directions); (f) **fauna-27 re-seat rig law: a yaw-falsification camera must sit along the model's FACING (angle PHI from rig +z), never pinned at rig +z** — after `rotation.y = yaw`, rig +z is the yawed model's REAR; the v1 candidate render was actually the rear view and the judge caught the inversion (cand BACK / ctrl FRONT). Camera at `(sin(PHI±oblique)·d, h, cos(PHI±oblique)·d)` reads the reader's true presentation; always run the rear control as the discriminating pair.
 
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-27 | fauna-27 (2026-09-18) | peacock RE-SEAT presentation pair — candidate 18° front-oblique + true-rear control (`reviews/fauna27-peacock-reseat/{cand18,ctrlRear18}.png`) — fallback arc stands (cand FRONT/READS/clean, ctrl BACK — discriminating; the seat's facing dot 0.991 toward the dovecote approach) until natively confirmed |
 | NATIVE-18 | fauna-26 (2026-09-18) | rooster v12 af35212e gameplay + gameplayR + gameplayL + tailprobe + roostface frames (`reviews/fauna26-rooster/new-{gameplay,gameplayR,gameplayL,tailprobe,roostface}.png`) — fallback arc stands (18m oblique PASS both sides + tailprobe PASS + roostface PASS on final bytes; dead-front 18m comb-edge-on sub-pixel DISCLOSED as vantage physics — the seated yaw presents the fountain obliquely to the lane reader) until natively confirmed |
 | NATIVE-17 | fauna-25 (2026-09-18) | peacock v8 c9425f51 gameplay + trainprobe + faceprobe frames (`reviews/fauna25-peacock/new-{gameplay,trainprobe,faceprobe}.png`) — fallback arc stands (18m SHIP ×2 + trainprobe SHIP rev3 + faceprobe SHIP rev2; 18m eyespot-glint sub-pixel disclosed as distance-limited) until natively confirmed |
 | NATIVE-16 | fauna-24 (2026-09-18) | turkey v10 5a3c1cf5 gameplay + fanprobe + tomface + henface frames (`reviews/fauna24-turkey/new-{gameplay,fanprobe,tomface,henface}.png`) — fallback arc stands (18m SHIP on final bytes + fanprobe SHIP + tomface SHIP rev5 + henface SHIP; hen wattle sub-pixel + 18m fringe-not-bars residuals disclosed) until natively confirmed |
