@@ -1,6 +1,38 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-160 — lawful HOLD (49th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source**: prompt again carried the
+  dress-77 SE fungus-log "placement pending" claim — resolved FALSE since
+  dress-152 (dress-78 closed it long ago; `nx-dress-se-funguslogs-001`
+  LIVE, lib fbc626eb, round-3 eye-gate item 9). Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD ef6d2ede (struct-229, Szilassi
+  build judged REJECTED — explicitly nothing placed); interlane md5
+  86b2936f pin-exact. Fresh census **366 steady (+0/−0/0-moves)**: both
+  siblings since dress-159 named and foreign-domain — sweep-317
+  (1b0c6eb8, zero-mutation CLEAN SWEEP 366==366) and struct-229
+  (ef6d2ede, banked-only). ZERO dress-domain drift; dress domain 58 =
+  29 fleet-owned (NE 6 / NW 9 / SE 7 / SW 7) + 5 fauna-owned (se-fox,
+  shorse, cow, donkey, turkey — explicit probe set, dress-151/153/156/
+  158/159 law) + 24 legacy/non-fleet (probe
+  `/tmp/dress-hold-verify-160.py` HOLD_VERIFY_PASS exit 0 first run,
+  browser UA, capture saved `/tmp/dress160-census.json`).
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.000035 (sub-mm rounding class).
+- **Shard/intake**: IMPROVE-PLAN zero OPEN `nx-dress-` rows (row-header
+  scan re-checked — 57 mentions, historical round-1/2 prose only); no
+  round-4/5 section (grep 0); zero STATE-OPEN rows — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-159 — lawful HOLD (48th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source**: prompt again carried the
