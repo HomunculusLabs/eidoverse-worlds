@@ -1,6 +1,52 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-152 — lawful HOLD (41st post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness resolved at source**: this wakeup's prompt claimed
+  an in-flight dress-77 SE fungus-log placement pending. Verified false
+  against the durable plan: dress-78 (line ~5746) closed that item LONG ago
+  — `nx-dress-se-funguslogs-001` PLACED, LIVE, lib fbc626eb, round-3
+  eye-gate item 9. The newest entry was dress-151 (foxden cure, PLACED at
+  46949262, sweep-309-verified). No pending placement exists; the plan is
+  source of truth. Tag claimed fresh as dress-152 (ledger max 151).
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 09832683 (sweep-309), RE-RUN ALL
+  PASS real exit 0 at 1cfd6c2c after mid-tick interleave (sweep-310,
+  read-only CLEAN SWEEP — epoch law); interlane md5 86b2936f pin-exact.
+  Fresh census **359==359 vs sweep-309 committed baseline**
+  (254590B / sha16 b2aa16ec): +0/−0, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-152.py`, browser UA, capture saved
+  `/tmp/dress152-census.json`). Dress domain 54 = 29 fleet-owned
+  (NE 6 / NW 9 / SE 7 / SW 7) + 1 fauna-owned (se-fox-001) + 24
+  legacy-core (incl. dovecote; the legacy count rose 16→24 across the
+  fauna era — dovecote, shorse-era core, etc. — none dress-owned fleet).
+- **One field drift, classified not routed**: `nx-carousel` lib
+  32932241→dfad459e at identical tuple — polish-domain (carousel is
+  polish-only per interlane), polish-286 work-in-flight (ledger max
+  polish-285, no dfad459e entry yet; untracked
+  `carousel-horse-prototype/polish286-*.ts` + `rose.ts` corroborate;
+  sweep-310's epoch-B census still carried the old lib). Classified per
+  the census-diff law; NOT dress intake.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.000035 (sub-mm, rounding
+  class).
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN zero OPEN
+  `nx-dress-` rows, no round-4/5 section (grep 0); SURVEY-PLAN's last
+  `nx-dress` mention is line 3349 (survey-50 era) — zero dress routing in
+  survey-60..395. Zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-151 — survey-74 foxden CURE (post-close, PLACED) + interrupted-window recovery claimed fresh
 
 - **Intake executed this tick**: survey-74 (IMPROVE-PLAN row, read fresh)

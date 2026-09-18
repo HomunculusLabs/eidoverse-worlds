@@ -760,3 +760,49 @@ next wake once the gateway answers.
   spacing, coordinate with artwalk phase log), gold spire speckle read,
   stairs contrast; or re-survey plaza-core on fresh evidence.
 
+### polish-286 — carved-horse carousel four-coat set (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-285 ceiling build (live was
+  `store/329322416e14bc03.glb`). Second visual iteration on the carved-horse
+  fullset — the pair-separation candidate named at polish-285's close.
+- Defect (judge finding confirmed source-true this tick): the two bone
+  stations horse_2 (0,2) and horse_6 (0,-2) sit diametrically opposite and
+  share ONE body material — `prototype_cream_paint` (fullset.ts's paint loop
+  skips bonePaint stations: `identity.body !== 'bonePaint'`), so the pair
+  merges in projection at 18m. The campaign's criterion 5 names the festive
+  palette "cream/red/gold/wood" — red appeared on no coat.
+- Change (ONE intervention, paint-only, new production step
+  `carousel-horse-prototype/rose.ts` — exact ceiling.ts chassis + fullset.ts
+  `paint()` recipe): rose-red coat 0xa8433c on horse_6's body (village-
+  weathered red between canopy brown-red and true carousel rose; luminance
+  96 vs bone 204/gold 150/blue 79 — every diametric + adjacent pair now
+  separates in hue or ~0.2+ luminance, polish-3 readability law). horse_6_0
+  and horse_2_0 SHARE the prototype body mesh, so the mesh is cloned
+  (primitive wrappers only, accessors bit-shared) before the swap.
+  horse_2/stations/sockets/motion roots untouched; nodes 45 unchanged,
+  materials 21→22.
+- Candidate `dfad459e492d97273f0ba21c43a4be2a4a7935ebcb7f8597d3501d2accd0a377`,
+  A/B byte-identical. NaN scan clean. Controls: all four horse_2 frozen
+  closeups + top view byte-IDENTICAL (change provably confined to horse_6);
+  11 views containing horse_6 differ.
+- Judge verdict (disclosed: ZAI — no native vision tool in this cron
+  session, same class as polish-285, native re-judge owed): front 18m —
+  baseline "two cream horses… zero body-color contrast… fails at distance"
+  → candidate "passes color-distinction test, red unambiguous, no
+  duplication"; back — 4 distinct, red focal horse; night — unchanged class
+  from the accepted polish-285 ceiling verdict (threshold navy horse is
+  pre-existing, not this edit).
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED, 1 upload +
+  8 verbs, 7-key comp bag replayed verbatim; idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census exact pin
+  `store/dfad459e492d9727.glb` @ (-18, 0.0001495, 18) yaw 2.35619.
+  Served DRACO bytes keep `horse_6_rose_paint` material + webp texture +
+  horse_6_0 binding (served sha 5e44fb40…, swatch avg RGB 168/67/60 exact,
+  NaN scan clean).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-286-carousel-coats/`
+  (before/ = live ceiling build full 16-view rig + baseline GLB;
+  after/ = rose candidate).
+- Next: judge-remaining candidates — gold spire speckle read, stairs
+  contrast, night navy-horse threshold (occlusion-not-color class from the
+  judge note); or re-survey plaza-core on fresh evidence.
+
