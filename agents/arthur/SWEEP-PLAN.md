@@ -13763,3 +13763,58 @@ plan pointers this tick: inn/tower-house @306 walked fresh,
 row-cottage/observatory @305, forge/potter @304, hall/bunkhouse @303
 stalest standing pair at 3 sweeps; walk tools interior-walk-hall.ts,
 interior-walk-bunkhouse.ts).
+
+
+sweep-307: CLEAN SWEEP, fully-quiet single-epoch tick (76th consecutive
+quiet-or-classified). Tick-start HEAD 1ef0144a = fauna-15's proposal-tick
+close (zero mutations per its own entry); standing gate ALL PASS real
+exit 0 FIRST TRY (98 PASS lines + ALL PASS trailer, ledger law PASS
+2370921, register 0 OPEN items). Census epochs A/B byte-identical
+canonical (next-live-census.ts, 252322B sha16 1b9ac38ba3df0d9f,
+cmp-verified A==B): 358==358 (320 thing + 38 light) FULLY QUIET vs the
+committed sweep-306 baseline — 0 arrivals, 0 departures, 0 drift on all
+358 shared ids across every projection field, established by direct
+byte-identity (sha256 + cmp against the committed file, sweep-300
+precedent); no baseline rewrite owed (committed 1b9ac38b stands as next
+sweep's baseline unchanged). Overlap: SAT fresh-live at epoch A, 320 bbox
+non-light / 240 exempt-classified / 0 coverage holes, real exit 3 on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known
+Sev 2 routed artwalk b26 choreography @ sweep-43, 263rd sweep since
+routing, NOT new, no escalation due (law keys severity-1); census
+byte-stability means no epoch-B SAT re-run owed (nothing changed).
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0, legs run individually per the sweep-228 ceiling law — core 64/64
+ALL_PASS max dist 0.380 (next-walk-core-paths.ts, JSON parsed from
+first brace past the [physics] banner; support-seam stderr abstentions
+= the known normalized diagnostics set, unchanged), NW 5/5 ALL_PASS
+(dists 0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + distances from
+raw files. Tier-2 285th cycle per the committed sweep-306 pointer: hall
+8/8 ALL_PASS (dists 0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310,
+interior-walk-hall.ts) + bunkhouse 6/6 ALL_PASS
+(0.245/0.300/0.305/0.247/0.380/0.313, interior-walk-bunkhouse.ts), both
+real exit 0, both tools ls-verified present on disk pre-run.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (261st
+consecutive clean); sweep89-battery 28/28 PASS real exit 0 on fresh
+census-A bytes — comp-bearing pin 32 held exactly (live count 32
+census-verified both epochs); interlane md5 86b2936f stable, read fresh
+this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 c0f569d0 unchanged (283rd check; 0 open candidate
+rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns
+sweep no reset role — the audit-continues freeze banner governs and was
+read fresh via the loop/plan reload. Foreign dirt in tree (windmill
+overhaul scratch, cabin/carousel prototype dirs, client/server engine
+files, fleet shells, debug-bower scripts, moon-moth dir, fauna tools +
+FAUNA-PLAN.md, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths
+assets) is sibling work-in-flight, untouched per the ownership law.
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero
+comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-308): longhouse + garden-cottage (286th cycle — LRU chain
+re-derived from committed plan pointers this tick: hall/bunkhouse @307
+walked fresh, inn/tower-house @306, row-cottage/observatory @305,
+forge/potter @304, longhouse/garden-cottage @302 stalest standing pair
+at 5 sweeps; walk tools interior-walk-longhouse.ts,
+interior-walk-garden-cottage.ts — both ls-verified present on disk this
+tick).
