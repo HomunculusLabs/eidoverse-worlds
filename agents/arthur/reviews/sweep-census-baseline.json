@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 351,
+  "count": 352,
   "entities": [
     {
       "id": "beb4c791",
@@ -5151,6 +5151,88 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-owl-001",
+      "kind": "thing",
+      "pos": [
+        48.8,
+        -0.0295,
+        4.2
+      ],
+      "yaw": 2.89,
+      "scale": 1,
+      "lib": "store/a11e5432c329e697.glb",
+      "bbox": {
+        "min": [
+          -0.143,
+          0,
+          -0.33
+        ],
+        "max": [
+          0.256,
+          2.967,
+          0.33
+        ],
+        "size": [
+          0.399,
+          2.967,
+          0.66
+        ],
+        "center": [
+          0.057,
+          1.483,
+          0
+        ]
+      },
+      "compKeys": [
+        "motion:barnowl",
+        "motion:barnowl_head",
+        "motion:barnowl_tail"
+      ],
+      "comp": {
+        "motion:barnowl": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4,
+          "phase": 0,
+          "t0": 1789694261923
+        },
+        "motion:barnowl_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.35,
+          "period": 9,
+          "phase": 1.1,
+          "t0": 1789694261923
+        },
+        "motion:barnowl_tail": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.1,
+          "period": 3.1,
+          "phase": 2.2,
+          "t0": 1789694261923
+        }
+      }
     },
     {
       "id": "nx-dress-se-cairn-001",
