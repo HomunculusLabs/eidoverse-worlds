@@ -835,8 +835,56 @@ next wake once the gateway answers.
   build 15-view rig + stats; after/ = rejected v1 gold, disk-only, not
   committed; after-v2/ = accepted).
 - Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no such
-  working exists in the current Excalibur layout); recorded here + ledger +
+  working exists in the current Excalibur layout); recorded here + ledger + 
   rollout artifact tree instead. Not fabricated.
 - Next: canopy fabric night read (judge: canopy is the darkest large object,
   cream/red/gold absent after dark) — restrained fabric-emissive candidate;
   or re-survey plaza-core on fresh evidence.
+
+### polish-288 — carousel canopy fabric night read (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-287 night-coat build (live was
+  `store/0144587820eb5e67.glb`).
+- Defect (judge on exact live bytes, night 18m): the canopy cone read as a
+  black void / silhouette hole above the lit interior — the landmark's
+  largest exterior surface registered NO color after dark; festive
+  cream/red/gold palette absent from the night identity (criterion 6).
+- Baseline re-proof: on-disk dfad459e baseline + deterministic coats.ts
+  rebuild → 01445878… byte-exact ×2 (determinism re-proven this tick);
+  pinned input derived fresh.
+- Change (ONE intervention, new production step
+  `carousel-horse-prototype/canopy.ts`): same-hue emissiveFactor
+  [0.10, 0.05, 0.035] on the single `carousel_fabric` material (cone
+  slopes + fabric half of the scallop valance, both in merged cr3_4).
+  Hue ratio preserved from the fabric's own decoded texture swatch
+  (center (88,60,53), avg (100,68,55)); luminance ≈ 0.059 — ~6x below the
+  accepted ceiling glow, ~25x below lanterns. Gold trim/spire
+  (`carousel_gold_paint`) control untouched (shrine-stone law).
+- Adjacent judge findings, NOT this edit: front-center horse reads dark
+  grey/olive at night (pre-existing occlusion class, named polish-287);
+  ceiling-disc interior glow reads dim at 18m front (pre-existing
+  polish-285 element). Both queued as future candidates.
+- Candidate `e16a1bc002cb1650b07460a28d40c750d3513fecd436d9669613e8c38b843971`,
+  A/B byte-identical; night probe: canopy band warm px 4894→5875, all
+  2916 changed px inside the silhouette (x 324–650); day diff confined to
+  cone rows y 146–243 only; four horse-solo controls byte-IDENTICAL.
+  15/15 views clip-clean, nodes 45 unchanged.
+- Judge verdict (disclosed: ZAI fallback — no native vision tool in this
+  cron session, same class as polish-285/286/287, native re-judge owed):
+  canopy reads as dark warm-red/brown tent FORM via hue separation from
+  the cool sky (not brute brightness), restrained fabric response not
+  artificial glow, lanterns still decisively brightest, no new defects
+  (no z-fighting/banding/orbs). Clear improvement vs black umbrella.
+- Placed via sanctioned `deploy.ts --apply` (never legacy
+  next-place-carousel.ts): PLACED_VERIFIED, 1 upload + 8 verbs, 7-key comp
+  bag replayed verbatim; idempotent rerun ALREADY_TARGET_VERIFIED (0/0);
+  live census pin `store/e16a1bc002cb1650.glb` @ (-18, 0.0001495, 18)
+  yaw 2.35619 exact; served DRACO decode: all 7 emissive materials exact
+  (served sha 89659740…, fabric [0.10, 0.05, 0.035] preserved).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-288-carousel-canopy/`
+  (before/ = live 01445878 build full 15-view rig + baseline GLB;
+  after/ = canopy candidate + stats).
+- Next: night-tier candidates queue — center-horse night occlusion
+  (judge-named), ceiling-disc 18m dimness (judge-named), gold spire
+  speckle read, stairs contrast; or re-survey plaza-core on fresh
+  evidence.
