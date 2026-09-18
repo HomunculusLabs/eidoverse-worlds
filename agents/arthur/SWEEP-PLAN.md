@@ -14590,6 +14590,62 @@ use (D+0, E+0). Next tier-2 pair (sweep-318): hall + bunkhouse (296th cycle
 — LRU chain re-derived from committed plan pointers this tick:
 forge/potter @317 walked fresh, inn/tower-house @316, row-cottage/
 observatory @315, longhouse/garden-cottage @313, hall/bunkhouse @312
-stalest standing pair at 5 sweeps; walk tools interior-walk-hall.ts +
-interior-walk-bunkhouse.ts, ls-verified present on disk BEFORE this prose —
 1538B + 1704B, ages Aug 30).
+
+
+sweep-318: CLEAN SWEEP, steady-state tick (87th consecutive quiet-or-
+classified). Tick-start HEAD ef6d2ede (struct-229 Szilassi build-only,
+nothing placed); standing gate ALL PASS real exit 0 FIRST TRY (ledger law
+2370940 exact at gate's own printed total). Census 366==366 BYTE-IDENTICAL
+to the committed sweep-317 baseline (sha16 f680267771d41609, 267570B
+cmp-verified) across epochs A AND B (20s-paced re-read, cmp-verified
+identical): 0 arrivals, 0 departures, 0 drift on id/pos/yaw/lib/scale/
+kind/bbox/compKeys — single-read epoch, no sibling landed this tick. 328
+thing + 38 light. Overlap: SAT 328 bbox non-light / 243 exempt-classified
+/ 0 coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n|
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26 choreography
+@ sweep-43, 274th sweep since routing, NOT new, no escalation due (law
+keys severity-1). Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually per the sweep-228 ceiling
+law — core 64/64 ALL_PASS max dist 0.380 (next-walk-core-paths.ts;
+support-seam stderr abstentions = the known normalized diagnostics set,
+unchanged), NW 5/5 ALL_PASS (0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/
+0.31, ne-approach2-walk.ts), SW 5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists identical to sweep-317's recorded values.
+Tier-2 296th cycle per the committed sweep-317 pointer: hall 8/8 ALL_PASS
+maxArrival 0.360 (dists 0.285/0.36/0.28/0.265/0.34/0.26/0.335/0.31,
+interior-walk-hall.ts) + bunkhouse 6/6 ALL_PASS 0.380 (0.245/0.30/0.305/
+0.247/0.380/0.313, interior-walk-bunkhouse.ts), both real exit 0, both
+tools ls-verified present on disk BEFORE this prose (1704B Aug 30 08:24 +
+1538B Aug 30 11:22 — sweep-316 correction of record honored). Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (272nd consecutive
+clean); sweep89-battery 28/28 PASS first-try (no pin bumps due — world
+unchanged); carousel comp bag exact 7 + lib 08ce1189b2d4b42b census-
+verified; comp-bearing 37; lights 38. Interlane md5 86b2936f stable,
+read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged vs sweep-317's recorded close (294th
+check; zero OPEN SURVEY CANDIDATE rows grep-verified; 19 'OPEN' grep hits
+are historical prose, class-checked), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues
+freeze banner governs via loop/plan reload. Baseline NOT rewritten —
+epoch A == epoch B == committed baseline, byte-identical, no rewrite
+needed. Probe self-catches pre-verdict, disclosed: (a) first core-walk
+JSON parse keyed the array after the [physics] banner and failed on char
+1 (sweep-317 class) — re-derived from the raw object; (b) first
+approach-walk dist extraction keyed no schema variant (printed empty) —
+re-derived per-route from the raw result objects' dist fields, sweep-48
+schema-key class. Foreign dirt in tree (windmill overhaul scratch,
+cabin-overhaul dir, client/server engine files, fleet shells, debug-bower
+scripts, moon-moth dir, fauna tools + peacock scratch, HERO-ASSET-
+REFINEMENT-PLAN, core-paths assets, rupertfork sources, next-terrain
+scratch, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-319): longhouse + garden-cottage (297th cycle — LRU
+chain re-derived from committed plan pointers this tick: hall/bunkhouse
+@318 walked fresh, forge/potter @317, inn/tower-house @316, row-cottage/
+observatory @315, longhouse/garden-cottage @313 stalest standing pair at
+5 sweeps; walk tools interior-walk-longhouse.ts + interior-walk-garden-
+cottage.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
++ 1567B Aug 30).
