@@ -15317,3 +15317,142 @@ Files: struct217-scan-sphericon.ts + struct217-select-sphericon.ts +
 struct217-terrain-sphericon.ts + next-place-struct217.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-217,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-218 (2026-09-18): R11-34 NEWTON'S THIRTEEN SPHERES — BUILD+JUDGE
+## TICK (the kissing-number shrine; first candidate TREFOIL BARRED at selection —
+## the KNOT family stands via nx-struct-boy; ACCEPTED BANKED NOT PLACED, placement =
+## struct-219 committed carry)
+
+218%3=2 build+judge slot per the 178..217 alternation (sphericon placed struct-217,
+bank empty). Gate ALL PASS real exit 0 tick-start at 1ce84dbc (fauna-10). Shard
+drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 42nd+ tick, 0 OPEN nx-struct
+rows, count re-verified). Ledger max re-derived struct-217 -> tag struct-218
+(re-checked immediately before append). Census 354 fresh (99 nx-struct entities).
+
+FORM SELECTION (honest arc, all caught pre-build): first candidate THE TREFOIL
+KNOT — probe built and ALL PASS + RED OK (struct218-probe-trefoil.ts, kept as
+register evidence with the bar recorded in its header) — then the register check
+BARRED it: nx-struct-boy (Boy's surface, struct-159..161, E spoke r110) carries
+the trefoil as its boundary curve and reads "trefoil pinwheel" at 18m (struct-161
+eye-check pointer verbatim); struct-105's ledger already recorded "torus-knot all
+stand / trefoil near-gap caught by pre-build verification" when it stopped an
+earlier trefoil draft — the orphan mkv3-trefoil.ts in assets/ (struct-105-era
+draft, never placed, no census id, left untouched) is that window's ghost. The
+KNOT family is therefore closed at family granularity (figure-eight barred with
+it). Kin-check fresh for the replacement: newtonspheres/kissing-number 0/0/0
+("Newton" mentions are Gauss-Newton numerics; "thirteenth" are tick counters);
+Register: opens the CONFIGURATION branch — no standing form's identity is a
+configuration of many equal solids in an exact arrangement (harmonickiss =
+planar 3-circle mutual kiss, the 2D kin, disclosed; apollonian = packed gasket
+fractal, disclosed; geodesic = icosa lattice shell, not a configuration,
+disclosed). Era: Newton-Gregory 1694 dispute, settled Schütte-vdW 1953 / Leech
+1956 — the procession's first OPEN-PROBLEM monument (a dispute that outlived
+both men by 260 years).
+
+THEOREM VERIFICATION BEFORE CARVING (struct218-probe-newtonspheres.ts, ALL PASS
+real exit 0 + RED 4/4): L1 the twelve exact icosa directions (30 edges, every
+edge cos == 1/sqrt5 EXACT, held through the face-down seating rotation); L2 the
+kiss EXACT (12/12 centers at D = 2s from the heart, worst residual 4.4e-16); L3
+the proof gap (min pairwise 2.102924 == D*sqrt(2-2/sqrt5) exact — none touch;
+clearance 0.1029*s = Gregory's loophole); L4 the twenty windows (20 face-center
+directions; every sightline to the heart clears every sphere by >= 0.2141 ==
+2s*sin(37.37deg)-s exact; the WIDEST slit 0.21m is ~6.5x under the 1.4m door
+law — NO DOOR EXISTS by geometry, folly class, the heart is seen never entered);
+L5 tripod footing (exactly 3 lowest spheres — the golden face — bottoms
+coplanar 4.4e-16, seated on the dais top exact); L6 the planar prophet (6 discs
+at exact 60deg, all tangent EXACT hexagon side == ring radius; 7th impossible by
+pigeonhole: best-case 360/7 spacing chord 0.4512 < 0.52, 13.2% overlap); L7
+envelope+gates (10.0^2 x 5.52, footprint 100m^2 >= 16 AND 5.52 >= 2.2 -> REAL
+TRIMESH, dais walkable, rim circuit walk owed at placement); L8 the silhouette
+constant (seated-frame radial extent 2.9645 == s + 2*max|v_xz| exact; inlay
+ring 3.12..4.68 clears it by 0.16m).
+
+SELF-CAUGHT LAW/HARNESS BUGS THIS TICK (all RED-first): (a) trefoil probe: 7
+checker failures across 2 iterations — winding SIGN (atan2 argument order),
+crossing-station double-count (6 stations = 3 points), tricolor arcOf wrap
+branches, sampled-minimum tolerance vs closed-form stations, diagram endpoint
+tolerance vs sample quantization, RED-2 harness itself wrong (t->-t mirrors
+positions but keeps tangent orientation; coordinate reflection is the clean
+mirror); (b) THE DOOR REDESIGN: the first trefoil concept advertised 3 walkable
+windows — the probe proved every azimuth blocked at body height (best lane
+-0.149m over all 360) -> honest folly redesign with the no-door claim as a
+proven theorem, not an accident; (c) newtonspheres probe: L4 sightline dropped
+the D factor + closed-form circumradius typo'd numerator (3+2c vs 1+2c ->
+NaN silently failing a comparison), L8 silhouette constant computed in the
+pre-rotation frame (2.7013 vs seated 2.9645), CC const declared after first
+use; RED-2 harness frame bug (13th sphere placed from origin, not the lifted
+heart); (d) decode harness: blind flood-fill clustering CANNOT separate spheres
+0.103m apart when their own vertex spacing is 0.16m -> ANALYTIC ASSIGNMENT law
+(struct-160 replica class); seam-column duplicates bias raw centroids ~15mm ->
+dedupe first; glow-KEEP mesh name is <group>_0 after mergekit; RED control was
+VACUOUS (empty filter -> Infinity trivially "detected") -> rewritten non-vacuous
+on the real 6405-vert cloud (0.0300 residual caught); (e) render night face-on
+view renamed window-view (this form's night contract is the heart through a
+window, not a crown bead).
+
+CONCEPT: TWELVE CAN TOUCH ONE, NONE CAN TOUCH EACH OTHER. Twelve stone spheres
+at the exact icosahedral directions, every one exactly kissing a thirteenth at
+the heart; the heart GLOWS WARM (glow_ns_1 KEEP, sole night element) — visible
+through all twenty face windows, reachable through none; the planar prophet
+inlaid in iron at the rim (six around one, seventh impossible — the question
+Gregory asked about SPACE, answered 260 years later). STONE: the twelve + the
+dais (texMat ns_stone). IRON: the seven discs (texMat ns_iron). Folly class.
+
+BUILD (assets/mkv3-newtonspheres.ts, staged -f): root identity (struct-188
+law); texMat lanes ns_stone/ns_iron (struct-38 law); heart emissive 0x9a7030 @
+1.0 in-GLB (dusk lineage, struct-82 law). v1 deterministic x2 byte-identical
+sha256 f8016bfab73aff2c2b50180f8350503f3f1982d996c66ffb999ed8944b44397b
+(mtime-verified, 20 pre-merge meshes -> 2 buckets + 1 glow KEEP; 3 draw nodes).
+
+DECODE (struct218-decode-newtonspheres.ts, tracked) ALL PASS 9/9 real exit 0 +
+NON-VACUOUS RED control (shifted centers +3cm: worst membership residual 0.0300
+on the real 6405-vert cloud — DETECTED): D1 census 3 draw meshes + glow KEEP;
+D2 dais band exact; D3 the twelve by analytic assignment (6405 deduped verts,
+every vert ON its sphere, worst 0.00000; min pairwise + kiss exact); D4 heart
+centroid == analytic HEART ±5mm; D5 seven discs on-surface law; D6 exactly 1
+glow family; D7 min y 0; D8 envelope 10.000x5.519x10.000 drift 0; D9 texMats.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick, tool_search
+fresh; flap law disclosed; native re-judge owed, riding the owed board):
+- gameplay 18m: PASS 4/4 — identity (deliberate mathematical monument, not a
+  pile), silhouette (~10 distinct spheres with sky gaps — geometrically correct
+  occlusion; inner quartet fuses, disclosed inherent), grounding (flush +
+  contact shadow), overall accept. Margin: iron discs foreshorten to a clump at
+  grazing angles (top view binds the true read).
+- window ~11m: PASS 4/4 — the heart reads (amber wedge x500-545 y235-335,
+  bounded by sphere silhouettes, gradient = interior source); ~6 readable
+  windows; spheres distinct tangent (5-12px occlusion grooves); stone texture +
+  warm glow. Margin: the sliver is thin (~45px); no amber bounce on adjacent
+  rims (polish candidate, not a defect).
+- night-window: PASS 3/3 — EXACTLY ONE warm glow region (x505-532 y232-285),
+  dappled from one central source; sphere-bag silhouette with warm heart vs
+  navy; zero bloom spill / zero floating dots / discs matte dark clean.
+- top: PASS 4/4 — exactly 7 discs resolved, center + six at one-diameter
+  spacing = tangency confirmed geometrically; clear walkable rim band all
+  around (68-100px); deliberate two-element composition (rosette + inscription
+  in the southern band).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-219 committed
+carry: fresh census scan (8m NN law, district soft cap 6, Math Avenue
+eligibility; procession continues past sphericon r420), yaw law (disc inlay
+reads from the approach side), terrain preflight over the TRUE rotated
+footprint (10.0m disc — 5pt + center minimum, disc-vs-OBB exact geometry per
+struct-19 law: square-bbox SAT can never pass a 10m disc near neighbors),
+hash-gated plain spawn nx-struct-newtonspheres, comp {}. Folly class (probe L4
+seals the center) — rim circuit walk owed at placement. Native re-judge debt:
+newtonspheres v1 joins the owed board (26 owed with this one).
+
+Bill eye-check pointer (after placement): a round dais carrying a bag of twelve
+stone spheres with a warm glow burning in its heart — Newton's claim, Gregory's
+question, answered 260 years late: twelve can touch one, none can touch each
+other, and no thirteenth fits. At the rim, seven iron discs: six around one,
+the seventh impossible — in the plane the answer was always six. After dark:
+one warm heart seen through every window, entered through none.
+
+Files: struct218-probe-trefoil.ts (BARRED, register evidence) +
+struct218-probe-newtonspheres.ts + struct218-decode-newtonspheres.ts +
+struct218-render-newtonspheres.ts (all NEW, tracked),
+assets/mkv3-newtonspheres.ts (NEW, staged -f), reviews/struct218-newtonspheres/
+(10 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one
+append struct-218, D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
