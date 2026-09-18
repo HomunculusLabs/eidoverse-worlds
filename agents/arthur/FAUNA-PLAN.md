@@ -20,6 +20,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | robin | `nx-dress-robin-001` | (6.3,-0.0291,-86.35) yaw 3π/2 | **5ba5598f** (fauna-9) | NEW 2026-09-17 — European robin foraging on the grass OUTSIDE the reedpool N rim, facing the approach; 3 motion comps (bob + 2 pendulums) |
 | geese | `nx-dress-geese-001` | (7.9,-0.0408,-96.6) yaw 0.45 | **67a8406d** (fauna-11) | NEW 2026-09-17 — graylag goose pair (grazer + sentry) on the reedpool SW bank meadow, facing NNE across the water; 6 motion comps (2 bob + graze-tug + head-scan + 2 flicks) |
 | sheep | `nx-dress-sheep-001` | (-27.5,-0.0517,-31.5) yaw 0.65 | **31a512ed** (fauna-13) | NEW 2026-09-18 — wool-cream ewe pair (grazer + tall watch) in a shepherd's fold (timber hurdles + mottled trodden pad) on the SW meadow W of the dyehouse, opening NE toward the dye yard; 6 motion comps (2 bob + graze-tug + head-scan + 2 flicks) |
+| pig | `nx-dress-pig-001` | (15.0,-0.021261,40.2) yaw 0.66 | **a4918702** (fauna-14) | NEW 2026-09-18 — British-saddleback sow pair (rooter with pale disk snout in the spoil + belly-flat wallower) in a timber sty corner with fresh-rooted earth patch + oak-litter acorn scatter, meadow S of the kiln yard, heads NE toward the mosaic-row visitor line; 6 motion comps (2 bob + root-dig + ear-flick + 2 tail-curl flicks) |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -75,28 +76,23 @@ domain is commons-next `nx-dress-*` fauna only.
    (−25.2,−30.67) + D4 bone pillar i15 exactly, so the fold keeps ≥2.46m
    from every solid). Village logic unchanged: the dyehouse's raw material
    is wool and its source animal now grazes in sight of the dye yard.
-10. **[CANDIDATE fauna-14] pig — new species (homestead tier-2).** A
-    swineherd's corner for the pannage economy: a British-saddleback sow
-    pair (ONE entity — a rooter with snout in fresh-turned earth + a
-    dozing wallower) on the open meadow S/SE of the charcoal kiln yard
-    (candidate zone x 8..14, z 40..47, E of the potter approach; exact
-    tuple owed to the build tick's terrain preflight + live SAT against
-    the kiln, SE spoke lamp posts, and the E fieldpond margin). Village
-    logic: charcoal + the harvest cart's acorn crates already imply
-    pannage (pigs fattened on autumn mast — the charcoal-burner's
-    historical partner); a sty in sight of the kiln closes that loop the
-    way the fold closes the dyehouse's. Build sketch: heavy low hulls
-    (species-true: bulk carried LOW vs the sheep's high wool), saddle
-    black-and-white bands (the saddleback read), snouts DISK-flat and
-    proud, dropped ears over the eyes, curly tails, trotter legs;
-    furniture = timber sty frame + rail + fresh-rooted earth patch
-    (darker overturned mottle, the fold-pad family) + an oak-litter
-    scatter. Motion plan: 6 comps — breathing bobs + root-dig head
-    pendulum (X-axis) + wallower ear-flick + tail-curl flicks, phases
-    staggered, epoch t0. Alternatives weighed: cattle (oversized for the
-    furniture tier), livery dog (owl + cat already seat the livery),
-    horse (rideable expectations — a bigger commission, parked). Build
-    owed next fauna tick.
+10. **[CLOSED fauna-14] pig — new species (homestead tier-2).** Built and
+    seated: a British-saddleback sow pair, ONE entity `nx-dress-pig-001`
+    at the meadow S of the kiln yard (15.0,-0.021261,40.2) yaw 0.66 — v8
+    a4918702, 8 build versions, judge arc closed (18m PASS + closeface
+    SHIP). Full record below. Village logic: the charcoal-burner's
+    pannage partner now roots in sight of the kiln and the acorn cart.
+    Siting note (plan-prose corrected by census): the candidate zone's
+    x 8..14 W half sits ON mosaic 0048's ground film — the seat moved E
+    to clear the film's NE edge by 3.49m (pigs root beside art, never on
+    it, sheep law); no E fieldpond exists in commons-next (it became the
+    W reedpool).
+11. **[CANDIDATE fauna-15] ?? — next species proposal owed at the next
+    queue-empty wakeup** (homestead tier-3 candidates weighed when
+    proposed: beehive skep-cluster upgrade is dressing-lane-owned; a
+    dovecote, Guinea fowl, or peacock at the orchard edge are the
+    remaining homestead language; horse remains parked — rideable
+    expectations make it a bigger commission needing Bill's sign-off).
 
 ## Per-species rebuild records
 
@@ -174,6 +170,13 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc: 8 build versions, 8 judged rounds (ZAI fallback, native debt NATIVE-10 above; one gateway timeout retried once, paced). 18m PASS first round (identity: wool bulk + dark legs + pen context; pose contrast; hurdles read) then held through v8. Profile arc (the honest failing view): v2 FAIL ×3 (graze neck at 62° hugged the chest → "tilted egg with grey nub"; E-wing rail INSIDE sheep_a hull — decoded, moved; pad "clean decal") → v4 grazer FIXED (neck out at 39°, head at grass) but watch head "low-contrast bump" (crown swallow) + W-rail/sheep_b depth fusion + pad edge-on → v5 watch head reads (poll-only crown) + gap-closer → v6 rail line cleared (W arc moved 0.26 out) + pad mottle still flat → v7 pad mottle FIXED (geometric blotches+pebbles) but watch head read flip-flopped vs the rail line (borderline tangency) → **v8 double cure (watch stretch 0.24→0.30 + rails/stakes dropped 0.44/0.56→0.40/0.50): profile 5/5 SHIP** ("distinct dark knob above wool AND rail line, ears discernible") + **18m 5/5 SHIP** + **closeface 5/5 SHIP** (anatomy, connected graze neck, tufts, rustic rails, zero defects). Judge-noted non-blocking: watch ears merge into the head knob beyond ~6-7m; grazer muzzle sits over the pad edge, tufts could be denser (cosmetic).
 - Rig/decode laws learned: (a) **a pitched head subtree rotates about the PIVOT — compose the pitch into the terminus arithmetic BEFORE authoring** (v3: 0.42 rad pulled the muzzle 0.155 lower than planned → ground-dig caught by the rig's Box3 (−0.0498) while accessor decode (min/max absent on tube primitives, silently defaulting to 0) said −0.000 — instruments disagreed; the lowProbe per-part instrument named sheep_a_head_1 and the arithmetic confirmed. Box3.setFromObject OUTRANKS accessor min/max when they disagree); (b) **nested keep-group anchors carry no mesh of their own** — a decoder that records anchors only at mesh nodes "loses" sheep_a_head exactly when foldKeepGroup merges its children into the group; record anchors from the NODE tree; (c) **hurdle-class furniture must be emitted as DIRECT meshes with baked segment transforms** — non-KEEP top-level groups survive mergekit with unmerged children (node-budget law: 28+ draw nodes); (d) **a flat-material disc cannot read as earth at any mottle texture frequency from 5m** — four versions proved it; the cure is GEOMETRIC mottle (blotch discs in stepped tones + pebbles), not texture; (e) **the profile camera fuses depth-adjacent lines** — a hurdle arc tangent to a body silhouette at one z reads "intersecting" from exact-side view even when 2D-clean; the cures that hold are clearance (move the arc out) + vertical separation (raise head / drop rail), never yaw cosmetics.
 
+### pig — fauna-14 (2026-09-18) CLOSED
+- **v8 sha16 a4918702** (full: a49187024127dcd8a57d6d7ac8ee11ddf3127e0d27b753d56f564ed64a0fb471), NEW entity `nx-dress-pig-001` PLACED_VERIFIED at world (15.0,−0.021261,40.2) yaw 0.66 scale 1 — the meadow S of the kiln yard, heads NE (facing = (sin,cos) yaw law) toward the mosaic-row visitor line; sty frame shelters SSW. Terrain preflight at the FINAL tuple: 9pt spread 7.2mm. SAT preflight 13 neighbors: worst gap 3.164m (nx-dress-harvestcart — the pannage story's acorn cart). Seat law: mosaic 0048's ground film (0.05m, ground-layer exemption both directions) NE edge (12.9,43.2) keeps 3.49m normal clearance — pigs root beside art, never on it (sheep law); the plan's original candidate zone x 8..14 straddled the film. Census 357→358 exactly, 7 verbs (upload+spawn+6 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m NE visitor line, arrival 0.25–0.31m; foreign support-seam stderr = the usual temple/labyrinth/stones class, not ours), live bbox 3.203×0.917×3.19 == decode envelope.
+- Build: a British-saddleback sow pair (ONE entity) — warm-black 0x171310 hulls (LOW bulk: standing hull center 0.52 post-bake, sprawled 0.27), WHITE saddle 0xefe7d8 bands cresting both spines + a chest wrap down the rooter's shoulder front (v4: the judge saw the band on one body only), standing forelegs white below (the saddle carries), PALE pink-tan DISK snouts 0xc9a084 proud of the skull (v6: a near-black disk is invisible against the dark head — the disk is the species marker), big pendant ears over the eyes (wallower's pair on its own `pig_b_ear` keep-group, bcat_ears pattern), torus-curl tails standing vertical in the profile plane, dark side-set eyes. Roles: ROOTER (joint dropped to 0.39 + pitch 1.05 → head silhouette breaks below the hull line, v4; snout pressed into a LOW spoil spread) + WALLOWER (belly-flat at hull bottom 0.01, dozing). ×1.3 TRUE-SIZE group-local bake incl. joints (v7: v6's 0.63m sows put every marker at 1–2px at 18m — struct-45 fraction-of-frame law; sows now stand 0.82, sprawl 0.47). Furniture POST-bake at final coords (fauna-11 law b): timber sty corner (W + S + E-wing segments, hurdle seg chassis) + fresh-rooted MID-BROWN earth patch (v4: near-black read as the pig's shadow) with worn core, clods, low spoil spread, rim survivors + oak-litter acorn scatter (9) + leaves (6). Anchors pig_a/_head/_tail + pig_b/_ear/_tail (6 KEEP groups; `pig_` added to mergekit KEEP this tick).
+- Motion: 6 comps live — breathing bobs (.006/4.1s rooter, .004/5.0s wallower — tenth+eleventh village exercise of part bob), rooter root-dig X-pendulum (.13/3.0s), wallower ear-flick swivel (axis [2,0,1] .18/2.2s), 2 tail-curl flicks (.20/1.7s axis [2,0,1], .15/2.6s axis [0,1,0]); phases staggered, epoch t0. Motion proven engine-true on final bytes at both framings (181px diff @ 18m band 389-532; 2010px near band 155-705); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc: 8 build versions, 5 judged rounds (ZAI fallback, native debt NATIVE-11 below). 18m arc: v3 FAIL ×2 (dark lumps; saddle on one body only; head-in-hull-band pose unreadable; near-black patch read as shadow) → v4 MARGINAL FAIL (both saddles read; fence fragments + detached smear) → v6 FAIL (rooting gesture illegible — judge's critique cross-checked against source arithmetic exposed the REAL defects: the v1 spoil heap crest 0.20 had BURIED the snout disk since v1, struct-52 occlusion-by-construction; and the sows were 30% undersized, struct-45) → v7/v8 TRUE-SIZE + unburied disk + corner return → **18m PASS** ("two dark low animals with white bands by a fence… gestalt delivers pigs in a sty corner reliably") + **closeface SHIP** (anatomy, saddle placement, pendant ears, disk snouts, belly-flat sprawl all YES; disclosed cosmetics: lying sow's band sits just behind mid-barrel — pose compression, judge called it acceptable; earth ellipse edge crisper than real dirt). Judge identity: ZAI fallback (glm vision) — cron lane has no native vision.
+- Rig/decode laws learned: (a) **a ground-tie prop can occlude the very marker it serves** — the spoil heap was sized to "meet the snout" but buried it; containment arithmetic (prop crest vs marker rim) must be computed BEFORE the build ships, struct-52 class at ground level; (b) **true-size is an identity requirement, not a nicety** — three 18m FAIL rounds traced mostly to a 30% scale undersize putting markers under 2px (struct-45); the ×bake + post-bake furniture chassis (fauna-8/11) fixes it in one pass; (c) a tilted cylinder's y-extent is (h/2)·cosθ + r·sinθ, not h/2 — decode caught the sprawled leg stubs digging −7.6mm; (d) the rig's `new THREE.GLTFLoader()` must use the bare import (chassis verbatim — a THREE.-qualified call throws and the page stalls to a blank-canvas timeout that looks like a rig bug); (e) a species-identity color must be chosen against its BACKGROUND member (dark disk on dark head = invisible; pale disk reads) — kin of the robin's bib law, applied to anatomy.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
@@ -188,6 +191,7 @@ domain is commons-next `nx-dress-*` fauna only.
 | NATIVE-8 | fauna-9 (2026-09-17) | robin v5 5ba5598f bank_near + lone_side + lone_face frames (`reviews/fauna9-robin/new-{bank_near,lone_side,lone_face}.png`) — fallback PASS arc (encounter 5/5 + profile 5/5; 18m framing-limited disclosed, encounter-space species) stands until natively confirmed |
 | NATIVE-9 | fauna-11 (2026-09-18) | geese v7 67a8406d closeface + gameplay frames (`reviews/fauna11-geese/new-{closeface,gameplay}.png`) — fallback PASS arc (closeface PASS welded/continuous; 18m PASS marginal, white-value residual disclosed) stands until natively confirmed |
 | NATIVE-10 | fauna-13 (2026-09-18) | sheep v8 31a512ed right + gameplay + closeface frames (`reviews/fauna13-sheep/new-{right,gameplay,closeface}.png`) — fallback SHIP arc (profile 5/5 + 18m 5/5 + closeface 5/5; watch-ear legibility beyond ~6-7m disclosed by the judge as non-blocking) stands until natively confirmed |
+| NATIVE-11 | fauna-14 (2026-09-18) | pig v8 a4918702 gameplay + closeface frames (`reviews/fauna14-pig/new-{gameplay,closeface}.png`) — fallback arc (18m PASS on both-saddles + pen corner + snout-earth tie; closeface SHIP with two disclosed cosmetic notes) stands until natively confirmed |
 
 ## Rig law (learned fauna-1, hard way)
 
