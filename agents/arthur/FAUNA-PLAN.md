@@ -27,6 +27,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | donkey | `nx-dress-donkey-001` | (−22.5,−0.05207,−34) yaw −1.11 | **783055bc** (fauna-23) | NEW 2026-09-18 — standard donkey pair (watch + grazer at straw) under a lean-to field shelter on the SW meadow, 1.433m from the sheep fold — the flocks' guardian stands with its flock; 7 motion comps |
 | turkey | `nx-dress-turkey-001` | (45.25,−0.03869,−6.5) yaw −1.15 | **5a3c1cf5** (fauna-24) | NEW 2026-09-18 — bronze turkey pair (tom in full strut display + foraging hen) in the poultry yard E of the hutch with roost beam + scratch pad, facing WNW toward the visitor lane; 7 motion comps — the barnyard's loudest bird joins the hens |
 | peacock | `nx-dress-peacock-001` | (−47.5,0.04167,60.0) yaw 2.58 | **c9425f51** (fauna-25) | NEW 2026-09-18 — the show bird: single cock in full display (tilted-dome train of 21 gold-ringed teal eyespot plumes, NOT the turkey's vertical fan) on a stone plinth at the orchard-edge stroll seat beside the dovecote; 6 motion comps |
+| rooster | `nx-dress-rooster-001` | (31.25,−0.02772,−9) yaw −1.3 | **af35212e** (fauna-26) | NEW 2026-09-18 — the flock's cock: single bird, tall serrated red comb + gold hackle mantle + 2-tier sickle fountain cresting just below the comb, at the coop-yard sentinel seat between the lane and his hens; 5 motion comps — the hen flock's missing bird stands |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -293,22 +294,81 @@ domain is commons-next `nx-dress-*` fauna only.
     judge right; peafowl crests fan LATERALLY) + camera framing too far
     (fauna-19 law d) → v8 lateral crest fan + re-framed camera = SHIP
     (7 stems + teal dots confirmed) + 18m re-SHIP on final bytes.
-17. **[QUEUED fauna-26, 2026-09-18] rooster — homestead proposal (queue
-    empty after the peacock; same-tick proposal, fauna-24 cadence).**
-    Village logic: the hen flock (fauna-2) is THREE hens with no cock —
-    the one bird every village flock has that ours still lacks. Species
-    sketch (next tick's build): ONE entity `nx-dress-rooster-001`,
-    TRUE-SIZE — a single cock standing proud in the coop yard: taller
-    upright stance than the hens (~0.65m), THE tall serrated COMB +
-    wattle (the identity read, robin-bib-class red), arching metallic
-    SICKLE tail feathers (the silhouette marker — dark green-bronze
-    sickles cresting above the back line, horsemane-law: silhouette
-    break beats value break), gold-hackled neck + red-shouldered body,
-    longer gray legs with spurs. Furniture: a low dunging-board roost or
-    nothing (the yard exists). Motion ~5 comps (bob + head-scan +
-    comb/wattle none (merged) — head nod + tail sway + wing shuffle).
-    Seat at build tick by sweep + terrain + walk: the coop yard near the
-    flock (34,−8) facing the yard's visitor lane, census-backed.
+17. **[CLOSED fauna-26, 2026-09-18] rooster — proposed fauna-24, BUILT + SEATED
+    fauna-26 (2026-09-18).** ONE entity `nx-dress-rooster-001`: the flock's
+    cock — upright carriage (hull chest-up, deep breast, saddle cape), LONG
+    gray legs with spurs, ONE TubeGeometry gold neck (fauna-11 law c) with a
+    flaring HACKLE MANTLE cone (v9: the bare tube read "hairline stem" from
+    dead-front 18m), head held HIGH (0.86 joint, comb crest 1.02), THE tall
+    5-tooth serrated red COMB (nested in the head group — rides the Y-scan
+    AND nods, peacock crest law), horn-amber beak CONTRASTING the gold head
+    (v10: the v5 amber 0xd9a441 was 7/14/7 per-channel from the hackle gold
+    0xd9963a — monochrome-blended, no silhouette break), enlarged red
+    wattles under the beak, near-black eyes, and THE SICKLE FOUNTAIN: 7 dark
+    green-bronze (peacock-TRAIN 0x3d6b4f, metallic 0.45/0.45) 6-segment main
+    chains in smooth angle ladders ending PAST vertical (tips droop) fanned
+    ±0.51 rad by vertical-plane phi rotation + 6 LIGHTER bronze-green lesser
+    chains at HALF-STEP phis between the mains (v12: v11's co-planar tier
+    was invisible by construction — layering requires gap-occluding offset
+    phis). Furniture: grain specks only (the dunging-board roost DELETED
+    after three judge rounds read it as "bench"/"detached ground line"
+    competition; plan §17's own sketch: "or NOTHING — the yard exists").
+    **v12 sha16 af35212ecbb7ba5f** (full
+    af35212ecbb7ba5f53a645bca72ff6f383eebf91a4a07dc881db9d2e35f99452 —
+    judge-SHIP bytes: 18m oblique PASS BOTH sides + tailprobe PASS + 
+    roostface PASS on final bytes; decode GREEN + RED control; 2628 tris /
+    16 calls; deterministic ×2). 5 motion comps live: breathing bob
+    (.006/4.4s) + head Y-scan (.30/7.5s) + comb nod (.12/3.2s, nested —
+    rides the scan) + tail sway Y (.08/5.5s) + wing slow ruffle Z
+    (.05/1.6s); phases staggered, epoch t0. Engine-true motion pairs:
+    121px@18m band 446-490, 1489px near band 346-517. **Seat: (31.25,
+    −0.02772, −9) yaw −1.3** — fauna26-seat-sweep best of 93 qualifying
+    (worst solid gap 1.440m vs nx-dress-hens — the flock's own sentinel
+    adjacency; nearer seats pin sub-1.4 against the hens' wide 3-bird OBB,
+    so the cock stands sentinel 3.6m W of the flock, between the lane and
+    his hens). Terrain 9pt spread 2.97mm, PY = live heightAt −0.02772.
+    Census 367→368 exactly, 6 verbs (upload+spawn+5 comps), idempotent
+    rerun 0 verbs alreadySeated, walk ALL_PASS 3/3 (lane W→E, arrivals
+    0.00/0.33/0.31m), live bbox 0.436×1.02×1.165 == decode envelope.
+    Village logic closed: the hen flock's ONE missing bird — every
+    village flock has its cock, and ours now stands where the reader
+    meets the yard. DISCLOSED residuals: dead-front 18m reads the comb
+    edge-on (sub-pixel — an 11mm slab at 18m; the seated yaw −1.3
+    presents the fountain obliquely to the lane reader, the judged
+    vantage class); beak contrast moderate (judge's own note, passing);
+    longest-sickle tip droop could extend further (non-blocking).
+    Judge identity: ZAI fallback (glm vision) — cron lane has no native
+    vision; native re-judge debt NATIVE-18 below. Build arc: v1 draft →
+    v2 perpendicular-chain arithmetic bug caught pre-render → v3 span
+    still ±0.10 (phi entered as tiny roll — decode caught it) → v4
+    quaternion-composed fountain, 18m PASS → v5 comb/beak/wattles
+    encounter fixes → v6 peacock-green + taper + curl, tailprobe PASS →
+    v7 head+arc raised, board lowered → v8 board DELETED → v9 arc
+    compacted below comb + hackle mantle → v10 beak contrast + wattles →
+    v11 smooth ladder + 2-tier (height/sweep arithmetic recomposed ×2)
+    → v12 half-step lesser tier + straw deleted = tailprobe PASS. 12
+    build versions, 12 judged rounds.
+18. **[QUEUED fauna-27, 2026-09-18] peacock re-seat — sweep-319 defect
+    R-125 (Sev 2, fauna-owned).** Source-true decode: the peacock's
+    plinth intersects the lavender bed's plant bodies at 0.004-0.001m
+    (43,799 lavender verts inside the peacock's +8m window). Cure (next
+    tick): re-seat 1.5-2m NE along the bed edge toward the dovecote
+    (sweep + terrain + remove+respawn same law), or shrink the local
+    lavender cluster under the plinth. Evidence in the SWEEP DEFECT
+    NOTE above; the peacock's motion comps must be re-applied after any
+    re-place (comp-wipe law).
+19. **[QUEUED fauna-28 proposal, 2026-09-18] peahen — homestead species
+    (queue-empty proposal, fauna-24 cadence).** Village logic: the
+    peacock (fauna-25) displays his train at the orchard-edge stroll
+    seat — to nobody. A peahen completes the show-bird story: drab
+    camouflage-brown hen (the species-true counter-read — her plainness
+    IS the point beside his display), peacock head shape + crest but
+    brown, no train, foraging posture at the stroll-line grass. Seat at
+    build tick by sweep + terrain + walk: the orchard edge near the
+    peacock (±2m of his plinth, facing him or the approach), census-
+    backed. Species sketch: body earth-brown 0x7d6b52, cream throat,
+    brown crest stems, short tail, ~0.7m, 3-4 motion comps (bob +
+    head-scan + peck).
 
 ## Per-species rebuild records
 
@@ -431,6 +491,14 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc (ZAI fallback, native debt NATIVE-16 below): 10 build versions, 8 judged rounds. 18m v1 SHIP first round (fan carries) → fanprobe v1 FAIL (bands invisible — pixel probe confirmed ZERO tan px in the fan region) → **A/B isolation (two boxes, identical pipeline)**: material pipeline proven CORRECT, value 0xc9b896→0xd9c9a6 too dark (lit (120,100,70) = meadow luminance) → v3 0xe8dcc2 lit ≈(155,145,120) reads → fanprobe rev2 FAIL (shaded-side rays bandless + floating feather specks) → v4 cresting caps + grounded specks → fanprobe rev3 FAIL-narrow (wing primaries invisible, fragment cluster reads debris) → v6 stick-primaries DELETED for broad pale under-curtains + outer rays +0.03 → fanprobe rev4 **SHIP** (arc/bands/root/wings/defects all pass) → 18m re-SHIP on v6 bytes → tomface FAIL ×3 (blank face → eyes INSIDE skull z-span, struct-52; one red column → snood/wattle merged; wattle occluded by breastline — arithmetic proved 0.617 vs 0.623) → v7 head ×1.2 + eyes proud → v8 separation → v9 snood shortened + shards deleted → v10 head +60mm → tomface rev5 **SHIP** + henface **SHIP** (hen wattle sub-pixel disclosed; the tom's face carries the encounter red) + 18m final **SHIP** on v10 bytes.
 - Rig/decode laws learned: (a) **a lit-value probe must be calibrated to LIT pixels, not albedo** — COLOR_0 values render at ~0.75–0.85× under rig lighting; a probe window on albedo finds zero pixels and looks like a dead material (cost: one whole iteration); the two-box A/B through the exact build+export pipeline is the decisive instrument and doubles as the calibration source; (b) **a species-marker band must CREST past its plume** — an in-plane band on a thin box is visible only from its lit side; a proud cap reads from both (shorse blaze law, generalized to feathers); (c) **thin stick feathers below a curtain read as DEBRIS, not plumage** — broad connected two-tone masses carry (goose saddle law, third application); (d) **red-face anatomy stacks into one column when the snood tip reaches the beak bottom** — separate the two red shapes by height (snood ends mid-beak, wattle hangs from the chin BELOW the beak line), and clear the whole head subtree above the breast-crest line by arithmetic before judging; (e) **the 18m banding rhythm reads as a scalloped fringe, not distinct bars** — acceptable (silhouette carries), disclosed per the judge's own note; (f) judge-flagged "stray shards" for three rounds were the molted-feather props — decoration that reads as defect is defect; deleted.
 
+### rooster — fauna-26 (2026-09-18) CLOSED
+- **v12 sha16 af35212ecbb7ba5f** (full: af35212ecbb7ba5f53a645bca72ff6f383eebf91a4a07dc881db9d2e35f99452), NEW entity `nx-dress-rooster-001` PLACED_VERIFIED at world (31.25, −0.02772, −9) yaw −1.3 scale 1 — the coop-yard sentinel seat between the lane and his hens (3.6m W of the flock; worst solid gap 1.440m vs nx-dress-hens, the flock's own sentinel adjacency — nearer seats pin sub-1.4 against the hens' wide 3-bird OBB). Terrain preflight at the FINAL tuple: 9pt spread 2.97mm, PY −0.02772. Census 367→368 exactly, 6 verbs (upload+spawn+5 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (lane W→E vantage, arrivals 0.00/0.33/0.31m), live bbox 0.436×1.02×1.165 == decode envelope.
+- Build: the flock's cock — TRUE-SIZE authored directly (fauna-13/19/21/23/24 law). Body: chest-up hull 0x8a3b28 + deep maroon breast 0x6b2417 + saddle cape; gold TubeGeometry neck (fauna-11 law c) with flaring HACKLE MANTLE cone (v9); head joint 0.86 with 5-tooth serrated red comb (COMB 0xd2402e, tallest tooth 0.098 → crest 1.02 — THE crown marker, nested in the head group so it rides the scan and nods), horn-amber beak 0x8a6224 (v10: contrasting, not blending), grown wattles, near-black eyes, red cheek plates; THE SICKLE FOUNTAIN at the rump: 7 dark green-bronze mains (0x3d6b4f metallic .45/.45 — peacock-TRAIN proven value) as 6-segment chains with smooth angle ladders [0.36..1.42] ending past vertical (tip droop), fanned ±0.51 rad by phi-plane rotation (v4 quaternion composition — v2's perpendicular-chain bug and v3's roll-instead-of-plane bug both caught by decode arithmetic before judging), strong ×0.68 width taper, + 6 lighter bronze-green lessers 0x5a7d52 at HALF-STEP phis (v12: gap-occluding layering). Legs: long gray with backward spurs. Furniture: grain specks only (roost board deleted after 3 judge "bench/ground-line" reads; straw wisps deleted after 3 "debris" reads — turkey law f).
+- Motion: 5 comps live — breathing bob (.006/4.4s) + head Y-scan (.30/7.5s) + comb nod (.12/3.2s nested) + tail sway Y (.08/5.5s) + wing ruffle Z (.05/1.6s); phases staggered, epoch t0. Engine-true on final bytes (121px@18m band 446-490; 1489px near band 346-517); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc (ZAI fallback, native debt NATIVE-18): 12 build versions, 12 judged rounds. 18m v2 FAIL ("tiny spike" — arc ±0.10) → v4 fountain PASS → v6 tailprobe FAIL ×2 (near-black planks, floating beam, stray blade) → v6 fixes = tailprobe PASS + 18m re-FAIL face-on (head invisible under arc) → v7 raise + board-lower → 18m FAIL ("bench beside onion") → v8 board deleted + 18m dead-front FAIL (arc crowns head column → "sprout") → v9 arc compacted below comb + mantle (18m dead-front still FAIL — comb sub-pixel edge-on, DISCLOSED vantage physics; oblique PASS both sides on final bytes) → v10 roostface FAIL (beak monochrome-blended, wattles sub-visible) → fixes = roostface PASS → v11 tailprobe FAIL ("elbow", square tips, no layer) → v12 smooth ladder + half-step light tier = tailprobe PASS. Final gates on v12 bytes: 18m oblique R "unmistakably a rooster" PASS / 18m oblique L "marginal pass, tail is the hero" PASS / tailprobe PASS ("you'd have to look deliberately hard to see it as anything other than a rooster tail") / roostface PASS (beak contrast moderate — judge's own passing note).
+- Rig/decode laws learned: (a) **a radial part family needs the fan in the PLANE parameter, not a roll** — v2/v3's `rotation.y = yaw*0.15` left all chains co-planar (span ±0.10); composing qY(phi)·qX(−a) with the advance direction (−sin a·sin phi, cos a, −sin a·cos phi) fans the chains for real (span ±0.22) — and the decode span arithmetic is what caught both bugs pre-judge; (b) **a dead-front marker that is edge-on thin (a comb) is SUB-PIXEL at 18m by physics** — 11mm at 18m ≈ 0.6px; seat the species so its broad face meets the reader (yaw chosen for oblique presentation), and disclose the dead-front limit rather than chasing pixels; (c) **the tallest element owns the dead-front silhouette** — if the tail crests over the head, the bird reads "sprout"; compacting the arc below the comb crest flipped the dead-front column from tail-green to comb-red; (d) **a two-tone layered read requires the layers at OFFSET angles** — a lighter tier at the same phis as the dark mains is co-planar and invisible; half-step phis seat the light feathers in the gaps; (e) judge "debris" flags on ground props are persistent across rounds — delete on the second flag (turkey law f re-confirmed; the straw wisps and the roost board both went); (f) **rise/reach/span are coupled through the segment ladder** — recompute ALL three after any length/angle change (v11's height cure collapsed the sweep to −0.52 and the span to ±0.09; the 6-segment [0.36..1.42] ladder with lengths [0.135..0.07] hits crest 0.974 / aft −0.752 / span ±0.22 together).
+
+
 ### peacock — fauna-25 (2026-09-18) CLOSED
 - **v8 sha16 c9425f51b43a71a1** (full c9425f51b43a71a1535557530330f7166af10f0d9d4ec20882bf86b6ed1e7098), NEW entity `nx-dress-peacock-001` PLACED_VERIFIED at world (−47.5, 0.04167, 60.0) yaw 2.58 scale 1 — the orchard-edge stroll seat beside the dovecote (plan's first-choice candidate zone; show birds belong where visitors stroll). Seat = fauna25-seat-sweep best of 1498 qualifying (worst solid gap 1.727m vs nx-dress-dovecote-001 — the show-bird kinship adjacency); display faces the stile visitor approach (facing = (sin,cos) yaw law). Terrain preflight at the FINAL tuple: 9pt spread 2.3mm, PY = live heightAt 0.04167. Census 366→367 exactly, 7 verbs (upload+spawn+6 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m stile-approach stroll line, arrivals 0.00/0.27/0.31m), live bbox 1.818×1.688×1.24 == decode envelope.
 - Build: a single cock in full display (ONE entity, TRUE-SIZE authored directly — fauna-13/19/21/23/24 law): THE TRAIN a TILTED DOME of 21 dark-green plumes (TRAIN 0x3d6b4f), each shaft a true-length box (0.95–1.17m, per-plume variation + roll) tipped with a NESTED SPHERE-LENS eyespot (dark fringe lens + GOLD ring lens + teal EYE disk, stacked outward along the shaft — spheres have no back face; the flat-plate version read dark from the shade side), sweeping up and BEHIND (crest 1.683m, span 1.807m, z −0.740 — deliberately NOT the turkey's vertical banded fan; the tilted dome is the differentiating silhouette). GOLD_E/EYE_E carry a faint same-hue emissive glint (0.75 intensity — polish-274 moonlit-read kin: the dome self-shades its leeward arc, killing the dapple at 0 emissive; judge-confirmed NATURAL, no bloom). Bird: royal-blue body 0x2f659e (lifted from plan's 0x2a5d8c after the 18m judge read "dark/navy") + proud breast, ONE TubeGeometry neck (fauna-11 law c), LATERAL 7-stem crest fan with teal dots (fore-aft fan projected to a single column from the front — judge "lone antenna"; v8 lateral rebuild), dark beak proud, eyes with white face patches (ellipsoid-tested proud), gray-brown legs + spread feet. Furniture: mottled stone plinth (foot ring + drum) + step stone (the show-bird pedestal — silhouette lifted above the grass line); ground lens-ring + molted feather props DELETED (judge read as debris, turkey law f). Anchors peacock/_head/_crest/_train/_wings/_tail (6 KEEP groups; bare `peacock` added to mergekit KEEP this tick — the `peacock_` I first authored MISSED the bare group name and the unmerged scale-spheres exploded the envelope ±1.125, fauna-8 toGLB scale-drop class, decode caught it). 7574 tris, 15 draw calls.
@@ -442,6 +510,7 @@ domain is commons-next `nx-dress-*` fauna only.
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-18 | fauna-26 (2026-09-18) | rooster v12 af35212e gameplay + gameplayR + gameplayL + tailprobe + roostface frames (`reviews/fauna26-rooster/new-{gameplay,gameplayR,gameplayL,tailprobe,roostface}.png`) — fallback arc stands (18m oblique PASS both sides + tailprobe PASS + roostface PASS on final bytes; dead-front 18m comb-edge-on sub-pixel DISCLOSED as vantage physics — the seated yaw presents the fountain obliquely to the lane reader) until natively confirmed |
 | NATIVE-17 | fauna-25 (2026-09-18) | peacock v8 c9425f51 gameplay + trainprobe + faceprobe frames (`reviews/fauna25-peacock/new-{gameplay,trainprobe,faceprobe}.png`) — fallback arc stands (18m SHIP ×2 + trainprobe SHIP rev3 + faceprobe SHIP rev2; 18m eyespot-glint sub-pixel disclosed as distance-limited) until natively confirmed |
 | NATIVE-16 | fauna-24 (2026-09-18) | turkey v10 5a3c1cf5 gameplay + fanprobe + tomface + henface frames (`reviews/fauna24-turkey/new-{gameplay,fanprobe,tomface,henface}.png`) — fallback arc stands (18m SHIP on final bytes + fanprobe SHIP + tomface SHIP rev5 + henface SHIP; hen wattle sub-pixel + 18m fringe-not-bars residuals disclosed) until natively confirmed |
 | NATIVE-15 | fauna-23 (2026-09-18) | donkey v7 783055bc gameplay + right + left frames (`reviews/fauna23-donkey/new-{gameplay,right,left}.png`) — fallback arc stands (18m SHIP on final bytes + right SHIP + muzzle PASS + tails both confirmed; left-view FAIL pixel-probe-falsified at median lum 116; roundness residual disclosed) until natively confirmed |
