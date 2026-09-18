@@ -14701,3 +14701,73 @@ tower-house (298th cycle — LRU chain: longhouse/garden-cottage @319,
 hall/bunkhouse @318, forge/potter @317, inn/tower-house @316 stalest at 3;
 tools interior-walk-inn.ts + interior-walk-tower-house.ts, verify present
 on disk pre-run).
+
+|| sweep-320 | 2026-09-18 | 367==367 (329 thing + 38 light; epochs A==B BYTE-IDENTICAL cmp-verified; 0 arrivals, 0 departures, exactly ONE classified drift field = nx-carousel lib a35f40f1->c62a8bbd at identical tuple/comp = polish-292 @ 795aba77 interior scenery ring re-place, PRE-tick, PLACED_VERIFIED + idempotent 0/0, comp bag 7 keys verbatim both epochs, dress-162 hold corroborates; mid-tick struct-231 banked-not-placed build-only absorbed, gate re-run ALL PASS at 07e84ad4; snapshot rewritten 367 ents / 270179B / sha16 2a644f4116f92461, pre-write assertion diff exactly [nx-carousel lib], post-rewrite drift ZERO) | exit 3 on exactly the TWO known unclassified: R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 276th sweep, no escalation due — law keys Sev 1) + R-125 peacock\|lavender-0040 −3.149 (Sev 2 fauna-routed @ sweep-319, 2nd sweep, no escalation due); carousel flip added ZERO new contacts; 329 bbox non-light / 243 exempt-classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each per sweep-228 ceiling law (core 64/64 @ 0.380 walked over the NEW polish-292 bytes, no seam; NW 5/5; NE 7/7; SW 5/5 — dists identical to sweep-319 canon) + tier-2 298th per committed sweep-319 pointer inn 6/6 @ 0.364 + tower-house 6/6 @ 0.3765 ALL PASS, tools ls-verified BEFORE prose (sweep-316 correction honored) | pins 15/15 ALL_PINS_OK (274th consecutive); battery RED-then-GREEN lawful carousel pin bump a35f40f1->c62a8bbd (sweep-316 precedent class; first invocation correctly FAILed 27/28, re-run 28/28 PASS); carousel comp bag exact 7 + lib c62a8bbd8e794a9d census-verified; comp-bearing 38; lights 38; interlane md5 86b2936f stable read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh; pools IMPROVE 7fa8a224 (296th check, zero open rows) + CITY-V2 cae6b928 unchanged, freeze banner governs; gate ALL PASS real exit 0 FIRST TRY at 20ce05b7 (ledger law 2370943) + re-run at 07e84ad4 | CLEAN SWEEP — R-121/R-125 open, known, no escalation due |
+
+sweep-320: CLEAN SWEEP, classified-drift tick (89th consecutive quiet-or-
+classified). Tick-start HEAD 20ce05b7 (dress-162 hold); standing gate ALL
+PASS real exit 0 FIRST TRY (ledger law 2370943 exact, the gate's own
+printed total). Census 367==367 vs the committed sweep-319 baseline (sha16
+9b24d4f71bd67b29): 0 arrivals, 0 departures, exactly ONE classified drift
+field — nx-carousel lib a35f40f1925ce93b->c62a8bbd8e794a9d at identical
+tuple/comp = polish-292 @ 795aba77 (interior scenery ring re-place,
+committed PRE-tick 18:46:42, PLACED_VERIFIED + idempotent 0/0 per its
+ledger; comp bag 7 keys verbatim both epochs). Epoch B (20s-paced re-read)
+BYTE-IDENTICAL to A (cmp-verified) — settled single-read close. Mid-tick
+absorption: struct-231 (Kepler star, banked-not-placed, build-only, zero
+live mutations) landed at 07e84ad4 while walks ran — epoch-B census already
+predates nothing (byte-identical proves zero live change), gate re-run ALL
+PASS real exit 0 at 07e84ad4 per the polish-270 epoch law. Overlap: SAT 329
+bbox non-light / 243 exempt-classified / 0 coverage holes, exit 3 on
+exactly the TWO known unclassified — R-121 lamp-n|nx-town-mapboard −0.407
+(Sev 2 artwalk-routed @ sweep-43, 276th sweep since routing, NOT new, no
+escalation due — law keys severity-1) + R-125 peacock|lavender-0040 −3.149
+(Sev 2 fauna-routed @ sweep-319, 2nd sweep since routing, no escalation
+due); the carousel flip added ZERO new contacts. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 ALL_PASS max dist 0.380
+(next-walk-core-paths.ts, walked over the NEW polish-292 bytes, no seam;
+[physics] banner parse handled at body offset, sweep-317/318 class), NW
+5/5 ALL_PASS (0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW
+5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists
+identical to sweep-319's recorded values. Tier-2 298th cycle per the
+committed sweep-319 pointer: inn 6/6 ALL_PASS maxArrival 0.364 (dists
+0.320/0.318/0.341/0.350/0.364/0.288, interior-walk-inn.ts) + tower-house
+6/6 ALL_PASS @ 0.3765 (0.245/0.245/0.263/0.377/0.374/0.309,
+interior-walk-tower-house.ts), both real exit 0, both tools ls-verified
+present on disk BEFORE this prose (1786B Aug 30 + 1523B Aug 30 — sweep-316
+correction of record honored). Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (274th consecutive clean); sweep89-battery RED-then-
+GREEN lawful carousel pin bump a35f40f1->c62a8bbd in the sweep-owned
+battery (sweep-316 precedent class; first invocation correctly FAILed
+27/28 = expected classification; re-run 28/28 PASS on census-A bytes);
+carousel comp bag exact 7 + lib c62a8bbd8e794a9d census-verified;
+comp-bearing 38; lights 38. Interlane md5 86b2936f stable, read fresh
+this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN
+md5 7fa8a224 unchanged vs sweep-319's recorded close (296th check; 19
+OPEN + 5 SURVEY CANDIDATE grep hits all class-checked historical prose,
+zero open rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+via loop/plan reload. Baseline lawfully rewritten like-for-like (committed
+convention = raw census bytes; pre-write assertion: diff set exactly
+[nx-carousel lib], counts 367==367, zero drift on 366 shared ids across
+all projection fields incl. full comp objects): 367 entities / 270179B /
+sha16 2a644f4116f92461; post-rewrite drift ZERO (cmp-verified vs census
+B). Probe self-catches pre-verdict, disclosed: core-walk JSON parse failed
+on the [physics] banner at char 1 (sweep-317/318 class) — re-derived from
+the raw object at body offset. Foreign dirt in tree (windmill overhaul
+scratch, cabin/carousel prototype dirs, engine files, fleet shells,
+debug-bower scripts, moon-moth dir, fauna tools + rooster scratch,
+HERO-ASSET-REFINEMENT-PLAN, core-paths assets, rupertfork sources,
+next-terrain scratch, review dirs) is sibling work-in-flight, untouched
+per the ownership law. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-321): row-cottage + observatory circuit (299th
+cycle — LRU chain re-derived from committed pointers this tick:
+inn/tower-house @320 walked fresh, longhouse/garden-cottage @319,
+hall/bunkhouse @318, forge/potter @317, row-cottage/observatory @315
+stalest standing pair at 5 sweeps; walk tools interior-walk-row-cottage.ts
++ struct2-walk-observatory.ts, ls-verified present on disk BEFORE this
+prose — 1526B Aug 30 + 2322B Sep 7).
+
