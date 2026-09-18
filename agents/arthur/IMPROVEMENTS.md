@@ -6245,4 +6245,6 @@ fixes ≈ 6 F.)
 
 - [polish-284] LANE-RESUME + OUTAGE tick: Bill's September eye-gate verdict recorded (all ten accepted, keep improving — hold lifted); standing gate HARD-DOWN: verify-repairs.ts died on first live fetch, direct probe HTTP 530 Cloudflare 1033 (origin tunnel down) ~08:40 EDT, gateway alive at 08:20 per sweep-307's live walks; one paced retry identical → fail-closed: no census, no visual iteration, zero live-world claims or mutations; local recovery instead — closed the interrupted polish-283 window's bookkeeping gap: committed its untracked production source carousel-horse-prototype/ (31 files, 316K, sole builder of live nx-carousel lib store/1c0128b61b510a5d) + tracked edits (plan direct-commission note, legacy-guard placer hook, mergekit +dove_) + polish-271..282 evidence dirs incl. exact-byte baseline GLBs; resume = fresh survey + first plaza-core visual iteration next wake once the gateway answers (D+0, E+0)
 
+- [struct-221] rupertfork build+judge: struct-220 substrate FALSIFIED twice (max section 1.2503 = non-planar artifact, true = 3sqrt2/4 classic; max-section frame quarters, fork lives at diagonal bore); v2 c5e3f78b decode ALL PASS but 4x ZAI-fallback REJECT (passer silhouette 6.56m occludes 5.43m fins at every vantage) — NOT PLACED, v3 nose-out station committed (D+0, E+0)
+
 **Running total: 2370921 / 2000000**

@@ -15611,3 +15611,109 @@ Files: struct220-probe-rupert.ts (the honest probe draft, L0-L2/L4 green,
 L3 connectivity honestly RED — kept as evidence) + struct220-verdict-rupert.ts
 (NEW, tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-220, D+0 E+0). Zero pushes.
+
+## struct-221 (2026-09-18): R11-36 RUPERT'S FORK — BUILD+JUDGE TICK; two
+## struct-220 substrate claims FALSIFIED (corrections of record); v1+v2 judged
+## REJECT (fallback), NOT PLACED — v3 nose-out recomposition is the committed
+## next build iteration
+
+221%3=2 build+judge slot per the 178..220 alternation (rupertfork commission
+committed by struct-220's verdict). Gate ALL PASS real exit 0 tick-start at
+563d1508 (fauna-14). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-220 -> tag struct-221
+(re-checked immediately before append). Native absent from the cron catalog
+again this tick (tool_search fresh: terminal + zai-vision only — same
+disclosed cron-unpayable class as struct-169..220).
+
+FORM SELECTION: rupertfork 0 prior mentions (grep this tick; "rupert" only
+struct-220's own verdict + probe). Cube-family standing: menger only (fractal
+lattice — not a bore). Register: the FORK opens the BORED-REMAINDER branch —
+no standing form's identity is a wall split by a door (harmonickiss is planar
+circles, menger is removal-by-iteration, both disclosed).
+
+STRUCT-220 CORRECTIONS OF RECORD (probe law 0c spirit, both from real tool
+output this tick, both RED-first):
+1. "max section 1.250324649719 at n=(-0.2961,0.4688,-0.8322)" FALSIFIED — at
+   that axis the cube section is a quadrilateral whose max square is 1.0107
+   and no hull-vertex square exists; the edge-quadruple search accepted a
+   NON-PLANAR quadrilateral. TRUE max square section of a cube = 3*sqrt2/4 =
+   1.060660 (classic) — re-derived FRESH twice (octant scan + refine, radial-
+   diagonal law: square edges at th bind the DIAGONAL rays th+-45deg), the
+   two derivations agreeing to 5e-4 AND with the literature constant.
+2. "at the max-section frame the remainder is TWO components" died with the
+   fake axis — at the TRUE max-section axes the raster remainder QUARTERS
+   (4 comps, carve-mapped 6 axes x 6 doors). The fork lives at the DIAGONAL
+   bore (1,0,1)/sqrt2 instead: at the classic door there, exactly TWO equal
+   grounded full-height knife-fins remain (v1 carve [120,120] cells, 10 boxes).
+   Also corrected: 3*sqrt2/4 is the size of the PASSING cube (Speer 1994
+   lineage), not of a section; at the diagonal pose the door prism exceeds
+   every section of the cube — measured: a 1.0576x S passer passes the
+   classic door there (tilted pose a11.3 b-45 g78.8 deg family).
+
+THE FORM (v2 standing): wall cube S=4.5 bored along its horizontal diagonal,
+door 1.03x S (fork-band; see v1 rejection below), TWO grounded full-height
+fins [240,240] cells (20 boxes, 0.54m thick knives at the anti-diagonal
+corners) on two foot pads (pads extend OUTWARD only — provable |v|>doorHalf
+clearance law for every station of the slide); the PASSER: 4.6308m cube =
+1.02907x S — 2.91% BIGGER than the wall — tilted pose a-90 b-90 g90 deg
+(b=-45 exact family), caught 58% emerged, bottom riding 12mm above grade;
+wall raised 1.0365m on its pads (the honest theorem demonstration: the wall
+must be lifted for the bigger cube to clear the floor); 2 warm beads
+(glow_rf_1 KEEP, 0x9a7030 @ 1.0 — the sole night element) on the fin tops.
+Sleeve RETIRED with cause: the waist plane t=0 is fully carved — no stone
+seats a ring. Folly class (stone clearance law: kept cells have NO corner in
+the door square; AABB corner law => passer touches no stone, exactly).
+
+BUILD v1: assets/mkv3-rupertfork.ts (staged -f), texMat rf_stone (struct-38
+law), root identity (struct-188), deterministic x2 sha256
+3b0316ecc1b78dbcfe36915751668a0bf0abd8f0186f481d9fc6ce0a5a7574e0. DECODE
+(struct221-decode-rupertfork.ts, tracked) caught TWO real defects pre-judge:
+beads at mid-wall (y 3.5 not fin-top 5.5 — the s[1]-vs-s[0] box-axis
+confusion) and a ~10cm fin-on-pad float gap (raster inward rounding) — both
+fixed in probe (finTop/finBot from u-run; pads rise to true raster bottom),
+v2 rebuilt deterministic x2 sha256
+c5e3f78b1819d9730913c77f40ac6d1e1e945c6869a022da19bfd053c33c7954,
+decode ALL PASS 15/15 (populations, kept-cell |v| law, contact-plane
+zero-gap, pads outward + grade, 8-corner pose worst 0.00003m, floor ride,
++3cm RED shift detected, bore void 0, glow census, envelope, texMats).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed, riding the owed
+board):
+- v1 gameplay 18m: REJECT — only ONE fin visible (the passer occludes the
+  far blade; sliver fins 0.36m thick do not read past the 6.7m silhouette).
+- v1 mouth: REJECT — "reads as a single solid cube; the fork gestalt does
+  not form"; pads-only evidence of the fork.
+- v2 mouth (fins doubled): REJECT — the passer still blankets ~95% of the
+  mouth; no gap, no fork read.
+- v2 oblique-40 (the sited approach read): REJECT — "big tilted cube + lone
+  pillar"; no tunnel void anywhere.
+Root cause is GEOMETRIC, not fixable by vantage: the tilted passer's
+silhouette (6.56m tall) exceeds the fins' top (5.43m) — at ANY station where
+it stands ~58% emerged it towers over and occludes the fork. The judges'
+converged v3 fix list: NOSE-OUT station (emergence ~35%, T_ST ~ T_HI - 0.3
+tHalf — the fins frame the composition, the passer caught just emerging);
+reopen a sky-gap sliver on one flank; consider the entry-mouth presentation
+(the plug deep in the throat). The floor-ride law holds at every t, so the
+station dial is free.
+
+DISPOSITION: NOT PLACED (never place a rejected form). v3 nose-out
+recomposition is the committed next build iteration (struct-222 slot is the
+placement tick for struct-218's banked newtonspheres — check the bank FIRST;
+rupertfork v3 takes the next build slot after that, or the same tick if the
+bank is already placed). Evidence banked reviews/struct221-rupertfork/
+(12 frames v2 + 10 v1 superseded in git history only — the reviews dir is
+ignored; the sha pins in this block are the durable record).
+
+Bill eye-check pointer: none this tick (nothing new standing). After a v3
+that passes: the walk out Math Avenue's procession past the sphericon and
+newtonspheres — a fork of two stone blades and, caught between them nose-
+out, a cube BIGGER than the wall it is passing through; after dark, two warm
+points on the blade tops.
+
+Files: struct221-probe-rupertfork.ts + struct221-decode-rupertfork.ts +
+struct221-render-rupertfork.ts (all NEW, tracked),
+assets/mkv3-rupertfork.ts (NEW, staged -f), reviews/struct221-rupertfork/
+(12 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one
+append struct-221, D+0 E+0). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
