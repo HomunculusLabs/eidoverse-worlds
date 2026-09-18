@@ -13323,3 +13323,62 @@ at 4 sweeps; walk tools interior-walk-inn.ts,
 interior-walk-tower-house.ts — both ls-verified present on disk this
 tick).
 
+sweep-300: CLEAN SWEEP, fully-quiet 300th tick (69th consecutive
+quiet-or-classified). Tick-start HEAD 1255a430 = sweep-299's own close;
+standing gate ALL PASS real exit 0 FIRST TRY (unpiped capture
+/tmp/s300-gate.log, 98 PASS lines + ALL PASS trailer). Census epochs A/B
+byte-identical canonical (next-live-census.ts projection, 244459B sha16
+6ead1ab0f91827f3): 354==354 FULLY QUIET vs the committed sweep-299
+baseline — 0 arrivals, 0 departures, 0 drift on all 354 shared ids
+across every projection field (pos/yaw/scale/kind/bbox/lib/compKeys);
+cmp-verified A==B; no baseline rewrite owed (the committed 6ead1ab0
+file stands as next sweep's baseline unchanged). Overlap: SAT
+fresh-live, 316 bbox non-light / 239 classified / 0 coverage holes,
+real exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed artwalk b26 choreography @
+sweep-43, 256th sweep since routing, NOT new, no escalation due (law
+keys severity-1); census byte-stability means no epoch-B SAT re-run
+owed (nothing changed). Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+ALL_PASS max dist 0.380 (next-walk-core-paths.ts, JSON parsed from
+first brace past the [physics] banner; support-seam stderr abstentions
+= the known normalized diagnostics set, unchanged), NW 5/5 ALL_PASS
+(dists 0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts); verdicts
+content-anchored on status strings + per-leg ok counts + distances from
+raw files. Tier-2 278th cycle per the committed sweep-299 pointer: inn
+6/6 ALL_PASS (dists 0.320/0.318/0.341/0.350/0.364/0.288,
+interior-walk-inn.ts) + tower-house 6/6 ALL_PASS
+(0.245/0.245/0.263/0.377/0.374/0.309, interior-walk-tower-house.ts),
+both real exit 0, both tools ls-verified present on disk pre-run.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (254th
+consecutive clean); sweep89-battery 28/28 PASS real exit 0 on fresh
+census-A bytes — comp-bearing pin 28 held exactly; interlane md5
+86b2936f stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read
+fresh. Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (276th
+check; 0 open candidate rows), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues
+freeze banner governs and was read fresh via the loop/plan reload.
+Probe self-catches pre-verdict, corrected with no repair owed: (a) NE/SW
+walk log parsers carried an unbalanced paren (python SyntaxError AFTER
+both tools had already exited 0 — logs were complete on disk, re-parsed
+clean; no re-walk needed, walk evidence untouched); (b) first grep for
+the sweep-299 diff tool looked in /tmp where it never lived — the
+committed chassis sits in agents/arthur/ as sweep299-census-diff.py;
+epoch A was proven byte-identical to the committed baseline via direct
+sha256 + cmp before any diff-tool need arose. Foreign dirt in tree
+(windmill overhaul scratch, cabin/carousel prototype dirs, client/
+server engine files, fleet shells, debug-bower scripts, moon-moth dir,
+fauna tools, HERO-ASSET-REFINEMENT-PLAN, VOCABULARY-LOOP, core-paths
+assets) is sibling work-in-flight, untouched per the ownership law.
+Zero world mutations, zero defect notes, zero uploads, zero verbs,
+zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-301): row-cottage + observatory circuit (279th cycle — LRU chain
+re-derived from committed plan pointers this tick: inn/tower-house @300
+walked fresh, forge/potter @299, hall/bunkhouse @298,
+longhouse/garden-cottage @297, row-cottage/observatory @296 stalest
+standing pair at 4 sweeps; walk tools interior-walk-row-cottage.ts +
+struct2-walk-observatory.ts — both ls-verified present on disk this
+tick).
+
