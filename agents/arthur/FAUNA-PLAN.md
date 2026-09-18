@@ -62,6 +62,26 @@ domain is commons-next `nx-dress-*` fauna only.
    67a8406d, 7 build versions, judge arc closed (closeface PASS + 18m
    PASS). Full record below. The pool now lives from three sides: ducks
    W lobe, robin N rim, geese SW bank.
+9. **[CANDIDATE fauna-12] sheep — new species (homestead tier-2).** A
+   shepherd's fold: a wool-cream ewe pair (ONE entity — grazer + watch,
+   the geese role pattern) on the open meadow SW/W of the dyehouse
+   (candidate zone x −28..−33, z −28..−34; exact tuple owed to the build
+   tick's terrain preflight + live SAT against the SW spoke lamps
+   (−25.2,−30.7)/(−34.7,−43.1), milestones sw-005/006, bunkhouse, and
+   the moongate lane). Village logic: the dyehouse's raw material is
+   wool and its source animal is absent — sheep/cattle/pigs/horses/dogs
+   ALL absent from commons-next (census-verified 2026-09-18); a fold in
+   sight of the dye yard closes the economy loop the way the owl closes
+   the livery. Build sketch: pale-cream fleece hulls (species-true
+   bulk), grey-brown wool-cap heads with sideways ears, dark thin legs,
+   docked tail stubs; furniture = timber hurdle segments (village
+   timber family) + trodden-earth pad (fox-den family). Motion plan: 6
+   comps — breathing bobs + graze-tug pendulum (grazer) + head-scan
+   (watch, owl/goose sentry family) + 2 ear/tail flicks, phases
+   staggered, epoch t0. Alternatives weighed: pigs (no economy tie),
+   cattle (oversized for the furniture tier), livery horse/dog (owl+cat
+   already seat the livery; a horse invites rideable expectations — a
+   bigger commission, park it). Build owed next fauna tick.
 
 ## Per-species rebuild records
 
