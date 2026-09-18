@@ -16610,3 +16610,130 @@ controls) + struct230-debug-ls.ts (NEW, standalone LS diagnosis),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-230,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits, shared-budget
 use. Zero pushes.
+
+
+## struct-231 (2026-09-18): R11-44 THE SMALL STELLATED DODECAHEDRON —
+## BUILD+JUDGE TICK, v1 ACCEPTED BANKED NOT PLACED
+
+231%3=0 refine slot taken as build under the empty-pool escape clause (refine
+pool empty of payable items 40+ ticks: native board cron-unpayable,
+struct-216/222/225/228 precedent) with EMPTY bank (császár placed
+struct-228, szilassi path-a closed struct-229/230) → fresh form selection,
+the struct-230 committed carry. Gate ALL PASS real exit 0 tick-start at
+33333add (dress-161; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN
+md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-230 → tag struct-231 (re-checked immediately before append; law
+exact 2370943). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision only — same disclosed cron-unpayable class as
+struct-169..230; owed board stays 26 + császár v3 + ssd v1).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): stellated/poinsot/pentagram/kepler 0/0/0/0/0 — never
+named, never barred, never built. THE KEPLER-POINSOT BRANCH OPENED. Kin
+falsification sweep: torricelli/gabriel-trumpet = horn-family kin
+(whisperhorn struct-82 Beltrami + pseudosphere standing) BARRED; lissajous
+STANDS (refine-273, artwalk-chartership); superellipse owned by borromean;
+jessen orthogonal icosahedron's identity (orthogonal dihedrals) invisible
+at 18m — szilassi-class judged risk; gömböc has NO closed-form
+parametrization (numerical-only shape — violates the
+parametrization-secured law); schwarz lantern kin to standing steinmetz
+(struct-225/226). SELECTION: the small stellated dodecahedron {5/2,5} —
+exact closed-form (icosahedron vertices (0,±1,±φ) cyclic), theorem-backed
+(Kepler 1619; Cauchy 1812: exactly four regular star polyhedra in two dual
+pairs — this is the first), instantly readable at 18m, and NOT kin-barred:
+the standing dodecahedron (struct-106) is the convex cousin on a different
+branch (star-polyhedra vs Platonic — oloid→sphericon cousin precedent),
+radically distinct silhouette (12-spike corona vs gem-solid doorway).
+
+CONCEPT: THE STAR THAT STANDS ON ITS POINT. IRON carries the thirty star
+edges — the pentagram lines. STONE carries the twelve TRUE star membranes
+(10-vertex outlines: central pentagon + five arms, crossing-point corners)
+and the TWELVE-sided dais (the theme number). Night contract: twelve warm
+vertex stars (0x9a7030 @ 1.0, glow_ssd_12 KEEP) — the constellation crown;
+the grounded tip rides half-proud in the dais top (császár foot-bead
+lineage). Seating (exact, machine-verified): two horizontal pentagram rings
+y 1.982 / 4.704, r 2.722, staggered 36°; summit spike 6.387m; tip bead
+half-proud at dais top y 0.205. Folly class (open cage, walked around).
+
+PROBE (struct231-probe-ssd.ts, tracked) ALL PASS real exit 0, laws
+T1-T9 + RED: T1 Euler 12−30+12 = −6 (genus 4); T2 degree 5 at every
+vertex; T3 12 regular pentagon faces (coplanar to 0e0; side 2·S and chord
+2φ·S to 8.9e-16); T4 manifold — every star edge on exactly 2 faces
+(SORTED-order chords; raw-order counting was the first RED self-catch); T5
+vertex figure 5 everywhere; T6 {5/2,5} Kepler 1619 citation; T7 golden law
+chord/side == φ to 1e-12; T8 point-down seat (tip at dais top exactly, two
+horizontal rings spread 0e0, summit max); T8b outlines on-plane 0.000mm,
+monotone angular order; T9 ZERO non-adjacent interpenetrations (30
+contacting pairs = exactly the 30 adjacent face pairs, the designed
+pentagram-segment meetings). RED: corrupted face → 5 law FAILs exit 1.
+
+SELF-CAUGHT RED-FIRST THIS TICK (probe/mk/decode, zero wasted builds):
+(a) probe v1 counted pentagram chords in RAW neighbor order (42 face-edges,
+21 unmatched) — sorted-order is the correct hull order; (b) the fan
+"star region" (center + tip-skips) is the WRONG region — 240 false
+pierces; the TRUE filled star is the 10-vertex outline (pentagon core +
+five arms via crossing-point corners), simple and star-shaped w.r.t. the
+center; (c) NORMALS built as −c/|c| (lifted-center pseudo-normal) put
+outline crossings 2.2m off-plane — the TRUE face normal is rot(û) (the
+lift is a whole-solid translation that moves c off the û axis); (d) the mk
+envelope law caught the probe's bare-vertex envelope missing BEAD_R
+(drift 0.0950 exactly) — the contract must model what ships; (e) decode D2
+apothem bound wrong for a ROT=0 dodecagon (corners ON the axes — TRUE box
+is ±R); (f) decode RED control crashed instead of exiting clean — census
+gate added.
+
+BUILD (agents/arthur/assets/mkv3-ssd.ts, staged -f): root identity
+(struct-188 law); texMat lanes ssd_stone/ssd_iron (struct-38 law); beads
+emissive in-GLB (dusk lineage, struct-82); plates baked vertex-true
+(applyMatrix4, Box3 corner law). v1 deterministic x2 byte-identical sha256
+38aa4c11345020ed92ccc2507089fa42a5a63dbd72164e2dd7c5e9bd22d1921c
+(mtime-verified; 43 pre-merge meshes → 3 draw nodes: ssd_iron, ssd_stone,
+glow_ssd_12_0). Envelope 5.63x6.48x5.50 TRUE box, sole at grade 0, tip
+bead min y 0.205 (half-proud in dais top 0.300).
+
+DECODE (struct231-decode-ssd.ts, tracked) 8/8 ALL PASS real exit 0 (D1
+census 3 nodes; D2 dais TRUE-box; D3 rods 2250 verts worst 48mm coverage
+30/30; D4 membranes 1296 verts worst 27mm shell-bound 96mm; D5 beads 12/12
+clusters emissive sole-night; D6 grounding; D7 envelope drift 0.00mm; D8
+texMats 2/2). RED control: the DUAL family's own bytes
+(village_csaszar3.glb) fail D1 cleanly, exit 1.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed riding the
+board): gameplay 18m PASS 4/4 — six-spike silhouette with the judge's own
+verification that the ring-height asymmetry is the CORRECT 36° rotational
+offset, five beads resolved, tip visibly meeting the dais, zero defects;
+closeface PASS 4/4 — woven joinery (rods on-axis into beads, mitered
+crossings), three material families cleanly separated, shadow-gap reveal
+visible along every rod line. Night: judge counted 8/12 warm points and
+FAILED the count clause; ARBITRATED per probe-law-11 — decode D5 proves
+exactly 12 bead clusters, sole night elements; the 4 missing are far-side
+vertices occluded by the star's own body at the single gameplay azimuth
+(császár night carry's disclosed-Minor precedent: "~4-5 of 7 resolve at
+the single gameplay angle, occlusion"). The judge's prescription
+(re-position/duplicate beads to face the camera) REJECTED at source: the
+polyhedron IS its 12 vertices — falsifying the mathematics to flatter one
+viewing angle is the exact class the lane bars. Placement and rotation
+deliver the other beads to other walkers.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-232
+committed carry: fresh census scan — under-served band selection per
+standing recommendation, 8m NN + district soft-cap audit, dodecagon-TRUE
+footprint polygon SAT (struct-19 exact-geometry law — never square-bbox),
+oblique-yaw law (struct-104 band), terrain preflight over the TRUE rotated
+footprint, hash-gated plain spawn nx-struct-ssd, comp {}. Folly class — no
+walk owed beyond a ground circuit at placement.
+
+Bill eye-check pointer (after placement): a star standing on its point on
+a twelve-sided dais — two rings of five spikes rising to one summit
+spike; every pentagram line drawn in iron, every star face filled in
+stone, a brass bead at every point. The idea: the golden ratio made
+visible — every star edge is exactly φ times the face's own side. After
+dark: a constellation of twelve, one star set into the dais itself.
+
+Files: struct231-probe-ssd.ts + struct231-decode-ssd.ts +
+struct231-render-ssd.ts (all NEW, tracked), assets/mkv3-ssd.ts (NEW,
+staged -f), reviews/struct231-ssd/ (9 frames, ignored — sha pins in this
+block are the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-231, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
