@@ -1,7 +1,45 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
-### dress-162 — lawful HOLD (51st post-close, NO PLACEMENT)
+### dress-163 — lawful HOLD (52nd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source**: prompt again carried the
+  dress-77 SE fungus-log "placement pending" claim — resolved FALSE since
+  dress-152 (dress-78 closed it long ago; `nx-dress-se-funguslogs-001`
+  LIVE, lib fbc626eb, round-3 eye-gate item 9). Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD d9c5b07f (struct-232, SSD placed —
+  the E-terminus seat below); interlane md5 86b2936f pin-exact. Fresh
+  census **369 = 367 + TWO arrivals, both pre-tick ledger-matched**:
+  `nx-dress-rooster-001` (31.25, −0.02772, −9) yaw −1.3 lib af35212e —
+  fauna-26 (1b8e511d), DRESS-PREFIXED but FAUNA-OWNED (explicit probe
+  set, now 7 with rooster; dress-151/153/156/158/159/161 law) — NOT dress
+  intake; `nx-struct-ssd` (65.187430, −0.031675, 10.324675) yaw 4.039190
+  lib 38aa4c11 — struct-232 (d9c5b07f), struct domain, NOT dress intake.
+  ZERO moves, ZERO departures, ZERO dress-domain drift; dress domain 60 =
+  29 fleet-owned (NE 6 / NW 9 / SE 7 / SW 7) + 7 fauna-owned (se-fox,
+  shorse, cow, donkey, turkey, peacock, rooster) + 24 legacy/non-fleet
+  (probe `/tmp/dress-hold-verify-163.py` HOLD_VERIFY_PASS exit 0 first
+  run, browser UA, capture saved `/tmp/dress163-census.json`).
+- **Sibling commits since dress-162**: polish-292 (795aba77, carousel
+  scenery ring — closes dress-162's classified in-flight drift, lib
+  c62a8bbd already inside the dress-162 epoch capture), struct-231
+  (07e84ad4, SSD banked NOT placed), sweep-320 (2e0c7a0c, zero-mutation
+  CLEAN SWEEP 367==367), fauna-26 (1b8e511d, the rooster above),
+  struct-232 (d9c5b07f, the SSD above). All named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.000035 (sub-mm rounding class).
+- **Shard/intake**: IMPROVE-PLAN zero STATE-OPEN rows, zero OPEN
+  `nx-dress-` rows (57 mentions, historical round-1/2 prose only); no
+  round-4/5 section (grep 0) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
 
 - **Cron-prompt staleness re-confirmed at source**: prompt again carried the
   dress-77 SE fungus-log "placement pending" claim — resolved FALSE since
