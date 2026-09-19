@@ -1985,3 +1985,77 @@ next wake once the gateway answers.
 - Next ranked: (a) lamp-mount bracket silhouette (judge-named second,
   close-range class — tiny arm+strap geometry, judge fresh first), or
   (b) plaza-core re-survey on fresh evidence.
+
+### polish-311 — belltower lamp cage self-lit (ACCEPTED, LIVE)
+
+- Subject: `nx-town-belltower` (same tuple as polish-306..310; ladder
+  comp). Build source `assets/mkv3-landmarks.ts` (belltower block) ->
+  `village_belltower3.glb` (live was b0b1e276, polish-310's rope build).
+- Queue head (lamp-mount bracket silhouette) re-judged fresh on exact live
+  bytes with a NEW dedicated lamp rig (`p311-lamp-rig.ts`: lampFace /
+  lampDiag face-on to the housing corner, lampClose/lampNight diagonal,
+  belfry + 18m gpAim day+night). Findings: the improve-17 housing ALREADY
+  reads as deliberate hardware at close range (hood resolves as a pyramid,
+  arm bridges housing-to-post with a visible sky gap; corner posts at
+  Nyquist = inferable). The two diagonal views were post-occlusion RIG
+  ARTIFACTS (camera on the post sightline) — discarded as evidence. At 18m
+  day the housing is framing-limited (struct-13 class; placement anchors).
+  The real evidenced defect: after dark the bead glows ALONE — the housing
+  is COLOR_0-only legacy iron (zero night pixels), so the tower's single
+  night signal reads as a "lit pixel"/possible floating ember; both the
+  day and night judges converged on attached-by-placement-only.
+- Change (ONE intervention, polish-305 wire-sheen lineage — the support
+  hardware of a light prop reads faintly warm at night): housing iron
+  emissive 0xffc98a (the bead's own hue). SIX measured rounds: 0.18 (day
+  shade = lit-timber band, hood washed) → hood-split 0.06 (still mid-brown:
+  the hood backs onto SHADOWED fascia — polish-287's day-invisibility law
+  does NOT hold in permanent shade, first observed here) → 0.035 → 0.05 →
+  0.04 (judge rule "every iron sample >=15 under gable shadow 59" fails by
+  2 pts on the arm) → ACCEPTED UNIFORM 0.02: day arm 26→47 / post 28→44 /
+  hood 32→42 (uniform kills the falloff-inversion the last judge flagged);
+  night cage ≈39 vs cavity 21 = the 1-2px warm whisper the night judge
+  asked for. Bead [0.9,0.5257,0.2287] untouched.
+- **mergekit law found (v2 staging catch)**: the bucket key
+  `color:roughness:metalness:tex` has NO emissive term — same-base
+  materials with different emissiveIntensity silently MERGE (v2's
+  hood-split rebuilt byte-identical to v1; the 0.06 never reached the
+  file). Cured by KEEP-renaming the hood `lamp_hood` (own mesh, own
+  signature). Kit-level fix candidate (widen the key with the emissive
+  factor) needs a dedicated rebuild-all tick; mergekit.ts carries foreign
+  uncommitted mods — not touched mid-lane.
+- Candidate `6359999041251ad9…` deterministic ×2; 12 nodes / 11 meshes
+  (+lamp_hood anchor); siblings byte-identical (inn/windmill/carousel3);
+  nonFinite 0; diffs confined (18m spot 66-68 px, lampFace housing band
+  3361 px, maxDelta 39). v1 (ccc98366) / after-v1..v4 rounds retained as
+  record in the evidence dir.
+- Judge verdicts (ZAI fallback disclosed — no native vision tool loadable
+  in this cron session, polish-285..310 class, native re-judge owed):
+  18m night IMPROVED partial-pass (glow now has a capped shape — form, not
+  bare pixel; restraint/hierarchy excellent; zero defects; hardware
+  framing-limited, struct-13 class); day rounds drove the value down to
+  the judges' own quantitative rule (dropper probe `p311-pixels.ts`
+  settled two inflated judge hex reads — probes outrank prose, polish-289
+  law). Accepted on: quantitative gates green + hood per-judge "hold
+  40-46" + night gain + zero regressions across every round.
+- Placed via NEW dedicated placer `next-place-polish311-belltower.ts`
+  (polish-310 chassis, pins b0b1e276→63599990): PLACED_VERIFIED, 1 upload
+  + 3 verbs, ladder comp replayed verbatim, rider b5 standing, bbox 7.9
+  exact, idempotent rerun ALREADY_LIVE_NO_VERBS (0 verbs), live census pin
+  `store/6359999041251ad9.glb` @ (6.5,0,6.5) yaw -2.35619 exact.
+- Served-bytes proof (struct-104 law, durable `p311-verify-served.ts`;
+  probe self-caught a mesh-local/node-translation frame bug RED->GREEN):
+  served DRACO 351e4f99… 12/11 census, anchors bell/bell_0/bell_1/lamp/
+  lamp_hood, BOTH emissives exact (cage [0.02,0.0117,0.0051], bead
+  [0.9,0.5257,0.2287]), lamp_hood centroid (0.7539, 5.6978, 0.7539),
+  0 non-finite. P311_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 (sibling struct-259 landed
+  mid-tick at b0526793 — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-311-belltower-lampmount/`
+  (before/ = live b0b1e276 baseline GLB + 7-view rig; after/ = accepted v6;
+  after-v1..v4 = measured rounds; probes: p311-lamp-rig, p311-probe,
+  p311-pixels, p311-verify-served).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path — same as polish-285..310);
+  recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b)
+  rose-horse angular-offset motif geometry (artwalk coordination).
