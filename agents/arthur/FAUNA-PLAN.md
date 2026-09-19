@@ -32,6 +32,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | peahen | `nx-dress-peahen-001` | (−45.1,0.03286,67.5) yaw 0.196 | **a1f5190f** (fauna-28) | NEW 2026-09-18 — the peacock's audience: earth-brown foraging hen (cream foreneck arc, short dark drooped tail, teal-paddle crest), 2.84m from his display on his reader's line; 4 motion comps — the show-bird pair is complete |
 | skep bees | `nx-dress-bees-001` | (−53.566,0.038,54.5) yaw 2.3562 (FRAME COPY of the skeps row) | **e6ac8fac** (fauna-32) | NEW 2026-09-18 — the village's first PURE-MOTION fauna: 7 honeybee workers (×2.8 marginality), 4 ringing the real hives + 3 working the lavender blossoms; zero ground geometry; 7 motion comps (4 orbit + 3 bob) — the apiary's pollinator stands |
 | barn swallows | `nx-dress-swallows-001` | (49.5,−0.03907,0) yaw 0 (yard-center AIR SEAT) | **9e3f6b05** (fauna-34) | NEW 2026-09-19 — three true-size barn swallows circling the livery yard in three independent rings (low W sweep over the horses + SE pocket + high sweep above the owl post), banking into the turn; 9 motion comps (3 orbit + 6 wing pendulums nested in the orbit anchors); zero ground geometry — the yard's AIR lives between the horses at the rail and the owl on the post |
+| grey heron | `nx-dress-heron-001` | (12.92,0.08093,−91.38) yaw −3π/4 | **f6a10294** (fauna-35) | NEW 2026-09-19 — the reedpool's fifth resident: grey heron WADING in the E-bank open water (69% deep in the ellipse; WADER seat class — entity y=0 IS the water top, legs below, belly dry), facing NW toward the angler; 4 motion comps (bob + neck re-coil + nested head Y-scan + bustle twitch); 11 build versions, near SHIP + profile PASS + face SHIP (ZAI-vision MCP fallback, native debt NATIVE-24); the pool now lives from all five sides |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -546,26 +547,20 @@ domain is commons-next `nx-dress-*` fauna only.
     (Bill's own homestead language: swallows nest in the stable's
     eaves). Full record + laws below. Queue proposal appended:
     fauna-35 grey heron at the reedpool E bank (row 24).
-24. **[QUEUED fauna-35 proposal, 2026-09-19] grey heron at the reedpool
-    E bank — homestead species (queue-empty proposal, fauna-34
-    cadence).** The reedpool's fifth resident: the patient fisher
-    standing in the shallows. Village logic: the pool already lives from
-    four sides (ducks W lobe, robin N rim, geese SW bank, frog ON the
-    surface — plus the angler statue fishing SW); the heron is the
-    water's own hunter, and the E bank is the pool's only unoccupied
-    margin. Species sketch: single grey heron in the stand-and-strike
-    pose — grey body/wings, white crown stripe over a dark eye-stripe,
-    snake-neck coiled in S, yellow dagger bill angled down, long dark
-    legs in the waterline, ~0.85m tall true-size (encounter-space
-    species like the robin — the pool's readers arrive at 4-8m). Motion
-    comps: slow head-bob pendulum (the heron's patient nod), occasional
-    neck re-coil, tail-flick; phases staggered. Seat: the E bank
-    shallows — waterline arithmetic from the decoded pool top (frog
-    fauna-29 law: water top world +0.08093; legs wade to mid-shin),
-    facing W across the water toward the angler. RISK: none structural —
-    standard bank seat, concentric-site class (struct-19); the only
-    novelty is wading depth (feet below the water plane, body above —
-    the inverse of the frog's pad seat).
+24. **[CLOSED fauna-35, 2026-09-19] grey heron at the reedpool E bank —
+    proposed fauna-34, BUILT + SEATED fauna-35 (2026-09-19).** ONE entity
+    `nx-dress-heron-001` at **(12.92, 0.08093, −91.38) yaw −3π/4** — the
+    E-bank open water, 69% deep in the water ellipse (the v1 candidate
+    0.5m from the E rim swept 0.8m deeper: the rim band projected under
+    the bird's feet from every W vantage). v11 sha16
+    f6a10294784764bb1fab7771f1648c293a2900889f61a0ca42b9124378f69595,
+    11 build versions, 11 judged rounds (near SHIP + profile PASS + face
+    SHIP; ZAI-VISION MCP fallback, native debt NATIVE-24). 4 motion comps
+    live. Census 378→379 exactly, 5 verbs, idempotent rerun 0 verbs, walk
+    ALL_PASS 3/3 (18m W reader line + bridge-deck leg). Full record +
+    the WADER-seat and anti-biped laws below. Queue: EMPTY — next tick
+    proposes the next homestead species (goats/ducks/bunnies language
+    first per domain law).
 
 ## Per-species rebuild records
 
@@ -735,10 +730,18 @@ domain is commons-next `nx-dress-*` fauna only.
 - Note: the re-seat does not alter the pair's idle life — all 6 comp phases/pivots re-applied verbatim from fauna3-place-ducks.ts (motion:duck_b orbit center [-2.3,0.02,-0.75] remains entity-frame-correct; only the entity origin moved +0.19993 in world Y).
 
 
+### grey heron — fauna-35 (2026-09-19) CLOSED
+- **v11 sha16 f6a10294784764bb** (full f6a10294784764bb1fab7771f1648c293a2900889f61a0ca42b9124378f69595), NEW entity `nx-dress-heron-001` PLACED_VERIFIED at world (12.92, 0.08093, −91.38) yaw −3π/4 scale 1 — the reedpool E-bank open water (69% deep in the water ellipse; WADER seat class, the inverse of the frog's pad seat: entity local y=0 IS the decoded water top +0.08093, legs wade to −0.145 under the opaque water face — invisible by construction, fauna-29 law a does the wading illusion — belly dry at 0.31). Placer gates: pool host tuple + lib hard-gated (FRAME-COPY law), frog live-PY water-plane witness ±5mm, water-ellipse membership t<1 (t=0.522). Census 378→379 exactly (sibling +1 mid-arc absorbed by the fresh-census law), 5 verbs (upload+spawn+4 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m W village-side reader line + bridge-deck reader leg, arrivals 0.00/0.30/0.31; foreign support-seam stderr = skeps/woodstack/temple class, not ours), live bbox 0.324×0.993×0.844 == decode envelope.
+- Build: a grey heron in the stand-and-strike read — REAR-SET legs (ankles behind the body, pitching it nose-up), ONE pitched spindle body group (`heron_body`, NAMED into KEEP — see law a below) with hull+breast+rump at −0.14 rad, ONE TubeGeometry forward-diagonal periscope neck (fauna-11 law c; neck ≥ body: 0.30 tube, head at world 0.853) rising off the body front at ~50°, TAPERED-CYLINDER yellow dagger bill (root embedded 3cm inside the skull — junction clean by construction), white crown band 30mm + black eye-stripe 16mm proud 2mm + GOLD eyes INSIDE the stripe band (frog glint recipe rough .4/metal .5 — gold-on-black carries where gold-on-grey is mid-on-mid) + ONE solid black crest wedge (root 10mm → tip 3mm, pitched −0.38) + broad pale bustle wedges over the tail (two tapering 24mm-wide plumes per side) + white thigh tufts + folded darker wings with proud black shoulder patches. Furniture: water only (pool-rider law) — per leg a dark MENISCUS collar at the entry (the standing-IN-water cue) + a lighter wake ring cresting y=0 (radii 0.14/0.11, containment-gated at the legs), all ROOT-level (never bobbed). Anchors heron/_neck/_head/_tail (4 KEEP groups; `heron` added to mergekit KEEP this tick — collision-proof prefix, verified). 16 mesh nodes / 1900 tris.
+- Motion: 4 comps live — breathing bob (.006/4.6s — twenty-third village exercise of part bob) + neck slow re-coil X-pendulum (.08/6.4s — the patient fisher's idle) + head Y-scan (.30/9.0s, NESTED in the neck group — rides the re-coil, peacock-crest law) + tail bustle-twitch Z (.10/2.6s); phases staggered, epoch t0. Engine-true motion pairs on final bytes: 93px@18m band 461-494, 451px near band 428-535, 1227px encounter band 404-558; rig drives motion.js bob VERBATIM + rotatePartAtPivot on the ACTUAL pool GLB at world pose with all five pool residents at true relative poses.
+- Judge arc (ZAI-VISION MCP fallback glm, native debt NATIVE-24): 11 build versions, 11 judged rounds. 18m r1 FAIL — read as "a small human standing in the pool" (torso-on-legs biped: centered legs + tall box body + upright neck) → v4 ANTI-BIPED rebuild (rear-set legs + pitched spindle + forward periscope neck) → r3 "tiny grey object, species unresolvable" → v6 neck ≥ body (0.30 tube; the heron's distance marker) → near v7-round: species YES ("reads as a heron") but water NO (feet "on the rim", no ripples — REAL: v1 seat 0.5m from the E rim projected the rim band under the feet; PLUS the v4 leg move had orphaned the v1 rings 12-17cm) → v7 rings-at-legs + tapered embedded-root bill (flat-box root edge read "jagged") → v8 seat swept to pool-local (3.2,−0.4) 1.3m from the edge + meniscus collars + lighter wakes = **NEAR SHIP** (species YES "no other animal fits"; water YES "legs submerged to the waterline, body dry, concentric ripple rings at its feet") + **PROFILE PASS** (neck continuous, bill, legs, ripple at entry; shade-side crown/bustle NOs disclosed — the S profile reads the unlit flank) → face arc v9 (crown 30mm + stripe dropped + eyes lowered) FAIL (crest blades "floating lines", eyes dark-on-dark featureless) → v10 (crest solid wedge + gold eyes + bustle wedges) partial (crown YES bill goldenrod crest attached; stripe/eyes still unread) → v11 (eyes INSIDE the 16mm stripe band, gold-on-black) = **FACE SHIP** (crown/stripe/bill goldenrod/crest attached/amber eye; plate-pride minor disclosed). 18m framing-limited DISCLOSED (neck 3px wide at 18m — encounter species robin law; the plan row's own 4-8m reader math). The pool "broken beams" finding A/B-FALSIFIED via a bird-less control render (HOST_ARTIFACTS=YES — the wave-balustrade chords; disclosed for the struct lane, never touched).
+- Rig/decode laws learned: (a) **an UNNAMED intermediate group between keep-anchors is flattened by mergekit and its TRS drops out of nested anchor frames** — v4's pitched body group vanished from the neck/tail anchor chains and the decode caught the head 0.26m low while the STATIC meshes sat right (baked matrixWorld); name every intermediate group into the KEEP family (peacock-25 law d, third costume: `heron_body`); (b) **the anti-biped law** — a wading bird with centered legs + a tall body + an upright neck reads as a PERSON at distance; the cure is posture arithmetic: legs rear-set (ankles behind the body CG), body a pitched horizontal spindle (nose-up), neck a forward diagonal off the body front with the head well ahead of the legs — the bird's center of mass hangs BETWEEN leg and head, not over the legs; (c) **a marker on mid-grey against mid-grey carries no contrast in EITHER direction** — species-true gold eyes INSIDE the black stripe band (frog glint law inverted: the dark band is the eye's backdrop); (d) **a near-rim water seat projects the rim band under the wader's feet from the bank vantage** — seat depth from the rim is a READER-facing design parameter (0.5m rim distance failed, 1.3m read standing-in-open-water); sweep the seat deeper before iterating contact cues; (e) **a wake-furniture gate must check per-leg CONTAINMENT, not center coincidence** — unequal ring radii shift the union center by construction (v8 decode RED on a correct build taught the gate model, not the build); (f) the host-artifact A/B control (bird-less render, same vantage) settles "is that defect mine?" in one judge call — the fauna-11 isolation law applied to scene membership.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-24 | fauna-35 (2026-09-19) | grey heron v11 f6a10294 near + side + headface + encounter frames (`reviews/fauna35-heron/new-{near,side,headface,encounter}.png`) — fallback arc stands (near SHIP "reads as a heron, no other animal fits" + water SHIP + profile PASS + face SHIP crown/stripe/bill-goldenrod/crest/amber-eye; 18m framing-limited disclosed, encounter species robin law; judge = ZAI-VISION MCP fallback glm) until natively confirmed |
 | NATIVE-23 | fauna-34 (2026-09-19) | barn swallows v6 9e3f6b05 yard_gameplay (18m N lane) + bird-swallow_{1,2,3} side profiles + below-swallow_1 + rear-swallow_1 + side (plan) + encounter frames (`reviews/fauna34-swallows/new-*`) — fallback arc stands (18m VISIBLE ×2, 3/3 sides YES, below 4/4 YES ×2, rear bird+bank YES, layout CLEAR, encounter YES; judge = ZAI-VISION MCP fallback after the chat endpoint's 1210 image ban) until natively confirmed |
 | NATIVE-22 | fauna-32 (2026-09-18) | skep bees v5 e6ac8fac profile (bee_2 aimed at a=0) + bee_5/bee_4 aimed + gameplay + top frames (`reviews/fauna32-bees/new-bee-{bee_2,bee_5,bee_4}.png`, `new-gameplay.png`, `new-top.png`) — fallback arc stands (identity "stylized honeybee YES" ×2, bands 2-count, wings read, head-LEADING red-marker-proven x=507/960; 18m zero-bees sub-pixel DISCLOSED as scale physics — presence species, the 18m read is the 101px/0.6s motion) until natively confirmed |
 | NATIVE-21 | fauna-31 (2026-09-18) | duck waterline re-seat falsification pair — cand +0.06093 bank + bank_far + bank_close + side frames vs ctrl (live defect tuple) frames (`reviews/fauna31-duckseat/{cand,ctrl}-{bank,bank_far,bank_close,side}.png`) — fallback arc stands (cand PASS floating/freeboard/ripple-contact; ctrl DEFECT-CONFIRMED zero-freeboard) until natively confirmed |
