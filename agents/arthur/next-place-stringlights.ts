@@ -1,6 +1,7 @@
-// next-place-stringlights.ts — polish lane (polish-304): re-place
-// nx-dress-stringlights with the emissive-bulb build. Live entity carries an
-// EMPTY comp bag (verified this tick). Chassis: next-place-banner.ts.
+// next-place-stringlights.ts — polish lane (polish-305): re-place
+// nx-dress-stringlights with the wire-sheen build (bulbs polish-304 + faint
+// warm wire emissive). Live entity carries an EMPTY comp bag (verified this
+// tick). Chassis: next-place-banner.ts.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -9,7 +10,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-dress-stringlights";
 const FILE = `${ROOT}/agents/arthur/assets/village_stringlights.glb`;
-const REVIEWED_SHA = "ee40ab96e8f0785ef7762eed2e8c7a632fc9a4693eb61be87ea4dd1e979bf139";
+const REVIEWED_SHA = "246af38663aa698150f930a882a76717da5785eccbdb9b1e3880880818bea714";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [-6.0, 2.6, 7.5] as [number, number, number], yaw: 0.7853981633974483, scale: 1 };
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -40,7 +41,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "plaza stringlights — polish-304 emissive bulbs");
+  u.searchParams.set("name", "plaza stringlights — polish-305 wire sheen");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {

@@ -1662,3 +1662,49 @@ next wake once the gateway answers.
 - Next: wire-readability candidate (judge note: strand reads as a dotted
   curve at night, wire near-invisible — possible faint sheen, judge fresh
   first), or belltower clock face / plaza-core re-survey on fresh evidence.
+
+### polish-305 — stringlights wire readability (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-stringlights` (same tuple as polish-304, empty comp bag).
+  Build source `assets/mkatmos1.ts` (live was store/ee40ab96e8f0785e).
+- Defect (queue-head named at polish-304 close, judged fresh this tick on
+  exact live bytes + decode): after dark the strand read as floating glow
+  dots — the 24 wire segments (and caps/hooks) exported COLOR_0-only, no
+  glTF material; night wire ≈ ground ±20 RGB. Judge: "connected only by
+  inference… the cable is doing almost none of the work". Adjacent note
+  (hooks sub-pixel at 18m) recorded below, not treated.
+- Change (ONE edit): module-level `wireMat` (0x44402e iron + emissive WARM
+  @ 0.15) rides glbwrite's glow lane on the 24 strand segments ONLY —
+  caps/hooks stay honest dark iron, bulbs stay glow1 [1,.6939,.3515]
+  (6.7x brighter). Measured round: v1 @ 0.30 rejected (night wire ~150 vs
+  bulbs' ~210 — glow-tube risk; day +66 over the judge's 25-40 ask);
+  v2 @ 0.15 accepted: night wire mean 74 vs ground 46 (faint continuous
+  line, ~3x below bulbs), day delta p50 +37.
+- Candidate `246af38663aa698150f930a882a76717da5785eccbdb9b1e3880880818bea714`,
+  deterministic x2. Round-trip control: revert-rebuild reproduced live
+  ee40ab96 byte-exact; glowjar/torch/fireflies hash-identical across builds;
+  `_s` sibling advanced as intended (shared builder). NaN scan 0/7848;
+  nodes 44 unchanged.
+- Judge verdicts (ZAI fallback disclosed — no native vision tool loadable in
+  this cron session, native re-judge owed, polish-285..304 class): night A/B
+  PASS — continuous garland read, faint sheen on a cable (not an artificial
+  glow line), bulbs decisively brightest, zero new defects; day A/B PASS —
+  natural sunlit cable, no self-lit read, no artifacts.
+- Placed via updated `next-place-stringlights.ts` (hash gate
+  ee40ab96 -> 246af386): PLACED_VERIFIED, 1 upload + 1 verb, comp bag {}
+  preserved, idempotent rerun zero verbs, live pin
+  `store/246af38663aa6981.glb` @ (-6, 2.6, 7.5) yaw 0.7853981633974483 exact.
+- Served-bytes proof (NEW durable probe `p305-verify-served.ts`,
+  struct-104 law): served DRACO keeps glow0 [0.15,0.1041,0.0527] and glow1
+  [1,0.6939,0.3515] EXACT, 9 bulb + 24 wire meshes, 0 non-finite.
+- Standing gate re-run after mutation: ALL PASS exit 0 (sibling struct-250
+  landed mid-tick — accepted by the gate, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-305-stringlights-wire/` (before/ =
+  live baseline GLB + 10-view rig; after/ = v1 @ .30 retained as record;
+  after-v2/ = ACCEPTED; probes: p305-probe-mats, p305-nightprobe,
+  p305-abdiff, p305-wirevals, p305-nan).
+- Judge-named open note (below threshold this tick): end hooks sub-pixel at
+  18m — strand terminates "suspended from nothing"; a candidate would be
+  tiny anchor plates, judge fresh first.
+- Next: belltower clock face survey (named at polish-303 close), or
+  plaza-core re-survey on fresh evidence.
