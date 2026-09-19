@@ -36,6 +36,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | farm collie | `nx-dress-dog-001` | (32.5,−0.03935,7.75) yaw −1.292 | **0d57d27c** (fauna-37) | NEW 2026-09-19 — the homestead's missing working partner: tricolor rough collie in chest-down sphinx watch-doze, head up, on the meadow S of the goat pen (pen-ward nose — the attendant); 5 motion comps (doze bob + head Y-scan + nested ear flick + tail thump Z + ~9s sigh-settle X); v4 4 build versions, 18m SHIP ×2 + anatomy SHIP (ZAI-vision MCP fallback, native debt NATIVE-25); every working partner now stands |
 | wild rabbits | `nx-dress-wrabbit-001` | (−23,0.00041,15.25) yaw 0.585 | **57edb8a9** (fauna-38) | NEW 2026-09-19 — the meadow's own bunnies: wild-rabbit PAIR (upright alert sentinel with tall V ears + low grazer with pinned-back ears) at the garden-cottage reader edge facing the plaza; 7 motion comps (2 bob + alert scan + nibble peck + 2 nested ear flicks + scut flick); v4 4 build versions, encounter PASS + 18m PASS (ZAI-vision MCP fallback, native debt NATIVE-26); the garden's companion-adversary stands |
 | roe deer | `nx-dress-deer-001` | (51.25,−0.02328,−38.25) yaw −2.5 | **4196ca3f** (fauna-40) | NEW 2026-09-19 — the wild tier's largest animal: roe deer PAIR (antlered buck sentinel + browsing doe) stepping out of the SE treeline, facing the plaza on the reader spoke; 7 motion comps; v12 12 build versions, 18m SHIP at the true vantage + near SHIP (ZAI-vision MCP fallback, native debt NATIVE-28); the forest screen gains the animal that steps out of it |
+| hedgehog | `nx-dress-hog-001` | (−27.5,0.01474,26.5) yaw 0.767 | **5fcd8dce** (fauna-42) | NEW 2026-09-19 — the wild tier's garden species: a SINGLE foraging hedgehog (the fleet's first solitary mammal) rootling leaf litter at the garden cottage's quiet NW back margin, presented to the NW gallery-ring reader; 3 motion comps (breathing bob + slow head Y-scan + nested snout root-bob X); v4 4 build versions, encounter SHIP r4 + 18m present-but-speck framing-limited disclosed (ZAI-vision MCP fallback, native debt NATIVE-29); every homestead and garden species now stands |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -650,32 +651,21 @@ domain is commons-next `nx-dress-*` fauna only.
     backward-swept antlers + leaf ears, scanning; deer_b the DOE,
     BROWSING (head down at shrub height, neck curved, rump patch
     quartering the reader). Full record below.
-28. **[CANDIDATE fauna-41, 2026-09-19] European hedgehog at the garden
-    cottage's quiet margin — proposed fauna-41 (this tick, queue-empty
-    proposal per domain law).** The homestead tier was verified complete
-    at fauna-39 and stands; the wild tier's missing garden species is the
-    hedgehog — zero hedgehog entities in the 385-entity commons-next
-    census (scanned this tick; `nx-dress-nw-hedge-001` is a hedge dressing,
-    not fauna). ONE entity `nx-dress-hog-001`: a SINGLE foraging
-    hedgehog (solitary — the fleet's first non-pair mammal; hens/goats
-    flocked, everything else paired, the hedgehog walks alone), the
-    classic trundle — low domed spiny mantle in mottled dark-brown, pale
-    face + underfur, long pointed snout with dark nose-tip rootling leaf
-    litter, small dark eyes, rounded ears buried in fur. ×~1.5 marginality
-    bake candidate (robin/owl/frog law — true 26cm is sub-5px at 4m;
-    exact bake settled by the build tick's judge math). Motion contract:
-    3 comps — breathing bob + snout root-bob pendulum (X) + slow head-scan
-    (Y, sit-and-wait beetle hunter). Furniture: leaf-litter scatter + slug
-    specks at the composed snout point (grain law, minimal). Anchors
-    hog/hog_head/hog_snout (3 KEEP groups; `hog` collision-checked
-    against build sources at build tick). Seat: the garden cottage's
-    QUIET NW back margin (the SE reader edge already carries the wild
-    rabbits, fauna-38 — non-competing margins), candidate band centered
-    (−29, 22) with N fallback (−26, 24.5); build tick sweeps the live
-    census for ≥1.4m solids vs the cottage's rotated OBB (local 8.7×6.6
-    @ yaw 2.2) + carousel (−18,18) + wrabbit OBB; mosaic 0052's ground
-    film (x −49.5..−28.5, z 12..33) is walkable — forage BESIDE art,
-    never on it (sheep law), band kept x > −28.5.
+28. **[CLOSED fauna-42, 2026-09-19] European hedgehog — proposed fauna-41,
+    BUILT + SEATED fauna-42 (2026-09-19).** ONE entity `nx-dress-hog-001`:
+    a SINGLE foraging hedgehog (the fleet's first solitary mammal),
+    rootling leaf litter at the garden cottage's quiet NW back margin.
+    Full record below.
+     hog/hog_head/hog_snout (3 KEEP groups; `hog` collision-checked
+     against build sources at build tick; `hog$|hog_` added to mergekit
+     KEEP — collision-free, verified by rg over all mkv3 sources). Seat:
+     the garden cottage's QUIET NW back margin (the SE reader edge
+     already carries the wild rabbits, fauna-38 — non-competing
+     margins); the row-28 band center (−29,22) fell INSIDE the cottage's
+     1.4m skirt (census-verified: half 4.36×3.3 @ yaw 2.2), so the
+     fauna42-seat-sweep seated the best lawful seat (−27.5, 26.5) —
+     1.492m clear of the cottage, mosaic 0052 film-clear at 1.05m
+     (forage-beside-art, sheep law honored).
 
 ## Per-species rebuild records
 
@@ -876,8 +866,16 @@ domain is commons-next `nx-dress-*` fauna only.
 
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
+### hedgehog — fauna-42 (2026-09-19) CLOSED
+- **v4 sha16 5fcd8dcec44ee2e3** (full 5fcd8dcec44ee2e3fea43e98cdc403f7e1f3f8573d5bc09896791e5dbbc24826), NEW entity `nx-dress-hog-001` PLACED_VERIFIED at world (−27.5, 0.01474, 26.5) yaw 0.767 scale 1 — the garden cottage's QUIET NW back margin, rootling toward the plaza on the NW gallery-ring reader line. Seat = fauna42-seat-sweep best of 61 qualifying (worst solid gap 1.492m vs nx-town-garden-cottage = the margin's designed adjacency; mosaic 0052 film-clear at 1.05m, forage-beside-art sheep law; the row-28 band center (−29,22) was census-DISPROVED — inside the cottage's 1.4m skirt — the sweep seated lawfully outward; the 1.398m near-miss was NOT waived). Terrain preflight at the FINAL tuple: 9pt spread 1.2mm, PY = live heightAt 0.01474. Census 386→387 exactly, 4 verbs (upload+spawn+3 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m NW gallery-line approach, arrivals 0.00/0.29/0.31m; foreign support-seam stderr = woodstack/labyrinth/stones/lanternhook class, not ours), live bbox 0.737×0.189×0.43 == decode envelope (0.737×0.185×0.430 decode; place reports the culled mesh bbox).
+- Build: ONE European hedgehog, SINGLE (the fleet's first solitary mammal — hens/goats flocked, everything else paired, the hedgehog walks alone), ×1.5 marginality bake incl joints (robin/owl/frog law, frog chassis verbatim: g.traverse ×1.5, furniture POST-bake at final coords) — the classic trundle: low domed SPINY mantle (mottled three-tone browns 0x4a3a2a/0x5d4a35/0x6e5840), pale face + underfur skirt 0xcfc4ab, SHORT tapered tan snout with dark nose-tip rootling the litter, small dark eyes, rounded ears buried in fur, stubby legs under the skirt. Spine texture = ~86 wedge boxes in 6 rings, per-ring UP-TILT gradient (v4: dyOf 0.5→2.4 — tangent flank wedges foreshorten to nothing, the r3 law) + within-ring parity tone alternation; crown ring light-tipped. Furniture: 9-leaf litter scatter (3 tones) + 5 twigs + 2 pale slugs + 3 soil-dark freshly-turned leaves at the nose contact (grain law, deterministic). Anchors hog/hog_head/hog_snout (3 KEEP groups, snout NESTED in head; `hog$|hog_` added to mergekit KEEP this tick — collision-free, rg-verified). 17 nodes / 6.5k tris / 18 calls.
+- Motion: 3 comps live — breathing bob (.006/4.4s — twenty-ninth village exercise of part bob) + slow head Y-scan (.25/9.5s, sit-and-wait beetle hunter) + nested snout root-bob X-pendulum (.18/2.6s, rides the scan); epoch t0. Engine-true motion pair on final bytes: 9411px differ, band 396-563 at margin_near; rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim + rotatePartAtPivot.
+- Judge arc (ZAI-VISION MCP fallback glm, native debt NATIVE-29 above): 4 build versions, 5 judged rounds. r1 FIX (snout far too long — anteater/tapir read; crown smooth; legs nearly invisible; litter reads planks) → v2 snout −40% len + thickened base + wedge counts ×1.5 → r2 FIX (hedgehog read YES, snout PASS, crown apex fixed but mid-flank smooth band; litter placeholder note; nose-cap note) → v3 crown up-tilt dyOf 0.25→2.4 + longer wedges + turned leaves → r3 FIX (species unambiguous, apex strong, but ~40% mid-flank still smooth — tangent wedges) → v4 ALL rings lifted (dy floor 0.5) + parity tone alternation + soil-dark turned leaves → **r4 SHIP** ("all round-3 defects confirmed fixed; no blocking issues remain") + 18m placement read from the honest NW gallery vantage: hog LOCATED (size-correct dark mottled form, grounded, no defects) but reads as a generic speck at that distance — PRESENT-DISCLOSED as framing physics (robin/frog encounter-reward law; a 40cm ×1.5-baked animal is ~1.5% of frame at 18m). Judge's "mosaic absent" note = review-rig scope (composite loads cottage+hog only), not a world defect — the live mosaic 0052 is census-verified 1.05m from the seat.
+- Rig/decode laws learned: (a) **a plan's named band center can sit inside the host's own 1.4m skirt** — the row-28 (−29,22) center was census-disproved BEFORE any trial; the sweep is the law, the plan's band is a prior (b) **tangent spines foreshorten to nothing** — wedge direction must scale with surface height (dyOf gradient), or the flank reads smooth while the crown reads spiny; (c) **a spotting-scope view (same camera, narrow FOV) cleanly separates "absent" from "present-but-small"** when a full-frame judge says ABSENT at distance — cheaper than rebuilding; (d) **the plaza line is not always the honest reader vantage** — at the NW margin the plaza sightline runs THROUGH the carousel; the gallery-ring lane is the true approach, and the walk probe must use it too; (e) a lone low camera on mostly-grass frames a 40cm animal at ~1500 unique colors — floor such views on a mechanical presence probe (spine-brown px count), not raw color diversity.
+
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-29 | fauna-42 (2026-09-19) | hedgehog v4 5fcd8dce margin_near (encounter anatomy) + margin_gameplay (18m NW gallery-ring placement read) + lone_profile + margin_scope frames (`reviews/fauna42-hog/new-{margin_near,margin_gameplay,lone_profile,margin_scope}.png`) — fallback arc stands (encounter SHIP r4 "all round-3 defects confirmed fixed, no blocking issues" + 18m present-disclosed: judge located the hog as a size-correct dark mottled form, reads as generic speck at that distance — encounter-reward species, robin law; judge = ZAI-VISION MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-28 | fauna-40 (2026-09-19) | roe deer v12 4196ca3f edge_gameplay (18m TRUE reader-spoke vantage) + edge_near + edge_buckface-fill frames (`reviews/fauna40-deer/new-*`) — fallback arc stands (18m SHIP neutral r13 "Nothing breaks the scene" + near SHIP r14 + ear/antler presence r15; disclosed: doe's pale muzzle can read as a light face patch at 18m, inner-ear close-up below verification threshold; judge = ZAI-VISION MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-26 | fauna-38 (2026-09-19) | wild rabbits v4 57edb8a9 lone_near (encounter anatomy) + edge_gameplay (18m placement read) + lone_profile frames (`reviews/fauna38-wrabbit/new-{lone_near,edge_gameplay,lone_profile}.png`) — fallback arc stands (near r3 PASS "I would accept this revision" + 18m final PASS; disclosed: dark-valued pair-read, contact-shadow minimal at 18m; judge = ZAI-VISION MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-25 | fauna-37 (2026-09-19) | farm collie v4 0d57d27c pen_gameplay (18m plaza-lane read) + pen_face-fill (anatomy probe) + pen_profile + lone_near frames (`reviews/fauna37-dog/new-*`) — fallback arc stands (18m SHIP ×2 r2/r4 "reads as a dog in a lying pose, pale collar clearly distinguishable, grounded, SHIP"; anatomy SHIP r3 no-floaters/eye-seated/wedge-head/ears/muzzle+nose YES; judge = ZAI-VISION MCP fallback glm, cron lane native-absent) until natively confirmed |
