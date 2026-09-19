@@ -47,6 +47,12 @@ import { CampfireEngine, type CampfireWorld } from "./campfire.ts";
 // sweep owns healing — reconciling held doors to the derivation when a
 // hand or an author left them ajar. Steady state costs nothing.
 import { PuzzleEngine, type PuzzleWorld } from "./puzzle.ts";
+// The rope bridges (vocab-36) ride the same clock — the comp is a static
+// authored table (pair/width/impulse); the sweep watches presence against
+// the span capsule and fires crossings: one creak (say + presence sound)
+// and one sway write through the pendulum family's own impulse math. A
+// still bridge costs nothing per sweep.
+import { RopebridgeEngine, type RopebridgeWorld } from "./ropebridge.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -429,6 +435,13 @@ export class BehaviorHost {
    *  nothing. */
   private puzzles: PuzzleEngine | null = null;
 
+  /**
+   * Rope bridges (vocab-36): static authored tables; the sweep watches
+   * presence against the span capsule and fires crossings — one creak +
+   * one pendulum-impulse sway write. In-memory crossers are per-boot.
+   */
+  private ropebridges: RopebridgeEngine | null = null;
+
   constructor(w: WorldLike) { this.w = w; }
 
   /** Reconcile instances with state.behaviors — called after any behavior
@@ -548,6 +561,14 @@ export class BehaviorHost {
       this.puzzles ??= new PuzzleEngine(this.w as unknown as PuzzleWorld);
       this.puzzles.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] puzzle sweep`, err); }
+
+    // Rope bridges (vocab-36) ride the same clock — the comp is a static
+    // authored table; the sweep fires crossings (creak say + presence
+    // sound + pendulum-impulse sway write). A still bridge costs nothing.
+    try {
+      this.ropebridges ??= new RopebridgeEngine(this.w as unknown as RopebridgeWorld);
+      this.ropebridges.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] ropebridge sweep`, err); }
 
     // pressure-27: a world-wide per-tick FIRING budget — even 12 behaviors x
     // 16 legal timers can burn ~600ms of the 1s tick. Timers beyond the

@@ -43,6 +43,157 @@ plan. Never deploy, push, or restart production unless Bill asks.
 
 ## QUEUE
 
+- [x] Rope bridge crossing: swaying multi-entity span with pendulum
+      impulses driven by presence crossings.
+      DONE vocab-36 (2026-09-20): comp {type:"ropebridge"} — RopebridgeEngine
+      in server/ropebridge.ts, a 1Hz sweep on the BehaviorHost tick (the
+      vocab-2/3/14/17/22/29/31/32 precedent; the standard two-hunk shape in
+      behaviors.ts: import + field + tick block). NO use actions (the
+      bell/regions lineage — footsteps drive it): the sweep watches
+      embodied presence against the span capsule [deck live pos, far
+      anchor live pos] of half-width `width`, and every armed ENTRY fires
+      ONE creak — a say in the bell grammar (rb{who,at}, NO cause: presence
+      caused it) + ONE presence-plane sound at the projection point (the
+      chime/music doctrine: never logged, never replayed) — and pumps the
+      deck's sway THROUGH THE PENDULUM FAMILY'S OWN ARITHMETIC
+      (pendulumImpulse imported from reactions.ts — the same function the
+      swing's `reactions {push}` path uses; its client twin is motion.js
+      evalPendulum, so the mirrored-math law holds BY CONSTRUCTION). The
+      sway state lives in the folded motion comp: late join, restart,
+      replay, fork all fold the standing sway from the log alone — zero
+      client code, zero per-frame traffic. Contract in § ROPEBRIDGES
+      CONTRACT below implemented as written. Evidence: tools/
+      ropebridgetest.ts RED 25 pre-passing / 18 failing (engine absent —
+      the honest vocab-13..35 class) then ALL PASS 43/43 after four
+      disclosed test-side sequencing fixes (bob stood ON the span at
+      authoring time — a correct fire the baseline missed, cured by
+      walking him off-span first; the creak-sound grep found bob's
+      p:[0,0,0] fire before alice's — same root; the post-restart legs
+      needed alice/bob rejoined through the ordinary path — sockets die
+      with the killed server, boardtest's own placement). ropebridgetest
+      registered in the servergate battery, 43/43 IN-BATTERY; regression
+      slices green: smoke 85, behaviortest 27, trailmarkertest 47,
+      comptest 33, doortest 28, echotest 38; mcpl manifest 28/0 +
+      effective + denoise green after the agent.ts hunks (import +
+      describeRopebridge affordance line + exclusion-list entry + sound-
+      case rb branch). Scratch worlds only; no production world touched.
+      No eye-check owed by contract (zero new visuals — the sway is the
+      motion family's own realization, the creak is a note music.js
+      already synthesizes; the standing in-browser read of a swaying deck
+      is the same ear/eye-check class as vocab-9/18/25, deferred to Bill's
+      browser).
+
+### ROPEBRIDGES CONTRACT (vocab lane — drafted and implemented vocab-36, 2026-09-20)
+
+**Trigger.** A rope bridge is an entity (the DECK) carrying
+`comp {type:"ropebridge", data:{...}}` whose `pair` names the FAR ANCHOR
+entity. There are NO use actions (the bell/regions lineage): FOOTSTEPS are
+the interaction, and walking is already rank 0 for every present body.
+Any `use` on a deck passes through untouched to other evaluators.
+Attaching/removing the comp is builder (rank 1) — the author's standing
+decision that this span sways, identical doctrine to the whole line.
+
+**Pairing — the span is BUILT geometry.** `pair` is REQUIRED, VALIDATED
+not clamped (the trailmarker/waystone doctrine: a clamped anchor would be
+a lie about where the bridge goes). At sweep the pair must resolve to an
+entity in the fold that is not the deck itself; an absent, illegal, or
+self pair skips fail-closed with `ropebridge-skip` naming why, ONCE per
+reason per boot (a sweep must never spam) — a bridge that names nowhere
+sways nowhere.
+
+**State — the comp is a static table; the SWAY is the motion family's
+own folded state.** ZERO engine keys live on the ropebridge comp, ZERO
+comp transitions are ever minted. The authored shape
+`{pair, width, impulse, exitScale, cooldownSec, hz, sec, gain, wave}`
+rides verbatim in the fold. The deck's sway is an ordinary pendulum
+motion comp: the author may hang one (usually amp 0, damped — never
+perpetual); if none stands, the first crossing SEEDS one
+(period 3.8, damp 0.12, maxAmp 0.35 — a slow settle, not a machine).
+Late join, restart, replay, fork fold the standing sway from the motion
+comp alone — the log is the only durable state. The sweep's in-memory
+crossers map is per-boot presence truth only.
+
+**The crossing math.** The span capsule is the SEGMENT [deck live pos,
+anchor live pos] (lease-stream positions when leased, folded otherwise —
+the vPunt live rule) of half-width `width` [1,8] d3 (distToSpan:
+point-to-segment clamped projection, shared verbatim). An ENTRY means a
+posed embodied visitor moved from outside the capsule to inside;
+hysteresis holds state between width and exitScale·width [1,2] d1.25 so a
+walker at the rail cannot flap the deck. Spectators and unposed joins
+never cross (regions doctrine).
+
+**Effects — one creak, one sway write.** An armed entry fires exactly
+TWO log entries and ONE presence sound: the `say` (actor `world`, args
+`{text:"the rope bridge creaks under <who>", id, rb:{who, at}, by:<who>}`
+— the bell grammar: no cause, presence caused it) and the sway write
+`motion {id, ...pendulumImpulse(base, impulse·side, now)}` (actor
+`world`) — through the PENDULUM FAMILY'S OWN arithmetic, imported, never
+re-implemented (the mirrored-math law). The impulse magnitude is
+authored `impulse` [0.02,0.6] d0.12, SIGNED by the entry side (the 2D
+cross product of the walker's approach against the span — the deck
+lurches away from the stepping foot; a return trip pumps the other way).
+The creak sound `{type:"sound", id, rb:{creak:true}, note:{hz, sec,
+gain, wave}, p:[projection], at, by}` rides the presence plane (never
+logged, never replayed; music.js synthesizes any note). A `ropebridge-
+trigger` flight entry (kind reaction) records each crossing. A deck
+whose authored motion is NOT a pendulum (a spin, a bob, a path) keeps it
+untouched — the crossing creaks but does not pump (skip named, the
+reactions.ts impulse-guard doctrine).
+
+**Authority — none taken.** Walking is rank 0; the deck never asks.
+Attaching the comp is builder (rank 1) at the shell. Effects are say +
+motion-on-self + presence sound ONLY: no other verb can be minted from a
+footstep. Authority never widens — the family owns no use actions at all.
+
+**Rate/abuse boundaries.** (a) One sweep/second; log entries only on
+armed entries — a crowd idling on the deck mints one creak per walker
+per window, then nothing. (b) Per (bridge, walker) `cooldownSec`
+[2,60] d4 between fires. (c) FIRING_CAP 4 crossings fire per sweep
+world-wide (regions doctrine, `ropebridge-cap`). (d) The impulse is
+bounded by the pendulum family's own maxAmp clamp — the sway cannot grow
+unboundedly. (e) The verb rate bounds nothing here (no verbs), but the
+presence plane bounds the walk itself. (f) Skip/lint notes fire once per
+shape per boot (a sweep must never spam).
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live tick; folding a historical say or motion never
+re-fires and never re-sounds. On restart the fold carries the comp (the
+span watches again immediately) and the standing sway — a deck half-
+swayed at server death finishes its settle on every client (closed-form,
+motion.js doctrine). A late joiner folds the sway + the creak chat
+history — the complete truth, zero traffic.
+
+**Failure behavior.** Malformed comp → clamp + `ropebridge-lint`
+(particles-lint doctrine): width [1,8] d3, impulse [0.02,0.6] d0.12,
+exitScale [1,2] d1.25, cooldownSec [2,60] d4, hz [60,400] d140, sec
+[0.05,2] d0.4, gain [0.05,1] d0.35, wave ∈ sine/square/sawtooth/
+triangle d sawtooth (a creak is scratchy), unknown keys ride (the bag is
+public annotation). Missing entity → silent skip. The whole sweep
+wrapped in try/catch (house rule 3 — no bridge takes the server down).
+
+**Browser path.** ZERO client code: the sway realizes through the motion
+family's own evaluator (client/lib/motion.js evalPendulum — the mirrored
+twin of the impulse arithmetic the engine imports), the creak is an
+ordinary `{type:"sound"}` note client/lib/music.js already synthesizes
+(distance attenuation, pan, world-volume slider), and the say arrives as
+ordinary chat (logChat). A rope-mesh visual tier (catenary planks,
+hand-ropes) is builder geometry, deliberately not this family's business.
+
+**MCPL path.** Same log entries, same perception: the creak say lands in
+the agent inbox; the sound narrates as one radius-gated act line
+(`${id} creaks under a footstep (by ${who})`, denoised); `look()` lists
+the bridge via `shared/ropebridge.js describeRopebridge` (the
+describeDoor pattern) — far anchor, deck width, swaying read (derived at
+read time from the standing motion comp), and the truth that it has NO
+verb: walk it.
+
+**Intent.** The world moves under your feet. A rope bridge between two
+towers that creaks when you step on and sways with every crossing — the
+catenary geometry the builder places, the pendulum arithmetic the swing
+family owns, the presence plane the only witness. One 8KB comp, no
+script, no new verb, no new client code — footsteps doing the pushing,
+the fold remembering the sway.
+
 - [x] Phrase trigger with explicit matching and abuse/rate boundaries.
       DONE vocab-1 (2026-09-14): reactToSay in server/reactions.ts wired via
       the verbs.ts say after-hook; contract in § PHRASES CONTRACT below is

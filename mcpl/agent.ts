@@ -120,6 +120,10 @@ import { describeWish } from "../shared/wish.js";
 // the earshot, and the delay (shared/echo.js describeEcho). An echo wall
 // has no actions; the hint is to SPEAK near it.
 import { describeEcho } from "../shared/echo.js";
+// A rope bridge names its far anchor + deck width and the truth that it
+// has NO verb — the hint is to WALK it (shared/ropebridge.js
+// describeRopebridge).
+import { describeRopebridge } from "../shared/ropebridge.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -847,6 +851,18 @@ export class WorldAgent {
               const chz = Number(msg.note?.hz);
               this.gate.act(String(msg.by ?? msg.id), "chimes",
                 `${msg.id} chimes${chz > 0 ? ` (${hzName(chz)})` : ""}${msg.by ? ` — by ${msg.by}` : ""}`);
+              break;
+            }
+            if (msg.rb) {
+              // A rope bridge creaked (vocab-36): one act line per crossing,
+              // radius-gated like every ambient sense. The creak say already
+              // narrated the crossing; this is the sound's own line. `by`
+              // names the walker whose footstep pumped the deck.
+              if (!Array.isArray(msg.p)) break;
+              const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+              if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+              this.gate.act(String(msg.by ?? msg.id), "creaks",
+                `${msg.id} creaks under a footstep${msg.by ? ` (by ${msg.by})` : ""}`);
               break;
             }
             if (!msg.note || !Array.isArray(msg.p)) break;
@@ -2138,10 +2154,14 @@ export class WorldAgent {
       // text-tier read of the same folded comp the listener resolves at
       // fire (no actions: the hint is to SPEAK near it)
       if (c.echo) aff.push(describeEcho(c.echo, e.id));
+      // a rope bridge names its far anchor + deck width and the truth that
+      // it has NO verb — the text-tier read of the same folded comp the
+      // sweep watches (walk it; the deck answers)
+      if (c.ropebridge) aff.push(describeRopebridge(c.ropebridge, c.motion));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle", "observatory", "wish", "echo"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication", "garden", "sequencer", "festival", "trailmarker", "campfire", "puzzle", "observatory", "wish", "echo", "ropebridge"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

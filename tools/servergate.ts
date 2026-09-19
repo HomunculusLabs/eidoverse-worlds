@@ -174,6 +174,11 @@ const BATTERY: Row[] = [
   // delay + cooldown caps (static comp table, say-path listener, relay
   // says ARE the record), scratch sequencer.
   { name: "echotest", tool: "tools/echotest.ts" },
+  // vocab-36: the rope-bridge matrix (§ ROPEBRIDGES CONTRACT) — same
+  // class: a swaying crossing driven by FOOTSTEPS (no use actions), one
+  // creak (say + presence sound) + one pendulum-impulse sway write per
+  // armed entry, sway state folded in the motion comp, scratch sequencer.
+  { name: "ropebridgetest", tool: "tools/ropebridgetest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites
