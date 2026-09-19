@@ -561,6 +561,33 @@ domain is commons-next `nx-dress-*` fauna only.
     the WADER-seat and anti-biped laws below. Queue: EMPTY — next tick
     proposes the next homestead species (goats/ducks/bunnies language
     first per domain law).
+25. **[QUEUED fauna-36 proposal, 2026-09-19] farm collie — the homestead's
+    missing working partner.** Single dog, ONE entity (singular like the
+    cat/owl/fox — no pair): a rough-coated TRICOLOR collie in the classic
+    farmyard watch-doze — CHEST-DOWN SPHINX DOZE with head UP on crossed
+    forepaws (deliberately distinct from the cat's watch-SIT and the fox's
+    curled sleep), ears carried half-pricked, brush tail flat beside the
+    haunch with the white tip proud, ruff + tan points + white blaze/bib/
+    boots. TRUE-SIZE ~0.55m shoulder, no bake (a mid-size quadruped carries
+    18m; robin/owl marginality law does not apply). Read contract: 18m
+    identity by silhouette (collie ruff + long nose + lying-dog profile);
+    encounter carries the face (blaze, ear tilt, tail tip). Motion plan
+    (5-6 comps, phases staggered, epoch t0): breathing bob + slow head
+    Y-scan pendulum + ear-flick swivel on its own keep-group (bcat_ears
+    pattern) + lazy tail thump Z + deep sigh-settle X (~9s period).
+    Seat candidate zones (build-tick seat-sweep decides, fauna-19/23
+    chassis): PRIMARY the goat-pen attendant — the village's FIRST
+    homestead pen (34,13) gets its dog, watching the goats from the open
+    meadow beside the pen (room confirmed by census: pen bbox 6.5×6.5,
+    open ground around); ALTERNATE the inn-yard greeter on packed earth
+    (the visitor's first farmyard hello). Village logic: every working
+    partner stands EXCEPT the herder — the cat mouses, the donkey guards,
+    the owl keeps watch; the collie completes the set (Bill's own farm
+    language). Build notes: anchor prefix `dog_` (verify no dog* collision
+    in mergekit KEEP at build tick — none known); furniture ONLY if the
+    seat-scan calls for it (a stake-and-peg post or nothing — the dog is
+    on duty, not tied); judge 18m native-first (ZAI fallback disclosed,
+    native debt owed), night read n/a (no emissive).
 
 ## Per-species rebuild records
 
