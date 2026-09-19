@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 379,
+  "count": 381,
   "entities": [
     {
       "id": "beb4c791",
@@ -138,6 +138,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -188,6 +189,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -238,6 +240,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -288,6 +291,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -302,6 +306,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -316,6 +321,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -366,6 +372,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -380,6 +387,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -430,6 +438,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -444,6 +453,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2006,6 +2016,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2056,6 +2067,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2106,6 +2118,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2156,6 +2169,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2170,6 +2184,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2228,6 +2243,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2286,6 +2302,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -4192,6 +4209,124 @@
           "period": 2.3,
           "phase": 1.6,
           "t0": 1789753425206
+        }
+      }
+    },
+    {
+      "id": "nx-dress-dog-001",
+      "kind": "thing",
+      "pos": [
+        32.5,
+        -0.03935,
+        7.75
+      ],
+      "yaw": -1.292,
+      "scale": 1,
+      "lib": "store/0d57d27c9535d406.glb",
+      "bbox": {
+        "min": [
+          -0.904,
+          -0.01,
+          -0.281
+        ],
+        "max": [
+          0.75,
+          0.628,
+          0.401
+        ],
+        "size": [
+          1.654,
+          0.638,
+          0.682
+        ],
+        "center": [
+          -0.077,
+          0.309,
+          0.06
+        ]
+      },
+      "compKeys": [
+        "motion:dog",
+        "motion:dog_chest",
+        "motion:dog_ears",
+        "motion:dog_head",
+        "motion:dog_tail"
+      ],
+      "comp": {
+        "motion:dog": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 9.5,
+          "phase": 0,
+          "t0": 1789809165383
+        },
+        "motion:dog_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.28,
+          "period": 8.5,
+          "phase": 1.2,
+          "t0": 1789809165383
+        },
+        "motion:dog_ears": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.16,
+          "period": 2.6,
+          "phase": 0.7,
+          "t0": 1789809165383
+        },
+        "motion:dog_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.12,
+          "period": 3.4,
+          "phase": 2.1,
+          "t0": 1789809165383
+        },
+        "motion:dog_chest": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.015,
+          "period": 9,
+          "phase": 0.3,
+          "t0": 1789809165383
         }
       }
     },
@@ -7986,6 +8121,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -8379,6 +8515,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -8537,6 +8674,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -8695,6 +8833,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -8835,6 +8974,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -9389,6 +9529,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11347,6 +11488,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11397,6 +11539,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -13727,6 +13870,42 @@
       "comp": {}
     },
     {
+      "id": "nx-struct-tico",
+      "kind": "thing",
+      "pos": [
+        -6.32582,
+        -0.03364,
+        -65.696149
+      ],
+      "yaw": 5.85558,
+      "scale": 1,
+      "lib": "store/5b8401b007528533.glb",
+      "bbox": {
+        "min": [
+          -3.3,
+          0,
+          -3.3
+        ],
+        "max": [
+          3.3,
+          6.295,
+          3.3
+        ],
+        "size": [
+          6.6,
+          6.295,
+          6.6
+        ],
+        "center": [
+          0,
+          3.148,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
       "id": "nx-struct-tribar",
       "kind": "thing",
       "pos": [
@@ -14881,6 +15060,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -14931,6 +15111,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -14981,6 +15162,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15175,6 +15357,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15225,6 +15408,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15275,6 +15459,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15325,6 +15510,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15338,7 +15524,7 @@
       ],
       "yaw": -2.9441970937399127,
       "scale": 1,
-      "lib": "store/95231f20a016b303.glb",
+      "lib": "store/4f9bb8a586f00f6d.glb",
       "bbox": {
         "min": [
           -1.25,
@@ -15411,6 +15597,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15514,6 +15701,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15600,6 +15788,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15686,6 +15875,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15772,6 +15962,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15930,6 +16121,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },

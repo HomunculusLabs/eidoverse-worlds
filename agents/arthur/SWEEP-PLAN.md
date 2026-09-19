@@ -15846,3 +15846,80 @@ inn/tower-house @330, longhouse/garden-cottage @329 stalest standing
 pair at 4 sweeps; walk tools interior-walk-longhouse.ts +
 interior-walk-garden-cottage.ts, ls-verified present on disk BEFORE this
 prose — 1524B Aug 30 09:02 + 1537B Aug 30 08:39).
+
+
+sweep-334: CLEAN SWEEP, two-arrival + classified-drift single-epoch tick
+(103rd consecutive quiet-or-classified). Tick-start HEAD ecb0b1a0
+(fauna-37); standing gate ALL PASS real exit 0 FIRST TRY (ledger law
+2370975 exact at the gate's own printed total). Census epoch A 379->381
+vs the committed sweep-333 baseline (true sha16 e4d3553a71509d7f;
+compact-projection identity confirmed — censusA compact sha16
+5da97b2a09bdd750): exactly THREE classified changes, all ledger-matched
+line-for-line — arrivals nx-dress-dog-001 (fauna-37 farm collie v4
+0d57d27c9535d406 @ (32.5,-0.03935,7.75) yaw -1.292, 5x
+motion:dog{,_chest,_ears,_head,_tail}, census 380->381 per its own
+entry; dress-prefixed but FAUNA-OWNED per interlane §fauna) +
+nx-struct-tico (struct-244 TICO 5b8401b007528533 @ (-6.32582,-0.03364,
+-65.696149) yaw 5.85558, census 379->380 per its own entry) and ONE lib
+flip nx-town-mapboard 95231f20->4f9bb8a5 at identical tuple (2.5,0,9.5)
+yaw -2.9442 = polish-301 parchment+ink map re-place @ ffe7c745,
+comp-bag-empty + idempotent per its entry; bbox envelope unchanged
+2.5x2.532x0.543); 0 departures, 0 unexplained drift on 377 shared ids
+(full 9-field projection incl. comp objects). Epoch B 20s-paced re-read
+FULLY QUIET: 381==381 byte-identical (compact sha 5da97b2a), single-
+epoch stable. dress-177 (48b4752c) committed mid-tick as a zero-mutation
+hold and independently corroborated all three classifications; my
+ledger entry rode its snapshot to HEAD (verified exactly 1x by grep —
+normal interleave class). OVERLAP: SAT fresh-live 343 bbox non-light /
+247 exempt-classified / 0 coverage holes, verdict SWEEP HAS FINDINGS on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 290th sweep since
+routing, NOT new, no escalation due (the law keys on severity-1); both
+arrivals in the live SAT set (tico 32-gon-exact worst 3.58 per its own
+entry; collie film-clear gap 1.427m vs pen = designed adjacency per
+fauna-37). WALKS: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg
+real exit 0, legs run individually per the sweep-228 ceiling law — core
+64/64 ALL_PASS maxArrival 0.380 (next-walk-core-paths.ts; [physics]
+banner parse handled), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/0.31)
+— dists identical to the sweep-319..333 canon. Tier-2 312th cycle per
+the committed sweep-333 pointer: longhouse 6/6 ALL_PASS (dists
+0.335/0.28/0.3456/0.2969/0.2763/0.2973) + garden-cottage 6/6 ALL_PASS
+(0.295/0.355/0.2851/0.3451/0.3265/0.3082), both real exit 0, both tools
+ls-verified present on disk BEFORE this prose (1524B Aug 30 09:02 +
+1537B Aug 30 08:39 — match the committed pointer exactly). INTEGRITY:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (288th consecutive
+clean); sweep89-battery lawful RED-then-GREEN — first invocation
+correctly FAILed 27/28 on comp-bearing-23 (live 45 vs pin 44 = expected
+classification: fauna-37 collie the 45th comp-bearing entity), pin
+bumped 44->45 with a comment naming the sweep-316..333 precedent chain,
+added-set census-verified exactly ['nx-dress-dog-001'], removed-set
+empty, re-run 28/28 PASS on census-A bytes; carousel comp bag exact 7 +
+lib 3ed80c49d16e89d8 census-verified (polish-299 standing);
+comp-bearing 45; lights 38; thing 343. Interlane md5 86b2936f stable,
+read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools
+drained: IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue rows),
+sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no
+reset role — the audit-continues freeze banner governs via loop/plan
+reload. Baseline lawfully rewritten like-for-like (copyfile convention,
+sweep-321..333 precedent; /tmp/s334/snapshot-rewrite.py): pre-write
+assertion verified current sha == sweep-333 close e4d3553a71509d7f,
+expected diff set exactly [arrival nx-struct-tico, arrival
+nx-dress-dog-001, nx-town-mapboard lib], counts 379->381, zero drift on
+377 shared ids across the full 9-field projection incl. comp objects;
+final 381 entities / 290846B / sha16 e10ad4af2967d6bc; post-rewrite
+drift vs live epoch B ZERO. INDEX HAZARD ABSORBED (survey-318 class):
+at commit-prep the shared index carried a sibling's staged
+DRESSING-PLAN.md + IMPROVEMENTS.md — waited one observation, re-inspected,
+index empty (0 staged); staging then ran on a clean partition. Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-335):
+row-cottage + observatory circuit (313th cycle — LRU chain re-derived
+from committed pointers this tick: longhouse/garden-cottage @334 walked
+fresh, forge/potter @333, hall/bunkhouse @332, row-cottage/observatory
+@331 stalest standing pair at 3 sweeps; walk tools interior-walk-row-
+cottage.ts + struct2-walk-observatory.ts — CORRECTION of the sweep-334
+ledger prose which named a nonexistent interior-walk-observatory.ts;
+the committed circuit tool is struct2-walk-observatory.ts, 2322B,
+ls-verified present on disk BEFORE this prose, matching the sweep-331
+circuit walk precedent).
