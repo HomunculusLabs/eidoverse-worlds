@@ -19181,3 +19181,172 @@ Next queue head: struct-253 build+judge tick (R11-63, empty bank —
 re-derive the form from the ledger grep: snub cube / rhombic solids /
 truncated cubocta named unclaimed, or Bill's verdict routing; fresh
 five-file grep to confirm the gap before building).
+
+## struct-253 (2026-09-19): R11-63 THE RHOMBICUBOCTAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-254 committed carry)
+
+253%3=1 build slot, bank EMPTY after tdodec struct-252 -> build tick per
+the ten-tick precedent. Gate ALL PASS real exit 0 tick-start (unpiped,
+GATE_EXIT:0 at e493000a epoch — dress-185 HEAD). Shard drained fresh
+(IMPROVE-PLAN pin 7fa8a224 unchanged — same pin as struct-238..252, 0
+OPEN nx-struct rows). Ledger max re-derived struct-252 -> tag struct-253
+(numeric extraction, re-checked immediately before append). Native absent
+from the cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as
+struct-169..252; owed board unchanged 26 + csaszar v3 + ssd v1 +
+tetrahelix v2 + rt v1 + co v1 + ico v2 + nodoid v3 + tico v2 + toct v1 +
+tret v2 + tcube v1 + tdodec v1, plus srcubo v1 now riding). No
+interrupted 253 window existed (no struct253-*/next-place-struct253 files
+pre-tick).
+
+FORM SELECTION fresh grep (the struct-252 queue-head named the sweep):
+rhombicubocta / srcubo / small rhombi — 0 real claims across
+STRUCTURES-PLAN (only the unclaimed-pointer lines), IMPROVEMENTS,
+CITY-PLAN, IMPROVE-PLAN, NEW-VILLAGE-PLAN, DRESSING-PLAN. The
+ARCHIMEDEAN branch's SEVENTH member (cubocta 237, tico 243, toct 245,
+tret 247, tcube 249, tdodec 251). Selected over the also-unclaimed snub
+cube: srcubo is ACHIRAL (no handedness decision owed to Bill), keeps the
+family's axis-aligned 4-fold seat law exactly, and reads calmer at 26
+faces against Bill's R11 density note; truncated cubocta + snub stay
+named for later sweeps.
+
+CONCEPT: NOTHING CUT — EVERYTHING GROWN. Five members took from their
+parents (24–76% surrendered); the seventh GIVES. The Conway EXPAND of
+the cube: pull the six faces outward, WHOLE and unchanged, and grow a
+belt — at every parent EDGE a new square, at every parent VERTEX a new
+triangle. Every element of the parent becomes a face of the child
+(6+12+8 = 26, T6b); the parent cube stands INSIDE, WHOLE (containment
+margin 1.03m scaled — corners clear of the nearest grown face); the
+child carries exactly 4 + 10*sqrt(2)/3 ~= 8.714x the parent's mass (T6,
+dual-computation agreement 1e-12): the branch's FIRST GROWTH.
+Presentation: SQUARE-DOWN, 4-fold IDENTITY seat — the standard
+permutation coords (±1,±1,±(1+sqrt(2))) already sit the parent face flat
+on the dais with the four axis squares dead on the cardinals (measured
+with hard throws; no rotation, no twist). IRON carries the eight
+TRIANGLES (the grown corners, dark — the family's dark triangles now
+mean GROWTH, not loss) + all 48 seam bonds; STONE carries the eighteen
+SQUARES (six parent faces WHOLE + twelve grown belts) + the
+TWENTY-SIX-sided dais (one side per face, 18+8 — theme-number law).
+Night contract: six warm brass beads at the six PARENT squares — the
+parent's faces, lit (tcube v1 pattern): one CROWN on an iron finial
+stem (tret v2 occlusion law, clearance 0.947 >= 0.225) + four WAIST at
+the exact cardinals + the SIXTH PRESSED INTO THE EARTH beneath the flat
+foot, fully buried in the dais band (y 0.15, tico's-twelfth idiom —
+five read at night, six in truth, disclosed). The twelve belt squares
+and the eight grown corners stay dark.
+
+PARAMETRIZATION (exact, closed-form): vertex set = all permutations of
+(±1,±1,±(1+sqrt(2))), edge 2, R = sqrt(5+2*sqrt(2)); faces by direction
+families — 6 axis squares, 12 belt squares (±1,±1,0)-cyclic, 8
+triangles (±1,±1,±1)/sqrt(3). Dihedrals exactly TWO classes: sq-sq dot
+1/sqrt(2) (interior 135deg, 24 edges), sq-tri dot 2/sqrt(6) (interior
+144.7356deg, 24 edges), zero tri-tri and zero axis-axis edges. Volume
+(16/3)(6+5*sqrt(2)) ~= 69.7124; parent 8; ratio 4+10*sqrt(2)/3.
+
+PROBE (struct253-probe-srcubo.ts, tracked) 9/9 ALL PASS real exit 0:
+T1 Euler 24-48+26 = 2; T2 8 regular triangles (60deg) + 18 regular
+squares (90deg), worst side dev 8.9e-4 (post-scale metres), worst angle
+dev 0.0; T3 degree 4 everywhere, exactly 1 triangle + 3 squares per
+vertex (figure 3.4.4.4); T4 manifold 48/48; T5 all 24 verts at exactly
+R (== closed form), dihedral classes exact (worst 1.1e-16); T6 THE
+FIRST GROWTH — divergence 69.7123616633 == closed, ratio
+8.714045207910 == 4+10*sqrt(2)/3 to 1e-12, PARENT CONTAINMENT worst
+margin 0.816497 units = 1.0315m scaled (the cube whole inside its own
+expansion); T6b THE ELEMENT THEOREM — 6+12+8 face-direction families
+machine-matched to the parent's F/E/V dirs, disjoint, exhaustive; T7
+seat — bottom square FLAT on dais top (spread 0.0), top parallel, 90deg
+symmetry 0 misses, centroid on axis 5.6e-17, height 6.1000 exact,
+reach+rod 3.361 <= apothem 3.474 (26-gon dais R3.50 APOTHEM-FIRST),
+bead census 1 crown dead-axis + 4 waist cardinals + 1 pressed foot +
+12 BELTS DARK, FINIAL-CLEARANCE 0.947 >= 0.225; T8 every inset plate
+vertex strictly inside the solid (worst poke -2.7e-2), corner tuck
+24.1mm. RED control (--red displaces vertex 7): exit 1, T2/T5/T7 fail
+— verified.
+
+BUILD (agents/arthur/assets/mkv3-srcubo.ts, staged -f): root identity
+(struct-188 law); texMat lanes srcubo_stone/srcubo_iron (struct-38 law);
+bead emissive 0x9a7030 @ 1.4 in-GLB (tico v2 + toct + tret + tcube +
+tdodec build-time law); 76 pre-merge meshes + 1 KEEP glow group
+glow_srcubo_6; envelope law green in-build 7.00x7.87x6.95 == probe
+contract. v1 deterministic x2 byte-identical sha256
+6417e0c06675c0bfab47f8cf679efb055bf12bbbcd23610822854d3890f74401
+(mtime-verified 11:56, rebuild x3 total).
+
+DECODE (struct253-decode-srcubo.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (srcubo_iron + srcubo_stone + glow_srcubo_6); D2
+26-gon dais TRUE box +/-3.500//+/-3.474 corners present sole min y
+-0.000000; D3 iron lane split 3844 verts = 3696 rod + 52 finial-stem +
+96 triangle-plate + 0 unclassified, bond coverage 48/48; D4 630
+square-plate verts worst 58mm (<= 62 shell); D5 beads 6/6
+parent-square clusters (crown stem-lifted + 4 waist cardinals + 1 foot
+pressed), BELT-SQUARE BEAD HITS 0 (the twelve grown belts stay dark),
+emissive sole-night, five aloft + foot buried; D6 grounding sole at
+grade + ground band; D7 envelope drift 0.00mm; D8 texMats 2/2. RED
+control (village_tdodec3.glb — the sibling Archimedean's own bytes):
+census FAIL clean stop exit 1.
+
+RENDERS: struct253-render-srcubo.ts (tracked chassis, struct251
+lineage) 9 frames on the EXACT pinned bytes — bounds
+min[-3.5,-0.000,-3.474] max[3.5,7.870,3.474] == contract;
+reviews/struct253-srcubo/ (ignored — sha pin above is the durable
+record).
+
+JUDGMENT v1 (ZAI FALLBACK — native cron-absent, disclosed, rides the
+owed board as srcubo v1): day gameplay 18m 4/4 PASS (identity reads
+"rhombicuboctahedron" UNPROMPTED — "the characteristic chamfered-cube
+profile, square panels dominant, dark triangles as accents, count and
+arrangement consistent with 18+8"; silhouette closed + finial
+connected; grounding flush + shadow attached; the judge's one flag, the
+front-panel bead, is the CONTRACTUAL cardinal waist bead facing dead-on
++X — prompt-arithmetic class, my prompt under-named the waist row;
+decode D5 proves 6/6 at exact parent-square centers; the same class as
+tcube struct-249's flagged second bead; minors: dais faceting lost at
+18m (near-view quality, family-wide) and the hairline finial stem
+(family-wide by design, judged legible at night)). Night 3/3 PASS
+(crown stem-mounted "not floating", waist bead dead-center on the front
+panel "reads as intentional inlay", dark discipline clean, zero bloom,
+zero glow spill; exactly 2 warm points resolve at this azimuth — crown
++ front waist, the single-azimuth-yield precedent disclosed (six in
+truth by decode D5, the ring completes circling; the judge's suggested
+30-45deg azimuth confirm is answered by the decode)). Closeface 3/4
+PASS (joinery clean with the intended shadow-gap reveal, two material
+families distinct and textured, zero hard defects; the FAIL-tier notes
+are the bottom-band darkness = shadow-side iron + the buried foot plate
++ dais shadow pooling (the judge itself: "most plausibly a shadowed
+lower edge-square" — the family's shadow-gap look, disclosed-Minor) and
+the waist-bead "orange sphere" = intentional contract). v1 ACCEPTED
+BANKED NOT PLACED — no real defect, no iteration needed.
+
+DISPOSITION: placement = struct-254 committed carry (fresh census scan,
+under-served band/district selection, 8m NN + per-district soft cap 6
+audit, 26-gon-exact polygon SAT struct-19 class, oblique-yaw struct-104
+band, terrain preflight over the TRUE rotated 26-gon, hash-gated plain
+spawn nx-struct-srcubo, comp {}, ground circuit walk). Folly class —
+presentation dais R3.50 apothem 3.474, walk standoff 8m law applies
+directly (apothem 3.474 -> 8m square circuit chord-mid ~4.5m >> 1.4).
+
+Bill eye-check pointer (after placement): the Archimedean branch's
+seventh member — where the tcube's deeper cut and the tdodec's lightest
+touch stand on other diagonals, THE RHOMBICUBOCTAHEDRON stands
+SQUARE-DOWN: the cube GROWN, not cut — its six faces pushed outward
+whole, a new square at every edge, a new dark triangle at every corner;
+twenty-six panels, every element of the parent become a face of the
+child. The theorem standing under it: cut and the branch took a quarter
+to three-quarters of its parents — grow, and the child stands
+8.714x the cube's mass with the parent still whole inside (its corners
+a full metre clear of the nearest grown face). After dark the six brass
+beads mark exactly the six parent faces, lit — one on the finial at the
+crown, four at the compass waist, and the sixth given to the earth
+beneath the flat foot. The belts and the grown corners stay dark.
+
+Files: struct253-probe-srcubo.ts + struct253-decode-srcubo.ts +
+struct253-render-srcubo.ts (all NEW, tracked), assets/mkv3-srcubo.ts
+(NEW, staged -f), reviews/struct253-srcubo/ (9 frames, ignored — sha
+pin above is the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-253, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+Next queue head: struct-254 placement tick (the committed carry above);
+after it lands, next build sweep re-derives from the form ledger
+(truncated cuboctahedron / snub cube / rhombic named unclaimed) or
+Bill's verdict routing.
