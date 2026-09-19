@@ -1308,6 +1308,62 @@ next wake once the gateway answers.
   polled clean across criteria 1-7 — consider eye-gate packet for the
   polish-285..298 night campaign, or re-survey plaza-core on fresh evidence.
 
+### polish-299 — carousel wedge night banding (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-298 wedge build (live was 75b413c2).
+  Queue-head candidate from polish-298's close (night seam tracery,
+  "implied not drawn"), re-judged fresh this tick on exact live bytes.
+- Defect (fresh judge on exact live bytes, night 18m + pixel probes): the
+  cone read "smooth, unbroken… no discrete radial lines, battens, or
+  seams"; red/cream wedge alternation "does not survive night lighting";
+  night identity 4/10 "generic dark umbrella roof"; weakest element =
+  the canopy cone. Root cause decoded: `carousel_fabric_b` emissive
+  [0.15,0.05,0.04] (lum .071) vs cream fabric .059 — Δ.012 renders ≈ +4
+  sRGB, value-dead; the 13px batten lines alone cannot carry the read.
+- Change (ONE intervention, new production step `wedges.ts`, ribbing.ts
+  chassis): emissive-only edit `carousel_fabric_b` → [0.62,0.20,0.13]
+  (lum .285). Three measured rounds: v1 .149 "barely-there warm tint";
+  v2 .212 A/B-confirmed 2v1 segments but full-frame underpowered AND
+  pixel-diagnosed as sitting AT the scenery-panel value (.213) — roof
+  band merged with the lit clerestory; v3 .285 lifts the stripes clearly
+  above the interior band (lit-from-within circus canvas read), decisively
+  below ceiling .35, crown .59, lanterns .80. Day falsifier PASSED
+  (+40.6 avg, "no panel reads as self-lit in daylight", natural painted
+  gores, zero regressions). Scope gate: sole primitive user
+  cr_canopy_wedges[0] (16 verts) asserted; no new lights/geometry/nodes
+  (49/27 unchanged); spin subtree/sockets/motion untouched.
+- Candidate `3ed80c49d16e89d8c0eb4900d8dbd8ab1b0850a4aa3cf8603bad88b3e3e41f1b`
+  A/B byte-identical ×2, NaN scan clean, 15/15 views clip-clean, horse-solo
+  controls 4/4 byte-IDENTICAL, night changed-px 234 warm 98% confined rows
+  188..211 (cone band); night A/B crop judge: legibility roughly doubled,
+  "clearly pieced near the apex", eave boundary clean, zero artifacts;
+  watch-item: near saturation ceiling — no further intensity push.
+- Judge verdicts (ZAI fallback, no native vision this cron session, native
+  re-judge owed — same class as polish-285..298): night A/B PASS (2-3 vs 1-2
+  red segments, red reads deliberate not accidental, hierarchy lanterns >
+  interior > wedges intact, restrained not glow-orb); day PASS (subsumed by
+  daylight, "correct outcome"). One judge claim ("emissive might not have
+  rendered") pixel-falsified (sha-confirmed render + 234 changed px) —
+  polish-289 class, probes outrank prose.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED (1 upload + 8
+  verbs), 7-key comp bag replayed verbatim, idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/3ed80c49d16e89d8.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact. Served sha == upload sha
+  (identity); served decode keeps emissive [0.62,0.2,0.13] on
+  cr_canopy_wedges[0] only, NaN clean.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-299-carousel-seamtracery/`
+  (before/ = live 75b413c2 build full 15-view rig + baseline GLB;
+  after/ = v1 retained as record; after-v2/, after-v3/ = measured rounds;
+  night-cone-ab*.png = judge A/B crops; deploy dry/apply/idem reports +
+  verified served bytes; census-baseline/fresh + baseline-entity.json
+  regenerated fresh; polish299 probes durable-copied).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path) — recorded here + ledger instead.
+  Not fabricated.
+- Next: carousel polled clean across criteria 1-7 after polish-285..299 —
+  eye-gate packet candidate for the night campaign (deliver exactly once
+  per loop law); or re-survey plaza-core on fresh evidence.
+
 
 
 - Subject: `nx-carousel` at the polish-296 navy-coat build (live was
