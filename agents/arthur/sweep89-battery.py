@@ -21,7 +21,7 @@ def lib(e):
 
 # carousel
 car = E.get("nx-carousel", {})
-check("carousel-lib-0cdd7eedcc22b312", lib("nx-carousel") == "0cdd7eedcc22b312")  # polish-293 plinth/brass emissive night cure, sweep-322 bump; prior polish-292 c62a8bbd8e794a9d sweep-320, polish-291 a35f40f1925ce93b sweep-319, polish-290 08ce1189b2d4b42b sweep-317, polish-289 429cde23a16d1c17 sweep-316, polish-288 e16a1bc002cb1650 sweep-313, polish-287 0144587820eb5e67 sweep-312, polish-286 dfad459e492d9727 sweep-311
+check("carousel-lib-8cd33f4423d8f7e7", lib("nx-carousel") == "8cd33f4423d8f7e7")  # polish-294 scenery-panel night separation, sweep-323 bump; prior polish-293 0cdd7eedcc22b312 sweep-322, polish-292 c62a8bbd8e794a9d sweep-320, polish-291 a35f40f1925ce93b sweep-319, polish-290 08ce1189b2d4b42b sweep-317, polish-289 429cde23a16d1c17 sweep-316, polish-288 e16a1bc002cb1650 sweep-313, polish-287 0144587820eb5e67 sweep-312, polish-286 dfad459e492d9727 sweep-311
 ck = sorted((car.get("comp") or {}).keys())
 check("carousel-comp-exact-7", ck == sorted(["motion:carousel", "motion:horse_0", "motion:horse_2", "motion:horse_4", "motion:horse_6", "particles:smoke", "sockets"]))
 
