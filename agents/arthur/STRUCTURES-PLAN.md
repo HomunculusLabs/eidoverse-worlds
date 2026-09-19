@@ -18638,3 +18638,154 @@ Files: struct248-scan-tret.ts + struct248-terrain-tret.ts +
 struct248-walk-tret.ts + next-place-struct248.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-248, D+0 E+1). One upload, one verb. Zero pushes.
+
+## struct-249 (2026-09-19): R11-60 THE TRUNCATED CUBE —
+## BUILD+JUDGE TICK, v1 ACCEPTED BANKED NOT PLACED
+
+249%3=0 nominal refine slot with EMPTY bank (tret placed struct-248) ->
+build+judge tick per the struct-229/233/235/237/239/241/243/245/247
+precedent (refine pool empty of payable items 40+ ticks). Gate ALL PASS
+real exit 0 tick-start at dd6d6986 (dress-181; unpiped GATE_EXIT:0).
+Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0 OPEN
+nx-struct rows — same pin as struct-238..248). Ledger max re-derived
+struct-248 -> tag struct-249 (re-checked immediately before append).
+Native absent from the cron catalog all tick (tool_search fresh:
+terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..248; owed board stays 26 + csaszar
+v3 + ssd v1 + tetrahelix v2 + rt v1 + co v1 + ico v2 + nodoid v3 +
+tico v2 + toct v1 + tret v2, plus tcube v1 now riding).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN +
+CITY-PLAN + CITY-PLAN-V2): truncated cube / tcube / truncated
+hexahedron / truncube 0/0/0/0/0 real mentions (snub / rhombicubocta /
+truncated-dodeca also 0 — named for later sweeps). The ARCHIMEDEAN
+branch (opened struct-237 cuboctahedron) takes its fifth member — and
+the PARENT-ECHO of the cube: the branch's fourth Platonic parent
+(tetra✓tret, octa✓toct, icosa✓tico, cube→tcube; dodeca remains the
+only parent without its echo).
+
+CONCEPT: THE DEEPER CUT. The family law is 1/3 — but cut a CUBE's
+eight corners at exactly 1/3 and the faces become IRREGULAR octagons
+(corner sides 2√2/3 vs middle sides 2/3 — side ratio exactly √2,
+machine-proven T6b: 1/3-BAR). Regularity demands the cut go DEEPER:
+u = 1 − 1/√2 ≈ 0.2929. Cut that deep and exactly 7(√2−1)/3 ≈ 96.65% of
+the parent still stands — the lightest touch of the whole branch
+(tico/toct/tret each surrendered far more). Machine-verified, not
+asserted from prose (T6): divergence-theorem volume of the BUILT faces
+over exact corner determinants, dual-computation agreement 2.7e-15.
+Presentation: FACE-DOWN, 4-fold — the cube's own cardinality. The
+bottom octagon lies FLAT on the dais; four octagons face the four
+cardinals dead-on; the up-tilted triangle cuts sit at exact 45°
+diagonals. IRON carries the eight TRIANGLES (the cuts — the taken
+3.35%, dark) + all 36 seam bonds; STONE carries the six OCTAGONS (the
+parent's own face planes; O-O dihedral == the cube's own 90°, T5) +
+the FOURTEEN-sided dais (one side per face, 6+8 — the theme-number
+law). Night contract: six warm brass beads at the six OCTAGON centers
+— the six parent faces, lit: one CROWN on an iron finial stem (tret v2
+occlusion law, clearance 0.489 >= 0.225) + four WAIST at the exact
+cardinals + the SIXTH PRESSED INTO THE EARTH beneath the flat foot,
+fully buried in the dais band (y 0.15, spans 0..0.30; tico's-twelfth
+idiom — five read at night, six in truth, disclosed). The iron cuts
+stay dark: absence is the mark of the removed corners.
+
+PARAMETRIZATION (exact, closed-form): parent cube (±1,±1,±1), edge 2;
+cut points at u and 1−u on each of the 12 parent edges -> 24 verts;
+uniform edge a = 2(√2−1); R_tcube = √(5−2√2) (vertex (1,1,√2−1));
+corner tet legs 2−√2, corner volume (20−14√2)/6. Seat: parent +Z face
+normal -> −Y (OCTAGON DOWN, 4-fold); NO twist-snap needed — Rx(90°)
+lands the four waist octagon normals on the exact cardinals and the
+up-tilted cuts at exact 45° diagonals (T7 verifies both to 1e-9).
+
+PROBE (struct249-probe-tcube.ts, tracked) 9/9 ALL PASS real exit 0: T1
+Euler 24−36+14 = 2; T2 8 regular triangles (60°) + 6 regular octagons
+(135°), worst angle dev 4.4e-16; T3 degree 3 everywhere, exactly 1
+triangle + 2 octagons per vertex (figure 3.8.8); T4 manifold 36/36;
+T5 all 24 verts at exactly R (== closed form), dihedrals exactly TWO
+classes — O-O dot 0 (interior 90°, the PARENT cube's own: the octagon
+planes ARE the parent's face planes), T-O dot 1/√3 (interior
+125.2644°), zero T-T edges (24 T-O + 12 O-O == 36); T6 THE DEEPER CUT
+— corner worst 0.0e+0, ratio 0.966498312204 == 7(√2−1)/3 to 1e-12,
+dual-computation agreement 2.7e-15; T6b THE 1/3-BAR — at 1/3 the side
+ratio is exactly √2 (irregular) and u < 1/3 strictly (regularity is
+BOUGHT by cutting deeper); T7 seat — bottom octagon FLAT on dais top
+(spread 4.4e-16), top parallel, 90° symmetry 0 misses, centroid on
+axis, height 5.9 exact, reach+rod 4.232 <= apothem 4.338 (14-gon dais
+R4.45 APOTHEM-FIRST), bead census: 1 crown dead-axis + 4 waist at the
+EXACT cardinals + 1 pressed foot buried (fully inside the dais band —
+new law added this tick), up-tilted cuts at exact 45° diagonals,
+FINIAL-CLEARANCE 0.489 >= 0.225; T8 every inset plate vertex strictly
+inside the solid (worst poke −33mm), corner tuck 24.1mm inside rod
+cylinders. RED control (--red displaces vertex 7): exit 1 verified.
+Two probe self-catches this tick (honest fixes, law not geometry): (a)
+R closed form first wrote a·√(1+√2/2) — wrong; the true unit vertex is
+(1,1,√2−1) so R = √(2+(√2−1)²) = √(5−2√2), fixed; (b) a typo-chain
+1/√2·√2/√2 evaluated to 1/√2 where 1/√3 was meant (the measured T-O
+dot deviated from the WRONG constant by exactly |1/√3−1/√2|), fixed.
+
+BUILD (agents/arthur/assets/mkv3-tcube.ts, staged -f): root identity
+(struct-188 law); texMat lanes tcube_stone/tcube_iron (struct-38 law);
+bead emissive 0x9a7030 @ 1.4 in-GLB (tico v2 + toct + tret build-time
+law); 52 pre-merge meshes + 1 KEEP glow group glow_tcube_6; envelope
+law green in-build 8.90x7.67x8.68 == probe contract. v1 deterministic
+x2 byte-identical sha256
+13b939ea1a104ae1c8d1363fd8b44cb9cb1482e079daf4bdd43c9aebd122eaf1
+(mtime-verified 08:54).
+
+DECODE (struct249-decode-tcube.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (tcube_iron + tcube_stone + glow_tcube_6); D2 14-gon
+dais TRUE box ±4.450/±4.338 corners present sole min y −0.000000; D3
+iron lane split 2944 verts = 2796 rod + 52 finial-stem + 96
+triangle-plate + 0 unclassified, bond coverage 36/36; D4 462
+octagon-plate verts worst 58mm (<= 62 shell); D5 beads 6/6
+octagon-center clusters (crown stem-lifted + 4 waist cardinal + 1 foot
+pressed), emissive sole-night, five aloft + foot buried; D6 grounding
+sole at grade + ground band; D7 envelope drift 0.00mm; D8 texMats
+2/2. RED control (village_tret3.glb — the sibling Archimedean's own
+bytes): census FAIL clean stop exit 1.
+
+JUDGMENT v1 (ZAI FALLBACK — native cron-absent, disclosed, rides the
+owed board): day gameplay 18m 4/4 PASS (identity reads truncated cube
+standing on its octagonal face UNPROMPTED; closed silhouette; dais
+flush + cast shadow; zero defects — the judge's one flag, a second
+brass bead on the front panel, is the CONTRACTUAL cardinal waist bead,
+prompt-arithmetic class: my prompt under-named the waist row; decode D5
+proves 6/6 at exact octagon centers); night 3/3 PASS (exactly 2 warm
+points resolve at this azimuth — crown on its stem "reads as mounted,
+not floating" + the front waist bead dead-centered; side waist beads
+edge-on within tolerance; panels/seams/rods dark, zero bloom; the
+buried sixth correctly invisible — the tico/toct/ssd/rt
+single-azimuth-yield precedent, disclosed-Minor: six in truth by
+decode, the ring completes circling); closeface 3/4 — the FAIL is
+FRAMING not geometry (the finial+crown sits above the closeface
+camera's coverage, the tret's own disclosed class), explicitly judged
+in the night frame and decode-proven D5; joinery/materials/defects
+PASS (families distinct, no z-fighting, no cracks). v1 ACCEPTED
+BANKED NOT PLACED — no real defect, no iteration needed.
+
+DISPOSITION: placement = struct-250 committed carry (fresh census
+scan, under-served band/district selection, 8m NN + per-district soft
+cap 6 audit, 14-gon-exact polygon SAT struct-19 class, oblique-yaw
+struct-104 band, terrain preflight over the TRUE rotated 14-gon,
+hash-gated plain spawn nx-struct-tcube, comp {}, ground circuit walk).
+Folly class — presentation dais R4.45, walk standoff 9m law (tret
+precedent: R4.70 dais).
+
+Bill eye-check pointer (after placement): the Archimedean branch's
+fifth member — where the tico's panelled ball and the tret's balanced
+point stand on other diagonals, THE TRUNCATED CUBE stands FACE-DOWN:
+the cube with its eight corners cut DEEPER than the family law, six
+stone octagons (the parent's own faces) facing the six directions,
+eight dark iron triangles where the corners were. The theorem standing
+under it: cut at 1/3 the octagons come out irregular — the side ratio
+is exactly √2 — so regularity demands the deeper cut u = 1−1/√2, and
+even then 96.65% of the cube remains. After dark the six brass beads
+mark exactly the six parent faces, lit — one on the finial at the
+crown, four at the compass waist, and the sixth given to the earth
+beneath the flat foot. The cuts stay dark.
+
+Files: struct249-probe-tcube.ts + struct249-decode-tcube.ts (NEW,
+tracked), assets/mkv3-tcube.ts (NEW, staged -f), reviews/struct249-
+tcube/ (9 frames, ignored — sha pin above is the durable record),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-249, D+0 E+0). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
