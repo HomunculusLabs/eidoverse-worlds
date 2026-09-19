@@ -35,7 +35,7 @@ check("gate-lamps-bbox-present", all(e.get("bbox") for e in mains.values()))
 check("gate-lamp-companions", len(comps) >= 4)
 
 # belltower + ladder
-check("belltower-lib-4a84e77127d73654", lib("nx-town-belltower") == "4a84e77127d73654")  # sweep-343 re-pin: polish-307 bell-gold re-place @ 07c2c493 (f9ceea6e -> 4a84e771, tuple-identical, bbox byte-identical 7.9), ledger-matched, ladder comp live per census
+check("belltower-lib-3e4f470b38d94bb7", lib("nx-town-belltower") == "3e4f470b38d94bb7")  # sweep-344 re-pin: polish-308 crown bell-gold re-place @ e02efbb7 (4a84e771 -> 3e4f470b, tuple-identical, nodes 12->11 material merge), ledger-matched, ladder comp live per census
 check("belltower-ladder-comp", "ladder" in (E.get("nx-town-belltower", {}).get("comp") or {}))
 
 # standing fleet pins

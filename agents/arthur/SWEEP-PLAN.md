@@ -16530,3 +16530,85 @@ interior-walk-garden-cottage.ts, ls-verified present on disk —
 1537B Aug 30 08:39 + 1524B Aug 30 09:02; size/date figures in this
 pointer corrected post-append this tick, pre-commit, from the actual
 ls output — the first write pre-guessed them, self-caught).
+
+sweep-344: CLEAN SWEEP, one-arrival + one-classified-flip epoch-corrected
+tick (113th consecutive quiet-or-classified). Tick-start HEAD 84f2571f
+(struct-254 R11-63 srcubo PLACED, committed PRE-tick); polish-308 @
+e02efbb7 (belltower crown bell-gold) interleaved mid-tick; dress-187 @
+c2f808a7 read-only HOLD beneath (zero mutations per its own entry).
+Standing gate ALL PASS real exit 0 FIRST TRY at 84f2571f (ledger law
+2371002 exact at the gate's own printed total); re-run ALL PASS real
+exit 0 at e02efbb7 after the interleave. Census epoch A 389->390 vs the
+committed sweep-343 baseline (sha16 7ee6caa3155346e4): exactly ONE
+domain-valid arrival nx-struct-srcubo @ (-12.415991, -0.024172,
+-83.077333) yaw 5.907939518000806 lib 6417e0c06675c0bf comp {} —
+struct-254 R11-63, r84.1 W-NW az261.5, tuple matches its committed
+ledger line-for-line; sweep-54 class (committed PRE-tick, not an epoch
+correction; sweep-343's final census simply predated the placement
+verbs); independently corroborated by sibling dress-187's same-tick
+census @ c2f808a7. Mid-tick polish-308 re-placed nx-town-belltower ->
+epoch law: epoch-B re-read caught exactly ONE classified drift field-set
+nx-town-belltower lib 4a84e77127d73654->3e4f470b38d94bb7 at identical
+tuple (6.5, 0, 6.5) yaw -2.356, bbox byte-identical, nodes 12->11
+material merge, ladder comp LIVE post-flip, rider b5 standing per its
+ledger — all affected evidence re-taken fresh before verdicts: SAT
+re-run at epoch B (352 bbox non-light / 248 exempt-classified / 0
+coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 300th sweep since routing, NOT new, no
+escalation due (the law keys on severity-1); the srcubo was included
+in the live SAT set — no new contacts, its own ledger 26-gon-exact SAT
+2.27), battery re-pinned RED->GREEN (belltower 4a84e771->3e4f470b
+lawful pin move, ledger line-for-line, ladder verified live in the
+epoch-B census before re-pinning; first invocation correctly FAILed =
+expected classification) then 28/28 PASS on epoch-B bytes, gate re-run
+ALL PASS real exit 0 at e02efbb7. Belltower bbox byte-identical,
+material-only crown change -> tier-1 walks stand by construction
+(sweep-60 improve-33 bbox-identical precedent); srcubo r84.1 outside
+every tier-1 leg (sweep-53 precedent). Epoch C 20s-paced re-read FULLY
+QUIET (0/0/0), raw sha byte-identical to epoch B — world stable at
+390. Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0, legs run individually per the sweep-228 ceiling law — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/
+0.33/0.32), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5
+(0.00/0.25/0.34/0.37/0.31) — dists identical to the sweep-319..343
+canon. Tier-2 322nd cycle per the committed sweep-343 pointer:
+longhouse 6/6 ALL_PASS (interior-walk-longhouse.ts, real exit 0,
+dists 0.335/0.280/0.3456/0.2969/0.2763/0.2973) + garden-cottage 6/6
+ALL_PASS (interior-walk-garden-cottage.ts, real exit 0, dists
+0.295/0.355/0.2851/0.3451/0.3265/0.3082), both tools ls-verified
+present on disk BEFORE this prose (1537B Aug 30 08:39 + 1524B Aug 30
+09:02, matching the committed pointer exactly). Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (298th consecutive
+clean, epoch-B re-run); sweep89-battery ONE lawful pin move RED->GREEN
+(belltower re-pin 4a84e771->3e4f470b) then 28/28 on epoch-B bytes.
+Carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified
+(polish-299 standing); comp-bearing 49; lights 38; thing 352. Interlane
+md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh.
+Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue
+rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns
+sweep no reset role — the audit-continues freeze banner governs via
+loop/plan reload. Baseline lawfully rewritten like-for-like (copyfile
+convention, sweep-321..343 precedent; /tmp/s344/snapshot-rewrite.py):
+pre-write assertion verified committed baseline == 7ee6caa3155346e4
+(389 ents), expected diff set exactly [arrival nx-struct-srcubo,
+belltower lib 4a84e771->3e4f470b], counts 389->390, zero drift on 388
+shared ids; final 390 entities / 303708B / sha16 7ae0189bafaa78bb;
+post-rewrite drift vs live epoch B ZERO. Probe self-catches
+pre-verdict, disclosed: (a) census-b stderr redirect initially also
+redirected stdout mid-pipeline — split into separate re-reads
+re-parsed clean; (b) an inline-heredoc census-baseline command chain
+was blocked by the terminal payload validator — re-issued as saved
+scripts under /tmp/s344/ (sanctioned-path precedent, sweep-335/339/343
+class). Foreign dirt in tree (windmill overhaul scratch, cabin/
+carousel prototype dirs, engine files, fleet shells, debug-bower
+scripts, moon-moth dir, fauna tools, core-paths assets, next-terrain
+scratch, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-345): inn + tower-house (323rd cycle — LRU chain
+re-derived from committed pointers this tick: longhouse/garden-cottage
+@344 walked fresh, forge/potter @343, hall/bunkhouse @342, inn/
+tower-house @341 stalest standing pair at 3 sweeps; walk tools
+interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verified
+present on disk — 1786B Aug 30 08:11 + 1523B Aug 30 09:53).
