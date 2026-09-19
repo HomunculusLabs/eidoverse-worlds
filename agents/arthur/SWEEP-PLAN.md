@@ -15190,3 +15190,95 @@ hall/bunkhouse @323, forge/potter @322, row-cottage/observatory @321
 stalest standing pair at 4 sweeps; walk tools interior-walk-row-cottage.ts
 + struct2-walk-observatory.ts, ls-verified present on disk BEFORE this
 prose — 1526B Aug 30 + 2322B Sep 7).
+
+
+sweep-326: CLEAN SWEEP, classified-drift epoch-corrected tick (95th
+consecutive quiet-or-classified). Tick-start HEAD 50a0226c (dress-168
+hold); standing gate ALL PASS real exit 0 FIRST TRY (ledger law 2370962
+accepted at the gate's own printed total). Census epoch A 373==373 vs the
+committed sweep-325 baseline (sha16 68ff62eba02da2b9): 0 arrivals, 0
+departures, exactly ONE classified drift field — nx-carousel lib
+2d61deabf0c2560d->bad22d1963d3a78b at identical tuple/comp = polish-296
+@ 87b57498 PRE-tick (navy-coat night identity, emissive-only,
+horse_4_cream_paint single-primitive scope; PLACED_VERIFIED + idempotent
+0/0 + live pin exact + served sha == upload sha per its ledger; dress-168
+hold independently corroborates the same flip). Epoch B (20s-paced
+re-read) caught fauna-31 @ f5ca132c landing LIVE mid-tick:
+nx-dress-ducks-001 pos y -0.139->+0.06093 (duck waterline defect cured,
+render-falsified cand PASS / ctrl DEFECT-CONFIRMED before mutation,
+ledger-matched) + t0-only refresh on all six motion:duck* comps (params
+byte-identical, verified programmatically field-by-field — fauna-27
+peacock re-seat precedent class, sweep-322); struct-237 (cuboctahedron,
+@ 269a3a34) interleaved BANKED-NOT-PLACED, zero world mutations per its
+own entry. All affected evidence re-taken fresh per the polish-270 epoch
+law: epoch-B census, SAT re-run at epoch B, battery re-run on census-B
+bytes, standing gate re-run ALL PASS real exit 0 at f5ca132c. Ducks
+r91.2 S sit 69m+ off every walked leg (all tier-1 legs r<20) — epoch-A
+walks stand by construction (sweep-53 precedent); fauna-31's own
+render-falsification re-proves the seat. OVERLAP: SAT fresh-live at both
+epochs 335 bbox non-light / 244 exempt-classified / 0 coverage holes,
+exit 3 on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 (Sev 2 artwalk-routed @ sweep-43, 282nd sweep since routing, NOT
+new, no escalation due — law keys severity-1); carousel flip + duck
+re-seat added ZERO new contacts (carousel emissive-only SAT-neutral;
+duck pure vertical re-seat). WALKS: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually per the sweep-228
+ceiling law — core 64/64 ALL_PASS maxArrival 0.380 (next-walk-core-
+paths.ts, walked over the NEW polish-296 bytes, carousel sits in the
+core band; [physics] banner parse handled at body offset), NW 5/5
+ALL_PASS (0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+ALL_PASS (0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW
+5/5 ALL_PASS (0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists
+identical to the sweep-319..325 canon. Tier-2 304th cycle per the
+committed sweep-325 pointer: row-cottage 6/6 ALL_PASS maxArrival 0.3838
+(dists 0.2950/0.3681/0.3838/0.2940/0.3617/0.3066, interior-walk-row-
+cottage.ts) + observatory circuit 5/5 ALL_PASS @ 0.389 (dists
+0.280/0.389/0.303/0.345/0.314, struct2-walk-observatory.ts), both real
+exit 0, both tools ls-verified present on disk BEFORE this prose (1526B
+Aug 30 + 2322B Sep 7 — sweep-316 correction of record honored).
+INTEGRITY: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (280th
+consecutive clean); sweep89-battery lawful RED-then-GREEN carousel pin
+bump 2d61deab->bad22d19 (sweep-316 precedent class; first invocation
+correctly FAILed 27/28 = expected classification, re-run 28/28 PASS on
+census-A bytes; patch tool warned of a sibling-cron touch on the battery
+file — diff vs HEAD verified EXACTLY the one intended pin line, no
+sibling edit clobbered, sweep-319 concurrent-modify precedent class);
+carousel comp bag exact 7 + lib bad22d1963d3a78b census-verified;
+comp-bearing 41; lights 38. Interlane md5 86b2936f stable, read fresh
+this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged (302nd check, zero open rows), sweep
+owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset
+role — the audit-continues freeze banner governs via loop/plan reload.
+Baseline lawfully rewritten like-for-like (copyfile convention,
+sweep-321/324/325 precedent; sweep326-snapshot-rewrite.py, committed
+baseline schema == census tool output verified field-by-field before
+copy): pre-write assertion diff set exactly [carousel.lib polish-296
+bad22d19, ducks.pos fauna-31 +0.06093, ducks.comp t0-only], counts
+373==373, zero drift on 371 shared ids across the full 9-field
+projection incl. comp objects; final 373 entities / sha16
+65f48e613356af15; post-rewrite drift ZERO (reloaded and re-diffed vs
+census B). Probe self-catches pre-verdict, all disclosed: (a) walk JSON
+parsers keyed wrong field names three times — core 'legs' is an int
+count with 'results' the array, NW/row-cottage use 'distance' vs
+'dist' — each re-derived from the raw schema before verdicts
+(sweep-48/325 class); (b) first snapshot-rewrite expected set omitted
+the ducks comp field — the script's own assert caught it HARD pre-write
+(rewrite refused, baseline untouched), t0-only classification verified
+programmatically before the set was amended; (c) ledger-append invoked
+from agents/arthur hit its repo-root-relative path — re-run from repo
+root (sweep-325 class). Foreign dirt in tree (windmill overhaul
+scratch, cabin/carousel prototype dirs, engine files, fleet shells,
+debug-bower scripts, moon-moth dir, fauna tools + fauna-31 duck seat
+scratch, HERO-ASSET-REFINEMENT-PLAN, core-paths assets, rupertfork
+sources, next-terrain scratch, review dirs) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-327): forge + potter (305th
+cycle — LRU chain re-derived from committed pointers this tick:
+row-cottage/observatory @326 walked fresh, inn/tower-house @325,
+longhouse/garden-cottage @324, hall/bunkhouse @323, forge/potter @322
+stalest standing pair at 4 sweeps; walk tools interior-walk-forge.ts +
+interior-walk-potter.ts, ls-verified present on disk — 1559B Aug 30
+08:32 + 1571B Sep 7 13:44; CORRECTION of record: the first write of this
+pointer line guessed both sizes/timestamps before ls — sweep-316
+ls-pre-prose law violated then repaired in-tick, true values here).
