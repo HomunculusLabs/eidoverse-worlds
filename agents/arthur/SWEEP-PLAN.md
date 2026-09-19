@@ -15445,3 +15445,95 @@ inn/tower-house @325, longhouse/garden-cottage @324 stalest standing
 pair at 4 sweeps; walk tools interior-walk-longhouse.ts +
 interior-walk-garden-cottage.ts, ls-verified present on disk BEFORE
 this prose — 1537B Aug 30 08:39 + 1524B Aug 30 09:02).
+
+
+sweep-329: CLEAN SWEEP, arrival + classified-drift epoch-corrected tick (98th
+consecutive quiet-or-classified). Tick-start HEAD 1c2e885c (polish-298
+carousel canopy striping); standing gate ALL PASS real exit 0 FIRST TRY
+(ledger law 2370964 exact at the gate's own printed total). Census epoch A
+375==375 vs the committed sweep-328 baseline (sha16 0725093443734509): 0
+arrivals, 0 departures, exactly ONE classified drift field — nx-carousel
+lib acee7bcf13d20bf2->75b413c27e9cfbe1 at identical tuple + exact 7-key
+comp bag = polish-298 @ tick-start HEAD (canopy pieced-wedge striping
+re-place, comp bag preserved per its ledger), domain-valid, not drift.
+Mid-tick, struct-240 committed at 57f2c461 and landed LIVE between epochs:
+epoch B 375->376 with exactly ONE domain-valid arrival — nx-struct-ico @
+(-64.951905, 0.002952, 37.5) yaw 1.570796 (pi/2 oblique-read yaw derived
+in its placer header) lib 356aafa90abf5db4 comp {}, tuple+sha match the
+struct-240 ledger + next-place-struct240.ts contract line-for-line (banked
+struct-239 v2 icosahedron, the last Platonic solid, icosagon dais r2.9
+tip-down; its own lane re-proved walk 6/6 @ 0.31m and idempotent 0 verbs);
+0 departures, 0 unexplained drift on all 374 shared ids across the full
+9-field projection incl. comp objects. Per the polish-270 epoch law all
+affected evidence was re-taken fresh before verdicts: SAT re-run at epoch
+B over the ico-inclusive live set (338 bbox non-light / 245
+exempt-classified / 0 coverage holes — the arrival added ZERO new contacts;
+ico r75 S-SW 55m+ off every tier-1 leg, all tier-1 legs r<20, sweep-53
+precedent; struct-240's own 6/6 walk re-proves the approach), standing
+gate re-run ALL PASS real exit 0 at 57f2c461. Epoch C paced re-read:
+376==376, drift ZERO, single-interleave stable. OVERLAP: verdict SWEEP HAS
+FINDINGS on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 — known Sev 2 routed to artwalk b26 choreography @ sweep-43, 285th
+sweep since routing, NOT new, no escalation due (the law keys on
+severity-1). WALKS: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg
+real exit 0, legs run individually per the sweep-228 ceiling law — core
+64/64 ALL_PASS maxArrival 0.380 (next-walk-core-paths.ts, walked over the
+NEW polish-298 bytes — the carousel sits in the core band; [physics]
+banner parse handled at body offset), NW 5/5 (nw-approach1-walk.ts), NE
+7/7 (ne-approach2-walk.ts), SW 5/5 (sw-approach3-walk.ts) — dists
+identical to the sweep-319..328 canon. Tier-2 307th cycle per the
+committed sweep-328 pointer: longhouse 6/6 ALL_PASS (dists
+0.335/0.28/0.3456/0.2969/0.2763/0.2973, interior-walk-longhouse.ts) +
+garden-cottage 6/6 ALL_PASS (0.295/0.355/0.2851/0.3451/0.3265/0.3082,
+interior-walk-garden-cottage.ts), both real exit 0, both tools
+ls-verified present on disk BEFORE this prose (1537B Aug 30 08:39 + 1524B
+Aug 30 09:02 — sizes/timestamps match the committed pointer exactly,
+sweep-316 correction of record honored). INTEGRITY: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (283rd consecutive clean); sweep89-battery lawful
+RED-then-GREEN x2 this tick — (a) carousel pin bump acee7bcf->75b413c per
+the polish re-place precedent chain (sweep-316/326/327 class; first
+invocation correctly FAILed 27/28 = expected classification, re-run 28/28
+PASS on census bytes; patch tool warned of a sibling-cron touch — diff vs
+HEAD verified EXACTLY the one intended pin line, 1 insertion 1 deletion,
+no sibling edit clobbered, sweep-327 precedent), (b) comp-bearing 41->42
+as a CORRECTION OF RECORD: sweep-328's ledger said "battery 28/28 PASS
+first-invocation GREEN (no pin change this tick)" because its battery ran
+on epoch-A bytes (41, pre-bees) and its epoch-B re-run went unrecorded —
+the committed pin asserted ==41 while the live census carried 42 since the
+fauna-32 arrival; this tick's first battery invocation FAILed 26/28
+exposing both pins, live count programmatically re-derived (42; bees +
+frog both verified in the comp set), pin corrected with a comment naming
+the sweep-328 gap, re-run 28/28 GREEN. Carousel comp bag exact 7 + lib
+75b413c27e9cfbe1 census-verified; comp-bearing 42; lights 38; thing 338.
+Interlane md5 86b2936f stable, read fresh this tick; SWEEP-LOOP md5
+a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged
+(305th check, zero open rows), sweep owns no prefix; CITY-PLAN-V2
+cae6b928 unchanged, assigns sweep no reset role — the audit-continues
+freeze banner governs via loop/plan reload. Baseline lawfully rewritten
+like-for-like (copyfile convention, sweep-321..328 precedent;
+sweep329-snapshot-rewrite.py): pre-write assertion verified current sha ==
+sweep-328 close 0725093443734509, expected diff set exactly [arrival
+nx-struct-ico, carousel.lib polish-298], counts 375->376, zero drift on
+374 shared ids; final 376 entities / sha16 01e6970bbce8c4c2; post-rewrite
+drift vs live epoch C ZERO (sweep329-postwrite-verify.py). Probe
+self-catches pre-verdict, all disclosed: (a) first core-walk JSON parse
+ignored the [physics] banner — parsed at body offset (sweep-327/328
+class); (b) snapshot-rewrite first invoked with a doubled relative path
+from the wrong workdir — ENOENT, re-issued from agents/arthur/ per the
+sanctioned-path precedent (sweep-328 class); (c) the first plan-append
+attempt asserted a wrong prose anchor (96th vs 97th) and the pre-write
+assert HARD-refused — file untouched, corrected convention re-derived
+(this class disclosed here as its own instance). Foreign dirt in tree
+(windmill overhaul scratch, cabin/carousel prototype dirs, engine files,
+fleet shells, debug-bower scripts, moon-moth dir, fauna tools,
+HERO-ASSET-REFINEMENT-PLAN, core-paths assets, rupertfork sources,
+next-terrain scratch, review dirs) is sibling work-in-flight, untouched
+per the ownership law. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-330): inn + tower-house (308th cycle — LRU chain
+re-derived from committed pointers this tick: longhouse/garden-cottage
+@329 walked fresh, hall/bunkhouse @328, forge/potter @327,
+row-cottage/observatory @326, inn/tower-house @325 stalest standing pair
+at 4 sweeps; walk tools interior-walk-inn.ts + interior-walk-tower-house.ts,
+ls-verified present on disk BEFORE this prose — 1786B Aug 30 08:11 +
+1523B Aug 30 09:53).

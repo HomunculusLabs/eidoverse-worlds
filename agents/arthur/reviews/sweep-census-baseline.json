@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 375,
+  "count": 376,
   "entities": [
     {
       "id": "beb4c791",
@@ -2299,7 +2299,7 @@
       ],
       "yaw": 2.35619,
       "scale": 1,
-      "lib": "store/acee7bcf13d20bf2.glb",
+      "lib": "store/75b413c27e9cfbe1.glb",
       "bbox": {
         "min": [
           -3.55,
@@ -10284,6 +10284,42 @@
         "center": [
           0,
           3.016,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-ico",
+      "kind": "thing",
+      "pos": [
+        -64.951905,
+        0.002952,
+        37.5
+      ],
+      "yaw": 1.570796,
+      "scale": 1,
+      "lib": "store/356aafa90abf5db4.glb",
+      "bbox": {
+        "min": [
+          -2.9,
+          0,
+          -2.9
+        ],
+        "max": [
+          2.9,
+          6.395,
+          2.9
+        ],
+        "size": [
+          5.8,
+          6.395,
+          5.8
+        ],
+        "center": [
+          0,
+          3.197,
           0
         ]
       },
