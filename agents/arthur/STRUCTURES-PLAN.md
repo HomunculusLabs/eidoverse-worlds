@@ -17018,3 +17018,130 @@ struct234-walk-tetrahelix.ts + next-place-struct234.ts (all NEW,
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-234, D+0 E+1). One upload, one verb. Zero pushes.
 
+
+
+## struct-235 (2026-09-18): R11-48 THE RHOMBIC TRIACONTAHEDRON —
+## BUILD+JUDGE TICK, v1 ACCEPTED BANKED NOT PLACED
+
+235%3=2 nominal placement slot with EMPTY bank (tetrahelix placed
+struct-234) → build+judge tick per the struct-229/233 precedent. Gate ALL
+PASS real exit 0 tick-start at 0daee003 (fauna-28; unpiped GATE_EXIT:0).
+Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-234 → tag struct-235 (re-checked
+immediately before append). Native absent from the cron catalog all tick
+(tool_search fresh: terminal + zai-vision only — same disclosed
+cron-unpayable class as struct-169..234; owed board stays 26 + csaszar v3
++ ssd v1 + tetrahelix v2, plus rt v1 now riding).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): rhombic/triacontahedron/zonohedron/zonotope 0/0/0/0/0 —
+never named, never barred, never built. THE CATALAN/ZONOHEDRON BRANCH
+OPENS. Kin falsification sweep: the standing dodecahedron (struct-106) is
+the PLATONIC pentagon cousin (radically distinct silhouette: 30-face
+faceted gem vs 12-face doorway solid — oloid→sphericon cousin precedent);
+ssd = star stellation (struct-231); borromean = ring-links (struct-117/118);
+tetrahelix = cell chain (struct-233/234); newtonspheres = sphere cage
+(struct-218/219) — no standing form's identity is "zonohedron: every face
+a translated copy of one golden rhombus." Trefoil/torusknot barred (boy
+stands, struct-218 precedent); einstein/hat = penrose aperiodic kin
+(struct-98) BARRED; clelia = spherical-curve kin (viviani stands);
+golden-rectangle ribbon = log-spiral family BARRED. SELECTION: the rhombic
+triacontahedron — exact closed form (zonotope = Minkowski sum of the
+icosahedron's six 5-fold-axis generators), theorem-backed (Kepler,
+Harmonices Mundi 1619, triacontahedrum rhombicum; Catalan 1865 dual of the
+icosidodecahedron; the unique zonohedral Catalan solid), instantly
+readable at 18m (faceted gem on a point), φ woven through (every face
+diagonal ratio exactly φ).
+
+CONCEPT: THE GEM ON ITS POINT. IRON carries the sixty edges — six zone
+directions × ten, three meeting at every degree-3 corner, five at every
+icosa vertex. STONE carries the thirty rhombus membranes and the
+THIRTY-sided dais (one side per face — the theme number). Night contract:
+twenty warm brass beads at the degree-3 corners (the dodecahedral orbit),
+the tripod bead half-proud in the dais top (struct-231 SSD lineage).
+Seated on a 3-FOLD vertex: the point-down language at a NEW symmetry (SSD
+= 5-fold star; this = 3-fold tripod gem).
+
+PARAMETRIZATION (exact, closed-form): G = one vertex from each of the six
+antipodal pairs of the icosahedron (0,±1,±φ) cyclic; P = all 64 subset
+sums (the zonotope); faces = for each generator pair (i,j) and sign s the
+supporting plane n = s·(g_i×g_j)/|·| attains its max over P on exactly 4
+points = the rhombus {p, p+g_i, p+g_j, p+g_i+g_j} → 15 pairs × 2 = 30.
+
+PROBE (struct235-probe-rt.ts, tracked) 10/10 ALL PASS real exit 0: T1
+Euler 32−60+30 = 2; T2 zone law 6 direction classes × 10 edges, worst
+parallel deviation 4.6e-4 mm-class; T3 30 golden rhombi worst side dev
+8.9e-4 mm, worst |diag ratio − φ| 6.7e-16, side 2.3776m; T4 manifold 60
+face-edges all multiplicity 2; T5 12 × degree-5 + 20 × degree-3, Σdeg 120
+== 2E; T7 golden law global worst 6.7e-16; T8 convexity (0 verts outside
+any face plane) + exactly 15 antipodal parallel face pairs; T9 seat:
+bottom tripod vertex on the (1,1,1) 3-fold axis (dist 0.0), 3 neighbors
+at equal height y 0.7460 (spread 0.0), 120° symmetry about world Y with 0
+misses, summit 7.306m; T10 immersion 0 contacting face-pairs (the shells
+shell out to exactly the rods' meeting planes). RED control (--order
+corrupts face 0's cycle): T4 FAILs, exit 1 — verified.
+
+SELF-CAUGHT RED-FIRST THIS TICK (probe): T2 initially compared SEATED
+edge directions against UNROTATED model-frame generators (0.38 "parallel
+deviation" — the LAW was wrong, not the geometry; fixed to rot(g_k),
+rerun green). That is the whole self-catch list: the zonohedron
+construction is exact by derivation and the first probe run was 9/10.
+
+BUILD (agents/arthur/assets/mkv3-rt.ts, staged -f): root identity
+(struct-188 law); texMat lanes rt_stone/rt_iron (struct-38 law); beads
+emissive 0x9a7030 @ 1.0 in-GLB (dusk lineage, struct-82); plates baked
+vertex-true (applyMatrix4, Box3 corner law); envelope law green in-build
+(8.00x7.40x7.96 == probe contract; 91 pre-merge meshes + 1 KEEP glow
+group). v1 deterministic x2 byte-identical sha256
+40059339816dc3202b54f1f6ce194afc9f896b186de5d7f67d3a03a5dcfe7e73
+(mtime-verified).
+
+DECODE (struct235-decode-rt.ts, tracked) 8/8 ALL PASS real exit 0: D1
+census 3 nodes; D2 triacontagon dais TRUE box ±4.000/±3.978, corners
+present, sole min y −0.000000; D3 rods 4500 verts worst 48.00mm coverage
+60/60; D4 membranes 1080 verts worst 92mm shell-bound 96mm; D5 beads
+20/20 degree-3 clusters emissive sole-night; D6 tripod bead min y 0.2050
+half-proud in dais top 0.30; D7 envelope drift 0.00mm; D8 texMats 2/2.
+RED control (village_csaszar3.glb foreign bytes): D1 census FAILs clean,
+exit 1 — verified.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed riding the
+board): gameplay 18m 4/4 PASS — ~14 distinct rhombic facets counted at
+the vantage (geometrically credible for a 30-face convex solid), single
+continuous closed polyhedral profile, V-vertex visibly lands on the dais
+with contact shadow, "deliberate mathematical sculpture" read confirmed.
+Closeface 3/3 PASS — rods terminate cleanly into beads, uniform reveal
+gap, no rod piercing a plate, three material families distinct, every
+face the same flat golden rhombus (~1.6:1 read); the judge INDEPENDENTLY
+verified the degree-3-only beading scheme (5-edge convergence left as
+bare iron). Night 3/3 PASS — 12 warm points resolved, each anchored to a
+facet corner, zero bloom/spill/wash, dais bead present and seated; the
+judge's own occlusion analysis confirms 11-on-solid + 1-dais is the
+correct single-azimuth yield of 20 (rear hemisphere occluded; decode D5
+proves exactly 20 — csaszár/ssd/tetrahelix disclosed-Minor precedent).
+Judge cosmetic notes recorded, not executed: stone texture coarseness at
+close range; apex-bead rim-lit darkness at night (minimum-viable signal).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-236
+committed carry: fresh census scan — under-served band/district
+selection, 8m NN + per-district soft-cap audit, triacontagon-exact
+polygon SAT (struct-19 disc law class — never square-bbox; 30-gon
+footprint R4.00), oblique-yaw law (struct-104 band), terrain preflight
+over the TRUE rotated triacontagon, hash-gated plain spawn nx-struct-rt,
+comp {}. Folly class — ground circuit walk at placement, no door.
+
+Bill eye-check pointer (after placement): a gem standing on its point —
+one shape repeated thirty times, every face the same golden rhombus, its
+diagonals exactly φ; sixty iron edges in six families of ten parallel
+lines, brass beads at twenty corners, one set into the dais itself. The
+idea: the golden ratio made visible as a single repeated stone — Kepler's
+favorite solid, the one where φ is the face. After dark: twenty quiet
+lights tracing the gem's corners, one in the dais.
+
+Files: struct235-probe-rt.ts + struct235-decode-rt.ts +
+struct235-render-rt.ts (all NEW, tracked), assets/mkv3-rt.ts (NEW,
+staged -f), reviews/struct235-rt/ (9 frames, ignored — sha pins in this
+block are the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-235, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
