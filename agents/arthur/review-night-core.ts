@@ -48,7 +48,7 @@ const specs=[
  ["nx-town-gate-e","village_gate.glb",ASSETS,"d1b90d6fc66b2db8",19.5,0.0,0.0,1.570796],
  ["nx-town-gate-w","village_gate.glb",ASSETS,"d1b90d6fc66b2db8",-19.5,0.0,0.0,-1.570796],
  ["nx-town-roads","village_roads3.glb",ASSETS,"3b76b621559fa1a1",0.0,0.0,0.0,3.141593],
- ["nx-town-streetlamps","village_streetlamps3.glb",ASSETS,"e815a897c7d73373",0.0,0.0,0.0,3.141593],
+ ["nx-town-streetlamps","village_streetlamps3.glb",ASSETS,"a7b05aefe1e971e8",0.0,0.0,0.0,3.141593], // polish-312: re-pinned e815a897→a7b05aef (lantern heads + iron sheen; local file hash == live lib verified, pose exact)
  ["nx-dress-banner","village_banner.glb",ASSETS,"d32e7bcb8b007d21",-4.0,0.0,9.5,2.356194],
  ["nx-dress-stringlights","village_stringlights.glb",ASSETS,"0c0dee37b07aa7df",-6.0,2.6,7.5,0.785398],
  ["nx-dress-giftshelf","village_giftshelf3.glb",ASSETS,"c623cfa6fbdeb48e",-9.0,0.0,9.0,2.356194],

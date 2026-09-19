@@ -13,10 +13,16 @@ import { writeFileSync } from "node:fs";
 // pans, caps, and finials all take the forge iron tile (one smith's iron
 // through every lamp on the walk home). The emissive cores stay
 // untouched — the light is the light, not the metal.
+// polish-312 night sheen (polish-305 wire lineage): the iron itself reads
+// faintly warm after dark so posts/roofs support the glow instead of
+// leaving floating dots on hairline sticks.
 const ironTex = texMat("iron", [0x5c5c60, 0x54545a], { rough: 0.4, metal: 0.55, scale: 2, stripe: 2, weights: [2, 1] });
+ironTex.emissive = new THREE.Color(0xffc98a);
+ironTex.emissiveIntensity = 0.15;
 
 const lamp = (deg: number, tag: string) => {
     const g = new THREE.Group();
+    g.name = `lamp${tag}`; // KEEP: per-lamp statics fold into one group node
     const a = (deg * Math.PI) / 180;
     const x = Math.cos(a) * 10, z = Math.sin(a) * 10;
     // post w/ taper
@@ -29,21 +35,35 @@ const lamp = (deg: number, tag: string) => {
     pan.name = `${tag}_pan`;
     pan.position.set(x, 0.05, z);
     g.add(pan);
-    // lantern cage + emissive core
+    // lantern head (polish-312): collar → glass core under an overhanging
+    // eave plate → 4-sided pyramid roof → finial re-based on the roof apex
+    // (village crown language, polish-272 overhang law). Head 0.38 → 0.66m.
     {
-        const cap = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.05, 0.2), ironTex);
-        cap.name = `${tag}_cap`;
-        cap.position.set(x, 2.42, z);
-        g.add(cap);
+        const collar = new THREE.Mesh(new THREE.CylinderGeometry(0.062, 0.075, 0.07, 8), ironTex);
+        collar.name = `${tag}_collar`;
+        collar.position.set(x, 2.325, z);
+        g.add(collar);
     }
-    const core = new THREE.Mesh(new THREE.BoxGeometry(0.13, 0.17, 0.13), new THREE.MeshStandardMaterial({ color: 0xffc98a, emissive: new THREE.Color(0xffc98a), emissiveIntensity: 0.9, roughness: 0.4 }));
+    const core = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.26, 0.15), new THREE.MeshStandardMaterial({ color: 0xffc98a, emissive: new THREE.Color(0xffc98a), emissiveIntensity: 0.9, roughness: 0.4 }));
     core.name = `${tag}_core`;
-    core.position.set(x, 2.3, z);
+    core.position.set(x, 2.49, z);
     g.add(core);
-    // finial
+    {
+        const eave = new THREE.Mesh(new THREE.BoxGeometry(0.27, 0.045, 0.27), ironTex);
+        eave.name = `${tag}_eave`;
+        eave.position.set(x, 2.645, z);
+        g.add(eave);
+    }
+    {
+        const roof = new THREE.Mesh(new THREE.ConeGeometry(0.14, 0.16, 4), ironTex);
+        roof.name = `${tag}_roof`;
+        roof.position.set(x, 2.7475, z);
+        roof.rotation.y = Math.PI / 4;
+        g.add(roof);
+    }
     const fin = new THREE.Mesh(new THREE.ConeGeometry(0.04, 0.12, 5), ironTex);
     fin.name = `${tag}_fin`;
-    fin.position.set(x, 2.5, z);
+    fin.position.set(x, 2.8875, z);
     g.add(fin);
     return g;
 };

@@ -2059,3 +2059,66 @@ next wake once the gateway answers.
   recorded here + ledger instead. Not fabricated.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b)
   rose-horse angular-offset motif geometry (artwalk coordination).
+
+### polish-312 — core streetlamps lantern heads + iron sheen (ACCEPTED, LIVE)
+
+- Subject: `nx-town-streetlamps` (ground-layer network at origin, pos
+  [0,0,0], yaw pi, EMPTY comp bag — census-fresh this tick). Build source
+  `assets/mkv3-lamp33.ts` -> `village_streetlamps3.glb` (live was
+  e815a897c7d73373, tex-33 pin; 8 groups, 40 loose meshes, zero merging).
+- Defect (judged fresh from current pixels on exact live bytes, night +
+  day, ZAI fallback disclosed): the lantern head was a box-with-lid —
+  0.13m cube core under a bare 0.2x0.05 plate, finial floating 3cm over
+  it — judged "crude/placeholder, stick with LED", head ~10% of height
+  (utility-pole read). At night the iron vanished entirely: posts ~1px
+  hairlines, cap/finial indistinguishable from sky, distant lamps read
+  as floating glow dots (judge: "glow cores effectively float").
+- Change (ONE intervention): real lantern head per the village crown
+  language — iron collar at the post top, glass core grown to 0.15x0.26
+  (a 2.6x taller light), overhanging eave plate 0.27 square wider than
+  the core (the readability step), 4-sided pyramid roof, finial re-based
+  on the roof apex (polish-272 overhang law). Head 0.38 -> 0.66m, total
+  height 2.62 -> 2.95m. Plus polish-305's proven iron night-sheen
+  (0xffc98a @ 0.15) on the shared ironTex so posts/roofs support the
+  glow instead of floating over it. Lamp groups KEEP-named (lampsl0..7)
+  so per-lamp statics fold per-material: 24 nodes / 16 meshes, FEWER
+  draws than the baseline's 40 loose meshes.
+- Candidate `a7b05aefe1e971e8e0b928635a2388b5340c23f2dd41269779ce47bab073a531`
+  deterministic x2 (mtime-verified); before-bytes captured FIRST (baseline
+  GLB hash-matches live pin exactly); decode: iron emissive [0.15, 0.0876,
+  0.0381] WITH baseColorTexture, glow1 cores untouched [0.9, 0.5257,
+  0.2287], NaN 0/5760, verts on the r10 locus, headTop 2.9475.
+- Falsification: night + gameplay + front pixel diffs real (3.11% / 3.11% /
+  0.92%). Judge night PASS on all four cure-targets (cores read supported
+  at near AND far, sheen restrained matte warm metal not glow-tube, roof
+  pyramid reads, hierarchy cores >> iron, zero new defects); day PASS
+  (classic lantern silhouette at near + distance via the eave T-step,
+  head ~18-20% believable ratio, iron stays natural sunlit metal, zero
+  defects). Judge nits recorded not treated: uniform-post read (source-
+  false — post IS tapered 0.05->0.08; projection scale), glass reads lit
+  in day (authored always-on lamp, village-wide convention).
+- Placed via NEW dedicated placer `next-place-polish312-streetlamps.ts`
+  (stringlights chassis): PLACED_VERIFIED, 1 upload + 1 verb, comp bag {}
+  preserved, idempotent rerun zero verbs, live census pin
+  `store/a7b05aefe1e971e8.glb` @ (0,0,0) yaw 3.14159 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p312-verify-served.ts`; probe self-caught its own locus
+  band bug RED->GREEN — band [9.0,9.8] flagged all 1520 verts because
+  lamps stand at r10, corrected to [9.5,10.5]): served DRACO keeps iron
+  sheen + texture + glow1 exact, 8/8 lamp groups, headTop 2.9475, 0
+  non-finite. P312_SERVED_PASS.
+- Cross-lane pin refresh: night lane's `review-night-core.ts` streetlamps
+  pin advanced e815a897 -> a7b05aef in this commit (polish-267 precedent;
+  the rig hard-dies on local-file drift). Gate re-run after mutation:
+  ALL PASS exit 0 at sibling HEAD c8345744 (sweep-350 absorbed mid-tick).
+- commons' av-streetlamps (verify-repairs tex-33 pin) untouched — different
+  world; the old bytes persist in the content-addressed store.
+- Evidence: `reviews/hero-assets/polish-312-streetlamps/` (before/ =
+  baseline GLB + 10-view rig; after/ = candidate + rig).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path — same as polish-285..311);
+  recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b)
+  wellhead/waystone night reads (sibling-owned subjects — route defects
+  to owners), or (c) belltower remaining sub-threshold notes, judge
+  fresh first.
