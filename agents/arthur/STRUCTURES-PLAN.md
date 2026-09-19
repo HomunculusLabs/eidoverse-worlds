@@ -20522,3 +20522,141 @@ solids / non-Archimedean families per struct-253's grep; fresh
 five-file grep to confirm the gap before building) or Bill's verdict
 routing.
 
+
+## struct-263 (2026-09-19): R11-71 THE GREAT DODECAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-264 committed carry)
+
+263%3=2 build slot with EMPTY bank (gsd placed struct-262) -> build+judge tick
+per the struct-240..262 precedent. Gate ALL PASS real exit 0 tick-start
+(unpiped, GATE_EXIT:0 at 64056571 epoch — polish-313 HEAD; siblings since:
+fauna-51, struct-262, sweep-351/352, dress-196 — all named, foreign domain).
+Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged since struct-238, 0
+OPEN nx-struct rows). Ledger max re-derived struct-262 -> tag struct-263
+(numeric extraction, re-checked immediately before append). Native absent
+from the cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as struct-169..262;
+owed board gains gdodec v1, joins the riding queue). No interrupted 263
+window existed (no struct263-*/mkv3-gdodec files pre-tick).
+
+FORM SELECTION fresh six-file grep (the struct-262 queue-head named the
+sweep): great dodeca / gdodec / {5,5/2} — 0 real claims across
+STRUCTURES-PLAN, IMPROVEMENTS, CITY-PLAN, IMPROVE-PLAN, NEW-VILLAGE-PLAN,
+DRESSING-PLAN (only my own unclaimed-pointer lines). The Kepler-Poinsot
+branch's THIRD member (SSD struct-231/232 standing; gsd struct-261/262
+standing). Selected over the great icosahedron: gdodec is the DIRECT DUAL
+of the standing SSD ({5,5/2} <-> {5/2,5} — faces and vertex figures
+exchanged), and it is the branch's only genus match to the SSD (both
+chi = -6): the pair completes a dual-and-genus twin standing apart in the
+world. Achiral (no handedness decision owed Bill). The great icosahedron
+{3,5/2} remains unclaimed for the next sweep; the snub cube/dodeca stay
+named for Bill's handedness call.
+
+CONCEPT: THE STAR THAT TUNNELS. Kepler's second star: twelve PENTAGON
+sails, FIVE meeting at every vertex — impossible for a convex solid, so
+the sails pass THROUGH one another: chi = 12-30+12 = -6, GENUS FOUR, the
+tunnel star. Same twelve vertices as the icosahedron, same thirty edges —
+only the faces are new: per pole, the five triangles around it bound into
+one broad sail whose RIM IS the icosa's own edges (probe T3: ring side ==
+the edge exactly). Presentation: VERTEX-DOWN — the bottom pole stands at
+the dais center, its own sail spread horizontal at 2.266m as a CANOPY you
+walk beneath, five struts splayed from the point; summit pole 7.414m.
+IRON carries the thirty edges (the icosa's own skeleton, five rods
+meeting at every vertex bead); STONE carries the twelve sails + the
+TWELVE-sided dais (the theme number, apothem-first 3.30 — TRUE box
++-3.300, the 12-gon IS the true ground footprint: extent 3.2764+bead <=
+3.3). Night contract: TWELVE warm brass vertex beads (glow_gdodec_12),
+the grounded one half-proud in the dais top (SSD/csaszar/gsd lineage).
+The honest presentation of the interweave: iron rods pass through stone
+sails at the 30 woven crossings (probe T9, disclosed in-build).
+
+PARAMETRIZATION (exact, closed-form — derived, not remembered): V = the
+icosa's 12 ((0,+-1,+-phi) cyclic), R = sqrt((5+sqrt5)/2) exact (T0a
+spread 0e0); E = the 30 pairs at distance 2 (the icosa's own edges);
+F = 12 pentagons found by EXHAUSTIVE RING SEARCH over every distance
+class — the class whose rings have EDGE sides IS the faces (the d²=4
+class yields exactly 12; the d²=10.47 class's 12 rings printed and
+discarded — not {5}-faces of this edge set).
+
+PROBE (struct263-probe-gdodec.ts, tracked) ALL PASS real exit 0 + RED
+control exit 1 (6 law FAILs on corrupted ring 0: T3/T4/T5/T6/T8/T9):
+T0a co-sphere closed-form exact; T1 Euler -6 GENUS FOUR; T2 degree 5
+everywhere (vertex figure {5/2}); T3 twelve coplanar regular pentagons
+(side 2.S == the edge EXACTLY, chord 2phi.S the golden diagonal, plane
+4.4e-16); T4 manifold 30/30; T5 five faces per vertex; T6 golden laws —
+face plane at EXACTLY R5/2 (0.850650808352), R == R5*sqrt5/2, chord/side
+== phi; T7 pole-down seat (tip 0.300000000 at dais top, tip-ring
+horizontal y 2.266 r 3.181 at exact 72deg azimuths, summit 7.414
+antipodal-in-seat 0e0, footprint law extent+bead 3.2764 <= apothem
+3.30); T8 outlines on-plane monotone (simple convex sails); T9 the
+symmetric interweave — exactly 30 non-adjacent crossings 5-per-face,
+antipodal sail-pairs parallel never crossing (0), adjacent count 0
+(filled {5}-sails meet non-adjacently — the genus-4 signature, distinct
+from the gsd's 12 designed pentagram-segment meetings).
+
+ONE probe self-catch RED-first (zero wasted builds): my remembered chord
+law said 2*sqrt3 (a HEXAGON's diagonal); the machine measured 2phi =
+3.236067977 — the PENTAGON's own golden diagonal (chord/side == phi,
+T6). Law corrected to the derived truth; RED control re-proven to still
+catch corruption through the corrected T3/T6.
+
+BUILD (agents/arthur/assets/mkv3-gdodec.ts, staged -f): root identity
+(struct-188 law); texMat lanes gdodec_stone/gdodec_iron (struct-38 law);
+bead emissive 0x9a7030 @ 1.0 in-GLB (dusk lineage, struct-82); 43
+pre-merge meshes + 1 KEEP glow group glow_gdodec_12 (mergekit KEEP
+'glow' prefix law); envelope law green in-build 6.60x7.51x6.60 ==
+probe contract. v1 deterministic x2 byte-identical sha256
+398e4a640fd8c69c42086572259017c70fb29cbf9805290c50724a881c9caac4
+(mtime-verified).
+
+DECODE (struct263-decode-gdodec.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (gdodec_iron + gdodec_stone + glow_gdodec_12); D2
+dodecagon dais TRUE box +-3.300 (apothem-first), circumradius corners
+present, sole min y -0.000000; D3 rods 2250 verts worst 48.00mm (<= 52),
+coverage 30/30; D4 sails 576 plate verts worst 4.96mm (<= 96mm shell);
+D5 beads 12/12 vertex clusters, emissive, sole night; D6 grounding sole
+at grade + pole bead half-proud (min y 0.2050 in dais top 0.30); D7
+envelope drift 0.00mm; D8 texMats 2/2. RED control (foreign bytes
+village_gsd3.glb — the dual family's own build): D1 census FAIL
+clean-stop exit 1 — verified RED_EXIT:1.
+
+RENDERS: struct263-render-gdodec.ts (tracked chassis, struct261 lineage)
+9 frames on the EXACT pinned bytes — bounds min[-3.300, -0.000, -3.300]
+max[3.300, 7.509, 3.300] == contract; reviews/struct263-gdodec/ (9
+frames, ignored — sha pin above is the durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as gdodec v1): day
+gameplay 18m 4/4 PASS (identity 'unmistakably a deliberate mathematical
+sculpture'; silhouette closed dais-to-summit; grounding flush +
+attached contact shadow; families distinct stone/iron + contract brass
+beads; inter-pentagon recesses correctly read as expected voids, not
+missing panels). Night 3/3 PASS (exactly 7 warm points resolved at this
+single azimuth — rear occlusion the geometric expectation, decode D5
+proves 12/12 clusters; zero bloom/spill; silhouette reads against the
+navy sky). Closeface 4/4 PASS (joinery woven through-laps clean,
+continuous surfaces, sensible occlusion; panels present + inset behind
+rod rims with consistent shadow seam; three materials distinguishable;
+zero z-fighting/floats/tears; beads seat at rod junctions, lower vertex
+meets dais). 11/11 total — no real defect.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-264
+committed carry (fresh census scan, under-served octant, 8m NN +
+per-district soft cap 6, 12-gon-exact polygon SAT struct-19/260 class,
+oblique-yaw struct-104 band, terrain preflight over the TRUE rotated
+12-gon, hash-gated plain spawn nx-struct-gdodec, comp {}, ground
+circuit walk). Folly class. Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
+
+Files: struct263-probe-gdodec.ts + struct263-decode-gdodec.ts +
+struct263-render-gdodec.ts + assets/mkv3-gdodec.ts (NEW, tracked; mk
+staged -f per the ignored-parent law) + STRUCTURES-PLAN.md (this block)
++ IMPROVEMENTS.md (one append struct-263, D+0 E+0).
+
+Next queue head: struct-264 placement tick (the committed carry above).
+Then R11-72 build sweep re-derives from the form ledger: the GREAT
+ICOSAHEDRON {3,5/2} is the branch's last unclaimed member (dual of the
+standing gsd, chi = 20-30+12 = +2 genus 0 — the genus contrast with
+this tick's tunnel star); the snub cube/dodeca stay named for Bill's
+handedness call; rhombic solids / non-Archimedean families per
+struct-253's grep; fresh five-file grep to confirm the gap before
+building — or Bill's verdict routing.
