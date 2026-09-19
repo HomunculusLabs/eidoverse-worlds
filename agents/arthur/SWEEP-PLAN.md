@@ -16210,3 +16210,72 @@ longhouse/garden-cottage @334 stalest standing pair at 4 sweeps; walk
 tools interior-walk-longhouse.ts + interior-walk-garden-cottage.ts,
 ls-verified present on disk BEFORE this prose — 1537B Aug 30 08:39 +
 1524B Aug 30 09:02).
+
+
+sweep-339: CLEAN SWEEP, single-classified-drift epoch-stable tick (108th
+consecutive quiet-or-classified). Tick-start HEAD a6be4a07 (struct-249
+R11-60 banked, zero mutations); standing gate ALL PASS real exit 0 FIRST
+TRY (ledger law 2370988 exact at the gate's own printed total). Census
+385==385 both epochs vs the committed sweep-338 baseline (sha16
+dc332bf86f3db188): exactly ONE classified drift field-set =
+nx-dress-stringlights lib 0c0dee37b07aa7df->ee40ab96e8f0785e at identical
+tuple (-6, 2.6, 7.5) yaw 0.7854, comp {} preserved = polish-304
+stringlights night identity re-place, committed @ 00a10896 PRE-tick
+(sweep-54 class — not an epoch correction, sweep-338's final census simply
+predated the re-place verbs); domain-valid, not drift. 0 arrivals, 0
+departures; epoch B raw sha16 10aa8d78e00f558b IDENTICAL both epochs —
+epoch-stable, no sibling landed mid-tick. OVERLAP: SAT fresh-live 347 bbox
+non-light / 247 exempt-classified / 0 coverage holes, exit 3 on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 295th sweep since routing, NOT
+new, no escalation due (the law keys on severity-1); the stringlights
+flip rides ABOVE the market stalls (py 2.6, suspended-decor exemption
+class) and SAT re-ran fresh over its bytes — no new contacts. WALKS:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs
+run individually per the sweep-228 ceiling law — core 64/64 ALL_PASS
+maxDist 0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/
+0.32), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/
+0.34/0.37/0.31) — dists identical to the sweep-319..338 canon. Tier-2
+317th cycle per the committed sweep-338 pointer: longhouse 6/6 ALL_PASS
+(0.335/0.280/0.3456/0.2969/0.2763/0.2973, interior-walk-longhouse.ts) +
+garden-cottage 6/6 ALL_PASS (0.295/0.355/0.2851/0.3451/0.3265/0.3082,
+interior-walk-garden-cottage.ts), both real exit 0, both tools
+ls-verified present on disk BEFORE this prose (1537B Aug 30 08:39 +
+1524B Aug 30 09:02, matching the committed pointer exactly); one paced
+20s retry each on join-timeout first attempts (gateway noise,
+malformed-live-response discipline, disclosed). INTEGRITY:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (293rd consecutive
+clean); sweep89-battery 28/28 PASS on epoch-B bytes (no RED phase needed
+— zero arrivals this tick, pin set already current at 47); carousel comp
+bag exact 7 + lib 3ed80c49d16e89d8 census-verified (polish-299 standing);
+comp-bearing 47; lights 38; thing 347. Interlane md5 86b2936f stable,
+read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue rows), sweep owns
+no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role —
+the audit-continues freeze banner governs via loop/plan reload. Baseline
+lawfully rewritten like-for-like (copyfile convention, sweep-321..338
+precedent; /tmp/s339/snapshot-rewrite.py): pre-write assertion verified
+committed baseline == dc332bf86f3db188, expected diff set exactly
+[nx-dress-stringlights lib], counts 385->385, zero drift on 384 shared
+ids; final 385 entities / 297665B / sha16 edf10ee90f93be2c; post-rewrite
+drift vs live epoch B ZERO. Probe self-catches pre-verdict, all
+disclosed: (a) the walk-output parser keyed 'dist' where approach tools
+emit 'distance' (sweep-48 class; re-anchored on per-leg fields, dists
+re-read from the actual schema); (b) two interior-walk first attempts hit
+join-timeout (gateway noise class, one paced retry each per the
+malformed-live-response law, both retries ALL_PASS real exit 0); (c) an
+inline-python heredoc blocked by the terminal payload validator —
+re-issued as saved scripts under /tmp/s339/ (sanctioned-path precedent,
+sweep-335 class). Foreign dirt in tree (windmill overhaul scratch,
+cabin/carousel prototype dirs, engine files, fleet shells, debug-bower
+scripts, moon-moth dir, fauna tools, core-paths assets, next-terrain
+scratch, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-340): row-cottage + observatory (318th cycle — LRU
+chain re-derived from committed pointers this tick: longhouse/
+garden-cottage @339 walked fresh, forge/potter @338, hall/bunkhouse
+@337, inn/tower-house @336, row-cottage/observatory @335 stalest
+standing pair at 4 sweeps; walk tools interior-walk-row-cottage.ts +
+struct2-walk-observatory.ts, ls-verified present on disk BEFORE this
+prose — 1526B Aug 30 10:42 + 2322B Sep 7 11:40).
