@@ -19604,3 +19604,99 @@ after it lands, next build sweep re-derives from the form ledger
 (snub cube the last named-unclaimed Archimedean, a Bill handedness call;
 rhombic solids / non-Archimedean families per struct-253's grep) or
 Bill's verdict routing.
+
+## struct-256 (2026-09-19): R11-64 THE TRUNCATED CUBOCTAHEDRON PLACED —
+## the struct-255 committed carry executed (N-E band fourth form az349 r104.5)
+
+256%3=1 build slot with FULL bank (trcubo v1 accepted struct-255) ->
+committed carry per struct-240..255 precedent. Gate ALL PASS real exit 0
+tick-start (unpiped, GATE_EXIT:0 at 0262e40a epoch — sweep-345 HEAD).
+Shard drained fresh (IMPROVE-PLAN pin 7fa8a224 unchanged since
+struct-238, 0 OPEN nx-struct rows). Ledger max re-derived struct-255 ->
+tag struct-256 (numeric extraction, re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..255; placement tick owes no new
+judgment — the trcubo was judged struct-255 ZAI 4/4+3/3+4/4; native
+re-judge rides the owed board as trcubo v1).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+510d7e8462d0c0eeaf49ae4f944ba1b5181ed50e7ce86456579545961eb951c7 ==
+struct-255 v1 pin (byte-identical — no rebuild this tick; the banked
+build is the exact judged v1 bytes). Probe 9/9 + decode 8/8 (v1
+contract) were the struct-255 tick's own real exit 0 on these exact
+bytes. No interrupted 256 window existed (no struct256-*/next-
+place-struct256 files pre-tick).
+
+SEAT (struct256-scan-trcubo, fresh 391-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.792, guaranteed overlap refused; coverage exact 2 / radial
+295 / disc 2 / exempt 4): octant audit places the N-E octant az315-360
+as the under-served band (3 forms standing — vesicawindow az357.5 r70.1,
+rt az359.5 r87.5, toct az348.5 r66; + trcubo -> 4, soft cap 6, NO
+exceedance). The raw scan's innermost constellation seats (r89.5
+az327-329) sat at gap 1.42-1.98 — the struct-248 no-margin class —
+REJECTED by an explicit margin filter (gap >= 2.2, struct-254
+real-margin law). Selected: az349.0 r104.5 (102.58, -19.94) — innermost
+lawful margin+constellation seat, gap 2.29 vs nx-wild-wayside-0058
+(0.89 real margin). NN 24.40 to nx-struct-rt (law 8; composed with
+vesicawindow ~34.7m + toct ~38.6m — the 18-40m constellation band).
+26-gon-exact SAT worst 2.29 (law 1.4). Walk-clear 60.91.
+
+YAW LAW (procession convention, struct-217..255): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az169 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120 -
+349 = -469 -> 251.00deg -> YAW = 4.380776 rad. The trcubo is
+OCTAGON-DOWN 4-fold about the vertical axis (probe T7: 90deg symmetry
+exact, waist octagons dead on the cardinals) — the yaw is exact mod
+90deg and protects the judged read (tcube struct-250 4-fold precedent).
+
+TERRAIN (struct256-terrain-trcubo.ts, this tick): 53pt over the TRUE
+rotated 26-gon (center + 26 verts + 26 edge-mids), spread 17.1mm, PY =
+lowest = -0.017160 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=26 class): the 26-gon dais R3.90 APOTHEM-FIRST (PLINTH_N 26,
+corners ON the axes per struct-247 law) is the footprint; solid max
+horizontal reach + rod 3.725 <= dais apothem 3.872 (probe T7 + decode
+D2) — the solid NEVER overhangs, so the 26-gon IS the true ground
+footprint. Exact convex-polygon SAT (edge-normal axes of both polys,
+max-gap law) replaces the square-bbox proxy — struct-19 disc law class.
+
+PLACEMENT: next-place-struct256.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 391), NN
+floor 24.40 + exact-SAT worst 2.29 re-proven against the FRESH 391-set
+pre-verb, upload store/510d7e8462d0c0ee.glb (1 upload, shared budget),
+plain spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [102.580041,
+-0.017160, -19.939540] yaw 4.380776422505767 lib
+store/510d7e8462d0c0ee.glb comp {} census 391->392; idempotent rerun
+ALREADY_SEATED 0 verbs. Ground circuit walk 7/7 CORE_ALL_PASS
+maxArrival 0.368m (two-way az349 arrival-line approach + reading-face
+vantage at 7m on the az199 face normal + full CW standoff circuit at
+8m — no phantom collider; folly by presentation, the PANELLED solid
+means the walk stays outside the 3.90m dais; walk standoff 8m applies
+directly, chord-mid clear 4.13m — the struct-255 disposition). Walk
+stdout carries the known distant support-seam diagnostics class
+(dress/temple entities, foreign lanes, abstentions only).
+
+Bill eye-check pointer: on the N-E reach past the rhombic
+triacontahedron — where the srcubo GROWS its parent and the tico wears
+its pentagons, THE TRUNCATED CUBOCTAHEDRON cuts the cube gently: six
+faces still standing in their own unmoved planes, now octagons; every
+edge beveled into a square; every corner bloomed into a dark iron
+hexagon. Twenty-six panels — the same element census the srcubo told by
+growing. The theorem standing under it: the knife took only a quarter
+of the parent's mass and never moved a plane. After dark the six brass
+beads mark exactly the six parent faces, lit — one on the finial at the
+crown, four at the compass waist, and the sixth given to the earth
+beneath the flat foot. The bevels and the bloomed corners stay dark.
+
+Files: struct256-scan-trcubo.ts + struct256-terrain-trcubo.ts +
+struct256-walk-trcubo.ts + next-place-struct256.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-256,
+D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-257 build+judge tick (R11-65, empty bank —
+re-derive the form from the ledger grep: snub cube the last
+named-unclaimed Archimedean, a Bill handedness call; rhombic solids /
+non-Archimedean families per struct-253's grep; fresh five-file grep to
+confirm the gap before building) or Bill's verdict routing.
