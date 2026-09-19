@@ -20272,3 +20272,144 @@ re-derive the form from the ledger grep: snub cube the last
 named-unclaimed Archimedean, a Bill handedness call; rhombic solids /
 non-Archimedean families per struct-253's grep; fresh five-file grep to
 confirm the gap before building) or Bill's verdict routing.
+
+## struct-261 (2026-09-19): R11-69 THE GREAT STELLATED DODECAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-262 committed carry)
+
+261%3=0 refine slot with EMPTY bank (trico placed struct-260) -> build+judge
+tick per the struct-229/233/235/237..259 precedent (refine pool empty of
+payable items 40+ ticks). Gate ALL PASS real exit 0 tick-start (unpiped,
+GATE_EXIT:0 at 0e52ed24 epoch — struct-260 HEAD). Shard drained fresh
+(IMPROVE-PLAN pin 7fa8a224 unchanged since struct-238, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-260 -> tag struct-261 (numeric
+extraction, re-checked immediately before append). Native absent from the
+cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as
+struct-169..260; owed board gains gsd v1, joins the riding queue). No
+interrupted 261 window existed (no struct261-*/mkv3-gsd files pre-tick).
+
+FORM SELECTION fresh five-file grep (the struct-260 queue-head named the
+sweep): great stellated dodeca / great dodeca / great icosa — 0 real
+claims across STRUCTURES-PLAN, IMPROVEMENTS, CITY-PLAN, IMPROVE-PLAN,
+NEW-VILLAGE-PLAN, DRESSING-PLAN. The Kepler-Poinsot branch (opened
+struct-231 SSD, placed struct-232) had three unclaimed members. Selected:
+the GREAT STELLATED DODECAHEDRON {5/2,3} — the final stellation (Kepler
+1619), achiral (no handedness decision owed Bill), exact closed form
+(the dodecahedron's own 20 vertices; the SSD's dual-family machinery
+ports), and the branch's SPIKIEST silhouette (20 sharp points vs the
+SSD's 12 — silhouette-first law). The snub cube/dodeca stay named for
+Bill's handedness call; great dodecahedron + great icosahedron remain
+unclaimed for later sweeps.
+
+CONCEPT: THE FINAL STELLATION, SEATED ON ITS SHARPEST POINT. A 3-fold
+tip rides the dais (vertex figure {3}); the twenty spikes rise in four
+horizontal rings; IRON carries the thirty long star edges — each edge
+exactly phi times the hidden dodecahedron's own edge, drawn ACROSS every
+face's diagonals; STONE carries the twelve pentagram membranes — sails
+cut deep (face planes pass 0.056R from the center) — and the
+TWENTY-sided dais (one side per tip — the theme number). Night contract:
+twenty warm brass tips (glow_gsd_20), the grounded one half-proud in the
+dais top (SSD/csaszar lineage). THE THEOREM the probe machines: GENUS
+ZERO — chi = 20-30+12 = +2: for all its spikes the final star is a
+topological SPHERE, and its sails INTERWEAVE (T9: exactly 30 non-adjacent
+crossings, 5 per face, symmetric) — the presentation honors this: iron
+rods pass through stone sails at the woven crossings (disclosed in the
+build's own console line).
+
+PARAMETRIZATION (exact, closed-form, derived not remembered): V = 20
+dodecahedron vertices (all (±1,±1,±1) + cyclic (0,±1/phi,±phi)); E = the
+30 pairs at distance 2phi (the star-edge class); F = 12 pentagrams, each
+found by EXHAUSTIVE REGULAR-PENTAGON RING SEARCH over every distance
+class (the class whose step-2 chords are exactly E IS the star — no
+remembered face coordinates; the search also finds and discards the
+hidden dodeca's own 12 face-rings, printed for honesty).
+
+PROBE (struct261-probe-gsd.ts, tracked) ALL PASS real exit 0 + RED
+control exit 1 (5 law FAILs: T3/T4/T5/T8b/T9 on corrupted ring 0):
+T0a all 20 vertices co-spherical (spread 0e0, R = sqrt(3) exact);
+T1 Euler 20-30+12 = +2 (genus 0); T2 degree 3 at every vertex (vertex
+figure {3}); T3 12 regular pentagon tip-rings (plane 5.0e-16, side
+2.000000000 exact, star chord 2phi exact); T4 manifold 30/30 (step-2
+chords == E, zero unmatched); T5 three faces per tip; T7 golden law
+chord/side == phi exact; T8 3-fold seat (tip y 0.300000000 at dais top,
+neighbor ring horizontal y 5.802 r 2.102 at exact 120 deg azimuths,
+summit 6.605 = antipodal tip, antipodality tested in pre-lift seat
+coords); T8b outlines on-plane 0.000mm, monotone order (simple star
+regions); T9 the symmetric interweave — exactly 30 non-adjacent
+crossings, 5 per face.
+
+SELF-CAUGHT RED-FIRST THIS TICK (probe, zero wasted builds): (a) the
+T8 antipodal clause tested |V_summit + V_tip| in LIFTED coords — the
+dais LIFT translation contaminated the test (2·LIFT·ŷ on a genuinely
+antipodal pair); fixed to pre-lift seat coords; (b) the SSD's
+zero-interpenetration law is the WRONG LAW for this solid — the first
+run measured 30 non-adjacent crossings and FAILED; derivation confirmed
+this is the final stellation's true property (genus 0 BECAUSE the sails
+pass through one another), so the law was rewritten as the SYMMETRY
+check: exactly 30 crossings, 5 per face (a malformed star region would
+deviate asymmetrically — and the RED control proves the rewritten law
+still catches corruption: 32 crossings asymmetric = FAIL).
+
+BUILD (agents/arthur/assets/mkv3-gsd.ts, staged -f): root identity
+(struct-188 law); texMat lanes gsd_stone/gsd_iron (struct-38 law); bead
+emissive 0x9a7030 @ 1.0 in-GLB (dusk lineage, struct-82); glow census
+exactly 1 KEEP group glow_gsd_20; envelope law green in-build
+(6.80x6.70x6.80 == probe contract; 43 pre-merge meshes -> 3 draw nodes).
+v1 deterministic x2 byte-identical sha256
+771b79082ded82c4a9b39bbfea030e8b4b2056fb1cdf574e044d6675453f1995
+(mtime-verified).
+
+DECODE (struct261-decode-gsd.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (gsd_stone + gsd_iron + glow_gsd_20); D2 icosagon
+dais TRUE box ±3.400 (corners-on-axes, ROT=0 class), circumradius
+corners present, sole min y −0.000000; D3 rods 2250 verts worst 48.00mm
+(<= 52), coverage 30/30; D4 membranes 1296 verts worst 27.32mm (<= 96mm
+shell bound); D5 beads 20/20 tip clusters, emissive, sole night; D6
+grounding sole at grade + tip bead half-proud (min y 0.2050 in dais top
+0.30); D7 envelope drift 0.00mm; D8 texMats 2/2. RED control (foreign
+bytes: village_ssd3.glb — the dual family's own build): D1 census FAIL
+clean stop exit 1 — verified.
+
+RENDERS: struct261-render-gsd.ts (tracked chassis, struct255/259
+lineage) 9 frames on the EXACT pinned bytes — bounds
+min[−3.400,−0.000,−3.400] max[3.400,6.700,3.400] == contract;
+reviews/struct261-gsd/ (ignored — sha pin above is the durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as gsd v1): day
+gameplay 18m 4/4+1 PASS (identity immediate star polyhedron "plaza
+sculpture"; silhouette dais-to-summit unbroken with bead coordinates;
+grounding tip lands on dais top with anchored shadows; three material
+families distinct; defects PASS — sole nitpick the 20-gon dais reads
+disc-smooth at 18m, the family-wide many-gon class, cosmetic). Night
+PASS (13 warm points resolved at this single azimuth — decode D5
+proves 20/20 clusters exist, judge itself notes the remainder are
+rear-occluded, geometrically expected; zero bloom, zero spill, the
+constellation-crown read confirmed). Closeface PASS (joinery clean,
+beads on-axis, crossings read as woven through-laps, uniform shadow-gap
+reveal — "the strongest joinery signal in the render"; panels all
+present/inset; families separated; zero z-fighting/floats/tears; the
+apex-crop and lowest-bead-tangency notes certified at source — apex
+bead visible in gameplay frame, D6 proves the half-proud embed).
+11/11 total — no real defect.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-262
+committed carry (fresh census scan, under-served octant, 8m NN +
+district soft cap 6, 20-gon-exact polygon SAT struct-19/260 class,
+oblique-yaw struct-104 band, terrain preflight over the TRUE rotated
+20-gon, hash-gated plain spawn nx-struct-gsd, comp {}, ground circuit
+walk). Folly class. Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
+
+Files: struct261-probe-gsd.ts + struct261-decode-gsd.ts +
+struct261-render-gsd.ts + assets/mkv3-gsd.ts (NEW, tracked; mk staged
+-f per the ignored-parent law) + STRUCTURES-PLAN.md (this block) +
+IMPROVEMENTS.md (one append struct-261, D+0 E+0).
+
+Next queue head: struct-262 placement tick (the committed carry above).
+Then R11-70 build sweep re-derives from the form ledger: great dodeca-
+hedron {5,5/2} (the third Kepler-Poinsot star, dual of the great icosa-
+hedron) and great icosahedron {3,5/2} remain the branch's unclaimed
+members; the snub cube/dodeca stay named for Bill's handedness call;
+fresh five-file grep to confirm the gap before building — or Bill's
+verdict routing.
