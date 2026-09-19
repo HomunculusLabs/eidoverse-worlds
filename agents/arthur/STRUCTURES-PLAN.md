@@ -17145,3 +17145,87 @@ staged -f), reviews/struct235-rt/ (9 frames, ignored — sha pins in this
 block are the durable record), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-235, D+0 E+0). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+
+## struct-236 (2026-09-18): R11-49 RT PLACED — the struct-235 committed
+## carry executed (E-axis procession terminus az359.5 r87.5 / N-E octant
+## anchor)
+
+236%3=0 refine slot with FULL bank (rt v1 accepted struct-235) -> the
+committed carry: placement (refine pool empty of payable items 40+ ticks,
+build-under-empty-bank escape class; struct-231/233/235 precedent). Gate
+ALL PASS real exit 0 tick-start at 419ee848 (sweep-324; unpiped
+GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0
+OPEN nx-struct rows). Ledger max re-derived struct-235 -> tag struct-236
+(re-checked immediately before append). Native absent from the cron
+catalog all tick (tool_search fresh: terminal + zai-vision + repoprompt
+only — same disclosed cron-unpayable class as struct-169..235; owed board
+stays 26 + csaszar v3 + ssd v1 + tetrahelix v2 + rt v1).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2 from
+repo ROOT reproduces the pinned sha exactly (40059339816dc320…
+dcfe7e73, probe ALL PASS both runs, mtime-verified, envelope line ==
+probe contract 8.00x7.40x7.96). Decode 8/8 ALL PASS was the struct-235
+tick's own real exit 0 on these exact bytes.
+
+SEAT (struct236-scan + struct236-seatprobe, fresh 371-entity census):
+octant audit r66+ places the N-E octant az315-360 as the under-served
+band (1 struct form standing — vesicawindow az357.5 r70.1; soft cap 6;
++ rt -> 2, NO exceedance; oct2 SE-S carries 46). Seat az359.5 r87.5
+(87.496668, -0.763572): composes BOTH the E-axis procession terminus
+(ruledtower r58 az0 -> ssd r66 az9 -> tetrahelix r76 az4 -> rt r87.5
+az359.5, ~12m rhythm matching every prior pair) and the N-E octant band
+(vesicawindow 17.6m conversational; seat's own az 359.5 = honest oct7 by
+raz()). NN 13.16 to nx-struct-tetrahelix (law 8). Triacontagon-exact SAT
+worst 1.98 vs nx-wild-cairn-0050 (law 1.4). Walk-clear 58.91. The az360
+column was rejected on the epsilon law (az 0.0 raz-reports as oct0, not
+the under-served oct7) — az359.5 keeps the audit honest for the NEXT
+tick's audit.
+
+YAW LAW (procession convention, struct-217/219/224/228/232/234): local
+az alpha -> world az (alpha - yaw). Judged reading face local az90 at
+anti-travel az179.5 + 30deg east lean (struct-104 oblique band) ->
+yaw_deg = -479.5 -> 240.50 -> YAW = 4.197517 rad. The rt is 120deg-
+symmetric about Y (3-fold seat) — the yaw is exact mod 120deg and
+protects the judged read.
+
+TERRAIN (struct236-terrain-rt.ts, this tick): 61pt over the TRUE rotated
+triacontagon (center + 30 verts + 30 edge-mids), spread 11.8mm, PY =
+lowest = -0.024244 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=30 class): the triacontagonal dais R4.0 (corners ON the
+axes) is the footprint; gem max horizontal reach 3.779 + bead 0.095 =
+3.874 <= dais apothem 3.978 (probe T9 + decode D2/D7) — the gem NEVER
+overhangs, so the triacontagon IS the true ground footprint. Exact
+convex-polygon SAT (edge-normal axes of both polys, max-gap law)
+replaces the square-bbox proxy — struct-19 disc law class; the seatprobe
+adds a conservative radial pre-filter (cd - R - radBound >= LAW skips
+exact SAT safely) so the 30-gon scan stays fast; disc neighbors keep
+point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct236.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed), upload
+store/40059339816dc320.glb (1 upload, shared budget), plain spawn 1 verb
+paced 1200ms, PLACED_VERIFIED pos [87.496668, -0.024244, -0.763572] yaw
+4.197517 comp {} census 371->372; idempotent rerun ALREADY_SEATED 0
+verbs. Ground circuit walk 6/6 CORE_ALL_PASS maxArrival 0.31m (two-way
+village approach on the az359.5 arrival line + reading-face vantage rim
+at 7m on the az179.5 face normal + full CW standoff circuit at 6m — no
+phantom collider; folly by presentation, the open faceted gem is the
+sculpture). Walk stdout carries the known distant support-seam
+diagnostics class (dress/temple entities, foreign lanes, abstentions
+only).
+
+Bill eye-check pointer: on the far E walk the procession now ends in a
+gem — the hyperboloid lattice tower, then Kepler's star, then the twisted
+tetrahedral spire, then THE RHOMBIC TRIACONTAHEDRON standing on its
+point: one shape repeated thirty times, every face the same golden
+rhombus, its diagonals exactly phi; sixty iron edges in six families of
+ten parallel lines, brass beads at twenty corners, one set into the
+dais itself. After dark: twenty quiet lights tracing the gem's corners,
+one in the dais.
+
+Files: struct236-scan-rt.ts + struct236-seatprobe-rt.ts +
+struct236-terrain-rt.ts + struct236-walk-rt.ts + next-place-struct236.ts
+(all NEW, tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
+(one append struct-236, D+0 E+1). One upload, one verb. Zero pushes.
