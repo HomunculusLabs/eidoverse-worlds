@@ -8520,6 +8520,7 @@ interior-walk-garden-cottage.ts).
 | sweep-235 | 2026-09-10 | 325==325 fully quiet at BOTH epochs (A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL to the committed sweep-231 lib-fold baseline (raw 215228B sha16 b8c43498acb3ebea; set-diff law satisfied by byte identity): 0 arrivals, 0 departures, all five semantic drift classes EMPTY; TENTH consecutive quiet-or-classified epoch pair, no snapshot rewrite needed (no-churn precedent); HEAD advanced three times mid-tick (survey-337 @ a32af9b1 + survey-338 @ 6a99c696 + survey-339 @ 7164c08d, all zero-mutation observer quiet holds, each corroborates the b8c43498acb3ebea epoch via its own census); epoch law honored, gate re-run ALL PASS real exit 0 at 7164c08d pre-append | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 191st sweep since routing, no escalation due — law keys Sev 1); SAT fresh-live 287 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.380, NW 5/5 @ 0.380, NE 7/7 @ 0.380, SW 5/5 @ 0.370, legs run individually per sweep-228 ceiling law; verdicts content-anchored on status strings + leg counts + maxArrival from raw unpiped output; abstention set = known normalized diagnostics, unchanged) + tier-2 213th cycle per committed sweep-234 pointer: hall 8/8 @ 0.360 (interior-walk-hall.ts) + bunkhouse 6/6 @ 0.38031 (interior-walk-bunkhouse.ts) ALL PASS (match sweep-230 records for the pair exactly) | pins 15/15 ALL_PINS_OK bad:[] (189th consecutive clean); battery 28/28 PASS exit 0 on fresh census-A bytes (python3 argv census-path form); interlane f6254cd0 stable read fresh pre- and post-walks; ledger law EXACT 2370778 at append via canonical tool; gate ALL PASS real exit 0 FIRST TRY (99 PASS lines, exit captured unpiped, ran at a32af9b1 already past survey-337) + RE-RUN ALL PASS real exit 0 at 7164c08d pre-append; diff tool sweep235 folded from committed sweep234 chassis (sed swap only — 3 forward / 0 stale refs, py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on the real bytes); pools drained (IMPROVE-PLAN md5 c0f569d0 unchanged 212th, 0 live-queue OPEN, 0 SHARD EXECUTION, sweep owns no prefix); next pair sweep-236 longhouse + garden-cottage (214th, tools ls-verified THIS tick) | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-236 | 2026-09-10 | 325==325 at both epochs byte-identical to the committed sweep-231 baseline (215228B sha16 b8c43498acb3ebea, set-diff law by byte identity): 0/0/0 across all five drift classes, ELEVENTH consecutive quiet-or-classified pair, no snapshot rewrite; HEAD advanced twice mid-tick — city-13 @ 90c8a8e0 (CITY-PLAN v2 commission-open, accepted by the gate's prefix rule; freeze holds) then survey-341 @ 62b2eadc (observer hold whose message names city-14 2b8a6ccc + struct-166 16adb2ce + survey-340 riding inside its window, all zero-mutation); epoch law honored, gate re-run ALL PASS real exit 0 at 62b2eadc pre-append | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 192nd sweep since routing, no escalation due — law keys Sev 1); SAT fresh-live 287 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.380, NW 5/5 @ 0.380, NE 7/7 @ 0.380, SW 5/5 @ 0.370, legs run individually per sweep-228 ceiling law; verdicts content-anchored on status strings + leg counts + maxArrival from raw unpiped output; abstention set = known normalized diagnostics, unchanged) + tier-2 214th cycle per committed sweep-235 pointer: longhouse 6/6 @ 0.3456 (interior-walk-longhouse.ts) + garden-cottage 6/6 @ 0.355 (interior-walk-garden-cottage.ts) ALL PASS (match sweep-231 records for the pair exactly) | pins 15/15 ALL_PINS_OK bad:[] (190th consecutive clean); battery 28/28 PASS exit 0 on fresh census-A bytes (python3 argv census-path form); interlane md5 f6254cd0 stable read fresh pre- and post-walks; ledger law EXACT 2370778 at append via canonical tool (D+0/E+0, 2370778 -> 2370778); gate ALL PASS real exit 0 FIRST TRY @ 90c8a8e0 (99 PASS lines, exit captured unpiped) + RE-RUN ALL PASS real exit 0 at 62b2eadc pre-append; diff tool sweep236 folded from committed sweep235 chassis (sed swap only — 3 forward / 0 stale refs, py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on the real bytes); pools drained (IMPROVE-PLAN md5 c0f569d0 unchanged 213th check, 0 OPEN candidates, 0 SHARD EXECUTION, CITY-PLAN-V2 assigns sweep no reset role — the audit-continues freeze banner governs, read fresh this tick); next pair sweep-237 row-cottage + observatory (215th — LRU chain re-derived from committed pointers this tick: inn/tower-house @233, forge/potter @234, hall/bunkhouse @235, longhouse/garden-cottage @236 walked fresh, row-cottage/observatory @232 stalest standing pair at 4 sweeps; both walk tools ls-verified present on disk this tick: interior-walk-row-cottage.ts, struct2-walk-observatory.ts) | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-340 | 2026-09-19 | 385→386 epoch-stable (348 thing + 38 light; +1 domain-valid arrival nx-struct-tcube @ (-96.814764, 0.009262, 25.038) yaw 1.3002702927357754 lib 13b939ea1a104ae1 comp {} = struct-250 @ 1fada8eb PRE-tick, tuple matches its committed ledger line-for-line; ONE classified lib flip nx-dress-stringlights ee40ab96→246af386 at identical tuple (-6, 2.6, 7.5) yaw 0.7854 comp {} preserved = polish-305 @ 8cbfa323 tick-start HEAD; 0 departures, 0 drift on 384 shared ids across the full 9-field projection; epoch B raw sha16 5e59ca05364a935c IDENTICAL both epochs — no sibling landed mid-tick) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 296th sweep since routing, no escalation due — law keys Sev 1); 348 bbox non-light / 247 exempt-classified / 0 coverage holes, SAT fresh-live incl. the tcube bytes (its own polygon SAT worst 2.24, NN 26.54) | tier-1 4/4 per-leg verified 81/81 ALL_PASS every leg real exit 0, legs run individually per the sweep-228 ceiling law — core 64/64 maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/0.31) — dists identical to the sweep-319..339 canon; tcube r100.1 S-SW sits outside every walked leg (no S route exists; ≥71m walk-clear per its own ledger) — walks stand by construction, sweep-53 precedent; Tier-2 318th cycle per the committed sweep-339 pointer: row-cottage 6/6 ALL_PASS (0.295/0.3681/0.3838/0.294/0.3617/0.3066, interior-walk-row-cottage.ts) + observatory 5/5 ALL_PASS (0.28/0.389/0.303/0.345/0.314, struct2-walk-observatory.ts), both real exit 0, both tools ls-verified present on disk BEFORE this prose (1526B Aug 30 10:42 + 2322B Sep 7 11:40, matching the committed pointer exactly) | pins 15/15 ALL_PINS_OK bad:[] (294th consecutive clean); sweep89-battery 28/28 PASS on epoch-B bytes, no RED phase needed (pin set current at 47, tcube arrival comp-neutral {}); carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified (polish-299 standing); comp-bearing 47; lights 38; thing 348; interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open queue rows, CITY-PLAN-V2 cae6b928 unchanged assigns sweep no reset role — the audit-continues freeze banner governs via loop/plan reload); baseline lawfully rewritten like-for-like (copyfile convention, sweep-321..339 precedent; /tmp/s340/snapshot-rewrite.py): pre-write assertion verified committed baseline == edf10ee90f93be2c, expected diff set exactly [arrival nx-struct-tcube, nx-dress-stringlights lib], counts 385->386, zero drift on 384 shared ids; final 386 entities / 298266B / sha16 a127a1eab7a35b1a; post-rewrite drift vs live epoch B ZERO | CLEAN SWEEP — R-121 open, known, no escalation due |
+| sweep-342 | 2026-09-19 | 387→388 epoch-stable (both epochs identical raw sha16 0525799c8b9ad548; exactly ONE domain-valid arrival nx-struct-tdodec @ (-76.7056, 0.000586, -22.7212) yaw 0.7592 lib c344bd08 comp {} = struct-252 @ ab826d5f PRE-tick, tuple matches its committed ledger line-for-line, r80.0 SW-W band az196.5; 0 departures, 0 drift on 386 shared ids; baseline rewritten 0525799c8b9ad548 (388 ents) pre-write-asserted, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 298th sweep since routing, no escalation due — law keys Sev 1); 350 bbox non-light / 247 exempt-classified / 0 coverage holes, tdodec in live SAT set, no new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each, legs run individually (core 64/64 @ 0.380, NW 5/5, NE 7/7, SW 5/5 — dists canon); tier-2 320th cycle per committed pointer hall 8/8 + bunkhouse 6/6 ALL_PASS (tools ls-verified present on disk BEFORE this prose — 1704B Aug 30 08:24 + 1538B Aug 30 11:22) | pins 15/15 ALL_PINS_OK bad:[] (296th consecutive clean), sweep89-battery 28/28 PASS on epoch-B bytes (tdodec comp-neutral, no RED phase), carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified (polish-299 standing), belltower f9ceea6e82b481e5 + ladder comp live (polish-306 standing), comp-bearing 48, lights 38, thing 350; interlane md5 86b2936f stable read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh; pools drained (IMPROVE-PLAN 7fa8a224 zero open rows, sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role); standing gate ALL PASS real exit 0 at tick-start ab826d5f + re-run at e493000a post-interleave (dress-185 read-only hold) | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 
 sweep-216: CLEAN SWEEP, single-classified-drift tick (committed PRE-tick, no
@@ -16369,3 +16370,71 @@ walked fresh, longhouse/garden-cottage @339, forge/potter @338,
 hall/bunkhouse @337 stalest standing pair at 4 sweeps; walk tools
 interior-walk-hall.ts + interior-walk-bunkhouse.ts, ls-verified present on
 disk BEFORE this prose — 1704B Aug 30 08:24 + 1538B Aug 30 11:22).
+
+sweep-342: CLEAN SWEEP, one-arrival epoch-stable tick (111th consecutive
+quiet-or-classified). Tick-start HEAD ab826d5f (struct-252 R11-62 truncated
+dodecahedron PLACED, committed PRE-tick); fauna-43 @ 00faa5cf one below
+(proposal-only, zero mutations). Standing gate ALL PASS real exit 0 FIRST
+TRY at ab826d5f (ledger law 2370997 exact at the gate's own printed total);
+re-run ALL PASS real exit 0 at e493000a after the mid-tick dress-185
+read-only HOLD interleave. Census epoch A 387→388 vs the committed sweep-341
+baseline (sha16 0ff0f54b685a0a54): exactly ONE domain-valid arrival, 0
+departures, 0 drift on 386 shared ids across the 9-field projection incl.
+comp objects — nx-struct-tdodec @ (-76.705579, 0.000586, -22.721228) yaw
+0.7592182246175333 scale 1 lib c344bd08b2592256 comp {} (struct-252, tuple
+matches its committed ledger line-for-line: r80.0 SW-W band az196.5, yaw
+43.5deg 5-fold mod-72, PY 0.000586 terrain pin; sweep-54 class — committed
+PRE-tick, not an epoch correction; independently corroborated by sibling
+dress-185's same-tick census @ e493000a). Epoch B 20s-paced re-read raw
+sha16 0525799c8b9ad548 IDENTICAL both epochs — epoch-stable, no sibling
+world-mutation landed mid-tick. OVERLAP: SAT fresh-live 350 bbox non-light /
+247 exempt-classified / 0 coverage holes, exit 3 on exactly ONE unclassified
+= R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 298th sweep since routing, NOT new, no escalation
+due (the law keys on severity-1); the tdodec was included in the live SAT
+set — no new contacts (its own ledger: 32-gon-exact SAT worst 1.96, NN
+21.08). WALKS: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0, legs run individually per the sweep-228 ceiling law — core 64/64
+ALL_PASS maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/
+0.30/0.33/0.32), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5
+(0.00/0.25/0.34/0.37/0.31) — dists identical to the sweep-319..341 canon;
+the tdodec arrival sits r80.0 SW-W, outside every tier-1 leg (sweep-53
+precedent). Tier-2 320th cycle per the committed sweep-341 pointer: hall
+8/8 ALL_PASS (interior-walk-hall.ts, real exit 0, dists 0.285/0.360/0.280/
+0.265/0.340/0.260/0.335-canon) + bunkhouse 6/6 ALL_PASS
+(interior-walk-bunkhouse.ts, real exit 0, dists 0.245/0.300/0.305/0.247/
+0.380/0.313), both tools ls-verified present on disk BEFORE this prose
+(1704B Aug 30 08:24 + 1538B Aug 30 11:22, matching the committed pointer
+exactly). INTEGRITY: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[]
+(296th consecutive clean); sweep89-battery 28/28 PASS on epoch-B bytes (no
+RED phase needed — the tdodec arrival is comp-neutral {}, pin set already
+current at 48); carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified (polish-299 standing); belltower f9ceea6e82b481e5 + ladder
+comp live (polish-306 standing); comp-bearing 48; lights 38; thing 350.
+Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f read
+fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue
+rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep
+no reset role — the audit-continues freeze banner governs via loop/plan
+reload. Baseline lawfully rewritten like-for-like (copyfile convention,
+sweep-321..341 precedent; /tmp/s342/snapshot-rewrite.py): pre-write
+assertion verified committed baseline == 0ff0f54b685a0a54, expected diff
+set exactly [arrival nx-struct-tdodec], counts 387→388, zero drift on 386
+shared ids; final 388 entities / 299593B / sha16 0525799c8b9ad548;
+post-rewrite drift vs live epoch B ZERO. Probe self-catches pre-verdict,
+all disclosed: (a) sweep89-battery first invocation omitted the census
+argv (tool's own IndexError, zero checks run — re-invoked with the epoch
+file, 28/28); (b) the ledger prose carried a trailing (D+0, E+0) pair the
+tool then doubled — same committed form as sweep-341's entry, tool's own
+post-write law check printed exact, left as-is (house form, disclosed).
+Foreign dirt in tree (windmill overhaul scratch, cabin/carousel prototype
+dirs, engine files, fleet shells, debug-bower scripts, moon-moth dir,
+fauna tools, core-paths assets, next-terrain scratch, review dirs) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-343): forge +
+potter (321st cycle — LRU chain re-derived from committed pointers this
+tick: hall/bunkhouse @342 walked fresh, inn/tower-house @341,
+longhouse/garden-cottage @339, forge/potter @338 stalest standing pair at
+4 sweeps; walk tools interior-walk-forge.ts + interior-walk-potter.ts,
+ls-verified present on disk BEFORE this prose — 1559B Aug 30 08:32 +
+1571B Sep 7 13:44).
