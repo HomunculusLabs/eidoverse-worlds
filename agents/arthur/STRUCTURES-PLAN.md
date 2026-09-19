@@ -17369,3 +17369,84 @@ staged -f), reviews/struct237-co/ (9 frames, ignored — sha pins in this
 block are the durable record), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-237, D+0 E+0). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+
+
+## struct-238 (2026-09-18): R11-51 CO PLACED — the struct-237 committed
+## carry executed (E-axis procession fifth station az3.5 r96.5 / E-octant
+## third form)
+
+238%3=2 placement slot with FULL bank (co v1 accepted struct-237) -> the
+committed carry: placement. Gate ALL PASS real exit 0 tick-start at
+288bdd84 (sweep-326; unpiped GATE_EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-237 -> tag struct-238 (re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..237; owed board stays 26 + csaszar
+v3 + ssd v1 + tetrahelix v2 + rt v1, plus co v1 now riding).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2 from
+repo ROOT reproduces the pinned sha exactly (90c92f327221e2bf…7984093,
+exits 0/0, envelope line == probe contract 8.10x6.63x8.10). Decode 8/8
+ALL PASS was the struct-237 tick's own real exit 0 on these exact bytes.
+
+SEAT (struct238-scan + struct238-seatprobe, fresh 373-entity census):
+octant audit r66+ places the E octant az0-45 as the under-served band
+(2 struct forms standing — ssd az9 r66 + tetrahelix az4 r76; tied with
+oct3/4/5/7 at 2; E kept for the procession, matching struct-234's
+tie-break). Band audit: 2 forms standing (soft cap 6; + co -> 3, NO
+exceedance). Seat az3.5 r96.5 (96.320008, 5.891184): composes the
+E-axis procession FIFTH station (ruledtower r58 az0 -> ssd r66 az9 ->
+tetrahelix r76 az4 -> rt r87.5 az359.5 -> co r96.5 az3.5, steps
+8/10/11.5/9m continuing the weave). NN 11.05 to nx-struct-rt (law 8).
+Dodecagon-exact SAT worst 2.84 vs nx-craft-hamlet-0007 (law 1.4).
+Walk-clear 67.91.
+
+YAW LAW (procession convention, struct-217/219/224/228/232/234/236):
+local az alpha -> world az (alpha - yaw). Judged reading face local
+az90 at anti-travel az183.5 + 30deg east lean (struct-104 oblique band)
+-> yaw_deg = -123.5 -> 236.50 -> YAW = 4.127704 rad. The co is
+120deg-symmetric about Y (3-fold triangle seat) — the yaw is exact mod
+120deg and protects the judged read.
+
+TERRAIN (struct238-terrain-co.ts, this tick): 25pt over the TRUE rotated
+dodecagon (center + 12 verts + 12 edge-mids), spread 14.0mm, PY =
+lowest = -0.029291 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=12 class): the dodecagonal dais R4.05 ROT=0 (corners ON the
+axes) is the footprint; gem max horizontal reach 3.818 + bead 0.095 =
+3.913 <= dais apothem 3.926 (probe T9 + decode D2/D7) — the gem NEVER
+overhangs, so the dodecagon IS the true ground footprint (no overhang
+disclosure needed). Exact convex-polygon SAT (edge-normal axes of both
+polys, max-gap law) replaces the square-bbox proxy — struct-19 disc law
+class. Disc neighbors keep point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct238.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed), upload
+store/90c92f327221e2bf.glb (1 upload, shared budget), plain spawn 1
+verb paced 1200ms, PLACED_VERIFIED pos [96.320008, -0.029291,
+5.891184] yaw 4.127704 comp {} census 373->374; idempotent rerun
+ALREADY_SEATED 0 verbs. Ground circuit walk 6/6 CORE_ALL_PASS
+maxArrival 0.31m (two-way village approach on the az3.5 arrival line +
+reading-face vantage rim at 7m on the az183.5 face normal + full CW
+standoff circuit at 6m — no phantom collider; folly by presentation,
+the open faceted gem is the sculpture).
+
+Bill eye-check pointer: on the far E walk the procession now carries
+FIVE stations — the hyperboloid lattice tower, then Kepler's star, then
+the twisted tetrahedral spire, then Kepler's golden gem, then THE
+CUBOCTAHEDRON, the equal measure: a solid standing on a triangular
+face where every edge is exactly as long as the distance from any
+corner to the heart — corner-to-center == corner-to-corner, the one
+uniform solid where that is true. Eight triangles and six squares
+alternate around every corner, never two of a kind touching. Twelve
+brass beads at the twelve corners (the same twelve points where the
+newtonspheres' outer spheres touch), three seated in the dais itself.
+After dark: nine quiet lights in view from any one side, twelve in
+truth (the far three hidden by the solid itself).
+
+Files: struct238-scan-co.ts + struct238-seatprobe-co.ts +
+struct238-terrain-co.ts + struct238-walk-co.ts + next-place-struct238.ts
+(all NEW, tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
+(one append struct-238, D+0 E+1). One upload, one verb. Zero pushes.
