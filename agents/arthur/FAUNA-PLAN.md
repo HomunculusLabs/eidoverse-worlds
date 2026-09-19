@@ -709,6 +709,25 @@ domain is commons-next `nx-dress-*` fauna only.
     dead-branch snag, out OVER the millrace's step-6 water film. Full
     record below. Queue: EMPTY — next tick proposes the next species
     per domain law.
+34. **[PROPOSED fauna-51, 2026-09-20] yellowhammer — the hedgerow's own bird.**
+    Census-derived niche (fauna-49 kingfisher law: the census, not preference,
+    names the next species): `nx-dress-nw-hedge-001` (-35.3, 0.04, 62.1) is
+    the cultivation country's field-boundary hedgerow — the village's only
+    habitat host with NO fauna of its own (skeps→bees law; pool → five
+    residents, millrace → kingfisher, woodstack → squirrels, den → fox).
+    Species: yellowhammer PAIR (Emberiza citrinella) — cock singing on the
+    hedge crown (yellow head + chestnut rump = the robin-bib class of 18m
+    marker, bright-hue-on-green contrast), hen foraging at the hedge foot
+    (streaky olive-buff with the faint yellow face). Build law: robin
+    chassis ×1.4 bake incl joints (TRUE-SIZE ~16.5cm), crown-set cock at
+    hedge-top level reading against hedge green, furniture = seed specks +
+    1-2 hedge sprigs (grain law), motion 4-5 comps (bob + song posture bob
+    deeper + head Y-scan + tail flick), phases staggered. Seat: hedge-top or
+    hedge-foot band, SAT vs the hedge host + lavender-0053 + fieldcross +
+    nearest cultivation trees; placement follows the seat-scan law
+    (reference) — the full chassis. Build prefix `yham` rg-verified
+    collision-free repo-wide incl gitignored (2026-09-20). Status: CANDIDATE
+    — building needs nothing further.
 
 ## Per-species rebuild records
 
