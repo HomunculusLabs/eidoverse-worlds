@@ -16813,3 +16813,119 @@ Files: struct232-scan-ssd.ts + struct232-terrain-ssd.ts +
 struct232-walk-ssd.ts + next-place-struct232.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-232,
 D+0 E+1). One upload, one verb. Zero pushes.
+
+
+## struct-233 (2026-09-18): R11-46 THE BOERDIJK–COXETER TETRAHELIX —
+## BUILD+JUDGE TICK, v1 GROUNDING FAIL CURED IN-TICK; v2 ACCEPTED BANKED
+## NOT PLACED
+
+233%3=2 placement slot with EMPTY bank (ssd placed struct-232) → build+judge
+tick per the struct-229 precedent. Gate ALL PASS real exit 0 tick-start at
+f134eefc (polish-293; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN
+md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-232 → tag struct-233 (re-checked immediately before append). Native
+absent from the cron catalog all tick (tool_search fresh: terminal +
+zai-vision + repoprompt only — same disclosed cron-unpayable class as
+struct-169..232; owed board stays 26 + csaszar v3 + ssd v1 + tetrahelix v2).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): tetrahelix/boerdijk/coxeter/tetrahelix-chain 0/0/0 — never
+named, never barred, never built. Kin falsification sweep: not a ruled
+surface (ruledtower/mobius/conoidfan own those), not a log-spiral ribbon
+(shelltower/spiralfolly/archispiral), not a lattice cage (csaszar). The
+POLYHEDRAL-CHAIN branch opens: no standing form's identity is "regular
+cells bonded into a chiral column."
+
+CONCEPT: THE COLUMN THAT CLIMBS BY TWISTING. Twelve regular stone
+tetrahedra, each the affine REFLECTION of the last across their shared face
+(Boerdijk 1952; Coxeter 1970 — chiral, provably never closes: advance
+arccos(−2/3) is irrational w.r.t. 2π). Every edge exactly 1.6m; every
+vertex on one cylinder r 3√3/10·S; each cell turns +35.43° net and climbs
+3/√10·S — the torsion IS the ornament. SIX-sided dais (the tetrahedron's
+six edges made stone, ssd/császár shared language) + hexagonal BOSS SOCKET
+cupping the base (orrery-cradle lineage — v2). Night contract: fifteen
+warm brass beads at the vertex lattice — a steep helix of lights, apex bead
+cresting 7.84m. Folly class — walked around.
+
+PARAMETRIZATION (exact, closed-form): v0=(0,0,0), v1=(1,0,0),
+v2=(1/2,√3/2,0), v3=(1/2,√3/6,√(2/3)); v_{n+4} = v_n − 2·t·n̂ with t the
+signed distance of v_n from plane(v_{n+1},v_{n+2},v_{n+3}) — pure affine
+reflection, no trig anywhere in the recurrence.
+
+PROBE (struct233-probe-tetrahelix.ts, tracked) 9 laws ALL PASS real exit 0,
+RED (--red perturbs v6 by +0.05) exit 1 with 4 law fails: T1 every
+index-1/2/3 pair an edge of length exactly 1 (worst 8.9e-16), far pairs
+> 1.5; T2 one proper isometry (Kabsch) carries v_n → v_{n+1} for ALL n at
+0.000nm residual — the chain IS one screw's orbit; T3 constants exact to
+1e-9 (α = 131.810315°, r = 3√3/10, q = 1/√10); T4 chirality positive +
+non-closure (1845.344° total turn, net 45.3444° from closing); T5 V=15,
+interior degree 6; T7 equal rise + constant radius in FINAL coords (0.00nm
+spread); T8 v2 socket law (v0 buried 0.28m in boss, v1/v2/v3 above boss
+top, beads within dais apothem); T9 zero interpenetrations between cell
+pairs ≥ 4 apart (36 far pairs tested; 2-apart share an edge, 3-apart a
+vertex — the designed contacts).
+
+SELF-CAUGHT RED-FIRST THIS TICK (probe): (a) helix radius measured about a
+line PARALLEL to the screw axis through the centroid wobbles by the axis
+offset (37.9mm error) — the TRUE axis point solves (R−I)a = −t on the ⊥
+plane, with the fail-closed residual law requiring the ⊥ part to vanish
+(the parallel part is the rise q = 0.3162 exactly, which no axis point
+removes); (b) the first RED run's exit code was laundered by a pipe
+(content-verdict law re-applied: judge the printed LAW FAILS line, not the
+tail's $?). Decode self-catches: v2 boss band excluded from D3 column-skin
+(the boss is socket stone, not cell skin — v1 filter false-failed at
+946mm); D6 rewritten for the socket law (v0 bead band y inside boss).
+
+BUILD (agents/arthur/assets/mkv3-tetrahelix.ts, staged -f): 12 flat-faceted
+tetrahedra (48 triangles, per-face normals, outward winding by
+centroid test — no parity guess), hexagonal dais R2.2 h0.32, hexagonal boss
+socket R1.15 h0.63, glow_thx_15 KEEP (15 beads, emissive 0x9a7030 @ 1.0 —
+dusk lineage struct-82). texMat lane thx_stone (struct-38 law); ROOT STAYS
+IDENTITY (struct-188). v1 sha 862aa6abdc2d65db… ×2 deterministic; v2 sha
+87dfb8b6440b67e8326bc9f1a33c79d98ef0dfe2ab274f4babd6395f052ae2e5 ×2
+deterministic (mtime-verified). Envelope 4.40x7.84x3.81, sole at grade 0.
+
+DECODE (struct233-decode-tetrahelix.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 2 nodes (thx_stone + glow_thx_15), D2 hexagon dais TRUE box,
+D3 column skin 0.00mm (141 verts, boss band excluded), D4 1-skeleton echo
+39 edges 0.00nm, D5 15/15 bead clusters emissive sole-night, D6 v0 bead
+socketed (band y 0.67 in boss 0.32..0.95), D7 envelope drift 0.00mm, D8
+texMats. RED control: village_csaszar3.glb fails D1 cleanly, exit 1.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed riding the
+board): v1 gameplay 18m 3/4 — IDENTITY/SILHOUETTE/OVERALL PASS (twisting
+stacked-polyhedra read, continuous spire, deliberate mathematical
+sculpture), GROUNDING FAIL (balanced on a single back-rim point, lowest
+edge beads hovering — the exact defect the seating math predicted: every
+vertex rides the r0.83m cylinder, so v0 contacts the dais at one off-axis
+point). v2 (hex boss socket, v0 buried, edges emerge) gameplay 4/4 PASS —
+grounding cured, socket rim occlusion reads "cupped/planted". Night PASS:
+helix of lights reads (alternating left-right monotonic rise), quiet hard
+warm points no bloom, ~14/15 resolved with the missing bead(s) far-side
+occlusion (császár/ssd disclosed-Minor precedent; decode D5 proves exactly
+15). Judge's cosmetic note (flat-topped boss vs concave cup at top-down)
+recorded, not executed — the rim-occlusion cup read is the fleet-proven
+pattern at walking distance.
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. Placement = struct-234
+committed carry: fresh census scan — under-served band/district selection,
+8m NN + per-district soft-cap audit, hexagon-exact polygon SAT (struct-19
+disc law class — never square-bbox), oblique-yaw law (struct-104 band),
+terrain preflight over the TRUE rotated hexagon, hash-gated plain spawn
+nx-struct-tetrahelix, comp {}. Folly class — ground circuit walk at
+placement, no door.
+
+Bill eye-check pointer (after placement): a twisted spire of twelve equal
+stone tetrahedra, each turned from the last, rising from a hexagonal socket
+on a six-sided dais — every edge the same length, the twist constant the
+whole way up. The idea: the simplest solid, repeated with one rule, making
+a column that climbs by turning — and never, ever closes. After dark: a
+steep helix of fifteen quiet lights, one at every corner of the chain.
+
+Files: struct233-probe-tetrahelix.ts + struct233-decode-tetrahelix.ts +
+struct233-render-tetrahelix.ts (all NEW, tracked), assets/mkv3-tetrahelix.ts
+(NEW, staged -f), reviews/struct233-tetrahelix/ (9 frames, ignored — sha
+pins in this block are the durable record), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-233, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
