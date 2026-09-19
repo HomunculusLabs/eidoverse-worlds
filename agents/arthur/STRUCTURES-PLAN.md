@@ -16929,3 +16929,92 @@ struct233-render-tetrahelix.ts (all NEW, tracked), assets/mkv3-tetrahelix.ts
 pins in this block are the durable record), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-233, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-234 (2026-09-18): R11-47 TETRAHELIX PLACED — the struct-233
+## committed carry executed (E-terminus procession anchor az4 r76)
+
+234%3=2 placement slot with FULL bank (tetrahelix v2 accepted struct-233)
+-> the committed carry: placement. Gate ALL PASS real exit 0 tick-start at
+ad693fa5 (polish-294; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN
+md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-233 -> tag struct-234 (re-checked immediately before append). Native
+absent from the cron catalog all tick (terminal + zai-vision only — same
+disclosed cron-unpayable class as struct-169..233; owed board stays 26 +
+csaszar v3 + ssd v1 + tetrahelix v2).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2 from
+repo ROOT reproduces the pinned sha exactly (87dfb8b6440b67e8…
+052ae2e5, exits 0/0, envelope line == probe contract 4.40x7.84x3.81).
+Decode 8/8 ALL PASS was the struct-233 tick's own real exit 0 on these
+exact bytes.
+
+SEAT (struct234-scan + struct234-seatprobe, fresh 369-entity census):
+octant audit r66+ places the E octant az0-45 as the under-served band
+(1 struct form standing — the SSD; tied with N-E at 1, E kept for the
+procession). Seat az4.0 r76.0 (75.814868, 5.301492): composes the
+E-terminus procession ruledtower r58 az0 -> ssd r66 az9 -> tetrahelix
+r76 az4 (~12m rhythm matching the tower-ssd pair). Band audit: 1 form
+standing (soft cap 6; + tetrahelix -> 2, NO exceedance). NN 10.14 to
+nx-struct-vesicawindow (law 8). Hexagon-exact SAT worst 6.12 vs
+nx-struct-ssd (law 1.4). Walk-clear 47.41.
+
+YAW LAW (procession convention, struct-217/219/224/228/232): local az
+alpha -> world az (alpha - yaw). Judged reading face local az90 at
+anti-travel az184 + 30deg east lean (struct-104 oblique band) ->
+yaw_deg = -124 -> 236.00 -> YAW = 4.118977 rad. The tetrahelix is CHIRAL
+(no rotational symmetry) — the yaw protects the judged read exactly.
+
+TERRAIN (struct234-terrain-tetrahelix.ts, this tick): 13pt over the TRUE
+rotated hexagon (center + 6 verts + 6 edge-mids), spread 6.1mm, PY =
+lowest = -0.034302 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=6 class): the hexagonal dais R2.2 ROT=0 (corners ON the axes)
+is the footprint; bead reach <= dais apothem 1.905 (probe T8) — the cage
+NEVER overhangs, so the hexagon IS the true ground footprint (no
+overhang disclosure needed). Exact convex-polygon SAT (edge-normal axes
+of both polys, max-gap law) replaces the square-bbox proxy — struct-19
+disc law class. Disc neighbors keep point-to-polygon exact distance.
+Helper unit-tested (struct234-sat-unit-test.ts) distant (15.8000 = 20-2-
+2.2 exact), touching (0.0000), overlapping concentric (-4.905256 =
+-(3+apothem) exact — first expectation apothem-minus-3 was the
+corner-vs-edge-axis misread, code right/test wrong, struct-228 class),
+rotated subset law (edge-normal 13.415 <= sweep 15.086 — edge-normal SAT
+is the CONSERVATIVE lower bound of the all-direction max; recorded as
+the fleet's honest margin semantics) + NaN guard — ALL PASS exit 0
+before the placer ran.
+
+SELF-CAUGHT RED-FIRST THIS TICK: the first seatprobe run's OBB SAT was
+VACUOUS (typo `p * 0` on a vertex array -> NaN gaps -> worst never set by
+any OBB neighbor, only the disc family — reported absurd 420m gaps;
+pitfall-12 coverage-count class). Fixed; rerun produced real numbers
+(SSD 2.23-6.12 range across the corridor), and the final placer's
+helpers are the unit-tested copy. Octant-audit epsilon self-catch: the
+SSD at az9 r66.0 computes r=65.99999 and the struct-232 r<66 filter
+dropped it — oct0 truly holds 1 form (tied with oct7 at 1); E band
+still the lawful tied-minimum pick and the composition intent; seatprobe
+comment records the class.
+
+PLACEMENT: next-place-struct234.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed), upload
+store/87dfb8b6440b67e8.glb (1 upload, shared budget), plain spawn 1 verb
+paced 1200ms, PLACED_VERIFIED pos [75.814868, -0.034302, 5.301492] yaw
+4.118977 comp {} census 369->370; idempotent rerun ALREADY_SEATED 0
+verbs. Ground circuit walk 6/6 CORE_ALL_PASS maxArrival 0.31m (two-way
+village approach on the az4 arrival line + reading-face vantage rim at
+7m on the az184 face normal + full CW standoff circuit at 6m — no
+phantom collider; folly by presentation, the open twisted column is the
+sculpture).
+
+Bill eye-check pointer: on the far E walk — the procession now reads as
+a composed terminus: the hyperboloid lattice tower, then Kepler's star,
+then a twisted spire of twelve equal stone tetrahedra rising from a
+hexagonal socket on a six-sided dais — every edge the same length, the
+twist constant the whole way up. After dark: a steep helix of fifteen
+quiet lights, one at every corner of the chain, climbing past the star.
+
+Files: struct234-scan-tetrahelix.ts + struct234-seatprobe-tetrahelix.ts +
+struct234-terrain-tetrahelix.ts + struct234-sat-unit-test.ts +
+struct234-walk-tetrahelix.ts + next-place-struct234.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-234, D+0 E+1). One upload, one verb. Zero pushes.
+
