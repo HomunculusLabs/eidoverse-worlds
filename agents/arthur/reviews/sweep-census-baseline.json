@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 386,
+  "count": 387,
   "entities": [
     {
       "id": "beb4c791",
@@ -138,7 +138,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -189,7 +188,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -240,7 +238,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -291,7 +288,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -306,7 +302,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -321,7 +316,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -372,7 +366,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -387,7 +380,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -438,7 +430,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -453,7 +444,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -1290,7 +1280,7 @@
       "kind": "thing",
       "pos": [
         18.593536600282096,
-        -1.5946487083102603e-08,
+        -1.5946487083102603e-8,
         -18.367647009533506
       ],
       "yaw": -0.90756,
@@ -1326,7 +1316,7 @@
       "kind": "thing",
       "pos": [
         22.347652212343093,
-        -1.5946487083102603e-08,
+        -1.5946487083102603e-8,
         -13.43276950636487
       ],
       "yaw": -0.90756,
@@ -2016,7 +2006,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2067,7 +2056,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2118,7 +2106,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2169,7 +2156,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2184,7 +2170,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2243,7 +2228,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2302,7 +2286,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2515,7 +2498,7 @@
       "kind": "thing",
       "pos": [
         18.9,
-        -1.5946487083102603e-08,
+        -1.5946487083102603e-8,
         -14.8
       ],
       "yaw": -0.90756,
@@ -5579,6 +5562,88 @@
       }
     },
     {
+      "id": "nx-dress-hog-001",
+      "kind": "thing",
+      "pos": [
+        -27.5,
+        0.01474,
+        26.5
+      ],
+      "yaw": 0.767,
+      "scale": 1,
+      "lib": "store/5fcd8dcec44ee2e3.glb",
+      "bbox": {
+        "min": [
+          -0.189,
+          -0.005,
+          -0.211
+        ],
+        "max": [
+          0.547,
+          0.184,
+          0.219
+        ],
+        "size": [
+          0.737,
+          0.189,
+          0.43
+        ],
+        "center": [
+          0.179,
+          0.089,
+          0.004
+        ]
+      },
+      "compKeys": [
+        "motion:hog",
+        "motion:hog_head",
+        "motion:hog_snout"
+      ],
+      "comp": {
+        "motion:hog": {
+          "type": "bob",
+          "amp": 0.006,
+          "period": 4.4,
+          "phase": 0,
+          "t0": 1789827465614
+        },
+        "motion:hog_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.25,
+          "period": 9.5,
+          "phase": 0.3,
+          "t0": 1789827465614
+        },
+        "motion:hog_snout": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.18,
+          "period": 2.6,
+          "phase": 1.2,
+          "t0": 1789827465614
+        }
+      }
+    },
+    {
       "id": "nx-dress-hutch",
       "kind": "thing",
       "pos": [
@@ -8409,7 +8474,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -8803,7 +8867,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -8962,7 +9025,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -9121,7 +9183,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -9262,7 +9323,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -9487,7 +9547,7 @@
       "kind": "thing",
       "pos": [
         23.777264390384975,
-        -1.5946487083102603e-08,
+        -1.5946487083102603e-8,
         -10.831474824789108
       ],
       "yaw": -0.90756,
@@ -9817,7 +9877,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11776,7 +11835,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11827,7 +11885,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15368,7 +15425,7 @@
       ],
       "yaw": -2.356194490192345,
       "scale": 1,
-      "lib": "store/2419fbc53a1d65e1.glb",
+      "lib": "store/f9ceea6e82b481e5.glb",
       "bbox": {
         "min": [
           -1.7,
@@ -15377,17 +15434,17 @@
         ],
         "max": [
           1.7,
-          7.6,
+          7.9,
           1.7
         ],
         "size": [
           3.4,
-          7.6,
+          7.9,
           3.4
         ],
         "center": [
           0,
-          3.8,
+          3.95,
           0
         ]
       },
@@ -15456,7 +15513,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15507,7 +15563,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15558,7 +15613,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15753,7 +15807,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15804,7 +15857,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15855,7 +15907,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15906,7 +15957,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -15993,7 +16043,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -16097,7 +16146,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -16184,7 +16232,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -16271,7 +16318,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -16358,7 +16404,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -16517,7 +16562,6 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
