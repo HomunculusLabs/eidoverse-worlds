@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 371,
+  "count": 373,
   "entities": [
     {
       "id": "beb4c791",
@@ -4507,6 +4507,88 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-frog-001",
+      "kind": "thing",
+      "pos": [
+        7.873,
+        0.08093,
+        -89.132
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/c372159974ef9415.glb",
+      "bbox": {
+        "min": [
+          -0.248,
+          -0.031,
+          -0.248
+        ],
+        "max": [
+          0.248,
+          0.079,
+          0.248
+        ],
+        "size": [
+          0.496,
+          0.11,
+          0.496
+        ],
+        "center": [
+          0,
+          0.024,
+          0
+        ]
+      },
+      "compKeys": [
+        "motion:frog",
+        "motion:frog_head",
+        "motion:frog_throat"
+      ],
+      "comp": {
+        "motion:frog": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 4.6,
+          "phase": 0.5,
+          "t0": 1789785012745
+        },
+        "motion:frog_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.2,
+          "period": 7.5,
+          "phase": 0.2,
+          "t0": 1789785012745
+        },
+        "motion:frog_throat": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.06,
+          "period": 2.1,
+          "phase": 1.1,
+          "t0": 1789785012745
+        }
+      }
     },
     {
       "id": "nx-dress-geese-001",
@@ -12421,6 +12503,42 @@
         "center": [
           0,
           2.565,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-rt",
+      "kind": "thing",
+      "pos": [
+        87.496668,
+        -0.024244,
+        -0.763572
+      ],
+      "yaw": 4.197517,
+      "scale": 1,
+      "lib": "store/40059339816dc320.glb",
+      "bbox": {
+        "min": [
+          -4,
+          0,
+          -3.978
+        ],
+        "max": [
+          4,
+          7.401,
+          3.978
+        ],
+        "size": [
+          8,
+          7.401,
+          7.956
+        ],
+        "center": [
+          0,
+          3.701,
           0
         ]
       },
