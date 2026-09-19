@@ -1825,3 +1825,61 @@ next wake once the gateway answers.
 - Next ranked: (a) belltower spire brass value bump (polish-306 judge
   nuance, still open), (b) rose-horse angular-offset motif geometry
   (artwalk coordination), or (c) plaza-core re-survey on fresh evidence.
+
+### polish-308 — belltower crown bell-gold (ACCEPTED, LIVE)
+
+- Subject: `nx-town-belltower` (same tuple as polish-306/307; ladder comp).
+  Build source `assets/mkv3-landmarks.ts` (belltower block) ->
+  `village_belltower3.glb` (live was 4a84e771, polish-307's bell-gold build).
+- Defect (queue head from polish-307 close, confirmed fresh this tick by
+  pixel probe + judge on exact live bytes): the crown (finial collar +
+  spire) read tonally shy at 18m — spire proper (96,69,39) lum 73 vs sky
+  212; ZAI judge: "reads as dark bronze or neutral brown, not distinctly
+  brass/gold... the bell sells the golden material language and the spire
+  doesn't match it."
+- Change (ONE edit): crown re-authored on ONE material mat(0xd9ac52,
+  0.45, 0.15) — the polish-307 bell-gold recipe proven at 18m on this
+  same tower. One tower, one metal; the sunlit apex now carries the gold
+  read. Still unlit (belfry lamp stays the night signal).
+- Candidate `3e4f470b38d94bb7d18097ac908fb5db4943c54f863f47b89afc0d8ee6baad4f`,
+  deterministic x2 (mtime-verified). Nodes 12->11 / meshes 11->10 (old
+  spire bucket merged into the bell-gold bucket — mergekit material-key
+  law, one material = one bucket). Siblings byte-identical (carousel3
+  0843da4e, inn 6e6ff2d0, windmill 369c5724). Decode: crown 67 verts
+  COLOR_0 (177,105,22) bell-gold in ONE bucket (old: collar (90,92,17) +
+  spire (124,57,15) split); accessor NaN 0.
+- Falsification: A/B pixel diff — gameplay 280 px / night 144 px / top
+  5657 px ALL confined to the crown band; front/back/left/right +
+  belfryClose byte-IDENTICAL (spire sub-pixel at those framings,
+  polish-307 rig-law class). Spire band lum 73->90.6 (+24%), R/B
+  2.45->2.66. Judge AFTER (ZAI fallback disclosed, native re-judge owed —
+  same class as polish-285..307): "now reads as brass/gold metal, no dark
+  bronze or wood character left"; one-metal family with the bell ("as-is,
+  it passes" — minor saturation gap recorded as the expected
+  lighting-neighborhood nuance, bell beside warm lamp vs spire against
+  cool sky); zero geometry/proportion regressions; "deliberate design
+  punctuation." Night PASS — single belfry lamp stays the sole signal,
+  spire dark, no new glow.
+- Placed via NEW dedicated placer `next-place-polish308-belltower.ts`
+  (polish-307 chassis, pins 4a84e771->3e4f470b): PLACED_VERIFIED, 1
+  upload + 3 verbs (remove/spawn/comp), ladder comp replayed verbatim,
+  rider b5 standing, bbox 7.9 exact, idempotent rerun
+  ALREADY_LIVE_NO_VERBS (0 verbs), live census pin
+  `store/3e4f470b38d94bb7.glb` @ (6.5,0,6.5) yaw -2.35619 exact.
+- Served-bytes proof (struct-104 law, durable probe
+  `agents/arthur/p308-verify-served.ts`): served DRACO 7b707aa6… crown
+  66/66 verts bell-gold (y 7.2..7.9), bell_0 control 123/123 untouched,
+  anchors bell/bell_0/bell_1/lamp, 0 non-finite. Probe self-caught its
+  own y-cut selection bug pre-truth (picked the cap bucket) — RED->GREEN.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD c2f808a7
+  (dress-187 landed mid-tick — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-308-belltower-spire/` (before/ =
+  live 4a84e771 baseline GLB + 10-view rig + belfry-before/ 6-view;
+  after/ = candidate + rig + belfry-after/ 6-view; probes /tmp one-shot:
+  p308-probe-spire, p308-abdiff, p308-crown-verts, p308-decode).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path — same as polish-285..307);
+  recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) rose-horse angular-offset motif geometry (artwalk
+  coordination per the standing language directive), or (b) plaza-core
+  re-survey on fresh evidence.

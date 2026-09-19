@@ -98,11 +98,23 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     // brass collar seated on the cap apex + tapered gold spire — bright
     // metal silhouette punctuation, day-readable. Unlit (material truth;
     // the tower's night signal is the polish-263 belfry lamp).
-    box(g, "finial_collar", 0.24, 0.1, 0.24, 0, PH + 2.85, 0, C.BRASS);
-    const bspire = new THREE.Mesh(new THREE.ConeGeometry(0.16, 0.6, 10), mat(0xb98245, 0.78, 0));
-    bspire.name = "bell_spire";
-    bspire.position.y = PH + 3.2;
-    g.add(bspire);
+    // polish-308: judge + pixel probe showed the crown still tonally shy —
+    // mat(0xb98245, .78, 0)/C.BRASS@.95 renders dark bronze/wood at 18m
+    // (spire (96,69,39) lum 73 vs sky 212; "the bell sells gold, the spire
+    // doesn't"). Crown re-authored on the polish-307 bell-gold recipe
+    // (0xd9ac52, .45, .15) — one tower, one metal; sunlit apex carries the
+    // gold read. Still unlit (belfry lamp stays the night signal).
+    {
+        const crownMat = mat(0xd9ac52, 0.45, 0.15);
+        const fcol = new THREE.Mesh(new THREE.BoxGeometry(0.24, 0.1, 0.24), crownMat);
+        fcol.name = "finial_collar";
+        fcol.position.y = PH + 2.85;
+        g.add(fcol);
+        const bspire = new THREE.Mesh(new THREE.ConeGeometry(0.16, 0.6, 10), crownMat);
+        bspire.name = "bell_spire";
+        bspire.position.y = PH + 3.2;
+        g.add(bspire);
+    }
     // THE BELL: named group (pendulum target); crown at group origin = hinge
     const bellGrp = new THREE.Group();
     bellGrp.name = "bell";
