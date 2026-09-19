@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 396,
+  "count": 397,
   "entities": [
     {
       "id": "beb4c791",
@@ -16217,7 +16217,7 @@
       ],
       "yaw": 3.141592653589793,
       "scale": 1,
-      "lib": "store/e815a897c7d73373.glb",
+      "lib": "store/a7b05aefe1e971e8.glb",
       "bbox": {
         "min": [
           -9.577,
@@ -16226,17 +16226,17 @@
         ],
         "max": [
           9.577,
-          2.56,
+          2.947,
           9.577
         ],
         "size": [
           19.154,
-          2.56,
+          2.947,
           19.154
         ],
         "center": [
           0,
-          1.28,
+          1.474,
           0
         ]
       },
@@ -17101,6 +17101,100 @@
         ]
       },
       "comp": {}
+    },
+    {
+      "id": "nx-dress-kfish-001",
+      "kind": "thing",
+      "pos": [
+        -70.05,
+        -0.02224,
+        4.48
+      ],
+      "yaw": 4.8932,
+      "scale": 1,
+      "lib": "store/cdf3bf7a4020b34e.glb",
+      "bbox": {
+        "min": [
+          -0.151,
+          -0.02,
+          -0.123
+        ],
+        "max": [
+          0.917,
+          0.935,
+          0.108
+        ],
+        "size": [
+          1.068,
+          0.955,
+          0.231
+        ],
+        "center": [
+          0.383,
+          0.458,
+          -0.008
+        ]
+      },
+      "comp": {
+        "motion:kfish": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.6,
+          "phase": 0,
+          "t0": 1789856179776
+        },
+        "motion:kfish_body": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.1,
+          "period": 5.8,
+          "phase": 0.4,
+          "t0": 1789856179776
+        },
+        "motion:kfish_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.24,
+          "period": 7.5,
+          "phase": 0.9,
+          "t0": 1789856179776
+        },
+        "motion:kfish_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.14,
+          "period": 2.2,
+          "phase": 1.5,
+          "t0": 1789856179776
+        }
+      }
     }
   ]
 }

@@ -17039,3 +17039,94 @@ tick: inn/tower-house @350 walked fresh, hall/bunkhouse @349, forge/potter
 @348 the stalest standing pair; walk tools interior-walk-forge.ts +
 interior-walk-potter.ts, ls-verified present on disk — 1559B Aug 30 08:32 +
 1571B Sep 7 13:44).
+
+| sweep-351 | 2026-09-19 | 396->397 epoch-corrected (epoch A: ONE classified flip nx-town-streetlamps lib e815a897->a7b05aef at identical tuple (0,0,0) yaw pi, bbox y-max 2.56->2.947 height-only growth, footprint byte-identical = polish-312 lantern heads @ 6a23155b, landed after sweep-350's evidence, classified at source by dress-194 — domain-valid not drift; epoch B 20s-paced QUIET; epoch C/D: +1 domain-valid arrival nx-dress-kfish-001 @ (-70.05,-0.02224,4.48) yaw 4.8932 lib cdf3bf7a4020b34e 4x motion:kfish{,_body,_head,_tail} = fauna-50 kingfisher at the millrace (PRE-tick, tuple ledger-exact); epoch D paced re-read FULLY QUIET 397==397; 0 departures, 0 unexplained drift; snapshot rewritten 297965B / 397 ents / sha16 265976c1855d27cf with pre-write assertions, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 307th sweep since routing, no escalation due — law keys Sev 1); 359 bbox non-light / 249 exempt-classified / 0 coverage holes; NEW kfish\|millrace -1.634 classified designed-adjacency standing-precedent ALLOWED (angler/heron water-fauna tier) with fresh evidence: local asset sha16 cdf3bf7a4020b34e == live lib prefix exact, fauna50-decode-kfish.ts re-run GREEN (envelope x -0.151..0.898, anchors 4/4, perch tip y 0.768), fauna50-walk-kfish.ts re-walked 3/3 ALL_PASS (0.00/0.37/0.31) over the live seat — exemption entry added to sweep-sat-next.ts, SAT re-run 249 exempt-classified, unclassified back to exactly R-121 | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 ALL_PASS maxArrival 0.380 re-walked at epoch B over the new streetlamps bytes — streetlamps inside core band, sweep-349 belltower precedent; NW 5/5 0.00/0.38/0.30/0.33/0.32, NE 7/7 0.00/0.29/0.32/0.29/0.38/0.25/0.31, SW 5/5 0.00/0.25/0.34/0.37/0.31 — dists identical to sweep-319..350 canon; kfish r70.4 W outside every tier-1 leg, no W route exists, canon stands by construction, sweep-53 precedent; own-species walk 3/3 covers the reader approach) + tier-2 329th cycle per committed sweep-350 pointer: forge 6/6 ALL_PASS (dists 0.261/0.307/0.300/0.315/0.375/0.261) + potter 6/6 ALL_PASS (dists 0.270/0.366/0.295/0.255/0.250/0.349), both tools ls-verified present on disk BEFORE this prose (1559B Aug 30 08:32 + 1571B Sep 7 13:44), dists byte-identical to the sweep-348 canon | pins 15/15 ALL_PINS_OK bad:[] (305th consecutive clean); battery 28/28 PASS after ONE lawful RED->GREEN pin move (comp-bearing 52->53 for the fauna-50 kfish arrival, sweep-301..349 fauna precedent chain, added-set census-verified exactly ['nx-dress-kfish-001'] removed-set empty); carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified; comp-bearing 53; lights 38; thing 359; interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows; CITY-PLAN-V2 cae6b928 unchanged, sweep owns no reset role — audit-continues freeze banner governs via loop/plan reload); standing gate ALL PASS real exit 0 at tick-start bc8ef77a | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-351: CLEAN SWEEP, one-arrival + one-classified-flip epoch-corrected tick
+(121st consecutive quiet-or-classified). Tick-start HEAD bc8ef77a (vocab-36
+scratch-only, zero world mutations per its own entry); standing gate ALL PASS
+real exit 0 FIRST at bc8ef77a. Census epoch A 396==396 vs the committed
+sweep-350 baseline (sha16 723b11af9e3078a4): 0 arrivals, 0 departures, exactly
+ONE classified drift field-set — nx-town-streetlamps lib e815a897->a7b05aef at
+identical tuple (0,0,0) yaw pi, bbox height-only growth (y-max 2.56->2.947,
+footprint byte-identical) = polish-312 lantern-head re-place @ 6a23155b, landed
+after sweep-350's evidence, already classified at source by sibling dress-194
+— domain-valid, not drift. Streetlamps sits INSIDE the core walk band, so per
+the sweep-349 belltower precedent the core was re-walked fresh over the new
+bytes (64/64 ALL_PASS @ 0.380). Epoch B 20s-paced re-read: same projection,
+no further change. While the integrity battery ran, the fauna lane landed its
+kingfisher (epoch C/D): +1 domain-valid arrival nx-dress-kfish-001 @ (-70.05,
+-0.02224, 4.48) yaw 4.8932 lib cdf3bf7a4020b34e with 4x
+motion:kfish{,_body,_head,_tail} (bob + pre-dive lean pendulum + head Y-scan +
+tail flick) = fauna-50 @ PRE-tick, tuple matches its committed ledger
+line-for-line; epoch D paced re-read FULLY QUIET (397==397). All affected
+evidence re-taken fresh per the polish-270 epoch law: SAT re-run with kfish in
+the live set, kfish evidence re-derived (below), battery re-run GREEN after a
+lawful pin move. OVERLAP: SAT (final) 359 bbox non-light / 249 exempt-classified
+/ 0 coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 307th sweep since routing, NOT new, no escalation due (law keys on
+severity-1). The re-run first surfaced ONE NEW unclassified kfish|millrace
+-1.634: classified at source — fauna-50's own placement declares the
+designed-adjacency exemption ("the race gets the designed-adjacency exemption
+in the seat sweep — source-decoded member gates"), and the fresh
+live-bytes evidence confirms it (local asset sha16 cdf3bf7a4020b34e == live
+lib prefix exact — content-addressed identity; fauna50-decode-kfish.ts re-run
+GREEN: envelope x -0.151..0.898, solid OBB center (0.3734,-0.0078) half
+(0.5248,0.1156), anchors 4/4, perch tip y 0.768; fauna50-walk-kfish.ts
+re-walked 3/3 ALL_PASS 0.00/0.37/0.31 over the live seat). The snag is
+DELIBERATELY leaning over the water (mkv3-kfish1.ts v2: 0.75 rad lean, tip
++0.713/+0.768 — "a kingfisher perches OUT OVER the water"), so the -1.634 is
+the over-water design itself; 2D SAT is blind to the snag crossing ABOVE the
+race's open channel. Same standing-precedent tier as angler|reedpool and
+heron|reedpool (sweep-332). NAMED exemption entry added to
+sweep-sat-next.ts (sweep-8 cairn precedent — my own tooling, not a world
+mutation); SAT re-run: 249 exempt-classified, unclassified back to exactly
+R-121. WALKS: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0, legs run individually — core 64/64 ALL_PASS maxArrival 0.380
+(next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/0.31) —
+dists identical to the sweep-319..350 canon; kfish r70.4 W sits outside every
+tier-1 leg (no W route exists — canon stands by construction, sweep-53
+precedent; the species' own 3/3 walk covers the reader approach). Tier-2
+329th cycle per the committed sweep-350 pointer: forge 6/6 ALL_PASS
+(interior-walk-forge.ts, real exit 0, dists 0.261/0.307/0.300/0.315/0.375/
+0.261) + potter 6/6 ALL_PASS (interior-walk-potter.ts, real exit 0, dists
+0.270/0.366/0.295/0.255/0.250/0.349), both tools ls-verified present on disk
+BEFORE this prose (1559B Aug 30 08:32 + 1571B Sep 7 13:44), dists
+byte-identical to the sweep-348 canon. INTEGRITY: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (305th consecutive clean); sweep89-battery 28/28
+PASS after ONE lawful RED->GREEN pin move (comp-bearing 52->53 for the
+fauna-50 kfish arrival, sweep-301..349 fauna precedent chain; first
+invocation correctly FAILed 52-vs-53 = expected classification, added-set
+census-verified exactly ['nx-dress-kfish-001'] removed-set empty); carousel
+comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified (polish-299
+standing); comp-bearing 53; lights 38; thing 359. Interlane md5 86b2936f
+stable, read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs via loop/plan reload. Baseline
+lawfully rewritten like-for-like (projection chassis verbatim from
+sweep-350; /tmp/s351/snapshot-rewrite.py): pre-write assertion verified
+committed baseline == 723b11af9e3078a4 (396 ents), expected diff set exactly
+[arrival nx-dress-kfish-001, streetlamps lib+bbox], counts 396->397, comp
+drift ZERO on shared ids; final 397 entities / 297965B / sha16
+265976c1855d27cf; post-rewrite drift vs live epoch D ZERO. Probe
+self-catches pre-verdict, disclosed: (a) the battery tool takes its census
+path as a POSITIONAL argument, not --census (first invocation FileNotFoundError
+before any check ran); (b) the kfish|millrace square-proxy arithmetic and a
+first buggy OBB loop both needed the proper 4-axis SAT with correct axis
+vectors before the source-tier classification was sought (axial +1.110
+already showed separation along the race axis; the build-source member-gate
+decode, not bbox math, is the vertical evidence); (c) two inline heredocs
+blocked by the payload validator, re-issued as saved scripts under /tmp/s351/
+(sanctioned-path precedent). Foreign dirt in tree (windmill overhaul
+scratch, cabin/carousel prototype dirs, engine files, fleet shells, fauna
+tools, core-paths assets, review dirs) is sibling work-in-flight, untouched
+per the ownership law. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-352): inn + tower-house (330th cycle — LRU chain
+re-derived from committed pointers this tick: forge/potter @351 walked fresh,
+inn/tower-house @350, hall/bunkhouse @349 the stalest standing pair beyond
+the committed pointer; walk tools interior-walk-inn.ts + interior-walk-tower-house.ts,
+ls-verified present on disk — 1786B Aug 30 08:11 + 1523B Aug 30 09:53).

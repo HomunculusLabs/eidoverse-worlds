@@ -160,6 +160,29 @@ const ALLOWED = new Set<string>([
   // film exemption is defeated and the water-rider is the design. Same
   // tier as nx-struct-angler|nx-struct-reedpool and the resident frog.
   "nx-dress-heron-001|nx-struct-reedpool",
+  // sweep-351 (standing-precedent class, angler|reedpool + heron|reedpool
+  // tier): fauna-50 kingfisher — single bird on a freestanding dead-branch
+  // snag at the millrace bank, the snag DELIBERATELY LEANING OVER the
+  // channel (mkv3-kfish1.ts v2: base-anchored at entity origin, 0.75 rad
+  // lean toward +x, length 1.05, tip +0.713/+0.768 — "a kingfisher
+  // perches OUT OVER the water"; v1 was re-authored precisely because the
+  // bird sat 0.4m landward). DESIGNED adjacency, declared in its own
+  // placement ("the race gets the designed-adjacency exemption in the
+  // seat sweep — source-decoded member gates: base >=0.15 clear of the
+  // step edge, snag vertical clearance over the step top >=0.15, bird
+  // over the film band") = fauna-50 ledger entry. Re-verified fresh at
+  // sweep-351 against the LIVE bytes: local asset sha16 cdf3bf7a4020b34e
+  // == live lib prefix exact (content-addressed identity);
+  // fauna50-decode-kfish.ts re-run GREEN (envelope x -0.151..0.898,
+  // solid OBB center (0.3734,-0.0078) half (0.5248,0.1156), anchors 4/4,
+  // perch tip y 0.768); fauna50-walk-kfish.ts re-walked 3/3 ALL_PASS
+  // (0.00/0.37/0.31) over the live seat. The SAT -1.634 is the
+  // over-water design itself (2D SAT is blind to the fact that the snag
+  // crosses ABOVE the race's open channel — the member-gate decode is
+  // the vertical evidence). Evidence: SWEEP-PLAN sweep-351 row. Any
+  // pos/lib drift on either id re-surfaces as census drift at 16-hex
+  // precision and re-derives this class.
+  "nx-dress-kfish-001|nx-struct-millrace",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });
