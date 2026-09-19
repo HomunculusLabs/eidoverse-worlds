@@ -1,6 +1,46 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-184 — lawful HOLD (73rd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 1ce74cd9 (struct-251, banked not
+  placed — zero world mutation by its own entry); interlane md5 86b2936f
+  pin-exact. Fresh census **387 = 386 + ONE arrival, pre-tick
+  ledger-matched, tuple-exact**: `nx-dress-hog-001`
+  (−27.5, 0.01474, 26.5) yaw 0.767 lib 5fcd8dce — fauna-42 (e03f99ab),
+  the garden cottage's European hedgehog at the quiet NW back margin,
+  DRESS-PREFIXED but FAUNA-OWNED (explicit probe set, now 17 with hog) —
+  NOT dress intake. Probe expectations built from fauna-42's VERBATIM
+  ledger line, not commit prose (dress-172 law). ZERO moves, ZERO
+  departures, ZERO dress-domain drift; dress domain 69 = 29 fleet-owned
+  (NE 6 / NW 9 / SE 7 / SW 7) + 17 fauna-owned + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-184.py` HOLD_VERIFY_PASS exit 0 first run,
+  browser UA, capture saved `/tmp/dress184-census.json`).
+- **Sibling commits since dress-183**: struct-251 (1ce74cd9, truncated
+  dodecahedron build judged BANKED NOT PLACED — zero world mutation),
+  fauna-42 (e03f99ab, the hog arrival above), sweep-340 (b599a01c,
+  zero-mutation CLEAN SWEEP 385→386 both epochs — pre-hog). All named,
+  all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — deltas exactly 0.0.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified; grep at source — zero STATE-OPEN rows, zero OPEN `nx-dress-`
+  rows, no round-4/5 section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-183 — lawful HOLD (72nd post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
