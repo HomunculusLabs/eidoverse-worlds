@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 374,
+  "count": 375,
   "entities": [
     {
       "id": "beb4c791",
@@ -3656,6 +3656,120 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-bees-001",
+      "kind": "thing",
+      "pos": [
+        -53.566,
+        0.038,
+        54.5
+      ],
+      "yaw": 2.3562,
+      "scale": 1,
+      "lib": "store/e6ac8fac5e1d4228.glb",
+      "bbox": {
+        "min": [
+          -1.937,
+          0.583,
+          0.671
+        ],
+        "max": [
+          2.135,
+          0.74,
+          1.935
+        ],
+        "size": [
+          4.072,
+          0.157,
+          1.264
+        ],
+        "center": [
+          0.099,
+          0.661,
+          1.303
+        ]
+      },
+      "compKeys": [
+        "motion:bee_1",
+        "motion:bee_2",
+        "motion:bee_3",
+        "motion:bee_4",
+        "motion:bee_5",
+        "motion:bee_6",
+        "motion:bee_7"
+      ],
+      "comp": {
+        "motion:bee_1": {
+          "type": "orbit",
+          "center": [
+            -1.9,
+            0.62,
+            0
+          ],
+          "radius": 0.8,
+          "degPerSec": 24,
+          "phase": 0,
+          "t0": 1789793316124
+        },
+        "motion:bee_2": {
+          "type": "orbit",
+          "center": [
+            -0.6,
+            0.68,
+            0.15
+          ],
+          "radius": 0.8,
+          "degPerSec": 28,
+          "phase": 2.1,
+          "t0": 1789793316124
+        },
+        "motion:bee_3": {
+          "type": "orbit",
+          "center": [
+            0.7,
+            0.64,
+            0
+          ],
+          "radius": 0.8,
+          "degPerSec": 22,
+          "phase": 4,
+          "t0": 1789793316124
+        },
+        "motion:bee_4": {
+          "type": "orbit",
+          "center": [
+            2,
+            0.72,
+            0.05
+          ],
+          "radius": 0.8,
+          "degPerSec": 26,
+          "phase": 5.2,
+          "t0": 1789793316124
+        },
+        "motion:bee_5": {
+          "type": "bob",
+          "amp": 0.05,
+          "period": 1.4,
+          "phase": 0.3,
+          "t0": 1789793316124
+        },
+        "motion:bee_6": {
+          "type": "bob",
+          "amp": 0.06,
+          "period": 1.2,
+          "phase": 2.2,
+          "t0": 1789793316124
+        },
+        "motion:bee_7": {
+          "type": "bob",
+          "amp": 0.04,
+          "period": 1.6,
+          "phase": 4.4,
+          "t0": 1789793316124
+        }
+      }
     },
     {
       "id": "nx-dress-bench-plaza",
