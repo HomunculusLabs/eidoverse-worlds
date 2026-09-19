@@ -1626,3 +1626,39 @@ next wake once the gateway answers.
   instead. Not fabricated.
 - Next: stringlights night survey (named at polish-300 close), or
   belltower clock face / plaza-core re-survey on fresh evidence.
+
+### polish-304 — stringlights night identity (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-stringlights` (plaza SE, pos [-6, 2.6, 7.5], yaw pi/4,
+  EMPTY comp bag; one live instance only — census-verified). Build source
+  `assets/mkatmos1.ts` (stringLights block) → `village_stringlights.glb`
+  (live was 0c0dee37b07aa7df, 44 nodes, materials: NONE — decoded proof).
+- Defect (decoded + pixel-proven): the bulb spheres carried no glTF
+  material at all (mat() alone exports COLOR_0-only) — night render
+  measured 0 warm px; the prop whose entire identity is light read as a
+  dark cable with dead beads. polish-285/263 dead-emissive class, total
+  variant.
+- Change (ONE edit): `bulbMat.emissive = WARM, intensity 1.0` rides
+  glbwrite's glow lane → real emissiveFactor [1, 0.6939, 0.3515] ("glow0")
+  on the 9 bulb spheres. No geometry/node/motion change.
+- Controls: round-trip revert-rebuild reproduced live 0c0dee37 byte-exact;
+  sibling assets (glowjar/torch/fireflies) hash-identical across builds;
+  candidate ee40ab96 double-build byte-identical; bounds/nodes unchanged.
+- Falsification: night warm 0 → 156 px; day diff 346 px of 691k confined
+  to bulbs; A/B judge (ZAI fallback disclosed, native re-judge owed — same
+  class as polish-285..303): BEFORE "FAIL as a light prop / dark cable",
+  AFTER "12-13 festive glow points along the catenary, not glare orbs, no
+  new defects — the fix works". Judge's "~4-6 dark dots" = the authored
+  iron bulb caps, correct.
+- Placed via NEW dedicated placer `next-place-stringlights.ts` (banner
+  chassis): PLACED_VERIFIED (1 upload + 1 verb), comp bag {} preserved,
+  idempotent rerun zero verbs, live pin `store/ee40ab96e8f0785e.glb`
+  @ (-6, 2.6, 7.5) yaw 0.7853981633974483 exact.
+- Served-bytes proof (NEW durable probe `p304-verify-served.ts`,
+  struct-104 law): served DRACO 1744d648… keeps `glow0` emissiveFactor
+  exact, 9 emissive bulb meshes, bulb locus OK, 0 non-finite.
+- Evidence: `reviews/hero-assets/polish-304-stringlights/` (before/ =
+  baseline GLB + 10-view rig; after/ = candidate + rig).
+- Next: wire-readability candidate (judge note: strand reads as a dotted
+  curve at night, wire near-invisible — possible faint sheen, judge fresh
+  first), or belltower clock face / plaza-core re-survey on fresh evidence.
