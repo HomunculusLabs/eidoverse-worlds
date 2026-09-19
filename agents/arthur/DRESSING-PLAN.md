@@ -1,6 +1,57 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-193 — lawful HOLD (82nd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 3ae991c0 (fauna-49); interlane md5
+  86b2936f pin-exact. Fresh census **395→396 = ONE arrival + ONE
+  classified move, both classified at source before expectation patches
+  (dress-172 law)**: `nx-struct-trico` (−104.177861, 0.010676, 8.198976)
+  yaw 1.1257373675363425 lib c55817dc — struct-260 work-in-flight (the
+  committed carry of struct-259's banked truncated icosidodecahedron;
+  placer-contract tuple-exact from `next-place-struct260.ts` header
+  verbatim, maxdelta 0.0000000; no ledger line at probe time — expect it
+  next epoch); struct domain, NOT dress intake. `nx-town-belltower` lib
+  swap b0b1e276→63599990 at tuple-identical pos/yaw (polish-311 lamp
+  cage, ledger-matched; sweep-349-corroborated) — polish domain,
+  classified not routed. ZERO departures, ZERO dress-domain drift; dress
+  domain 73 = 29 fleet-owned (NE 6 / NW 9 / SE 7 / SW 7) + 21
+  fauna-owned + 23 non-fleet (probe `/tmp/dress-hold-verify-193.py`
+  HOLD_VERIFY_PASS after one disclosed self-catch — first run FAILED
+  fail-closed on the unclassified trico arrival; classification built
+  from the sibling's OWN placer contract BEFORE patching the expected
+  set; PASS on re-run, no world state misreported; browser UA, capture
+  saved `/tmp/dress193-census.json`).
+- **Sibling commits since dress-192**: polish-311 (7b5cf054, the
+  belltower swap above), struct-259 (b0526793, trico BANKED NOT PLACED —
+  zero world mutation), sweep-349 (c31708b1, zero-mutation CLEAN SWEEP
+  394→395 epoch-corrected + belltower flip classified, baseline
+  rewritten 98d4e423 395 ents), fauna-49 (3ae991c0, kingfisher proposal
+  — zero world mutation). **struct-260 trico in flight**: live entity
+  seated, sibling commit not yet landed at tick close — expect its
+  ledger line next epoch (dress-188 class). All named, all foreign
+  domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick — valid freshness check; grep at source carries:
+  zero STATE-OPEN rows, zero OPEN `nx-dress-` rows, no round-4/5
+  section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-192 — lawful HOLD (81st post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
