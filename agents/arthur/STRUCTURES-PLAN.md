@@ -19991,3 +19991,160 @@ snub cube the last named-unclaimed Archimedean, a Bill handedness call;
 rhombic solids / non-Archimedean families per struct-253's grep; fresh
 five-file grep to confirm the gap before building) or Bill's verdict
 routing.
+
+## struct-259 (2026-09-19): R11-67 THE TRUNCATED ICOSIDODECAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-260 committed carry)
+
+259%3=1 build slot, bank EMPTY after rico struct-258 -> build tick per the
+ten-tick precedent. Gate ALL PASS real exit 0 tick-start (unpiped,
+GATE_EXIT:0 at d0c3b01c epoch — dress-191 plan HEAD). Shard drained fresh
+(IMPROVE-PLAN md5 7fa8a224 unchanged since struct-238, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-258 -> tag struct-259 (numeric
+extraction, re-checked immediately before append). Native absent from the
+cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as struct-169..258;
+owed board unchanged 26 + csaszar v3 + ssd v1 + tetrahelix v2 + rt v1 +
+co v1 + ico v2 + nodoid v3 + tico v2 + toct v1 + tret v2 + tcube v1 +
+tdodec v1 + srcubo v1 + trcubo v1 + rico v1, plus trico v1 now riding).
+No interrupted 259 window existed (no struct259-*/mkv3-trico files
+pre-tick).
+
+FORM SELECTION fresh five-file grep (the struct-258 queue-head named the
+sweep): truncated icosidodeca / great rhombicosi / trico — 0 real claims
+across STRUCTURES-PLAN (only the unclaimed-pointer lines), IMPROVEMENTS
+(pointer lines only), CITY-PLAN, IMPROVE-PLAN, NEW-VILLAGE-PLAN,
+DRESSING-PLAN. The ARCHIMEDEAN branch's TENTH member (cubocta 237, tico
+243, toct 245, tret 247, tcube 249, tdodec 251/252, srcubo 253/254,
+trcubo 255/256, rico 257/258). The snub cube/dodeca stay named for Bill's
+handedness call (mirror forms); trico is ACHIRAL. Kin check at source:
+tret = truncated TETRAHEDRON (R11-59), tcube = truncated CUBE (R11-60),
+tdodec = truncated DODECAHEDRON (R11-62, irregular 1/3-cut decagons) —
+the TRUNCATED ICOSIDODECAHEDRON is genuinely unclaimed and is NOT the
+tdodec's kin name-wise.
+
+CONCEPT: THE KNIFE MEETS THE GOLDEN PARENT. The eighth member cut the
+CUBE (trcubo struct-255: cantitruncate, 6+12+8 = 26, parent planes
+unmoved); the tenth turns the same knife on the DODECAHEDRON — and the
+cut runs deeper than arithmetic: every parent FACE stays in its own
+plane, cut at the corners AND the edges, a DECAGON (12); every parent
+EDGE bevels into a SQUARE (30); every parent VERTEX blooms into a HEXAGON
+(20). 12+30+20 = 62 — the parent's F+E+V, complete, nothing else, the
+SAME census the rico told by GROWING. The dual icosa reads the same solid
+with its own census (20+30+12, F<->V mirrored) — the element theorem,
+told twice. THE UNIFORM SOLVE is the discipline the tdodec's disclosed
+1/3-cut declined: the two cut depths are NEWTON-SOLVED on the two
+edge-class equalities so all 180 edges come out EXACTLY equal — twelve
+REGULAR decagons (worst angle dev 4.4e-15 rad), the knife finishing what
+the truncation began. Presentation: DECAGON-DOWN, 5-fold (family seat
+law) — the parent's own face, now a decagon, FLAT on the dais; lower-ring
+decagon snapped dead-on +X. STONE carries the FORTY-TWO dodeca-census
+faces + the SIXTY-TWO-sided dais (one side per face — theme-number law);
+IRON carries the TWENTY corner hexagons (the bloomed parent vertices,
+dark) + all 180 seam bonds. Night contract: TWELVE warm brass beads at
+the twelve parent-face decagon centers — the dodeca's faces, lit
+(srcubo/trcubo/rico pattern): one CROWN on an iron finial stem (tret v2
+occlusion law, clearance 0.992 >= 0.225) + TEN WAIST in two exact 72-deg
+rings (upper interleaved exactly 36.00 deg — geometry-decided, disclosed;
+the rico/tdodec interleave) + the TWELFTH PRESSED INTO THE EARTH beneath
+the flat foot (tico's-twelfth idiom — eleven read at night, twelve in
+truth, disclosed). The thirty squares and the twenty hexagons stay dark.
+
+DERIVATION-FIRST (no coordinate table trusted from memory): the 62 face
+dirs machine-derived from the parent dodeca; plane depths dec = parent
+inradius (F-REMNANT), sq = parent midradius − w, hex = circumradius − u;
+the two unknowns NEWTON-SOLVED on edge-class equality (residuals <1e-12);
+all 120 child verts = triple-plane intersections over parent-topology
+adjacency triples, feasibility-filtered against all 62 planes. Solved
+values (parent edge-2 frame): bevel w = 0.200000000 exactly (nice —
+the golden knife's bevel is a fifth of the parent edge), vertex cut
+u = 0.428187, common edge scaled to exactly 2. Dihedral fingerprint
+confirms the true uniform solid (T5 measured): dec–sq dot 0.850650808 ==
+sqrt((5+sqrt5)/10) (interior 148.2825 deg), sq–hex dot 0.934172359 ==
+phi/sqrt3 (interior 159.0948 deg), dec–hex dot 0.794654472 ==
+sqrt((5+2sqrt5)/15) (interior 142.6226 deg) — 60 edges each, zero
+same-family.
+
+PROBE (struct259-probe-trico.ts, tracked) 9/9 ALL PASS real exit 0:
+T1 Euler 120−180+62 = 2; T2 twelve REGULAR decagons (144 deg) + 30
+squares (90) + 20 hexagons (120), worst side dev 1.6e-2 mm-scale (T2
+reports seated-frame absolute — family tolerance unchanged since
+struct-249), worst angle dev 4.4e-15 rad; T3 degree 3 everywhere, figure
+4.6.10 exact (1 sq + 1 hex + 1 dec per vertex, 120x); T4 manifold
+180/180; T5 single sphere radius, three dihedral classes 60/60/60;
+T6 F-REMNANT plane drift 8.9e-16, divergence V 1654.43 vs parent closed
+1809.02 at the inherited scale — THE KNIFE KEEPS 91.45% OF THE GOLDEN
+PARENT'S MASS (the gentlest cut of the pentagon line); T6b element
+theorem told twice incl. direction-dual icosa belt-shared machine check;
+T7 seat — bottom decagon FLAT (spread 1.8e-15) at dais top, top
+parallel, 72-deg symmetry 0 misses, centroid on axis, height 6.5000
+exact, reach+rod 3.648 <= apothem 3.795 (62-gon dais R3.80
+APOTHEM-FIRST), snap face dead-on +X, rings 5+5 exact with 36.00-deg
+interleave, bead census 1 crown + 10 waist + 1 pressed + 50 dark,
+FINIAL-CLEARANCE 0.992; T8 worst outward poke −2.5e-2 (fully inside).
+RED control (--red displaces vertex 7): exit 1, exactly T2/T5/T7 FAIL —
+verified. ONE probe self-catch: a botched IIFE on the parent-circumradius
+line (syntax error caught at first run — replaced with the plain
+co-sphericity assertions).
+
+BUILD (agents/arthur/assets/mkv3-trico.ts, staged -f): root identity
+(struct-188 law); texMat lanes trico_stone/trico_iron (struct-38 law);
+bead emissive 0x9a7030 @ 1.4 in-GLB (family build-time law); 244
+pre-merge meshes + 1 KEEP glow group glow_trico_12; envelope law green
+in-build 7.60x8.27x7.59 == probe contract. v1 deterministic x2
+byte-identical sha256
+c55817dcf37c1e21eefde0003a12e00e25f6bafae3c8998a613598b34e6295df
+(mtime-verified).
+
+DECODE (struct259-decode-trico.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (trico_stone + trico_iron + glow_trico_12); D2 62-gon
+dais TRUE box +/-3.800//+/-3.795 corners present sole min y −0.000000;
+D3 iron lane split 14752 verts = 13500 rod + 52 finial-stem + 1200
+hexagon-plate + 0 unclassified, bond coverage 180/180; D4 2277
+decagon/square-plate verts worst 58mm (<= 62 shell); D5 beads 12/12
+parent-decagon clusters (crown stem-lifted + 10 waist + 1 foot pressed),
+DARK-FACE BEAD HITS 0 (the 30 squares + 20 hexagons stay dark),
+emissive sole-night, eleven aloft + foot buried; D6 grounding sole at
+grade + ground band; D7 envelope drift 0.00mm; D8 texMats 2/2. RED
+control (village_rico3.glb — the sibling Archimedean's own bytes):
+census FAIL clean stop exit 1 — verified.
+
+RENDERS: struct259-render-trico.ts (tracked chassis, struct255 lineage)
+9 frames on the EXACT pinned bytes — bounds min[−3.800, −0.000, −3.795]
+max[3.800, 8.270, 3.795] == contract; reviews/struct259-trico/ (ignored
+— sha pin above is the durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native cron-absent, disclosed, rides the
+owed board as trico v1): day gameplay 18m 4/4 PASS (identity
+"deliberate mathematical sculpture" immediate; silhouette closed
+dais-to-crown; grounding flush + attached contact shadow; two material
+families distinct; worst defect MINOR — dais reads disc-smooth at 18m,
+the family-wide many-gon note). Night 3/3 PASS (exactly 5 warm points
+resolved at this azimuth — crown + 4 waist, the single-azimuth-yield
+precedent; zero bloom, zero spill, dark discipline genuine; crown bead
+reads pin-mounted). Closeface 4/4 PASS (joinery clean with even
+shadow-gap reveal, panels genuinely inset (rod shadow bands), no
+missing/proud/pierced panels; families distinct; zero z-fighting/floats/
+sky-through; beads seated with contact shadows — nitpick: one silhouette
+bead reads near its panel corner (it is at its face center by
+construction — perception note), coarse speckle at close range = the rt
+cosmetic-note class, recorded not executed). 11/11 total — no real
+defect. DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement =
+struct-260 committed carry (fresh census scan, under-served octant, 8m
+NN + district soft cap 6, 62-gon-exact polygon SAT struct-19 class,
+oblique-yaw struct-104 band, terrain preflight over TRUE rotated 62-gon,
+hash-gated plain spawn nx-struct-trico, comp {}, ground circuit walk).
+Folly class. Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
+
+Files: struct259-probe-trico.ts + struct259-decode-trico.ts +
+struct259-render-trico.ts + assets/mkv3-trico.ts (NEW, tracked; mk
+staged -f per the ignored-parent law) + STRUCTURES-PLAN.md (this block)
++ IMPROVEMENTS.md (one append struct-259, D+0 E+0).
+
+Next queue head: struct-260 placement tick (the committed carry above).
+Then R11-68 build sweep re-derives from the form ledger: the snub cube is
+the last named-unclaimed Archimedean but carries a handedness decision
+owed Bill (mirror forms — stays named for his call, struct-249/253/255
+precedent); rhombic solids / non-Archimedean families per struct-253's
+grep; fresh five-file grep to confirm the gap before building — or Bill's
+verdict routing.
