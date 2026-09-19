@@ -701,6 +701,41 @@ domain is commons-next `nx-dress-*` fauna only.
     exactly, 6 verbs (upload+spawn+5 comps), idempotent rerun 0 verbs,
     walk ALL_PASS 3/3. Full record below. Queue: EMPTY — next tick
     proposes the next species per domain law.
+33. **[CANDIDATE fauna-49, 2026-09-20] kingfisher — the millrace bird (proposed
+    this tick, zero mutations).** ONE entity `nx-dress-kfish-001`: a SINGLE
+    common kingfisher (Alcedo atthis, the fleet's second single-bird species)
+    perched on its own dead-branch snag at the millrace bank — the owl-post
+    idiom at bank scale (freestanding snag, no host-rider: owl fauna-8
+    precedent keeps the bird independent of host churn). **Village logic
+    (census-derived): the millrace `nx-struct-millrace` (-76.707,-0.0256,6.711)
+    yaw 1.752, live lib 6e82dd2e, local bbox 3.427×2×14.464 — is the village's
+    only MOVING water (the race feeds the windmill wheel: the grain chain's
+    power source) and the ONLY water feature with ZERO fauna: the reedpool
+    lives from five sides (ducks W lobe, robin N rim, geese SW bank, frog ON
+    the surface, heron E wader — all still-water species); the race is the
+    running-water niche, and the kingfisher is its exclusive specialist (perch
+    low over the race, dive-read posture). No niche competition: heron =
+    still-water wader at the pool; kingfisher = running-water percher at the
+    race.** Species read: the village's one ELECTRIC-BLUE accent — cobalt-teal
+    back + orange breast (value-contrast law; fauna-28 law b: the orange
+    anchor must separate from the race's water blue by VALUE not hue — probe
+    against palette water 0x506a78 at build tick), crouched posture, dagger
+    bill, tiny coral feet. TRUE-SIZE 16cm + ×1.4 marginality bake incl joints
+    (robin v5 chassis verbatim; encounter-reward species, robin law — 18m
+    sub-visible disclosed at proposal time). Motion (3-4 comps, proven
+    vocabulary only): breathing bob + sit-and-wait head Y-scan + the
+    PRE-DIVE FORWARD-LEAN pendulum (X-axis, slow — the species' famous
+    posture, the readable idle) + tail flick; phases staggered, epoch t0.
+    Furniture: the snag (planted dead branch, slight lean OVER the water —
+    the dive lane) + 2-3 waterside pebbles at the snag foot; nothing
+    duplicates the race's own geometry (zoo-dump law). Seat: millrace bank,
+    reader side toward the W approach — exact tuple OWED to the build tick
+    (terrain preflight 9pt + live SAT vs the race OBB + seat sweep; the race
+    spans host-local z −3.8..10.664, yawed 1.752, so both banks sweep; reader
+    vantage = the W approach lane, fauna-40 law f). Prefix `kfish`
+    collision-free (rg-verified this tick incl gitignored); add to mergekit
+    KEEP at build tick. 18m identity: crouched blue-and-orange speck on a
+    snag over moving water — robin-law disclosure, encounter species.
 
 ## Per-species rebuild records
 
