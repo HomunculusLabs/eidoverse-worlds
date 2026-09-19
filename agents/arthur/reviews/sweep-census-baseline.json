@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 373,
+  "count": 374,
   "entities": [
     {
       "id": "beb4c791",
@@ -2299,7 +2299,7 @@
       ],
       "yaw": 2.35619,
       "scale": 1,
-      "lib": "store/bad22d1963d3a78b.glb",
+      "lib": "store/acee7bcf13d20bf2.glb",
       "bbox": {
         "min": [
           -3.55,
@@ -9415,6 +9415,42 @@
           1.604,
           2.301,
           -0.11
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-co",
+      "kind": "thing",
+      "pos": [
+        96.320008,
+        -0.029291,
+        5.891184
+      ],
+      "yaw": 4.127704,
+      "scale": 1,
+      "lib": "store/90c92f327221e2bf.glb",
+      "bbox": {
+        "min": [
+          -4.05,
+          0,
+          -4.05
+        ],
+        "max": [
+          4.05,
+          6.63,
+          4.05
+        ],
+        "size": [
+          8.1,
+          6.63,
+          8.1
+        ],
+        "center": [
+          0,
+          3.315,
+          0
         ]
       },
       "compKeys": [],
