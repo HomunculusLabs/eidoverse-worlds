@@ -688,6 +688,29 @@ domain is commons-next `nx-dress-*` fauna only.
     seats exist in the pocket — the E side is rows-blocked). Full
     record below. Queue: EMPTY — next tick proposes the next homestead
     species per domain law.
+32. **[PROPOSED fauna-47, 2026-09-19] house sparrows at the mill door —
+    candidate row, next build target.** ONE entity `nx-dress-sparrow-001`:
+    a house-sparrow PAIR (Passer domesticus) — cock (grey crown, chestnut
+    nape, black bib) + hen (buff-brown, pale supercilium) — foraging
+    spilled grain on the apron of the windmill's OPEN double east door.
+    Census grounding (fauna-47): 393 entities; the grain chain stands
+    (windmill (−40,0) yaw 1.571 → millrace (−76.7,6.7) → harvestcart
+    (12,36) + sheaf-tally rider + harvest mouse at the verge) and its HEAD
+    BUILDING has no animal. Door decode (mkv3-windmill-overhaul.ts:77-83):
+    open double leaf on local +z face → world EAST (yaw π/2), door mouth ≈
+    (−37.4, ·, 0.0), width 1.8, flush threshold; reader approach = the
+    gate-w road (−19.5,0) → mill ≈ 17m of honest 18m approach. Chassis:
+    robin-class small bird, true-size ~15cm + ×1.4 marginality bake
+    (robin/owl law), 4-5 motion comps (bob + peck + head-scan + tail
+    flick, phases staggered). **HOST-CHURN WARNING: the windmill is under
+    ACTIVE sibling overhaul** (WINDMILL-OVERHAUL.md untracked +
+    mkv3-windmill-overhaul.ts in tree at fauna-47) — the build tick MUST
+    re-derive the door anchor from the CURRENT live lib + tuple
+    (artwalk-39 host-rider continuity law); prefer an apron seat that
+    does not key to door-edge millimetres if the host lib changed; riders
+    nx-sign-mill-001 / nx-artwalk-b10 are sibling-owned, never touched.
+    Village logic: sparrows are THE mill bird — the grain chain would run
+    field → cart (mouse) → mill (sparrows at the door where sacks spill).
 
 ## Per-species rebuild records
 
