@@ -18154,3 +18154,143 @@ Files: struct244-scan-tico.ts + struct244-terrain-tico.ts +
 struct244-walk-tico.ts + next-place-struct244.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-244,
 D+0 E+1). One upload, one verb. Zero pushes.
+
+
+## struct-245 (2026-09-19): R11-58 THE TRUNCATED OCTAHEDRON —
+## BUILD+JUDGE TICK, v1 ACCEPTED BANKED NOT PLACED
+
+245%3=2 build+judge slot with EMPTY bank (tico placed struct-244) — build
+tick. Gate ALL PASS real exit 0 tick-start at ecb0b1a0 (fauna-37; unpiped
+GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0
+OPEN nx-struct rows — same pin as struct-238..244). Ledger max re-derived
+struct-244 -> tag struct-245 (re-checked immediately before append).
+Native absent from the cron catalog all tick (tool_search fresh: terminal
++ zai-vision + repoprompt only — same disclosed cron-unpayable class as
+struct-169..244; owed board stays 26 + csaszar v3 + ssd v1 + tetrahelix
+v2 + rt v1 + co v1 + ico v2 + nodoid v3 + tico v2, plus toct v1 now
+riding).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): truncated octa|kelvin|toct|permutohedron|bitruncated
+0/0/0/0/0 real mentions. The ARCHIMEDEAN branch (opened struct-237
+cuboctahedron, tico struct-243) takes its third member — and the
+PARENT-ECHO of the octahedron: cut each of the 6 corners at exactly 1/3
+(the SAME law as the tico) and the parent's 6 corners become 6 SQUARES
+while its 8 faces become 8 HEXAGONS — the hexagon planes ARE the parent's
+face planes (T5: H-H dihedral == the octahedron's own 109.47°, the
+tetrahedral angle).
+
+CONCEPT: THE SPACE FILLER. Of all the Archimedean solids exactly ONE
+tiles space by translation alone — this one (bitruncated cubic honeycomb;
+Kelvin 1887 posed it as his foam of the ether; Weaire–Phelan 1993 beat
+its surface area by 0.3% only by taking TWO cell shapes — the single-cell
+crown stands). Machine-verified, not asserted from prose: T6's grid test
+puts 17,576 points through the bcc lattice of copies — 0 uncovered, 0
+double-covered. IRON carries the six squares (the six lattice doors —
+the dark panels) + all 36 seam bonds; STONE carries the eight hexagons
++ the FOURTEEN-sided dais (one side per face — the theme number). Night
+contract: six warm brass beads at the six square centers — the six doors
+— in two staggered triangles (3 shoulders ~5.22m, 3 skirt ~1.28m, 60°
+spacing, one dead at az 0, each poked +0.02m proud). No bead points down:
+the doors live at the waist — honest difference from the tico's pressed
+twelfth; from any single azimuth the near door reads full plus its two
+grazing neighbors, and the six complete only as you circle.
+
+PARAMETRIZATION (exact, closed-form): parent octa verts (±1,0,0) cyclic,
+edge √2; cut each of the 12 parent edges at 1/3 and 2/3 -> 24 verts;
+uniform edge a = √2/3 (corner-cut side t√2 == middle (1−2t)√2 exactly at
+t=1/3); R_toct = (a/2)√10. Hexagon-down 3-fold seat (⟨111⟩ axis), 3.89m
+wide, 5.9m tall on a 14-gon dais R3.85 h0.30.
+
+PROBE (struct245-probe-toct.ts, tracked) 8/8 ALL PASS real exit 0: T1
+Euler 24−36+14 = 2; T2 six regular squares (90°) + eight regular hexagons
+(120°) side 2.4087m; T3 degree 3 everywhere, exactly 1 square + 2 hexagons
+per vertex (24×); T4 manifold 2-per-edge 36/36; T5 all verts at R exactly
+(== closed form), dihedrals exactly TWO classes — H-H dot 1/3 == the
+PARENT's 109.4712° (the tetrahedral angle), S-H dot 1/√3 constant, ZERO
+square-square edges (no two doors share a wall); T6 THE SPACE FILLER —
+normals: squares == the 6 axes, hexagons == the 8 diagonals; 14/14
+face-sharing neighbor offsets in the bcc lattice L=(2/3)·{p≡q≡r mod 2}
+with coincident shared planes; grid test 35 copies × 17,576 points: 0
+uncovered, 0 double-covered; T7 seat — bottom hexagon FLAT on dais top
+spread 0, top parallel, 120° symmetry 0 misses, centroid on axis, height
+5.9 exact, reach+rod 3.739 <= apothem 3.753, bead ring 3 up + 3 down at
+exact 60° spacing with one dead at az 0; T8 every inset plate vertex
+strictly INSIDE the convex solid (worst outward poke −45mm), corner tuck
+9.9mm inside rod cylinders (invisible, co idiom). RED control (--red
+displaces vertex 7): T2/T5/T7/T8 FAIL — exit 1 verified.
+
+PROBE SELF-CATCHES THIS TICK (honest law, three):
+(a) T6 v1 used rot(f.n) — seated-rotated constraint set against a UNIT
+lattice: 2620 uncovered. Fixed: unit-frame normals.
+(b) T7 az0 twist-snap v1 selected by door CENTER y (all 6 doors sit
+above grade — skirt included) and the chassis carried rot2 = −az0 while a
++Y rotation maps az a → a−φ (snap needs φ=+az0). The tico chassis never
+asserted the snap so the sign sat silent; the toct made it LAW and the
+red-green discipline caught it same-tick. Fixed both.
+(c) envelope contract v1 used vertex±ROD_R spheres; a tilted rod's END
+RIM extends R·√(1−d̂k²) along axis k — the toct's tilted top edges
+exposed 19mm the tico's orientations hid. Contract now carries exact rim
+extents; mk reads TRUE vertex extents (Box3.setFromObject is the
+conservative-bbox class).
+
+BUILD (agents/arthur/assets/mkv3-toct.ts, staged -f): root identity
+(struct-188 law); texMat lanes toct_stone/toct_iron (struct-38 law);
+beads emissive 0x9a7030 @ 1.4 in-GLB (tico v2 margin law carried at
+build time, not after a night FAIL); 51 pre-merge meshes + 1 KEEP glow
+group glow_toct_6; envelope law green in-build 7.70x6.26x7.51 == probe
+contract. v1 deterministic x2 byte-identical mtime-verified sha256
+1bf092e04967a71f4250b392770186cfbea31422fd1d69d6202973ae3110a063.
+
+DECODE (struct245-decode-toct.ts, tracked) 8/8 ALL PASS real exit 0: D1
+census 3 nodes (toct_stone + toct_iron + glow_toct_6); D2 14-gon dais
+TRUE box ±3.850/±3.753 corners present sole min y −0.000000; D3 iron
+lane split 2916 verts = 2700 rod + 216 square-plate + 0 unclassified,
+worst rod 60.00mm / plate 58.00mm, bond coverage 36/36; D4 450 hex-plate
+verts worst 58.00mm (<= 62 shell); D5 beads 6/6 POKED square-center
+clusters emissive sole-night ALL ALOFT (none pressed); D6 grounding sole
+at grade + 276-vert ground band; D7 envelope drift 0.00mm; D8 texMats
+2/2. RED control (village_tico3.glb — the sibling Archimedean's own
+bytes): census FAIL clean stop exit 1.
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed riding the
+board): gameplay 18m 4/4 PASS (identity: "single faceted polyhedral
+solid... exactly like a crystal or foam cell"; silhouette closed, zero
+sky-through; grounding contact seam + attached shadow; zero defects,
+beads read as intentional hardware); closeface 4/4 PASS (both panel
+families flat + intact, seams continuous, dais regular with margin,
+zero z-fighting); night gameplay 4/4 PASS (two crisp quiet amber points
+each seated ON a dark square, judge's own analysis derived the occlusion
+arithmetic — "every square panel that IS visible carries its bead");
+night-close 4/4 PASS (one point on the one visible square, discipline
+strongest aspect). Judge verify-tier notes recorded not executed: single-
+sample size-gradient on night-close (covered by the two-bead gameplay
+frame); day panel-texture speckle cosmetic. Bottom-door overhang zero —
+T7's reach+rod law covers the seated rim.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-246
+committed carry: fresh census scan — under-served band/district selection,
+8m NN + per-district soft-cap audit, 14-gon-exact polygon SAT (struct-19
+disc law class — never square-bbox), oblique-yaw law (struct-104 band),
+terrain preflight over the TRUE rotated 14-gon, hash-gated plain spawn
+nx-struct-toct, comp {}. Folly class — ground circuit walk at placement,
+no door.
+
+Bill eye-check pointer (after placement): the Archimedean branch's third
+member — where the tico's twelve pentagons make a ball, THE TRUNCATED
+OCTAHEDRON is the one cell that could build the universe: hexagons AND
+squares, every corner one square and two hexagons, no two squares ever
+sharing a wall. Copy it by translation alone and it fills ALL of space
+with zero gaps — Kelvin's foam of 1887, beaten only by a two-shape cheat.
+The six dark squares are the six doors to the six neighboring cells; the
+six brass beads mark those six doors in two staggered triangles — three
+shoulders, three skirt — none pressed into the earth: the doors live at
+the waist, and the six complete only as you circle.
+
+Files: struct245-probe-toct.ts + struct245-decode-toct.ts +
+struct245-render-toct.ts (all NEW, tracked), assets/mkv3-toct.ts (NEW,
+staged -f), reviews/struct245-toct/ (9 frames, ignored — sha pins in
+this block are the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-245, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
