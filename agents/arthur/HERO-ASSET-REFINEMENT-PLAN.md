@@ -1228,3 +1228,51 @@ next wake once the gateway answers.
   bytes; polish293 probes: plinth bands, node decode, pixdiff).
 - Next: tan-horse vs scenery-panel value proximity (judge optimization
   note, polish-292); or re-survey plaza-core on fresh evidence.
+
+### polish-296 — carousel navy-coat night identity (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-295 bone-coat build (live was 2d61deab).
+  Queue-head candidate from polish-295's close (navy-coat night margin),
+  re-judged fresh this tick on exact live bytes.
+- Defect (judge, night 18m): the NAVY horse (horse_4, horse_4_cream_paint)
+  was the least legible ride figure — silhouette-only against the cream
+  scenery panels (~10-25% of bone's legibility), color identity near-lost,
+  anatomy unresolved, dissolving against panel gaps and the sky.
+- Change (ONE intervention, new production step `navycoat.ts`, bonecoat
+  chassis): emissive-only edit horse_4_cream_paint [0.07,0.12,0.17] →
+  [0.10,0.20,0.28]. Lum 0.113→0.185 (+64%), blue saturation UP (R/B 0.41
+  → 0.357 — opposite of desaturating toward the grey-cream panels R/B
+  1.87), night ladder: lanterns .80 > crown .59 > ceiling .35 > bone .254
+  > panels .213 > teeth .203 > NAVY .185 > gold .173 > rose .102. Day
+  delta sized BEFORE building: ≈ +17 sRGB points, milder than polish-295's
+  judge-cleared bone +42. Single-primitive scope (horse_4_0[0], 8021
+  verts) proven by probe on the pinned bytes; no new lights/geometry/nodes
+  (47/25 unchanged); other three coats byte-untouched.
+- Candidate `bad22d1963d3a78b…` A/B byte-identical ×2; NaN scan clean;
+  15/15 views clip-clean; night band avgRGB 93→115, day 111→130 (+19);
+  horse_2-solo controls 4/4 byte-IDENTICAL (scope proof).
+- Judge verdicts (ZAI fallback, no native vision this cron session, native
+  re-judge owed — same class as polish-285..295): NIGHT PASS — legible blue
+  figure, head/neck/legs/tail separable, reads "blue horse" not dark blob,
+  hierarchy bone > gold > navy intact, painted-wood not glow-orb, zero new
+  defects; disclosed nuance: hue reads dusty-slate at this lift (inherent
+  ceiling of raising a dark coat). DAY PASS — natural navy painted wood,
+  no glow/sheen/washout, hierarchy holds, functionally invisible change.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED (1 upload +
+  8 verbs), 7-key comp bag replayed verbatim, idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/bad22d1963d3a78b.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact. Served sha == upload sha
+  (identity); served decode keeps horse_4_cream_paint [0.10,0.20,0.28] on
+  horse_4_0[0] only, other coats exact.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-296-carousel-navy/`
+  (before/ = live 2d61deab build full 15-view rig + baseline GLB;
+  after/ = navy candidate; baseline-entity.json regenerated fresh from the
+  live census; deploy dry/apply/idem reports + verified served bytes).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path) — recorded here + ledger instead.
+  Not fabricated.
+- Next: judge-remaining candidates — (a) rose night occlusion
+  (geometry-limited; judge suggested angular offset of the rose horse on
+  its pole — motif geometry, artwalk coordination), (b) bone-slate vs
+  navy hue nuance (fine as judged), or (c) re-survey plaza-core on fresh
+  evidence.
