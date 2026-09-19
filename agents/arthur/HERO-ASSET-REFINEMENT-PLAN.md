@@ -683,12 +683,74 @@ hold began. Per the hold-law amendment, stated once last tick: this loop
 produces nothing until you act — recommend /loop stop, or hand me a visual
 correction / new subject and I resume immediately.
 
-## Post-carousel queue
+### polish-300 — hearth flagstone gathering ring (ACCEPTED, LIVE)
 
-Ranked by gameplay visibility when carousel is internally hero-ready:
-plaza hearth ✅ (polish-262), belltower ✅ (polish-263), welcome ensemble ✅
-(polish-264 — board done; the welcome lamp light entity remains), tower.
-Present Bill one concise eye-gate packet exactly once at that point.
+- Eye-gate packet for the polish-285..299 carousel night campaign DELIVERED
+  (see packet section below) per loop law — exactly once.
+- Subject: `nx-hearth` (village center, pos [0,0,0], yaw 0, 4 comp keys:
+  motion:pz_kettle, motion:well_, particles:embers, sockets×5). Build source
+  `assets/mkv3-plaza.ts` → `village_plaza3.glb` (live was 027f6f019f9981bf,
+  polish-262's tangential-slab ring).
+- Defect (ZAI judge on exact live served bytes, 18m, dress-80-calibrated via
+  the accepted plaza-bench control frame: "partly presentation-driven" but
+  "real strike for the debris-read"): the gathering ring read as scattered
+  debris, not paving. Root causes probed: (a) plank-scale slabs — 8 long
+  1.62/1.34m boards with ~0.5m gaps read as dropped planks; (b) A/B diff
+  showed old slab surfaces already ~39% darker than ground (value was NOT
+  the failing dimension — the re-lay is the cure, darkening supporting).
+- Change (ONE intervention, mkv3-plaza.ts): re-laid the ring as 17 darker
+  cut-flag stones (0.58/0.46m flags × 0.7m, r 2.95, slots at 9°+k·18°) in a
+  new `flag` texMat family (0x4e4a38 base — pixel-probed separation 43.3%
+  vs local ground); TWO deliberate sector breaks — the well owns E, the
+  storyteller's stone owns S (v1's two tiny well-apron flags read as
+  ambiguous slivers at aerial zoom and were cut). Inner edge r 2.60 clears
+  bench tips (2.475) by 0.125m all around; v1's drum clearance 2.2cm kept
+  only as the record (flags removed there).
+- Candidate `890163cb872597e2d62b7861a8a954519fa1daf0a9a3cdf162a2ff940a104ecb`
+  (rejected v1 `a36c3069…`: apron-flag sliver read, never placed). Double
+  rebuild byte-identical. Source-truth control: stone bucket lost exactly
+  the 8 old pavers (556→364 verts), flag bucket = 408 verts (17×24), all
+  other buckets + both motion anchors byte-equivalent; flag material bound
+  (pz3_4 → mat 2 'flag' tex) — an initial material-null false alarm
+  (pz3_10) was retracted after full decode: legit COLOR_0-only ladle bucket.
+- Judge verdicts (ZAI fallback, no native vision in this cron session,
+  native re-judge owed — same class as polish-285..299): gameplay 18m
+  ACCEPT (ring reads as intentional paved gathering circle, gaps read as
+  designed entrances, no clutter, no float, scale correct — "from broken to
+  shippable"); aerial CLEAN (no contact with well/teller stone, no slivers,
+  two deliberate breaks). Bench-overlap nit falsified by aerial (source
+  math 12.5cm clear; 18m projection class).
+- Placed via updated dedicated placer `next-place-hearth.ts`: PLACED_VERIFIED,
+  4-key comp bag replayed verbatim (motion anchors pz_kettle/well_ live in
+  the new bytes), idempotent rerun zero verbs, live census pin
+  `store/890163cb872597e2.glb` exact.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-300-hearth/` (before/ =
+  live 027f6f01 rig + baseline.glb; after/ = v1 retained as record;
+  after-v2/ = accepted; probes: pixdiff, aerial-diff, control, control-b,
+  node-control).
+- Next: plaza-core re-survey on fresh evidence (stringlights night read,
+  mapboard, belltower clock face) or judge-named candidates from any lane's
+  survey notes.
+
+## EYE-GATE PACKET — polish-285..299 carousel night campaign (delivered 2026-09-19)
+
+- Subject: `nx-carousel`, world commons-next, at polish-299 bytes. Live exact
+  lib: `store/3ed80c49d16e89d8.glb` @ (-18, 0.0001495, 18) yaw 2.35619.
+- What changed across the campaign (14 accepted ticks, all live): warm
+  ceiling (285), rose four-coat set (286), night coat emissives (287),
+  canopy fabric night form (288), structural material truth day+night (289),
+  crown beacon (290), valance ember teeth (291), scenery ring (292),
+  structural night value (293), panel separation (294), bone coat (295),
+  navy coat (296), rose coat value (297), canopy wedge striping day (298) +
+  night banding (299).
+- Full per-tick evidence: `agents/arthur/reviews/hero-assets/
+  polish-285-carousel-horses/` … `polish-299-carousel-seamtracery/` (each
+  with before/after rigs, probes, deploy reports).
+- Eye-check: spawn → walk NW ~36m to the carousel — day: pieced cream/red/
+  gold canopy, four distinct coats (bone/rose/gold/navy), readable structure;
+  night: lanterns brightest, crown beacon, lit valance ring, panel ring with
+  four readable horses, striped cone, grounded base.
+- Per loop law: delivered exactly once; no hold while awaiting verdict.
 
 
 ## BILL VERDICT 2026-08-31: ALL APPROVED, KEEP IMPROVING
