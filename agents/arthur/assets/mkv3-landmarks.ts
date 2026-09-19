@@ -107,10 +107,17 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     const bellGrp = new THREE.Group();
     bellGrp.name = "bell";
     bellGrp.position.set(0, PH + 1.15, 0);
-    const crown = new THREE.Mesh(new THREE.TorusGeometry(0.09, 0.03, 6, 10), mat(0xdada70, 0.4, 0.3));
+    // polish-307: the bell read as a dark olive lump at 18m (probe (82,76,54)
+    // vs sky-through (113..163, blue-grey) and shadow (35..55)) — the
+    // polish-289 class: 0xdada70 + metalness .3/.5 kills the diffuse without
+    // an envmap. Re-authored as bell-gold with dominant diffuse at the
+    // carousel-brass recipe (rough .45, metal .15) — brighter than the
+    // polish-306 spire so the namesake bell leads the belfry. Unlit
+    // (material truth; the belfry lamp stays the night signal).
+    const crown = new THREE.Mesh(new THREE.TorusGeometry(0.09, 0.03, 6, 10), mat(0xd9ac52, 0.45, 0.15));
     crown.name = "bell_crown";
     bellGrp.add(crown);
-    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.42, 0.55, 10), mat(0xdada70, 0.35, 0.5));
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.42, 0.55, 10), mat(0xd9ac52, 0.45, 0.15));
     body.name = "bell_body";
     body.position.y = -0.38;
     bellGrp.add(body);

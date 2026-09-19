@@ -1771,3 +1771,57 @@ next wake once the gateway answers.
   family precedent), (b) bell reads black-lump at 18m (brass value /
   warm emissive candidate — needs falsification vs current pixels
   first), or (c) plaza-core re-survey on fresh evidence.
+
+### polish-307 — belltower bell-gold re-author (ACCEPTED, LIVE)
+
+- Subject: `nx-town-belltower` (civic ring, same tuple as polish-306; ladder
+  comp). Build source `assets/mkv3-landmarks.ts` (belltower block) →
+  `village_belltower3.glb` (live was f9ceea6e, polish-306's crown build).
+- Defect (polish-306's judge-named queue item (b), confirmed by fresh
+  pixels this tick): the bell — the tower's namesake — read as a dark
+  near-neutral olive mass at 18m: gameplay band (118,113,53), R≈G, no hue
+  split from the blue-grey sky-through (125,130,133). "Black lump" class.
+- Root cause (decode-corrected): the bell's `mat(0xdada70, …, metal .3/.5)`
+  exports COLOR_0-only (legacy flat-color lane, NO glTF material — village
+  convention); the metalness parameters never reach the wire. The authored
+  COLOR_0 itself was the wrong color: yellow-green 0xdada70 reads olive.
+- Change (ONE edit, bell crown+body only): COLOR_0 0xdada70 → bell-gold
+  0xd9ac52 (mat(0xd9ac52, 0.45, 0.15), polish-289 carousel-brass recipe;
+  brighter/warmer than the polish-306 spire's 0xb98245 so the bell leads
+  the belfry). Clapper untouched. Unlit (material truth; belfry lamp stays
+  the night signal — night band stays (21,16,12)).
+- Candidate `4a84e77127d736540b68cea4b5df6f5a5b134d59f6a5a5cc163699dd8083a0b1`
+  deterministic ×2; siblings byte-identical (carousel3 0843da4e, inn
+  6e6ff2d0, windmill 369c5724). Nodes 14→13 (crown+body merged — same
+  bucket now), KEEP group `bell` + `bell_0`/`bell_1` + `lamp` intact.
+- Rig-law finding recorded: the standard 10-view rig showed ZERO changed
+  pixels (bell occluded/sub-pixel at its framing); the dedicated belfry
+  rig (p307-belfry-rig.ts, cameras at bell height + a gameplay-distance
+  belfry-aimed view) measured the change: 815 px at 18m gpAim, 13k px
+  belfry view. Probe-honesty pass: first row-model was WRONG (probed the
+  wrong rows); the gpAim diff located the true bell band before judging.
+- Falsification (ZAI fallback disclosed — no native vision tool loadable
+  in this cron session, polish-285..306 class, native re-judge owed):
+  A/B judge "AFTER clearly better… Ship it" — warm bronze against BOTH
+  sky (value) and shadow (value+hue), sole warm element = focal point,
+  natural not glowing, zero regressions. Measured: (118,113,53) →
+  (117,84,40), R/B 2.2→2.9.
+- Placed via NEW dedicated placer `next-place-polish307-belltower.ts`
+  (polish-306 chassis, pins f9ceea6e→4a84e771): PLACED_VERIFIED, 1 upload
+  + 3 verbs (remove/spawn/comp), ladder comp replayed verbatim, rider b5
+  standing, idempotent rerun ALREADY_LIVE_NO_VERBS (0 verbs), live census
+  pin `store/4a84e77127d73654.glb` @ (6.5,0,6.5) yaw −2.35619 exact.
+- Served-bytes proof (struct-104 law, durable probe
+  `agents/arthur/p307-verify-served.ts`): served DRACO dd5bd6a2… census
+  12/11, anchors bell/bell_0/bell_1/lamp, bell_0 COLOR_0 123/123 verts
+  bell-gold (linear (177,105,22)), 0 olive, 0 non-finite. Probe
+  development caught its own bugs (COLOR_0 enum → COLOR; *255 vs
+  byte-scale; sRGB-vs-linear target) before truth — RED→GREEN discipline.
+- Evidence: `reviews/hero-assets/polish-307-belltower-bell/` (before/ =
+  live f9ceea6e full 10-view rig + baseline.glb; after/ = candidate rig;
+  belfry-before/ + belfry-after/ = dedicated belfry rig; gpaim crops).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree) — recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) belltower spire brass value bump (polish-306 judge
+  nuance, still open), (b) rose-horse angular-offset motif geometry
+  (artwalk coordination), or (c) plaza-core re-survey on fresh evidence.
