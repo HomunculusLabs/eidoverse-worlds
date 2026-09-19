@@ -16689,3 +16689,74 @@ longhouse/garden-cottage @344, forge/potter @343, hall/bunkhouse
 @342 stalest standing pair at 3 sweeps; walk tools interior-walk-hall.ts
 + interior-walk-bunkhouse.ts, ls-verified present on disk — 1704B
 Aug 30 08:24 + 1538B Aug 30 11:22).
+
+sweep-346: CLEAN SWEEP, one-arrival + one-classified-flip tick (115th
+consecutive quiet-or-classified) — first sweep after a 12-day lane gap
+(sweep-345 Sep 7, this tick Sep 19). Tick-start HEAD 398e90d4 (polish-309,
+committed PRE-tick); dress-189 read-only HOLD interleaved @ fecd237a
+mid-tick and absorbed (gate re-run ALL PASS real exit 0 at fecd237a).
+Census 391->392 vs the committed sweep-345 baseline (sha16
+f6817fe38442f20e): exactly ONE domain-valid arrival — nx-struct-trcubo @
+(102.580041, -0.01716, -19.93954) yaw 4.380776422505767 lib
+510d7e8462d0c0ee comp {} = struct-256 R11-64 truncated cuboctahedron @
+bfc26c6b, tuple matches its committed ledger line-for-line (its own
+message records census 391->392), independently corroborated by sibling
+dress-189's same-tick census; ONE classified drift field-set —
+nx-dress-stringlights lib 246af38663aa6981->8788b5ff3f132b89 at identical
+tuple, bbox y-min -0.565->-2.6 (festoon-pole growth) = polish-309 @
+398e90d4, ledger-matched line-for-line, comp {} preserved; 0 departures,
+0 unexplained drift on 390 shared ids. Epoch-B 20s-paced re-read raw sha
+byte-identical (92b9aa04) — world stable at 392. OVERLAP: SAT 354 bbox
+non-light / 248 exempt-classified / 0 coverage holes, exit 3 on exactly
+ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2
+routed to artwalk b26 choreography @ sweep-43, 302nd sweep since routing,
+NOT new, no escalation due (the law keys on severity-1); both changed
+entities were included in the live SAT set — no new contacts (trcubo's
+own ledger 26-gon-exact SAT 2.29; stringlights' new pole bbox clean).
+WALKS: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0,
+legs run individually — core 64/64 ALL_PASS maxArrival 0.380
+(next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/0.31)
+— dists identical to the sweep-319..345 canon; core walked FRESH over
+the new stringlights bytes (both festoon poles world (-8.15,9.65)/
+(-3.85,5.35) sit inside the core band — the 64/64 pass is the fresh
+obstruction evidence for the new geometry). Tier-2 324th cycle per the
+committed sweep-345 pointer: hall 8/8 ALL_PASS (interior-walk-hall.ts,
+real exit 0, dists 0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310) +
+bunkhouse 6/6 ALL_PASS (interior-walk-bunkhouse.ts, real exit 0, dists
+0.245/0.300/0.305/0.247/0.380/0.313), both tools ls-verified present on
+disk BEFORE this prose (1704B Aug 30 08:24 + 1538B Aug 30 11:22, matching
+the committed pointer exactly). INTEGRITY: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (300th consecutive clean); sweep89-battery 28/28 PASS
+first try on epoch-A bytes (no pin moves needed — trcubo comp-neutral {},
+stringlights comp {} preserved, comp-bearing stays 50); carousel comp bag
+exact 7 + lib 3ed80c49d16e89d8 census-verified (polish-299 standing);
+comp-bearing 50; lights 38; thing 354. Interlane md5 86b2936f stable,
+read fresh; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role —
+the audit-continues freeze banner governs via loop/plan reload. Baseline
+lawfully rewritten like-for-like (copyfile convention, sweep-321..345
+precedent; /tmp/s346/snapshot-rewrite.py): pre-write assertion verified
+committed baseline == f6817fe38442f20e (391 ents), expected diff set
+exactly [arrival nx-struct-trcubo, stringlights lib+bbox], counts
+391->392, zero drift on 390 shared ids; final 392 entities / 305814B /
+sha16 92b9aa04ae815953; post-rewrite drift vs live epoch B ZERO. Probe
+self-catches pre-verdict, disclosed: (a) walk-output parsers keyed wrong
+result schema three times (core 'legs' list vs int, 'distance' vs
+per-leg arrival, interior approach-shape assumption) before reading the
+actual status/legs/maxArrival/results schema (sweep-48/339/340 class);
+(b) an inline census+sleep composite was blocked by the terminal payload
+validator — re-issued as separate paced calls (sanctioned-path class).
+Foreign dirt in tree (windmill overhaul scratch, cabin/carousel
+prototype dirs, engine files, fleet shells, debug-bower scripts,
+moon-moth dir, fauna tools, core-paths assets, next-terrain scratch,
+review dirs) is sibling work-in-flight, untouched per the ownership law.
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero
+comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-347): inn + tower-house (325th cycle — LRU chain re-derived from
+committed pointers this tick: hall/bunkhouse @346 walked fresh,
+longhouse/garden-cottage @344, forge/potter @343, inn/tower-house @345
+the stalest standing pair; walk tools interior-walk-inn.ts +
+interior-walk-tower-house.ts, ls-verified present on disk — 1786B Aug 30
+08:11 + 1523B Aug 30 09:53).
