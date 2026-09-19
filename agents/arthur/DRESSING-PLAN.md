@@ -1,6 +1,50 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-170 — lawful HOLD (59th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 5278eafd (sweep-327); interlane md5
+  86b2936f pin-exact. Fresh census **374 = 373 + ONE arrival, pre-tick
+  ledger-matched**: `nx-struct-co` (96.320008, −0.029291, 5.891184) yaw
+  4.127704 lib 90c92f32 — struct-238 (a2650ca7) E-axis fifth station,
+  struct domain, NOT dress intake. Exactly ONE classified move:
+  `nx-carousel` lib swap bad22d19→acee7bcf at tuple-identical
+  pos/yaw/scale (polish-297 rose-coat night identity, 839f7576) — polish
+  domain, classified not routed. ZERO departures, ZERO dress-domain drift;
+  dress domain 62 = 29 fleet-owned (NE 6 / NW 9 / SE 7 / SW 7) + 10
+  fauna-owned + 23 non-fleet (probe `/tmp/dress-hold-verify-170.py`
+  HOLD_VERIFY_PASS exit 0, browser UA, capture saved
+  `/tmp/dress170-census.json`; one probe self-catch disclosed — first run
+  failed fail-closed on the classified carousel move due to a lib-prefix
+  compare bug in the probe itself; fixed at source, PASS on re-run, no
+  world state misreported).
+- **Sibling commits since dress-169**: polish-297 (839f7576, the carousel
+  swap above), struct-238 (a2650ca7, the co arrival above), sweep-327
+  (5278eafd, zero-mutation CLEAN SWEEP 373→374 — independently
+  corroborates the arrival+move as classified). All named, all foreign
+  domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.000035 (sub-mm rounding class).
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified; pre-dates dress-168's fresh read) — zero STATE-OPEN rows,
+  zero OPEN `nx-dress-` rows (historical round-1/2 prose only); no
+  round-4/5 section (grep 0); SWEEP-PLAN dirty diff zero dress routing —
+  zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-169 — lawful HOLD (58th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
