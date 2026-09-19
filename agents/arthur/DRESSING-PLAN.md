@@ -1,6 +1,48 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-183 — lawful HOLD (72nd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 8cbfa323 (polish-305); interlane
+  md5 86b2936f pin-exact. Fresh census **386 = 385 + ONE arrival,
+  pre-tick ledger-matched, tuple-exact**: `nx-struct-tcube`
+  (−96.814764, 0.009262, 25.038000) yaw 1.3002702927357754 lib
+  13b939ea — struct-250 (1fada8eb), the committed carry of struct-249's
+  banked truncated cube, S-SW band sixth form; probe expectations built
+  from struct-250's VERBATIM ledger line, not commit prose (dress-172
+  law). ONE classified move: `nx-dress-stringlights` lib swap
+  ee40ab96→246af386 at tuple-identical pos/yaw (polish-305 wire
+  readability, 8cbfa323; live pin store/246af38663aa6981 exact tuple;
+  pose stability falsified in-probe) — polish domain (stringlights is
+  core dress, off-limits to this lane), classified not routed. ZERO
+  departures, ZERO dress-domain drift; dress domain 68 = 29 fleet-owned
+  (NE 6 / NW 9 / SE 7 / SW 7) + 16 fauna-owned + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-183.py` HOLD_VERIFY_PASS exit 0 first run,
+  browser UA, capture saved `/tmp/dress183-census.json`).
+- **Sibling commits since dress-182**: sweep-339 (4c9856ba, zero-mutation
+  CLEAN SWEEP 385==385 both epochs — pre-tcube), struct-250 (1fada8eb,
+  the tcube arrival above), polish-305 (8cbfa323, the stringlights swap
+  above). All named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — deltas exactly 0.0.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified; grep at source — zero STATE-OPEN rows, zero OPEN `nx-dress-`
+  rows, no round-4/5 section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-182 — lawful HOLD (71st post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
