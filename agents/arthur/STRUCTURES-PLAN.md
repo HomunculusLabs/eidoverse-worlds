@@ -18542,3 +18542,99 @@ frames, ignored — sha pins in this block are the durable record),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-247,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+
+## struct-248 (2026-09-19): R11-59 THE TRUNCATED TETRAHEDRON PLACED —
+## the struct-247 committed carry executed (E band fourth form az26.5 r102)
+
+248%3=0 placement slot with FULL bank (tret v2 accepted struct-247) ->
+the committed carry (struct-240/242/244/246 precedent). Gate ALL PASS
+real exit 0 tick-start at 515d3d71 (sweep-337; unpiped GATE_EXIT:0).
+Shard drained fresh (IMPROVE-PLAN pin 7fa8a224 unchanged, 0 OPEN
+nx-struct rows — same pin as struct-238..247). Ledger max re-derived
+struct-247 -> tag struct-248 (re-checked immediately before append).
+Native absent from the cron catalog all tick (tool_search fresh:
+terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..247; owed board unchanged: 26 +
+csaszar v3 + ssd v1 + tetrahelix v2 + rt v1 + co v1 + ico v2 + nodoid
+v3 + tico v2 + toct v1 + tret v2 now riding; placement tick owes no
+new judgment — the tret was judged struct-247).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+f21b1cd567f18566... == struct-247 v2 pin (mtime 07:21, byte-identical —
+no rebuild needed this tick; the banked build is the exact judged v2
+bytes incl. the finial stem). Probe 8/8 + decode 8/8 (v2 contract) were
+the struct-247 tick's own real exit 0 on these exact bytes. No
+interrupted 248 window existed (no struct248-*/next-place-struct248
+files pre-tick).
+
+SEAT (struct248-scan-tret, fresh 383-entity census): octant audit r66+
+places the E octant az0-45 as the under-served band (3 struct forms
+standing — ssd az9 r66 + tetrahelix az4 r76 + co az3.5 r96.5; + tret
+-> 4, soft cap 6, NO exceedance). The E approach lane's fat network
+bbox holds the inner corridor (r66-100 az4-9 unlawful), so the
+innermost LAWFUL constellation seat = az26.5 r102.0 (91.283305,
+45.512177): the r101 az27 candidate was rejected at gap 1.45 (0.05
+over law — no margin); one 0.5m step out buys gap 2.11. NN 39.94 to
+nx-struct-co (law 8). 8-gon-exact SAT worst 2.11 (law 1.4,
+nx-craft-hamlet-0015). Walk-clear 73.41. SELFTEST RED->GREEN PASS
+(struct-240 NaN law): exact-SAT fired at nx-craft-statuary-0026's own
+center reports -10.620 (guaranteed overlap refused; coverage counters
+exact 2 / radial 290 / disc 2 / exempt 4) — the exact-SAT path proven
+live before any candidate number was trusted.
+
+YAW LAW (procession convention, struct-217/219/224/228/232/234/236/
+238/240/242/244/246): local az alpha -> world az (alpha - yaw). Judged
+reading face local az90 at anti-travel az206.5 + 30deg east lean
+(struct-104 oblique band) -> yaw_deg = -120 - 26.5 = -146.5 ->
+213.50deg -> YAW = 3.726278 rad. The tret is triangle-down 3-fold
+about the vertical axis (probe T7: 120deg symmetry exact) — the yaw is
+exact mod 120deg and protects the judged read.
+
+TERRAIN (struct248-terrain-tret.ts, this tick): 17pt over the TRUE
+rotated 8-gon (center + 8 verts + 8 edge-mids), spread 16.0mm,
+PY = lowest = -0.024869 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=8 class): the 8-gon dais R4.70 ROT=0 (corners ON the axes,
+APOTHEM-FIRST per the struct-247 self-catch) is the footprint; solid
+max horizontal reach + rod 4.232 <= dais apothem 4.342 (probe T7 +
+decode D2) — the solid NEVER overhangs, so the 8-gon IS the true
+ground footprint (no overhang disclosure needed). Exact convex-polygon
+SAT (edge-normal axes of both polys, max-gap law) replaces the
+square-bbox proxy — struct-19 disc law class. Disc neighbors keep
+point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct248.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 383),
+upload store/f21b1cd567f18566.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [91.283305, -0.024869,
+45.512177] yaw 3.726277953007894 comp {} census 383->384; idempotent
+rerun ALREADY_SEATED 0 verbs. Ground circuit walk 7/7 CORE_ALL_PASS
+maxArrival 0.368m (two-way az26.5 arrival-line approach + reading-face
+vantage at 7m on the az236.5 face normal + full CW standoff circuit —
+no phantom collider; folly by presentation, the PANELLED solid means
+the walk stays outside the 4.70m dais). Walk standoff law: 9m not 8m —
+the tret's wider dais (R4.70) would pinch an 8m square circuit to
+0.96m at chord midpoints (below the 1.4 law); 9m puts the tightest
+chord midpoint at 1.66m. Walk stdout carries the known distant
+support-seam diagnostics class (temple/dress entities, foreign lanes,
+abstentions only).
+
+Bill eye-check pointer: on the E reach past the co — where the ico's
+open cage and the tico's panelled ball stand on the other diagonals,
+THE TRUNCATED TETRAHEDRON stands BALANCED ON ITS POINT: the tetrahedron
+with its four corners cut at a third, narrow-footed and wide-
+shouldered, on an octagonal dais. Four pale stone hexagons (the
+parent's own planes) and four dark iron triangles (the cuts), every
+corner exactly one triangle and two hexagons. The theorem standing
+under it: cut the corners at a third and exactly 23 of 27 parts
+remain — and after dark the four brass beads mark exactly the four
+faces that remain, lit: one on the finial at the crown, three in a
+ring at the waist; the cuts stay dark. Circle it and the three
+complete.
+
+Files: struct248-scan-tret.ts + struct248-terrain-tret.ts +
+struct248-walk-tret.ts + next-place-struct248.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-248, D+0 E+1). One upload, one verb. Zero pushes.
