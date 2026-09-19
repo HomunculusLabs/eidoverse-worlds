@@ -18294,3 +18294,97 @@ staged -f), reviews/struct245-toct/ (9 frames, ignored — sha pins in
 this block are the durable record), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-245, D+0 E+0). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+
+## struct-246 (2026-09-19): R11-58 THE TRUNCATED OCTAHEDRON PLACED —
+## the struct-245 committed carry executed (N-E band third form az348.5 r66)
+
+246%3=0 placement slot with FULL bank (toct v1 accepted struct-245) ->
+the committed carry (struct-238/240/242/244 precedent). Gate ALL PASS real
+exit 0 tick-start at fe3a9bb7 (polish-302; unpiped GATE_EXIT:0). Shard
+drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0 OPEN nx-struct
+rows — same pin as struct-238..245). Ledger max re-derived struct-245 ->
+tag struct-246 (re-checked immediately before append; siblings dress-178
++ fauna-38 landed mid-tick — normal life, placement ran against the fresh
+census). Native absent from the cron catalog all tick (tool_search fresh:
+terminal + zai-vision + repoprompt only — same disclosed cron-unpayable
+class as struct-169..245; owed board unchanged: 26 + csazzar v3 + ssd v1
++ tetrahelix v2 + rt v1 + co v1 + ico v2 + nodoid v3 + tico v2 + toct v1
+now riding; placement tick owes no new judgment).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+1bf092e04967a71f... == struct-245 pin (mtime 05:44, byte-identical —
+no rebuild needed this tick; the banked build is the exact judged bytes).
+Probe 8/8 + decode 8/8 were the struct-245 tick's own real exit 0 on
+these exact bytes.
+
+SEAT (struct246-scan-toct, fresh 382-entity census): octant audit r66+
+places the N-E octant az315-360 as the under-served band (2 struct forms
+standing — vesicawindow az357.5 r70.1 + rt az359.5 r87.5; + toct -> 3,
+soft cap 6, NO exceedance). Seat az348.5 r66.0 (64.675031, -13.158284):
+the innermost lawful seat with margin — composes with the vesicawindow
+11.47m out as a N-E pair (NN neighbor, law 8). NN 11.47 to nx-struct-
+vesicawindow. 14-gon-exact SAT worst 1.84 (law 1.4, nx-wild-forest-0031).
+Walk-clear 37.41.
+
+SELFTEST RED->GREEN (struct-240 NaN law, baked into the scan chassis):
+satWorst fired at nx-craft-statuary-0026's own center reports -9.673
+(guaranteed overlap refused; coverage counters exact 1 / radial 290 /
+disc 2 / exempt 4) — the exact-SAT path proven live before any
+candidate number was trusted.
+
+YAW LAW (procession convention, struct-217/219/224/228/232/234/236/
+238/240/242/244): local az alpha -> world az (alpha - yaw). Judged
+reading face local az90 at anti-travel az168.5 + 30deg east lean
+(struct-104 oblique band) -> yaw_deg = -120 - 348.5 = -468.5 ->
+251.50deg -> YAW = 4.389503 rad. The toct is hexagon-down 3-fold about
+the vertical axis (probe T7: 120deg symmetry exact) — the yaw is exact
+mod 120deg and protects the judged read.
+
+TERRAIN (struct246-terrain-toct.ts, this tick): 29pt over the TRUE
+rotated 14-gon (center + 14 verts + 14 edge-mids), spread 3.6mm,
+PY = lowest = -0.057767 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=14 class): the 14-gon dais R3.85 ROT=0 (corners ON the axes)
+is the footprint; solid max horizontal reach + rod 3.739 <= dais
+apothem 3.753 (probe T7 + decode D2) — the cell NEVER overhangs, so the
+14-gon IS the true ground footprint (no overhang disclosure needed).
+Exact convex-polygon SAT (edge-normal axes of both polys, max-gap law)
+replaces the square-bbox proxy — struct-19 disc law class. Disc
+neighbors keep point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct246.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 382), upload
+store/1bf092e04967a71f.glb (1 upload, shared budget), plain spawn 1 verb
+paced 1200ms, PLACED_VERIFIED pos [64.675031, -0.057767, -13.158284]
+yaw 4.389503 comp {} census 382->383; idempotent rerun ALREADY_SEATED 0
+verbs. Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+arrival-line approach on the az348.5 meridian + reading-face vantage at
+7m on the az198.5 face normal + full CW standoff circuit at 8m — no
+phantom collider; folly by presentation, the PANELLED solid means the
+walk stays outside the 3.85m dais). Walk stdout carries the known
+distant support-seam diagnostics class (dress/temple entities, foreign
+lanes, abstentions only).
+
+PLACER SELF-CATCH this tick: v1 of the placer's polyGap carried a
+mistyped bMin line (p * 1 * ay — NaN class) caught by re-read before the
+run and patched; the executed placer is the corrected one.
+
+Bill eye-check pointer: on the N-E reach past the beacon — where the
+ico's open cage and the tico's panelled ball stand on the other
+diagonals, THE TRUNCATED OCTAHEDRON is Kelvin's cell: eight stone
+hexagons and six iron squares, every corner exactly one square and two
+hexagons, no two squares ever sharing a wall. The theorem standing under
+it: of all the Archimedeans, this ONE tiles space by translation alone —
+copy it and it fills the universe with zero gaps (Kelvin 1887; beaten
+only by Weaire-Phelan's two-shape cheat, 0.3%). The six dark squares are
+the six doors to the six neighboring cells; after dark the six brass
+door beads read in two staggered triangles — three shoulders, three
+skirt — none pressed into the earth: the doors live at the waist, and
+the six complete only as you circle.
+
+Files: struct246-scan-toct.ts + struct246-terrain-toct.ts +
+struct246-walk-toct.ts + next-place-struct246.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-246,
+D+0 E+1). One upload, one verb. Zero pushes.
