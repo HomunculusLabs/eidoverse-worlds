@@ -20413,3 +20413,112 @@ hedron) and great icosahedron {3,5/2} remain the branch's unclaimed
 members; the snub cube/dodeca stay named for Bill's handedness call;
 fresh five-file grep to confirm the gap before building — or Bill's
 verdict routing.
+
+## struct-262 (2026-09-19): R11-70 THE GREAT STELLATED DODECAHEDRON PLACED —
+## the struct-261 committed carry executed (SW-W band fifth form az212.5 r80.0)
+
+262%3=2 non-refine slot with FULL bank (gsd v1 accepted struct-261) ->
+committed carry per struct-240..261 precedent. Gate ALL PASS real exit 0
+tick-start (unpiped, GATE_EXIT:0 at ff094976 epoch — sweep-351 HEAD).
+Shard drained fresh (IMPROVE-PLAN pin 7fa8a224 unchanged since
+struct-238, 0 OPEN nx-struct rows). Ledger max re-derived struct-261 ->
+tag struct-262 (numeric extraction, re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..261; placement tick owes no new
+judgment — the gsd was judged struct-261 ZAI 4/4+1+3/3+4/4; native
+re-judge rides the owed board as gsd v1).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+771b79082ded82c4a9b39bbfea030e8b4b2056fb1cdf574e044d6675453f1995 ==
+struct-261 v1 pin (byte-identical — no rebuild this tick; the banked
+build is the exact judged v1 bytes). Probe ALL PASS + decode 8/8 (v1
+contract) were the struct-261 tick's own real exit 0 on these exact
+bytes. No interrupted 262 window existed (no struct262-*/next-place-
+struct262 files pre-tick).
+
+SEAT (struct262-scan-gsd, fresh 397-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.320, guaranteed overlap refused; coverage exact 1 / radial
+300 / disc 2 / exempt 4): octant audit places SW-W az180-225 as the
+under-served band (4 forms standing — screwwell az180 r88, nodoid
+az180 r66, tdodec az196.5 r80, whisperhorn az224 r89; + gsd -> 5, soft
+cap 6, NO exceedance). The raw scan's innermost lawful seats (r66-79
+az187.5-214, gap 1.42-2.18) were REJECTED by the margin filter
+(gap >= 2.2, struct-248/254/256/258/260 real-margin law). Selected:
+az212.5 r80.0 (-67.471316, -42.983969) — innermost lawful
+margin+constellation seat, gap 2.25 vs nx-temple-seed-0013 (exact).
+NN 19.15 to nx-struct-whisperhorn (law 8; composed with whisperhorn
+@19.1m + tdodec @22.3m — the SW-W star-and-parents shelf; the tdodec
+is the gsd's hidden parent, its 20 vertices the star's own scaffold).
+20-gon-exact SAT worst 2.25 (law 1.4). Walk-clear 51.41.
+
+YAW LAW (procession convention, struct-217..261): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az32.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120
+- 212.5 = -332.5 -> 27.50deg -> YAW = 0.479966 rad. DISCLOSED: the
+gsd is a 3-FOLD seat (probe T8: grounded tip, neighbor ring at exact
+120deg azimuths, summit antipodal) and the oblique-lean band puts the
+yaw 27.5deg off the 120deg lattice — the exact-mod bonus does NOT
+apply; the star family reads its sails at any azimuth (SSD placed
+likewise under the same convention) and the judged framing is
+preserved.
+
+TERRAIN (struct262-terrain-gsd.ts, this tick): 41pt over the TRUE
+rotated 20-gon (center + 20 verts + 20 edge-mids), spread 5.9mm,
+PY = lowest = -0.010712 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=20 class): the 20-gon dais R3.40 CORNERS-ON-AXES (ROT=0
+class, decode D2: circumradius corners present, TRUE box +/-3.400) is
+the footprint; build envelope 6.80x6.70x6.80 == the dais itself —
+the solid NEVER overhangs, so the 20-gon IS the true ground
+footprint. Exact convex-polygon SAT (edge-normal axes of both polys,
+max-gap law) replaces the square-bbox proxy — struct-19/260 disc law
+class.
+
+PLACEMENT: next-place-struct262.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 397), NN
+floor 19.15 + exact-SAT worst 2.25 re-proven against the FRESH 397-set
+pre-verb [exact 3 radial 298 disc 2 exempt 4], upload
+store/771b79082ded82c4.glb (1 upload, shared budget), plain spawn
+1 verb paced 1200ms, PLACED_VERIFIED pos [-67.471316, -0.010712,
+-42.983969] yaw 0.4799655442984406 lib store/771b79082ded82c4.glb
+comp {} census 397->398; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+az212.5 arrival-line approach + reading-face vantage at 7m on the
+az62.5 face normal + full CW standoff circuit at 8m — no phantom
+collider; folly by presentation, the PANELLED solid star means the
+walk stays outside the 3.40m dais; walk standoff 8m applies directly,
+chord-mid clear 4.78m — the struct-261 disposition). Walk stdout
+carries the known distant support-seam diagnostics class (temple/dress
+entities, foreign lanes, abstentions only).
+
+Bill eye-check pointer: on the SW-W reach past the tdodec and the
+whisperhorn — where the truncated branch cut the dodecahedron's
+corners and edges, THE GREAT STELLATED DODECAHEDRON grows them
+instead: the same twenty vertices the hidden dodecahedron owns, every
+one pulled outward into a sharp spike, bound by twelve pentagram sails
+cut so deep the planes pass within a hand's breadth of the center.
+The sails interweave — pass through one another at thirty woven
+crossings, five per sail — which is the theorem the form carries: for
+all its spikes it is a topological sphere, genus zero. Nothing floats;
+the sharpest point rides the dais, and after dark twenty warm brass
+tips read as a constellation-crown, the grounded one half-proud in
+the dais top. It composes with its hidden parent (the tdodec, 22m)
+and the whisperhorn (19m) — the SW star shelf.
+
+Files: struct262-scan-gsd.ts + struct262-terrain-gsd.ts +
+struct262-walk-gsd.ts + next-place-struct262.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-262, D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-263 build+judge tick (R11-71, empty bank —
+re-derive the form from the ledger grep: great dodecahedron {5,5/2}
+(the third Kepler-Poinsot star, dual of the great icosahedron) and
+great icosahedron {3,5/2} remain the branch's unclaimed members; the
+snub cube/dodeca stay named for Bill's handedness call; rhombic
+solids / non-Archimedean families per struct-253's grep; fresh
+five-file grep to confirm the gap before building) or Bill's verdict
+routing.
+
