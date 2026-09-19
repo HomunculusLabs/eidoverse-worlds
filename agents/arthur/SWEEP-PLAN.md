@@ -16760,3 +16760,83 @@ longhouse/garden-cottage @344, forge/potter @343, inn/tower-house @345
 the stalest standing pair; walk tools interior-walk-inn.ts +
 interior-walk-tower-house.ts, ls-verified present on disk — 1786B Aug 30
 08:11 + 1523B Aug 30 09:53).
+
+sweep-347: CLEAN SWEEP, one-arrival + one-classified-flip epoch-corrected
+tick (116th consecutive quiet-or-classified). Tick-start HEAD 83c013ba
+(dress-190 hold); fauna-47 (9aedb1e2, proposal tick, zero world mutations
+per its own message) interleaved PRE-append and was absorbed — standing
+gate re-run ALL PASS real exit 0 at 9aedb1e2. Census epoch A 392->393 vs
+the committed sweep-346 baseline (sha16 92b9aa04ae815953): exactly ONE
+domain-valid arrival — nx-dress-dmou-001 @ (-51.5, 0.03391, 64.25) yaw
+0.744 lib c21430641ffadf67, 4x motion:dmou{,_ear,_head,_tail} = fauna-46
+dormouse @ 25c44549 PRE-tick, tuple matches its committed ledger
+line-for-line (independently corroborated by sibling dress-189/190's
+same-tick census 392->393); 0 departures, 0 drift on 392 shared ids.
+Epoch B caught polish-310 (belltower rope thickness) landing mid-tick:
+exactly ONE classified drift field-set — nx-town-belltower lib
+3e4f470b38d94bb7->b0b1e2766e145c02 at identical tuple (6.5,0,6.5) yaw
+-2.3562, bbox BYTE-IDENTICAL (3.4x7.9x3.4, rope 0.018->0.030 edit),
+ladder comp preserved, PLACED_VERIFIED + idempotent per its own committed
+entry — domain-valid, not drift. Belltower r9.2 sits INSIDE the core walk
+band, so per the sweep-52/346 precedent ALL affected evidence was re-taken
+fresh before verdicts: SAT re-run at epoch B, core re-walked 64/64
+ALL_PASS @ 0.380 over the new bytes, battery re-run 28/28 (belltower lib
+re-pin 3e4f470b->b0b1e276, sweep-344 re-pin class), gate re-run at
+9aedb1e2. Epoch C 20s-paced re-read raw sha16 byte-identical
+(7f6a63aa0deb98f6) — world stable at 393. OVERLAP: SAT 355 bbox non-light
+/ 248 exempt-classified / 0 coverage holes, exit 3 on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 303rd sweep since routing, NOT
+new, no escalation due (the law keys on severity-1); both changed
+entities were included in the live SAT set (dmou micro-bbox 0.118x0.066,
+pole-free; belltower bbox byte-identical) — no new contacts. WALKS:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs
+run individually — core 64/64 ALL_PASS maxArrival 0.380
+(next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/0.31)
+— dists identical to the sweep-319..346 canon; the dmou arrival sits
+~14m off the NW endpoint leg, which passed fresh 5/5 over the
+live set including it. Tier-2 325th cycle per the committed sweep-346
+pointer: inn 6/6 ALL_PASS (interior-walk-inn.ts, real exit 0, dists
+0.32/0.32/0.34/0.35/0.36/0.29) + tower-house 6/6 ALL_PASS
+(interior-walk-tower-house.ts, real exit 0, dists
+0.25/0.25/0.26/0.38/0.37/0.31), both tools ls-verified present on disk
+BEFORE this prose (1786B Aug 30 08:11 + 1523B Aug 30 09:53, matching the
+committed pointer exactly). INTEGRITY: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (301st consecutive clean); sweep89-battery 28/28 PASS
+first on epoch-A bytes (after TWO lawful RED->GREEN pin bumps, both with
+census-verified added/removed sets: comp-bearing 50->51 for the fauna-46
+dmou arrival, sweep-301..345 fauna precedent chain; belltower lib
+re-pin for polish-310, sweep-344 re-pin class) then 28/28 re-run GREEN
+on epoch-C bytes; carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified (polish-299 standing); comp-bearing 51; lights 38; thing
+355. Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f
+read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged (zero
+open queue rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+via loop/plan reload. Baseline lawfully rewritten like-for-like
+(copyfile convention, sweep-321..346 precedent; /tmp/s347/snapshot-
+rewrite.py): pre-write assertion verified committed baseline ==
+92b9aa04ae815953 (392 ents), expected diff set exactly [arrival
+nx-dress-dmou-001, belltower lib], counts 392->393, zero drift on 392
+shared ids; final 393 entities / sha16 7f6a63aa0deb98f6; post-rewrite
+drift vs live epoch C ZERO. Probe self-catches pre-verdict, disclosed:
+(a) walk-output parsers keyed wrong result keys (dist vs distance,
+legs-as-list vs int) before reading the actual schema — sweep-48/339/346
+class; (b) battery first ran without its census-file argument (IndexError,
+no checks executed — re-run argumented before any verdict); (c) the
+comp-bearing pin-bump patch's old_string was a truncated match and wrote
+a duplicated sweep-343 fragment with a corrupt junction — caught by
+re-reading the written region (adjacent-token-bleed class, sweep-53/55
+family), repaired via second patch, uniqueness grep + parse + GREEN
+re-run all verified before commit. Foreign dirt in tree (windmill
+overhaul scratch, engine files, fleet shells, fauna tools, review dirs —
+fauna-47's proposal row among them) is sibling work-in-flight, untouched
+per the ownership law. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-348): forge + potter (326th cycle — LRU chain
+re-derived from committed pointers this tick: inn/tower-house @347
+walked fresh, hall/bunkhouse @346, longhouse/garden-cottage @344,
+forge/potter @343 the stalest standing pair; walk tools
+interior-walk-forge.ts + interior-walk-potter.ts, ls-verified present on
+disk).
