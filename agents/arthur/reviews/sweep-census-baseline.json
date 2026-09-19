@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 370,
+  "count": 371,
   "entities": [
     {
       "id": "beb4c791",
@@ -2299,7 +2299,7 @@
       ],
       "yaw": 2.35619,
       "scale": 1,
-      "lib": "store/8cd33f4423d8f7e7.glb",
+      "lib": "store/2d61deabf0c2560d.glb",
       "bbox": {
         "min": [
           -3.55,
@@ -5897,6 +5897,106 @@
           "period": 2.6,
           "phase": 1.5,
           "t0": 1789775768893
+        }
+      }
+    },
+    {
+      "id": "nx-dress-peahen-001",
+      "kind": "thing",
+      "pos": [
+        -45.1,
+        0.03286,
+        67.5
+      ],
+      "yaw": 0.196,
+      "scale": 1,
+      "lib": "store/a1f5190fd50a9775.glb",
+      "bbox": {
+        "min": [
+          -0.119,
+          -0.002,
+          -0.347
+        ],
+        "max": [
+          0.119,
+          0.44,
+          0.391
+        ],
+        "size": [
+          0.239,
+          0.442,
+          0.738
+        ],
+        "center": [
+          0,
+          0.219,
+          0.022
+        ]
+      },
+      "compKeys": [
+        "motion:peahen",
+        "motion:peahen_crest",
+        "motion:peahen_head",
+        "motion:peahen_tail"
+      ],
+      "comp": {
+        "motion:peahen": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.1,
+          "phase": 0.8,
+          "t0": 1789780793420
+        },
+        "motion:peahen_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.24,
+          "period": 2.9,
+          "phase": 0.3,
+          "t0": 1789780793420
+        },
+        "motion:peahen_crest": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.1,
+          "period": 3.2,
+          "phase": 1.4,
+          "t0": 1789780793420
+        },
+        "motion:peahen_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.16,
+          "period": 2.4,
+          "phase": 0.9,
+          "t0": 1789780793420
         }
       }
     },
