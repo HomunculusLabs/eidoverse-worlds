@@ -1135,6 +1135,52 @@ next wake once the gateway answers.
   second-pass warm rim (judge-named at polish-290 close, still unjudged);
   or re-survey plaza-core on fresh evidence.
 
+### polish-295 — carousel bone-coat night identity (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-294 scenerysep build (live was 8cd33f44).
+  Queue-head candidate from polish-294's close (bone/rose night-hue-loss),
+  re-judged fresh this tick on exact live bytes.
+- Defect (judge, night 18m): the BONE horse (horse_2,
+  prototype_cream_paint) read as the DARKEST object in the frame — darker
+  than the night sky — an inversion of its role as brightest day coat;
+  bone+rose compressed into one muddy black mass. Root cause: emissive
+  [0,0,0] — polish-287's control was the remaining hole.
+- Change (ONE intervention, new production step `bonecoat.ts`, scenerysep
+  chassis): faint warm-neutral emissive [0.28,0.25,0.21] on
+  prototype_cream_paint ONLY. Lum 0→0.254 — brightest coat (1.46× gold),
+  1.19× above scenery panels with a hue split (R/B 1.33 vs 1.87) so no
+  polish-294 warm-on-warm "hole" recurrence; below ceiling .345, crown
+  .59, lanterns .80. Scope gate asserts single-primitive usage
+  (horse_2_0[0], 8021 verts). No new lights/geometry/nodes; other three
+  coats byte-untouched.
+- Candidate `2d61deabf0c2560d…` A/B byte-identical ×2; NaN scan clean;
+  15/15 views clip-clean; night changed-band avgRGB 47→138 (~3×);
+  day same-band 155→197, judge-verified no washout.
+- Judge verdicts (ZAI fallback, no native vision this cron session, native
+  re-judge owed — same class as polish-285..294): NIGHT PASS — bone reads
+  as pale-coat figure (legs/bridle/saddle legible), painted-wood not
+  glow-orb, all four horses distinct for the first time, lanterns still
+  brightest, clean panel separation, zero new defects. DAY PASS —
+  shading/musculature intact, palette harmony, no clipping.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED (1 upload +
+  8 verbs), 7-key comp bag replayed verbatim, idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/2d61deabf0c2560d.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact. Served sha == upload sha
+  (identity); served DRACO decode keeps emissive [0.28,0.25,0.21] on
+  horse_2_0[0] only.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-295-carousel-nightcoats/`
+  (before/ = live 8cd33f44 build full 15-view rig + baseline GLB;
+  after/ = bone-coat candidate; deploy dry/apply/idem reports + verified
+  served bytes; polish295 probes: mats, pixdiff).
+- Next: judge-remaining candidates — (a) NAVY coat night margin (judge
+  note: now the thinnest readability margin, survives on hue+shape alone
+  — a whisper-raise of horse_4_cream_paint [0.07,0.12,0.17] is the
+  obvious next edit, but judge fresh first), (b) rose night occlusion
+  (geometry-limited: fragment-readable; judge suggested angular offset of
+  the rose horse on its pole would help more than material — motif
+  geometry, artwalk coordination), or (c) re-survey plaza-core on fresh
+  evidence.
+
 ### polish-293 — carousel structural night value (ACCEPTED, LIVE)
 
 - Subject: `nx-carousel` at the polish-292 scenery build (live was
