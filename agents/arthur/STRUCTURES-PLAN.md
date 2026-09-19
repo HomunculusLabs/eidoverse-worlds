@@ -17589,3 +17589,102 @@ frames, ignored — sha pins in this block are the durable record),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-239,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+
+
+## struct-240 (2026-09-19): R11-53 ICO PLACED — the struct-239 committed
+## carry executed (S-SW constellation fourth station az150 r75)
+
+240%3=0 refine slot with FULL bank (ico v2 accepted struct-239) -> the
+committed carry: placement (struct-238 precedent). Gate ALL PASS real
+exit 0 tick-start at 1c2e885c (polish-298). Shard drained fresh
+(IMPROVE-PLAN md5 7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-239 -> tag struct-240 (re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..239; owed board stays 26 + csaszar
+v3 + ssd v1 + tetrahelix v2 + rt v1 + co v1, plus ico v2 now riding).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2 from
+repo ROOT reproduces the pinned sha exactly (356aafa90abf5db4...
+95e712e, exits 0/0, probe 10/10 both runs, envelope line == probe
+contract 5.80x6.39x5.80).
+
+SEAT (struct240-scan + struct240-seatprobe, fresh 375-entity census):
+octant audit r66+ places the S-SW octant az135-180 as the under-served
+band (2 struct forms at audit: csaszar az163 r66 + millrace az175 r77;
+screwwell az180 r88 edges the band line -> 3 standing). Band audit: +ico
+-> 4, soft cap 6, NO exceedance. Seat az150.0 r75.0 (-64.951905, 37.5):
+composes the S-SW constellation (csaszar az163 r66 -> millrace az175
+r77 -> screwwell az180 r88; ico joins at az150 r75.0, dCS 18.3 — two
+rare polyhedra sharing one shelf walk, the csaszar's inward-side
+shelf). NN 18.30 to nx-struct-csaszar (law 8). Icosagon-exact SAT 2.09
+vs nx-cultivation-orchard-0020 (law 1.4). Walk-clear 46.41.
+
+PROBE NaN SELF-CATCH (durable lesson, this tick): the first seatprobe
+draft carried a one-character typo in polyGap's B-projection
+(p[0]*ax + p*0 + p[1]*ay — array*0 = NaN), poisoning bMin on every
+axis: Math.max(...NaN) = NaN, and NaN < worst is always false, so every
+EXACT-SAT evaluation silently vanished and the probe reported
+conservative radial floors as "worst gaps". First seat az150 r76.5 was
+therefore chosen on false numbers — and the PLACER's own faithful gate
+(struct-238 chassis, clean polyGap) REFUSED it at the live exact gap
+0.64 vs nx-cultivation-orchard-0020 (brute-force edge-sampling
+corroborated 0.643, no containment either side). Zero verbs landed
+(fail-closed held). Fix + RED->GREEN proof: after repairing the typo
+the probe re-reads the SAME seat as REJ 0.64 (orchard-0020) — the fixed
+probe now agrees with the gate. Seat moved inward to the truthful GOOD
+window (az150 r75.0-75.5). LAW: any new probe chassis must be RED->
+GREEN'd against a known-refused seat before its numbers select
+anything — a verifier whose exact path can silently NaN degrades to
+its conservative floor and reads plausible while lying (kin to pitfall
+12, vacuous verifier coverage). Evidence: struct240-debug-orchard.ts
+output in this tick's terminal record.
+
+YAW LAW (procession convention, struct-217/219/224/228/232/234/236/
+238): local az alpha -> world az (alpha - yaw). Judged reading face
+local az90 at anti-travel az330 + 30deg east lean (struct-104 oblique
+band) -> yaw_deg = -120 - 150 = -270 -> 90.00deg -> YAW = 1.570796 rad
+(exact pi/2). The ico is 72deg-symmetric about Y (5-fold tip seat) —
+the yaw is exact mod 72deg and protects the judged read.
+
+TERRAIN (struct240-terrain-ico.ts, this tick): 41pt over the TRUE
+rotated icosagon (center + 20 verts + 20 edge-mids), spread 12.0mm,
+PY = lowest = 0.002952 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=20 class): the icosagonal dais R2.90 ROT=0 (corners ON the
+axes) is the footprint; cage max horizontal reach 2.683 + bead 0.095 =
+2.778 <= dais apothem 2.864 (probe T8 + decode D2/D7) — the cage NEVER
+overhangs, so the icosagon IS the true ground footprint (no overhang
+disclosure needed). Exact convex-polygon SAT (edge-normal axes of both
+polys, max-gap law) replaces the square-bbox proxy — struct-19 disc
+law class. Disc neighbors keep point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct240.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 375),
+upload store/356aafa90abf5db4.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [-64.951905, 0.002952,
+37.500000] yaw 1.570796 comp {} census 375->376; idempotent rerun
+ALREADY_SEATED 0 verbs. Ground circuit walk 6/6 CORE_ALL_PASS
+maxArrival 0.31m (two-way village approach on the az150 arrival line +
+reading-face vantage rim at 7m on the az330 face normal + full CW
+standoff circuit at 6m — no phantom collider; folly by presentation,
+the open cage with its golden rectangles inside is the sculpture).
+
+Bill eye-check pointer: on the far S-SW walk past the theater — the
+shelf now carries two rare polyhedra: the csaszar's non-orientable
+seven-colored torus, and beside it THE ICOSAHEDRON, the dodecahedron's
+dual, Plato's water rendered OPEN — a cage of thirty iron rods you see
+straight through, its twenty triangular faces left to the eye, tip down
+on a twenty-sided dais. Inside, the secret: the twelve corners are
+exactly three golden rectangles, standing in each other perpendicular,
+interlocked and never touching — the golden ratio hiding inside
+Plato's water. After dark: twelve quiet lights, one at every corner —
+the twelve faces of the dodecahedron across the village, lit in answer.
+
+Files: struct240-scan-ico.ts + struct240-seatprobe-ico.ts (NaN-fixed)
++ struct240-terrain-ico.ts + struct240-walk-ico.ts +
+struct240-debug-orchard.ts + next-place-struct240.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-240, D+0 E+1). One upload, one verb. Zero pushes.
