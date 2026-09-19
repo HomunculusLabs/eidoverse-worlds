@@ -19888,3 +19888,106 @@ cube the last named-unclaimed Archimedean, a Bill handedness call;
 truncated icosidodecahedron / great rhombicosidodecahedron the natural
 tenth per the trcubo precedent; rhombic solids / non-Archimedean
 families per struct-253's grep) or Bill's verdict routing.
+
+## struct-258 (2026-09-19): R11-66 THE RHOMBICOSIDODECAHEDRON PLACED —
+## the struct-257 committed carry executed (E band fifth form az12.5 r105.5)
+
+258%3=2 non-refine slot with FULL bank (rico v1 accepted struct-257) ->
+committed carry per struct-240..257 precedent. Gate ALL PASS real exit 0
+tick-start (GATE_EXIT:0 at 17540613 epoch — sweep-347 HEAD). Shard drained
+fresh (IMPROVE-PLAN pin 7fa8a224 unchanged since struct-238, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-257 -> tag struct-258
+(numeric extraction, re-checked immediately before append). Native absent
+from the cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as struct-169..257;
+placement tick owes no new judgment — the rico was judged struct-257 ZAI
+4/4+3/3+3/3; native re-judge rides the owed board as rico v1).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+eb407abd9828427c10b2577af559dbb3be56eaf55a7dd54ede2e1fece0d053d9 ==
+struct-257 v1 pin (byte-identical — no rebuild this tick; the banked
+build is the exact judged v1 bytes). Probe 9/9 + decode 8/8 + RED
+controls were the struct-257 tick's own real exit 0 on these exact
+bytes. No interrupted 258 window existed (no struct258-*/next-place-
+struct258 files pre-tick).
+
+SEAT (struct258-scan-rico, fresh 393-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.515, guaranteed overlap refused; coverage exact 1 / radial
+297 / disc 2 / exempt 4): octant audit places the E octant az0-45 as
+the under-served band (4 forms standing — ssd az9 r66, tetrahelix az4
+r76, co az3.5 r96.5, tret az26.5 r102; + rico -> 5, soft cap 6, NO
+exceedance; 4-way tie among octants 0/3/4/5/6/7 broken toward the E
+band). The raw scan's innermost constellation seats (r87-88 az34) sat
+at gap 1.47-1.57 — the struct-248 no-margin class — REJECTED by the
+margin filter (gap >= 2.2, struct-254 real-margin law). Selected:
+az12.5 r105.5 (102.999, 22.834) — innermost lawful margin+constellation
+seat, gap 2.44 vs nx-craft-cloister-0008 (real margin ~1.04). NN 18.21
+to nx-struct-co (law 8; the branch's FIRST member — cuboctahedron
+struct-237 — composing with its ninth at conversational distance;
+composed with ssd ~40.3m + tetrahelix ~30.5m + tret ~27.6m). 62-gon-
+exact SAT worst 2.44 (law 1.4). Walk-clear 76.91.
+
+YAW LAW (procession convention, struct-217..257): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az192.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120
+- 12.5 = -132.5 -> 227.50deg -> YAW = 3.970624 rad. DISCLOSED: the
+rico is PENTAGON-DOWN 5-fold (72deg lattice) and the oblique-lean band
+puts the yaw 11.5deg off that lattice — the trcubo-class exact-mod
+bonus does NOT apply; the 5-fold family reads its parent-pentagon faces
+at any azimuth (tico/tdodec placed likewise under the same convention)
+and the judged framing is preserved.
+
+TERRAIN (struct258-terrain-rico.ts, this tick): 125pt over the TRUE
+rotated 62-gon (center + 62 verts + 62 edge-mids), spread 15.8mm, PY =
+lowest = -0.042521 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=62 class): the 62-gon dais R3.60 APOTHEM-FIRST (PLINTH_N 62,
+corners ON the axes per struct-247 law) is the footprint; build
+envelope 7.20x8.07x7.19 == the dais itself (decode D2 + envelope-law
+green in-build) — the solid NEVER overhangs, so the 62-gon IS the true
+ground footprint. Exact convex-polygon SAT (edge-normal axes of both
+polys, max-gap law) replaces the square-bbox proxy — struct-19 disc
+law class.
+
+PLACEMENT: next-place-struct258.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 393), NN
+floor 18.21 + exact-SAT worst 2.44 re-proven against the FRESH 393-set
+pre-verb, upload store/eb407abd9828427c.glb (1 upload, shared budget),
+plain spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [102.999229,
+-0.042521, 22.834379] yaw 3.9706240482870996 lib
+store/eb407abd9828427c.glb comp {} census 393->394; idempotent rerun
+ALREADY_SEATED 0 verbs. Ground circuit walk 7/7 CORE_ALL_PASS
+maxArrival 0.368m (two-way az12.5 arrival-line approach + reading-face
+vantage at 7m on the az222.5 face normal + full CW standoff circuit at
+8m — no phantom collider; folly by presentation, the PANELLED solid
+means the walk stays outside the 3.60m dais; walk standoff 8m applies
+directly, chord-mid clear 4.41m — the struct-257 disposition). Walk
+stdout carries the known distant support-seam diagnostics class
+(temple/dress entities, foreign lanes, abstentions only).
+
+Bill eye-check pointer: on the E reach past the cuboctahedron — where
+the truncations CUT, THE RHOMBICOSIDODECAHEDRON grows the duals and
+finds them sharing one child: the dodecahedron's twelve pentagons and
+the icosahedron's twenty triangles, both pulled outward whole, bound by
+thirty squares that belong to each — the same belt, the same 62 faces,
+each parent reading the sculpture as its own element census, faces and
+vertices swapped. Nothing was cut; both stand whole inside (the dodeca's
+corners a full metre clear). After dark, twelve brass beads mark the
+dodeca's twelve faces, lit — one on the finial at the crown, ten ringing
+the waist in two five-pointed bands, and the twelfth given to the earth
+beneath the flat foot. The squares and the icosa's dark triangles stay
+unlit.
+
+Files: struct258-scan-rico.ts + struct258-terrain-rico.ts +
+struct258-walk-rico.ts + next-place-struct258.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-258,
+D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-259 build+judge tick (R11-67, empty bank —
+re-derive the form from the ledger grep: truncated icosidodecahedron /
+great rhombicosidodecahedron the natural tenth per the trcubo precedent;
+snub cube the last named-unclaimed Archimedean, a Bill handedness call;
+rhombic solids / non-Archimedean families per struct-253's grep; fresh
+five-file grep to confirm the gap before building) or Bill's verdict
+routing.
