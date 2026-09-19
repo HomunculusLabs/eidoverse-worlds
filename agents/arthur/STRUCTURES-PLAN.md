@@ -17688,3 +17688,155 @@ Files: struct240-scan-ico.ts + struct240-seatprobe-ico.ts (NaN-fixed)
 struct240-debug-orchard.ts + next-place-struct240.ts (all NEW,
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-240, D+0 E+1). One upload, one verb. Zero pushes.
+
+
+## struct-241 (2026-09-19): R11-54 THE NODOID — BUILD+JUDGE TICK,
+## v3 ACCEPTED BANKED NOT PLACED
+
+241%3=0 refine slot with EMPTY bank (ico placed struct-240) -> build+judge
+tick per the struct-229/233/235/237/239 precedent (refine pool empty of
+payable items 40+ ticks). Gate ALL PASS real exit 0 tick-start at a427cc3d
+(dress-172; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5
+7fa8a224 unchanged, 0 OPEN nx-struct rows — same pin as struct-238..240).
+Ledger max re-derived struct-240 -> tag struct-241 (re-checked immediately
+before append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..240; owed board stays 26 + csaszar v3
++ ssd v1 + tetrahelix v2 + rt v1 + co v1 + ico v2, plus nodoid v3 now
+riding).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): nodoid 0/0/0 — clean gap. Family audit: Delaunay 1841's
+complete list of CMC surfaces of revolution is sphere/cylinder (e=0),
+unduloid (0<e<1 — the Stoup stands, R11-4), catenoid (e=1 — struct-102
+stands), NODOID (e>1 — ABSENT). The family closes at its most extreme
+member, the hyperbola's roulette. Kin falsification: not a bead chain at
+neutral spacing (unduloid), not minimal (H != 0), not a link (borromean),
+not ruled (helicoid/screwwell). Instinctive alternates barred at source:
+helicoid BUILT (struct-78 screwwell), klein BARRED (4D-descendant rule,
+struct-111/142), scherk BARRED (hypar saddle-register competition,
+struct-102). SELECTION: the nodoid.
+
+ECCENTRICITY PINNED BY MEASUREMENT (e-sweep, terminal record):
+  e:     1.50  1.75  2.00  2.25 | 2.50  2.75  3.00  3.50
+  D/P:   .394  .564  .731  .895 | 1.058 1.221 1.383 1.705
+  cross: 0     0     0     0    | 2 circles/period from e=2.5 up
+e=2.5 is the THRESHOLD member — the least eccentric nodoid whose meridian
+truly passes through itself; crossing circles at r* = 2.57/2.03 unit
+(0.734/0.581 of r+): clean mid-flank piercing (at e=3+ one circle drifts
+toward a near-tangent graze; below e=2.5 no piercing at all).
+
+CONCEPT: THE BEADS THAT PASS THROUGH EACH OTHER. The unduloid Stoup is a
+chain of beads that never touch; its hyperbolic sibling — same CMC ODE,
+first-integral constant c = -a(e^2-1)/2 < 0 — does the impossible thing:
+at each neck the meridian's tangent REVERSES (cos(th) = -1 forced at
+r = a(e-1)), the profile folds back THROUGH ITSELF, and every bead pierces
+its two neighbors. Vertical column, 11 beads, 2.64m of brass and iron,
+crown bead swallowing the open top ring; night: one warm point at the
+crown. Presentation kin to the Stoup but turned UP and threaded.
+
+MATH (struct241-probe-nodoid.ts, tracked; measurement at MODULE level so
+mk/decode import true constants): RK4 integration of the meridian ODE from
+a bulge; Noether first integral r cos(th) - H r^2 = c with H = 1/(2a);
+nodoid c = -a(e^2-1)/2, r in [a(e-1), a(1+e)]. Tests: T1 UNDULOID CONTROL
+e=0.55 — period == Ramanujan perimeter (the struct157-verified truth)
+0.0000%, bulge/neck laws exact — validates the whole machinery; T2 first
+integral worst 1.8e-12; T3 geometric CMC via circumcircle curvature
+(independent of ODE state) worst 0.0022% nodoid + 0.0078% control; T4
+turning law (bulges th=0 mod 2pi at r+, reversals th=+-pi at r- with
+cos = -1 — THE TANGENT REVERSES); T5 period law (r(s+T) overlay 2.4e-6
+within RK4 drift bound); T6 overhang D/P = 1.058 > 1 (the sweep
+threshold); T7 self-intersection — exactly 2 crossing clusters per
+adjacent period pair, both in (r-, r+): THE SURFACE PASSES THROUGH
+ITSELF; T8 reach laws exact; T9 world contract (k = 0.72/3.5; P_w
+0.2640m; 10 periods = 11 beads, brass band 2.640m in [2.5,3.0]; dais
+1.14/0.92 r; bottom ring embed; crown bead covers the top ring; envelope
+2.28 x 3.53 x 2.28). RED (--red, 1% incommensurate-sine wobble): T2/T3/T5
+FAIL exit 1. Probe self-catches this tick (all verifier bugs, fixed
+RED->GREEN): T4 reversal-theta double-pi subtraction; T7 law assumed
+crossings above b (measured: one cluster sits BELOW b — honest law is
+(r-, r+) exactly-2-clusters); T5 overlay bound too tight for RK4 ds=2e-3
+drift (2e-5 honest); "ALL PASS" print originally outside the main guard
+(vacuous-print class, pitfall 12 kin); e=1.5 draft contract falsified by
+the sweep BEFORE any law was written around it.
+
+BUILD ARC v1 -> v3 (every rejection corrected in source, zero uploads):
+- v1 (49ffd912): single brass lane, bottom ring embedded. Decode 8/8
+  PASS incl fold law (crossing coords in bytes 9/9 periods). Judged:
+  gameplay 4/4 PASS; closeface 2/4 — the concept's one idea INVISIBLE:
+  the piercing reads as pinched necks between separate beads (an opaque
+  same-material surface of revolution hides its own interior crossings —
+  each crossing circle is TANGENT to the silhouette exactly at the
+  crossing y, so the eye sees contact, not passage), and the base read
+  as a butt joint. struct-239 v1->v2 class.
+- v2 (183d28af): stroke-split materialization — advance strokes (beads)
+  brass, retreat strokes (loops) iron, bottom bead equator flush at the
+  dais rim. Judged gameplay: piercing STILL absent ("shadow grooves").
+  GEOMETRIC AUDIT BEFORE ANY FURTHER ITERATION (the falsification that
+  mattered): classified both crossing circles by stroke — r2.57 is
+  ADVANCE x ADVANCE (bead through bead), r2.03 is RETREAT x RETREAT
+  (loop through loop). BOTH crossings are WITHIN-STROKE-CLASS: a
+  stroke-class material split can NEVER own a crossing. v2 falsified at
+  the geometry level, not the legibility level.
+- v3 (8c9ebff11d9d95af9cfe9c9f09efc31fbf29b0e2e9aaf17fd3eea93556568ce9,
+  x2 deterministic MTIME-VERIFIED, 2.0MB): PERIOD-PARITY split — each
+  bead one period, cut at its neck-ring boundaries (s = s0 + (k+1/2)T),
+  even beads bright brass (6), odd beads dark iron (5); every crossing a
+  brass/iron material boundary at the bead flank; the column reads as
+  alternating beads threaded on one neck-line. Per-bead lathes stride 40
+  (8mm world, chord error 0.045mm; full-trace draft hit 97MB — size law
+  honored). Envelope 2.28x3.53x2.28 == probe contract; 4 nodes (stone +
+  brass + iron + glow KEEP glow_nd_1).
+
+DECODE v3 (struct241-decode-nodoid.ts, tracked, independent RK4 replica
++ node-matrix walk): 8/8 ALL PASS real exit 0 — D2 both lanes on the
+folded meridian worst 0.00mm (22834 brass + 19600 iron verts); D3
+crossing circles in the bytes 9/9 periods; D4 two-tier dais rim law; D5
+crown bead emissive sole-night; D6 seat laws (brass embeds to the ring
+plane inside the upper tier; iron's first seam at its neck ring);
+D7 envelope drift 0.00mm; D8 texMats 3/3. RED control (ico bytes):
+census FAIL exit 1, clean stop. Decode self-catch: D4 draft law demanded
+rim-only radii on capped cylinders — impossible by construction (cap
+fans); honest law = inside-tier + rim-ring-present + y-band.
+
+JUDGMENT v3 (ZAI FALLBACK — native absent from the cron catalog all
+tick, tool_search fresh; flap law disclosed; native re-judge owed riding
+the board): IN-FAMILY CONTROL CALIBRATION FIRST (dress-80 law) — the
+standing unduloid's banked v2 gameplay frame judged 4/4 PASS, judge
+reads the family discriminatingly (named the drip bead's intent
+unprompted). v3 GAMEPLAY 18m 4/4 PASS (identity: alternating threaded
+column reads; PIERCING: gold flared flanks cut into dark iron —
+interleaved, not stacked; grounding; defects clean). CLOSEFACE 4/4 PASS
+(gold shoulder sinking into iron flank; seams clean, no torn faces or
+z-fighting; stone visibly cuts the bottom bead — intersection curve, no
+butt joint; crown single warm bead). NIGHT 3/3 PASS (sole tight crown
+point, zero bloom, deliberate marker read). Judge cosmetic notes
+recorded not executed (bead count not certifiable at 18m — decode
+proves 11; ambient-lift suggestion declined — the sole-emitter night
+contract is the law).
+
+DISPOSITION: v3 ACCEPTED BANKED NOT PLACED. Placement = struct-242
+committed carry: fresh census scan (under-served band/district
+selection, 8m NN + per-district soft-cap audit), 48-gon-exact polygon
+SAT (struct-19 disc law class — never square-bbox; dais R1.14 is the
+footprint, brass never overhangs it), oblique-yaw law (struct-104 band),
+terrain preflight over the TRUE rotated polygon, hash-gated plain spawn
+nx-struct-nodoid, comp {}. Folly class — ground circuit walk at
+placement, no door.
+
+Bill eye-check pointer (after placement): the CMC family's last member —
+where the unduloid Stoup is a chain of beads that never touch, THE
+NODOID is the chain that cannot help it: at every neck the curve turns
+fully back on itself and each bead passes through its two neighbors,
+bright brass and dark iron alternating so the passage is visible — the
+gold shoulder sinking into the dark flank, again and again up the
+column. At the base, stone cuts the first bead like water holding it;
+at the crown, one warm point after dark.
+
+Files: struct241-probe-nodoid.ts + struct241-decode-nodoid.ts +
+struct241-render-nodoid.ts (all NEW, tracked), assets/mkv3-nodoid.ts
+(NEW, staged -f), reviews/struct241-nodoid{,-v2,-v3}/ (27 frames,
+ignored — sha pins in this block are the durable record),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-241,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
