@@ -1,6 +1,47 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-166 — lawful HOLD (55th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source**: prompt again carried the
+  dress-77 SE fungus-log "placement pending" claim — resolved FALSE since
+  dress-152 (dress-78 closed it long ago; `nx-dress-se-funguslogs-001`
+  LIVE, lib fbc626eb, round-3 eye-gate item 9). Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 0daee003 (fauna-28); interlane md5
+  86b2936f pin-exact. Fresh census **371 = 369 + TWO arrivals, both
+  pre-tick ledger-matched**: `nx-struct-tetrahelix`
+  (75.814868, −0.034302, 5.301492) yaw 4.118977 lib 87dfb8b6 — struct-234
+  (a53f6a48), struct domain, NOT dress intake; `nx-dress-peahen-001`
+  (−45.1, 0.03286, 67.5) yaw 0.196 lib a1f5190f — fauna-28 (0daee003),
+  DRESS-PREFIXED but FAUNA-OWNED (explicit probe set, now 8 with peahen;
+  dress-151/153/156/158/159/161/163/164/165 law) — NOT dress intake.
+  ZERO moves, ZERO departures, ZERO dress-domain drift; dress domain 61 =
+  29 fleet-owned (NE 6 / NW 9 / SE 7 / SW 7) + 8 fauna-owned (se-fox,
+  shorse, cow, donkey, turkey, peacock, rooster, peahen) + 24
+  legacy/non-fleet (probe `/tmp/dress-hold-verify-166.py`
+  HOLD_VERIFY_PASS exit 0 first run, browser UA, capture saved
+  `/tmp/dress166-census.json`).
+- **Sibling commits since dress-165**: struct-234 (a53f6a48, the tetrahelix
+  arrival above), sweep-323 (9196c3c0, zero-mutation CLEAN SWEEP 369→370
+  epoch-corrected), fauna-28 (0daee003, the peahen arrival above). All
+  named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.000035 (sub-mm rounding class).
+- **Shard/intake**: IMPROVE-PLAN zero STATE-OPEN rows, zero OPEN
+  `nx-dress-` rows (lines 21–85 historical round-1/2 prose only); no
+  round-4/5 section (grep 0); survey tag max 78 — survey-75/77/78 route
+  `nx-craft-*` (unowned, probe for struct/improve), survey-23's
+  `nx-dress-well` legacy-core off-limits (Bill's call) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-165 — lawful HOLD (54th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source**: prompt again carried the
