@@ -923,6 +923,16 @@ re-seat 1.5-2m NE along the bed edge toward the dovecote, or shrink the
 local lavender cluster under the plinth. Escalation law keys Sev 1 — none
 due; second consecutive unaddressed sweep triggers the re-note.
 
+**R-125 CURED @ sweep-322 (2026-09-18) — register closed.** fauna-27
+(107e3bce) re-seated the SAME v8 bytes (lib c9425f51 unchanged) to
+(-43.3, 0.03399, 69.7) yaw -2.318 — bed-rectangle sweep gate 0.511m clear
+per its ledger, comp bag restored verbatim (t0 refresh only). Verified
+this tick: census drift set exactly [carousel.lib polish-293,
+peacock.pos/.yaw] with 0 other drift; SAT unclassified set DROPPED from
+2 to 1 — peacock|lavender-0040 is GONE from the overlap register; NW
+approach re-walked 5/5 ALL_PASS with the new seat live. The standing
+unclassified set is now exactly [R-121] alone.
+
 | sweep-49 | 2026-09-07 | 262→263 (+1 domain-valid arrival nx-struct-ruledtower @ (58,−0.0426,0) yaw 0 lib 4070ecc4d8f1d0e6 comp {} = struct-50 @ 990ddeb, tuple matches its committed ledger line-for-line; ONE lib flip nx-craft-hamlet-0028 032b6e24→44d78463 at identical tuple with embers comp live (particles key verified in comp JSON) = improve-25 @ 6df80eb, EPOCH-CORRECTION class — landed after first census, all affected evidence re-taken fresh (census2, SAT re-run, NE re-walked 7/7, gate re-run ALL PASS exit 0 at 6df80eb); live bbox y-span 13.311→4.724 confirms the family-cure took; 0 departures, 0 unexplained drift; snapshot rewritten normalized sha16 55af543ec07eef46, diff exactly +1 entity block +1 lib flip +count, post-rewrite drift ZERO) | exit 3 on exactly ONE unclassified = R-121 lamp-n\\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical per drift set, sixth sweep since routing, no escalation due — law keys Sev 1); 225 bbox non-light, 233 classified, 0 coverage holes | tier-1 81/81 ALL_PASS real exit 0 each (core 64/64 ok max-arr 0.38; NW 5/5; NE 7/7 epoch A + re-run 7/7 epoch B; SW 5/5) + tier-2 27th cycle bunkhouse 6/6 @ 0.380 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK (8th consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet-0007/0015/0028 embers all live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370320 at append, standing gate ALL PASS real exit 0 at tick-start a3344f1 + re-run at 6df80eb post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 | sweep-50 | 2026-09-07 | 263→263 (225 thing + 38 light; 0 arrivals, 0 departures, TWO documented lib changes at identical tuples, epoch-verified: nx-struct-ninesbridge 1e4e84e98900d89c→8c5d9ccea9cb4076 = struct-51 stair-inversion fix @ 4fedb7c (bbox envelope unchanged, walk 9/9 ALL_PASS 0.396 re-proven by its own lane), nx-craft-hamlet-0041 473f671c→caa851af = improve-26 family-cure @ 122fc69 (live bbox y-span 13.363→4.744, fourth hamlet sibling cured) — both landed AFTER first census/SAT/walks, all affected evidence re-taken fresh per epoch law: census2 0 further change, SAT re-run neutral, NE re-walked 7/7 epoch B, gate re-run ALL PASS exit 0 at 122fc69; snapshot rewritten full-precision-normalized sha16 6c8626acc088a90a, entity diff exactly the two classified changes, post-rewrite drift ZERO) | exit 3 on exactly ONE unclassified = R-121 lamp-n\\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical per zero-drift census, seventh sweep since routing, NOT new, no escalation due — law keys Sev 1); 225 bbox non-light, 233 classified, 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 ok max-arr 0.38; NW 5/5; NE 7/7 @ 0.38; SW 5/5 @ 0.37) + tier-2 28th cycle longhouse 6/6 @ 0.346 + tower-house 6/6 @ 0.377 ALL PASS (first re-walk of this pair since sweep-3) | pins 15/15 ALL_PINS_OK (9th consecutive clean, struct18-fleet-pin-check real exit 0), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 36 -l companions, belltower 2419fbc5 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet-0007/0015/0028 embers all live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370321 at append (sibling D+1 absorbed mid-tick, base re-read fresh), standing gate ALL PASS real exit 0 at tick-start HEAD c523943 | CLEAN SWEEP — R-121 open, known, no escalation due |
@@ -14850,3 +14860,80 @@ hall/bunkhouse @318, longhouse/garden-cottage @319, forge/potter @317
 stalest standing pair at 4 sweeps; walk tools interior-walk-forge.ts +
 interior-walk-potter.ts, ls-verified present on disk BEFORE this prose —
 1559B Aug 30 + 1571B Sep 7).
+
+sweep-322: CLEAN SWEEP, classified-drift tick — R-125 CURED LIVE (91st
+consecutive quiet-or-classified). Tick-start HEAD 107e3bce (fauna-27);
+standing gate ALL PASS real exit 0 FIRST TRY (ledger law 2370955 exact,
+the gate's own printed total). Census 369==369 vs the committed sweep-321
+baseline (sha16 ed095bc9390fb81b): 0 arrivals, 0 departures, exactly TWO
+classified drift entities, both PRE-tick committed and ledger-matched
+line-for-line — nx-carousel lib c62a8bbd8e794a9d->0cdd7eedcc22b312 at
+identical tuple/comp = polish-293 @ f134eefc (plinth/brass emissive-only
+night cure; comp bag 7 keys verbatim); nx-dress-peacock-001 pos
+(-47.5,0.04167,60)->(-43.3,0.03399,69.7) yaw 2.58->-2.318, lib UNCHANGED
+c9425f51 (same v8 bytes) = fauna-27 @ 107e3bce (R-125 cure re-seat; comp
+bag keys+params verbatim, t0 refresh only — strip_t0 assert in the
+rewrite script proves it). Epoch B (20s-paced re-read) BYTE-IDENTICAL to
+A (cmp-verified) — settled single-read close; dress-164 hold independently
+corroborates the same two moves. Representation epoch noted (live /geom
+emits parent/tris, drops compKeys — sweep-142/148 flap class, schema-only,
+canonical fields identical). Overlap: SAT fresh-live 331 bbox non-light /
+243 exempt-classified / 0 coverage holes, exit 3 on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 (Sev 2 artwalk-routed
+@ sweep-43, 278th sweep since routing, no escalation due — law keys Sev
+1). R-125 peacock|lavender-0040 is GONE from the unclassified set —
+register closed with cure evidence this tick. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 ALL_PASS max dist 0.380
+(next-walk-core-paths.ts, walked over the NEW polish-293 bytes, no seam;
+[physics] banner parse handled at body offset, sweep-317/318/320 class),
+NW 5/5 ALL_PASS (0.00/0.38/0.30/0.33/0.32), NE 7/7 ALL_PASS
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 ALL_PASS
+(0.00/0.25/0.34/0.37/0.31) — dists identical to the canon; peacock new
+seat r82.1 NW outside every walked leg (fauna-27's own 3/3 walk re-proves
+the seat). Tier-2 300th cycle per the committed sweep-321 pointer: forge
+6/6 ALL_PASS @ 0.375 (interior-walk-forge.ts) + potter 6/6 ALL_PASS @
+0.366 (interior-walk-potter.ts), both real exit 0, both tools ls-verified
+present on disk BEFORE prose (1559B Aug 30 + 1571B Sep 7 — sweep-316
+correction of record honored). Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (276th consecutive clean); sweep89-battery RED-then-
+GREEN lawful carousel pin bump c62a8bbd->0cdd7eed (sweep-316 precedent
+class; first invocation correctly FAILed 27/28 = expected classification;
+re-run 28/28 PASS on census-A bytes); carousel comp bag exact 7 + lib
+0cdd7eedcc22b312 census-verified; comp-bearing 39; lights 38. Interlane
+md5 86b2936f stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read
+fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged (298th check,
+zero open rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+via loop/plan reload. Baseline lawfully rewritten like-for-like (committed
+projection convention, indent=2 + JS-exponent form + trailing newline,
+all proven from the HEAD blob): pre-write assertion diff set exactly
+[carousel.lib polish-293 0cdd7eed, peacock.pos/.yaw fauna-27 re-seat,
+peacock comp t0 refresh], counts 369==369, zero drift on 367 shared ids
+across all projection fields incl. full comp objects; final 369 entities /
+273020B / sha16 dc02efc2a3601f2c; post-rewrite drift ZERO (canonical
+6+1 fields vs census A). Probe self-catches pre-verdict, all disclosed:
+(a) snapshot-rewrite chassis — first pass wrote indent=1 (31K-line
+formatting delta, sweep-56 class, caught by diff-stat); second pass left
+Python float exponents (e-08 vs e-8); third pass's naive exponent regex
+CORRUPTED 25 entity id strings ('lane-002'->'lane-02') — caught HARD by
+the script's own post-write id-set assert, file restored from HEAD
+(verified sha16 back to ed095bc9390fb81b), regex re-anchored (?<=\d)e,
+fourth pass clean (11-line diff, exactly the intended changes); (b)
+ad-hoc census diff chassis initially mislabeled the projection (bun
+downlevelIteration, repaired); (c) sweep89-diff.py invoked from repo root
+hit its relative baseline path — re-run from agents/arthur per its own
+convention. Foreign dirt in tree (windmill overhaul scratch, cabin/
+carousel prototype dirs, engine files, fleet shells, debug-bower scripts,
+moon-moth dir, fauna tools + peacock re-seat scratch, HERO-ASSET-
+REFINEMENT-PLAN, core-paths assets, rupertfork sources, next-terrain
+scratch, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-323): hall + bunkhouse (301st cycle — LRU chain
+re-derived from committed pointers this tick: forge/potter @322 walked
+fresh, row-cottage/observatory @321, inn/tower-house @320,
+longhouse/garden-cottage @319, hall/bunkhouse @318 stalest standing pair
+at 4 sweeps; walk tools interior-walk-hall.ts + interior-walk-bunkhouse.ts,
+ls-verified present on disk BEFORE this prose — 1704B Aug 30 + 1538B Aug
+30).
