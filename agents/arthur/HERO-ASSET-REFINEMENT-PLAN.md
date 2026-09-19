@@ -1277,7 +1277,38 @@ next wake once the gateway answers.
   navy hue nuance (fine as judged), or (c) re-survey plaza-core on fresh
   evidence.
 
-### polish-297 — carousel rose-coat night identity (ACCEPTED, LIVE)
+### polish-298 — carousel canopy pieced-wedge striping (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-297 rose-coat build (live was acee7bcf).
+  Queue-head candidate from polish-290/297 close (crown-hub/valance second
+  pass — the mid-cone dead surface), re-judged fresh on exact live bytes.
+- Defect (judge ×2): DAY 18m mid-roof cone a flat untextured mass; NIGHT the
+  weakest element, barely separated from the sky (criteria 2 + 6).
+- Change (ONE canopy-piecing intervention, new production step
+  `carousel-horse-prototype/ribbing.ts`, additive-only): 4 deep-red 45°
+  full-slope wedge panels (y 4.84..5.78) alternating with bare cream fabric
+  + 8 cream seam battens (22cm × 6cm proud) with teeth-parity night
+  emissive [0.30,0.21,0.085]. Six falsified builds en route (v1/v2 thin
+  battens sub-resolution; v3 primitive split caught by probe pre-render;
+  v4 rose/cream winding+sky-collision; v5 cream wedges collide with day sky
+  lum 212 — scanline-proven; v6 16-wedge rhythm broken). Red completes the
+  cream/red/gold festive palette (criterion 5).
+- Candidate `75b413c2…` A/B byte-identical ×2; NaN clean; 15/15 clip-clean;
+  horse-solo controls 4/4 byte-identical; nodes 47→49, materials 25→27
+  (+2 documented). Judge day PASS (classic pieced canopy, sewn-gore read) +
+  night PASS (tangible tent form, hierarchy intact, nothing too bright).
+  ZAI fallback disclosed, native re-judge owed.
+- Placed via `deploy.ts --apply`: PLACED_VERIFIED (1 upload + 8 verbs),
+  7-key comp bag verbatim, idempotent 0/0, live pin
+  `store/75b413c27e9cfbe1.glb` @ (-18, 0.0001495, 18) yaw 2.35619 exact;
+  served sha == upload sha; served decode keeps wedges + ribs.
+- Evidence: `reviews/hero-assets/polish-298-carousel-crownrim/`.
+- Next: night seam tracery refinement (judge nuance: implied not drawn —
+  4-6 subtle darker radial seams judge-suggested); carousel is otherwise
+  polled clean across criteria 1-7 — consider eye-gate packet for the
+  polish-285..298 night campaign, or re-survey plaza-core on fresh evidence.
+
+
 
 - Subject: `nx-carousel` at the polish-296 navy-coat build (live was
   bad22d19). Queue-head candidate from polish-296's close (rose night
