@@ -16124,3 +16124,89 @@ inn/tower-house @336, row-cottage/observatory @335, longhouse/
 garden-cottage @334, forge/potter @333 stalest standing pair at 4 sweeps;
 walk tools interior-walk-forge.ts + interior-walk-potter.ts, ls-verified
 present on disk BEFORE this prose).
+
+sweep-338: CLEAN SWEEP, two-arrival epoch-stable tick (107th consecutive
+quiet-or-classified). Tick-start HEAD 9592881e (fauna-40 PRE-tick commit;
+struct-248 @ b891e8b1 one below); standing gate ALL PASS real exit 0 FIRST
+TRY (ledger law 2370985 exact at the gate's own printed total). Census
+epoch A 383->385 vs the committed sweep-337 baseline (sha16
+fd92d8ce856c94b3): exactly TWO domain-valid ledger-matched arrivals, 0
+departures, 0 drift on 381 shared ids across the full 9-field projection
+incl. comp objects — nx-struct-tret @ (91.283305, -0.024869, 45.512177)
+yaw 3.726278 lib f21b1cd567f18566 comp {} (struct-248 R11-59 truncated
+tetrahedron, E band fourth form, tuple matches its committed ledger
+line-for-line) + nx-dress-deer-001 @ (51.25, -0.02328, -38.25) yaw -2.5
+lib 4196ca3f492e86d0 with 7x motion:deer_{a,b}{,_ears,_head}+deer_a_tail
+comps (fauna-40 roe deer pair, SE wild-edge meadow, tuple + lib + comp bag
+match its committed ledger line-for-line). Epoch B 20s-paced re-read
+IDENTICAL (raw sha16 4a2303d1389f8e55 both epochs) — epoch-stable, no
+sibling landed mid-tick; dress-181 @ dd6d6986 interleaved as a zero-
+mutation hold independently corroborating the same census (its own probe
+counts 383->385 with both arrivals tuple-exact). Gate re-run ALL PASS
+real exit 0 at dd6d6986 per the polish-270 epoch law. OVERLAP: SAT
+fresh-live 347 bbox non-light / 247 exempt-classified / 0 coverage holes,
+verdict SWEEP HAS FINDINGS on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 294th sweep since routing, NOT new, no escalation
+due (the law keys on severity-1); both arrivals included in the live SAT
+set, no new contacts (tret's own polygon SAT worst 2.11m; deer seat sweep
+worst 3.068m, both per their ledgers). WALKS: tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0, legs run individually per the
+sweep-228 ceiling law — core 64/64 ALL_PASS maxDist 0.380
+(next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/0.31) —
+dists identical to the sweep-319..337 canon; both arrivals sit outside
+every walked leg (tret r102.0 E-band, no E route exists, >=34m from the
+nearest NE-spoke waypoint; deer r63.9 SE, >=44m from every waypoint) —
+walks stand by construction, sweep-53/61/64 precedent; the SAT re-run
+covers the collision surface. Tier-2 316th cycle per the committed
+sweep-337 pointer: forge 6/6 ALL_PASS maxArrival 0.375
+(interior-walk-forge.ts, dists 0.2608/0.3070/0.3001/0.3150/0.3750/0.2607)
++ potter 6/6 ALL_PASS 0.366 (interior-walk-potter.ts, dists
+0.2700/0.3660/0.2953/0.2547/0.2497/0.3493), both real exit 0, both tools
+ls-verified present on disk BEFORE this prose (1559B Aug 30 08:32 + 1571B
+Sep 7 13:44, matching the committed pointer exactly). INTEGRITY:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (292nd consecutive
+clean); sweep89-battery lawful RED->GREEN — first invocation on census-B
+bytes correctly FAILed 27/28 on comp-bearing-23 (live 47 vs pin 46 =
+expected classification: fauna-40 deer the 47th comp-bearing entity),
+added-set programmatically census-verified exactly ['nx-dress-deer-001'],
+removed-set empty, pin bumped 46->47 with a comment naming the
+sweep-316..335 precedent chain, diff verified EXACTLY the one pin line,
+re-run 28/28 PASS real exit 0; carousel comp bag exact 7 + lib
+3ed80c49d16e89d8 census-verified (polish-299 standing); comp-bearing 47;
+lights 38; thing 347. Interlane md5 86b2936f stable, read fresh;
+SWEEP-LOOP md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5
+7fa8a224 unchanged (zero open queue rows), sweep owns no prefix;
+CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs via loop/plan reload. Baseline
+lawfully rewritten like-for-like (copyfile convention, sweep-321..337
+precedent; /tmp/s338/snapshot-rewrite.py): pre-write assertion verified
+committed baseline == fd92d8ce856c94b3, expected diff set exactly
+[arrival nx-dress-deer-001, arrival nx-struct-tret], counts 383->385,
+zero drift on 381 shared ids; final 385 entities / 297665B / sha16
+dc332bf86f3db188; post-rewrite drift vs live epoch B ZERO. Probe
+self-catches pre-verdict, all disclosed: (a) an inline-python heredoc
+blocked by the terminal payload validator — re-issued as a saved script
+under /tmp/s338/ (sanctioned-path precedent, sweep-335 class); (b) guessed
+entity id nx-town-cistern printed MISSING — the battery pins cistern on
+nx-cistern, the census-verified id (sweep-51 guessed-id class); (c) the
+patch layer warned sweep89-battery.py changed under the earlier read —
+resolved as the dd6d6986 dress-181 interleave (same minute; ledger tail
+re-checked fresh: no sweep-338 sibling append, no tag race); windmill
+a557d918b2c14f1a + woodyard 333e85a41a745d39 re-anchored on their battery
+pins (WINDMILL-OVERHAUL accepted baseline; village-overhaul DELIVERY
+LIVE_VERIFIED) — old plan-row values stale, live values battery-pinned
+exact. Foreign dirt in tree (windmill overhaul scratch, cabin/carousel
+prototype dirs, engine files, fleet shells, debug-bower scripts, moon-moth
+dir, fauna tools, core-paths assets, next-terrain scratch, review dirs)
+is sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-339):
+longhouse + garden-cottage (317th cycle — LRU chain re-derived from
+committed pointers this tick: forge/potter @338 walked fresh,
+hall/bunkhouse @337, inn/tower-house @336, row-cottage/observatory @335,
+longhouse/garden-cottage @334 stalest standing pair at 4 sweeps; walk
+tools interior-walk-longhouse.ts + interior-walk-garden-cottage.ts,
+ls-verified present on disk BEFORE this prose — 1537B Aug 30 08:39 +
+1524B Aug 30 09:02).
