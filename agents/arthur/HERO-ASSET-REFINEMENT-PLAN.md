@@ -1883,3 +1883,55 @@ next wake once the gateway answers.
 - Next ranked: (a) rose-horse angular-offset motif geometry (artwalk
   coordination per the standing language directive), or (b) plaza-core
   re-survey on fresh evidence.
+
+### polish-309 — stringlights festoon poles (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-stringlights` (same tuple as polish-304/305, empty comp
+  bag). Build source `assets/mkatmos1.ts` (live was store/246af38663aa6981).
+- Defect (queue-head from polish-305 close, judge-fresh this tick on exact
+  live bytes + live-context census): the strand's end hooks are 0.05m cubes —
+  sub-pixel at 18m; both endpoints hung at 2.6m over OPEN GROUND (W end
+  0.73m from the 1.35m giftshelf, E end's nearest tall structure the 2.15m
+  market at 2.4m). Judge verdict: both ends "terminate in mid-air as 2-3px
+  dark specks… suspended from nothing"; the lit bulbs appear to float.
+- Change (ONE edit): real festoon poles at both strand ends — 0.07m iron
+  post spanning local y -2.6..0 (ground-to-strand, terrain-verified flat
+  feet at world (-8.15,9.65)/(-3.85,5.35)) + 0.24m stone foot; post material
+  = wireMat so night reads a faint warm support line (polish-305 sheen
+  lineage, scope widened to poles). Torch/improve-15 fixture grammar at
+  festoon scale.
+- Build bug caught by the NEW served-bytes probe AFTER v1 placed: box()
+  takes a color NUMBER; v1 passed the wireMat OBJECT — exported pole nodes
+  carried NO glTF material (dark silhouettes only, sheen dead). v2 = direct
+  Mesh with wireMat. v1 (942797df) briefly live, superseded same tick.
+- Candidate `8788b5ff3f132b896eea5f0e670f176663183ddadf0e7abda91f823fcb2acb64`
+  deterministic x2; round-trip revert-rebuild reproduced live 246af386
+  byte-exact; siblings glowjar/torch/fireflies hash-identical; `_s` advanced
+  as intended (shared builder). Nodes 44->48, bounds y-span 0.59->2.625.
+- Falsification: judge night PASS (anchored at post tops, faint warm
+  verticals readable, bulbs decisively brightest, zero defects — v1 judge
+  "phantom glint" flag pixel-falsified: 0 warm px in the flagged zone;
+  v2 "dashed ground line" flag pixel-falsified: identical RGB to baseline's
+  pre-existing wire shadow). Day PASS (believable supports, feet grounded,
+  no new defects).
+- Placed via updated `next-place-stringlights.ts`: PLACED_VERIFIED (v1 then
+  v2), comp bag {} preserved, idempotent rerun zero verbs, live pin
+  `store/8788b5ff3f132b89.glb` @ (-6,2.6,7.5) yaw 0.7853981633974483 exact,
+  census bbox grown to 6.32 x 2.625 x 0.27.
+- Served-bytes proof (NEW durable probe `p309-verify-served.ts`, struct-104
+  law; probe self-caught its own mesh-local/translation frame bug RED->GREEN):
+  served DRACO 8f6d2c0b… keeps glow0 [0.15,0.1041,0.0527] on 24 wire + 2
+  POLE meshes (node-space y -2.6..0.02, |x| 3.04), glow1 on 9 bulbs, 2
+  polefoot nodes, 0 non-finite, 48 served nodes. P309_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEADs c2f808a7 ->
+  bfc26c6b (dress-187/188, struct-249/250/255/256 landed mid-tick —
+  absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-309-stringlights-hooks/` (before/ =
+  live 246af386 baseline rig; after/ = v2 accepted rig; v1 GLB not retained
+  — superseded in-tick, record in ledger).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path — same as polish-285..308);
+  recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) the
+  belltower polish-306 judge-named sub-threshold notes (lamp mount
+  sub-pixel nuance, rope hairline), judge fresh first.

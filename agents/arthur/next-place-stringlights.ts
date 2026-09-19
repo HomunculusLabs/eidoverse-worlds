@@ -1,7 +1,7 @@
-// next-place-stringlights.ts — polish lane (polish-305): re-place
-// nx-dress-stringlights with the wire-sheen build (bulbs polish-304 + faint
-// warm wire emissive). Live entity carries an EMPTY comp bag (verified this
-// tick). Chassis: next-place-banner.ts.
+// next-place-stringlights.ts — polish lane (polish-309): re-place
+// nx-dress-stringlights with the festoon-poles build (bulbs polish-304 + wire
+// sheen polish-305 + real end poles/feet polish-309). Live entity carries an
+// EMPTY comp bag (verified fresh this tick). Chassis: next-place-banner.ts.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -10,7 +10,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-dress-stringlights";
 const FILE = `${ROOT}/agents/arthur/assets/village_stringlights.glb`;
-const REVIEWED_SHA = "246af38663aa698150f930a882a76717da5785eccbdb9b1e3880880818bea714";
+const REVIEWED_SHA = "8788b5ff3f132b896eea5f0e670f176663183ddadf0e7abda91f823fcb2acb64";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [-6.0, 2.6, 7.5] as [number, number, number], yaw: 0.7853981633974483, scale: 1 };
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
