@@ -16009,3 +16009,48 @@ hall/bunkhouse @332, inn/tower-house @330 stalest standing pair at 5
 sweeps; walk tools interior-walk-inn.ts + interior-walk-tower-house.ts,
 ls-verified present on disk BEFORE this prose — 1786B Aug 30 08:11 +
 1523B Aug 30 09:53, matching the sweep-330 recorded values exactly).
+sweep-336: CLEAN SWEEP, single-epoch fully quiet tick (105th consecutive
+quiet-or-classified). Tick-start HEAD a46fbd4d (fauna-39 ledger-entry
+carry); standing gate ALL PASS real exit 0 FIRST TRY (ledger law 2370979
+exact at the gate's own printed total). Census epoch A 383==383 vs the
+committed sweep-335 baseline (sha16 02855b1e271b8526): 0 arrivals, 0
+departures, 0 drift on the full projection incl. bbox. Epoch B 20s-paced
+re-read: FULLY QUIET (0/0/0), 383==383 — single-epoch stable, NO baseline
+rewrite needed (02855b1e remains the standing baseline for sweep-337's
+pre-write assertion). dress-179 (2f957e89) interleaved mid-tick as a
+zero-mutation hold corroborating the same census (its own probe counts
+383 with toct standing); gate re-run ALL PASS real exit 0 at 2f957e89 per
+the polish-270 epoch law. OVERLAP: SAT fresh-live 345 bbox non-light /
+247 exempt-classified / 0 coverage holes, verdict SWEEP HAS FINDINGS on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 292nd sweep since
+routing, NOT new, no escalation due (the law keys on severity-1). WALKS:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs
+run individually per the sweep-228 ceiling law — core 64/64 ALL_PASS
+maxDist 0.380 (next-walk-core-paths.ts; [physics] banner parse handled;
+support-seam abstentions on temple-labyrinth-0004/0038 + nw-skeps =
+known normalized set, unchanged), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE
+7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/
+0.31) — dists identical to the sweep-319..335 canon. Tier-2 314th cycle
+per the committed sweep-335 pointer: inn 6/6 ALL_PASS maxArrival 0.364
+(interior-walk-inn.ts) + tower-house 6/6 ALL_PASS 0.3765 (interior-walk-
+tower-house.ts), both real exit 0, both tools ls-verified present on
+disk BEFORE this prose (1786B Aug 30 08:11 + 1523B Aug 30 09:53, matching
+the committed pointer exactly). INTEGRITY: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (290th consecutive clean); sweep89-battery 28/28 PASS
+on census-A bytes (no RED phase needed — zero arrivals/drift this tick,
+pin set already current); carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified (polish-299 standing); comp-bearing 46; lights 38; thing
+345. Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f
+read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged (zero open
+queue rows; 19 prose OPEN hits = classified), sweep owns no prefix;
+CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs via loop/plan reload. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-337): hall +
+bunkhouse (315th cycle — LRU chain re-derived from committed pointers
+this tick: inn/tower-house @336 walked fresh, row-cottage/observatory
+@335, longhouse/garden-cottage @334, forge/potter @333, hall/bunkhouse
+@332 stalest standing pair at 4 sweeps; walk tools interior-walk-hall.ts
++ interior-walk-bunkhouse.ts, ls-verified present on disk BEFORE this
+prose — 1704B Aug 30 08:24 + 1538B Aug 30 11:22).
