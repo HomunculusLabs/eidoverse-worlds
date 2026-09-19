@@ -18066,3 +18066,91 @@ frames, ignored — sha pins in this block are the durable record),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-243,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+
+## struct-244 (2026-09-19): R11-57 TICO PLACED — the struct-243
+## committed carry executed (W-NW band third form az264.5 r66)
+
+244%3=1 placement slot with FULL bank (tico v2 accepted struct-243) ->
+the committed carry: placement (struct-238/240/242 precedent). Gate ALL
+PASS real exit 0 tick-start at 46707cfc (struct-243; unpiped
+GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged,
+0 OPEN nx-struct rows — same pin as struct-238..243). Ledger max
+re-derived struct-243 -> tag struct-244 (re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..243; owed board stays 26 + csaszar
+v3 + ssd v1 + tetrahelix v2 + rt v1 + co v1 + ico v2 + nodoid v3, plus
+tico v2 now riding).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2 from
+repo ROOT reproduces the pinned sha exactly (5b8401b007528533…
+bb1d0742, both runs exit 0, envelope line == probe contract
+6.60x6.29x6.60, mtime-verified 04:19 -> 04:51). Probe 10/10 + decode 8/8
+were the struct-243 tick's own real exit 0 on these exact bytes.
+
+SEAT (struct244-scan-tico, fresh 379-entity census): octant audit r66+
+places the W-NW octant az225-270 as the under-served band (2 struct
+forms standing — skymirror az228 r89.5 + observatory az245.5 r96, both
+city-relocated; + tico -> 3, soft cap 6, NO exceedance). Seat az264.5
+r66.0 (-6.325820, -65.696149): the innermost constellation seat with
+the widest margin in the band — composes with the relocated observatory
+~39m out on the same W-NW reach and the meridianstair's NW walk beyond
+(NN neighbor ellipsecourt r78 az271, outside the band but honest at
+15.17m). NN 15.17 to nx-struct-ellipsecourt (law 8). 32-gon-exact SAT
+worst 3.58 (law 1.4). Walk-clear 37.41.
+
+SELFTEST RED->GREEN (struct-240 NaN law, baked into the scan chassis):
+satWorst fired at nx-craft-statuary-0026's own center reports -9.220
+(guaranteed overlap refused; coverage counters exact 1 / radial 287 /
+disc 2 / exempt 4) — the exact-SAT path proven live before any
+candidate number was trusted.
+
+YAW LAW (procession convention, struct-217/219/224/228/232/234/236/
+238/240/242): local az alpha -> world az (alpha - yaw). Judged reading
+face local az90 at anti-travel az84.5 + 30deg east lean (struct-104
+oblique band) -> yaw_deg = -120 - 264.5 = -384.5 -> 335.50deg -> YAW =
+5.855580 rad. The tico is 72deg-symmetric about the pentagon axis
+(5-fold seat) — the yaw is exact mod 72deg and protects the judged read.
+
+TERRAIN (struct244-terrain-tico.ts, this tick): 65pt over the TRUE
+rotated 32-gon (center + 32 verts + 32 edge-mids), spread 13.1mm, PY =
+lowest = -0.033640 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=32 class): the 32-gon dais R3.30 ROT=0 (corners ON the axes)
+is the footprint; ball max horizontal reach + bead 3.189 <= dais
+apothem 3.284 (probe T7 + decode D2) — the ball NEVER overhangs, so the
+32-gon IS the true ground footprint (no overhang disclosure needed).
+Exact convex-polygon SAT (edge-normal axes of both polys, max-gap law)
+replaces the square-bbox proxy — struct-19 disc law class. Disc
+neighbors keep point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct244.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 379), upload
+store/5b8401b007528533.glb (1 upload, shared budget), plain spawn 1 verb
+paced 1200ms, PLACED_VERIFIED pos [-6.325820, -0.033640, -65.696149]
+yaw 5.855580 comp {} census 379->380; idempotent rerun ALREADY_SEATED 0
+verbs. Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+arrival-line approach on the az264.5 meridian + reading-face vantage at
+7m on the az114.5 face normal + full CW standoff circuit at 8m — no
+phantom collider; folly by presentation, the PANELLED solid means the
+walk stays outside the 3.3m dais, unlike the ico's open cage). Walk
+stdout carries the known distant support-seam diagnostics class
+(dress/temple entities, foreign lanes, abstentions only).
+
+Bill eye-check pointer: on the far W-NW reach past the relocated
+observatory — where the ico's open cage stands see-through and its dual
+stands closed, THE TRUNCATED ICOSAHEDRON now stands PANELLED: the
+football, the molecule, at monument scale. Twenty stone hexagons and
+twelve iron pentagons, every seam an iron bond, ninety in all; every
+corner exactly one pentagon and two hexagons, no two pentagons ever
+touching. The theorem standing under it: hexagons alone cannot close a
+sphere — twelve pentagons are forced — and the twelve brass beads mark
+exactly those twelve. After dark the ball carries its quiet
+constellation; one bead pressed into the earth at the base, so from any
+side you count eleven, and the twelfth is underfoot.
+
+Files: struct244-scan-tico.ts + struct244-terrain-tico.ts +
+struct244-walk-tico.ts + next-place-struct244.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-244,
+D+0 E+1). One upload, one verb. Zero pushes.
