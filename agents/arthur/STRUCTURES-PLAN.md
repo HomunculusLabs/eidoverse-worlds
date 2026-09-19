@@ -17229,3 +17229,143 @@ Files: struct236-scan-rt.ts + struct236-seatprobe-rt.ts +
 struct236-terrain-rt.ts + struct236-walk-rt.ts + next-place-struct236.ts
 (all NEW, tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
 (one append struct-236, D+0 E+1). One upload, one verb. Zero pushes.
+
+
+
+## struct-237 (2026-09-18): R11-50 THE CUBOCTAHEDRON —
+## BUILD+JUDGE TICK, v1 ACCEPTED BANKED NOT PLACED
+
+237%3=0 refine slot with EMPTY bank (rt placed struct-236) → build+judge
+tick per the struct-229/233/235 precedent (refine pool empty of payable
+items 40+ ticks). Gate ALL PASS real exit 0 tick-start at 87b57498
+(polish-296; unpiped GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5
+7fa8a224 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-236 → tag struct-237 (re-checked immediately before append). Native
+absent from the cron catalog all tick (tool_search fresh: terminal +
+zai-vision + repoprompt only — same disclosed cron-unpayable class as
+struct-169..236; owed board stays 26 + csaszar v3 + ssd v1 + tetrahelix
+v2 + rt v1, plus co v1 now riding).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): cubocta/cuboctahedron 0/0/0/0/0 — never named, never
+barred, never built. THE ARCHIMEDEAN/QUASIREGULAR BRANCH OPENS. Kin
+falsification sweep: icosidodecahedron BARRED (rt's direct dual, named in
+struct-235's own citation); rhombic dodecahedron BARRED (rt's Catalan/
+zonohedron kin, placed struct-236); newtonspheres = sphere cage (distinct
+object — deliberate ECHO instead: the cuboctahedron's 12 corners ARE the
+FCC kissing-twelve coordinate class of newtonspheres' outer spheres);
+archimedean-spiral = plane curve (struct-192); ssd = Kepler-Poinsot star;
+tesseract 44 hits = taken; menger/sierpinski/costa/enneper/hilbert/kuen
+taken; gömböc parametrization-unsecurable (struct-231 law); stella
+octangula = star-kin to standing SSD, barred; clelia = spherical-curve kin
+(viviani stands). SELECTION: the cuboctahedron — exact closed form (12
+verts = even permutations of (±1,±1,0)), theorem-backed (Archimedes ~250
+BC via Pappus Collection Book V; Fuller's "vector equilibrium"), instantly
+readable at 18m (triangle-square checkerboard), and its identity carries
+TWO unique theorems: quasiregularity (every edge on exactly one triangle +
+one square) and THE EQUAL MEASURE (edge length exactly equal to the
+circumradius — unique among uniform polyhedra).
+
+CONCEPT: THE EQUAL MEASURE. IRON carries the twenty-four edges; STONE
+carries the fourteen membranes (8 triangles + 6 squares — the
+checkerboard) and the TWELVE-sided dais (the theme number: the twelve
+corners). Night contract: twelve warm brass beads at ALL twelve corners
+(the FCC kissing-twelve — newtonspheres' cross-lane echo); the three base
+corner beads ride half-proud in the dais top (struct-231/235 lineage).
+Seated on a TRIANGLE face (the point-down family's flat-seat cousin: SSD =
+5-fold tip, rt = 3-fold tripod tip, this = solid triangular contact, no
+tip bead needed).
+
+PARAMETRIZATION (exact, closed-form): M = the twelve (±1,±1,0)
+permutations; R = √2 = EDGE (the signature). Squares: the six planes
+coord = ±1; triangles: the eight planes ±x±y±z = 2. Seat: n̂(1,1,1)/√3 →
++Y with twist-snap (base corner 0 → azimuth 0); base triangle flat at
+dais top, summit face parallel exactly 2·r_tri above.
+
+PROBE (struct237-probe-co.ts, tracked) 10/10 ALL PASS real exit 0: T1
+Euler 12−24+14 = 2; T2 quasiregular 24 face-edges each exactly ONE tri +
+ONE sq; T3 THE EQUAL MEASURE worst |edge−R| 8.9e-16-class (display
+scaling ×1e12), seated radius spread 1.3e-15 about the solid center; T4
+manifold 2-per-edge; T5 8 equilateral triangles + 6 squares, worst side
+dev mm-class, square diagonals exactly √2·edge; T6 FCC law: 12 = even
+perms of (±1,±1,0), degree 4 everywhere, vertex figure 2 tri + 2 sq;
+T8 uniformity: all dihedrals equal, cos(exterior) == +1/√3 worst 2.2e-16
+(interior 125.2644° everywhere); T9 seat: base triangle spread 0.0,
+centroid off-axis 1.0e-16, 120° symmetry 0 misses, base↔top 6.2354m ==
+2·r_tri exact; T10 immersion ZERO contacting face-pairs (shells ride
+inside the rods' meeting planes). RED control (--red corrupts square 0's
+cycle): T2 + T4 FAIL — verified exit 1.
+
+SELF-CAUGHT RED-FIRST THIS TICK (probe): T3's radius-spread term initially
+measured V about the ORIGIN (not the solid's own center) — post-LIFT
+seated coords have +0.30 offset; fixed to measure about the true solid
+center (PLINTH_H + 2/√3·SCALE). That is the whole self-catch list: the
+FCC construction is exact by derivation and the first probe run was
+10/10.
+
+BUILD (agents/arthur/assets/mkv3-co.ts, staged -f): root identity
+(struct-188 law); texMat lanes co_stone/co_iron (struct-38 law); beads
+emissive 0x9a7030 @ 1.0 in-GLB (dusk lineage, struct-82); plates baked
+vertex-true (applyMatrix4, Box3 corner law); envelope law green in-build
+(8.10x6.63x8.10 == probe contract; 39 pre-merge meshes + 1 KEEP glow
+group glow_co_12). v1 deterministic x2 byte-identical sha256
+90c92f327221e2bfc25c69664aee8918363804d7a55c1bf36d265f85a7984093
+(mtime-verified).
+
+DECODE (struct237-decode-co.ts, tracked) 8/8 ALL PASS real exit 0: D1
+census 3 nodes; D2 dodecagon dais TRUE box ±4.050, corners present, sole
+min y −0.000000; D3 rods 1800 verts worst 60.00mm coverage 24/24; D4
+membranes 396 verts worst 66.60mm shell-bound 84mm; D5 beads 12/12 corner
+clusters emissive sole-night; D6 base bead lowest y 0.2050 half-proud in
+dais top 0.30 (three base corners at one height — probe T9); D7 envelope
+drift 0.00mm; D8 texMats 2/2. RED control (village_rt3.glb foreign
+bytes): D1 census FAILs clean, exit 1 — verified.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed riding the
+board): gameplay 18m 4/4 PASS — 8 distinct facets counted at the vantage
+(geometrically credible: ~8 of 14 visible from one azimuth of a convex
+solid), alternating triangle→square→triangle rhythm legible around the
+form "matching cuboctahedron topology", continuous closed profile, three
+dais-contact beads seated, cast shadow attached, zero defects. Closeface
+3/4 PASS — JOINERY (rods terminate flush into beads, zero floating ends),
+CHECKERBOARD (T-S-T-S alternation around each bead verified visually —
+the quasiregular law read; edge lengths uniform), MATERIALS (three
+families, consistent shadow-gap reveal); the DAIS sub-FAIL ("only one
+seated bead found") ARBITRATED at decode: D5 proves 12/12 clusters at the
+exact corners, D6 proves all three base beads half-proud (0.205 vs 0.30),
+and the night judge independently resolved all three dais-level points
+(one bright, two threshold) — the closeface framing simply occludes the
+two flanking base corners behind the solid's own mass (convex-solid
+single-azimuth occlusion, ssd/rt/tetrahelix disclosed-Minor precedent).
+Night 3/3 PASS — 9/12 resolved with self-consistent occlusion arithmetic
+(9 visible + 3 rear hemisphere = 12; decode D5 proves exactly 12); tight
+quiet points, zero bloom/spill/wash, every point anchored to an edge
+junction. Judge cosmetic notes recorded, not executed: bottom membranes
+compress against the dais at extreme distance (sub-threshold); dais-level
+beads 8-9 at exposure threshold at 18m night.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-238
+committed carry: fresh census scan — under-served band/district
+selection, 8m NN + per-district soft-cap audit, dodecagon-exact polygon
+SAT (struct-19 disc law class — never square-bbox; 12-gon footprint
+R4.05), oblique-yaw law (struct-104 band), terrain preflight over the
+TRUE rotated dodecagon, hash-gated plain spawn nx-struct-co, comp {}.
+Folly class — ground circuit walk at placement, no door.
+
+Bill eye-check pointer (after placement): the equal measure — a solid
+standing on a triangular face where every edge is exactly as long as the
+distance from any corner to the heart: corner-to-center == corner-to-
+corner, the one uniform solid where that is true. Eight triangles and six
+squares alternate around every corner — never two of a kind touching.
+Twelve brass beads at the twelve corners (the same twelve points where
+the newtonspheres' outer spheres touch), three seated in the dais itself.
+After dark: nine quiet lights in view from any one side, twelve in truth
+(the far three hidden by the solid itself).
+
+Files: struct237-probe-co.ts + struct237-decode-co.ts +
+struct237-render-co.ts (all NEW, tracked), assets/mkv3-co.ts (NEW,
+staged -f), reviews/struct237-co/ (9 frames, ignored — sha pins in this
+block are the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-237, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
