@@ -19076,3 +19076,108 @@ after it lands, the Archimedean branch is COMPLETE on all five parents —
 next build sweep re-derives from the form ledger (snub cube / rhombic/
 truncated cubocta named as unclaimed in struct-249's grep) or Bill's
 verdict routing.
+
+## struct-252 (2026-09-19): R11-62 THE TRUNCATED DODECAHEDRON PLACED —
+## the struct-251 committed carry executed (SW-W band fourth form az196.5 r80)
+
+252%3=0 would be a refine slot, but the pool is empty of payable items
+(40+ ticks) and the bank was FULL (tdodec v1 accepted struct-251) -> the
+committed carry (struct-240/242/244/246/248/250 precedent — placement
+outranks cadence when the bank holds an accepted form). Gate ALL PASS
+real exit 0 tick-start at 00faa5cf epoch (unpiped, GATE_EXIT:0). Shard
+drained fresh (IMPROVE-PLAN 0 OPEN nx-struct rows — pin unchanged since
+struct-238). Ledger max re-derived struct-251 -> tag struct-252 (numeric
+extraction, re-checked immediately before append). Native absent from
+the cron catalog (tool_search fresh this session: terminal + zai-vision
++ repoprompt only — same disclosed cron-unpayable class as
+struct-169..251; placement tick owes no new judgment — the tdodec was
+judged struct-251 ZAI 4/4+3/3+4/4; native re-judge rides the owed board
+as tdodec v1).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+c344bd08b2592256187cdc34eaff32e50be8e07bd1e50cfd09ca5ff56f2fe0b7 ==
+struct-251 v1 pin (mtime 10:26 Sep 19, byte-identical — no rebuild this
+tick; the banked build is the exact judged v1 bytes). Probe 9/9 +
+decode 8/8 (v1 contract) were the struct-251 tick's own real exit 0 on
+these exact bytes. No interrupted 252 window existed (no
+struct252-*/next-place-struct252 files pre-tick).
+
+SEAT (struct252-scan-tdodec, fresh 387-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.920, guaranteed overlap refused; coverage exact 1 / radial
+294 / disc 2 / exempt 4): octant audit places the SW-W octant az180-225
+as the under-served band (3 forms standing — screwwell az180 r88,
+whisperhorn az224 r89, nodoid az180 r66; + tdodec -> 4, soft cap 6, NO
+exceedance). Innermost lawful constellation seat with REAL margin =
+az196.5 r80.0 (-76.705579, -22.721228): r79.5 candidates rejected at
+gaps 1.46-1.72 (0.06-0.32 margins — the struct-248 no-margin class);
+r80.0 az196.5 buys gap 1.96 (0.56 margin). NN 21.08 to
+nx-struct-penrosepaving (law 8; constellation 18-40m band — the composed
+shelf between penrosepaving and the whisperhorn/nodoid reach). 32-gon-
+exact SAT worst 1.96 (law 1.4, nx-temple-terrace-0037). Walk-clear
+51.41.
+
+YAW LAW (procession convention, struct-217..250): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az16.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg =
+-120 - 196.5 = -316.5 -> 43.50deg -> YAW = 0.759218 rad. The tdodec is
+DECAGON-DOWN 5-fold about the vertical axis (probe T7: 72deg symmetry
+exact, snap face az -0.0) — the yaw is exact mod 72deg and protects the
+judged read (tico struct-244 5-fold precedent).
+
+TERRAIN (struct252-terrain-tdodec.ts, this tick): 65pt over the TRUE
+rotated 32-gon (center + 32 verts + 32 edge-mids), spread 2.5mm, PY =
+lowest = 0.000586 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=32 class): the 32-gon dais R4.00 APOTHEM-FIRST (PLINTH_N 32,
+corners ON the axes per struct-247 law) is the footprint; solid max
+horizontal reach + rod 3.861 <= dais apothem 3.981 (probe T7 + decode
+D2) — the solid NEVER overhangs, so the 32-gon IS the true ground
+footprint. Exact convex-polygon SAT (edge-normal axes of both polys,
+max-gap law) replaces the square-bbox proxy — struct-19 disc law class.
+
+PLACEMENT: next-place-struct252.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 387), NN
+floor 21.08 + exact-SAT worst 1.96 re-proven against the FRESH 387-set
+pre-verb, upload store/c344bd08b2592256.glb (1 upload, shared budget),
+plain spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [-76.705579,
+0.000586, -22.721228] yaw 0.7592182246175333 lib store/c344bd08b2592256.glb
+comp {} census 387->388; idempotent rerun ALREADY_SEATED 0 verbs. Ground
+circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way az196.5
+arrival-line approach + reading-face vantage at 7m on the az46.5 face
+normal + full CW standoff circuit at 8m — no phantom collider; folly by
+presentation, the PANELLED solid means the walk stays outside the 4.00m
+dais; walk standoff 8m applies directly, chord-mid clear 4.02m — the
+struct-251 disposition). Walk stdout carries the known distant
+support-seam diagnostics class (dress/temple entities, foreign lanes,
+abstentions only).
+
+THE BRANCH CLOSES: the Archimedean truncation series is COMPLETE on all
+five Platonic parents — tetra->tret (247), octa->toct (245), icosa->tico
+(243), cube->tcube (249), dodeca->tdodec (251/252). The R11 math series
+continues from the form ledger (snub cube / rhombic / truncated cubocta
+named unclaimed in struct-249's grep) or Bill's verdict routing.
+
+Bill eye-check pointer: on the SW-W reach past the nodoid and the
+screwwell — where the tico's panelled ball and the tcube's deeper cut
+stand on other diagonals, THE TRUNCATED DODECAHEDRON stands
+DECAGON-DOWN: the dodecahedron with its twenty vertices cut at the
+LIGHTEST touch of the whole family, twelve wide stone decagons (the
+parent's own faces) and twenty small dark triangles where the points
+were. The theorem standing under it: cut at the family's 1/3 the
+decagons come out irregular — the side ratio is exactly phi — so
+regularity pulls the cut back below the third, and even then 99.26% of
+the parent still stands; the last parent barely bleeds. After dark the
+twelve brass beads mark exactly the twelve parent faces, lit — one on
+the finial at the crown, ten at the waist, and the twelfth given to the
+earth beneath the flat foot. The cuts stay dark.
+
+Files: struct252-scan-tdodec.ts + struct252-terrain-tdodec.ts +
+struct252-walk-tdodec.ts + next-place-struct252.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-252,
+D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-253 build+judge tick (R11-63, empty bank —
+re-derive the form from the ledger grep: snub cube / rhombic solids /
+truncated cubocta named unclaimed, or Bill's verdict routing; fresh
+five-file grep to confirm the gap before building).
