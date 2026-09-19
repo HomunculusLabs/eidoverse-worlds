@@ -1,6 +1,51 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-194 — lawful HOLD (83rd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD c8345744 (sweep-350), then RE-RUN
+  ALL PASS exit 0 at new HEAD 6a23155b after polish-312 landed mid-tick
+  (epoch law); interlane md5 86b2936f pin-exact. Fresh census **396==396
+  QUIET epoch (+0/−0)** — sole classified move: `nx-town-streetlamps`
+  lib swap e815a897→a7b05aef at tuple-identical (0,0,0) yaw π (polish-312
+  streetlamps lantern heads, 6a23155b; ledger-matched VERBATIM — live pin
+  store/a7b05aefe1e971e8.glb @(0,0,0) yaw pi exact; probe checks BOTH the
+  0.0 delta vs dress-193 capture AND the ledger's absolute tuple) — polish
+  domain (core town entity, off-limits to this lane), classified not
+  routed. Probe first run FAILED fail-closed on the unclassified move;
+  classified at source from polish-312's own verbatim ledger line BEFORE
+  patching the allowance (dress-172 law), PASS on re-run. ZERO arrivals,
+  ZERO departures, ZERO dress-domain drift; dress domain 73 = 29
+  fleet-owned (NE 6 / NW 9 / SE 7 / SW 7) + 21 fauna-owned + 23 non-fleet
+  (probe `/tmp/dress-hold-verify-194.py` HOLD_VERIFY_PASS, browser UA,
+  capture saved `/tmp/dress194-census.json`).
+- **Sibling commits since dress-193**: struct-260 (0e52ed24, the trico
+  arrival dress-193 classified in-flight — its ledger line now landed),
+  sweep-350 (c8345744, zero-mutation CLEAN SWEEP 395→396, corroborates the
+  trico arrival), polish-312 (6a23155b, the streetlamps swap above —
+  landed mid-tick after this tick's first gate run, absorbed by the epoch
+  re-run). All named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick — valid freshness check; grep at source carries:
+  zero STATE-OPEN rows, zero OPEN `nx-dress-` rows, no round-4/5
+  section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-193 — lawful HOLD (82nd post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
