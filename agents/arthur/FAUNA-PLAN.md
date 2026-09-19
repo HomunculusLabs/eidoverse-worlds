@@ -30,6 +30,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | peacock | `nx-dress-peacock-001` | (−43.3,0.03399,69.7) yaw −2.318 (**fauna-27 re-seat**, was (−47.5,0.04167,60.0) yaw 2.58) | **c9425f51** (fauna-25) | NEW 2026-09-18 — the show bird: single cock in full display (tilted-dome train of 21 gold-ringed teal eyespot plumes, NOT the turkey's vertical fan) on a stone plinth; 6 motion comps; RE-SEATED fauna-27 (R-125 cure — see queue row 18) |
 | rooster | `nx-dress-rooster-001` | (31.25,−0.02772,−9) yaw −1.3 | **af35212e** (fauna-26) | NEW 2026-09-18 — the flock's cock: single bird, tall serrated red comb + gold hackle mantle + 2-tier sickle fountain cresting just below the comb, at the coop-yard sentinel seat between the lane and his hens; 5 motion comps — the hen flock's missing bird stands |
 | peahen | `nx-dress-peahen-001` | (−45.1,0.03286,67.5) yaw 0.196 | **a1f5190f** (fauna-28) | NEW 2026-09-18 — the peacock's audience: earth-brown foraging hen (cream foreneck arc, short dark drooped tail, teal-paddle crest), 2.84m from his display on his reader's line; 4 motion comps — the show-bird pair is complete |
+| skep bees | `nx-dress-bees-001` | (−53.566,0.038,54.5) yaw 2.3562 (FRAME COPY of the skeps row) | **e6ac8fac** (fauna-32) | NEW 2026-09-18 — the village's first PURE-MOTION fauna: 7 honeybee workers (×2.8 marginality), 4 ringing the real hives + 3 working the lavender blossoms; zero ground geometry; 7 motion comps (4 orbit + 3 bob) — the apiary's pollinator stands |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -458,20 +459,60 @@ domain is commons-next `nx-dress-*` fauna only.
     (top view), not from the bank; (e) the strut helper (A→B cylinder,
     quaternion-aligned) eliminates limb-gap arithmetic entirely — no more
     hand-composed knee joints.
-21. **[QUEUED fauna-30 proposal, 2026-09-18] beehive skep bees — homestead
-    species (queue-empty proposal, fauna-24 cadence).** Village logic: the
-    orchard-edge meadow carries dovecote + bee skeps (fauna-16/17's own
-    census notes) — flowers and hive, but the pollinator is missing: a
-    small orbiting bee cloud at the skeps (2-3 bees, part orbit, tight
-    radii, staggered periods — the duck's orbit motion family applied at
-    insect scale). Species sketch: dark gold bodies 0x8a6a28 with pale
-    banding, tiny wings, ~0.02m — a PRESENCE species (even more
-    encounter-class than the robin; the read is the cloud's MOTION, not
-    individual anatomy). 2-3 motion comps (orbits + phase scatter). Seat
-    at build tick by sweep + terrain + walk. RISK: at 0.02m even the
-    encounter read may be sub-threshold — if the build's probe shows
-    <3px at 1.5m, scale up to hornet-mimic size (0.04m) or defer with
-    numbers (infeasibility-proof law).
+21. **[CLOSED fauna-32, 2026-09-18] skep bees — proposed fauna-30, BUILT + SEATED
+    fauna-32 (2026-09-18).** ONE entity `nx-dress-bees-001`: the village's
+    first PURE-MOTION fauna — seven honeybee workers upsized ×2.8 (9.5cm
+    read class, the plan's own row-21 marginality provision; true 12mm is
+    sub-3px at any vantage): four FLYERS each ringing one REAL standing
+    hive (r 0.8, degPerSec 22-28, y staggered 0.62-0.72 — above lavender
+    plant tops 0.538) + three FLOWER WORKERS bobbing at blossom-crown
+    level over the bed. ZERO furniture, zero ground geometry: the standing
+    skep row IS the hive furniture (duplicating hives beside hives = zoo
+    dump; the lavender decode proved the row stands INSIDE a full planted
+    field, so reference skeps were deleted at v2). Seat law: **FRAME COPY**
+    (frog-on-pool class, new) — entity at the standing row's exact origin
+    +yaw+py (-53.566, 0.038, 54.5) yaw 2.3562 so entity-local == row-local
+    VERBATIM and rings center on the real hives at row-local (-1.9,0),
+    (-0.6,0.15),(0.7,-0.1),(2.0,0.05); placer hard-gates the host tuple
+    (artwalk-39 law — drift = die, never blind-reuse). Airborne-only
+    entity exempt from ground SAT by construction (suspended-decor class,
+    nvp-134): members y 0.586-0.741 vs skeps 0.95/ plants 0.538/ rock
+    0.57 — but rings clear every skep OBB horizontally by 0.179-0.354m
+    (RING math in the decoder: own hive r−halfdiag, others dist−r). **v5
+    sha16 e6ac8fac5e1d4228** (full e6ac8fac5e1d4228d3df4a51ba0fb11faf63b4
+    02b35eb104db8972efc061f84d — judge-closed bytes: identity "stylized
+    honeybee YES" ×2 + bands 2-count confirmed + head-LEADING marker-proven
+    + wings read as wings; decode GREEN + RED control on the skeps GLB;
+    deterministic ×2; 28 mesh nodes / 7 top-level). 7 motion comps live
+    (4 orbit + 3 bob, phases staggered, epoch t0). Engine-true motion
+    pairs: 101px@18m band 396-624, 2915px near, 2705px encounter; rig
+    drives REAL motion.js evalPart orbit/bob VERBATIM + the STANDING
+    skeps GLB + uniform lavender context. Census 374→375 exactly, 8 verbs
+    (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated, walk
+    ALL_PASS 3/3 (stile-side 8.3m approach + 4m encounter stop, arrivals
+    0.38/0.31m; foreign support-seam stderr = woodstack/temple-labyrinth
+    class, not ours), live bbox 4.072×0.157×1.264 (the AIRBORNE envelope
+    — no ground contact, y-span is the flight band). Village logic
+    closed: the orchard-edge apiary finally has its pollinator — doves
+    above, lavender around, bees working both. 18m identity read is
+    ZERO-BEES sub-pixel (the judge's own scale math: a 34mm bee at 18m ≈
+    1-2px) — presence species, encounter-class like the robin (robin
+    law); the 18m read is the MOTION (101px localized cloud movement in
+    0.6s). Judge identity: ZAI fallback (glm vision) — cron lane has no
+    native vision; native re-judge debt NATIVE-22 below. Build arc:
+    v1 reference-skeps DELETED (lavender decode: the row stands inside a
+    full field — duplicate hives) + flyer y 0.50 swept blossom heads
+    (envelope gate caught: 0.486 < 0.538) → v2 rings above plant tops →
+    v3 band-crest arithmetic fix (v1 bands 11.8/8.9mm sat INSIDE the
+    15.0/15.2mm abdomen — struct-52) + wing dihedral (paper-thin edge-on
+    read as needle, peahen law a) + head proud → wing 0xcfd8dc was
+    SKY-COLORED (pixel probe: zero distinguishable wing px; v3 law: mid-
+    value 0xaebac2 reads against both sky and foliage) + body 0x6b5424 →
+    v4 bands 2mm proud + wings larger/flatter → v5 FACING LAW (orbit face
+    rotation.y=a+π/2 points LOCAL +Z along velocity — head must live at
+    +z; v4 flew tail-first, judge caught it, marker-probe confirmed the
+    fix: red-head centroid x=507 of 960 = LEADING). 5 build versions, 7
+    judged rounds.
 22. **[CLOSED fauna-31, 2026-09-18] duck waterline re-seat — the fauna-29
     defect note cured (worst-first: a recorded standing defect outranks a
     new-species proposal).** Same bytes c156b6a1, remove+respawn to
@@ -481,6 +522,30 @@ domain is commons-next `nx-dress-*` fauna only.
     ctrl DEFECT-CONFIRMED, ZAI fallback, native debt NATIVE-21); 8 verbs,
     census 373→373, idempotent 0 verbs, walk ALL_PASS 3/3. Full record
     below. Queue head for the next tick: fauna-30 skep bees (row 21).
+23. **[QUEUED fauna-33 proposal, 2026-09-19] barnyard barn swallows —
+    homestead species (queue-empty proposal, fauna-32 cadence).** The
+    fauna-32 pure-motion chassis (airborne orbit cloud, zero ground
+    geometry, frame-copy or sky-lane seat) opened INSECT-AND-BIRD AIR as
+    a fauna class; the barnyard's own aerial species is the barn swallow
+    — the bird that literally nests in the stable's eaves (village logic:
+    the livery already has horses at the rail + owl on the post; the
+    swallows sweep the yard between them, and Bill's own homestead
+    language carries them). Species sketch: 2-3 swallows in continuous
+    long sweeps LOW across the livery yard (r 4-6m ellipses via 2-3
+    chained orbit parts at y 1.5-3, degPerSec 40-60 — the sweep, not the
+    hover, is the species signature), steel-blue backs + cream underparts
+    + deep-forked tails (the fork is the 18m marker), ~0.18m bodies TRUE
+    SIZE (a bird, not an insect — no marginality bake needed; at 18m a
+    0.18m body ≈ 10px, readable). Motion comps: 3-4 orbits + slight bob;
+    phases staggered. Seat: frame-copy the stable entity (fauna-32
+    precedent) after checking the stable's live tuple, sweeps INSIDE the
+    yard's open envelope (owl post + hitch rail cleared by height band
+    1.5-3 vs their ≤2.35 tops — decode first). RISK: orbit parts travel
+    on CIRCLES in the xz plane only — long diagonal yard sweeps need the
+    circles kept inside the yard's clear rectangle, or a path motion
+    (motion.js path case, exists but unproven in this lane — first
+    exercise would need its own engine-true rig law). Defer to build
+    tick: sweep-rectangle derivation from the live stable/yard census.
 
 ## Per-species rebuild records
 
@@ -645,6 +710,7 @@ domain is commons-next `nx-dress-*` fauna only.
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-22 | fauna-32 (2026-09-18) | skep bees v5 e6ac8fac profile (bee_2 aimed at a=0) + bee_5/bee_4 aimed + gameplay + top frames (`reviews/fauna32-bees/new-bee-{bee_2,bee_5,bee_4}.png`, `new-gameplay.png`, `new-top.png`) — fallback arc stands (identity "stylized honeybee YES" ×2, bands 2-count, wings read, head-LEADING red-marker-proven x=507/960; 18m zero-bees sub-pixel DISCLOSED as scale physics — presence species, the 18m read is the 101px/0.6s motion) until natively confirmed |
 | NATIVE-21 | fauna-31 (2026-09-18) | duck waterline re-seat falsification pair — cand +0.06093 bank + bank_far + bank_close + side frames vs ctrl (live defect tuple) frames (`reviews/fauna31-duckseat/{cand,ctrl}-{bank,bank_far,bank_close,side}.png`) — fallback arc stands (cand PASS floating/freeboard/ripple-contact; ctrl DEFECT-CONFIRMED zero-freeboard) until natively confirmed |
 | NATIVE-20 | fauna-29 (2026-09-18) | frog v7 c3721599 top (bridge reader vantage) + sideprofile + encounter frames (`reviews/fauna29-frog/new-{top,sideprofile,encounter}.png`) — fallback arc stands (top SHIP + sideprofile SHIP; 18m framing-limited robin-law disclosure — encounter-reward species) until natively confirmed |
 | NATIVE-19 | fauna-28 (2026-09-18) | peahen v19 a1f5190f sideprofile + faceprobe + near frames (`reviews/fauna28-peahen/new-{sideprofile,faceprobe,near}.png`) — fallback arc stands (sideprofile SHIP + faceprobe SHIP + ultra PASS-disclosed; 18m framing-limited per robin law, encounter-space species) until natively confirmed |
