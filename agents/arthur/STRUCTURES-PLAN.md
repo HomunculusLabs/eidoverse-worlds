@@ -17840,3 +17840,89 @@ ignored — sha pins in this block are the durable record),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-241,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+
+## struct-242 (2026-09-19): R11-55 NODOID PLACED — the struct-241
+## committed carry executed (W-axis meridian procession head az180 r66 /
+## SW-W band third form)
+
+242%3=2 placement slot with FULL bank (nodoid v3 accepted struct-241)
+-> the committed carry: placement (struct-238/240 precedent). Gate ALL
+PASS real exit 0 tick-start at 2464221f (struct-241; unpiped
+GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged,
+0 OPEN nx-struct rows). Ledger max re-derived struct-241 -> tag
+struct-242 (re-checked immediately before append). Native absent from
+the cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as struct-169..241;
+owed board stays 26 + csaszar v3 + ssd v1 + tetrahelix v2 + rt v1 +
+co v1 + ico v2, plus nodoid v3 now riding).
+
+BANK RE-VERIFICATION before any mutation: deterministic rebuild x2 from
+repo ROOT reproduces the pinned sha exactly (8c9ebff11d9d95af…
+56568ce9, both runs exit 0, envelope line == probe contract
+2.28x3.53x2.28, mtime-verified 02:47 -> 03:18). Decode 8/8 ALL PASS was
+the struct-241 tick's own real exit 0 on these exact bytes.
+
+SEAT (struct242-scan-nodoid, fresh 377-entity census): octant audit
+r66+ places the SW-W octant az180-225 as the under-served band (2 struct
+forms standing — screwwell az180 r88 + whisperhorn az224 r89; tied with
+oct5/7 at 2, SW-W kept for the meridian). Band audit: 2 standing (soft
+cap 6; + nodoid -> 3, NO exceedance). Seat az180.0 r66.0 (-66.00,
+0.00): composes the W-axis MERIDIAN PROCESSION nodoid r66 -> millrace
+az175 r77 -> screwwell r88 (~11m rhythm, E-axis procession convention)
+— the CMC family's last member opening the walk its non-rotational
+cousin (the helicoid screwwell) closes. NN 12.64 to nx-struct-millrace
+(law 8). 48-gon-exact SAT worst 3.81 vs nx-temple-terrace-0035 (law
+1.4). Walk-clear 37.41.
+
+SELFTEST RED->GREEN (struct-240 NaN law, baked into the scan chassis):
+satWorst fired at nx-craft-statuary-0026's own center reports -7.060
+(guaranteed overlap refused; coverage counters exact 1 / radial 285 /
+disc 2 / exempt 4) — the exact-SAT path proven live before any
+candidate number was trusted.
+
+YAW LAW (procession convention, struct-217/219/224/228/232/234/236/
+238/240): local az alpha -> world az (alpha - yaw). Judged reading face
+local az90 at anti-travel az0 + 30deg east lean (struct-104 oblique
+band) -> yaw_deg = -120 - 180 = -300 -> 60.00 -> YAW = 1.047198 rad.
+The nodoid is a surface of revolution (48-gon lathe: exact mod
+7.5deg) — the yaw follows the convention and protects the judged read.
+
+TERRAIN (struct242-terrain-nodoid.ts, this tick): 97pt over the TRUE
+rotated 48-gon (center + 48 verts + 48 edge-mids), spread 1.2mm, PY =
+lowest = -0.026032 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=48 class): the two-tier dais lower tier R1.14 (corners ON
+the axes) is the footprint; column max horizontal reach 1.14 (envelope
+half-width) == dais R — the brass NEVER overhangs, so the 48-gon IS the
+true ground footprint (no overhang disclosure needed). Exact
+convex-polygon SAT (edge-normal axes of both polys, max-gap law)
+replaces the square-bbox proxy — struct-19 disc law class. Disc
+neighbors keep point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct242.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 377),
+upload store/8c9ebff11d9d95af.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [-66.000000,
+-0.026032, 0.000000] yaw 1.047198 comp {} census 377->378; idempotent
+rerun ALREADY_SEATED 0 verbs. Ground circuit walk 6/6 CORE_ALL_PASS
+maxArrival 0.31m (two-way meridian approach threading the procession
+line past the dais + full CW standoff circuit at 6m — no phantom
+collider; folly by presentation, the threaded bead column is the
+sculpture). Walk stdout carries the known distant support-seam
+diagnostics class (dress/temple entities, foreign lanes, abstentions
+only).
+
+Bill eye-check pointer: on the far W walk — where the millrace pours
+and the screwwell turns, the walk now OPENS with the CMC family's last
+member: THE NODOID, a column of eleven beads, bright brass and dark
+iron alternating, where the gold shoulder of each bead sinks through
+the dark flank of its neighbors — the beads that pass through each
+other, the tangent reversing at every neck. The stone of the dais cuts
+the bottom bead like water holding it; at the crown, one warm point
+after dark.
+
+Files: struct242-scan-nodoid.ts + struct242-terrain-nodoid.ts +
+struct242-walk-nodoid.ts + next-place-struct242.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-242, D+0 E+1). One upload, one verb. Zero pushes.
