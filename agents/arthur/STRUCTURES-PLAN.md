@@ -19700,3 +19700,191 @@ re-derive the form from the ledger grep: snub cube the last
 named-unclaimed Archimedean, a Bill handedness call; rhombic solids /
 non-Archimedean families per struct-253's grep; fresh five-file grep to
 confirm the gap before building) or Bill's verdict routing.
+
+## struct-257 (2026-09-19): R11-65 THE RHOMBICOSIDODECAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-258 committed carry)
+
+257%3=1 build slot, bank EMPTY after trcubo struct-256 -> build tick per
+the ten-tick precedent (bank alternation is the lane's working cadence).
+Gate ALL PASS real exit 0 tick-start (unpiped, GATE_EXIT:0 at fecd237a
+epoch — dress-189 HEAD). Shard drained fresh (IMPROVE-PLAN pin 7fa8a224
+unchanged since struct-238, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-256 -> tag struct-257 (numeric extraction, re-checked immediately
+before append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..256; owed board unchanged 26 + csaszar
+v3 + ssd v1 + tetrahelix v2 + rt v1 + co v1 + ico v2 + nodoid v3 + tico v2
++ toct v1 + tret v2 + tcube v1 + tdodec v1 + srcubo v1 + trcubo v1, plus
+rico v1 now riding). No interrupted 257 window existed (no
+struct257-*/next-place-struct257 files pre-tick).
+
+FORM SELECTION fresh five-file grep (the struct-256 queue-head named the
+sweep): rhombicosidodeca / rico / cantellate — 0 real claims across
+STRUCTURES-PLAN (only the unclaimed-pointer lines), IMPROVEMENTS (pointer
+lines in struct-252..256 entries only), CITY-PLAN, IMPROVE-PLAN,
+NEW-VILLAGE-PLAN. The ARCHIMEDEAN branch's NINTH member (cubocta 237,
+tico 243, toct 245, tret 247, tcube 249, tdodec 251, srcubo 253, trcubo
+255). Selected over the snub cube: rico is ACHIRAL (no handedness
+decision owed Bill; the snub stays named for his call), and the
+vertex-coordinate table is exact and closed-form (Wikipedia, edge 2).
+Kin barred: icosidodecahedron (rt's direct dual, struct-235 sweep),
+rhombic dodecahedron (rt's zonohedron kin).
+
+CONCEPT: TWO PARENTS, ONE CHILD, BOTH WHOLE. The seventh member GREW the
+cube (srcubo); the ninth grows the DUALS — and discovers they share their
+growth: the Conway CANTITELLATE (expand) of the DODECAHEDRON and of the
+ICOSAHEDRON produce THE SAME SOLID. Pull the dodeca's twelve pentagons
+outward WHOLE, belt a square at every parent edge; pull the icosa's
+twenty triangles outward whole, belt a square at every edge — the same
+child: 12+30+20 = 62 faces, the dodeca's F+E+V and the icosa's F+E+V
+mirrored (12/30/20 vs 20/30/12). Each parent reads the same 62 faces as
+its own element census — the duals reconciled in one skin (T6b, told
+twice, machine-verified via the direction-dual icosa at midradius phi,
+edge exactly 2, belt SHARED — dual edges cross primal edges at their
+common midpoints). Nothing is cut: both parents stand INSIDE, WHOLE
+(dodeca worst margin 1.1531m, icosa 1.8515m scaled), and the child
+carries exactly (23-3*sqrt5)/3 ~ 5.4306x the dodeca's mass (T6,
+divergence == closed (8/3)(60+29*sqrt5), parent pyramids == 2(15+7*sqrt5),
+dual-computation to 1e-12). Presentation: PENTAGON-DOWN, 5-fold (family
+seat law: tico pentagon-down, tdodec decagon-down) — the dodeca parent's
+own face, uncut, FLAT on the dais; lower-ring pentagon twist-snapped
+dead-on +X (toct snap-sign law, verified by measurement). STONE carries
+the FORTY-TWO dodeca-census faces (12 parent pentagons + 30 binding
+squares) + the SIXTY-TWO-sided dais (one side per face — theme-number
+law); IRON carries the TWENTY TRIANGLES (the icosa parent's faces, dark)
++ all 120 seam bonds. Night contract: TWELVE warm brass beads at the
+twelve parent-pentagon centers — the dodeca's faces, lit (srcubo/trcubo
+pattern, pentagon family): one CROWN on an iron finial stem (tret v2
+occlusion law, clearance 1.085 >= 0.225) + TEN WAIST in two exact 72
+rings (upper ring interleaved at exactly 36.00 deg — geometry-decided,
+disclosed; the tdodec's own interleave) + the TWELFTH PRESSED INTO THE
+EARTH beneath the flat foot (tico's-twelfth idiom — eleven read at night,
+twelve in truth, disclosed). The thirty squares and the twenty iron
+triangles stay dark.
+
+PARAMETRIZATION (exact, closed-form): verts = all EVEN permutations of
+(+/-1,+/-1,+/-phi^3) (24) + (+/-phi^2,+/-phi,+/-2phi) (24) +
+(+/-(2+phi),0,+/-phi^2) (12) = 60; edge 2; R = sqrt(8phi+7) =
+sqrt(11+4sqrt5) (closed form, T5). Face dirs: 12 pentagons on the
+(0,+/-phi,+/-1)-cyclic family (the dodeca's FACE dirs); 30 squares on
+the DODECA's edge-midpoint dirs (1,phi,phi^2) — NOT the standard-coords
+icosa's (1,phi^2,phi); 20 triangles on the dodeca's vertex dirs.
+Dihedrals exactly TWO classes (T5): sq-pent dot sqrt((5+sqrt5)/10)
+(interior 148.2825 deg) x 60 edges; tri-sq dot phi/sqrt3 (interior
+159.0948 deg) x 60; zero same-family edges.
+
+PROBE (struct257-probe-rico.ts, tracked) 9/9 ALL PASS real exit 0; RED
+control (--red displaces vertex 7) 4 LAW FAILS exit 1 verified (T2/T5/
+T7/T8). FOUR probe self-catches this tick, all law-level, verified by
+machine before patching (tdodec/tcube precedent class): (1) SQUARE-DIR
+FAMILY — first draft took square dirs from the standard-coords icosa's
+edge midpoints (1,phi^2,phi): WRONG family ("face plane not level"
+hard-throw); the standard-coords duals are mirror-permuted, not
+direction-aligned. True square planes on the dodeca's edge-midpoint dirs
+(1,phi,phi^2), hand-verified on the vertex table (4-vert tie at 4.236068
+along (1,phi,phi^2)). (2) PARENT-VOLUME DERIVATION — first draft
+measured the CHILD's pushed-out pentagon plateau (4.129) as the parent
+inradius: false ratio; the honest law derives the parent's OWN support
+number from PARENT_D (2.2265 at edge 2) — the expand TRANSLATES faces
+outward, the parent's whole-constraint stands inside. (3) SNAP SIGN —
+first draft used twist -az0 and landed at 2*az0 = -0.63 rad (T7 snapAz
+FAIL); Rodrigues-about-+Y by t maps az a -> a-t, so twist = +az0 (tdodec
+chassis law, measurement-verified hard throw added). (4) RING LATTICE —
+first draft tested both waist rings against {72k} alone and false-failed
+the upper ring's 180-deg member; the upper ring INTERLEAVES at exactly
+36.00 deg (5*180 = 900 = 2.5*360 — odd multiple), the honest read of
+this solid's belt (tdodec's own disclosed interleave).
+
+BUILD (agents/arthur/assets/mkv3-rico.ts, staged -f): root identity
+(struct-188 law); texMat lanes rico_stone/rico_iron (struct-38 law);
+bead emissive 0x9a7030 @ 1.4 in-GLB (tico v2 + toct + tret + tcube +
+tdodec + srcubo + trcubo build-time law); 184 pre-merge meshes + 1 KEEP
+glow group glow_rico_12; envelope law green in-build 7.20x8.07x7.19 ==
+probe contract. v1 deterministic x2 byte-identical sha256
+eb407abd9828427c10b2577af559dbb3be56eaf55a7dd54ede2e1fece0d053d9
+(mtime-verified; rendered bytes == banked bytes, bounds exact).
+
+DECODE (struct257-decode-rico.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (rico_iron + rico_stone + glow_rico_12); D2 62-gon
+dais TRUE box +/-3.600//+/-3.595 corners present sole min y -0.000000;
+D3 iron lane split 9532 verts = 9240 rod + 52 finial-stem + 240
+triangle-plate + 0 unclassified, bond coverage 120/120; D4 1587
+pentagon/square-plate verts worst 58mm (<= 62 shell); D5 beads 12/12
+parent-pentagon clusters (crown stem-lifted + 10 waist two-ring + 1
+foot pressed), DARK-FACE BEAD HITS 0 (the 30 squares + 20 triangles
+stay dark), emissive sole-night, eleven aloft + foot buried; D6
+grounding sole at grade + ground band; D7 envelope drift 0.00mm; D8
+texMats 2/2. RED control (village_trcubo3.glb — the sibling
+Archimedean's own bytes): D1 census FAIL clean stop exit 1.
+
+RENDERS: struct257-render-rico.ts (tracked chassis, struct253/255
+lineage) 9 frames on the EXACT pinned bytes — bounds
+min[-3.600,-0.000,-3.595] max[3.600,8.070,3.595] == contract;
+reviews/struct257-rico/ (ignored — sha pin above is the durable record).
+
+CLOSEFACE ARBITRATION (probe laws 0b/11 exercised): the ZAI closeface
+judge on the stock CROPPED frame claimed a missing panel / sky-through
+gap at (390,0)-(560,160) + sliver (775,0)-(815,55) — both AT THE TOP
+FRAME EDGE. Decode-first (struct257-platecheck-rico.ts, tracked): ALL 62
+FACES CARRY PLATE VERTS (min 452/face, crown 814) — no missing panels,
+the claim is false at the geometry level. Camera arithmetic: the stock
+closeface (target y 4.03, dist 8.28, half-h 3.18) frames only y
+0.85..7.21 — the crown pentagon + finial (to y 8.07) are CLIPPED, and
+clipped-crown-against-sky reads as "gap". Re-presented UNCROPPED
+(struct257-render-fullclose-rico.ts, 12m full-height framing):
+re-judged 3/3 PASS — "top cap demonstrably watertight... the prior FAIL
+is attributable to framing, not the model" (grazing-angle crown shading
++ the intentionally sky-crossing finial stem misread as aperture). Class
+note: the stock closeface framing clips any 8m-tall family member's
+crown; struct-258's render chassis should use the full-height framing
+for closeface when height > ~7.2m.
+
+JUDGMENT v1 (ZAI FALLBACK — native cron-absent, disclosed, rides the
+owed board as rico v1): day gameplay 18m 4/4 PASS (identity
+"unmistakably a polyhedron", silhouette closed, seams continuous,
+finial seated, grounding attached-shadow, materials two distinct
+families; minors: shadow mass detached dais-side, dais faceting sub-18m,
+hairline stem — all family-wide disclosed-Minor class). Night 3/3 PASS
+(exactly 5 warm points resolved at this azimuth — crown + 4 waist,
+single-azimuth-yield precedent, decode D5 proves 12 with 1 buried; zero
+bloom/spill; faceted silhouette legible). Closeface 3/3 PASS after
+decode arbitration (see above). v1 ACCEPTED BANKED NOT PLACED — no real
+defect, no iteration needed.
+
+DISPOSITION: placement = struct-258 committed carry (fresh census scan,
+under-served band/district selection, 8m NN + per-district soft cap 6
+audit, 62-gon-exact polygon SAT struct-19 class, oblique-yaw struct-104
+band, terrain preflight over the TRUE rotated 62-gon, hash-gated plain
+spawn nx-struct-rico, comp {}, ground circuit walk). Folly class —
+presentation dais R3.60 apothem 3.595, walk standoff 8m law applies
+directly (apothem 3.595 -> 8m square circuit chord-mid ~4.5m >> 1.4).
+Yaw exact mod 72 deg (5-fold pentagon-down seat, tico/tdodec precedent).
+
+Bill eye-check pointer (after placement): the Archimedean branch's ninth
+member — where the truncations CUT and the srcubo GREW the cube alone,
+THE RHOMBICOSIDODECAHEDRON grows the DUALS and finds them sharing one
+child: the dodecahedron's twelve pentagons and the icosahedron's twenty
+triangles, both pulled outward whole, bound by thirty squares that
+belong to each — the same belt, the same 62 faces, each parent reading
+the sculpture as its own element census, faces and vertices swapped.
+Nothing was cut; both stand whole inside (the dodeca's corners a full
+metre clear). After dark, twelve brass beads mark the dodeca's twelve
+faces, lit — one on the finial at the crown, ten ringing the waist in
+two five-pointed bands, and the twelfth given to the earth beneath the
+flat foot. The squares and the icosa's dark triangles stay unlit.
+
+Files: struct257-probe-rico.ts + struct257-decode-rico.ts +
+struct257-render-rico.ts + struct257-platecheck-rico.ts +
+struct257-render-fullclose-rico.ts (all NEW, tracked),
+assets/mkv3-rico.ts (NEW, staged -f), reviews/struct257-rico/ (10
+frames, ignored — sha pin above is the durable record),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-257,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
+
+Next queue head: struct-258 placement tick (the committed carry above);
+after it lands, next build sweep re-derives from the form ledger (snub
+cube the last named-unclaimed Archimedean, a Bill handedness call;
+truncated icosidodecahedron / great rhombicosidodecahedron the natural
+tenth per the trcubo precedent; rhombic solids / non-Archimedean
+families per struct-253's grep) or Bill's verdict routing.
