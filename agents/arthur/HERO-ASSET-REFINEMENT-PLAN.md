@@ -1276,3 +1276,54 @@ next wake once the gateway answers.
   its pole — motif geometry, artwalk coordination), (b) bone-slate vs
   navy hue nuance (fine as judged), or (c) re-survey plaza-core on fresh
   evidence.
+
+### polish-297 — carousel rose-coat night identity (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-296 navy-coat build (live was
+  bad22d19). Queue-head candidate from polish-296's close (rose night
+  occlusion), re-judged fresh this tick on exact live bytes.
+- Defect (judge, night 18m): the ROSE horse functionally invisible —
+  70–80% occluded behind the bone horse (spin-transient alignment,
+  authentic per polish-294), and its visible slivers VALUE-DEAD (lum
+  0.102, darkest coat) — mis-read as "red tack/blanket on the white
+  horse". Ranking bone > gold > navy > rose. Judge's angular-offset
+  alternative rejected: geometry would touch the polish-283 rollout
+  contract (motion roots, seat Y=3.035); the material lever cures the
+  mis-read.
+- Change (ONE intervention, new production step
+  `carousel-horse-prototype/rosecoat.ts`, navycoat chassis):
+  emissive-only edit horse_6_rose_paint [0.30,0.05,0.04] →
+  [0.52,0.10,0.08]. Lum 0.102→0.188 (+84%): above navy .185/gold .173,
+  below bone .254; R/B 6.5 keeps a huge hue split (panels 1.87, bone
+  1.33). Day delta +22 sRGB (half polish-295's cleared +42).
+  Single-primitive scope (horse_6_0[0], 8021 verts) probe-proven.
+- Candidate `acee7bcf13d20bf2…` A/B byte-identical ×2; NaN scan clean
+  (full output = 0 bad entries); 15/15 views clip-clean; night band
+  89→116, day 118→140; horse_2-solo controls 4/4 byte-IDENTICAL
+  (confinement proof).
+- Judge verdicts (ZAI fallback, no native vision this cron session,
+  native re-judge owed — same class as polish-285..296): NIGHT PASS all
+  six items — rose head ear+muzzle silhouette above the bone backline
+  now does the identificatory work, "tack does not include a head with
+  ears"; bone stays ~1.5× brighter (correct hierarchy); lanterns still
+  brightest; painted-wood not glow-orb; zero new defects. Watch-item:
+  coral/salmon drift is the dark-surround value floor — do not raise
+  further. DAY PASS — natural painted wood, no washout, palette
+  harmonious.
+- Deploy: dry-run initially tripped its no-overwrite report guard (the
+  "runtime failure" on retry was the 'wx' open on the same report path
+  — recovered on a fresh report path, DRY_RUN_READY); `--apply`
+  PLACED_VERIFIED (1 upload + 8 verbs), 7-key comp bag replayed
+  verbatim; idempotent rerun ALREADY_TARGET_VERIFIED (0/0); live census
+  pin `store/acee7bcf13d20bf2.glb` @ (-18, 0.0001495, 18) yaw 2.35619
+  exact. Served sha == upload sha (identity); served decode keeps
+  [0.52,0.10,0.08] on horse_6_0[0] only.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-297-carousel-rose/`
+  (before/ = live bad22d19 build full 15-view rig + baseline GLB;
+  after/ = rose-coat candidate; deploy dry/apply/idem reports +
+  verified served bytes; census-baseline.json).
+- Next: judge-remaining candidates — (a) crown-hub/valance second-pass
+  warm rim (judge-named at polish-290 close, still unjudged), (b) navy
+  sky-value runner-up (pre-existing polish-296 nuance; whisper-raise
+  candidate — judge fresh first), or (c) re-survey plaza-core on fresh
+  evidence.

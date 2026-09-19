@@ -1,0 +1,18 @@
+{
+  "status": "ABORTED",
+  "world": "commons-next",
+  "id": "nx-carousel",
+  "apply": false,
+  "inputs": {
+    "file": "agents/arthur/reviews/hero-assets/polish-297-carousel-rose/after-candidate.glb",
+    "sha": "acee7bcf13d20bf2eb7d4369b57e123ce92ea8742c1469f4b600061f16c95a48",
+    "fromLib": "store/bad22d1963d3a78b.glb",
+    "baseline": "agents/arthur/reviews/hero-assets/polish-297-carousel-rose/baseline-entity.json",
+    "out": "agents/arthur/reviews/hero-assets/polish-297-carousel-rose/deploy-dry-report.json",
+    "apply": false
+  },
+  "uploadAttempts": 0,
+  "verbAttempts": 0,
+  "updatedAt": "2026-09-19T03:50:02.750Z",
+  "error": "invalid entity tuple"
+}
