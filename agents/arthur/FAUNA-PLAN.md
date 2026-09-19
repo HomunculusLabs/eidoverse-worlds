@@ -666,6 +666,29 @@ domain is commons-next `nx-dress-*` fauna only.
      fauna42-seat-sweep seated the best lawful seat (−27.5, 26.5) —
      1.492m clear of the cottage, mosaic 0052 film-clear at 1.05m
      (forage-beside-art, sheep law honored).
+29. **[PROPOSED fauna-43, 2026-09-19] red squirrel — next species candidate
+    (homestead-adjacent wild; the goats/ducks/bunnies first tier is fully
+    stood: goats fauna-1, ducks fauna-3/31, hutch rabbits fauna-4 + wild
+    rabbits fauna-38).** The timber-trade edge's own animal: Eurasian red
+    squirrel PAIR (ONE entity), concept = upright sentinel on/near a log
+    with nut-in-paws (THE classic sitting squirrel) + low log-runner
+    forager. Species markers for the build: russet-red coat (no red mammal
+    stands — the fox is rufous-orange, asleep at the far SE den), THE TAIL
+    PLUME (half body length, arced over the back — the single strongest
+    silhouette marker), winter ear tufts, pale belly, dark eye+claw points.
+    Marginality: ×1.6–1.8 bake per robin/frog law (true 20cm body is
+    encounter-class); judge at encounter + the timber-edge reader line.
+    Motion plan: tail swish Z (the species signature, sweep-probed), head
+    Y-scan, ear-tuft flick (nested in head, bcat_ears pattern), 2 breathing
+    bobs, forager scurry-bob; phases staggered. Anchor hosts (live-census-
+    verified 2026-09-19): FIRST `nx-dress-ne-woodstack-001` (59.71,−0.03,
+    51.78) — the NE woodstack + timberyard (76.7,69.4) story zone, r≈78
+    quiet reader band; FALLBACK `nx-town-woodyard` (16,0,31) core working
+    edge (r≈35, dog-37 precedent) or `nx-dress-nw-logpile-001` (−66.8,
+    51.2). Seat sweep against the live census at build tick (fauna-42
+    chassis); KEEP prefix `sqrl` (collision-free vs mergekit by
+    inspection). Build needs nothing further per domain law; PLACING in a
+    district follows the seat-scan law (skill reference).
 
 ## Per-species rebuild records
 
