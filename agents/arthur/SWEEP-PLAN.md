@@ -15801,3 +15801,48 @@ byte-equal incl. a light and the carousel), post-rewrite drift vs live epochs
 A and B ZERO, entity diff vs the sweep-331 baseline exactly [arrival
 nx-struct-nodoid, arrival nx-dress-heron-001, nx-hearth lib+bbox+comp-key-
 order]. sweep-333's pre-write assertion MUST use e4d3553a71509d7f.
+
+sweep-333: CLEAN SWEEP, single-epoch fully quiet tick (102nd consecutive
+quiet-or-classified). Tick-start HEAD 46707cfc (struct-243 banked-not-
+placed); standing gate ALL PASS real exit 0 FIRST TRY (ledger law 2370969
+exact at the gate's own printed total). Census epoch A 379==379 vs the
+committed sweep-332 baseline (true sha16 e4d3553a71509d7f per the
+correction of record; compact-projection identity confirmed — censusA
+sha16 b3698abf30a3c737 byte-identical to the sweep-332 intermediate):
+0 arrivals, 0 departures, 0 drift on the full 9-field projection. Epoch B
+20s-paced re-read: FULLY QUIET (0/0/0), 379==379 byte-identical —
+single-epoch stable, NO baseline rewrite needed (committed e4d3553a
+remains the standing baseline). OVERLAP: SAT fresh-live 341 bbox
+non-light / 247 exempt-classified / 0 coverage holes, verdict SWEEP HAS
+FINDINGS on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 — known Sev 2 routed to artwalk b26 choreography @ sweep-43, 289th
+sweep since routing, NOT new, no escalation due (the law keys on
+severity-1). WALKS: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg
+real exit 0, legs run individually per the sweep-228 ceiling law — core
+64/64 ALL_PASS maxDist 0.380 (next-walk-core-paths.ts; [physics] banner
+parse handled), NW 5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7 (0.00/0.29/
+0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/0.34/0.37/0.31) — dists
+identical to the sweep-319..332 canon. Tier-2 311th cycle per the
+committed sweep-332 pointer: forge 6/6 ALL_PASS (dists 0.2608/0.307/
+0.3001/0.315/0.375/0.2607, interior-walk-forge.ts) + potter 6/6 ALL_PASS
+(0.27/0.366/0.2953/0.2547/0.2497/0.3493, interior-walk-potter.ts), both
+real exit 0, both tools ls-verified present on disk BEFORE this prose
+(1559B Aug 30 08:32 + 1571B Sep 7 13:44 — match the committed pointer
+exactly). INTEGRITY: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[]
+(287th consecutive clean); sweep89-battery 28/28 PASS on census-A bytes
+(no RED phase needed — zero arrivals/drift this tick, pin set already
+current); carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified (polish-299 standing); comp-bearing 44; lights 38; thing
+341. Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f
+read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged (zero
+open queue rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged,
+assigns sweep no reset role — the audit-continues freeze banner governs
+via loop/plan reload. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-334): longhouse + garden-cottage (312th cycle —
+LRU chain re-derived from committed pointers this tick: forge/potter
+@333 walked fresh, hall/bunkhouse @332, row-cottage/observatory @331,
+inn/tower-house @330, longhouse/garden-cottage @329 stalest standing
+pair at 4 sweeps; walk tools interior-walk-longhouse.ts +
+interior-walk-garden-cottage.ts, ls-verified present on disk BEFORE this
+prose — 1524B Aug 30 09:02 + 1537B Aug 30 08:39).
