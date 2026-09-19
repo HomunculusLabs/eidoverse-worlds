@@ -31,6 +31,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | rooster | `nx-dress-rooster-001` | (31.25,−0.02772,−9) yaw −1.3 | **af35212e** (fauna-26) | NEW 2026-09-18 — the flock's cock: single bird, tall serrated red comb + gold hackle mantle + 2-tier sickle fountain cresting just below the comb, at the coop-yard sentinel seat between the lane and his hens; 5 motion comps — the hen flock's missing bird stands |
 | peahen | `nx-dress-peahen-001` | (−45.1,0.03286,67.5) yaw 0.196 | **a1f5190f** (fauna-28) | NEW 2026-09-18 — the peacock's audience: earth-brown foraging hen (cream foreneck arc, short dark drooped tail, teal-paddle crest), 2.84m from his display on his reader's line; 4 motion comps — the show-bird pair is complete |
 | skep bees | `nx-dress-bees-001` | (−53.566,0.038,54.5) yaw 2.3562 (FRAME COPY of the skeps row) | **e6ac8fac** (fauna-32) | NEW 2026-09-18 — the village's first PURE-MOTION fauna: 7 honeybee workers (×2.8 marginality), 4 ringing the real hives + 3 working the lavender blossoms; zero ground geometry; 7 motion comps (4 orbit + 3 bob) — the apiary's pollinator stands |
+| barn swallows | `nx-dress-swallows-001` | (49.5,−0.03907,0) yaw 0 (yard-center AIR SEAT) | **9e3f6b05** (fauna-34) | NEW 2026-09-19 — three true-size barn swallows circling the livery yard in three independent rings (low W sweep over the horses + SE pocket + high sweep above the owl post), banking into the turn; 9 motion comps (3 orbit + 6 wing pendulums nested in the orbit anchors); zero ground geometry — the yard's AIR lives between the horses at the rail and the owl on the post |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -522,30 +523,49 @@ domain is commons-next `nx-dress-*` fauna only.
     ctrl DEFECT-CONFIRMED, ZAI fallback, native debt NATIVE-21); 8 verbs,
     census 373→373, idempotent 0 verbs, walk ALL_PASS 3/3. Full record
     below. Queue head for the next tick: fauna-30 skep bees (row 21).
-23. **[QUEUED fauna-33 proposal, 2026-09-19] barnyard barn swallows —
-    homestead species (queue-empty proposal, fauna-32 cadence).** The
-    fauna-32 pure-motion chassis (airborne orbit cloud, zero ground
-    geometry, frame-copy or sky-lane seat) opened INSECT-AND-BIRD AIR as
-    a fauna class; the barnyard's own aerial species is the barn swallow
-    — the bird that literally nests in the stable's eaves (village logic:
-    the livery already has horses at the rail + owl on the post; the
-    swallows sweep the yard between them, and Bill's own homestead
-    language carries them). Species sketch: 2-3 swallows in continuous
-    long sweeps LOW across the livery yard (r 4-6m ellipses via 2-3
-    chained orbit parts at y 1.5-3, degPerSec 40-60 — the sweep, not the
-    hover, is the species signature), steel-blue backs + cream underparts
-    + deep-forked tails (the fork is the 18m marker), ~0.18m bodies TRUE
-    SIZE (a bird, not an insect — no marginality bake needed; at 18m a
-    0.18m body ≈ 10px, readable). Motion comps: 3-4 orbits + slight bob;
-    phases staggered. Seat: frame-copy the stable entity (fauna-32
-    precedent) after checking the stable's live tuple, sweeps INSIDE the
-    yard's open envelope (owl post + hitch rail cleared by height band
-    1.5-3 vs their ≤2.35 tops — decode first). RISK: orbit parts travel
-    on CIRCLES in the xz plane only — long diagonal yard sweeps need the
-    circles kept inside the yard's clear rectangle, or a path motion
-    (motion.js path case, exists but unproven in this lane — first
-    exercise would need its own engine-true rig law). Defer to build
-    tick: sweep-rectangle derivation from the live stable/yard census.
+23. **[CLOSED fauna-34, 2026-09-19] barnyard barn swallows — proposed
+    fauna-33, BUILT + SEATED fauna-34 (2026-09-19).** ONE entity
+    `nx-dress-swallows-001`: three TRUE-SIZE (0.18m — no bake; a bird,
+    not an insect) barn swallows circling the livery yard in three
+    independent rings, banking into the turn. **v6 sha16
+    9e3f6b05f1f41ab8** (full
+    9e3f6b05f1f41ab8dc215ce87f2bcbd4f861d6558aea5dbfb2f7c508f98f45cd —
+    judge-closed bytes: 18m VISIBLE ×2 + 3/3 side profiles YES + from-
+    below YES 4/4 ×2 + dead-rear bird/bank YES + plan layout CLEAR +
+    encounter YES; decode GREEN + RED control; deterministic ×2). 9
+    motion comps live (3 orbit + 6 wing pendulums NESTED inside the
+    orbit anchors — rotatePartAtPivot on captured base, cow-ears class).
+    **Seat: (49.5, −0.03907, 0) yaw 0** — the yard-center AIR SEAT
+    (concentric-above, ducks-on-pool kin); terrain 9pt spread 8.2mm, PY
+    = live heightAt. Census 376→377 exactly, 10 verbs (upload+spawn+9
+    comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 3/3
+    (fauna-19's own road-end→yard visitor line, arrivals 0.00/0.29/
+    0.31m), live bbox 5.89×1.262×4.322 == decode envelope. Village
+    logic closed: the livery's AIR now lives — horses at the rail below,
+    owl on the post beside, swallows sweeping the yard between them
+    (Bill's own homestead language: swallows nest in the stable's
+    eaves). Full record + laws below. Queue proposal appended:
+    fauna-35 grey heron at the reedpool E bank (row 24).
+24. **[QUEUED fauna-35 proposal, 2026-09-19] grey heron at the reedpool
+    E bank — homestead species (queue-empty proposal, fauna-34
+    cadence).** The reedpool's fifth resident: the patient fisher
+    standing in the shallows. Village logic: the pool already lives from
+    four sides (ducks W lobe, robin N rim, geese SW bank, frog ON the
+    surface — plus the angler statue fishing SW); the heron is the
+    water's own hunter, and the E bank is the pool's only unoccupied
+    margin. Species sketch: single grey heron in the stand-and-strike
+    pose — grey body/wings, white crown stripe over a dark eye-stripe,
+    snake-neck coiled in S, yellow dagger bill angled down, long dark
+    legs in the waterline, ~0.85m tall true-size (encounter-space
+    species like the robin — the pool's readers arrive at 4-8m). Motion
+    comps: slow head-bob pendulum (the heron's patient nod), occasional
+    neck re-coil, tail-flick; phases staggered. Seat: the E bank
+    shallows — waterline arithmetic from the decoded pool top (frog
+    fauna-29 law: water top world +0.08093; legs wade to mid-shin),
+    facing W across the water toward the angler. RISK: none structural —
+    standard bank seat, concentric-site class (struct-19); the only
+    novelty is wading depth (feet below the water plane, body above —
+    the inverse of the frog's pad seat).
 
 ## Per-species rebuild records
 
@@ -690,6 +710,15 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc (ZAI fallback glm vision, native debt NATIVE-19 below): **19 build versions, 20 judged rounds** — the longest fauna arc. v1 near = ELEPHANT/quadruped read (ears=wings, trunk=neck) → sideprofile chassis added (the contract view) → v2 "ostrich, silhouette works" + real defects (neck-root seam, plank tail, one-leg, beak-tip artifact) → v3 weld+tone cures (neck continuous THROUGH the arc; plank-tail/debris rounds began) → beak v4 dipped cone (horizontal box = plank) → tail arc v4 ellipsoids → v5 ONE plump mass → v6 stagger+toes+bath-delete → v7 narrowed+retrices ("distinct drooped form") → v8 flat xz wedge ("still a rod" — EDGE-ON law found) → v9 tapering cylinder (rod again; articulation missing) → **v10 THE SAGITTAL-PLANE FAN = sideprofile SHIP** ("clearly 4-5 layered broad blades drooping down-back, no rod remnant") → front-quarter arc: v11 neck proud of chest (mammal read persisted — brown-on-brown), v13 CREAM foreneck (pixel-probe falsified the v12 buff: 0 buff px, judge right), v14 wing-points PROUD + grit deleted, v15 lateral neck bend → encounter arc: faceprobe "head ship-ready, crest reads plant" → v16 varied stems + crown dome ("attached, ambiguous") → v17 teal-blue + slim vanes → **v18 FLAT PADDLES + beak forward + head ×1.15 = faceprobe SHIP** ("reads as feathers, alternating tint sells the peahen-crest reference"; wing tips recognized intentional; zero artifacts) → ultra PASS-disclosed (eyes symmetric-correct; beak front-on = dot, sub-pixel physics at 1.4m — her beak reads in the judged face/side vantages; dot-dot-nose mammal lean disclosed, crest saves the read). 18m framing-limited disclosed (0.44m bird ~2% of frame — robin law, encounter-space species; identity gates ran at sideprofile/faceprobe/ultra).
 - Rig/decode laws learned: (a) **a flat element whose plane contains the view axis projects as a ROD** — the side-view contract demands y-extent: sagittal-plane fan blades (wide faces in y-z), NOT xz wedges and NOT symmetric cylinders; two rounds paid for this; (b) **an identity element must contrast its background member by VALUE, not hue** — buff-on-brown (~35%) read as nothing; cream (~95%) reads; pixel-probe the claim before iterating (fauna-23 law b, confirmed); (c) **legs x-separated overlap EDGE-ON from exact side** — a foraging stance staggers fore-aft so both legs read from every vantage; (d) **sub-10mm anatomy (toe fans, brow stripes) reads as DEBRIS** — delete on the second flag (turkey law f claimed the bath AND the grit); the profile-legible foot is ankle→toe→spur in the sagittal plane; (e) **sphere-bead crest tips read BOTANICAL** (berries/buds/sprig) — peafowl tips are flat paddle webs riding the stem direction, alternating hues to kill the plant-uniformity; (f) **the decoder's TRS rotation block was TRANSPOSED** — every prior fauna GREEN was rotation-symmetric (spans/crests/translations) so it slept until this build's asymmetric −0.46 tail pitch read UP instead of DOWN; fixed in fauna28-decode-peahen.ts v2 (columns r0,r1,r2·s not r0,r3,r6·s); no prior placement decision was affected (all prior checks re-derived as spans/translations, invariant under transpose); (g) a same-scale small bird beside a large one must seat BETWEEN him and his reader — the pair reads as display + audience only from the reader's side (dot-gated seat sweep).
 
+### barn swallows — fauna-34 (2026-09-19) CLOSED
+- **v6 sha16 9e3f6b05f1f41ab8** (full 9e3f6b05f1f41ab8dc215ce87f2bcbd4f861d6558aea5dbfb2f7c508f98f45cd), NEW entity `nx-dress-swallows-001` PLACED_VERIFIED at world (49.5, −0.03907, 0) yaw 0 scale 1 — the yard-center AIR SEAT (concentric-above the horses' own x/z; the rings sweep the open yard). Terrain preflight 9pt spread 8.2mm, PY = live heightAt −0.03907. Census 376→377 exactly (sibling +1 mid-arc absorbed by fresh-census law), 10 verbs (upload+spawn+9 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (fauna-19's own road-end→yard visitor line, arrivals 0.00/0.29/0.31m), live bbox 5.89×1.262×4.322 == decode envelope (the AIRBORNE envelope — no ground contact, y-span is the flight band).
+- Build: three TRUE-SIZE barn swallows (0.18m — no bake; a bird, not an insect: at 18m ≈ 10px readable), steel-blue hulls 0x2e4a5c + darker wings 0x25384a + cream underparts 0xede7d8 (v3: WIDER than the hull + dropped — v2's contained box was invisible from side AND below, struct-52) + dark rump band + THE DEEP FORK (two 0.105 streamers fanned ±0.28 with a closed web; the tips spread WIDER than the hull so the V clears the body from rear) + rufous throat 0xb35a3a + cream forehead + tiny dark bill + dark side-set eyes. Wings: keep-groups at the shoulders, 3 tapering blades with rising dihedral (v6: y-thickened 8/8/6mm — the 4mm blades' dihedral stair-steps read as a "detached plate" from exact side). Body groups carry +0.22 rad BANK (all rings turn left; judge confirmed "asymmetric tilt of a turning bird" reads). Anchors swallow_{1,2,3} + _wingL/_wingR (9 KEEP groups; `swallow_` added to mergekit KEEP this tick). 27 mesh nodes / 648 tris.
+- Motion: 9 comps live — 3 orbit (52/62/44°/s; degPerSec POSITIVE only — orbit face points local +z along velocity, bees v5 law) + 6 wing pendulums (amp ±0.50-0.62, periods 0.30-0.38s, phases staggered) NESTED inside the orbit anchors — the wing-survival law (pendulum composes on captured base via rotatePartAtPivot; orbit overwrites only the anchor's own rotation), cow-ears orbit+pendulum class, first multi-bird exercise. Engine-true motion pairs on final bytes: 127px@18m band 269-687, 436px near band 400-882, 233px encounter band 116-154; rig drives REAL motion.js orbit + rotatePartAtPivot verbatim.
+- Rings (seat-local): A (−1.9, 2.40, −1.9) r2.6 — the low W sweep clearing the horses VERTICALLY by 0.40m; B (1.9, 2.50, 4.5) r1.8 — the SE pocket (owl post +0.395, pergola +0.405, tower +0.225 horizontal); C (0.4, 3.60, 1.0) r3.0 — the high sweep, 0.59m above the owl-post top, crossing A/B only with 1.1-1.2m vertical separation. Ring-vs-solid + ring-vs-ring arithmetic in fauna34-decode-swallows.ts (CLEARANCES GREEN; airborne-only SAT class, bees/nvp-134 precedent).
+- Judge arc (ZAI-VISION MCP FALLBACK — the ZAI chat endpoint began rejecting image content mid-arc with error 1210 "allowed values: ['text']" on BOTH coding and paas bases; sanctioned MCP fallback per lane law, disclosed; native debt NATIVE-23): 18m N-lane VISIBLE ×2 (3 birds, elongated silhouettes, no defects) — the ENE road-line vantage is ruledtower-occluded (0px motion pair; fauna-8 shadow-cone class kin — the yard's honest 18m reads are the N coop-yard lane + W approach); 3/3 side profiles YES on final bytes (fork streamers + steel back + cream belly + rufous throat + orange bill); from-below YES 4/4 ×2 (the reader's TRUE vantage — yard readers look UP; pixel probe 12,754 cream px against dark ground); dead-rear bird YES + bank YES (fork foreshortened dead-rear — vantage physics, disclosed); plan layout CLEAR (3 rings, zero intersections); encounter YES (bird silhouette against roofline sky, "natural focal point").
+- Build arc: v1 gun-silhouette read (edge-on 1.6mm paper wings + contained cream + dark streamers on dark ground — three compounding causes) → v2 4mm z-staggered blades + fill light → v3 cream wider-than-hull + solver-aimed level-wing phase probes (v1/v2 caught wings mid-downstroke reading as a "magazine") → v4 fanned fork (dead-rear dark-slot cure) → v5 BANK (nested body group — orbit SETS anchor rotation, wiping authored roll on the anchor itself) → v6 wing y-thickness (side-view stair-gap cure). 6 build versions, 12+ judged rounds.
+- Rig/decode laws learned: (a) **a marker box fully contained inside a sibling's silhouette is invisible from BOTH sides** — the v2 cream underparts (0.033 in a 0.036 hull) had zero visible px from side AND below; containment arithmetic before shipping (struct-52, third costume); (b) **the orbit comp overwrites the anchor node's rotation wholesale** — body bank/pitch must live in a NESTED group (the wing-survival law generalized); (c) **aimed probes need a flap-phase solver** — catching wings at θ≈0 (level) at a profile orbit angle is a 2-constraint solve (1/480s scan); random phases catch mid-strokes that read as defects; (d) **a lateral span (the fork) reads from below/rear, not from dead-side or dead-front** — judge at the vantage the marker's plane actually presents; the side view compresses it species-true shallow; (e) **the ENE road-end 18m vantage into the livery yard is ruledtower-occluded** — the yard's honest long reads are the N lane (0,−18) and W approach; (f) dihedral stair-steps between thin blades read as DETACHED plates from exact side — thicken the y, don't just overlap the x; (g) **ZAI chat completions now reject image content (code 1210) — the glm judge must ride the zai-vision MCP tool** (the standing memory law, now confirmed in-place: no retries on 1210, switch paths).
+
 ### pond frog — fauna-29 (2026-09-18) CLOSED
 - **v7 sha16 c372159974ef9415** (full c372159974ef9415ed773b10edc3928d2a0560a43bf176e6519142b164b275d8), NEW entity `nx-dress-frog-001` PLACED_VERIFIED at world (7.873, 0.08093, −89.132) yaw 3π/4 scale 1 — the reedpool NW-quadrant open water, a water-rider concentric with the host (struct-19 class, ducks fauna-3 precedent): the pad face (entity local y=0) sits EXACTLY at the decoded water top. WATER PLANE DERIVATION (this tick, exact): pool host `nx-struct-reedpool` at (9.723, −0.05907, −90.982) yaw 0 (pure translation), local bytes sha16 7d770620bb1b7bdc == live lib prefix ✓; water disc = mesh 0, top at host-local y 0.140 → world −0.05907 + 0.140 = **+0.08093**. (The angler statue's own city-11 comment independently states "world 0.081 == pool −0.05907+0.14" — two lanes' decodes agree.)
 - **DUCK WATERLINE DEFECT NOTE (recorded fauna-29, NOT fixed — one-species law):** the seated ducks `nx-dress-ducks-001` at PY −0.139 (authored WL −0.119 world) ride ~0.20m BELOW the true water top +0.081 — their fauna-3 placer used rim-plane arithmetic ("water top host-local y 0.14 -> world −0.05907+0.119" — 0.119 is not 0.140; likely rim torus bottom confusion). Live effect: the pair sits visually sunk in the water (hulls half-buried from the bank vantage). Cure (next duck-family tick): remove+respawn same-id at PY −0.061 (their WL 0.02 below the true top −0.020 → wait, −0.081+0.02 = −0.061), keeping tuple/xz/yaw/bytes — a one-verb re-seat. Evidence: this tick's decode + the angler's independent 0.081.
@@ -710,6 +739,7 @@ domain is commons-next `nx-dress-*` fauna only.
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-23 | fauna-34 (2026-09-19) | barn swallows v6 9e3f6b05 yard_gameplay (18m N lane) + bird-swallow_{1,2,3} side profiles + below-swallow_1 + rear-swallow_1 + side (plan) + encounter frames (`reviews/fauna34-swallows/new-*`) — fallback arc stands (18m VISIBLE ×2, 3/3 sides YES, below 4/4 YES ×2, rear bird+bank YES, layout CLEAR, encounter YES; judge = ZAI-VISION MCP fallback after the chat endpoint's 1210 image ban) until natively confirmed |
 | NATIVE-22 | fauna-32 (2026-09-18) | skep bees v5 e6ac8fac profile (bee_2 aimed at a=0) + bee_5/bee_4 aimed + gameplay + top frames (`reviews/fauna32-bees/new-bee-{bee_2,bee_5,bee_4}.png`, `new-gameplay.png`, `new-top.png`) — fallback arc stands (identity "stylized honeybee YES" ×2, bands 2-count, wings read, head-LEADING red-marker-proven x=507/960; 18m zero-bees sub-pixel DISCLOSED as scale physics — presence species, the 18m read is the 101px/0.6s motion) until natively confirmed |
 | NATIVE-21 | fauna-31 (2026-09-18) | duck waterline re-seat falsification pair — cand +0.06093 bank + bank_far + bank_close + side frames vs ctrl (live defect tuple) frames (`reviews/fauna31-duckseat/{cand,ctrl}-{bank,bank_far,bank_close,side}.png`) — fallback arc stands (cand PASS floating/freeboard/ripple-contact; ctrl DEFECT-CONFIRMED zero-freeboard) until natively confirmed |
 | NATIVE-20 | fauna-29 (2026-09-18) | frog v7 c3721599 top (bridge reader vantage) + sideprofile + encounter frames (`reviews/fauna29-frog/new-{top,sideprofile,encounter}.png`) — fallback arc stands (top SHIP + sideprofile SHIP; 18m framing-limited robin-law disclosure — encounter-reward species) until natively confirmed |

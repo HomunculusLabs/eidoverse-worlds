@@ -12,7 +12,7 @@
 import * as THREE from "three";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 
-const KEEP = /^(fire|flame|lamp|glow|ember|bell$|sails$|carousel$|horse_\d+$|orb$|finial$|goal_|well_|sign$|ws_float|hen_|clo_finial$|lab_goal_|knot$|lissa$|goat_|duck_|rabbit_|fox|bcat|barnowl|robin|goose_|sheep_|pig_|dove_|shorse_|cow_|donk_|turkey_|peacock|peahen|frog|roost$|roost_|dl_cloth|mk_awn|dh_strip|gf_crow|pz_kettle|pwheel|hc_wheel|fx_bundle|wy_axe|bee_)/;
+const KEEP = /^(fire|flame|lamp|glow|ember|bell$|sails$|carousel$|horse_\d+$|orb$|finial$|goal_|well_|sign$|ws_float|hen_|clo_finial$|lab_goal_|knot$|lissa$|goat_|duck_|rabbit_|fox|bcat|barnowl|robin|goose_|sheep_|pig_|dove_|shorse_|cow_|donk_|turkey_|peacock|peahen|frog|roost$|roost_|dl_cloth|mk_awn|dh_strip|gf_crow|pz_kettle|pwheel|hc_wheel|fx_bundle|wy_axe|bee_|swallow_)/;
 
 // tex-0: bucket keys must separate differently-TEXTURED materials (same
 // white base color + rough/metal would otherwise merge thatch into plaster).
