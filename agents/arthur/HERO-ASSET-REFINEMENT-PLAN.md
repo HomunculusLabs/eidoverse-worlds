@@ -1935,3 +1935,53 @@ next wake once the gateway answers.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) the
   belltower polish-306 judge-named sub-threshold notes (lamp mount
   sub-pixel nuance, rope hairline), judge fresh first.
+
+### polish-310 — belltower rope thickness (ACCEPTED, LIVE)
+
+- Subject: `nx-town-belltower` (same tuple as polish-306..308; ladder comp).
+  Build source `assets/mkv3-landmarks.ts` (belltower block) ->
+  `village_belltower3.glb` (live was 3e4f470b, polish-308's crown build).
+- Defect (the polish-306 judge-named sub-threshold notes, re-judged fresh
+  this tick from current pixels, belfry rig + 18m gpAim on exact live
+  bytes): the bell rope read as a ~1px line — "a rendering glitch rather
+  than an interactive object", "zero thickness headroom" at close range,
+  will alias in motion. Lamp mount judged sub-threshold-but-second (housing
+  exists; reads "touching the post"); ladder landing acceptable.
+- Change (ONE family edit): rope 0.018->0.030, knot 0.035->0.055, tail
+  0.014->0.024 (6 segments) — same hemp material/positions; clears the
+  brass guide-ring bore (r 0.046) and brace planes by construction.
+- Candidate `b0b1e2766e145c02…` deterministic x2; siblings byte-identical
+  (inn/windmill/carousel3). Decode: 11/10 nodes/meshes unchanged, anchors
+  bell/bell_0/bell_1/lamp, nonFinite=0 (POSITION set), rope bucket
+  98->122 verts in exactly one accessor. Pixel diff confined to the rope
+  band (18m strip 1px -> ~3px core / 7px AA bbox).
+- Judge verdicts (ZAI fallback disclosed — no native vision tool loadable
+  in this cron session, native re-judge owed, polish-285..309 class):
+  A/B PASS — before "reads as a glitch… floating dot + scratch", after
+  "reads as a bell pull-rope… single readable affordance"; thickness
+  "natural, upper comfortable bound, do not increase further"; systematic
+  region sweep = zero collateral changes. Two pre-existing notes recorded
+  not treated: bell/rope off-centerline (authored drop-to-cleat, loop #75),
+  straight hang vs slight bow (optional future nuance).
+- Placed via NEW `next-place-polish310-belltower.ts` (polish-308 chassis,
+  pins 3e4f470b->b0b1e276): PLACED_VERIFIED, 1 upload + 3 verbs, ladder
+  comp replayed verbatim, rider b5 standing, bbox 7.9 exact, idempotent
+  rerun ALREADY_LIVE_NO_VERBS (0 verbs), live census pin
+  `store/b0b1e2766e145c02.glb` @ (6.5,0,6.5) yaw -2.35619 exact.
+- Served-bytes proof (struct-104 law, durable `p310-verify-served.ts`;
+  probe self-caught a DRACO-dedup vert-count miscalibration RED->GREEN,
+  thickness gates unchanged): served DRACO 6ee9089b… ropeMaxRad 0.0301
+  with 13 verts >= 0.025 (impossible at baseline r 0.018), knot 0.0524
+  with 14 >= 0.045, anchors + maxY 7.9 + nonFinite 0. P310_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEADs 25c44549 ->
+  0ec449c7 (fauna-46, struct-257 landed mid-tick — absorbed, normal
+  interlane life).
+- Evidence: `reviews/hero-assets/polish-310-belltower-notes/` (before/ =
+  live 3e4f470b baseline GLB + belfry rig 6 views; after/ = candidate).
+  Probes: `p310-abdiff.ts`, `p310-decode.ts`.
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path — same as polish-285..309);
+  recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) lamp-mount bracket silhouette (judge-named second,
+  close-range class — tiny arm+strap geometry, judge fresh first), or
+  (b) plaza-core re-survey on fresh evidence.

@@ -178,8 +178,14 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     // knot on the block; rope z 0.62→0.58 clears the z-face brace plane;
     // brass guide ring where the rope threads the belfry floor (reads
     // threaded, not through-solid).
+    // polish-310: judged fresh at 18m on exact live bytes — the rope read
+    // as a ~1px line, "a rendering glitch rather than an interactive
+    // object", zero thickness headroom at belfry close range. ONE family
+    // edit: thicken rope/knot/tail (0.018→0.030 / 0.035→0.055 / 0.014→0.024,
+    // 6 segments) — ~2.5px at 18m, still clears the brass guide-ring bore
+    // (inner r 0.046) and the brace planes (z 0.66 vs rope z 0.61).
     {
-        const rr = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, PH - 0.35, 5), mat(0xd4da82, 0.95, 0));
+        const rr = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, PH - 0.35, 6), mat(0xd4da82, 0.95, 0));
         rr.name = "bellrope";
         rr.position.set(0.12, (PH + 0.35) / 2 + 0.2, 0.58);
         g.add(rr);
@@ -190,7 +196,7 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
         guide.position.set(0.12, PH + 0.28, 0.58);
         g.add(guide);
         // the sag: a small knot bulge mid-rope + cleat on the mounting block
-        const knot = new THREE.Mesh(new THREE.SphereGeometry(0.035, 5, 4), mat(0xd4da82, 0.95, 0));
+        const knot = new THREE.Mesh(new THREE.SphereGeometry(0.055, 6, 5), mat(0xd4da82, 0.95, 0));
         knot.name = "rope_knot";
         knot.position.set(0.12, 1.35, 0.58);
         g.add(knot);
@@ -205,7 +211,7 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
         cleat.position.set(0.12, 0.62, 0.58);
         g.add(cleat);
         // hanging bell-end tail (a short free end below the cleat, ON the block)
-        const tail = new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.014, 0.3, 5), mat(0xd4da82, 0.95, 0));
+        const tail = new THREE.Mesh(new THREE.CylinderGeometry(0.024, 0.024, 0.3, 6), mat(0xd4da82, 0.95, 0));
         tail.name = "rope_tail";
         tail.position.set(0.12, 0.44, 0.58);
         g.add(tail);
