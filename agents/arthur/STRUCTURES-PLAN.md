@@ -18789,3 +18789,114 @@ tcube/ (9 frames, ignored — sha pin above is the durable record),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-249, D+0 E+0). Zero world mutations, uploads, verbs,
 comp-edits, shared-budget use. Zero pushes.
+
+
+## struct-250 (2026-09-19): R11-61 THE TRUNCATED CUBE PLACED —
+## the struct-249 committed carry executed (S-SW band sixth form az165.5 r100)
+
+250%3=1 placement slot with FULL bank (tcube v1 accepted struct-249) ->
+the committed carry (struct-240/242/244/246/248 precedent). Gate ALL PASS
+real exit 0 tick-start at 4c9856ba (sweep-339; unpiped GATE_EXIT:0).
+Shard drained fresh (IMPROVE-PLAN pin 7fa8a224 unchanged, 0 OPEN
+nx-struct rows — same pin as struct-238..249). Ledger max re-derived
+struct-249 -> tag struct-250 (numeric extraction re-checked immediately
+before append; a first lexicographic grep-sort reported struct-99 as max
+— self-caught and re-derived properly). Native absent from the cron
+catalog all tick (tool_search fresh: terminal + zai-vision + repoprompt
+only — same disclosed cron-unpayable class as struct-169..249; owed
+board unchanged: 26 + csaszar v3 + ssd v1 + tetrahelix v2 + rt v1 +
+co v1 + ico v2 + nodoid v3 + tico v2 + toct v1 + tret v2 + tcube v1;
+placement tick owes no new judgment — the tcube was judged struct-249).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+13b939ea1a104ae1... == struct-249 v1 pin (mtime 08:54, byte-identical —
+no rebuild needed this tick; the banked build is the exact judged v1
+bytes incl. the finial stem). Probe 9/9 + decode 8/8 (v1 contract) were
+the struct-249 tick's own real exit 0 on these exact bytes. No
+interrupted 250 window existed (no struct250-*/next-place-struct250
+files pre-tick).
+
+SEAT (struct250-scan-tcube, fresh 385-entity census): octant audit r66+
+places the S-SW octant az135-180 as the under-served band (3 octant
+forms standing — band list: millrace az175 r77 + screwwell az180 r88 +
+csaszar az163 r66 + ico az150 r75 + nodoid az180 r66; + tcube -> 6,
+soft cap 6, NO exceedance). The innermost LAWFUL constellation seat
+with real margin = az165.5 r100.0 (-96.814764, 25.038000): the r98.5
+az165.5 candidate was rejected at gap 1.47 (0.07-only margin — the
+struct-248 no-margin class); 1.5m further out buys gap 2.24. NN 26.54
+to nx-struct-screwwell (law 8). 14-gon-exact SAT worst 2.24 (law 1.4,
+nx-cultivation-orchard-0012). Walk-clear 71.41. SELFTEST RED->GREEN
+PASS (struct-240 NaN law): exact-SAT fired at nx-craft-statuary-0026's
+own center reports -10.258 (guaranteed overlap refused; coverage
+counters exact 1 / radial 293 / disc 2 / exempt 4) — the exact-SAT path
+proven live before any candidate number was trusted.
+
+YAW LAW (procession convention, struct-217..248): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az345.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg =
+-120 - 165.5 = -285.5 -> 74.50deg -> YAW = 1.300270 rad. The tcube is
+FACE-DOWN 4-fold about the vertical axis (probe T7: 90deg symmetry
+exact) — the yaw is exact mod 90deg and protects the judged read.
+
+TERRAIN (struct250-terrain-tcube.ts, this tick): 29pt over the TRUE
+rotated 14-gon (center + 14 verts + 14 edge-mids), spread 24.2mm,
+PY = lowest = 0.009262 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=14 class): the 14-gon dais R4.45 ROT=0 (corners ON the
+axes, APOTHEM-FIRST per the struct-247 self-catch) is the footprint;
+solid max horizontal reach + rod 4.232 <= dais apothem 4.338 (probe T7
++ decode D2) — the solid NEVER overhangs, so the 14-gon IS the true
+ground footprint (no overhang disclosure needed). Exact convex-polygon
+SAT (edge-normal axes of both polys, max-gap law) replaces the
+square-bbox proxy — struct-19 disc law class. Disc neighbors keep
+point-to-polygon exact distance.
+
+PLACEMENT: next-place-struct250.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 385),
+upload store/13b939ea1a104ae1.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [-96.814764, 0.009262,
+25.038000] yaw 1.3002702927357754 comp {} census 385->386; idempotent
+rerun ALREADY_SEATED 0 verbs. Ground circuit walk 7/7 CORE_ALL_PASS
+maxArrival 0.368m (two-way az165.5 arrival-line approach + reading-face
+vantage at 7m on the az15.5 face normal + full CW standoff circuit at
+9m — no phantom collider; folly by presentation, the PANELLED solid
+means the walk stays outside the 4.45m dais). Walk standoff law: 9m not
+8m — the tcube's dais (R4.45) would pinch an 8m square circuit to
+1.21m at chord midpoints (below the 1.4 law); 9m puts the tightest
+chord midpoint at 1.91m. Walk stdout carries the known distant
+support-seam diagnostics class (temple/dress entities, foreign lanes,
+abstentions only).
+
+LEDGER SELF-CATCH (honest repair, same tick): the appended struct-250
+prose carried a garbled tail plus three numeric slips (pos y
+0.00009262 vs real 0.009262; SAT worst 2.11 vs real 2.24; yaw rad
+1.300277 vs real 1.300270). Repaired in place BEFORE commit via
+/tmp/struct250-ledger-fix.py (unique-anchor asserts, entry-scoped
+residual check — the first residual check over-matched struct-248's own
+legit 'SAT worst 2.11' and fail-closed with the file untouched; scoping
+fixed, re-run LEDGER_REPAIR_OK, entry count 1, (D+0, E+1) pair and
+totals untouched). The placer/walk/plan files carried the authoritative
+numbers throughout.
+
+Bill eye-check pointer: on the S-SW reach past the millrace and the
+screwwell — where the ico's open cage and the tret's balanced point
+stand on other diagonals, THE TRUNCATED CUBE stands FACE-DOWN: the cube
+with its eight corners cut DEEPER than the family law, six stone
+octagons (the parent's own faces) facing the six directions, eight dark
+iron triangles where the corners were. The theorem standing under it:
+cut at 1/3 the octagons come out irregular — the side ratio is exactly
+sqrt(2) — so regularity demands the deeper cut u = 1-1/sqrt(2), and
+even then 96.65% of the cube remains. After dark the six brass beads
+mark exactly the six parent faces, lit — one on the finial at the
+crown, four at the compass waist, and the sixth given to the earth
+beneath the flat foot. The cuts stay dark.
+
+Files: struct250-scan-tcube.ts + struct250-terrain-tcube.ts +
+struct250-walk-tcube.ts + next-place-struct250.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-250,
+D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-251 build+judge tick (R11-62, empty bank — the
+dodecahedron is the only parent left without its Archimedean echo;
+truncated dodecahedron candidate, fresh five-file grep to confirm).
