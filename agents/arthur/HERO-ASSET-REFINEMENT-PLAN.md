@@ -1563,3 +1563,66 @@ next wake once the gateway answers.
   sky-value runner-up (pre-existing polish-296 nuance; whisper-raise
   candidate — judge fresh first), or (c) re-survey plaza-core on fresh
   evidence.
+
+### polish-303 — mapboard junction gate plaques (ACCEPTED, LIVE)
+
+- Subject: `nx-town-mapboard` (same tuple as polish-301/302, empty comp
+  bag). Build source `assets/mkv3-mapboard.ts` (live was 1a73015f5ec4fdf4).
+- Defect (ZAI judge on exact live served bytes, 18m reader-side,
+  dress-80-calibrated A/B control): the four cardinal spoke-ring
+  junctions read as PLAIN EMPTY CROSSROADS — no distinct node at any
+  road exit; off-road chips read as scatter ("settlements at
+  crossroads" missing — the convergent recipe of both judges since
+  polish-301).
+- Change (ONE intervention): four gate PLAQUES at the cardinal
+  junctions — landmark-brown 0xa06c32 raised relief bars (authored
+  0.30 x 0.12, tangential) straddling the ring band, face 0.5mm shy of
+  the ink rope crest (-0.064 vs -0.0645) so the torus stays the reader
+  extreme (b22 anchor envelope law) and the road reads as passing UNDER
+  the gate. Truthful: the village's four real gates (nx-town-gate-n/s/
+  e/w, polish-272) stand exactly at the cardinal exits; ring buildings
+  correctly sit BETWEEN spokes (36deg family) and were NOT moved.
+- Falsified iterations (all caught by gates, never placed): v1 ink
+  bars ON the chip plane — z-fight risk decode-caught (inn overlap);
+  v2 ink-on-ink INVISIBLE (12px front diff); v3 brass 0xc9a86a too
+  close to parchment (judge: 2 of 4 only); v4 chip-plane occlusion
+  GEOMETRY-LIMITED behind the 30mm ink rope (132px slivers; the
+  polish-52 recessed-glow class in the horizontal plane) — v5 seats
+  the plaques at crest height (the board's own pin precedent, reader
+  face -0.061 vs plaques -0.064).
+- Candidate `02f6cb96442af8cd…` (29 nodes unchanged — gates merge into
+  the landmark-brown bucket), deterministic x2 (mtime-verified), NaN
+  scan clean (served decode nonFinite=0). Pixel diffs vs baseline:
+  back 571px / backnight 128px / backgameplay 128px confined to the
+  four junctions; all other views byte-IDENTICAL (0 px).
+- Judge verdicts (ZAI fallback, no native vision in this cron session,
+  native re-judge owed — same class as polish-285..302): solo back
+  read placed 3/4 plaques (E read "missing"); the 2x A/B control
+  (dress-80 discipline) confirmed ALL FOUR (12/3/6/9 YES) + no other
+  changes anywhere — the solo miss was presentation-driven, not a
+  placement defect. Night: plaques render after dark (chip-law
+  emissive), subordinate to the hub. Reader asked for a 6-o'clock
+  twin + snapping: delivered exactly that, fourfold.
+- Placed via the updated dedicated placer `next-place-polish301-mapboard.ts`
+  (hash gate advanced 1a73015f -> 02f6cb96): PLACED_VERIFIED, 1 upload +
+  2 verbs, comp bag {} preserved, idempotent rerun ALREADY_LIVE_NO_VERBS,
+  live census pin `store/02f6cb96442af8cd.glb` @ (2.5,0,9.5) yaw
+  -2.9441970937399127 exact.
+- Served-bytes proof (struct-104 law, new durable probe
+  `agents/arthur/p303-verify-served.ts`): served DRACO 0a0811ac… vs
+  previous 1138f60c… — every cardinal gained EXACTLY +24 verts
+  (4 x 6 gate-box verts) in the 0.34..0.49 plaque band within +-12
+  degrees of cardinal; ink envelope r 1.790 (connectivity contract
+  holds); 0 non-finite. Probe development caught TWO of its own bugs
+  pre-truth (window too tight 4.5/6.5deg; meaningless spanning>=9
+  control on DRACO-merged served bytes) — RED->GREEN discipline.
+- Evidence: `reviews/hero-assets/polish-303-mapboard-gates/` (before/ =
+  live 1a73015f 12-view rig + baseline.glb; after/ = v1 retained as
+  record; after-v3/ = brass rejected; after-v4/ = occlusion rejected;
+  after-v5/ = ACCEPTED; ab-back-v5.png = the confirming A/B control;
+  backnight probes before/after).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path) — recorded here + ledger
+  instead. Not fabricated.
+- Next: stringlights night survey (named at polish-300 close), or
+  belltower clock face / plaza-core re-survey on fresh evidence.
