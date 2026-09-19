@@ -129,6 +129,27 @@ const ALLOWED = new Set<string>([
   // class. Horn bbox height 2.755 defeats the auto film exemption, so
   // standing-precedent tier applies (angler|reedpool sweep-42 class).
   "nx-struct-whisperhorn|nx-temple-terrace-0040",
+  // sweep-330 (decode-of-record): fauna-34 barn swallows — three true-size
+  // birds circling the livery yard in airborne rings (A y2.40 r2.6, B y2.50
+  // r1.8, C y3.60 r3.0; entity is the yard-center AIR SEAT (49.5,-0.039,0)
+  // yaw 0, lib 9e3f6b05f1f41ab8 — bees fauna-32 kin, but the ring envelope
+  // bbox h1.263 defeats the E2 film tier and the ground-seated entity pos
+  // defeats E3). This pair is NOT a contact at all: the 2D SAT is blind to
+  // y, and the two bboxes are VERTICALLY DISJOINT — swallows geometry min
+  // world y = 2.38 + (-0.0391) = 2.341 (all three rings + wings live above
+  // it), shorse top world y = 1.958 + (-0.0356) = 1.922, conservative
+  // vertical gap +0.419m POSITIVE with bbox-level disjointness (true min
+  // distance can only exceed it). The -2.436 square gap is the plan-view
+  // projection artifact of ring A sweeping over the horses — fauna-34's own
+  // placement decode documented exactly this vertical clearance ("cleared
+  // vertically 0.40m" — bbox math here is the stricter 0.419). Ring center
+  // A sits 0.425m inside the horse's nearest plan point; only ring A
+  // reaches the horse footprint at all. Not walkable-corridor geometry:
+  // non-colliding motion fauna above rider head-height class (bees at
+  // 0.583+ over walked lavender is the standing kin). Evidence: SWEEP-PLAN
+  // sweep-330 row. Any pos/lib drift on either id re-surfaces as census
+  // drift at 16-hex precision and re-derives this class.
+  "nx-dress-shorse-001|nx-dress-swallows-001",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });

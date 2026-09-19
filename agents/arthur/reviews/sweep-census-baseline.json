@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 376,
+  "count": 377,
   "entities": [
     {
       "id": "beb4c791",
@@ -7449,6 +7449,191 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-swallows-001",
+      "kind": "thing",
+      "pos": [
+        49.5,
+        -0.03907,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/9e3f6b05f1f41ab8.glb",
+      "bbox": {
+        "min": [
+          -2.327,
+          2.38,
+          -0.593
+        ],
+        "max": [
+          3.563,
+          3.643,
+          3.729
+        ],
+        "size": [
+          5.89,
+          1.262,
+          4.322
+        ],
+        "center": [
+          0.618,
+          3.012,
+          1.568
+        ]
+      },
+      "compKeys": [
+        "motion:swallow_1",
+        "motion:swallow_1_wingL",
+        "motion:swallow_1_wingR",
+        "motion:swallow_2",
+        "motion:swallow_2_wingL",
+        "motion:swallow_2_wingR",
+        "motion:swallow_3",
+        "motion:swallow_3_wingL",
+        "motion:swallow_3_wingR"
+      ],
+      "comp": {
+        "motion:swallow_1": {
+          "type": "orbit",
+          "center": [
+            -1.9,
+            2.4,
+            -1.9
+          ],
+          "radius": 2.6,
+          "degPerSec": 52,
+          "phase": 0,
+          "t0": 1789798296329
+        },
+        "motion:swallow_2": {
+          "type": "orbit",
+          "center": [
+            1.9,
+            2.5,
+            4.5
+          ],
+          "radius": 1.8,
+          "degPerSec": 62,
+          "phase": 2.1,
+          "t0": 1789798296329
+        },
+        "motion:swallow_3": {
+          "type": "orbit",
+          "center": [
+            0.4,
+            3.6,
+            1
+          ],
+          "radius": 3,
+          "degPerSec": 44,
+          "phase": 4.2,
+          "t0": 1789798296329
+        },
+        "motion:swallow_1_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.55,
+          "period": 0.34,
+          "phase": 0,
+          "t0": 1789798296329
+        },
+        "motion:swallow_1_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.55,
+          "period": 0.34,
+          "phase": 0,
+          "t0": 1789798296329
+        },
+        "motion:swallow_2_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.62,
+          "period": 0.3,
+          "phase": 1.3,
+          "t0": 1789798296329
+        },
+        "motion:swallow_2_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.62,
+          "period": 0.3,
+          "phase": 1.3,
+          "t0": 1789798296329
+        },
+        "motion:swallow_3_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.5,
+          "period": 0.38,
+          "phase": 2.6,
+          "t0": 1789798296329
+        },
+        "motion:swallow_3_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.5,
+          "period": 0.38,
+          "phase": 2.6,
+          "t0": 1789798296329
+        }
+      }
     },
     {
       "id": "nx-dress-turkey-001",
