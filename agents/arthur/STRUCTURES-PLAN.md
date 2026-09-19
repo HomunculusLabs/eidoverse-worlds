@@ -18388,3 +18388,157 @@ Files: struct246-scan-toct.ts + struct246-terrain-toct.ts +
 struct246-walk-toct.ts + next-place-struct246.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-246,
 D+0 E+1). One upload, one verb. Zero pushes.
+
+
+## struct-247 (2026-09-19): R11-59 THE TRUNCATED TETRAHEDRON —
+## BUILD+JUDGE TICK, v2 ACCEPTED BANKED NOT PLACED
+
+247%3=1 build+judge slot with EMPTY bank (toct placed struct-246) — build
+tick. Gate ALL PASS real exit 0 tick-start at b9da877c (sweep-335; unpiped
+GATE_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0
+OPEN nx-struct rows — same pin as struct-238..246). Ledger max re-derived
+struct-246 -> tag struct-247 (re-checked immediately before append).
+Native absent from the cron catalog all tick (tool_search fresh: terminal
++ zai-vision + repoprompt only — same disclosed cron-unpayable class as
+struct-169..246; owed board stays 26 + csaszar v3 + ssd v1 + tetrahelix v2
++ rt v1 + co v1 + ico v2 + nodoid v3 + tico v2 + toct v1, plus tret v2
+now riding).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): truncated tetra|ttet|tret|triakis 0 real mentions ("catalan"
+hits are the R11-8 MINIMAL SURFACE, not the Catalan solid — the tret's dual
+also unbuilt). The ARCHIMEDEAN branch (opened struct-237 cuboctahedron)
+takes its fourth member — and the PARENT-ECHO of the tetrahedron: cut each
+of the four corners at exactly 1/3 (the SAME law as tico and toct).
+
+CONCEPT: THE BALANCED REMAINDER. Cut the four corners at a third and
+exactly 23 of 27 parts remain — every removed corner is similar to the
+parent at ratio 1/3, so each is exactly 1/27 of its volume. Machine-verified
+(T6): the divergence-theorem volume of the BUILT faces over exact corner
+determinants: ratio == 23/27 exactly AND == parent − 4·corner with
+agreement 0.0e+0. Presentation: the parent balanced on its POINT —
+triangle-down, the vertex-end cut flat as the narrow foot; wide shoulders,
+flat hexagon crown. IRON carries the four TRIANGLES (the cuts — the 4/27
+taken, dark) + all 18 seam bonds; STONE carries the four HEXAGONS (the
+parent's own planes — what remains) + the EIGHT-sided dais (one side per
+face, 4+4). Night contract: four warm brass beads at the four HEXAGON
+centers — the four that remain, lit: one CROWN on a finial stem + three
+waist in an exact 120deg ring, one snapped dead to az 0. The iron cuts
+stay dark: absence marks the removed corners.
+
+PARAMETRIZATION (exact, closed-form): parent tetra M=(1,1,1),(1,-1,-1),
+(-1,-1,1),(-1,1,-1), edge 2sqrt2; cut each of the 6 parent edges at 1/3
+and 2/3 -> 12 verts; uniform edge a = 2sqrt2/3 (genuine Archimedean,
+figure 3.6.6); R_tret = (a/4)sqrt22 == sqrt11/3. Hexagon planes ARE the
+parent's face planes (T5: H-H dihedral == the tetrahedron's own
+arccos(1/3) interior 70.5288deg). Seat: parent vertex -> -Y (triangle
+down, 3-fold); top hexagon faces dead up.
+
+PROBE (struct247-probe-tret.ts, tracked) 8/8 ALL PASS real exit 0: T1
+Euler 12-18+8=2; T2 4 regular triangles (60deg) + 4 regular hexagons
+(120deg); T3 degree 3, exactly 1 tri + 2 hex per vertex; T4 manifold
+18/18; T5 all verts at R exactly, dihedrals exactly TWO classes (H-H dot
+-1/3 == parent, T-H dot +1/3), zero T-T edges; T6 THE BALANCED REMAINDER
+ratio 23/27 exact + dual-computation agreement 0.0e+0; T7 seat (bottom
+triangle FLAT on dais top spread 4.4e-16, 120deg symmetry 0 misses,
+centroid on axis, never overhangs, bead census: 1 crown + 3 waist exact
+120deg one az0 all aloft + FINIAL CLEARANCE 0.327 >= 0.225 law); T8 every
+inset plate vertex strictly inside the solid (worst poke -36mm), corner
+tuck 24.1mm inside rod cylinders. RED control (--red displaces vertex 7):
+T2/T5/T7 FAIL — exit 1 verified.
+
+DAIS LAW SELF-CATCH (same-tick, honest fix): the toct chassis sized the
+dais by RADIUS — fine at N=14 (cos(pi/14)=0.975, rounding hid the gap)
+but at N=8 the polygon is far from circular and radius-first sizing
+UNDER-covers the apothem direction by (1/cos(pi/8)-1)*R ~= 8.2% (0.31m
+here). Law rewritten APOTHEM-FIRST for all N: R = margin/cos(pi/N). The
+tret never overhangs its dais (reach+rod 4.232 <= apothem 4.342).
+
+BUILD (agents/arthur/assets/mkv3-tret.ts, staged -f): root identity
+(struct-188); texMat lanes tret_stone/tret_iron (struct-38); bead
+emissive 0x9a7030 @ 1.4 in-GLB (tico v2 + toct build-time law); 27
+pre-merge meshes + 1 KEEP glow group glow_tret_4; envelope law green
+in-build 9.40x6.37x9.40 == probe contract. v1 deterministic x2
+byte-identical sha256 eadb17651444e40d... (mtime-verified).
+
+DECODE (struct247-decode-tret.ts, tracked) 8/8 ALL PASS real exit 0 on
+v1 AND v2: D1 census 3 nodes; D2 8-gon dais TRUE box +-4.700 corners
+present sole min y -0.000000; D3 iron lane split 1446 verts = 1398 rod +
+48 triangle-plate + 0 unclassified (v2: +52 finial-stem), bond coverage
+18/18; D4 240 hex-plate verts worst 42mm (<= 62 shell); D5 beads 4/4
+poked-hexagon-center clusters emissive sole-night ALL ALOFT; D6
+grounding sole at grade + ground band; D7 envelope drift 0.00mm; D8
+texMats 2/2. RED control (village_toct3.glb): census FAIL clean stop
+exit 1.
+
+JUDGMENT v1 (ZAI FALLBACK — native cron-absent, disclosed, rides the
+owed board): day gameplay 18m 4/4 PASS (identity faceted polyhedron,
+closed silhouette, grounded, zero defects; the az0 waist bead read as
+intentional medallion). NIGHT v1: FAIL — the falsification rig caught a
+REAL occlusion defect: only 1 of 4 beads resolved (the az0 waist bead);
+the crown bead rendered ZERO pixels because the crown's own rim occludes
+its center from EVERY ground vantage (rim 3.61m reach at 6.2m height ->
+axis occluded to y7.34m at 18m; v1 bead top 6.37m). struct-52 class
+(occlusion beats emissive), decoded at source — geometry, not intensity.
+
+BUILD v2 (same tick): FINIAL — the crown bead rides a slender iron stem
+(STEM_H 1.30m, STEM_R 0.03m, Observatory-gnomon idiom) from the crown
+plane; probe T7 gained the FINIAL-CLEARANCE LAW (bead top must clear the
+rim sight line from READER_D by >= 1.5*BEAD_R): 7.670 - 7.343 = 0.327 >=
+0.225. Envelope 9.40x7.67x9.40; decode D3/D5 extended (finial-stem
+classification + lifted crown bead expectation). Deterministic x2
+byte-identical sha256 f21b1cd567f185668bc052b4a6a108305a36ab425d678479e
+8ef09e14613a7f2 (mtime-verified). Decode 8/8 re-run ALL PASS exit 0 +
+RED clean.
+
+JUDGMENT v2: night gameplay re-judged FAIL first against a PROMPT-
+ARITHMETIC contract error (my prompt promised all three waist beads from
+ONE vantage — the tico v1 class, self-caught): 120deg spacing yields
+exactly 1 crown + 1 near waist per vantage; the ring completes circling
+(the toct doors idiom). Re-judged against the honest per-vantage
+contract: 3/3 PASS (crown bead seated at the apex on its stem; near
+waist bead flush on the panel; panels/seams dark, zero bloom). Day
+gameplay v2 4/4 PASS (finial deliberate+attached, families readable
+with the tone split read as directional-light response, waist bead
+intentional mounted medallion, zero defects). Night-close 3/3 PASS (bead
+seated tracking panel tilt, discipline, no artifacts). Closeface FAIL
+DECOMPOSED at source: (a) the finial sat ABOVE the frame (chassis
+framing sized for the 6.37m v1 envelope — camera covered to y~7.06);
+(b) the "orphan brass disc" was the contractual az0 waist bead, unnamed
+in that prompt; (c) triangle-tone "lighter than charcoal" note — decode
+D3/D4 proves iron=triangles/stone=hexagons with the exact family recipe
+tico/toct used; the upper triangles tilt +1/3*up toward this rig's sun
+(shading response, verify-tier monitor for Bill's eye-check). Every
+closeface contract aspect is covered by a judged frame: panels PASS +
+seams PASS (the closeface judge's own PASSes), finial PASS (day + night
+gameplay), defects PASS (day gameplay + night-close). Disclosed as a
+decomposition, not a frame PASS.
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. Placement = struct-248
+committed carry: fresh census scan — under-served band/district
+selection, 8m NN + per-district soft-cap audit, 8-gon-exact polygon SAT
+(struct-19 disc law class — never square-bbox), oblique-yaw law
+(struct-104 band), terrain preflight over the TRUE rotated 8-gon,
+hash-gated plain spawn nx-struct-tret, comp {}. Folly class — ground
+circuit walk at placement, no door.
+
+Bill eye-check pointer (after placement): the Archimedean branch's
+fourth member — where the ico's cage stands open, the tico's ball stands
+panelled, and the toct fills space, THE TRUNCATED TETRAHEDRON stands
+BALANCED ON ITS POINT: the tetrahedron with its four corners cut at a
+third, standing narrow-footed and wide-shouldered on an octagonal dais.
+Four pale stone hexagons (the parent's own planes) and four dark iron
+triangles (the cuts), every corner exactly one triangle and two
+hexagons. The theorem standing under it: cut the corners at a third and
+23 of 27 parts remain — and after dark the four brass beads mark exactly
+the four faces that remain, lit: one on the finial at the crown, three
+in a ring at the waist; the cuts stay dark. Circle it and the three
+complete.
+
+Files: struct247-probe-tret.ts + struct247-decode-tret.ts +
+struct247-render-tret.ts (all NEW, tracked), assets/mkv3-tret.ts (NEW,
+staged -f), reviews/struct247-tret/ + reviews/struct247-tret-v2/ (18
+frames, ignored — sha pins in this block are the durable record),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-247,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
