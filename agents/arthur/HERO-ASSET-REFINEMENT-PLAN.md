@@ -2122,3 +2122,54 @@ next wake once the gateway answers.
   wellhead/waystone night reads (sibling-owned subjects — route defects
   to owners), or (c) belltower remaining sub-threshold notes, judge
   fresh first.
+
+### polish-313 — well water (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-well` (E approach lane, pos [30,0,-4.5], yaw 0, EMPTY comp
+  bag — census-fresh). Build source `assets/mkvillage-civic.ts` (well block) →
+  `village_well.glb` (live was 35f17cf4f6a6db9f, Aug-31 build; on-disk sha ==
+  live lib exact).
+- Defect (ZAI judge ×3 on exact live bytes, no native vision this cron session
+  — same class as polish-285..312, native re-judge owed): the well had NO water
+  surface — the ring is an open cylinder and the mouth read as a solid mass /
+  ambiguous black void (gameplay: "passes as an icon; fails as a well"; aerial:
+  "nothing identifiable inside the ring"; night: "functionally invisible").
+  The polish-271/281 dry-water class, total variant — the last waterless water
+  feature in the core (fountain/cistern/trough lineage).
+- Change (ONE intervention, three measured sizing rounds v1 r0.95 / v2 r0.70 /
+  v3 r0.62): palette-water disc 0x506a78 + faint same-hue emissive 0x2e4a58 @
+  0.55 (the exact fountain/cistern recipe), y 0.33 (0.42 below the rim crest).
+  v1 rejected: posts at |x|0.8 pierced the full-width disc ("planted in
+  water"); v2 rejected: zero-clearance post bases + hairline far reveal;
+  v3 clean — posts clear full-length, readable shelf reveal, no spill/clip.
+- Candidate `c02d594e0873f4e4fafbcdf1947721c22de4704e160f0e36aba174e2980cf77a`
+  deterministic ×2 (+ whole-14-set rebuild ×2 = SET_DETERMINISTIC; banner
+  32e7bcb live pin byte-identical). Nodes 21→22 (water node), materials +glow1.
+- Falsification: rimclose day "reads as a working well at a glance" (posts
+  clear, shelf reveal, still-water read); aerial "water resolved — the blue
+  disc does the most work selling the object as a well", no blue outside the
+  ring; night mouth reads blue-dominant at rim vantage (rimclose-night
+  avgRGB (33,55,67) vs void baseline). Diffs confined to the mouth region
+  (aerial ~5.4k px; night 18m 0 px = rim-occlusion geometry, polish-284
+  class — players read well water at the rim, proved by the dedicated
+  close rig `p313-close-rig.ts`).
+- Placed via NEW dedicated placer `next-place-polish313-well.ts`
+  (stringlights chassis): PLACED_VERIFIED, 1 upload + 1 verb, comp bag {}
+  preserved, idempotent rerun zero verbs, live pin
+  `store/c02d594e0873f4e4.glb` @ [30,0,-4.5] yaw 0 exact.
+- Served-bytes proof (struct-104 law, durable `p313-verify-served.ts`; probe
+  self-caught the mesh-local vs node-translation frame bug RED→GREEN, p311
+  class): served DRACO c334653d… keeps well_water 62 verts, radius 0.62
+  exact, node y 0.33, emissive [0.015,0.0377,0.0537] exact, 0 non-finite.
+  P313_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 (sibling fauna-51 landed
+  mid-tick at 6e64a340 — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-313-well/` (before/ = live 35f17cf4
+  10-view rig + close rig + baseline.glb; after/ = candidate + close rig;
+  rejected v1/v2 sizes in the source comment + this record).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path) — recorded here + ledger instead.
+- Next ranked: (a) well single-dark-mass value separation (aerial judge
+  secondary note: posts merge with ring at distance — a value/material
+  candidate), (b) well night identity beyond the mouth glint (lantern hook
+  candidate, judge-suggested), or (c) plaza-core re-survey on fresh evidence.
