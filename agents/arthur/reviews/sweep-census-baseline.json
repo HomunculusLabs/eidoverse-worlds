@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 388,
+  "count": 389,
   "entities": [
     {
       "id": "beb4c791",
@@ -7572,6 +7572,186 @@
           "period": 2.2,
           "phase": 1.5,
           "t0": 1789746287033
+        }
+      }
+    },
+    {
+      "id": "nx-dress-sqrl-001",
+      "kind": "thing",
+      "pos": [
+        59.602,
+        0.616,
+        52.028
+      ],
+      "yaw": -3.927,
+      "scale": 1,
+      "lib": "store/186f227d9a407e34.glb",
+      "bbox": {
+        "min": [
+          -0.421,
+          -0.004,
+          -0.807
+        ],
+        "max": [
+          0.274,
+          0.378,
+          0.306
+        ],
+        "size": [
+          0.695,
+          0.382,
+          1.112
+        ],
+        "center": [
+          -0.074,
+          0.187,
+          -0.251
+        ]
+      },
+      "compKeys": [
+        "motion:sqrl_a",
+        "motion:sqrl_a_ears",
+        "motion:sqrl_a_head",
+        "motion:sqrl_a_paws",
+        "motion:sqrl_a_tail",
+        "motion:sqrl_b",
+        "motion:sqrl_b_ears",
+        "motion:sqrl_b_head",
+        "motion:sqrl_b_tail"
+      ],
+      "comp": {
+        "motion:sqrl_a": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.2,
+          "phase": 0,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.26,
+          "period": 7,
+          "phase": 0.2,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_a_ears": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.16,
+          "period": 2.3,
+          "phase": 0.9,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_a_paws": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.12,
+          "period": 2.8,
+          "phase": 1.3,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.1,
+          "period": 3.4,
+          "phase": 0.4,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_b": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 4.8,
+          "phase": 0.5,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_b_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.2,
+          "period": 2.9,
+          "phase": 0.2,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_b_ears": {
+          "type": "pendulum",
+          "axis": [
+            2,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.12,
+          "period": 2.5,
+          "phase": 0.6,
+          "t0": 1789834589569
+        },
+        "motion:sqrl_b_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.14,
+          "period": 2.2,
+          "phase": 0.1,
+          "t0": 1789834589569
         }
       }
     },
@@ -15461,7 +15641,7 @@
       ],
       "yaw": -2.356194490192345,
       "scale": 1,
-      "lib": "store/f9ceea6e82b481e5.glb",
+      "lib": "store/4a84e77127d73654.glb",
       "bbox": {
         "min": [
           -1.7,
