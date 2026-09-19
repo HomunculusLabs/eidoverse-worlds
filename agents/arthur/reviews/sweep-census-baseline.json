@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 394,
+  "count": 395,
   "entities": [
     {
       "id": "beb4c791",
@@ -35,8 +35,8 @@
           -0.421
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "house-35_-22",
@@ -71,9 +71,6 @@
           0.146
         ]
       },
-      "compKeys": [
-        "structure"
-      ],
       "comp": {
         "structure": {
           "tile": 1,
@@ -89,7 +86,10 @@
             }
           ]
         }
-      }
+      },
+      "compKeys": [
+        "structure"
+      ]
     },
     {
       "id": "nx-approach-lamp-e",
@@ -124,8 +124,8 @@
           0.02
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-lamp-e-l",
@@ -138,8 +138,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-lamp-n",
@@ -174,8 +174,8 @@
           0.02
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-lamp-n-l",
@@ -188,8 +188,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-lamp-s",
@@ -224,8 +224,8 @@
           0.02
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-lamp-s-l",
@@ -238,8 +238,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-lamp-w",
@@ -274,8 +274,8 @@
           0.02
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-lamp-w-l",
@@ -288,8 +288,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-ne-lamp-001-l",
@@ -302,8 +302,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-ne-lamp-002-l",
@@ -316,8 +316,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-ne-lane-002",
@@ -352,8 +352,8 @@
           42.208
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-nw-lamp-001-l",
@@ -366,8 +366,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-nw-lamp-002-l",
@@ -380,8 +380,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-nw-lane-001",
@@ -416,8 +416,8 @@
           35.833
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-sw-lamp-001-l",
@@ -430,8 +430,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-sw-lamp-002-l",
@@ -444,8 +444,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-approach-sw-lane-003",
@@ -480,8 +480,8 @@
           -37.778
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b1-hall-charter",
@@ -516,8 +516,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b10-windmill-four-wind-crown",
@@ -552,8 +552,8 @@
           0.05
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b11-woodyard-heartwood-measure",
@@ -588,8 +588,8 @@
           0.039
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b12-kiln-heat-contours",
@@ -624,8 +624,8 @@
           0.057
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b13-south-tide-east",
@@ -660,8 +660,8 @@
           0.023
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b13-south-tide-west",
@@ -696,8 +696,8 @@
           0.023
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b14-east-gate-dawn-fan",
@@ -732,8 +732,8 @@
           0.025
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b15-west-gate-dusk-arcs",
@@ -768,8 +768,8 @@
           0.031
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b16-forge-seven-strikes",
@@ -804,8 +804,8 @@
           0.027
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b17-garden-seed-lattice",
@@ -840,8 +840,8 @@
           0.035
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b18-row-warp-count",
@@ -876,8 +876,8 @@
           0.026
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b19-longhouse-feast-count",
@@ -912,8 +912,8 @@
           0.027
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b2-inn-lintel",
@@ -948,8 +948,8 @@
           0.017
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b2-inn-threshold",
@@ -984,8 +984,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b20-bunkhouse-four-rooms",
@@ -1020,8 +1020,8 @@
           0.027
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b21-tower-ascension-count",
@@ -1056,8 +1056,8 @@
           0.027
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b22-mapboard-eight-ways",
@@ -1092,8 +1092,8 @@
           0.005
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b23-cistern-rain-count",
@@ -1128,8 +1128,8 @@
           0.014
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b24-well-depth",
@@ -1164,8 +1164,8 @@
           0.014
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b25-welcome-village-mark",
@@ -1200,8 +1200,8 @@
           0.014
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b26-wayband",
@@ -1236,8 +1236,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b27-waterline",
@@ -1272,15 +1272,15 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b28-bake-count",
       "kind": "thing",
       "pos": [
         18.593536600282096,
-        -1.5946487083102603e-8,
+        -1.5946487083102603e-08,
         -18.367647009533506
       ],
       "yaw": -0.90756,
@@ -1308,15 +1308,15 @@
           -1.964
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b29-strike-count",
       "kind": "thing",
       "pos": [
         22.347652212343093,
-        -1.5946487083102603e-8,
+        -1.5946487083102603e-08,
         -13.43276950636487
       ],
       "yaw": -0.90756,
@@ -1344,8 +1344,8 @@
           -1.884
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b3-ruled-porch",
@@ -1380,8 +1380,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b30-market-tally",
@@ -1416,8 +1416,8 @@
           0.409
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b31-sheaf-tally",
@@ -1452,8 +1452,8 @@
           0.505
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b32-morning-measure",
@@ -1488,8 +1488,8 @@
           0.215
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b33-milking-order",
@@ -1524,8 +1524,8 @@
           -0.276
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b34-wayband-e",
@@ -1560,8 +1560,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b34-wayband-s",
@@ -1596,8 +1596,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b34-wayband-w",
@@ -1632,8 +1632,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b4-golden-hinges",
@@ -1668,8 +1668,8 @@
           0.018
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b4-golden-threshold",
@@ -1704,8 +1704,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b4-golden-top",
@@ -1740,8 +1740,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b5-belltower-rings",
@@ -1776,8 +1776,8 @@
           0.032
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b6-market-lissa-left",
@@ -1812,8 +1812,8 @@
           0.019
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b6-market-lissa-right",
@@ -1848,8 +1848,8 @@
           0.019
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b7-shrine-stars",
@@ -1884,8 +1884,8 @@
           0.047
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b8-stable-harmonic-rein",
@@ -1920,8 +1920,8 @@
           0.034
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-b9-dyehouse-crossing-loom",
@@ -1956,8 +1956,8 @@
           0.034
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h2",
@@ -1992,8 +1992,8 @@
           0.917
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h2-l",
@@ -2006,8 +2006,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h3",
@@ -2042,8 +2042,8 @@
           1.35
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h3-l",
@@ -2056,8 +2056,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h4",
@@ -2092,8 +2092,8 @@
           2.03
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h4-l",
@@ -2106,8 +2106,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h5",
@@ -2142,8 +2142,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h5-l-left",
@@ -2156,8 +2156,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h5-l-right",
@@ -2170,8 +2170,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h6",
@@ -2206,16 +2206,16 @@
           1.98
         ]
       },
-      "compKeys": [
-        "motion:chime"
-      ],
       "comp": {
         "motion:chime": {
           "type": "spin",
           "axis": "y",
           "degPerSec": 2
         }
-      }
+      },
+      "compKeys": [
+        "motion:chime"
+      ]
     },
     {
       "id": "nx-artwalk-h6-l",
@@ -2228,8 +2228,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-artwalk-h7",
@@ -2264,16 +2264,16 @@
           1.45
         ]
       },
-      "compKeys": [
-        "motion:scope"
-      ],
       "comp": {
         "motion:scope": {
           "type": "spin",
           "axis": "y",
           "degPerSec": -0.8
         }
-      }
+      },
+      "compKeys": [
+        "motion:scope"
+      ]
     },
     {
       "id": "nx-artwalk-h7-l",
@@ -2286,8 +2286,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-carousel",
@@ -2322,15 +2322,6 @@
           0.145
         ]
       },
-      "compKeys": [
-        "motion:carousel",
-        "motion:horse_0",
-        "motion:horse_2",
-        "motion:horse_4",
-        "motion:horse_6",
-        "particles:smoke",
-        "sockets"
-      ],
       "comp": {
         "motion:carousel": {
           "type": "spin",
@@ -2419,7 +2410,16 @@
             "part": "horse_6"
           }
         }
-      }
+      },
+      "compKeys": [
+        "motion:carousel",
+        "motion:horse_0",
+        "motion:horse_2",
+        "motion:horse_4",
+        "motion:horse_6",
+        "particles:smoke",
+        "sockets"
+      ]
     },
     {
       "id": "nx-cistern",
@@ -2454,8 +2454,8 @@
           0.075
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-core-paths",
@@ -2490,15 +2490,15 @@
           -0.609
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-court",
       "kind": "thing",
       "pos": [
         18.9,
-        -1.5946487083102603e-8,
+        -1.5946487083102603e-08,
         -14.8
       ],
       "yaw": -0.90756,
@@ -2526,9 +2526,6 @@
           0.03
         ]
       },
-      "compKeys": [
-        "particles:smoke"
-      ],
       "comp": {
         "particles:smoke": {
           "preset": "smoke",
@@ -2541,7 +2538,10 @@
           "size": 0.4,
           "speed": 0.35
         }
-      }
+      },
+      "compKeys": [
+        "particles:smoke"
+      ]
     },
     {
       "id": "nx-craft-cloister-0008",
@@ -2576,8 +2576,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-cloister-0016",
@@ -2612,8 +2612,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-cloister-0029",
@@ -2648,8 +2648,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-cloister-0042",
@@ -2684,8 +2684,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-cloister-0055",
@@ -2720,8 +2720,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-hamlet-0007",
@@ -2756,9 +2756,6 @@
           -0.147
         ]
       },
-      "compKeys": [
-        "particles"
-      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2771,7 +2768,10 @@
           "size": 0.25,
           "speed": 0.4
         }
-      }
+      },
+      "compKeys": [
+        "particles"
+      ]
     },
     {
       "id": "nx-craft-hamlet-0015",
@@ -2806,9 +2806,6 @@
           -0.095
         ]
       },
-      "compKeys": [
-        "particles"
-      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2821,7 +2818,10 @@
           "size": 0.25,
           "speed": 0.4
         }
-      }
+      },
+      "compKeys": [
+        "particles"
+      ]
     },
     {
       "id": "nx-craft-hamlet-0028",
@@ -2856,9 +2856,6 @@
           -0.201
         ]
       },
-      "compKeys": [
-        "particles"
-      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2871,7 +2868,10 @@
           "size": 0.25,
           "speed": 0.4
         }
-      }
+      },
+      "compKeys": [
+        "particles"
+      ]
     },
     {
       "id": "nx-craft-hamlet-0041",
@@ -2906,9 +2906,6 @@
           -0.308
         ]
       },
-      "compKeys": [
-        "particles"
-      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2921,7 +2918,10 @@
           "size": 0.25,
           "speed": 0.4
         }
-      }
+      },
+      "compKeys": [
+        "particles"
+      ]
     },
     {
       "id": "nx-craft-hamlet-0054",
@@ -2956,9 +2956,6 @@
           -0.265
         ]
       },
-      "compKeys": [
-        "particles"
-      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2971,7 +2968,10 @@
           "size": 0.25,
           "speed": 0.4
         }
-      }
+      },
+      "compKeys": [
+        "particles"
+      ]
     },
     {
       "id": "nx-craft-statuary-0005",
@@ -3006,8 +3006,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-statuary-0026",
@@ -3042,8 +3042,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-statuary-0039",
@@ -3078,8 +3078,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-craft-statuary-0052",
@@ -3114,8 +3114,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-garden-0011",
@@ -3150,8 +3150,8 @@
           -0.007
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-garden-0019",
@@ -3186,8 +3186,8 @@
           0.003
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-garden-0032",
@@ -3222,8 +3222,8 @@
           0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-garden-0045",
@@ -3258,8 +3258,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-garden-0058",
@@ -3294,8 +3294,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-lavender-0006",
@@ -3330,8 +3330,8 @@
           0.001
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-lavender-0027",
@@ -3366,8 +3366,8 @@
           0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-lavender-0040",
@@ -3402,8 +3402,8 @@
           0.001
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-lavender-0053",
@@ -3438,8 +3438,8 @@
           -0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-orchard-0012",
@@ -3474,8 +3474,8 @@
           -0.018
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-orchard-0020",
@@ -3510,8 +3510,8 @@
           -0.036
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-orchard-0033",
@@ -3546,8 +3546,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-orchard-0046",
@@ -3582,8 +3582,8 @@
           0.011
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-cultivation-orchard-0059",
@@ -3618,8 +3618,8 @@
           0.007
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-banner",
@@ -3654,8 +3654,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-bees-001",
@@ -3690,15 +3690,6 @@
           1.303
         ]
       },
-      "compKeys": [
-        "motion:bee_1",
-        "motion:bee_2",
-        "motion:bee_3",
-        "motion:bee_4",
-        "motion:bee_5",
-        "motion:bee_6",
-        "motion:bee_7"
-      ],
       "comp": {
         "motion:bee_1": {
           "type": "orbit",
@@ -3769,7 +3760,16 @@
           "phase": 4.4,
           "t0": 1789793316124
         }
-      }
+      },
+      "compKeys": [
+        "motion:bee_1",
+        "motion:bee_2",
+        "motion:bee_3",
+        "motion:bee_4",
+        "motion:bee_5",
+        "motion:bee_6",
+        "motion:bee_7"
+      ]
     },
     {
       "id": "nx-dress-bench-plaza",
@@ -3804,8 +3804,8 @@
           0.169
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-cat-001",
@@ -3840,12 +3840,6 @@
           0.067
         ]
       },
-      "compKeys": [
-        "motion:bcat",
-        "motion:bcat_ears",
-        "motion:bcat_head",
-        "motion:bcat_tail"
-      ],
       "comp": {
         "motion:bcat": {
           "type": "bob",
@@ -3905,7 +3899,13 @@
           "phase": 0.9,
           "t0": 1789687604899
         }
-      }
+      },
+      "compKeys": [
+        "motion:bcat",
+        "motion:bcat_ears",
+        "motion:bcat_head",
+        "motion:bcat_tail"
+      ]
     },
     {
       "id": "nx-dress-charcoal",
@@ -3940,8 +3940,8 @@
           0.232
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-chess",
@@ -3976,8 +3976,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-churn",
@@ -4012,8 +4012,8 @@
           0.01
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-coop",
@@ -4048,8 +4048,8 @@
           0.607
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-cow-001",
@@ -4084,15 +4084,6 @@
           0.312
         ]
       },
-      "compKeys": [
-        "motion:cow_a",
-        "motion:cow_a_ears",
-        "motion:cow_a_head",
-        "motion:cow_a_tail",
-        "motion:cow_b",
-        "motion:cow_b_head",
-        "motion:cow_b_tail"
-      ],
       "comp": {
         "motion:cow_a": {
           "type": "bob",
@@ -4193,7 +4184,16 @@
           "phase": 1.6,
           "t0": 1789753425206
         }
-      }
+      },
+      "compKeys": [
+        "motion:cow_a",
+        "motion:cow_a_ears",
+        "motion:cow_a_head",
+        "motion:cow_a_tail",
+        "motion:cow_b",
+        "motion:cow_b_head",
+        "motion:cow_b_tail"
+      ]
     },
     {
       "id": "nx-dress-deer-001",
@@ -4228,15 +4228,6 @@
           -0.019
         ]
       },
-      "compKeys": [
-        "motion:deer_a",
-        "motion:deer_a_ears",
-        "motion:deer_a_head",
-        "motion:deer_a_tail",
-        "motion:deer_b",
-        "motion:deer_b_ears",
-        "motion:deer_b_head"
-      ],
       "comp": {
         "motion:deer_a": {
           "type": "bob",
@@ -4337,7 +4328,16 @@
           "phase": 1.3,
           "t0": 1789820070089
         }
-      }
+      },
+      "compKeys": [
+        "motion:deer_a",
+        "motion:deer_a_ears",
+        "motion:deer_a_head",
+        "motion:deer_a_tail",
+        "motion:deer_b",
+        "motion:deer_b_ears",
+        "motion:deer_b_head"
+      ]
     },
     {
       "id": "nx-dress-dmou-001",
@@ -4372,12 +4372,6 @@
           0.012
         ]
       },
-      "compKeys": [
-        "motion:dmou",
-        "motion:dmou_ear",
-        "motion:dmou_head",
-        "motion:dmou_tail"
-      ],
       "comp": {
         "motion:dmou": {
           "type": "bob",
@@ -4437,7 +4431,13 @@
           "phase": 1.2,
           "t0": 1789843748663
         }
-      }
+      },
+      "compKeys": [
+        "motion:dmou",
+        "motion:dmou_ear",
+        "motion:dmou_head",
+        "motion:dmou_tail"
+      ]
     },
     {
       "id": "nx-dress-dog-001",
@@ -4472,13 +4472,6 @@
           0.06
         ]
       },
-      "compKeys": [
-        "motion:dog",
-        "motion:dog_chest",
-        "motion:dog_ears",
-        "motion:dog_head",
-        "motion:dog_tail"
-      ],
       "comp": {
         "motion:dog": {
           "type": "bob",
@@ -4555,7 +4548,14 @@
           "phase": 0.3,
           "t0": 1789809165383
         }
-      }
+      },
+      "compKeys": [
+        "motion:dog",
+        "motion:dog_chest",
+        "motion:dog_ears",
+        "motion:dog_head",
+        "motion:dog_tail"
+      ]
     },
     {
       "id": "nx-dress-donkey-001",
@@ -4590,15 +4590,6 @@
           -0.121
         ]
       },
-      "compKeys": [
-        "motion:donk_a",
-        "motion:donk_a_ears",
-        "motion:donk_a_head",
-        "motion:donk_a_tail",
-        "motion:donk_b",
-        "motion:donk_b_head",
-        "motion:donk_b_tail"
-      ],
       "comp": {
         "motion:donk_a": {
           "type": "bob",
@@ -4699,7 +4690,16 @@
           "phase": 1.5,
           "t0": 1789757681548
         }
-      }
+      },
+      "compKeys": [
+        "motion:donk_a",
+        "motion:donk_a_ears",
+        "motion:donk_a_head",
+        "motion:donk_a_tail",
+        "motion:donk_b",
+        "motion:donk_b_head",
+        "motion:donk_b_tail"
+      ]
     },
     {
       "id": "nx-dress-dovecote-001",
@@ -4734,14 +4734,6 @@
           0.504
         ]
       },
-      "compKeys": [
-        "motion:dove_a",
-        "motion:dove_a_head",
-        "motion:dove_b",
-        "motion:dove_b_head",
-        "motion:dove_c",
-        "motion:dove_c_head"
-      ],
       "comp": {
         "motion:dove_a": {
           "type": "bob",
@@ -4815,7 +4807,15 @@
           "phase": 0.8,
           "t0": 1789739073862
         }
-      }
+      },
+      "compKeys": [
+        "motion:dove_a",
+        "motion:dove_a_head",
+        "motion:dove_b",
+        "motion:dove_b_head",
+        "motion:dove_c",
+        "motion:dove_c_head"
+      ]
     },
     {
       "id": "nx-dress-ducks-001",
@@ -4850,14 +4850,6 @@
           0
         ]
       },
-      "compKeys": [
-        "motion:duck_a",
-        "motion:duck_a_head",
-        "motion:duck_a_tail",
-        "motion:duck_b",
-        "motion:duck_b_head",
-        "motion:duck_b_tail"
-      ],
       "comp": {
         "motion:duck_a": {
           "type": "bob",
@@ -4946,7 +4938,15 @@
           "phase": 1.1,
           "t0": 1789787948008
         }
-      }
+      },
+      "compKeys": [
+        "motion:duck_a",
+        "motion:duck_a_head",
+        "motion:duck_a_tail",
+        "motion:duck_b",
+        "motion:duck_b_head",
+        "motion:duck_b_tail"
+      ]
     },
     {
       "id": "nx-dress-fountain",
@@ -4981,8 +4981,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-frog-001",
@@ -5017,11 +5017,6 @@
           0
         ]
       },
-      "compKeys": [
-        "motion:frog",
-        "motion:frog_head",
-        "motion:frog_throat"
-      ],
       "comp": {
         "motion:frog": {
           "type": "bob",
@@ -5064,7 +5059,12 @@
           "phase": 1.1,
           "t0": 1789785012745
         }
-      }
+      },
+      "compKeys": [
+        "motion:frog",
+        "motion:frog_head",
+        "motion:frog_throat"
+      ]
     },
     {
       "id": "nx-dress-geese-001",
@@ -5099,14 +5099,6 @@
           0.101
         ]
       },
-      "compKeys": [
-        "motion:goose_a",
-        "motion:goose_a_head",
-        "motion:goose_a_tail",
-        "motion:goose_b",
-        "motion:goose_b_head",
-        "motion:goose_b_tail"
-      ],
       "comp": {
         "motion:goose_a": {
           "type": "bob",
@@ -5190,7 +5182,15 @@
           "phase": 1.3,
           "t0": 1789715348642
         }
-      }
+      },
+      "compKeys": [
+        "motion:goose_a",
+        "motion:goose_a_head",
+        "motion:goose_a_tail",
+        "motion:goose_b",
+        "motion:goose_b_head",
+        "motion:goose_b_tail"
+      ]
     },
     {
       "id": "nx-dress-giftshelf",
@@ -5225,8 +5225,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-goats",
@@ -5261,14 +5261,6 @@
           0
         ]
       },
-      "compKeys": [
-        "motion:goat_a_head",
-        "motion:goat_a_tail",
-        "motion:goat_b_head",
-        "motion:goat_b_tail",
-        "motion:goat_c_head",
-        "motion:goat_c_tail"
-      ],
       "comp": {
         "motion:goat_a_head": {
           "type": "pendulum",
@@ -5372,7 +5364,15 @@
           "phase": 2.7,
           "t0": 1789567168100
         }
-      }
+      },
+      "compKeys": [
+        "motion:goat_a_head",
+        "motion:goat_a_tail",
+        "motion:goat_b_head",
+        "motion:goat_b_tail",
+        "motion:goat_c_head",
+        "motion:goat_c_tail"
+      ]
     },
     {
       "id": "nx-dress-harvestcart",
@@ -5407,8 +5407,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-hens",
@@ -5443,14 +5443,6 @@
           -0.121
         ]
       },
-      "compKeys": [
-        "motion:hen_a_head",
-        "motion:hen_a_tail",
-        "motion:hen_b_head",
-        "motion:hen_b_tail",
-        "motion:hen_c_head",
-        "motion:hen_c_tail"
-      ],
       "comp": {
         "motion:hen_a_head": {
           "type": "pendulum",
@@ -5554,7 +5546,15 @@
           "phase": 2.6,
           "t0": 1789657766212
         }
-      }
+      },
+      "compKeys": [
+        "motion:hen_a_head",
+        "motion:hen_a_tail",
+        "motion:hen_b_head",
+        "motion:hen_b_tail",
+        "motion:hen_c_head",
+        "motion:hen_c_tail"
+      ]
     },
     {
       "id": "nx-dress-heron-001",
@@ -5589,12 +5589,6 @@
           -0.01
         ]
       },
-      "compKeys": [
-        "motion:heron",
-        "motion:heron_head",
-        "motion:heron_neck",
-        "motion:heron_tail"
-      ],
       "comp": {
         "motion:heron": {
           "type": "bob",
@@ -5659,7 +5653,13 @@
           "phase": 0.6,
           "t0": 1789803030930
         }
-      }
+      },
+      "compKeys": [
+        "motion:heron",
+        "motion:heron_head",
+        "motion:heron_neck",
+        "motion:heron_tail"
+      ]
     },
     {
       "id": "nx-dress-hmou-001",
@@ -5694,11 +5694,6 @@
           0.019
         ]
       },
-      "compKeys": [
-        "motion:hmou",
-        "motion:hmou_head",
-        "motion:hmou_snout"
-      ],
       "comp": {
         "motion:hmou": {
           "type": "bob",
@@ -5741,7 +5736,12 @@
           "phase": 1,
           "t0": 1789839398091
         }
-      }
+      },
+      "compKeys": [
+        "motion:hmou",
+        "motion:hmou_head",
+        "motion:hmou_snout"
+      ]
     },
     {
       "id": "nx-dress-hog-001",
@@ -5776,11 +5776,6 @@
           0.004
         ]
       },
-      "compKeys": [
-        "motion:hog",
-        "motion:hog_head",
-        "motion:hog_snout"
-      ],
       "comp": {
         "motion:hog": {
           "type": "bob",
@@ -5823,7 +5818,12 @@
           "phase": 1.2,
           "t0": 1789827465614
         }
-      }
+      },
+      "compKeys": [
+        "motion:hog",
+        "motion:hog_head",
+        "motion:hog_snout"
+      ]
     },
     {
       "id": "nx-dress-hutch",
@@ -5858,13 +5858,6 @@
           0.339
         ]
       },
-      "compKeys": [
-        "motion:rabbit_alert",
-        "motion:rabbit_alert_ears",
-        "motion:rabbit_alert_head",
-        "motion:rabbit_sit",
-        "motion:rabbit_sit_head"
-      ],
       "comp": {
         "motion:rabbit_sit": {
           "type": "bob",
@@ -5931,7 +5924,14 @@
           "phase": 1.2,
           "t0": 1789671318348
         }
-      }
+      },
+      "compKeys": [
+        "motion:rabbit_alert",
+        "motion:rabbit_alert_ears",
+        "motion:rabbit_alert_head",
+        "motion:rabbit_sit",
+        "motion:rabbit_sit_head"
+      ]
     },
     {
       "id": "nx-dress-milkstand",
@@ -5966,8 +5966,8 @@
           -0.14
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-ne-anvilpad-001",
@@ -6002,8 +6002,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-ne-bench-001",
@@ -6038,8 +6038,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-ne-glazier-001",
@@ -6074,8 +6074,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-ne-timberyard-001",
@@ -6110,8 +6110,8 @@
           0.445
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-ne-woodstack-001",
@@ -6146,8 +6146,8 @@
           0.285
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-ne-yard-001",
@@ -6182,8 +6182,8 @@
           -0.47
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-compost-001",
@@ -6218,8 +6218,8 @@
           0.088
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-dryingracks-001",
@@ -6254,8 +6254,8 @@
           0.041
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-fieldcross-001",
@@ -6290,8 +6290,8 @@
           -3.34
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-hedge-001",
@@ -6326,8 +6326,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-logpile-001",
@@ -6362,8 +6362,8 @@
           0.312
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-orchard-rows-001",
@@ -6398,8 +6398,8 @@
           0.118
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-rainbarrel-001",
@@ -6434,8 +6434,8 @@
           0.209
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-skeps-001",
@@ -6470,8 +6470,8 @@
           -0.823
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-nw-stile-001",
@@ -6506,8 +6506,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-owl-001",
@@ -6542,11 +6542,6 @@
           0
         ]
       },
-      "compKeys": [
-        "motion:barnowl",
-        "motion:barnowl_head",
-        "motion:barnowl_tail"
-      ],
       "comp": {
         "motion:barnowl": {
           "type": "bob",
@@ -6589,7 +6584,12 @@
           "phase": 2.2,
           "t0": 1789694261923
         }
-      }
+      },
+      "compKeys": [
+        "motion:barnowl",
+        "motion:barnowl_head",
+        "motion:barnowl_tail"
+      ]
     },
     {
       "id": "nx-dress-peacock-001",
@@ -6624,14 +6624,6 @@
           -0.125
         ]
       },
-      "compKeys": [
-        "motion:peacock",
-        "motion:peacock_crest",
-        "motion:peacock_head",
-        "motion:peacock_tail",
-        "motion:peacock_train",
-        "motion:peacock_wings"
-      ],
       "comp": {
         "motion:peacock": {
           "type": "bob",
@@ -6725,7 +6717,15 @@
           "phase": 1.5,
           "t0": 1789775768893
         }
-      }
+      },
+      "compKeys": [
+        "motion:peacock",
+        "motion:peacock_crest",
+        "motion:peacock_head",
+        "motion:peacock_tail",
+        "motion:peacock_train",
+        "motion:peacock_wings"
+      ]
     },
     {
       "id": "nx-dress-peahen-001",
@@ -6760,12 +6760,6 @@
           0.022
         ]
       },
-      "compKeys": [
-        "motion:peahen",
-        "motion:peahen_crest",
-        "motion:peahen_head",
-        "motion:peahen_tail"
-      ],
       "comp": {
         "motion:peahen": {
           "type": "bob",
@@ -6825,7 +6819,13 @@
           "phase": 0.9,
           "t0": 1789780793420
         }
-      }
+      },
+      "compKeys": [
+        "motion:peahen",
+        "motion:peahen_crest",
+        "motion:peahen_head",
+        "motion:peahen_tail"
+      ]
     },
     {
       "id": "nx-dress-pig-001",
@@ -6860,14 +6860,6 @@
           0.322
         ]
       },
-      "compKeys": [
-        "motion:pig_a",
-        "motion:pig_a_head",
-        "motion:pig_a_tail",
-        "motion:pig_b",
-        "motion:pig_b_ear",
-        "motion:pig_b_tail"
-      ],
       "comp": {
         "motion:pig_a": {
           "type": "bob",
@@ -6951,7 +6943,15 @@
           "phase": 2,
           "t0": 1789728967406
         }
-      }
+      },
+      "compKeys": [
+        "motion:pig_a",
+        "motion:pig_a_head",
+        "motion:pig_a_tail",
+        "motion:pig_b",
+        "motion:pig_b_ear",
+        "motion:pig_b_tail"
+      ]
     },
     {
       "id": "nx-dress-robin-001",
@@ -6986,11 +6986,6 @@
           0
         ]
       },
-      "compKeys": [
-        "motion:robin",
-        "motion:robin_head",
-        "motion:robin_tail"
-      ],
       "comp": {
         "motion:robin": {
           "type": "bob",
@@ -7033,7 +7028,12 @@
           "phase": 1.4,
           "t0": 1789706242876
         }
-      }
+      },
+      "compKeys": [
+        "motion:robin",
+        "motion:robin_head",
+        "motion:robin_tail"
+      ]
     },
     {
       "id": "nx-dress-rooster-001",
@@ -7068,13 +7068,6 @@
           -0.169
         ]
       },
-      "compKeys": [
-        "motion:roost_a",
-        "motion:roost_a_comb",
-        "motion:roost_a_head",
-        "motion:roost_a_tail",
-        "motion:roost_a_wing"
-      ],
       "comp": {
         "motion:roost_a": {
           "type": "bob",
@@ -7151,7 +7144,14 @@
           "phase": 0.7,
           "t0": 1789772317520
         }
-      }
+      },
+      "compKeys": [
+        "motion:roost_a",
+        "motion:roost_a_comb",
+        "motion:roost_a_head",
+        "motion:roost_a_tail",
+        "motion:roost_a_wing"
+      ]
     },
     {
       "id": "nx-dress-se-cairn-001",
@@ -7186,8 +7186,8 @@
           -0.082
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-se-fox-001",
@@ -7222,11 +7222,6 @@
           0.031
         ]
       },
-      "compKeys": [
-        "motion:fox",
-        "motion:fox_head",
-        "motion:fox_tail"
-      ],
       "comp": {
         "motion:fox": {
           "type": "bob",
@@ -7269,7 +7264,12 @@
           "phase": 2.6,
           "t0": 1789678201706
         }
-      }
+      },
+      "compKeys": [
+        "motion:fox",
+        "motion:fox_head",
+        "motion:fox_tail"
+      ]
     },
     {
       "id": "nx-dress-se-foxden-001",
@@ -7304,8 +7304,8 @@
           0.148
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-se-funguslogs-001",
@@ -7340,8 +7340,8 @@
           -0.257
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-se-mossbowls-001",
@@ -7376,8 +7376,8 @@
           0.188
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-se-snagdead-001",
@@ -7412,8 +7412,8 @@
           -0.091
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-se-stones-001",
@@ -7448,8 +7448,8 @@
           0.01
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-se-streamstones-001",
@@ -7484,8 +7484,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sheep-001",
@@ -7520,14 +7520,6 @@
           -0.55
         ]
       },
-      "compKeys": [
-        "motion:sheep_a",
-        "motion:sheep_a_head",
-        "motion:sheep_a_tail",
-        "motion:sheep_b",
-        "motion:sheep_b_head",
-        "motion:sheep_b_tail"
-      ],
       "comp": {
         "motion:sheep_a": {
           "type": "bob",
@@ -7611,7 +7603,15 @@
           "phase": 1.5,
           "t0": 1789724178483
         }
-      }
+      },
+      "compKeys": [
+        "motion:sheep_a",
+        "motion:sheep_a_head",
+        "motion:sheep_a_tail",
+        "motion:sheep_b",
+        "motion:sheep_b_head",
+        "motion:sheep_b_tail"
+      ]
     },
     {
       "id": "nx-dress-shorse-001",
@@ -7646,15 +7646,6 @@
           0.15
         ]
       },
-      "compKeys": [
-        "motion:shorse_a",
-        "motion:shorse_a_ears",
-        "motion:shorse_a_head",
-        "motion:shorse_a_tail",
-        "motion:shorse_b",
-        "motion:shorse_b_head",
-        "motion:shorse_b_tail"
-      ],
       "comp": {
         "motion:shorse_a": {
           "type": "bob",
@@ -7755,7 +7746,16 @@
           "phase": 1.5,
           "t0": 1789746287033
         }
-      }
+      },
+      "compKeys": [
+        "motion:shorse_a",
+        "motion:shorse_a_ears",
+        "motion:shorse_a_head",
+        "motion:shorse_a_tail",
+        "motion:shorse_b",
+        "motion:shorse_b_head",
+        "motion:shorse_b_tail"
+      ]
     },
     {
       "id": "nx-dress-sqrl-001",
@@ -7790,17 +7790,6 @@
           -0.251
         ]
       },
-      "compKeys": [
-        "motion:sqrl_a",
-        "motion:sqrl_a_ears",
-        "motion:sqrl_a_head",
-        "motion:sqrl_a_paws",
-        "motion:sqrl_a_tail",
-        "motion:sqrl_b",
-        "motion:sqrl_b_ears",
-        "motion:sqrl_b_head",
-        "motion:sqrl_b_tail"
-      ],
       "comp": {
         "motion:sqrl_a": {
           "type": "bob",
@@ -7935,7 +7924,18 @@
           "phase": 0.1,
           "t0": 1789834589569
         }
-      }
+      },
+      "compKeys": [
+        "motion:sqrl_a",
+        "motion:sqrl_a_ears",
+        "motion:sqrl_a_head",
+        "motion:sqrl_a_paws",
+        "motion:sqrl_a_tail",
+        "motion:sqrl_b",
+        "motion:sqrl_b_ears",
+        "motion:sqrl_b_head",
+        "motion:sqrl_b_tail"
+      ]
     },
     {
       "id": "nx-dress-stablebench",
@@ -7970,8 +7970,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-stringlights",
@@ -8006,8 +8006,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sw-bellpost-001",
@@ -8042,8 +8042,8 @@
           0.051
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sw-gravel-001",
@@ -8078,8 +8078,8 @@
           0.062
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sw-incense-001",
@@ -8114,8 +8114,8 @@
           -0.01
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sw-lanternhook-001",
@@ -8150,8 +8150,8 @@
           -0.026
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sw-offering-001",
@@ -8186,8 +8186,8 @@
           0.114
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sw-prayer-001",
@@ -8222,8 +8222,8 @@
           0.26
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-sw-seats-001",
@@ -8258,8 +8258,8 @@
           0.484
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-swallows-001",
@@ -8294,17 +8294,6 @@
           1.568
         ]
       },
-      "compKeys": [
-        "motion:swallow_1",
-        "motion:swallow_1_wingL",
-        "motion:swallow_1_wingR",
-        "motion:swallow_2",
-        "motion:swallow_2_wingL",
-        "motion:swallow_2_wingR",
-        "motion:swallow_3",
-        "motion:swallow_3_wingL",
-        "motion:swallow_3_wingR"
-      ],
       "comp": {
         "motion:swallow_1": {
           "type": "orbit",
@@ -8444,7 +8433,18 @@
           "phase": 2.6,
           "t0": 1789798296329
         }
-      }
+      },
+      "compKeys": [
+        "motion:swallow_1",
+        "motion:swallow_1_wingL",
+        "motion:swallow_1_wingR",
+        "motion:swallow_2",
+        "motion:swallow_2_wingL",
+        "motion:swallow_2_wingR",
+        "motion:swallow_3",
+        "motion:swallow_3_wingL",
+        "motion:swallow_3_wingR"
+      ]
     },
     {
       "id": "nx-dress-turkey-001",
@@ -8479,15 +8479,6 @@
           0.042
         ]
       },
-      "compKeys": [
-        "motion:turkey_a",
-        "motion:turkey_a_fan",
-        "motion:turkey_a_head",
-        "motion:turkey_a_wings",
-        "motion:turkey_b",
-        "motion:turkey_b_head",
-        "motion:turkey_b_tail"
-      ],
       "comp": {
         "motion:turkey_a": {
           "type": "bob",
@@ -8588,7 +8579,16 @@
           "phase": 1.5,
           "t0": 1789762544321
         }
-      }
+      },
+      "compKeys": [
+        "motion:turkey_a",
+        "motion:turkey_a_fan",
+        "motion:turkey_a_head",
+        "motion:turkey_a_wings",
+        "motion:turkey_b",
+        "motion:turkey_b_head",
+        "motion:turkey_b_tail"
+      ]
     },
     {
       "id": "nx-dress-well",
@@ -8623,8 +8623,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-dress-wrabbit-001",
@@ -8659,15 +8659,6 @@
           0.03
         ]
       },
-      "compKeys": [
-        "motion:wrabbit_a",
-        "motion:wrabbit_a_ears",
-        "motion:wrabbit_a_head",
-        "motion:wrabbit_a_tail",
-        "motion:wrabbit_b",
-        "motion:wrabbit_b_ears",
-        "motion:wrabbit_b_head"
-      ],
       "comp": {
         "motion:wrabbit_a": {
           "type": "bob",
@@ -8768,7 +8759,16 @@
           "phase": 1.3,
           "t0": 1789812991787
         }
-      }
+      },
+      "compKeys": [
+        "motion:wrabbit_a",
+        "motion:wrabbit_a_ears",
+        "motion:wrabbit_a_head",
+        "motion:wrabbit_a_tail",
+        "motion:wrabbit_b",
+        "motion:wrabbit_b_ears",
+        "motion:wrabbit_b_head"
+      ]
     },
     {
       "id": "nx-forge",
@@ -8803,10 +8803,6 @@
           -0.084
         ]
       },
-      "compKeys": [
-        "motion:fire_fg_coals",
-        "particles"
-      ],
       "comp": {
         "motion:fire_fg_coals": {
           "type": "bob",
@@ -8823,7 +8819,11 @@
           ],
           "count": 84
         }
-      }
+      },
+      "compKeys": [
+        "motion:fire_fg_coals",
+        "particles"
+      ]
     },
     {
       "id": "nx-forge-l",
@@ -8836,8 +8836,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-gallery-mosaic-0036",
@@ -8872,8 +8872,8 @@
           -0.001
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-gallery-mosaic-0048",
@@ -8908,8 +8908,8 @@
           0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-gallery-mosaic-0052",
@@ -8944,8 +8944,8 @@
           0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-gallery-mosaic-0059",
@@ -8980,8 +8980,8 @@
           0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-hearth",
@@ -9016,12 +9016,6 @@
           -0.026
         ]
       },
-      "compKeys": [
-        "motion:pz_kettle",
-        "motion:well_",
-        "particles",
-        "sockets"
-      ],
       "comp": {
         "motion:pz_kettle": {
           "type": "pendulum",
@@ -9108,7 +9102,13 @@
             "yaw": -2.872
           }
         }
-      }
+      },
+      "compKeys": [
+        "motion:pz_kettle",
+        "motion:well_",
+        "particles",
+        "sockets"
+      ]
     },
     {
       "id": "nx-mile-ne-003",
@@ -9143,8 +9143,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-ne-004",
@@ -9179,8 +9179,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-ne-009",
@@ -9215,8 +9215,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-ne-009-l",
@@ -9229,8 +9229,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-ne-010",
@@ -9265,8 +9265,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-nw-001",
@@ -9301,8 +9301,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-nw-002",
@@ -9337,8 +9337,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-nw-007",
@@ -9373,8 +9373,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-nw-007-l",
@@ -9387,8 +9387,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-nw-008",
@@ -9423,8 +9423,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-sw-005",
@@ -9459,8 +9459,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-sw-006",
@@ -9495,8 +9495,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-sw-013",
@@ -9531,8 +9531,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-sw-013-l",
@@ -9545,8 +9545,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-mile-sw-014",
@@ -9581,8 +9581,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-moonmoth-001",
@@ -9617,12 +9617,6 @@
           -0.421
         ]
       },
-      "compKeys": [
-        "lock",
-        "motion:moon_wing_left",
-        "motion:moon_wing_right",
-        "sockets"
-      ],
       "comp": {
         "sockets": {
           "seat": {
@@ -9672,7 +9666,13 @@
           "t0": 0
         },
         "lock": true
-      }
+      },
+      "compKeys": [
+        "lock",
+        "motion:moon_wing_left",
+        "motion:moon_wing_right",
+        "sockets"
+      ]
     },
     {
       "id": "nx-plaza-l",
@@ -9685,8 +9685,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-shutters",
@@ -9721,8 +9721,8 @@
           2.839
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-bakery",
@@ -9757,8 +9757,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-dyer-001",
@@ -9793,8 +9793,8 @@
           0.13
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-kiln-001",
@@ -9829,8 +9829,8 @@
           -0.542
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-mill-001",
@@ -9865,8 +9865,8 @@
           0.131
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-potter-001",
@@ -9901,15 +9901,15 @@
           0.303
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-smithy",
       "kind": "thing",
       "pos": [
         23.777264390384975,
-        -1.5946487083102603e-8,
+        -1.5946487083102603e-08,
         -10.831474824789108
       ],
       "yaw": -0.90756,
@@ -9937,8 +9937,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-stable-001",
@@ -9973,8 +9973,8 @@
           0.162
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-sign-woodyard-001",
@@ -10009,8 +10009,8 @@
           0.132
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-amphi",
@@ -10045,8 +10045,8 @@
           0.589
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-angler",
@@ -10081,8 +10081,8 @@
           -0.43
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-apollonian",
@@ -10117,8 +10117,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-arbelos",
@@ -10153,8 +10153,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-archispiral",
@@ -10189,8 +10189,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-beacon",
@@ -10225,8 +10225,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-beacon-l",
@@ -10239,8 +10239,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-borromean",
@@ -10275,8 +10275,8 @@
           -0.001
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-boy",
@@ -10311,8 +10311,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-brachistochrone",
@@ -10347,8 +10347,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-catalan",
@@ -10383,8 +10383,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-catenarygate",
@@ -10419,8 +10419,8 @@
           0.078
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-catenoid",
@@ -10455,8 +10455,8 @@
           0.004
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-cellardoor",
@@ -10491,8 +10491,8 @@
           0.1
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-chainvault",
@@ -10527,8 +10527,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-chladni",
@@ -10563,8 +10563,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-cissoid",
@@ -10599,8 +10599,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-clebsch",
@@ -10635,8 +10635,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-clothoid",
@@ -10671,8 +10671,8 @@
           -0.11
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-co",
@@ -10707,8 +10707,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-conoidfan",
@@ -10743,8 +10743,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-costa",
@@ -10779,8 +10779,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-crossing",
@@ -10815,8 +10815,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-csaszar",
@@ -10851,8 +10851,8 @@
           -0.136
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-dodecahedron",
@@ -10887,8 +10887,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-echoarch",
@@ -10923,8 +10923,8 @@
           4
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-ellipsecourt",
@@ -10959,8 +10959,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-elliptic",
@@ -10995,8 +10995,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-enneper",
@@ -11031,8 +11031,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-fifthbench",
@@ -11067,8 +11067,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-folium",
@@ -11103,8 +11103,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-fourier",
@@ -11139,8 +11139,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-galtonboard",
@@ -11175,8 +11175,8 @@
           0.385
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-geodesic",
@@ -11211,8 +11211,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-gyroid",
@@ -11247,8 +11247,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-halt",
@@ -11283,8 +11283,8 @@
           0.35
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-harmonickiss",
@@ -11319,8 +11319,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-hilbertlabyrinth",
@@ -11355,8 +11355,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-honeycombscreen",
@@ -11391,8 +11391,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-hypar",
@@ -11427,8 +11427,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-ico",
@@ -11463,8 +11463,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-kochgarden",
@@ -11499,8 +11499,8 @@
           0.037
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-kuen",
@@ -11535,8 +11535,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-lemniscateseat",
@@ -11571,8 +11571,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-lorenz",
@@ -11607,8 +11607,8 @@
           0.029
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-lunes",
@@ -11643,8 +11643,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-mandelbrot",
@@ -11679,8 +11679,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-melencolia",
@@ -11715,8 +11715,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-menger",
@@ -11751,8 +11751,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-meridiandial",
@@ -11787,8 +11787,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-meridianstair",
@@ -11823,8 +11823,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-millrace",
@@ -11859,8 +11859,8 @@
           3.432
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-mobius",
@@ -11895,8 +11895,8 @@
           -0.44
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-moongate",
@@ -11931,8 +11931,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-morley",
@@ -11967,8 +11967,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-needlerest",
@@ -12003,8 +12003,8 @@
           0.35
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-nephroid",
@@ -12039,8 +12039,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-newtonspheres",
@@ -12075,8 +12075,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-ninesbridge",
@@ -12111,8 +12111,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-nodoid",
@@ -12147,8 +12147,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-northneedle",
@@ -12183,8 +12183,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-northneedle-l",
@@ -12197,8 +12197,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-observatory",
@@ -12233,8 +12233,8 @@
           0.34
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-observatory-l",
@@ -12247,8 +12247,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-ogeegate",
@@ -12283,8 +12283,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-oloid",
@@ -12319,8 +12319,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-orrery",
@@ -12355,16 +12355,16 @@
           0
         ]
       },
-      "compKeys": [
-        "motion:orb"
-      ],
       "comp": {
         "motion:orb": {
           "type": "spin",
           "axis": "y",
           "degPerSec": -0.5
         }
-      }
+      },
+      "compKeys": [
+        "motion:orb"
+      ]
     },
     {
       "id": "nx-struct-orreryring",
@@ -12399,8 +12399,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-peaucellier",
@@ -12435,8 +12435,8 @@
           -0.275
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-pendulum",
@@ -12471,8 +12471,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-penrosepaving",
@@ -12507,8 +12507,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-quadratrix",
@@ -12543,8 +12543,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-reedpool",
@@ -12579,8 +12579,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-reuleauxrotor",
@@ -12615,10 +12615,6 @@
           0
         ]
       },
-      "compKeys": [
-        "motion:pwheel_rr",
-        "motion:sails"
-      ],
       "comp": {
         "motion:pwheel_rr": {
           "type": "path",
@@ -13833,7 +13829,11 @@
           "axis": "z",
           "degPerSec": 2.5
         }
-      }
+      },
+      "compKeys": [
+        "motion:pwheel_rr",
+        "motion:sails"
+      ]
     },
     {
       "id": "nx-struct-rhodonea",
@@ -13868,8 +13868,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-rico",
@@ -13904,8 +13904,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-rt",
@@ -13940,8 +13940,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-rule30wall",
@@ -13976,8 +13976,8 @@
           -0.062
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-ruledtower",
@@ -14012,8 +14012,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-rupertfork",
@@ -14048,8 +14048,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-screwwell",
@@ -14084,16 +14084,16 @@
           -1.013
         ]
       },
-      "compKeys": [
-        "motion:well_screw"
-      ],
       "comp": {
         "motion:well_screw": {
           "type": "spin",
           "axis": "y",
           "degPerSec": -12
         }
-      }
+      },
+      "compKeys": [
+        "motion:well_screw"
+      ]
     },
     {
       "id": "nx-struct-shelltower",
@@ -14128,9 +14128,6 @@
           0
         ]
       },
-      "compKeys": [
-        "sockets"
-      ],
       "comp": {
         "sockets": {
           "crown": {
@@ -14142,7 +14139,10 @@
             "yaw": 0
           }
         }
-      }
+      },
+      "compKeys": [
+        "sockets"
+      ]
     },
     {
       "id": "nx-struct-sierpinski",
@@ -14177,8 +14177,8 @@
           0.924
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-skene",
@@ -14213,8 +14213,8 @@
           0.373
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-skymirror",
@@ -14249,8 +14249,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-slidingladder",
@@ -14285,8 +14285,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-soundmirror",
@@ -14321,8 +14321,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-sphericon",
@@ -14357,8 +14357,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-spiralfolly",
@@ -14393,8 +14393,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-srcubo",
@@ -14429,8 +14429,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-ssd",
@@ -14465,8 +14465,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-steinmetz",
@@ -14501,8 +14501,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-stillwind",
@@ -14537,8 +14537,8 @@
           0.38
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-sunflowerdial",
@@ -14573,8 +14573,8 @@
           -0.232
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-tcube",
@@ -14609,8 +14609,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-tdodec",
@@ -14645,8 +14645,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-tesseract",
@@ -14681,8 +14681,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-tetrahelix",
@@ -14717,8 +14717,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-tico",
@@ -14753,8 +14753,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-toct",
@@ -14789,8 +14789,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-trcubo",
@@ -14825,8 +14825,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-tret",
@@ -14861,8 +14861,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-tribar",
@@ -14897,8 +14897,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-unduloid",
@@ -14933,8 +14933,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-versiera",
@@ -14969,8 +14969,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-vesicawindow",
@@ -15005,8 +15005,8 @@
           0.01
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-villarceau",
@@ -15041,8 +15041,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-viviani",
@@ -15077,8 +15077,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-voronoi",
@@ -15113,8 +15113,8 @@
           -0.051
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-waterstair",
@@ -15149,8 +15149,8 @@
           1.695
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-wavepergola",
@@ -15185,8 +15185,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-waystone-e",
@@ -15221,8 +15221,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-waystone-n",
@@ -15257,8 +15257,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-waystone-s",
@@ -15293,8 +15293,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-waystone-w",
@@ -15329,8 +15329,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-whisperhorn",
@@ -15365,8 +15365,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-struct-zeno",
@@ -15401,8 +15401,8 @@
           4.046
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-labyrinth-0004",
@@ -15437,8 +15437,8 @@
           0.003
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-labyrinth-0025",
@@ -15473,8 +15473,8 @@
           0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-labyrinth-0038",
@@ -15509,8 +15509,8 @@
           0.002
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-labyrinth-0051",
@@ -15545,8 +15545,8 @@
           0.001
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-seed-0003",
@@ -15581,8 +15581,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-seed-0013",
@@ -15617,8 +15617,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-seed-0021",
@@ -15653,8 +15653,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-seed-0034",
@@ -15689,8 +15689,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-terrace-0035",
@@ -15725,8 +15725,8 @@
           5.805
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-terrace-0037",
@@ -15761,8 +15761,8 @@
           5.805
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-terrace-0039",
@@ -15797,8 +15797,8 @@
           5.805
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-terrace-0040",
@@ -15833,8 +15833,8 @@
           5.805
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-temple-terrace-0049",
@@ -15869,8 +15869,8 @@
           5.805
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-tower",
@@ -15905,9 +15905,6 @@
           0.175
         ]
       },
-      "compKeys": [
-        "sockets"
-      ],
       "comp": {
         "sockets": {
           "study": {
@@ -15919,7 +15916,10 @@
             "yaw": -1.5707963267948966
           }
         }
-      }
+      },
+      "compKeys": [
+        "sockets"
+      ]
     },
     {
       "id": "nx-town-belltower",
@@ -15931,7 +15931,7 @@
       ],
       "yaw": -2.356194490192345,
       "scale": 1,
-      "lib": "store/b0b1e2766e145c02.glb",
+      "lib": "store/6359999041251ad9.glb",
       "bbox": {
         "min": [
           -1.7,
@@ -15954,9 +15954,6 @@
           0
         ]
       },
-      "compKeys": [
-        "ladder"
-      ],
       "comp": {
         "ladder": {
           "min": [
@@ -15970,7 +15967,10 @@
             1.22
           ]
         }
-      }
+      },
+      "compKeys": [
+        "ladder"
+      ]
     },
     {
       "id": "nx-town-bunkhouse",
@@ -16005,8 +16005,8 @@
           0.025
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-bunkhouse-l",
@@ -16019,8 +16019,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-dyehouse",
@@ -16055,8 +16055,8 @@
           0.05
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-dyehouse-l",
@@ -16069,8 +16069,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-garden-cottage",
@@ -16105,8 +16105,8 @@
           -0.6
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-garden-cottage-l",
@@ -16119,8 +16119,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-gate-e",
@@ -16155,8 +16155,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-gate-n",
@@ -16191,8 +16191,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-gate-s",
@@ -16227,8 +16227,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-gate-w",
@@ -16263,8 +16263,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-hall",
@@ -16299,8 +16299,8 @@
           0.69
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-hall-l",
@@ -16313,8 +16313,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-inn",
@@ -16349,8 +16349,8 @@
           0.714
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-inn-l",
@@ -16363,8 +16363,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-kiln",
@@ -16399,8 +16399,8 @@
           0.135
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-kiln-l",
@@ -16413,8 +16413,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-longhouse",
@@ -16449,8 +16449,8 @@
           0.689
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-longhouse-l",
@@ -16463,8 +16463,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-mapboard",
@@ -16499,8 +16499,8 @@
           0.001
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-market",
@@ -16535,8 +16535,8 @@
           0.034
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-market-l",
@@ -16549,8 +16549,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-monument",
@@ -16585,8 +16585,8 @@
           1.737
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-potter",
@@ -16621,9 +16621,6 @@
           -0.2
         ]
       },
-      "compKeys": [
-        "motion:pwheel"
-      ],
       "comp": {
         "motion:pwheel": {
           "type": "spin",
@@ -16639,7 +16636,10 @@
           ],
           "degPerSec": 9
         }
-      }
+      },
+      "compKeys": [
+        "motion:pwheel"
+      ]
     },
     {
       "id": "nx-town-potter-l",
@@ -16652,8 +16652,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-roads",
@@ -16688,8 +16688,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-row-cottage",
@@ -16724,8 +16724,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-row-cottage-l",
@@ -16738,8 +16738,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-shrine",
@@ -16774,8 +16774,8 @@
           0.55
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-stable",
@@ -16810,8 +16810,8 @@
           -0.1
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-stable-l",
@@ -16824,8 +16824,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-streetlamps",
@@ -16860,8 +16860,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-tower-house",
@@ -16896,8 +16896,8 @@
           0.103
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-tower-house-l",
@@ -16910,8 +16910,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-town-windmill",
@@ -16946,10 +16946,6 @@
           -1.14
         ]
       },
-      "compKeys": [
-        "motion:sails",
-        "motion:well_millstone"
-      ],
       "comp": {
         "motion:sails": {
           "type": "spin",
@@ -16983,7 +16979,11 @@
           "phase": 0,
           "t0": 1788827161000
         }
-      }
+      },
+      "compKeys": [
+        "motion:sails",
+        "motion:well_millstone"
+      ]
     },
     {
       "id": "nx-town-woodyard",
@@ -17018,8 +17018,8 @@
           0.209
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-welcome",
@@ -17054,8 +17054,8 @@
           0.059
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-welcome-l",
@@ -17068,8 +17068,8 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-cairn-0022",
@@ -17104,8 +17104,8 @@
           -0.146
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-cairn-0043",
@@ -17140,8 +17140,8 @@
           -0.169
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-cairn-0047",
@@ -17176,8 +17176,8 @@
           0.267
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-cairn-0048",
@@ -17212,8 +17212,8 @@
           -0.687
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-cairn-0050",
@@ -17248,8 +17248,8 @@
           -0.49
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-forest-0010",
@@ -17284,8 +17284,8 @@
           0.021
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-forest-0018",
@@ -17320,8 +17320,8 @@
           0.093
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-forest-0031",
@@ -17356,8 +17356,8 @@
           0.022
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-forest-0044",
@@ -17392,8 +17392,8 @@
           -0.029
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-forest-0057",
@@ -17428,8 +17428,8 @@
           0.072
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-wayside-0009",
@@ -17464,8 +17464,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-wayside-0030",
@@ -17500,8 +17500,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-wayside-0045",
@@ -17536,8 +17536,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-wayside-0056",
@@ -17572,8 +17572,8 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
     },
     {
       "id": "nx-wild-wayside-0058",
@@ -17608,8 +17608,116 @@
           0
         ]
       },
-      "compKeys": [],
-      "comp": {}
+      "comp": {},
+      "compKeys": []
+    },
+    {
+      "id": "nx-dress-sparrow-001",
+      "kind": "thing",
+      "pos": [
+        -34.9,
+        -0.03347,
+        -1.45
+      ],
+      "yaw": -2.616,
+      "scale": 1,
+      "lib": "store/0ed41633502eea52.glb",
+      "bbox": {
+        "min": [
+          -0.251,
+          0,
+          -0.14
+        ],
+        "max": [
+          0.354,
+          0.221,
+          0.246
+        ],
+        "size": [
+          0.604,
+          0.221,
+          0.386
+        ],
+        "center": [
+          0.052,
+          0.111,
+          0.053
+        ]
+      },
+      "comp": {
+        "motion:sparrow_a": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 3.4,
+          "phase": 0,
+          "t0": 1789849543513
+        },
+        "motion:sparrow_a_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.18,
+          "period": 2.3,
+          "phase": 0.3,
+          "t0": 1789849543513
+        },
+        "motion:sparrow_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.16,
+          "period": 2.1,
+          "phase": 1.2,
+          "t0": 1789849543513
+        },
+        "motion:sparrow_b": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 4,
+          "phase": 1.7,
+          "t0": 1789849543513
+        },
+        "motion:sparrow_b_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 6.5,
+          "phase": 0.6,
+          "t0": 1789849543513
+        }
+      },
+      "compKeys": [
+        "motion:sparrow_a",
+        "motion:sparrow_a_head",
+        "motion:sparrow_a_tail",
+        "motion:sparrow_b",
+        "motion:sparrow_b_head"
+      ]
     }
   ]
 }
