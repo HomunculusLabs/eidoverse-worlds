@@ -175,11 +175,21 @@ const ringN = new THREE.Mesh(new THREE.TorusGeometry(0.83 * S, 0.03, 5, 32), ink
 ringN.name = "map_ring2";
 onBoard(ringN, 0, 0, 0);
 chip("map_ring", 0, 0, 1.66, 0.10, 0x2e2a20, 0.014); // ring road E-W bar (width floored 0.05)
-// 4 spokes — radial bars hearth->ring so roads CONNECT on the face (the old
+// 8 spokes — radial bars hearth->ring so roads CONNECT on the face (the old
 // field's bars floated free, offset off-axis): inner r 0.06, outer ring r
+// polish-302 — SPOKE UNIT LAW: this loop mixed frames — outer was
+// pre-multiplied by S for the box LENGTH while the center passed through
+// onBoard's ax*S a second time, so every spoke ended at board r 0.2963
+// while the ring band starts at 0.385 (decode manifest: 8.9cm uniform gap;
+// roads never connected at ANY of the 8 junctions). Authored radii
+// throughout now: hearth edge 0.12 (= 0.06 board, the disc rim), ring
+// centerline 0.83 (= 0.415 board, the torus midline — the tip hides under
+// the tube's ink, junction covered). Spoke width stays the 0.05 absolute
+// polish-16 floor; z stack untouched (front -0.036, envelope is the
+// torus poke -0.066).
 for (const [si, ang] of [[0, 0], [1, Math.PI / 2], [2, Math.PI], [3, -Math.PI / 2], [4, Math.PI / 4], [5, 3 * Math.PI / 4], [6, 5 * Math.PI / 4], [7, 7 * Math.PI / 4]] as const) {
-    const outer = 0.83 * S, inner = 0.06;
-    const sp = new THREE.Mesh(new THREE.BoxGeometry(outer - inner, 0.05, 0.014), inkMat());
+    const outer = 0.83, inner = 0.12;
+    const sp = new THREE.Mesh(new THREE.BoxGeometry((outer - inner) * S, 0.05, 0.014), inkMat());
     sp.name = `map_spoke_${si}`;
     sp.rotation.z = -ang;   // authored (cos a, sin a) -> mapG (cos a, -sin a)
     onBoard(sp, Math.cos(ang) * (outer + inner) / 2, Math.sin(ang) * (outer + inner) / 2, 0.014);

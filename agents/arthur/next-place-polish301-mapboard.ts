@@ -1,10 +1,10 @@
-// next-place-polish301-mapboard.ts — polish-301: nx-town-mapboard
-// re-place (remove+spawn, same exact tuple) with the v3 parchment+ink map
-// candidate GLB (sha 4f9bb8a586f00f6d, deterministic ×2). commons-next only.
+// next-place-polish301-mapboard.ts — polish-302: nx-town-mapboard
+// re-place (remove+spawn, same exact tuple) with the spoke-unit-law map
+// candidate GLB (sha 1a73015f5ec4fdf4, deterministic ×2). commons-next only.
 // Comp bag {} (census-fresh this tick). Live pin gate: baseline
-// 95231f20a016b303 at the exact standing tuple, or the new pin (idempotent
-// rerun). Rider nx-artwalk-b22-mapboard-eight-ways is a separate entity —
-// untouched (decode: min back -0.0645 == the old torus poke the b22
+// 4f9bb8a586f00f6d (polish-301) at the exact standing tuple, or the new pin
+// (idempotent rerun). Rider nx-artwalk-b22-mapboard-eight-ways is a separate
+// entity — untouched (decode: min back -0.0645 == the torus poke the b22
 // clearance was decoded against; vertex envelope unchanged).
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -12,8 +12,8 @@ const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
 const POS = [2.5, 0, 9.5] as const;
 const YAW = -2.9441970937399127;
-const SHA = "4f9bb8a586f00f6d";
-const PREV = "95231f20a016b303";
+const SHA = "1a73015f5ec4fdf4";
+const PREV = "4f9bb8a586f00f6d";
 const ID = "nx-town-mapboard";
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));

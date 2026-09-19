@@ -783,6 +783,61 @@ correction / new subject and I resume immediately.
 - Next: chip clustering at spoke-ring junctions (both judges' convergent
   recipe — settlements at crossroads), or stringlights night survey.
 
+### polish-302 — mapboard spoke-ring junctions (ACCEPTED, LIVE)
+
+- Subject: `nx-town-mapboard` (same tuple as polish-301, empty comp bag).
+  Build source `assets/mkv3-mapboard.ts` (live was 4f9bb8a586f00f6d).
+- Defect (decode-proven at source, the polish-301 queue item's foundation):
+  all 8 spokes ended at board r 0.2963 while the ring band starts at 0.385 —
+  a uniform 8.9cm gap at EVERY junction; the map's own contract ("radial
+  bars hearth->ring so roads CONNECT") was violated. Root cause: the spoke
+  loop mixed frames — `outer = 0.83*S` for the box LENGTH while the center
+  passed through onBoard's `ax*S` again (double-scale on center, unscaled
+  length). polish-301's title band hid the wheel's mid-radius zone from the
+  closeup probe; the decode manifest exposed it.
+- Change (ONE source edit): spoke unit law — authored radii throughout
+  (outer 0.83 = ring centerline, inner 0.12 = hearth disc rim), length
+  (outer-inner)*S. Spoke 0 tip now 0.4150 == the ring band centerline
+  exactly; diagonal AABB tips 0.4149; junctions covered by the torus tube
+  ink. E-W bar/junctions + pin contact preserved; envelope unchanged
+  (reader extreme still the torus poke -0.0645 = the artwalk b22/b26
+  anchor; plaza-side -0.0335 unchanged).
+- Candidate `1a73015f5ec4fdf44251ab69ecbaca9fcedda5278fe323cfb52ae6fbd16570b4`
+  (29 nodes / 63 elements unchanged). Double rebuild byte-identical,
+  mtime-verified. NaN scan clean (0 non-finite in served decode).
+- Falsification: map-side 18m pixel diff = 154 changed px confined to the
+  wheel rim zone (464..494, 310..349), 23-26 px in each of the six gapped
+  junction sectors (E/W junctions were already covered by the E-W diameter
+  bar — 2-5 px there); top/aerial byte-identical (0 px); front/night/
+  gameplay diffs 10-28 px (sub-threshold micro). ZAI ui_diff judge on
+  4x-zoom before/after crops (disclosed fallback — no native vision tool
+  loadable in this cron session, same class as polish-285..301, native
+  re-judge owed): BEFORE "8 floating bars inside a circle", AFTER
+  "connected hub-and-spoke network", junctions read as solid welds, no
+  floating marks/double lines/smudges, hearth hub reads as a disc — PASS.
+- Placed via the updated dedicated placer `next-place-polish301-mapboard.ts`
+  (hash gate advanced 4f9bb8a5 -> 1a73015f): PLACED_VERIFIED, 1 upload + 2
+  verbs, comp bag {} preserved, idempotent rerun ALREADY_LIVE_NO_VERBS,
+  live census pin `store/1a73015f5ec4fdf4.glb` @ (2.5,0,9.5) yaw
+  -2.944197 exact.
+- Served-bytes proof (struct-104 law): served DRACO 1138f60c… radial
+  histogram of the ink bucket vs the previous served build ba20ce99:
+  defect band r[0.29,0.305] 96 verts -> 0, ring band r[0.41,0.425]
+  64 -> 160, ink verts 356 unchanged — the extension survived the
+  re-encode; the player's served truth shows connected roads.
+- Evidence: `reviews/hero-assets/polish-302-mapboard-spokes/` (before/ =
+  live 4f9bb8a5 baseline 12-view rig + baseline.glb; after/ = candidate;
+  probes: sector-classified pixel diff, served DRACO decode histogram).
+  Probe scripts: `agents/arthur/p302-verify-served.ts`, /tmp/p302-hist.ts
+  (one-shot, rewritten durable below).
+- Durable probe: `agents/arthur/p302-verify-served.ts` (served decode +
+  ink-bucket radial spans). Excalibur checkpoint: `eidoverse-hero-assets`
+  cast NOT reachable (no workings/ tree at the Excalibur path) — recorded
+  here + ledger instead. Not fabricated.
+- Next: chip clustering at the four axis junctions (the remaining half of
+  the polish-301 recipe — settlements at crossroads, now that the roads
+  connect), or stringlights night survey.
+
 
 
 ## BILL VERDICT 2026-08-31: ALL APPROVED, KEEP IMPROVING
