@@ -17450,3 +17450,142 @@ Files: struct238-scan-co.ts + struct238-seatprobe-co.ts +
 struct238-terrain-co.ts + struct238-walk-co.ts + next-place-struct238.ts
 (all NEW, tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
 (one append struct-238, D+0 E+1). One upload, one verb. Zero pushes.
+
+
+## struct-239 (2026-09-19): R11-52 THE ICOSAHEDRON —
+## BUILD+JUDGE TICK, v2 ACCEPTED BANKED NOT PLACED
+
+239%3=0 refine slot with EMPTY bank (co placed struct-238) → build+judge
+tick per the struct-229/233/235/237 precedent (refine pool empty of
+payable items 40+ ticks). Gate ALL PASS real exit 0 tick-start at 5278eafd
+(sweep-327). Shard drained fresh (IMPROVE-PLAN md5 7fa8a224 unchanged, 0
+OPEN nx-struct rows). Ledger max re-derived struct-238 → tag struct-239
+(re-checked immediately before append). Native absent from the cron
+catalog all tick (tool_search fresh: terminal + zai-vision + repoprompt
+only — same disclosed cron-unpayable class as struct-169..238; owed board
+stays 26 + csaszar v3 + ssd v1 + tetrahelix v2 + rt v1 + co v1, plus ico
+v2 now riding).
+
+FORM SELECTION (fresh grep, plan + IMPROVEMENTS + IMPROVE-PLAN + CITY-PLAN
++ CITY-PLAN-V2): the SOLID itself 0 built — struct-106's own ledger note
+"geodesic used icosa SUBDIVISION not the solid"; icosahedron appears only
+as kin-reference/coordinate source. THE PLATONIC BRANCH CLOSES at its
+final member. Kin falsification sweep: dodecahedron struct-106 is the
+DUAL cousin — deliberate dual-echo (oloid→sphericon precedent; radically
+distinct silhouette: closed 12-pentagon shell vs OPEN 30-rod cage);
+tesseract 4D-barred; ssd = star stellation; rt/co/tetrahelix =
+zonohedron/Archimedean/cell-chain branches. SELECTION: the icosahedron —
+exact closed form (cyclic (0,±1,±φ)), theorem-backed (Euclid XIII.16;
+Timaeus 55d: WATER, the most mobile element), instantly readable at 18m
+(the twenty-sided die).
+
+CONCEPT: PLATO'S WATER, RENDERED OPEN. The dodecahedron (the fifth
+element, the cosmos) stands CLOSED and enterable; its dual stands OPEN —
+30 iron rods as a cage you see through, the 20 triangle faces left to the
+eye. THE SECRET INSIDE: the 12 corners are exactly THREE mutually
+perpendicular GOLDEN RECTANGLES (2 × 2φ, pairwise disjoint, interlocked
+without touching — min separation 0.975m) drawn as 12 thinner interior
+rods. Tip-down on a TWENTY-sided dais (one side per face — the theme
+number; the short rectangle side IS the icosa edge, exactly 2·SCALE).
+Night contract: twelve warm brass beads at the twelve corners — the
+twelve FACES of the standing dodecahedron, its dual across the village;
+tip bead half-proud in the dais top (ssd/rt/co lineage).
+
+PROBE (struct239-probe-ico.ts, tracked) 10/10 ALL PASS real exit 0: T1
+Euler 12−30+20 = 2; T2 20 equilateral triangles worst side dev mm-class,
+side 3.1544m, edge/R 1.0514622242 == 4/√(10+2√5); T3 five-fold law
+degree 5 everywhere, five faces per vertex, Σdeg 60 == 2E; T4 manifold
+2-per-edge; T5 GOLDEN RECTANGLES partition 3×4 exact, each rectangle
+exactly 2 short (== icosa edge) + 2 long (φ), normals mutually ⊥, min
+inter-frame separation 0.975m; T7 uniformity all dihedrals equal cos ==
+√5/3 worst 1.1e-16 (interior 138.1897°); T8 seat tip at dais top 0.30,
+rings level (spread 4.4e-16), centroid off-axis 3.7e-17, 72° symmetry 0
+misses, summit−tip 6.0000 == 2R, reach+bead 2.778 <= apothem 2.864; T9
+frame immersion min frame-to-cage mid-span 0.975m vs tubes 0.105m, rod
+interiors min y 0.352 > dais top + 0.05. RED control (--red displaces one
+vertex 0.3): T2/T5/T7/T8 FAIL — verified exit 1. SELF-CAUGHT RED-FIRST x3
+(the whole self-catch list, all LAW bugs not geometry): (a) T5 cycle-phase
+assumed long-first — rect 2 runs short-first; fixed phase-invariant
+(classify by exact length, exactly 2+2 per rectangle); (b) TDZ on
+PLINTH_R before derivation — moved the derived constants above all
+checks; (c) T9 dais-clearance measured CORNERS but the rectangles
+legitimately share the seated tip corner — re-specified to rod
+INTERIORS (the honest law).
+
+BUILD v1 (assets/mkv3-ico.ts, staged -f): root identity (struct-188);
+texMat lanes ico_stone/ico_iron (struct-38); beads emissive 0x9a7030 @1.0
+in-GLB (dusk lineage, struct-82); 43 pre-merge meshes + 1 KEEP glow group
+glow_ico_12; envelope law green in-build (5.80x6.39x5.80 == probe
+contract). v1 deterministic x2 byte-identical sha256
+7bd6f352708064da14f6dfc7cab16ce79d25e69b7955584544a4eb71d354b829
+(mtime-verified).
+
+DECODE v1 8/8 ALL PASS real exit 0 (D1 census 3 nodes, D2 icosagon dais
+TRUE box ±2.900 corners present sole min y −0.000000, D3 rods 3150 verts
+worst 60mm coverage 30/30 cage + 12/12 frame, D4 OPEN-CAGE 0 stone verts
+above dais, D5 beads 12/12 sole-night, D6 grounding tip bead half-proud
+0.205 vs 0.30, D7 drift 0.00mm, D8 texMats 2/2). RED control (foreign
+village_co3.glb): census FAIL clean exit 1.
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; flap law disclosed; native re-judge owed riding the
+board): gameplay 18m 3/4 PASS (identity/silhouette/grounding; Q4 count 7
+resolved = single-azimuth occlusion class, decode D5 proves 12/12, judge
+confirms "every corner I can inspect is capped"). closeface 0/4 — REAL
+DEFECT, source-traced: the golden rectangles shared ico_iron (25% thinner
+only) — "cannot trace a single thin rectangular loop... either missing or
+rendered indistinguishable from the cage." THE CONCEPT'S ONE IDEA WAS
+INVISIBLE.
+
+BUILD v2 (same tick, fix in source): THE GOLDEN RECTANGLES ARE NOW GOLD —
+own brass texMat lane ico_brassframe (0xa8823f family, non-emissive; the
+corner beads remain the sole night element — night contract unchanged).
+Deterministic x2 sha256
+356aafa90abf5db468f99979280d168acbd22ed777acb47f168b8fb4895e712e,
+envelope unchanged. DECODE v2 (contract updated: 4 nodes incl.
+ico_brassframe; D3 split cage-lane vs frame-lane) 8/8 ALL PASS exit 0 —
+cage 2250 verts worst 60mm 30/30, GOLDEN frames 900 verts worst 45mm
+12/12 own lane; RED control foreign bytes census FAIL exit 1.
+
+JUDGMENT v2: gameplay 4/4 PASS (identity pentagonal-crown read,
+silhouette closed, grounding + lattice cast shadow, Q4 GOLD reads at 18m
+— "horizontal gold chord near the crown, two gold diagonals, vertical
+member toward the apex traceable"). Closeface Q2/Q3/Q4 PASS — "distinct
+warm-gold rods clearly thread the interior... consistent with the three
+interlocked golden rectangles"; Q1 joinery FAIL ARBITRATED at decode: D5
+proves 12/12 bead clusters, the tip bead is half-buried in the dais BY
+DESIGN (D6), and the judge names its unauditable points crown-cropped +
+apex-occluded (disclosed-Minor, ssd/rt/co/tetrahelix precedent). Night
+4/4 PASS — 7 resolved with self-consistent occlusion arithmetic (7 seen
++ 4 rear-masked + 1 threshold-dais = 12), tight quiet points, zero
+bloom/spill, every point rod-anchored. Judge cosmetic notes recorded, not
+executed: gold contrast margin thin under backlight (future FRAME_R bump
+candidate; emissive would break the sole-night contract — not taken);
+beads and gold frames share the warm-brass hue family (separable but
+related — by design); the 20-sided dais reads smooth-cylinder at 18m
+(theme number is a close-distance read, N=20 chord/radius 0.988).
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. Placement = struct-240
+committed carry: fresh census scan — under-served band/district
+selection, 8m NN + per-district soft-cap audit, icosagon-exact polygon
+SAT (struct-19 disc law class — never square-bbox; 20-gon footprint
+R2.90), oblique-yaw law (struct-104 band), terrain preflight over the
+TRUE rotated icosagon, hash-gated plain spawn nx-struct-ico, comp {}.
+Folly class — ground circuit walk at placement, no door.
+
+Bill eye-check pointer (after placement): the dodecahedron's dual — where
+that solid is closed, this one is OPEN: a cage of thirty iron rods you
+see straight through, its twenty triangular faces left to the eye, tip
+down on a twenty-sided dais. Inside, the secret: the twelve corners are
+exactly three golden rectangles, standing in each other perpendicular,
+interlocked and never touching — the golden ratio hiding inside Plato's
+water. After dark: twelve quiet lights, one at every corner — the twelve
+faces of the dodecahedron across the village, lit in answer.
+
+Files: struct239-probe-ico.ts + struct239-decode-ico.ts +
+struct239-render-ico.ts (all NEW, tracked), assets/mkv3-ico.ts (NEW,
+staged -f), reviews/struct239-ico/ + reviews/struct239-ico-v2/ (18
+frames, ignored — sha pins in this block are the durable record),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-239,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
