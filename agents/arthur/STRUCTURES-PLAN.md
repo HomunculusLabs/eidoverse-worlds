@@ -18900,3 +18900,179 @@ D+0 E+1). One upload, one verb. Zero pushes.
 Next queue head: struct-251 build+judge tick (R11-62, empty bank — the
 dodecahedron is the only parent left without its Archimedean echo;
 truncated dodecahedron candidate, fresh five-file grep to confirm).
+
+
+## struct-251 (2026-09-19): R11-62 THE TRUNCATED DODECAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-252 committed carry)
+
+251%3=2 build slot, bank EMPTY after tcube struct-250 -> build tick per
+the nine-tick precedent. Gate ALL PASS real exit 0 tick-start (unpiped,
+GATE_EXIT:0 at f4c97d82 epoch). Shard drained fresh (IMPROVE-PLAN pin
+7fa8a224 unchanged — same pin as struct-238..250, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-250 -> struct-251 (numeric
+extraction, re-checked immediately before append). Native absent from
+the cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as
+struct-169..250; owed board unchanged 26 + csaszar v3 + ssd v1 +
+tetrahelix v2 + rt v1 + co v1 + ico v2 + nodoid v3 + tico v2 + toct v1 +
+tret v2 + tcube v1, plus tdodec v1 now riding). No interrupted 251
+window existed (no struct251-*/next-place-struct251 files pre-tick).
+
+FORM SELECTION fresh grep (the struct-250 queue-head named the
+candidate; grep confirms the gap): truncated dodecahedron / tdodec /
+truncdodec — 0 real mentions across STRUCTURES-PLAN (only the struct-250
+next-queue pointer), IMPROVEMENTS (30 dodeca hits = the PARENT
+references + city lane's plain dodecahedron r110 W), CITY-PLAN 0,
+IMPROVE-PLAN 0, NEW-VILLAGE-PLAN 0, DRESSING-PLAN (dodeca-debris
+topology notes only). The ARCHIMEDEAN branch's SIXTH member (cubocta
+struct-237, tico 243, toct 245, tret 247, tcube 249) and the PARENT-ECHO
+of the dodecahedron — THE LAST PLATONIC PARENT (tetra✓tret, octa✓toct,
+icosa✓tico, cube✓tcube, dodeca→tdodec: THE BRANCH CLOSES).
+
+CONCEPT: THE LIGHTEST CUT. The family law is 1/3 — but cut a
+DODECAHEDRON's twenty vertices at exactly 1/3 and the pentagons become
+IRREGULAR decagons (corner sides φ·p/3 vs middle sides p/3 — side ratio
+exactly φ, machine-proven T6b). Regularity demands u = 1/(2+φ) =
+(3−φ)/5 ≈ 0.2764 — the cut pulls BACK below the family third (the
+tcube's deeper cut in mirror). Cut that light and exactly
+1 − 20φ/(3(15+7√5)(2+φ)³) ≈ 99.2570% of the parent still stands:
+twenty razor tets take ~0.74% of the mass — the branch's LIGHTEST
+touch (tcube 96.65%). The last parent barely bleeds. Presentation:
+DECAGON-DOWN, 5-fold (family seat law: toct hexagon-down, tcube
+octagon-down, tdodec decagon-down). IRON carries the 20 TRIANGLES (the
+cuts, dark: 10 tilted down at the lower ring, 10 tilted up) + all 90
+seam bonds; STONE carries the 12 DECAGONS (the parent's own face
+planes; D-D dihedral == the parent dodeca's own 116.565°, T5) + the
+THIRTY-TWO-sided dais (one side per face, 12+20 — theme-number law).
+Night contract: twelve warm brass beads at the twelve decagon centers —
+the twelve parent faces, lit: one CROWN on an iron finial stem (tret v2
+occlusion law, clearance 0.810 >= 0.225) + ten WAIST (5 upper + 5
+lower, all aloft, twist-snapped so a lower-ring decagon reads dead-on
++X) + the TWELFTH PRESSED INTO THE EARTH beneath the flat foot, fully
+buried in the dais band (tico's-twelfth idiom — eleven read at night,
+twelve in truth, disclosed). The iron cuts stay dark.
+
+PARAMETRIZATION (exact, closed-form): parent dodeca verts (±1,±1,±1) +
+(0,±1/φ,±φ)-cyclic, edge p = 2/φ, 20 verts/30 edges/12 faces; face
+normals = the (0,±φ,±1)-cyclic family. Cut points u and 1−u on each
+parent edge -> 60 verts; uniform edge a = 2/(2+φ); R = (a/4)√(74+30√5).
+Corner tets: legs L = u·p pairwise at 108° (the pentagon's own interior
+angle — every edge pair at a dodeca vertex shares a face), det = L³φ/2,
+V_corner = L³φ/12. V_parent = (15+7√5)p³/4 cross-checked as 12 face
+pyramids. Seat: face normal nrm(0,−φ,1) -> −Y (DECAGON DOWN, 5-fold) +
+measured twist-snap (toct sign law, hard-throw verified) putting a
+lower-ring decagon dead on az 0.
+
+PROBE (struct251-probe-tdodec.ts, tracked) 9/9 ALL PASS real exit 0:
+T1 Euler 60−90+32 = 2; T2 20 regular triangles (60°) + 12 regular
+decagons (144°), worst side dev 1.1e-15, worst angle dev 1.3e-15 rad;
+T3 degree 3 everywhere, exactly 1 triangle + 2 decagons per vertex
+(figure 3.10.10); T4 manifold 90/90; T5 all 60 verts at exactly R (==
+closed form), dihedrals exactly TWO classes — D-D dot +1/√5 (interior
+116.565° — the PARENT dodeca's own: the decagon planes ARE the parent's
+face planes), T-D dot √((25+11√5)/10)/(φ√3) (interior 142.6226°), zero
+T-T edges (60 T-D + 30 D-D == 90); T6 THE LIGHTEST CUT — corner worst
+4.3e-18, ratio 0.992569588000 == closed form to 1e-12, dual-computation
+agreement 8.9e-15; T6b THE 1/3-BAR — at 1/3 the side ratio is exactly φ
+(irregular) and u < 1/3 strictly by 0.0569; T7 seat — bottom decagon
+FLAT on dais top (spread 8.9e-16), top parallel, 72° symmetry 0 misses,
+centroid on axis, height 6.4 exact, reach+rod 3.861 <= apothem 3.981
+(32-gon dais R4.00 APOTHEM-FIRST), bead census 1 crown dead-axis + 10
+waist (lower 72° cardinals + SNAP face az −0.0e-10, upper 36°
+interleave), all aloft, + 1 pressed foot buried; FINIAL-CLEARANCE
+0.810 >= 0.225; T8 every inset plate vertex strictly inside the solid
+(worst poke −28mm), corner tuck 24.1mm. RED control (--red displaces
+vertex 7): exit 1, T2/T5/T7/T8 fail — verified.
+
+TWO probe self-catches this tick (honest fixes, law not geometry — same
+class as the tcube's closed-form catches): (a) FACE-NORMAL FAMILY —
+first run threw "face plane not level": with golden verts
+(0,±1/φ,±φ)-cyclic the face normals are the (0,±φ,±1)-cyclic family,
+NOT (0,±1,±φ); verified by hand before patching (projecting onto
+(0,φ,1)/√(φ²+1) levels exactly the five verts {(1,1,1),(0,1/φ,φ),
+(−1,1,1),(1/φ,φ,0),(−1/φ,φ,0)} at 1.3764 — the (±1,±φ) family is the
+dual pairing for the OPPOSITE chirality). (b) the seat vector v0
+carried the old family's [0,−1,φ] — corrected to nrm([0,−φ,1]) with the
+family; the stray "lower ring 2" symptom was the non-face-aligned seat.
+(c) summary line referenced the tcube's dead-horizontal waist face —
+this solid has none (waist n_y = ±1/√5); fixed to a real lower-ring
+face.
+
+BUILD (agents/arthur/assets/mkv3-tdodec.ts, staged -f): root identity
+(struct-188 law); texMat lanes tdodec_stone/tdodec_iron (struct-38
+law); bead emissive 0x9a7030 @ 1.4 in-GLB (tico v2 + toct + tret +
+tcube build-time law); 124 pre-merge meshes + 1 KEEP glow group
+glow_tdodec_12; envelope law green in-build 8.00x8.17x8.00 == probe
+contract. v1 deterministic x2 byte-identical sha256
+c344bd08b2592256187cdc34eaff32e50be8e07bd1e50cfd09ca5ff56f2fe0b7
+(mtime-verified 10:26).
+
+DECODE (struct251-decode-tdodec.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (tdodec_iron + tdodec_stone + glow_tdodec_12); D2
+32-gon dais TRUE box ±4.000/±4.000 corners present sole min y
+−0.000000; D3 iron lane split 7282 verts = 6990 rod + 52 finial-stem +
+240 triangle-plate + 0 unclassified, bond coverage 90/90; D4 1242
+decagon-plate verts worst 58mm (<= 62 shell); D5 beads 12/12
+decagon-center clusters (1 crown stem-lifted + 10 waist (5 upper + 5
+lower) + 1 foot pressed), emissive sole-night, eleven aloft + foot
+buried; D6 grounding sole at grade + ground band; D7 envelope drift
+0.00mm; D8 texMats 2/2. RED control (village_tcube3.glb — the sibling
+Archimedean's own bytes): census FAIL clean stop exit 1.
+
+RENDERS: struct251-render-tdodec.ts (tracked chassis, struct247
+lineage) 9 frames on the EXACT pinned bytes — bounds min[−4,−0.000,−4]
+max[4,8.170,4] == contract; reviews/struct251-tdodec/ (ignored — sha
+pin above is the durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native cron-absent, disclosed, rides the
+owed board): day gameplay 18m 4/4 PASS (identity reads truncated
+dodecahedron UNPROMPTED — "large multi-sided stone panels... separated
+by small dark triangular caps at the cut vertices... unmistakably a
+mathematical panelled round solid"; closed silhouette, dais flush +
+cast shadow, zero defects); night 3/3 PASS (warm points "sit
+unmistakably at the centers of the decagonal panels" beneath the
+clearly separated crown bead; five distinct points resolved at this
+azimuth — crown + 4 waist, the single-azimuth-yield precedent disclosed
+(twelve in truth by decode D5, the ring completes circling); dark
+discipline clean, no bloom); closeface 4/4 PASS (joinery clean with the
+intended shadow-gap reveal, two material families distinct, beads
+centered with contact shadows, zero defects — the judge's one note, a
+crescent left bead, is correct seam-rod occlusion at grazing angle, not
+clipping). v1 ACCEPTED BANKED NOT PLACED — no real defect, no
+iteration needed.
+
+DISPOSITION: placement = struct-252 committed carry (fresh census
+scan, under-served band/district selection, 8m NN + per-district soft
+cap 6 audit, 32-gon-exact polygon SAT struct-19 class, oblique-yaw
+struct-104 band, terrain preflight over the TRUE rotated 32-gon,
+hash-gated plain spawn nx-struct-tdodec, comp {}, ground circuit walk).
+Folly class — presentation dais R4.00 apothem 3.981, walk standoff 8m
+law applies directly (apothem 3.981 -> 8m square circuit chord-mid
+4.02m >> 1.4; no tret-class widening needed).
+
+Bill eye-check pointer (after placement): the Archimedean branch's
+closing member — where the tico's panelled ball and the tcube's deeper
+cut stand on other diagonals, THE TRUNCATED DODECAHEDRON stands
+DECAGON-DOWN: the dodecahedron with its twenty vertices cut at the
+LIGHTEST touch of the whole family, twelve wide stone decagons (the
+parent's own faces) and twenty small dark triangles where the points
+were. The theorem standing under it: cut at the family's 1/3 the
+decagons come out irregular — the side ratio is exactly φ — so
+regularity pulls the cut back below the third, and even then 99.26% of
+the parent still stands; the last parent barely bleeds. After dark the
+twelve brass beads mark exactly the twelve parent faces, lit — one on
+the finial at the crown, ten at the waist, and the twelfth given to the
+earth beneath the flat foot. The cuts stay dark.
+
+Files: struct251-probe-tdodec.ts + struct251-decode-tdodec.ts +
+struct251-render-tdodec.ts (all NEW, tracked), assets/mkv3-tdodec.ts
+(NEW, staged -f), reviews/struct251-tdodec/ (9 frames, ignored — sha
+pin above is the durable record), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-251, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+Next queue head: struct-252 placement tick (the committed carry above);
+after it lands, the Archimedean branch is COMPLETE on all five parents —
+next build sweep re-derives from the form ledger (snub cube / rhombic/
+truncated cubocta named as unclaimed in struct-249's grep) or Bill's
+verdict routing.
