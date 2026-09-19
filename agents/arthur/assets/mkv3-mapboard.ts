@@ -92,8 +92,57 @@ const mapG = new THREE.Group();
 mapG.rotation.x = -0.21;
 mapG.position.set(0, 1.55, -0.06);
 g.add(mapG);
+// polish-301 — THE PARCHMENT FIELD: the map's content was painted straight
+// on timber texture, where chips are indistinguishable from wood speckle
+// (judge: "signal and noise are indistinguishable"; 18m: blank panel).
+// A painted map SHEET pinned over the board — light hide 0xcfc39a with the
+// chip-law same-hue emissive (0.38; fountain/monument lineage) — carries
+// the ink skeleton and every chip, so content reads as ink-on-parchment.
+// 2.26x1.48: covers the full content rim (kiln y -0.7175, whisper +0.625)
+// with edges hidden UNDER the bone frame (frame inner ±1.14/±0.73; sheet
+// front -0.032 sits 3.2mm inside the rim face -0.0392 — the -z envelope
+// SHRINKS vs the old torus poke -0.066, adding margin to the R-121 lamp-n
+// clearance; no new protrusion toward any rider).
+const parchment = new THREE.Mesh(new THREE.BoxGeometry(2.26, 1.48, 0.004),
+  new THREE.MeshStandardMaterial({ color: 0xcfc39a, roughness: 0.85, metalness: 0,
+    emissive: new THREE.Color(0xcfc39a), emissiveIntensity: 0.38 }));
+parchment.name = "map_parchment";
+// v2 (decode-caught): v1 sat at z [-0.032,-0.028] — ENTIRELY inside the
+// slab (back face -0.035), invisible (face pixels byte-near-unchanged).
+// Reader face must be proud of the slab: [-0.0355,-0.0315], i.e. 0.5mm
+// proud of the slab face and 0.5mm under the chip plane -0.036.
+parchment.position.set(0, 0, -0.0335);   // front -0.0355, back embedded in the slab
+mapG.add(parchment);
+// polish-301 — THE TITLE BAND (welcome-board name-bar idiom, improve-29
+// lineage): dark band + pale carved letter bars at the map's foot make the
+// board read "titled document" at 18m and give the sheet a baseline. The
+// nine bars read as letterforms sub-legibly (3x5-pixel scale law).
+const bar = new THREE.Mesh(new THREE.BoxGeometry(1.10, 0.13, 0.006),
+  new THREE.MeshStandardMaterial({ color: 0x4a432e, roughness: 0.95, metalness: 0,
+    emissive: new THREE.Color(0x4a432e), emissiveIntensity: 0.5 }));
+bar.name = "map_title_bar";
+// v3 stack (0.5mm ladder, all inside the rim face -0.0392 so the entity's
+// vertex envelope — and artwalk-83's +0.324m b22 clearance — is unchanged):
+// sheet reader face -0.0355 < band -0.036 < glyphs -0.0375 (1.5mm proud of
+// the band, the v1-proven readable step; v2 had the band 0.5mm proudER than
+// the glyphs — burying them, polish-269 class).
+bar.position.set(0, -0.58, -0.033);      // band [-0.036,-0.030], covers the sheet locally
+mapG.add(bar);
+const glyphMat = new THREE.MeshStandardMaterial({ color: 0xd8d2ae, roughness: 0.85, metalness: 0,
+  emissive: new THREE.Color(0xd8d2ae), emissiveIntensity: 0.5 });
+for (let i = 0; i < 9; i++) {
+  const gw = 0.05 + ((i * 7) % 3) * 0.012;   // varied letter widths
+  const gl = new THREE.Mesh(new THREE.BoxGeometry(gw, 0.028, 0.004), glyphMat);
+  gl.name = `map_title_${i}`;
+  gl.position.set(-0.44 + i * 0.11, -0.58, -0.0355);   // v3: [-0.0375,-0.0335] — 1.5mm proud of the band
+  mapG.add(gl);
+}
 const S = 0.50;
 const FACE = -0.036; // 1mm proud of the slab's back face (mapG-local -0.035)
+// polish-301 — INK: roads are now INK (0x2e2a20) on parchment, not bone on
+// timber — the skeleton that makes the wheel read as a village plan.
+const inkMat = () => new THREE.MeshStandardMaterial({ color: 0x2e2a20, roughness: 0.6, metalness: 0,
+  emissive: new THREE.Color(0x2e2a20), emissiveIntensity: 0.5 });
 const onBoard = (mesh: THREE.Mesh, ax: number, az: number, hd: number) => {
   // hd = the mesh's extent along z (its relief depth): fronts at FACE
   mesh.position.set(ax * S, -az * S, FACE + hd / 2);
@@ -122,16 +171,15 @@ onBoard(hearth, 0, 0, 0.03);
 // Torus seated hd=0 (center AT FACE): front z_m -0.006, back -0.066 — v1
 // seated it hd=0.06 which put its front at +0.024, past the mid-plane
 // toward the b22 rider's plate; decode caught it before placement.
-const boneMat = () => new THREE.MeshStandardMaterial({ color: C.BONE, roughness: 0.8, metalness: 0, emissive: new THREE.Color(C.BONE), emissiveIntensity: 0.35 });
-const ringN = new THREE.Mesh(new THREE.TorusGeometry(0.83 * S, 0.03, 5, 32), boneMat());
+const ringN = new THREE.Mesh(new THREE.TorusGeometry(0.83 * S, 0.03, 5, 32), inkMat());
 ringN.name = "map_ring2";
 onBoard(ringN, 0, 0, 0);
-chip("map_ring", 0, 0, 1.66, 0.10, C.BONE, 0.014); // ring road E-W bar (width floored 0.05)
+chip("map_ring", 0, 0, 1.66, 0.10, 0x2e2a20, 0.014); // ring road E-W bar (width floored 0.05)
 // 4 spokes — radial bars hearth->ring so roads CONNECT on the face (the old
 // field's bars floated free, offset off-axis): inner r 0.06, outer ring r
 for (const [si, ang] of [[0, 0], [1, Math.PI / 2], [2, Math.PI], [3, -Math.PI / 2], [4, Math.PI / 4], [5, 3 * Math.PI / 4], [6, 5 * Math.PI / 4], [7, 7 * Math.PI / 4]] as const) {
     const outer = 0.83 * S, inner = 0.06;
-    const sp = new THREE.Mesh(new THREE.BoxGeometry(outer - inner, 0.05, 0.014), boneMat());
+    const sp = new THREE.Mesh(new THREE.BoxGeometry(outer - inner, 0.05, 0.014), inkMat());
     sp.name = `map_spoke_${si}`;
     sp.rotation.z = -ang;   // authored (cos a, sin a) -> mapG (cos a, -sin a)
     onBoard(sp, Math.cos(ang) * (outer + inner) / 2, Math.sin(ang) * (outer + inner) / 2, 0.014);
@@ -169,7 +217,7 @@ chip("map_whisper", -1.22, -1.22, 0.06, 0.06, 0x626442);
 // quarry road, dye house) gets its marks (same board scale ~1:31):
 // grainfield (W r42), flax+pond (SW r44), quarry+kiln (NE r48), goats+stand
 // (NE r43), dyehouse (NW r27), charcoal clamp (NE r35), welcome board (S r5)
-chip("map_grainfield", -1.32, 0.18, 0.14, 0.2, 0xc9b454, 0.012);
+chip("map_grainfield", -1.32, 0.18, 0.14, 0.2, 0xa8862e, 0.012);
 chip("map_flax", -1.34, -0.16, 0.1, 0.16, 0x92b872, 0.012);
 chip("map_quarry", 1.28, 1.28, 0.2, 0.18, 0x74705e, 0.012);
 chip("map_kiln", 1.18, 1.4, 0.07, 0.07, 0xa08232, 0.018);
@@ -177,7 +225,7 @@ chip("map_goats", 1.34, -0.14, 0.12, 0.12, 0xb6b08a, 0.014);
 chip("map_milkstand", 1.28, -0.08, 0.05, 0.05, 0x7c6832, 0.02);
 chip("map_dyehouse", -0.42, 0.78, 0.11, 0.11, 0x526a96, 0.02);
 chip("map_charcoal", 1.02, -0.9, 0.09, 0.09, 0x444036, 0.016);
-chip("map_welcome", 0.1, -0.16, 0.06, 0.06, 0xc9a86a, 0.02);
+chip("map_welcome", 0.1, -0.16, 0.06, 0.06, 0xa8813f, 0.02);
 // loop #87 — the map catches up AGAIN: the 8 builds since loop 71 get
 // their marks (same 1:31 scale): chopblock (woodyard edge), field pond
 // + ducks (SW r43-44 cluster), hutch + run (garden side), dyer sign.
@@ -191,7 +239,7 @@ chip("map_dyer", -0.4, 0.82, 0.05, 0.05, 0x526a96, 0.02);
 // (same 1:31 scale): inn door rides the inn (no mark — too small), but
 // the cart, laundry, cistern, forge, and way-lamp do:
 chip("map_cart", -1.18, 0.26, 0.07, 0.05, 0xd8c46a, 0.018);   // harvest cart (straw)
-chip("map_laundry", -0.55, 0.4, 0.08, 0.03, 0xdcdcba, 0.014); // the laundry line
+chip("map_laundry", -0.55, 0.4, 0.08, 0.03, 0xb0ab8a, 0.014); // the laundry line (aged cloth — parchment-corrected)
 chip("map_cistern", 0.62, -0.5, 0.05, 0.05, 0x303840, 0.016); // bakery cistern (water)
 chip("map_forge", 0.68, -0.56, 0.06, 0.06, 0xff7030, 0.02);   // THE FORGE (ember-orange — the only bright mark)
 chip("map_waylamp", -0.75, -0.75, 0.03, 0.03, 0xffb066, 0.018); // the way-lamp on the whisper ray

@@ -753,6 +753,38 @@ correction / new subject and I resume immediately.
 - Per loop law: delivered exactly once; no hold while awaiting verdict.
 
 
+### polish-301 — mapboard parchment + ink map (ACCEPTED, LIVE)
+
+- Subject: `nx-town-mapboard` (pos [2.5,0,9.5], yaw −2.944197, empty comp
+  bag; artwalk riders b22/b26 untouched — map-side vertex envelope −0.0645
+  preserved by decode). Source `assets/mkv3-mapboard.ts` (live was
+  95231f20a016b303, byte-verified; 24→29 nodes).
+- Defect (ZAI judge, disclosed fallback, native re-judge owed): chips
+  indistinguishable from timber speckle — "signal and noise are
+  indistinguishable"; no hierarchy beneath the wheel; map face blank at 18m.
+- Change (ONE intervention): painted parchment sheet 0xcfc39a (chip-law
+  emissive .38) 0.5mm proud of the slab face; roads re-inked 0x2e2a20;
+  welcome-idiom title band + 9 glyph bars (improve-29 lineage);
+  grainfield/laundry/welcome chips parchment-corrected. Two staging bugs
+  caught in-tick (v1 sheet buried inside the slab — face pixels unchanged,
+  polish-269 class; v2 band over glyphs) — rejected a82da177, 60235c47.
+- Accepted v3 `4f9bb8a586f00f6d…` deterministic ×2; stack ladder
+  −0.0355/−0.036/−0.0375; probes: map-face 18m avg 107→137, board-face
+  103→140, night unchanged. Judge v3: contrast cured, title band reads,
+  zero geometric defects.
+- Placed via NEW `next-place-polish301-mapboard.ts`: PLACED_VERIFIED (1
+  upload + 2 verbs), comp bag {} preserved, idempotent 0 verbs; live pin
+  `store/4f9bb8a586f00f6d.glb` exact tuple; served DRACO (ba20ce99) keeps
+  all four authored material signatures + emissives, 29/29/26 structure.
+- Evidence: `reviews/hero-assets/polish-301-mapboard/` (before/ + buried
+  v1 after/ + inverted after-v2/ + accepted after-v3/, backgameplay/
+  backnight map-side 18m probes). Excalibur cast unreachable — recorded
+  here + ledger.
+- Next: chip clustering at spoke-ring junctions (both judges' convergent
+  recipe — settlements at crossroads), or stringlights night survey.
+
+
+
 ## BILL VERDICT 2026-08-31: ALL APPROVED, KEEP IMPROVING
 
 Bill: "they all look good, we should keep improving." All ten accepted
