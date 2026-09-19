@@ -13,6 +13,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | goat pen | `nx-dress-goats` | (34,0,13) yaw -1.2 | c47861e4 → **7e9af5a5** (fauna-1) | WORST — box-goats, floating heads, ZERO comps (motion lost to a re-place comp-wipe; tex-41's pin checks lib only), build bug: N/S post rows spacing R marched to x=9.6 (bbox 14.21m) → **FIXED fauna-1** |
 | hen | `nx-dress-hens` | (34,-0.0335,-8) yaw -1.8 | edc1a4c7 → **1ab461bd** (fauna-2) | WORST-NEXT — was ONE 0.4m hen micro-entity standing alone by the coop (the flock's b/c siblings were never spawned here); 7-seg cylinders, ZERO comps, frozen → **FIXED fauna-2** (three-hen flock) |
 | fox den | `nx-dress-se-foxden-001` | (73,-0.05,-10.5) yaw 4.712 | 856deec5 | static dressing (v17, dress-107 PLACED_VERIFIED) + **fox resident** `nx-dress-se-fox-001` (fauna-5, bc7376b3) at den-local (0.84,0.012,0.38) |
+| pond frog | `nx-dress-frog-001` | (7.873,0.08093,-89.132) yaw 3π/4 | **c3721599** (fauna-29) | NEW 2026-09-18 — common frog on a 32cm lily pad, NW-quadrant open water (water-rider concentric class); ×1.4 bake; 3 motion comps (bob + head Y-scan + nested throat pulse); the pool's fourth side: the surface itself |
 | rabbit hutch | `nx-dress-hutch` | (38.5,0,-9.5) yaw -1.9 | f5f47791 → **c0a64ac4** (fauna-4) | static hutch, ZERO comps → **FIXED fauna-4** (english-lop + alert rabbits, 5 motion comps; ramp/lid/pop-hole furniture defects cured in-passing) |
 | duck pair | `nx-dress-ducks-001` | (8,-0.139,-91) yaw 0 | **c156b6a1** (fauna-3) | NEW 2026-09-17 — mallard pair on the reedpool W lobe, 6 motion comps (bob/orbit/pendulums) |
 | stable horses | `nx-dress-shorse-001` | (49.5,-0.0356,0) yaw -1.75 | **6ef0e86c** (fauna-19) | NEW 2026-09-18 — draft-horse pair at the livery east yard (watch + grazer at the hay manger, hitch rail + bucket), 7 motion comps; the LAST animal-trade building now has its animal |
@@ -387,17 +388,90 @@ domain is commons-next `nx-dress-*` fauna only.
     ⊥ the reader direction (the profile is the contract view). Census
     370→371 exactly, 5 verbs (upload+spawn+4 comps), idempotent rerun 0
     verbs, walk ALL_PASS 3/3. Full record below.
-20. **[QUEUED fauna-29 proposal, 2026-09-18] pond frog — homestead species
-    (queue-empty proposal, fauna-24 cadence).** Village logic: the
-    reedpool (fauna-3/9/11) lives from three sides — ducks W, robin N,
-    geese SW — but the WATER's own voice is missing: a common frog on a
-    lily pad / bank stone at the W lobe near the duck pair (a sit-and-
-    wait predator reads naturally still + one throat-sac pulse comp).
-    Species sketch: green-brown mottled body 0x6b7a4a, squat body plan,
-    prominent gold-rimmed eye bumps, folded hind legs, ~0.09m — an
-    ENCOUNTER-reward species (robin law: 9cm reads at the 4m bank
-    vantage, disclosed at 18m), 2-3 motion comps (breath + rare eye-
-    blink/throat pulse). Seat at build tick by sweep + terrain + walk.
+20. **[CLOSED fauna-29, 2026-09-18] pond frog — proposed fauna-24 cadence, BUILT + SEATED
+    fauna-29 (2026-09-18).** ONE entity `nx-dress-frog-001`: a common frog
+    sit-and-wait on a 32cm lily pad — the pool's own resident, occupying the
+    one place no other pool animal can (the middle of the water; the pool's
+    fourth side: the surface itself). **v7 sha16 c372159974ef9415** (full
+    c372159974ef9415ed773b10edc3928d2a0560a43bf176e6519142b164b275d8 —
+    judge-SHIP bytes: top/bridge vantage SHIP (species/eyes/haunches yes,
+    defects none) + sideprofile SHIP (crouch/anatomy/eye yes); decode GREEN
+    + RED control; deterministic ×2; 2902 tris / 14 calls). ×1.4
+    marginality bake (robin/owl law — judge r3's own math: a true-9cm frog
+    at 4m is ~20px with sub-3px eyes; now a 12.6cm big-female on a 32cm
+    pad). 3 motion comps live: breathing bob (.004/4.6s — twenty-second
+    village exercise of part bob) + sit-and-wait head Y-scan (.20/7.5s) +
+    throat-sac pulse (.06/2.1s, NESTED in head — rides the scan); phases
+    staggered, epoch t0. Engine-true motion pairs: 6px@18m band 475-482,
+    171px encounter band 455-494. **Seat: (7.873, 0.08093, −89.132) yaw
+    3π/4** — the NW-quadrant open water (water-rider concentric class,
+    ducks fauna-3 precedent): pad face local y=0 EXACTLY at the decoded
+    water top (pool host-local disc top y 0.140 → world +0.08093; the
+    angler's own city-11 arithmetic independently confirms 0.081); frog
+    faces the bridge mid-span reader vantage (facing = (sin,cos) yaw law).
+    Member-box clearances: bridge deck 1.60m, W bank reeds 0.73m, ducks
+    co-resident 1.14m (designed). SAT exemptions (measured values in the
+    placer): reedpool (concentric water host), ducks (co-resident),
+    angler (DECODED EMPTY-CORNER — artwalk tier-b class: the 6.28m
+    compound bbox's E corner is empty air; nearest true member is the
+    brass bobber at 3.753m, pool-local (−2.0,−1.9) SW water — the angler
+    fishes SW, the frog sits NW; pool life in the angler's view). Census
+    372→373 exactly (sibling struct lane placed nx-struct-angler at
+    (3.203,−90.982) mid-arc — absorbed by the fresh-census law, first
+    SAT run hard-stopped 0.399m, source-decoded, exemption tiered,
+    re-run green), 4 verbs (upload+spawn+3 comps), idempotent rerun 0
+    verbs, walk ALL_PASS 3/3 (18m N approach, arrival 0.35m; foreign
+    support-seam stderr = woodstack/streamstones/lanternhook/temple
+    class, not ours), live bbox 0.496×0.11×0.496 == decode envelope.
+    Village logic closed: the reedpool now lives from four sides — ducks
+    W lobe, robin N rim, geese SW bank, frog ON the surface — and the
+    angler's idle rod fishes the water beside it. Build arc: v1 legs Z
+    arithmetic (12mm knee gap caught by decode-reasoning, strut helper
+    law) → v2 wake ring + specks sunk BELOW the opaque water face
+    (visibility law: crest or be invisible — moved to crest as wakes) →
+    v3 merge-prefix instrument pollution (`frog1` buckets matched ^frog —
+    renamed lilypad; vacuous-pad-gate class, pitfall-12 kin) → judge r1
+    FIX: green-on-green merge + eye dots sub-pixel + legs inside
+    silhouette + shadow weak (4 fixes: warm olive body 0x8d7b4c, bolder
+    eyes, legs pushed out, contact shadow) → r2 FIX: pad-edge debris
+    reads (notch wedge + water specks DELETED, turkey law f; shadow
+    bigger+darker 0x2e3d24) → r3 FIX with the judge's own framing math →
+    ×1.4 BAKE (four rounds of sub-pixel eyes was framing physics, not
+    geometry — struct-45; the robin's own precedent) → r4 FIX: glint law
+    (iris rough 0.4/metal 0.5 — a 1-2px glint beats a bigger dark dot) +
+    lighter back + haunch humps + judge at the bridge TOP vantage (the
+    seat's true reader looks DOWN) → r5 FIX: vein strip read as a TAIL
+    SPIKE (deleted — frogs are tailless), squat proportions (width ≈
+    length from above), skull widened, haunch masses proud at the flanks
+    → **r6 top SHIP + sideprofile SHIP** (judge's own non-blocking notes:
+    left haunch softer, iris slightly orange — recorded, not executed).
+    7 build versions, 6 judged rounds (ZAI fallback glm vision, native
+    debt NATIVE-20 below). Rig/decode laws learned: (a) **opaque-water
+    visibility law** — anything below the water face is invisible by
+    construction; surface furniture crests as wakes; (b) **merge-prefix /
+    instrument collision law** — the merge prefix must not match the
+    anchor regex or audits run vacuous; (c) **the ×1.4 bake preserves
+    the y=0 seat plane** — scaling multiplies the pad face's own 0 → the
+    waterline contract survives the bake untouched (decode gates
+    re-derived to the baked envelope); (d) **judge at the seat's true
+    reader vantage** — a bridge-seated subject is judged looking DOWN
+    (top view), not from the bank; (e) the strut helper (A→B cylinder,
+    quaternion-aligned) eliminates limb-gap arithmetic entirely — no more
+    hand-composed knee joints.
+21. **[QUEUED fauna-30 proposal, 2026-09-18] beehive skep bees — homestead
+    species (queue-empty proposal, fauna-24 cadence).** Village logic: the
+    orchard-edge meadow carries dovecote + bee skeps (fauna-16/17's own
+    census notes) — flowers and hive, but the pollinator is missing: a
+    small orbiting bee cloud at the skeps (2-3 bees, part orbit, tight
+    radii, staggered periods — the duck's orbit motion family applied at
+    insect scale). Species sketch: dark gold bodies 0x8a6a28 with pale
+    banding, tiny wings, ~0.02m — a PRESENCE species (even more
+    encounter-class than the robin; the read is the cloud's MOTION, not
+    individual anatomy). 2-3 motion comps (orbits + phase scatter). Seat
+    at build tick by sweep + terrain + walk. RISK: at 0.02m even the
+    encounter read may be sub-threshold — if the build's probe shows
+    <3px at 1.5m, scale up to hornet-mimic size (0.04m) or defer with
+    numbers (infeasibility-proof law).
 
 ## Per-species rebuild records
 
@@ -542,10 +616,19 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc (ZAI fallback glm vision, native debt NATIVE-19 below): **19 build versions, 20 judged rounds** — the longest fauna arc. v1 near = ELEPHANT/quadruped read (ears=wings, trunk=neck) → sideprofile chassis added (the contract view) → v2 "ostrich, silhouette works" + real defects (neck-root seam, plank tail, one-leg, beak-tip artifact) → v3 weld+tone cures (neck continuous THROUGH the arc; plank-tail/debris rounds began) → beak v4 dipped cone (horizontal box = plank) → tail arc v4 ellipsoids → v5 ONE plump mass → v6 stagger+toes+bath-delete → v7 narrowed+retrices ("distinct drooped form") → v8 flat xz wedge ("still a rod" — EDGE-ON law found) → v9 tapering cylinder (rod again; articulation missing) → **v10 THE SAGITTAL-PLANE FAN = sideprofile SHIP** ("clearly 4-5 layered broad blades drooping down-back, no rod remnant") → front-quarter arc: v11 neck proud of chest (mammal read persisted — brown-on-brown), v13 CREAM foreneck (pixel-probe falsified the v12 buff: 0 buff px, judge right), v14 wing-points PROUD + grit deleted, v15 lateral neck bend → encounter arc: faceprobe "head ship-ready, crest reads plant" → v16 varied stems + crown dome ("attached, ambiguous") → v17 teal-blue + slim vanes → **v18 FLAT PADDLES + beak forward + head ×1.15 = faceprobe SHIP** ("reads as feathers, alternating tint sells the peahen-crest reference"; wing tips recognized intentional; zero artifacts) → ultra PASS-disclosed (eyes symmetric-correct; beak front-on = dot, sub-pixel physics at 1.4m — her beak reads in the judged face/side vantages; dot-dot-nose mammal lean disclosed, crest saves the read). 18m framing-limited disclosed (0.44m bird ~2% of frame — robin law, encounter-space species; identity gates ran at sideprofile/faceprobe/ultra).
 - Rig/decode laws learned: (a) **a flat element whose plane contains the view axis projects as a ROD** — the side-view contract demands y-extent: sagittal-plane fan blades (wide faces in y-z), NOT xz wedges and NOT symmetric cylinders; two rounds paid for this; (b) **an identity element must contrast its background member by VALUE, not hue** — buff-on-brown (~35%) read as nothing; cream (~95%) reads; pixel-probe the claim before iterating (fauna-23 law b, confirmed); (c) **legs x-separated overlap EDGE-ON from exact side** — a foraging stance staggers fore-aft so both legs read from every vantage; (d) **sub-10mm anatomy (toe fans, brow stripes) reads as DEBRIS** — delete on the second flag (turkey law f claimed the bath AND the grit); the profile-legible foot is ankle→toe→spur in the sagittal plane; (e) **sphere-bead crest tips read BOTANICAL** (berries/buds/sprig) — peafowl tips are flat paddle webs riding the stem direction, alternating hues to kill the plant-uniformity; (f) **the decoder's TRS rotation block was TRANSPOSED** — every prior fauna GREEN was rotation-symmetric (spans/crests/translations) so it slept until this build's asymmetric −0.46 tail pitch read UP instead of DOWN; fixed in fauna28-decode-peahen.ts v2 (columns r0,r1,r2·s not r0,r3,r6·s); no prior placement decision was affected (all prior checks re-derived as spans/translations, invariant under transpose); (g) a same-scale small bird beside a large one must seat BETWEEN him and his reader — the pair reads as display + audience only from the reader's side (dot-gated seat sweep).
 
+### pond frog — fauna-29 (2026-09-18) CLOSED
+- **v7 sha16 c372159974ef9415** (full c372159974ef9415ed773b10edc3928d2a0560a43bf176e6519142b164b275d8), NEW entity `nx-dress-frog-001` PLACED_VERIFIED at world (7.873, 0.08093, −89.132) yaw 3π/4 scale 1 — the reedpool NW-quadrant open water, a water-rider concentric with the host (struct-19 class, ducks fauna-3 precedent): the pad face (entity local y=0) sits EXACTLY at the decoded water top. WATER PLANE DERIVATION (this tick, exact): pool host `nx-struct-reedpool` at (9.723, −0.05907, −90.982) yaw 0 (pure translation), local bytes sha16 7d770620bb1b7bdc == live lib prefix ✓; water disc = mesh 0, top at host-local y 0.140 → world −0.05907 + 0.140 = **+0.08093**. (The angler statue's own city-11 comment independently states "world 0.081 == pool −0.05907+0.14" — two lanes' decodes agree.)
+- **DUCK WATERLINE DEFECT NOTE (recorded fauna-29, NOT fixed — one-species law):** the seated ducks `nx-dress-ducks-001` at PY −0.139 (authored WL −0.119 world) ride ~0.20m BELOW the true water top +0.081 — their fauna-3 placer used rim-plane arithmetic ("water top host-local y 0.14 -> world −0.05907+0.119" — 0.119 is not 0.140; likely rim torus bottom confusion). Live effect: the pair sits visually sunk in the water (hulls half-buried from the bank vantage). Cure (next duck-family tick): remove+respawn same-id at PY −0.061 (their WL 0.02 below the true top −0.020 → wait, −0.081+0.02 = −0.061), keeping tuple/xz/yaw/bytes — a one-verb re-seat. Evidence: this tick's decode + the angler's independent 0.081.
+- Build: a common frog sit-and-wait on a 32cm lily pad (×1.4 marginality bake, robin/owl law — 12.6cm big-female frog + 32cm pad, honest at the top of the species band). Squat oval hull (width ≈ length from above), wide blunt skull, snout, gold-GLINT eyes on raised turrets (iris rough 0.4/metal 0.5 — the glint law), throat sac nested in head, propped forelimbs, THE FOLDED Z hind legs (strut helper, joints meet exactly) + raised HAUNCH MASSES proud at the flanks (the from-above amphibian read), contact shadow on the pad. Pad: mottled texMat lily pad + rim lip + wake ring CRESTING the water (visibility law) — notch wedge, vein strip, and water specks all DELETED across judge rounds (debris/tail-spike reads, turkey law f). Anchors frog/_head/_throat (3 KEEP groups; `frog` added to mergekit KEEP this tick — collision-proof prefix, no other asset names frog*). 2902 tris, 14 draw calls.
+- Motion: 3 comps live — breathing bob (.004/4.6s — twenty-second village exercise of part bob) + sit-and-wait head Y-scan (.20/7.5s) + throat-sac pulse (.06/2.1s, NESTED in head — rides the scan, peacock-crest law); phases staggered, epoch t0. Engine-true motion pairs on final bytes: 6px@18m band 475-482, 171px encounter band 455-494; rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob verbatim.
+- Judge arc (ZAI fallback glm vision, native debt NATIVE-20 above): 7 build versions, 6 judged rounds. r1 FIX (green-on-green merge, sub-pixel eyes, legs inside silhouette, weak shadow) → 4 fixes → r2 FIX (pad-edge debris reads) → deletions + shadow enlarge → r3 FIX → **×1.4 BAKE** (the judge's own math: ~20px subject at 4m, sub-3px eyes — framing physics; struct-45 + robin precedent) → r4 FIX (gold probe: two 4-6px clusters now resolving; judge wants glint + lighter back + haunches) → glint law + haunch humps + judge moved to the TOP/bridge vantage (the seat's true reader) → r5 FIX (vein = tail spike, proportions, skull) → squat rebuild + haunch masses → **r6 top SHIP** (species/eyes/haunches yes, defects none) + **sideprofile SHIP** (crouch/anatomy/eye yes). 18m framing-limited disclosed (robin law — encounter-reward species; the dot exists: 2363px center-band at 18m). Judge's non-blocking notes recorded, not executed (left haunch softer than right, iris slightly orange-gold).
+- Rig/decode laws learned: (a) **opaque-water visibility law** — the pool water disc is an opaque mat; anything below the surface face is invisible by construction; surface furniture must crest as wakes; (b) **merge-prefix/instrument collision** — the merge prefix (`frog1`) matched the anchor regex (^frog) and polluted the decode audit with vacuous/merged-family readings; renamed `lilypad`; a merge prefix must not match the anchor regex (pitfall-12 kin); (c) **the ×1.4 bake preserves the y=0 seat plane** — scaling multiplies the pad face's own 0, so the waterline contract survives the bake untouched; decode gates re-derived to the baked envelope; (d) **judge at the seat's true reader vantage** — a bridge-adjacent water subject is read looking DOWN from the bridge (top view), not from the bank; four rounds of bank-vantage judging preceded the vantage correction; (e) the strut helper (A→B quaternion-aligned cylinder) eliminates limb-gap arithmetic — v1's 12mm knee gap class cannot recur.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-20 | fauna-29 (2026-09-18) | frog v7 c3721599 top (bridge reader vantage) + sideprofile + encounter frames (`reviews/fauna29-frog/new-{top,sideprofile,encounter}.png`) — fallback arc stands (top SHIP + sideprofile SHIP; 18m framing-limited robin-law disclosure — encounter-reward species) until natively confirmed |
 | NATIVE-19 | fauna-28 (2026-09-18) | peahen v19 a1f5190f sideprofile + faceprobe + near frames (`reviews/fauna28-peahen/new-{sideprofile,faceprobe,near}.png`) — fallback arc stands (sideprofile SHIP + faceprobe SHIP + ultra PASS-disclosed; 18m framing-limited per robin law, encounter-space species) until natively confirmed |
 | NATIVE-27 | fauna-27 (2026-09-18) | peacock RE-SEAT presentation pair — candidate 18° front-oblique + true-rear control (`reviews/fauna27-peacock-reseat/{cand18,ctrlRear18}.png`) — fallback arc stands (cand FRONT/READS/clean, ctrl BACK — discriminating; the seat's facing dot 0.991 toward the dovecote approach) until natively confirmed |
 | NATIVE-18 | fauna-26 (2026-09-18) | rooster v12 af35212e gameplay + gameplayR + gameplayL + tailprobe + roostface frames (`reviews/fauna26-rooster/new-{gameplay,gameplayR,gameplayL,tailprobe,roostface}.png`) — fallback arc stands (18m oblique PASS both sides + tailprobe PASS + roostface PASS on final bytes; dead-front 18m comb-edge-on sub-pixel DISCLOSED as vantage physics — the seated yaw presents the fountain obliquely to the lane reader) until natively confirmed |
