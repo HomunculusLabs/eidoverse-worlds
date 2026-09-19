@@ -649,9 +649,33 @@ domain is commons-next `nx-dress-*` fauna only.
     deer PAIR — deer_a the BUCK, head-up sentinel with clean-bone
     backward-swept antlers + leaf ears, scanning; deer_b the DOE,
     BROWSING (head down at shrub height, neck curved, rump patch
-    quartering the reader). Full record below. Queue: EMPTY — next tick
-    proposes per domain law (goats/ducks/bunnies homestead language
-    first).
+    quartering the reader). Full record below.
+28. **[CANDIDATE fauna-41, 2026-09-19] European hedgehog at the garden
+    cottage's quiet margin — proposed fauna-41 (this tick, queue-empty
+    proposal per domain law).** The homestead tier was verified complete
+    at fauna-39 and stands; the wild tier's missing garden species is the
+    hedgehog — zero hedgehog entities in the 385-entity commons-next
+    census (scanned this tick; `nx-dress-nw-hedge-001` is a hedge dressing,
+    not fauna). ONE entity `nx-dress-hog-001`: a SINGLE foraging
+    hedgehog (solitary — the fleet's first non-pair mammal; hens/goats
+    flocked, everything else paired, the hedgehog walks alone), the
+    classic trundle — low domed spiny mantle in mottled dark-brown, pale
+    face + underfur, long pointed snout with dark nose-tip rootling leaf
+    litter, small dark eyes, rounded ears buried in fur. ×~1.5 marginality
+    bake candidate (robin/owl/frog law — true 26cm is sub-5px at 4m;
+    exact bake settled by the build tick's judge math). Motion contract:
+    3 comps — breathing bob + snout root-bob pendulum (X) + slow head-scan
+    (Y, sit-and-wait beetle hunter). Furniture: leaf-litter scatter + slug
+    specks at the composed snout point (grain law, minimal). Anchors
+    hog/hog_head/hog_snout (3 KEEP groups; `hog` collision-checked
+    against build sources at build tick). Seat: the garden cottage's
+    QUIET NW back margin (the SE reader edge already carries the wild
+    rabbits, fauna-38 — non-competing margins), candidate band centered
+    (−29, 22) with N fallback (−26, 24.5); build tick sweeps the live
+    census for ≥1.4m solids vs the cottage's rotated OBB (local 8.7×6.6
+    @ yaw 2.2) + carousel (−18,18) + wrabbit OBB; mosaic 0052's ground
+    film (x −49.5..−28.5, z 12..33) is walkable — forage BESIDE art,
+    never on it (sheep law), band kept x > −28.5.
 
 ## Per-species rebuild records
 
