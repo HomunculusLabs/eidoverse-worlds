@@ -90,7 +90,19 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     cap.position.y = PH + 2.15;
     cap.rotation.y = Math.PI / 4;
     g.add(cap);
-    box(g, "finial", 0.1, 0.4, 0.1, 0, PH + 3.0, 0, C.BRASS);
+    // polish-306: the finial was a bare 0.1×0.4 brass stick (y 7.2..7.6) —
+    // the unfinished-crown class, judged fresh at 18m on live bytes: "flat-
+    // topped stick chopped off at the apex", dark olive against the pale
+    // sky, no crown form resolves at distance. Same accepted village
+    // treatment (polish-265 tower, polish-272 gates, polish-273 banner):
+    // brass collar seated on the cap apex + tapered gold spire — bright
+    // metal silhouette punctuation, day-readable. Unlit (material truth;
+    // the tower's night signal is the polish-263 belfry lamp).
+    box(g, "finial_collar", 0.24, 0.1, 0.24, 0, PH + 2.85, 0, C.BRASS);
+    const bspire = new THREE.Mesh(new THREE.ConeGeometry(0.16, 0.6, 10), mat(0xb98245, 0.78, 0));
+    bspire.name = "bell_spire";
+    bspire.position.y = PH + 3.2;
+    g.add(bspire);
     // THE BELL: named group (pendulum target); crown at group origin = hinge
     const bellGrp = new THREE.Group();
     bellGrp.name = "bell";

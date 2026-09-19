@@ -1708,3 +1708,66 @@ next wake once the gateway answers.
   tiny anchor plates, judge fresh first.
 - Next: belltower clock face survey (named at polish-303 close), or
   plaza-core re-survey on fresh evidence.
+
+### polish-306 — belltower crown (ACCEPTED, LIVE)
+
+- Subject: `nx-town-belltower` (civic ring, pos [6.5,0,6.5], yaw
+  −2.356194490192345, ladder comp — improve-17 lineage: live baseline was
+  the improve-17 build 2419fbc5, NOT polish-263's 30407b95; improve-17
+  rebuilt the ladder/rope/lantern 2026-09-06, survey-75 cleared its
+  native debt). Build source `assets/mkv3-landmarks.ts` (belltower block)
+  → `village_belltower3.glb`.
+- Survey: named "clock face" candidate FALSIFIED at source (no clock
+  exists anywhere in the build — adding one would be invented ornament,
+  loop law). Fresh judge on exact live bytes found the real #1 defect:
+  the apex finial was a bare 0.1×0.4 brass stick — unfinished-crown
+  class, 6th village instance (carousel-258, tower-265, gates-272,
+  banner-273, approach lamps-280). At 18m: "flat-topped stick chopped
+  off... reads as antenna mast/placeholder", probe-confirmed near-neutral
+  olive (91,90,55) R/B 1.0 vs cap — camouflaged, no crown form resolves.
+- Judge's secondary notes recorded as queue (NOT this tick, one edit per
+  wakeup): bell reads near-black "black lump" at 18m (value candidate);
+  lamp mount sub-pixel (improve-17 housing exists — presentation nuance);
+  rope hairline 1px; ladder-deck landing ambiguous at 18m.
+- Change (ONE edit, belltower block): brass collar 0.24×0.10 seated on
+  the cap apex (y 7.2..7.3) + tapered gold spire r 0.16, h 0.6
+  (y 7.3..7.9) — the accepted village crown language (polish-265/272/273
+  recipe) at belltower scale. Unlit by design: material truth (bell
+  brass, gate brass unlit), the tower's night signal remains the
+  polish-263 belfry lamp. Polish-272 overhang law: nothing above the
+  spire. Footprint unchanged 3.4².
+- Candidate `f9ceea6e82b481e5…` deterministic ×2 (mtime-verified);
+  siblings byte-identical to live pins (inn 6e6ff2d0, windmill 369c5724,
+  legacy carousel3 0843da4e). Nodes 12→13 (finial merged away, +2
+  material buckets bt3_6/bt3_7); KEEP anchors bell/bell_0..2/lamp
+  intact; NaN 0; ladder comp box (y ≤ 5.15) untouched by construction;
+  rider b5 (local y ≤ 2.07) far below the crown band.
+- Falsification: gameplay probe — old stick (91,90,55) vs new spire
+  (112,81,50) R/B 2.24 warm gold-brown, sunlit maxL 181 vs sky ~215:
+  real silhouette punctuation. Judge AFTER: crown reads finished
+  collar+taper, antenna gone, zero regressions (no float/clip/malformed/
+  proportion issues), "ship-safe geometrically". Disclosed nuance:
+  brass reads "tonally shy" at 18m — recorded as NEXT candidate (value
+  bump), same family as polish-265's judge note, not a second edit.
+- Placed via NEW dedicated placer `next-place-polish306-belltower.ts`
+  (improve-17 chassis adapted: hash gate 2419fbc5→f9ceea6e, bbox height
+  gate 7.6→7.9, ladder comp captured-before-spawn and replayed
+  verbatim, rider b5 verified standing post-place): PLACED_VERIFIED,
+  1 upload + 3 verbs, live pin `store/f9ceea6e82b481e5.glb` @ exact
+  tuple, census bbox [3.4, 7.9, 3.4], idempotent rerun
+  ALREADY_LIVE_NO_VERBS (0 verbs).
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p306-verify-served.ts`): served DRACO 0544ba85… keeps
+  13 nodes / 12 meshes / all five KEEP anchors; census bbox 7.9 live.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD fc779dcf
+  (dress-184 landed mid-tick — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-306-belltower-crown/` (before/ =
+  live 2419fbc5 baseline GLB + 10-view rig; after/ = candidate + rig).
+  Probes: /tmp/p306-decode.ts, spire-probe, pixdiff (one-shot).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree at the Excalibur path — same as polish-285..305);
+  recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) belltower spire brass value bump (judge nuance,
+  family precedent), (b) bell reads black-lump at 18m (brass value /
+  warm emissive candidate — needs falsification vs current pixels
+  first), or (c) plaza-core re-survey on fresh evidence.
