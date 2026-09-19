@@ -21,7 +21,7 @@ def lib(e):
 
 # carousel
 car = E.get("nx-carousel", {})
-check("carousel-lib-75b413c27e9cfbe1", lib("nx-carousel") == "75b413c27e9cfbe1")  # polish-298 canopy pieced-wedge striping (4 red wedge panels + 8 emissive seam battens), sweep-329 bump; prior polish-297 acee7bcf13d20bf2 sweep-327, polish-296 bad22d1963d3a78b sweep-326, polish-295 2d61deabf0c2560d sweep-324, polish-294 8cd33f4423d8f7e7 sweep-323, polish-293 0cdd7eedcc22b312 sweep-322, polish-292 c62a8bbd8e794a9d sweep-320, polish-291 a35f40f1925ce93b sweep-319, polish-290 08ce1189b2d4b42b sweep-317, polish-289 429cde23a16d1c17 sweep-316, polish-288 e16a1bc002cb1650 sweep-313, polish-287 0144587820eb5e67 sweep-312, polish-286 dfad459e492d9727 sweep-311
+check("carousel-lib-3ed80c49d16e89d8", lib("nx-carousel") == "3ed80c49d16e89d8")  # polish-299 carousel wedge night banding (emissive-only [0.62,0.20,0.13] stripes above interior band), sweep-331 bump; prior polish-298 75b413c27e9cfbe1 canopy pieced-wedge striping sweep-329, prior polish-297 acee7bcf13d20bf2 sweep-327, polish-296 bad22d1963d3a78b sweep-326, polish-295 2d61deabf0c2560d sweep-324, polish-294 8cd33f4423d8f7e7 sweep-323, polish-293 0cdd7eedcc22b312 sweep-322, polish-292 c62a8bbd8e794a9d sweep-320, polish-291 a35f40f1925ce93b sweep-319, polish-290 08ce1189b2d4b42b sweep-317, polish-289 429cde23a16d1c17 sweep-316, polish-288 e16a1bc002cb1650 sweep-313, polish-287 0144587820eb5e67 sweep-312, polish-286 dfad459e492d9727 sweep-311
 ck = sorted((car.get("comp") or {}).keys())
 check("carousel-comp-exact-7", ck == sorted(["motion:carousel", "motion:horse_0", "motion:horse_2", "motion:horse_4", "motion:horse_6", "particles:smoke", "sockets"]))
 

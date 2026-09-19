@@ -15631,3 +15631,76 @@ prose — 1526B Aug 30 10:42 + 2322B Sep 7 11:40; CORRECTION of record: the
 first write of this pointer line guessed interior-walk-observatory.ts at
 1537B/1866B — re-ls'd before prose landed, sweep-316 ls-pre-prose law;
 true values here).
+
+sweep-331: CLEAN SWEEP, classified-drift epoch-stable tick (100th
+consecutive quiet-or-classified). Tick-start HEAD 2464221f (struct-241
+nodoid banked-not-placed); standing gate ALL PASS real exit 0 FIRST TRY
+(ledger law 2370966 exact at the gate's own printed total). Census epoch A
+377==377 vs the committed sweep-330 baseline (sha16 e01b9c7ccdb6d109): 0
+arrivals, 0 departures, exactly ONE classified drift field — nx-carousel
+lib 75b413c2→3ed80c49 at identical tuple + exact 7-key comp bag = polish-299
+carousel wedge night banding @ 5f15f7f0 (emissive-only intervention),
+committed pre-tick, domain-valid, not drift. Epoch B 20s-paced re-read:
+FULLY QUIET (0/0/0), 377==377 byte-identical sha16 79146654e1db5530 —
+single-epoch stable. OVERLAP: SAT fresh-live 339 bbox non-light / 246
+exempt-classified / 0 coverage holes, verdict SWEEP HAS FINDINGS on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard −0.407 — known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 287th sweep since
+routing, NOT new, no escalation due (the law keys on severity-1). WALKS:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually per the sweep-228 ceiling law — core 64/64 ALL_PASS
+maxArrival 0.380 (next-walk-core-paths.ts, walked over the NEW polish-299
+bytes — carousel sits in the core band; [physics] banner parse handled),
+NW 5/5 (nw-approach1-walk.ts), NE 7/7 (ne-approach2-walk.ts), SW 5/5
+(sw-approach3-walk.ts) — dists identical to the sweep-319..330 canon.
+Tier-2 309th cycle per the committed sweep-330 pointer: row-cottage 6/6
+ALL_PASS (dists 0.295/0.3681/0.3838/0.294/0.3617/0.3066,
+interior-walk-row-cottage.ts) + observatory circuit 5/5 ALL_PASS
+(0.28/0.389/0.303/0.345/0.314) — POINTER CORRECTION OF RECORD: the
+committed sweep-330 pointer named interior-walk-observatory.ts at
+2322B/Sep 7 11:40, but that filename does not exist and carries no git
+history; the true on-disk observatory walk tool is
+struct2-walk-observatory.ts at exactly 2322B / Sep 7 11:40 (size+mtime
+match the recorded values), walked that this tick. INTEGRITY: struct18-
+fleet-pin-check 15/15 ALL_PINS_OK bad:[] (285th consecutive clean);
+sweep89-battery lawful RED→GREEN — first invocation correctly FAILed 27/28
+on carousel-lib-75b413c2 (live 3ed80c49 = expected classification: the
+polish-299 re-place), pin bumped 75b413c2→3ed80c49 with a provenance
+comment naming polish-299 (comment first written mislabeled then
+corrected in-tick; final diff = 1 line, verified vs HEAD before commit),
+re-run 28/28 PASS on census bytes. Carousel comp bag exact 7 + lib
+3ed80c49d16e89d8 census-verified; comp-bearing 43; lights 38; thing 339.
+Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5 a5fd4f4f read
+fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged (307th check,
+zero open queue rows — prose "OPEN" hits classified, no live status
+rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns
+sweep no reset role — the audit-continues freeze banner governs via
+loop/plan reload. Baseline lawfully rewritten like-for-like (copyfile
+convention, sweep-321..330 precedent; /tmp/s331/snapshot-rewrite.py):
+pre-write assertion verified current sha == sweep-330 close
+e01b9c7ccdb6d109, expected diff set exactly [nx-carousel lib], counts
+377==377, zero drift on 377 shared ids; final 377 entities / sha16
+79146654e1db5530; post-rewrite drift vs live epoch B ZERO. Probe
+self-catches pre-verdict, all disclosed: (a) first battery invocation
+omitted argv[1] census path (IndexError; terminal flagged the masked
+exit — re-run lawful with the census argument); (b) first core-walk JSON
+parse keyed `legs` as a list where the schema has legs:int + results:[]
+(sweep-48 class) — re-derived from the actual raw schema
+programmatically; (c) the pin-bump comment edit first mislabeled the
+bump sweep and polish number — corrected before commit, 1-line final
+diff; (d) the first plan-append script asserted a sweep-330 TABLE-row
+anchor that does not exist (rows end at sweep-320; prose-only tail
+convention since sweep-321) — assert HARD-refused, file untouched,
+re-issued prose-only. Foreign dirt in tree (windmill overhaul scratch,
+cabin/carousel prototype dirs, engine files, fleet shells, debug-bower
+scripts, moon-moth dir, fauna tools incl. fauna35-*, HERO-ASSET-
+REFINEMENT-PLAN, core-paths assets, rupertfork sources, next-terrain
+scratch, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-332): hall + bunkhouse (310th cycle — LRU chain
+re-derived from committed pointers this tick: row-cottage/observatory
+@331 walked fresh, inn/tower-house @330, longhouse/garden-cottage @329,
+hall/bunkhouse @328 stalest standing pair at 3 sweeps; walk tools
+interior-walk-hall.ts + interior-walk-bunkhouse.ts, ls-verified present
+on disk BEFORE this prose — 1704B Aug 30 08:24 + 1538B Aug 30 11:22).
