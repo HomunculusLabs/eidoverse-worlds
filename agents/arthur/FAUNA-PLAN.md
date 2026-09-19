@@ -33,6 +33,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | skep bees | `nx-dress-bees-001` | (−53.566,0.038,54.5) yaw 2.3562 (FRAME COPY of the skeps row) | **e6ac8fac** (fauna-32) | NEW 2026-09-18 — the village's first PURE-MOTION fauna: 7 honeybee workers (×2.8 marginality), 4 ringing the real hives + 3 working the lavender blossoms; zero ground geometry; 7 motion comps (4 orbit + 3 bob) — the apiary's pollinator stands |
 | barn swallows | `nx-dress-swallows-001` | (49.5,−0.03907,0) yaw 0 (yard-center AIR SEAT) | **9e3f6b05** (fauna-34) | NEW 2026-09-19 — three true-size barn swallows circling the livery yard in three independent rings (low W sweep over the horses + SE pocket + high sweep above the owl post), banking into the turn; 9 motion comps (3 orbit + 6 wing pendulums nested in the orbit anchors); zero ground geometry — the yard's AIR lives between the horses at the rail and the owl on the post |
 | grey heron | `nx-dress-heron-001` | (12.92,0.08093,−91.38) yaw −3π/4 | **f6a10294** (fauna-35) | NEW 2026-09-19 — the reedpool's fifth resident: grey heron WADING in the E-bank open water (69% deep in the ellipse; WADER seat class — entity y=0 IS the water top, legs below, belly dry), facing NW toward the angler; 4 motion comps (bob + neck re-coil + nested head Y-scan + bustle twitch); 11 build versions, near SHIP + profile PASS + face SHIP (ZAI-vision MCP fallback, native debt NATIVE-24); the pool now lives from all five sides |
+| farm collie | `nx-dress-dog-001` | (32.5,−0.03935,7.75) yaw −1.292 | **0d57d27c** (fauna-37) | NEW 2026-09-19 — the homestead's missing working partner: tricolor rough collie in chest-down sphinx watch-doze, head up, on the meadow S of the goat pen (pen-ward nose — the attendant); 5 motion comps (doze bob + head Y-scan + nested ear flick + tail thump Z + ~9s sigh-settle X); v4 4 build versions, 18m SHIP ×2 + anatomy SHIP (ZAI-vision MCP fallback, native debt NATIVE-25); every working partner now stands |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -561,33 +562,71 @@ domain is commons-next `nx-dress-*` fauna only.
     the WADER-seat and anti-biped laws below. Queue: EMPTY — next tick
     proposes the next homestead species (goats/ducks/bunnies language
     first per domain law).
-25. **[QUEUED fauna-36 proposal, 2026-09-19] farm collie — the homestead's
-    missing working partner.** Single dog, ONE entity (singular like the
-    cat/owl/fox — no pair): a rough-coated TRICOLOR collie in the classic
-    farmyard watch-doze — CHEST-DOWN SPHINX DOZE with head UP on crossed
-    forepaws (deliberately distinct from the cat's watch-SIT and the fox's
-    curled sleep), ears carried half-pricked, brush tail flat beside the
-    haunch with the white tip proud, ruff + tan points + white blaze/bib/
-    boots. TRUE-SIZE ~0.55m shoulder, no bake (a mid-size quadruped carries
-    18m; robin/owl marginality law does not apply). Read contract: 18m
-    identity by silhouette (collie ruff + long nose + lying-dog profile);
-    encounter carries the face (blaze, ear tilt, tail tip). Motion plan
-    (5-6 comps, phases staggered, epoch t0): breathing bob + slow head
-    Y-scan pendulum + ear-flick swivel on its own keep-group (bcat_ears
-    pattern) + lazy tail thump Z + deep sigh-settle X (~9s period).
-    Seat candidate zones (build-tick seat-sweep decides, fauna-19/23
-    chassis): PRIMARY the goat-pen attendant — the village's FIRST
-    homestead pen (34,13) gets its dog, watching the goats from the open
-    meadow beside the pen (room confirmed by census: pen bbox 6.5×6.5,
-    open ground around); ALTERNATE the inn-yard greeter on packed earth
-    (the visitor's first farmyard hello). Village logic: every working
-    partner stands EXCEPT the herder — the cat mouses, the donkey guards,
-    the owl keeps watch; the collie completes the set (Bill's own farm
-    language). Build notes: anchor prefix `dog_` (verify no dog* collision
-    in mergekit KEEP at build tick — none known); furniture ONLY if the
-    seat-scan calls for it (a stake-and-peg post or nothing — the dog is
-    on duty, not tied); judge 18m native-first (ZAI fallback disclosed,
-    native debt owed), night read n/a (no emissive).
+25. **[CLOSED fauna-37, 2026-09-19] farm collie — proposed fauna-36, BUILT +
+    SEATED fauna-37 (2026-09-19).** ONE entity `nx-dress-dog-001`: a
+    tricolor rough collie in the farmyard watch-doze — chest-down SPHINX
+    DOZE with head UP (distinct from the cat's watch-sit and the fox's
+    curled sleep), white MANE collar + crest breaking the neck silhouette,
+    white bib/brisket/boots/blaze, tan cheek points with seated dark eyes,
+    long wedge muzzle with black nose, half-pricked ears on their own
+    nested flick anchor, brush tail laid rear-outward with the white tip
+    at the far end, contact-shadow ellipse + trodden pad. **v4 sha16
+    0d57d27c9535d406** (full
+    0d57d27c9535d406f303e1256419ce36ad6074413b7aa44b2426d5062b210b87 —
+    judge-SHIP bytes: 18m SHIP ×2 (r2 post-cure + r4 final-bytes
+    confirmation) + anatomy SHIP r3 after the v4 fixes; decode GREEN +
+    RED control vs the live pen lib; deterministic ×2; 4054 tris / 32
+    calls). 5 motion comps live: doze breathing bob (.005/9.5s) + head
+    look-scan Y (.28/8.5s) + nested ear flick (.16/2.6s, rides the scan)
+    + tail lazy thump Z (.12/3.4s) + sigh-settle X (.015/9.0s); phases
+    staggered, epoch t0. Engine-true motion pairs: 183px@18m band
+    476–518, 2842px near band 400–576. **Seat: (32.5, −0.03935, 7.75)
+    yaw −1.292** — fauna37-seat-sweep best of 455 qualifying (worst
+    solid gap 1.427m vs nx-dress-goats = the attendant's own designed
+    adjacency, donkey-vs-fold class); nose pen-ward (nose +x →
+    (cos,−sin) yaw law, verified live); film-clear (walking-line
+    containment test, lamp-in-path law); plaza-ward reader side. Terrain
+    9pt spread 3.5mm, PY = live heightAt −0.03935. Census 380→381
+    exactly, 6 verbs (upload+spawn+5 comps), idempotent rerun 0 verbs
+    alreadySeated, walk ALL_PASS 3/3 (18m plaza-lane N approach,
+    arrivals 0.00/0.38/0.31m; foreign support-seam stderr =
+    temple/logpile class, not ours), live bbox 1.654×0.638×0.682 ==
+    decode envelope. Village logic closed: every working partner stands
+    — the cat mouses, the donkey guards, the owl watches, the fox
+    sleeps, and the collie now dozes on duty beside the village's FIRST
+    homestead pen. Judge identity: ZAI-vision MCP fallback (cron lane,
+    native absent) — native 18m re-judge debt NATIVE-25 below. Build
+    arc: v1/v2 draft (deterministic, decode GREEN) → judge r1 18m FAIL
+    (dark lump/prop read; mane invisible — the black head/neck occluded
+    it from front vantages; foreleg extension smear; no contact shadow)
+    → v3 cures (mane crest m4 above the neck line + wider flare, paw
+    blocks, brisket/bib up, contact shadow — plus the decode band
+    re-derivations the new members forced) → judge r2 18m SHIP but
+    anatomy probe NO-SHIP (floating-plank blaze — v3 draft's rear
+    floated 14mm over the crown between the ears, struct-52 class;
+    10mm edge-sliver eyes not resolving) → v4 blaze re-seated on the
+    skull ellipsoid (embed/crest computed at both ends) + eyes 12mm
+    seated on the cheek face → r3 anatomy SHIP + r4 final-bytes 18m
+    SHIP. 4 build versions, 5 judged rounds.
+26. **[QUEUED fauna-38 proposal, 2026-09-19] wild rabbits — the meadow's
+    own bunnies (homestead tier-1 language).** The hutch rabbits are
+    DOMESTIC (english-lop + hutch agouti); the homestead language calls
+    for its wild form too — an alert wild-rabbit PAIR (brown agouti,
+    upright ears, white scut tails) at a garden/meadow edge, the
+    gardener's classic companion-adversary. Anatomy chassis proven
+    (fauna-4 rabbits); standalone pair, no hutch. TRUE-SIZE class
+    (rabbits carry at encounter distance, robin framing law); ×bake
+    decision at build tick. Read contract: 18m = presence + ear
+    silhouettes at the field edge; encounter = the species read (alert
+    posture, scut). Motion plan (5-6 comps, phases staggered, epoch t0):
+    breathing bobs + nibble head pendulum + alert nod + ear-flick
+    swivels (own anchors) + scut flick. Seat candidate zones
+    (build-tick seat-sweep decides, fauna-19/37 chassis): the
+    kitchen-garden/fence edge or the flax-field margin — a garden-side
+    vantage facing the visitor lane; verify the zone's fence/film
+    entities in the live census at build tick. Village logic: the
+    garden gets its own wildlife — the potter's vegetables and the
+    dyer's flax now have their forager.
 
 ## Per-species rebuild records
 
@@ -764,10 +803,18 @@ domain is commons-next `nx-dress-*` fauna only.
 - Judge arc (ZAI-VISION MCP fallback glm, native debt NATIVE-24): 11 build versions, 11 judged rounds. 18m r1 FAIL — read as "a small human standing in the pool" (torso-on-legs biped: centered legs + tall box body + upright neck) → v4 ANTI-BIPED rebuild (rear-set legs + pitched spindle + forward periscope neck) → r3 "tiny grey object, species unresolvable" → v6 neck ≥ body (0.30 tube; the heron's distance marker) → near v7-round: species YES ("reads as a heron") but water NO (feet "on the rim", no ripples — REAL: v1 seat 0.5m from the E rim projected the rim band under the feet; PLUS the v4 leg move had orphaned the v1 rings 12-17cm) → v7 rings-at-legs + tapered embedded-root bill (flat-box root edge read "jagged") → v8 seat swept to pool-local (3.2,−0.4) 1.3m from the edge + meniscus collars + lighter wakes = **NEAR SHIP** (species YES "no other animal fits"; water YES "legs submerged to the waterline, body dry, concentric ripple rings at its feet") + **PROFILE PASS** (neck continuous, bill, legs, ripple at entry; shade-side crown/bustle NOs disclosed — the S profile reads the unlit flank) → face arc v9 (crown 30mm + stripe dropped + eyes lowered) FAIL (crest blades "floating lines", eyes dark-on-dark featureless) → v10 (crest solid wedge + gold eyes + bustle wedges) partial (crown YES bill goldenrod crest attached; stripe/eyes still unread) → v11 (eyes INSIDE the 16mm stripe band, gold-on-black) = **FACE SHIP** (crown/stripe/bill goldenrod/crest attached/amber eye; plate-pride minor disclosed). 18m framing-limited DISCLOSED (neck 3px wide at 18m — encounter species robin law; the plan row's own 4-8m reader math). The pool "broken beams" finding A/B-FALSIFIED via a bird-less control render (HOST_ARTIFACTS=YES — the wave-balustrade chords; disclosed for the struct lane, never touched).
 - Rig/decode laws learned: (a) **an UNNAMED intermediate group between keep-anchors is flattened by mergekit and its TRS drops out of nested anchor frames** — v4's pitched body group vanished from the neck/tail anchor chains and the decode caught the head 0.26m low while the STATIC meshes sat right (baked matrixWorld); name every intermediate group into the KEEP family (peacock-25 law d, third costume: `heron_body`); (b) **the anti-biped law** — a wading bird with centered legs + a tall body + an upright neck reads as a PERSON at distance; the cure is posture arithmetic: legs rear-set (ankles behind the body CG), body a pitched horizontal spindle (nose-up), neck a forward diagonal off the body front with the head well ahead of the legs — the bird's center of mass hangs BETWEEN leg and head, not over the legs; (c) **a marker on mid-grey against mid-grey carries no contrast in EITHER direction** — species-true gold eyes INSIDE the black stripe band (frog glint law inverted: the dark band is the eye's backdrop); (d) **a near-rim water seat projects the rim band under the wader's feet from the bank vantage** — seat depth from the rim is a READER-facing design parameter (0.5m rim distance failed, 1.3m read standing-in-open-water); sweep the seat deeper before iterating contact cues; (e) **a wake-furniture gate must check per-leg CONTAINMENT, not center coincidence** — unequal ring radii shift the union center by construction (v8 decode RED on a correct build taught the gate model, not the build); (f) the host-artifact A/B control (bird-less render, same vantage) settles "is that defect mine?" in one judge call — the fauna-11 isolation law applied to scene membership.
 
+### farm collie — fauna-37 (2026-09-19) CLOSED
+- **v4 sha16 0d57d27c9535d406** (full 0d57d27c9535d406f303e1256419ce36ad6074413b7aa44b2426d5062b210b87), NEW entity `nx-dress-dog-001` PLACED_VERIFIED at world (32.5, −0.03935, 7.75) yaw −1.292 scale 1 — the meadow S of the goat pen, nose pen-ward (the attendant watching its charges; facing = (cos,−sin) yaw law, +x-nose build). Seat = fauna37-seat-sweep best of 455 qualifying (worst solid gap 1.427m vs nx-dress-goats — the attendant's own designed adjacency, donkey-vs-fold class; film-clear by center-containment test; plaza-ward reader side). Terrain preflight at the FINAL tuple: 9pt spread 3.5mm, PY = live heightAt −0.03935. Census 380→381 exactly, 6 verbs (upload+spawn+5 comps), idempotent rerun 0 verbs alreadySeated, walk probe ALL_PASS 3/3 (18m plaza-lane N approach, arrivals 0.00/0.38/0.31m; foreign support-seam stderr = temple/logpile class, not ours), live bbox 1.654×0.638×0.682 == decode envelope.
+- Build: ONE tricolor rough collie, TRUE-SIZE no-bake (mid-size quadruped carries 18m; robin/owl marginality law does not apply) — CHEST-DOWN SPHINX watch-doze with head UP (distinct from cat-sit and fox-curl): black saddle barrel + haunches + folded-hind broad lying boxes with white boots, white forelegs extended forward with broadened PAW blocks (v3 — the smear cure), black pitched neck, WHITE MANE collar of 3 flare spheres + the CREST sphere rising above the neck ridge BEHIND the head (v3 — cow-udder law, silhouette break beats value break: the black head occludes a behind-head mane from front vantages unless it CRESTS the line), white brisket + bib on the sigh anchor, long wedge skull with white 2-segment muzzle + black nose proud 7mm, white BLAZE seated ON the skull ellipsoid (v4 — surface-following embed/crest computed at both ends), tan cheek patches + brow dots with 12mm dark eyes seated on the cheek face (v4 — 10mm edge-slivers don't resolve), half-pricked black ear cones (3-sided, mirrored tilt) on the nested flick anchor, brush tail of 4 broad overlapping bands laid rear-outward with the WHITE TIP at the far end (fox v10 law), contact-shadow ellipse (dark 0x37452a flattened disc peeking around the trodden pad — the #1 floating-prop cure, frog r1 law) + trodden earth pad 0x71624c. Anchors dog/dog_head/dog_tail/dog_ears (nested in head)/dog_chest (5 KEEP groups; `dog$|dog_` added to mergekit KEEP this tick — no dog* collision, verified by search). 4054 tris / 32 calls; 16 nodes / 11 draw-relevant.
+- Motion: 5 comps live — doze breathing bob (.005/9.5s — twenty-sixth village exercise of part bob) + head look-scan Y-pendulum (.28/8.5s) + nested ear flick (axis [2,0,1] .16/2.6s, rides the scan — bcat_ears pattern) + tail lazy thump Z (.12/3.4s) + sigh-settle X-pendulum (.015/9.0s — the deep settle breath, the doze's signature); phases staggered, epoch t0. Engine-true motion pairs on final bytes: 183px diff @ 18m band 476-518 (the dog band), 2842px near band 400-576; rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob VERBATIM + rotatePartAtPivot.
+- Judge arc (ZAI-VISION MCP fallback glm, native debt NATIVE-25 below): 4 build versions, 5 judged rounds. 18m r1 FAIL ×4 findings (dark lump/borderline-prop read; pale markings not surviving distance — the mane was real but occluded; foreleg extension smear; floating feel from no contact shadow) → v3 cures ALL four + judge r2 18m SHIP ("reads as a dog in a lying pose, pale collar clearly distinguishable, legs with paws, grounded"; disclosed: horizontal-stretch read takes 1-2s — pose-inherent, the motion layer carries it live) → anatomy probe r2 NO-SHIP (floating white plank between the ears = the BLAZE whose rear floated 14mm over the crown, struct-52 class, source arithmetic confirmed post-hoc; 10mm edge-sliver eyes invisible) → v4 blaze ellipsoid-seated + eyes 12mm cheek-seated → r3 anatomy SHIP (no floaters, eye seated on tan patch, wedge head + ears + muzzle+nose all YES; far-eye occlusion = angle-expected, both eyes authored in one symmetric loop) → r4 final-bytes 18m SHIP (peacock re-SHIP law). Judge-noted non-blocking: crown strip can read "cap-like" at oblique angles (boxy slab top); ear inner faces plain; rump mass bulbous at close range — recorded, not executed.
+- Rig/decode laws learned: (a) **a marking that lives BEHIND the head reads only if it CRESTS the silhouette line** — the v2 mane was fully modeled, correctly placed, and visually nonexistent from every front vantage because the black head/neck occluded it; the m4 crest sphere above the neck ridge is what made the collar "clearly distinguishable" at 18m (the cow-udder silhouette-break law applied to a marking); (b) **a crown blaze must follow the skull ellipsoid** — a flat slab whose far end leaves the surface floats as a "plank between the ears"; compute surface(x) at both strip ends before shipping (embed ≥1mm at each end, crest in between); (c) **a contact-shadow disc on a flat-XZ plane takes its second-diameter scale on LOCAL Y** (CircleGeometry is flat in XY — after the x-rotation local y becomes world z; scaling local z does nothing) — the v3 shadow silently spanned 1.24m in z until decode caught it; (d) **eyes at the head's silhouette edge must seat ON the cheek face, not straddle it** — 10mm slivers centered on the cheek boundary lost their visible half to the profile plane; 12mm boxes centered 2.5mm inside the patch face resolve; (e) decode band updates must RE-DERIVE from the new member arithmetic (width moved pad→shadow-derived 0.682, height moved crown→crown+embed span 0.638) — the per-mesh envelope dump is the honest instrument for both.
+
 ## Native re-judge debt (payable only in an interactive judge-capable session)
 
 | row | owed since | subject |
 |---|---|---|
+| NATIVE-25 | fauna-37 (2026-09-19) | farm collie v4 0d57d27c pen_gameplay (18m plaza-lane read) + pen_face-fill (anatomy probe) + pen_profile + lone_near frames (`reviews/fauna37-dog/new-*`) — fallback arc stands (18m SHIP ×2 r2/r4 "reads as a dog in a lying pose, pale collar clearly distinguishable, grounded, SHIP"; anatomy SHIP r3 no-floaters/eye-seated/wedge-head/ears/muzzle+nose YES; judge = ZAI-VISION MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-24 | fauna-35 (2026-09-19) | grey heron v11 f6a10294 near + side + headface + encounter frames (`reviews/fauna35-heron/new-{near,side,headface,encounter}.png`) — fallback arc stands (near SHIP "reads as a heron, no other animal fits" + water SHIP + profile PASS + face SHIP crown/stripe/bill-goldenrod/crest/amber-eye; 18m framing-limited disclosed, encounter species robin law; judge = ZAI-VISION MCP fallback glm) until natively confirmed |
 | NATIVE-23 | fauna-34 (2026-09-19) | barn swallows v6 9e3f6b05 yard_gameplay (18m N lane) + bird-swallow_{1,2,3} side profiles + below-swallow_1 + rear-swallow_1 + side (plan) + encounter frames (`reviews/fauna34-swallows/new-*`) — fallback arc stands (18m VISIBLE ×2, 3/3 sides YES, below 4/4 YES ×2, rear bird+bank YES, layout CLEAR, encounter YES; judge = ZAI-VISION MCP fallback after the chat endpoint's 1210 image ban) until natively confirmed |
 | NATIVE-22 | fauna-32 (2026-09-18) | skep bees v5 e6ac8fac profile (bee_2 aimed at a=0) + bee_5/bee_4 aimed + gameplay + top frames (`reviews/fauna32-bees/new-bee-{bee_2,bee_5,bee_4}.png`, `new-gameplay.png`, `new-top.png`) — fallback arc stands (identity "stylized honeybee YES" ×2, bands 2-count, wings read, head-LEADING red-marker-proven x=507/960; 18m zero-bees sub-pixel DISCLOSED as scale physics — presence species, the 18m read is the 101px/0.6s motion) until natively confirmed |
