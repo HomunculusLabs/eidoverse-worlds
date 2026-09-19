@@ -643,6 +643,32 @@ domain is commons-next `nx-dress-*` fauna only.
     flax-field zone was census-disproved: no flax entity exists in
     commons-next; the garden cottage IS the village's garden building,
     and its reader-side edge is the honest seat). Full record below.
+27. **[CANDIDATE — proposed fauna-39, 2026-09-19] roe deer — new WILD-tier
+    species.** The homestead tier is COMPLETE (goats fauna-1, hens 2, ducks
+    3, hutch bunnies 4, geese 11, sheep 13, pigs 14, doves 16/17, horses 19,
+    cows 21, donkeys 23, turkeys 24, rooster 26, cat 7, dog 37 — every
+    domestic animal the village language names stands); the wild tier
+    continues (fox 5, robin 9, heron 35, frog 29, bees 32, swallows 34,
+    wild rabbits 38 — the deer is the wild quadrant's largest missing
+    animal). ONE entity `nx-dress-deer-001`: a roe deer PAIR (grazer +
+    head-up sentinel, shorse/cow chassis) stepping out of the treeline.
+    Species markers to carry: THE WHITE RUMP PATCH (the flared pale caudal
+    patch — the deer's distance marker, robin-bib contrast class), large
+    leaf ears (near-vertical, dark-edged), backward-swept antlers (buck
+    only if authored; September = clean bone), black nose leather on a
+    pale muzzle, long thin legs with dark hooves + false dynamics via leg
+    length (the species' leg-to-body ratio IS the silhouette), tan-red
+    summer coat. **Candidate zone (census-grounded fauna-39): the SE
+    wild-edge meadow INSIDE the forest screen — 5 standing
+    `nx-wild-forest-*` entities at r≈76, polar θ −82°..−18°; band
+    r≈58..70, θ −70°..−35°** (deer read against the treeline from the SE
+    district spokes; nearest fauna = fox den (73,−10.5) far E of band).
+    No deer entity exists in commons-next (383-entity census scanned this
+    tick; zero deer/doe/roe hits in census + repo). Village logic: the
+    wild edge finally has its large herbivore — the forest screen gains
+    the animal that steps out of it. Build + seat per chassis (seat sweep
+    vs live census, terrain preflight, SAT, motion comps, judge arc) —
+    building needs nothing further.
 
 ## Per-species rebuild records
 
