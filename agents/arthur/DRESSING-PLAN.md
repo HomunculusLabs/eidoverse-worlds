@@ -1,6 +1,56 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-188 — lawful HOLD (77th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 0443e407 (struct-255, banked not
+  placed — zero world mutation by its own entry); interlane md5 86b2936f
+  pin-exact. Fresh census **390→391 = ONE arrival, classified at source
+  before expectation patch (dress-172 law), tuple-exact**:
+  `nx-dress-hmou-001` (11, −0.02474, 31.5) yaw −1.41 lib 93ebddcb —
+  fauna-45 work-in-flight (untracked `fauna45-*.ts` probes spanning
+  decode/place/render/walk/seat-sweep; FAUNA-PLAN row-30 harvest mouse,
+  KEEP prefix `hmou`; no ledger entry yet at probe time), DRESS-PREFIXED
+  but FAUNA-OWNED (probe set now 19 with hmou) — NOT dress intake. Probe
+  first run FAILED fail-closed on the unclassified arrival; classification
+  built from the sibling's OWN placer contract line 9 verbatim
+  (fauna45-place-hmou.ts) BEFORE patching the expected set — PASS on
+  re-run, no world state misreported. Sole classified move:
+  `nx-town-belltower` lib swap 4a84e771→3e4f470b at tuple-identical
+  pos/yaw (polish-308 crown bell-gold, e02efbb7, PLACED_VERIFIED per its
+  own entry) — polish domain, classified not routed. ZERO departures,
+  ZERO dress-domain drift; dress domain 71 = 29 fleet-owned
+  (NE 6 / NW 9 / SE 7 / SW 7) + 19 fauna-owned + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-188.py` HOLD_VERIFY_PASS exit 0, browser UA,
+  capture saved `/tmp/dress188-census.json`).
+- **Sibling commits since dress-187**: polish-308 (e02efbb7, the
+  belltower swap above), sweep-344 (6ea73202, zero-mutation CLEAN SWEEP
+  389→390 epoch-corrected, corroborates the prior srcubo+sqrl epoch),
+  struct-255 (0443e407, trcubo BANKED NOT PLACED — zero world mutation).
+  All named, all foreign domain. **fauna-45 hmou in flight**: live entity
+  seated, sibling commit not yet landed at tick close — expect its ledger
+  line next epoch (dress-186 class).
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — deltas exactly 0.0.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick — valid freshness check; grep verdict carries:
+  zero STATE-OPEN rows, zero OPEN `nx-dress-` rows, no round-4/5
+  section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-187 — lawful HOLD (76th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
