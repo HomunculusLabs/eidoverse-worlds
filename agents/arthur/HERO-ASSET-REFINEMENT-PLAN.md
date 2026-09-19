@@ -1084,6 +1084,57 @@ next wake once the gateway answers.
   candidate); tan-horse vs panel value proximity (judge optimization
   note); or re-survey plaza-core on fresh evidence.
 
+### polish-294 — carousel scenery-panel night separation (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` at the polish-293 structural build (live was 0cdd7eed).
+  Queue-head candidate from polish-292's close (tan-horse vs scenery-panel
+  value proximity), re-judged fresh this tick on exact live bytes.
+- Defect (judge, night 18m): the gold/tan horse read as a HOLE in the
+  glowing panel ring — warm-on-warm with the horse value-INFERIOR (gold
+  coat emissive lum 0.173 < panel 0.265; hue ratios 5.2 vs 3.64,
+  near-matched). Day passed but on a thin margin (dark-mane dependence,
+  judge caveat). Judge's own recommendation: dim + desaturate the panels.
+- Survey findings, NOT defects (phase-transient / inherent): rose horse
+  occluded behind bone horse at the rig's phase-0 front alignment — the
+  live carousel spins 6°/s continuously, an authentic moment, not a defect
+  class; bone horse reading near-black at night — universal hue-loss under
+  emissive-only night lighting (pre-existing polish-291 class), reads as
+  a figure.
+- Change (ONE intervention, new production step
+  `carousel-horse-prototype/scenerysep.ts`, plinth/crown chassis):
+  emissive-only edit `carousel_scenery_panel` [0.40,0.24,0.11] →
+  [0.28,0.20,0.15]. Lum 0.265→0.213 (−19%); R/B 3.64→1.87 (warm cream →
+  grey-cream). Hue split vs gold coat more than doubles (5.2 vs 1.87).
+  No new lights, no geometry, no nodes; horse materials byte-untouched.
+- Night ladder after: lanterns .80 > crown .62 > ceiling .36 > teeth .202 ≈
+  scenery .213 > gold coat .173 > canopy .06 > structural .039/.036.
+- Candidate `8cd33f4423d8f7e7ab676789d3b30bca7984da848efd5f9d766faefca98f4eab`,
+  A/B byte-identical ×2. 15/15 views clip-clean. Night pixel diff 19311 px
+  confined to the panel band (rows 249..346, maxDelta 24); day 18m subtle
+  (maxDelta 16, cooler panels); horse-solo controls 4/4 byte-IDENTICAL.
+- Judge verdicts (ZAI fallback, no native vision this cron session, native
+  re-judge owed — same class as polish-285..293): NIGHT PASS — gold horse
+  now reads as a warm GOLD FIGURE against neutral grey-cream panels,
+  silhouette intact, panels not muddy, hierarchy correct; ≥3 horses
+  readable as individuals. DAY PASS — cool shift judged a net positive
+  (navy/rose/gold gain margin), festive read held by independent elements;
+  watch-item recorded: the bone-horse torso margin is the FLOOR — do not
+  cool or lighten the panels further or the bone horse merges.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED (1 upload +
+  8 verbs), 7-key comp bag replayed verbatim, idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/8cd33f4423d8f7e7.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact. Served sha == upload sha
+  (8cd33f44… identity).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-294-carousel-scenerysep/`
+  (before/ = live 0cdd7eed build full 15-view rig + baseline GLB;
+  after/ = candidate; deploy dry/apply/idem reports + verified served
+  bytes; baseline-entity.json regenerated fresh from the live census).
+- Next: judge-remaining candidates — (a) bone/rose night-hue-loss class
+  (pre-existing; a motif-geometry candidate under the standing artwalk
+  language directive, needs artwalk phase-log coordination), (b) crown-hub
+  second-pass warm rim (judge-named at polish-290 close, still unjudged);
+  or re-survey plaza-core on fresh evidence.
+
 ### polish-293 — carousel structural night value (ACCEPTED, LIVE)
 
 - Subject: `nx-carousel` at the polish-292 scenery build (live was
