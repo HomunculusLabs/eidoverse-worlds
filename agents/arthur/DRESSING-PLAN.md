@@ -1,6 +1,45 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-167 — lawful HOLD (56th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 419ee848 (sweep-324); interlane md5
+  86b2936f pin-exact. Fresh census **371==371, ZERO arrivals, ZERO
+  departures** — exactly ONE move, classified LEDGER-MATCHED:
+  `nx-carousel` lib swap 8cd33f44→2d61deab at tuple-identical
+  pos/yaw/scale (polish-295 bone-coat night identity, d95f0154) — polish
+  domain, classified not routed. ZERO dress-domain drift; dress domain 61 =
+  29 fleet-owned (NE 6 / NW 9 / SE 7 / SW 7) + 8 fauna-owned + 24
+  legacy/non-fleet (probe `/tmp/dress-hold-verify-167.py`
+  HOLD_VERIFY_PASS exit 0 first run, browser UA, capture saved
+  `/tmp/dress167-census.json`).
+- **Sibling commits since dress-166**: struct-235 (9871bf80, rhombic
+  triacontahedron build judged BANKED NOT PLACED — zero world mutation),
+  polish-295 (d95f0154, the carousel swap above), sweep-324 (419ee848,
+  zero-mutation CLEAN SWEEP). All named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.000035 (sub-mm rounding class).
+- **Shard/intake**: IMPROVE-PLAN zero STATE-OPEN rows, zero OPEN
+  `nx-dress-` rows (lines 21–85 historical round-1/2 prose only); no
+  round-4/5 section (grep 0); survey tag max 78 in-plan — survey-75/77/78
+  route `nx-craft-*` (unowned, probe for struct/improve); SURVEY-PLAN last
+  `nx-dress` mention still line 3349 (survey-50 era); SWEEP-PLAN dirty
+  diff zero dress routing — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-166 — lawful HOLD (55th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source**: prompt again carried the
