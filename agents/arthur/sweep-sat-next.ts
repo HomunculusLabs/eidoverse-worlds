@@ -150,6 +150,16 @@ const ALLOWED = new Set<string>([
   // sweep-330 row. Any pos/lib drift on either id re-surfaces as census
   // drift at 16-hex precision and re-derives this class.
   "nx-dress-shorse-001|nx-dress-swallows-001",
+  // sweep-332 (standing-precedent class, angler|reedpool tier): fauna-35
+  // grey heron wades the reedpool E-bank open water — DESIGNED contact,
+  // named in its own placement (frog-PY witness + pool tuple hard-gated,
+  // t=0.522 ellipse membership INSIDE the water ellipse; fauna-35 @
+  // 4849c5f1). Heron geometry (local x 3.02..3.34, z -0.83..0.01 vs pool
+  // footprint +/-5.187/+/-4) sits fully inside the pool COMPOUND bbox
+  // (h 2.655, reeds ring the water) — the fat-bbox class where the auto
+  // film exemption is defeated and the water-rider is the design. Same
+  // tier as nx-struct-angler|nx-struct-reedpool and the resident frog.
+  "nx-dress-heron-001|nx-struct-reedpool",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });

@@ -15704,3 +15704,87 @@ re-derived from committed pointers this tick: row-cottage/observatory
 hall/bunkhouse @328 stalest standing pair at 3 sweeps; walk tools
 interior-walk-hall.ts + interior-walk-bunkhouse.ts, ls-verified present
 on disk BEFORE this prose — 1704B Aug 30 08:24 + 1538B Aug 30 11:22).
+
+
+sweep-332: CLEAN SWEEP, two-arrival + classified-drift epoch-corrected tick
+(101st consecutive quiet-or-classified). Tick-start HEAD 4849c5f1; standing
+gate ALL PASS real exit 0 FIRST TRY (ledger law 2370969 exact at the gate's
+own printed total). Census epoch A 377->379 vs the committed sweep-331
+baseline (sha16 79146654e1db5530): exactly TWO domain-valid arrivals, both
+pre-tick, both ledger-matched line-for-line — nx-struct-nodoid @
+(-66,-0.026032,0) yaw 1.047198 lib 8c9ebff11d9d95af comp {} = struct-242 @
+52db01b4 (R11-55 W-axis meridian procession head; own-lane walk 6/6 0.31m,
+48-gon-exact SAT 3.81); nx-dress-heron-001 @ (12.92,0.08093,-91.38) yaw
+-3pi/4 lib f6a10294784764bb, 4x motion:heron{,_head,_neck,_tail} = fauna-35
+@ 4849c5f1 (reedpool's fifth resident, WADER seat class; own-lane walk 3/3);
+ONE classified drift field — nx-hearth lib 027f6f01->890163cb at identical
+tuple, bbox footprint growth 7.17x6.21 -> 7.39x6.49 = the polish-300
+flagstone gathering ring @ a06d9f86, which landed mid-tick AFTER the
+tick-start gate run — per the polish-270 epoch law all affected evidence was
+re-taken fresh BEFORE verdicts: gate re-run ALL PASS real exit 0 at a06d9f86,
+core re-walked 64/64 ALL_PASS @ 0.380 over the new hearth bytes (hearth sits
+at village center in the core band), SAT re-run over the 379-inclusive set,
+battery re-run post-bump. Epoch B 20s-paced re-read: FULLY QUIET (0/0/0),
+379==379 byte-identical sha16 b3698abf30a3c737 — single-epoch stable.
+OVERLAP: SAT fresh-live 341 bbox non-light / 247 exempt-classified / 0
+coverage holes, verdict SWEEP HAS FINDINGS on exactly ONE unclassified =
+R-121 lamp-n|nx-town-mapboard -0.407 (known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 288th sweep since routing, NOT new, no escalation
+due — the law keys on severity-1). The heron arrival surfaced ONE new SAT
+pair nx-dress-heron-001|nx-struct-reedpool -2.385, classified this tick by
+standing-precedent tier and carried as a named ALLOWED entry in
+sweep-sat-next.ts (angler|reedpool / sweep-86 class): the heron is a DESIGNED
+water-rider — fauna-35's placement names the WADER seat class (frog-PY
+witness + pool tuple hard-gated, t=0.522 ellipse membership); heron geometry
+local x 3.02..3.34 / z -0.83..0.01 sits fully inside the pool's compound
+footprint (+/-5.187 / +/-4, h 2.655), same tier as the resident angler and
+frog. WALKS: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0, legs run individually per the sweep-228 ceiling law — core 64/64 ALL_PASS
+maxArrival 0.380 (next-walk-core-paths.ts, walked over the NEW polish-300
+hearth bytes; [physics] banner parse handled), NW 5/5 (0.00/0.38/0.30/0.33/
+0.32), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 (0.00/0.25/
+0.34/0.37/0.31) — dists identical to the sweep-319..331 canon; both arrivals
+60m+ off every walked leg — walks stand by construction (sweep-53 precedent).
+Tier-2 310th cycle per the committed sweep-331 pointer: hall 8/8 ALL_PASS @
+0.360 + bunkhouse 6/6 ALL_PASS @ 0.3803, both real exit 0, both tools
+ls-verified present on disk BEFORE this prose (1704B Aug 30 08:24 + 1538B Aug
+30 11:22 — match the committed pointer exactly). INTEGRITY: struct18-fleet-
+pin-check 15/15 ALL_PINS_OK bad:[] (286th consecutive clean); sweep89-battery
+lawful RED-then-GREEN — first invocation correctly FAILed 27/28 on
+comp-bearing-23 (live 44 vs pin 43 = expected classification: fauna-35 heron
+the 44th comp-bearing entity, added-set census-verified exactly
+['nx-dress-heron-001']), pin bumped 43->44 with a comment naming the
+sweep-316..331 precedent chain, re-run 28/28 PASS on census bytes; carousel
+comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified (polish-299
+standing); comp-bearing 44; lights 38; thing 341. Interlane md5 86b2936f
+stable, read fresh this tick; SWEEP-LOOP md5 a5fd4f4f read fresh. Pools
+drained: IMPROVE-PLAN md5 7fa8a224 unchanged (zero open rows), sweep owns no
+prefix; CITY-PLAN-V2 cae6b928 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs via loop/plan reload. Baseline lawfully
+rewritten like-for-like (copyfile convention, sweep-321..331 precedent;
+/tmp/s332/snapshot-rewrite.py): pre-write assertion verified current sha ==
+sweep-331 close 79146654e1db5530, expected diff set exactly [arrival
+nx-struct-nodoid, arrival nx-dress-heron-001, nx-hearth lib+bbox polish-300],
+counts 377->379, zero drift on 377 shared ids across the full 9-field
+projection incl. comp objects; final 379 entities / sha16 b3698abf30a3c737;
+post-rewrite drift vs live epoch B ZERO. Probe self-catches pre-verdict, all
+disclosed: (a) first battery invocation under bun exited module-not-found —
+re-run under python3 with the census argument (sweep-324 class); (b) the
+epoch-B shell composite first ran the A-keyed diff — re-projected geomB
+through the identical projection and diffed B-vs-A directly (0/0/0
+byte-identical, correct); (c) approach walk parsers keyed 'distance' vs
+core 'dist' — per-tool schema re-derived programmatically before verdicts
+(sweep-48/326 class). Foreign dirt in tree (windmill overhaul scratch,
+cabin/carousel prototype dirs, engine files, fleet shells, debug-bower
+scripts, moon-moth dir, fauna tools incl. fauna35-* set,
+next-place-hearth.ts fresh 03:49, HERO-ASSET-REFINEMENT-PLAN, core-paths
+assets, rupertfork sources, next-terrain scratch, review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use. Next tier-2 pair (sweep-333): forge + potter (311th cycle — LRU chain
+re-derived from committed pointers this tick: hall/bunkhouse @332 walked
+fresh, row-cottage/observatory @331, inn/tower-house @330, longhouse/
+garden-cottage @329, forge/potter @327 stalest standing pair at 4 sweeps;
+walk tools interior-walk-forge.ts + interior-walk-potter.ts, ls-verified
+present on disk BEFORE this prose — 1559B Aug 30 08:32 + 1571B Sep 7 13:44,
+match the committed sweep-327 pointer exactly).
