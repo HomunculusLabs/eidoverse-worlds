@@ -20148,3 +20148,127 @@ owed Bill (mirror forms — stays named for his call, struct-249/253/255
 precedent); rhombic solids / non-Archimedean families per struct-253's
 grep; fresh five-file grep to confirm the gap before building — or Bill's
 verdict routing.
+
+## struct-260 (2026-09-19): R11-68 THE TRUNCATED ICOSIDODECAHEDRON PLACED —
+## the struct-259 committed carry executed (S-SW band fifth form az175.5 r104.5)
+
+260%3=2 non-refine slot with FULL bank (trico v1 accepted struct-259) ->
+committed carry per struct-240..259 precedent. Gate ALL PASS real exit 0
+tick-start (unpiped, GATE_EXIT:0 at 3ae991c0 epoch — fauna-49 HEAD).
+Shard drained fresh (IMPROVE-PLAN pin 7fa8a224 unchanged since
+struct-238, 0 OPEN nx-struct rows). Ledger max re-derived struct-259 ->
+tag struct-260 (numeric extraction, re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..259; placement tick owes no new
+judgment — the trico was judged struct-259 ZAI 4/4+3/3+4/4; native
+re-judge rides the owed board as trico v1).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+c55817dcf37c1e21eefde0003a12e00e25f6bafae3c8998a613598b34e6295df ==
+struct-259 v1 pin (byte-identical — no rebuild this tick; the banked
+build is the exact judged v1 bytes). Probe 9/9 + decode 8/8 (v1
+contract) were the struct-259 tick's own real exit 0 on these exact
+bytes. No interrupted 260 window existed (no struct260-*/next-place-
+struct260 files pre-tick).
+
+SEAT (struct260-scan-trico, fresh 395-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.715, guaranteed overlap refused; coverage exact 1 / radial
+298 / disc 2 / exempt 4): octant audit places FIVE octants tied at 4
+forms; tie broken toward the S-SW band az135-180 where the trico
+composes with the TCUBE — the knife's first cut on the cube — at
+18.32m, and the ICO — whose dual census the trico carries as its own —
+at ~24m (conversational pairing, struct-258 first-and-ninth
+precedent). By floor() octant arithmetic the band's standing count is
+4 (millrace az175 r77 + csaszar az163 r66 + ico az150 r75 + tcube
+az165.5 r100; the az180 forms screwwell/nodoid belong to oct4) — +trico
+-> 5, soft cap 6, NO exceedance (the scan's band listing printed 6 via
+the inclusive az<=180 boundary — artifact, seat stays strictly az<180).
+The raw scan's innermost lawful seats (r66-71 az169.5-171, gap
+1.41-1.56) were REJECTED by the margin filter (gap >= 2.2, struct-254
+real-margin law). Selected: az175.5 r104.5 (-104.178, 8.199) —
+innermost lawful margin+constellation seat, gap 4.17 vs nx-moonmoth-001
+(radial), NN 18.14 to nx-struct-screwwell (law 8; composed with tcube
+18.32m + ico ~24m — the S-SW knife-and-parents shelf). 62-gon-exact
+SAT worst 4.17 (law 1.4). Walk-clear 75.91.
+
+YAW LAW (procession convention, struct-217..259): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az355.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120
+- 175.5 = -295.5 -> 64.50deg -> YAW = 1.125737 rad. The trico is
+DECAGON-DOWN 5-fold (probe T7: bottom decagon FLAT, snap face dead-on
++X, 72deg symmetry) — DISCLOSED: the oblique-lean band puts the yaw
+7.5deg off the 72deg lattice (the trcubo-class exact-mod bonus does
+NOT apply); the 5-fold family reads its parent-face decagons at any
+azimuth (tico/tdodec/rico placed likewise under the same convention)
+and the judged framing is preserved.
+
+TERRAIN (struct260-terrain-trico.ts, this tick): 125pt over the TRUE
+rotated 62-gon (center + 62 verts + 62 edge-mids), spread 7.7mm, PY =
+lowest = 0.010676 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=62 class): the 62-gon dais R3.80 APOTHEM-FIRST (PLINTH_N 62,
+corners ON the axes per struct-247 law) is the footprint; build
+envelope 7.60x8.27x7.59 == the dais itself (decode D2 + envelope-law
+green in-build) — the solid NEVER overhangs, so the 62-gon IS the true
+ground footprint. Exact convex-polygon SAT (edge-normal axes of both
+polys, max-gap law) replaces the square-bbox proxy — struct-19 disc
+law class.
+
+PLACEMENT: next-place-struct260.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 395), NN
+floor 18.14 + exact-SAT worst 4.17 re-proven against the FRESH 395-set
+pre-verb, upload store/c55817dcf37c1e21.glb (1 upload, shared budget),
+plain spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [-104.177861,
+0.010676, 8.198976] yaw 1.1257373675363425 lib
+store/c55817dcf37c1e21.glb comp {} census 395->396; idempotent rerun
+ALREADY_SEATED 0 verbs. Ground circuit walk 7/7 CORE_ALL_PASS
+maxArrival 0.368m (two-way az175.5 arrival-line approach + reading-face
+vantage at 7m on the az25.5 face normal + full CW standoff circuit at
+8m — no phantom collider; folly by presentation, the PANELLED solid
+means the walk stays outside the 3.80m dais; walk standoff 8m applies
+directly, chord-mid clear 4.21m — the struct-259 disposition). Walk
+stdout carries the known distant support-seam diagnostics class
+(dress entities, foreign lanes, abstentions only).
+
+PROBE SELF-CATCH this tick (verified by machine before patching,
+disclosed): the inherited placer's bare "nExact==0 -> vacuous" die
+FALSE-FIRES at a genuinely isolated seat — every non-exempt neighbor
+legally radial-skipped, so zero exact evaluations is a lawful outcome
+(the scan's coverage at the selected seat: exact 1 / radial 298). The
+STRONGER check replaced it in-placer: the RED control itself fired at
+a distant standing solid's own center (guaranteed overlap refused at
+-9.715, with the guaranteed-overlap precondition now explicit: the
+origin must lie inside the entity's own possibly-offset OBB, tested
+|ecx|<=hx && |ecz|<=hz) + a total-coverage gate (exact+radial+disc>0).
+Note for the honest ledger: NaN evaluations would still increment
+nExact — only the RED control actually proves the path refuses; the
+nExact counter alone was never the real NaN guard.
+
+Bill eye-check pointer: on the S-SW reach past the icosahedron and the
+truncated cube — where the rico grew the duals into one child, THE
+TRUNCATED ICOSIDODECAHEDRON turns the knife on the golden parent
+itself: the dodecahedron's twelve pentagonal faces still standing in
+their own unmoved planes, each cut at corners and edges into a REGULAR
+decagon; every parent edge beveled into a square; every parent vertex
+bloomed into a dark iron hexagon. Twelve + thirty + twenty = sixty-two
+faces — the parent's faces, edges, and vertices, complete, nothing
+else, the same census the rico told by growing. The theorem standing
+under it: the knife took only an eighth of the parent's mass, and the
+two cut depths were solved — not chosen — so all 180 edges come out
+exactly equal. After dark, twelve brass beads mark the twelve parent
+faces, lit — one on the finial at the crown, ten ringing the waist in
+two five-pointed bands, and the twelfth given to the earth beneath the
+flat foot. The thirty squares and the twenty iron hexagons stay dark.
+
+Files: struct260-scan-trico.ts + struct260-terrain-trico.ts +
+struct260-walk-trico.ts + next-place-struct260.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-260,
+D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-261 build+judge tick (R11-69, empty bank —
+re-derive the form from the ledger grep: snub cube the last
+named-unclaimed Archimedean, a Bill handedness call; rhombic solids /
+non-Archimedean families per struct-253's grep; fresh five-file grep to
+confirm the gap before building) or Bill's verdict routing.
