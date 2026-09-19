@@ -16612,3 +16612,80 @@ re-derived from committed pointers this tick: longhouse/garden-cottage
 tower-house @341 stalest standing pair at 3 sweeps; walk tools
 interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verified
 present on disk — 1786B Aug 30 08:11 + 1523B Aug 30 09:53).
+
+sweep-345: CLEAN SWEEP, one-arrival epoch-corrected tick (114th
+consecutive quiet-or-classified). Tick-start HEAD 0443e407 (struct-255
+R11-64 trcubo BANKED NOT PLACED — zero world mutations PRE-tick);
+fauna-45 SEATED + committed @ 7448dc3e interleaved mid-tick; dress-188
+read-only HOLD beneath (zero mutations per its own entry). Standing
+gate ALL PASS real exit 0 FIRST TRY at 0443e407 (ledger law 2371003
+exact at the gate's own printed total); re-run ALL PASS real exit 0 at
+7448dc3e after the interleave, HEAD re-checked stable after the run.
+Census epoch A 390->391 vs the committed sweep-344 baseline (sha16
+7ae0189bafaa78bb): exactly ONE domain-valid arrival nx-dress-hmou-001
+@ (11, -0.02474, 31.5) yaw -1.41 lib 93ebddcbbda82774 comp 3x
+motion:hmou{,_head,_snout} — the arrival was live BEFORE its ledger
+commit: classified first tuple-exact against the in-tree uncommitted
+placer fauna45-place-hmou.ts (sweep-298 robin / sweep-335 wrabbit
+class), then LEDGER-MATCHED line-for-line when the sibling fauna-45
+window committed @ 7448dc3e mid-tick; independently corroborated by
+sibling dress-188's same-tick census (fauna-owned set-19, NOT dress
+intake); 0 departures, 0 drift on 390 shared ids. SAT epoch A with the
+arrival in the live set: 353 bbox non-light / 248 exempt-classified /
+0 coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 301st sweep since routing, NOT new, no
+escalation due (the law keys on severity-1); hmou included in the live
+SAT set — no new contacts (its own placer worst solid gap 1.727m vs
+nx-town-woodyard). Battery: ONE lawful pin bump RED->GREEN
+comp-bearing 49->50 (fauna precedent chain sweep-301..344; first
+invocation correctly FAILed = expected classification) then 28/28
+PASS, re-run 28/28 on epoch-C bytes after the pin comment's
+provenance was corrected to cite the committed ledger. Tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually per the sweep-228 ceiling law — core 64/64 maxArrival
+0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32),
+NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5
+(0.00/0.25/0.34/0.37/0.31) — dists identical to the sweep-319..344
+canon. Tier-2 323rd cycle per the committed sweep-344 pointer: inn 6/6
+ALL_PASS (interior-walk-inn.ts, real exit 0, dists
+0.3199/0.3183/0.3409/0.3502/0.3640/0.2885) + tower-house 6/6 ALL_PASS
+(interior-walk-tower-house.ts, real exit 0, dists
+0.2450/0.2450/0.2625/0.3765/0.3742/0.3091), both tools ls-verified
+present on disk BEFORE this prose (1786B Aug 30 08:11 + 1523B Aug 30
+09:53, matching the committed pointer exactly). Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (299th consecutive
+clean). Carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified (polish-299 standing); comp-bearing 50; lights 38;
+thing 353. Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP md5
+a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224
+unchanged (zero open queue rows), sweep owns no prefix;
+CITY-PLAN-V2 unchanged, assigns sweep no reset role — the
+audit-continues freeze banner governs via loop/plan reload. Baseline
+lawfully rewritten like-for-like (copyfile convention, sweep-321..344
+precedent; /tmp/s345/snapshot-rewrite.py): pre-write assertion
+verified committed baseline == 7ae0189bafaa78bb (390 ents), expected
+diff set exactly [arrival nx-dress-hmou-001], counts 390->391, zero
+drift on 390 shared ids; final 391 entities / 305214B / sha16
+f6817fe38442f20e; post-rewrite drift vs live epoch C ZERO. Epoch C
+20s-paced re-read FULLY QUIET (0/0/0), raw sha byte-identical to
+epoch A — world stable at 391. Probe self-catches pre-verdict,
+disclosed: (a) battery first invoked without its census argument
+(IndexError) — re-issued with the census path; (b) battery 27/28 FAIL
+on comp-bearing 49-vs-50 = the expected classification, bumped per
+the fauna precedent chain with provenance; (c) a tier-2 JSON parse
+KeyError from assuming the approach-walk shape ('legs') — interior
+walks report phase/maxArrival instead; both raw logs read directly,
+both ALL_PASS. Foreign dirt in tree (windmill overhaul scratch,
+cabin/carousel prototype dirs, engine files, fleet shells,
+debug-bower scripts, moon-moth dir, fauna45 tools now committed by
+the sibling, core-paths assets, next-terrain scratch, review dirs) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-346): hall + bunkhouse (324th cycle — LRU chain re-derived
+from committed pointers this tick: inn/tower-house @345 walked fresh,
+longhouse/garden-cottage @344, forge/potter @343, hall/bunkhouse
+@342 stalest standing pair at 3 sweeps; walk tools interior-walk-hall.ts
++ interior-walk-bunkhouse.ts, ls-verified present on disk — 1704B
+Aug 30 08:24 + 1538B Aug 30 11:22).

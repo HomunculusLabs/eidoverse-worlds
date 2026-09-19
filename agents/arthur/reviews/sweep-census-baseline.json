@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 390,
+  "count": 391,
   "entities": [
     {
       "id": "beb4c791",
@@ -5558,6 +5558,88 @@
           "period": 2.6,
           "phase": 0.6,
           "t0": 1789803030930
+        }
+      }
+    },
+    {
+      "id": "nx-dress-hmou-001",
+      "kind": "thing",
+      "pos": [
+        11,
+        -0.02474,
+        31.5
+      ],
+      "yaw": -1.41,
+      "scale": 1,
+      "lib": "store/93ebddcbbda82774.glb",
+      "bbox": {
+        "min": [
+          -0.172,
+          -0.002,
+          -0.063
+        ],
+        "max": [
+          0.078,
+          0.308,
+          0.101
+        ],
+        "size": [
+          0.25,
+          0.309,
+          0.164
+        ],
+        "center": [
+          -0.047,
+          0.153,
+          0.019
+        ]
+      },
+      "compKeys": [
+        "motion:hmou",
+        "motion:hmou_head",
+        "motion:hmou_snout"
+      ],
+      "comp": {
+        "motion:hmou": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 3.2,
+          "phase": 0,
+          "t0": 1789839398091
+        },
+        "motion:hmou_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 8,
+          "phase": 0.4,
+          "t0": 1789839398091
+        },
+        "motion:hmou_snout": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.15,
+          "period": 2.2,
+          "phase": 1,
+          "t0": 1789839398091
         }
       }
     },
