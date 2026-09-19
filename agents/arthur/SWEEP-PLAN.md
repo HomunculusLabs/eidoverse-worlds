@@ -15788,3 +15788,16 @@ garden-cottage @329, forge/potter @327 stalest standing pair at 4 sweeps;
 walk tools interior-walk-forge.ts + interior-walk-potter.ts, ls-verified
 present on disk BEFORE this prose — 1559B Aug 30 08:32 + 1571B Sep 7 13:44,
 match the committed sweep-327 pointer exactly).
+
+CORRECTION OF RECORD (sweep-332, same tick, disclosed): the sweep-332 prose
+above records the baseline rewrite as sha16 b3698abf30a3c737 — that is the
+COMPACT-serialization intermediate. The committed baseline was re-serialized
+like-for-like to the indent=2 convention (sweep-55/56 class; the first write
+was caught by the commit's 16337-line diff stat) and re-projected to the
+committed key convention (bbox OMITTED when absent, lib kept null). TRUE
+committed sweep-332 close: 287289B / 379 entities / sha16 e4d3553a71509d7f —
+content-identical to the b3698abf intermediate (probe entities serialized
+byte-equal incl. a light and the carousel), post-rewrite drift vs live epochs
+A and B ZERO, entity diff vs the sweep-331 baseline exactly [arrival
+nx-struct-nodoid, arrival nx-dress-heron-001, nx-hearth lib+bbox+comp-key-
+order]. sweep-333's pre-write assertion MUST use e4d3553a71509d7f.
