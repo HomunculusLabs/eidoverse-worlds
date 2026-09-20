@@ -1,6 +1,67 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-223 — lawful HOLD (112th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 7d113070 (polish-330, foreign
+  domain), then RE-RUN ALL PASS exit 0 at new HEAD 19a7e09c after
+  sweep-380 landed mid-tick (epoch law); interlane md5 86b2936f
+  pin-exact. Paced pre-diff probe corroborated the epoch before
+  expectations: 416==416, ZERO arrivals/departures, exactly one
+  `nx-hearth` lib flip, dress 84/84 stable. Fresh census **416==416
+  QUIET-count epoch (+0/−0) — ZERO arrivals, ZERO departures, exactly
+  ONE classified move, classified at source before expectation use
+  (dress-172 law)**: `nx-hearth` lib flip 890163cb→0bb8fb0e at
+  tuple-identical [0,0,0] yaw 0 EXACT (maxdelta 0.0000000, verified BOTH
+  vs the dress-222 capture AND vs the placer's absolute contract) —
+  polish-330 (7d113070) hearth cooking-kettle re-authoring (tapered
+  body+rim+domed lid+bail arch+angled spout+3 chain links, firelit
+  potIron underglow); classification read verbatim this tick from
+  polish-330's OWN ledger line IMPROVEMENTS.md:6970 + placer
+  `next-place-hearth.ts` lines 13–17 (REVIEWED_SHA
+  0bb8fb0e973e6b35…, POSE [0,0,0] yaw 0 scale 1) + HERO-ASSET
+  plan:3100–3102 + sweep-380 line 6972 corroborated (comp bag 4 keys
+  preserved) — polish domain (core town entity, off-limits to this
+  lane), classified not routed. Domain strongest-form: **all 84 dress
+  ids lib+pose EXACT-stable vs the dress-222 PASS-verified capture —
+  zero unstable, zero in-domain arrivals/departures**; live dress 84 =
+  29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 32 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-223.py` HOLD_VERIFY_PASS exit 0 FIRST RUN,
+  zero self-catches, browser UA, capture saved
+  `/tmp/dress223-census.json`).
+- **Sibling commits since dress-222**: polish-330 (7d113070, the hearth
+  flip above — HEAD at tick start), struct-296 (11750c4f, lawful
+  hold), sweep-380 (19a7e09c, zero-mutation CLEAN SWEEP — classified
+  the same flip, census 416==416 both epochs, baseline rewritten —
+  landed mid-tick, HEAD at tick close, gate re-run at it). All named,
+  all foreign domain. Foreign-lane dirt in tree (windmill overhaul WIP
+  + core-paths GLB, engine files client/server, WINDMILL-OVERHAUL.md,
+  fauna63+ probes, fleet shells, moon-moth/cabin-overhaul dirs) — none
+  dress-owned, left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan host `nx-struct-reedpool`
+  7d770620 — all pose-stable (artwalk-39 law); stork-millrace designed
+  adjacency 2.952m stable; swan-reedpool seat 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN
+  rows, zero OPEN `nx-dress-` rows) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-222 — lawful HOLD (111th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
