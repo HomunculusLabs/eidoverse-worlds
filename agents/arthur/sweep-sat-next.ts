@@ -183,6 +183,26 @@ const ALLOWED = new Set<string>([
   // pos/lib drift on either id re-surfaces as census drift at 16-hex
   // precision and re-derives this class.
   "nx-dress-kfish-001|nx-struct-millrace",
+  // sweep-368 (standing-precedent class, kfish|millrace sweep-351 +
+  // angler|reedpool sweep-42 + heron|reedpool sweep-332 tier): fauna-61
+  // white stork PAIR at the millrace channel-margin SSW mid-race —
+  // DESIGNED adjacency, declared in its own placement contract
+  // (fauna61-place-stork.ts header + FAUNA-PLAN stork CLOSED block +
+  // fauna-61 ledger @ 8da7b0bd): seat = fauna61-seat-sweep best of 966
+  // qualifying at race-local (1.85, 2.3), race margin gap 0.634m = the
+  // channel-margin designed adjacency, MEMBER-GATED from mkv3-millrace.ts
+  // source (steps/head/launder/basin), worst other solid 4.178m; PY =
+  // live heightAt (9pt spread 4.4mm). The storks stand IN the grass
+  // margin beside the channel — the water-rider/margin-dweller design,
+  // same tier as the heron at the reedpool bank. Re-verified fresh at
+  // sweep-368 against the LIVE seat: fauna61-walk-stork.ts re-walked
+  // 5/5 ALL_PASS (0.00/0.25/0.31/0.35/0.31). The SAT -0.970 is the
+  // designed channel-margin overlap itself (2D SAT is blind to the
+  // member-gated source decode that proves the birds clear the race
+  // solids). Evidence: SWEEP-PLAN sweep-368 row. Any pos/lib drift on
+  // either id re-surfaces as census drift at 16-hex precision and
+  // re-derives this class.
+  "nx-dress-stork-001|nx-struct-millrace",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });
