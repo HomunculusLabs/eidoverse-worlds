@@ -6910,4 +6910,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-287] R11-95 lawful HOLD (ninth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at dd65a8e9 (struct-286, own prior hold); shard+refine+carry empty, census 414 tetrakis/trioct/trit PIN_EXACT zero drift, 127 struct-domain all accounted; native cron-unpayable owed board rides (tetrakis/trit/trioct v1 ZAI-fallback judgments banked as re-judge substrate); zero mutations/uploads/verbs (D+0, E+0) (D+0, E+0)
 
-**Running total: 2371094 / 2000000**
+- [polish-326] fountain splash-zone variance — per-instance tables for pads/fins (size/squash/jitter/lean/height) + 3 strand brightness classes keyed to width; riveted-ring read cured at 18m night (judge PASS both items, close-range ring continuous), rejected r1 amplitude-diluted 431c07ae; nx-dress-fountain 68e5b75e->056157db, P326_SERVED_PASS 22 gates, diffs confined, idempotent 0 verbs (D+1, E+0)
+
+**Running total: 2371095 / 2000000**

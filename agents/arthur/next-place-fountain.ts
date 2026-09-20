@@ -6,8 +6,11 @@
 // finial; polish-323: wire-read cure — overflow-curved tapered strands +
 // connected foam band + 6 vertical splash fins; polish-324: drum dead-mass
 // cure — 3 dressed-limestone courses with 7cm reveals + cool night spill
-// band; polish-325: bowl dead-hole cure — ft_bowl joins the drum's own
-// dressed-limestone + spill material, one stone one structure). The live fountain carries an EMPTY comp bag, so EXPECTED_KEYS is
+// polish-325: bowl dead-hole cure — ft_bowl joins the drum's own
+// dressed-limestone + spill material, one stone one structure; polish-326:
+// riveted-ring cure — per-instance variance for the splash zone and cascade
+// — 3 strand brightness classes keyed to width, per-landing pad size/squash/
+// jitter/brightness tables, fin height/width/lean/brightness tables). The live fountain carries an EMPTY comp bag, so EXPECTED_KEYS is
 // [] — verified empty before and after (comp-wipe law trivially satisfied;
 // still asserted).
 // Verb choreography copied from the proven next-place-hearth.ts /
@@ -21,7 +24,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-dress-fountain";
 const FILE = `${ROOT}/agents/arthur/assets/village_fountain.glb`;
-const REVIEWED_SHA = "68e5b75e73a1405840c9a24137f283928816bc1dbdfcf01edcf5cb3d46f93999";
+const REVIEWED_SHA = "056157db8d860b083d5a0c96b835952d0c54cd58b788549d06596ebef2d917a6";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [12.5, 0, 4.0] as [number, number, number], yaw: -0.7853981633974483, scale: 1 };
 const EXPECTED_KEYS: string[] = [];

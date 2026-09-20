@@ -2797,3 +2797,77 @@ next wake once the gateway answers.
   class, foreign-direction, self-corrected by the owning lane). Live pin
   68e5b75e, P325_SERVED_PASS, and evidence are unaffected — attribution
   only.
+
+### polish-326 — fountain splash-zone variance (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (same tuple as polish-320..325; empty comp
+  bag, census-fresh this tick). Build source `assets/mkwater1.ts` (live was
+  68e5b75e, polish-325's bowl build; on-disk sha == live exact at survey).
+- Defect (day+night judges on exact live bytes, queue-head from polish-325
+  close, ZAI fallback disclosed — no native vision tool loadable in this
+  cron session, polish-285..325 class, native re-judge owed): "instanced
+  uniformity without breakup" — the foam pads + fins read as an
+  evenly-cadenced row of identical marks ("riveted / picket fence", worst
+  offender per BOTH judges), and every cascade strand shared one
+  brightness. Source-true: pads spanned 6% in size, fins 7%, one material
+  per family. Falsified adjacent judge claims (recorded, not treated):
+  "no drum courses" (7cm reveals exist, polish-324), "no basin water
+  plane" (dress-79 rim occlusion), "mirrored strands" (deterministic
+  jitter, no mirror in source), "identical strand widths" (0.4x..2.2x
+  swing, sub-pixel at 9m).
+- Change (ONE intervention, 2 measured rounds): per-instance VARIANCE, all
+  deterministic literal tables — (a) strands take one of THREE emissive
+  classes keyed to their own WPROF width (fat catches more light); (b) pads:
+  size factor 0.74..1.30, squash 0.24..0.34, radial+height jitter,
+  brightness tier table; (c) fins: height factor 0.62..1.45, width
+  0.85..1.20, lean +-7deg, independent brightness tiers. ft_splash torus
+  + dome/jet/crown keep the exact 0.78 connective signature. Rejected r1
+  `431c07ae…` (classes 0.30/0.50/0.70 + wp-keyed pad tiers): night judge
+  "change not effective at this distance" — variance real (decode-proven)
+  but amplitude-diluted (4/6 pads and 6/6 fins shared one tier). r2
+  widened spray classes 0.22/0.50/0.80 and explicit PAD_B/FIN_B tables.
+- Candidate `056157db8d860b083d5a0c96b835952d0c54cd58b788549d06596ebef2d917a6`
+  deterministic x2 (mtime-verified); siblings birdbath/chimes/weathervane
+  byte-stable; nodes 45 unchanged, materials 25->29 (+4 documented
+  emissive-class families that cannot merge). Decode probe P326_DECODE
+  _PASS: 3 spray + 3 foam classes present, strand tiers match WPROF,
+  fin quaternions = authored leans, fin heights = authored table
+  (0.145/0.209/0.084/0.179/0.111/0.145), pad squashes vary, apex/finial
+  regressions exact, 0 non-finite.
+- Falsification: pixel diffs confined to the cascade + landing band in all
+  7 views (gameplay/night 1968/2178 px, rows 325..393; apex untouched).
+  Night A/B r2 (ui_diff): waterline PASS (pad heights 4..11px varied,
+  brightness stepped ~160..~230, clumping), strands PASS (clearly
+  bright/dim contrast, "effectively zero" before), one LOW watch
+  (right-side dim segment) — close-range re-judge: ring CONTINUOUS,
+  varied, "distribution you'd expect from falling water impact", zero
+  detached/broken. Day A/B: coherent, zero new defects (strand-class
+  day-delta sub-threshold = polish-287 diffuse-clip law; night is the
+  target state). Day judge's "subtle at 9m" recorded as inherent — the
+  riveted read it cured is the 18m NIGHT read both judges failed.
+- Placed via updated `next-place-fountain.ts` (pins 68e5b75e -> 056157db):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun "already live at reviewed tuple — no verbs", live census pin
+  `store/056157db8d860b08.glb` @ [12.5,0,4] yaw -0.7853981633974483 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p326-verify-served.ts`): served DRACO 43ca198e…
+  P326_SERVED_PASS (22 gates) — all 3+3 classes, strand/pad/fin tier
+  bindings, authored fin heights + quaternion leans, and every p320..325
+  regression (crown squash 0.1344, finial 0.1400, drum steps 0.070/0.070,
+  strand bows 0.187+, connective + finial emissives exact) survived the
+  re-encode; 0 non-finite.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD dd65a8e9
+  (struct-286 hold landed mid-tick — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-326-fountain-basin/` (before/ =
+  live 68e5b75e baseline GLB + 7-view rig; after/ = rejected r1;
+  after-r2/ = ACCEPTED + rig; probes: /tmp/p326-decode.ts, /tmp/p326-
+  abdiff.ts, /tmp/p326-rig.ts one-shots).
+- Excalibur checkpoint: cast REACHABLE this tick (layout moved:
+  `vessel/workings/eidoverse-hero-assets` + `grimoire/engine/workings.mjs`)
+  — checkpoint appended post-commit.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  notes — fin height/width variance now shipped (watch: right-side dim
+  segment at extreme distance), strand brightness variation shipped;
+  remaining nits: basin water tone, the two long rim streaks (ft_splash
+  arc segments) named by the day judge as the strongest remaining
+  regularity anchors — a future round if 18m evidence warrants.
