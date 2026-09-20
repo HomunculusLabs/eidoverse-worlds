@@ -18737,4 +18737,72 @@ stable/market @380, forge/potter @379 the stalest standing pair; walk
 tools interior-walk-forge.ts (1559B) + interior-walk-potter.ts (1571B),
 ls-verify before walks per law).
 
+sweep-383: CLEAN SWEEP, single classified flip tick (153rd consecutive
+quiet-or-classified). Tick-start HEAD 041384b1 (struct-302 lawful hold);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root, ledger law EXACT
+2371106 at first probe (gate-observed; polish-332's D+1 landed pre-tick at
+26f283b9 and was already absorbed — HEAD 041384b1 sits atop it). Interlane
+md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools
+drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows, CITY-PLAN-V2
+cae6b928 unchanged — audit-continues freeze banner governs via loop/plan
+reload). Census epoch A 418==418 vs the committed sweep-382 baseline (sha16
+7d48eef35f1796ff): 0 arrivals, 0 departures, exactly ONE substantive drift
+field-set = nx-hearth lib 74f16c88->ad165b6e at identical tuple (0,0,0) yaw
+0 scale 1, comp bag byte-identical (motion:pz_kettle, motion:well_,
+particles, sockets — the 4-key bag preserved verbatim), bbox x-min
+-3.239->-3.895 west growth ~0.66m, y/z extents identical = COMMITTED
+polish-332 @ 26f283b9 (hearth firewood stack re-sited to 202.5deg — the 5
+loose in-ring logs rebuilt as ONE deliberate stack outside the ring: 2
+split-log bearers + 6 radial-course logs, sawn cut faces outward, bark
+value-split from bench bark; decode-verified zero wood inside r 3.0;
+nodes/meshes/mats unchanged, merges into pz3_6/pz3_7), ledger-matched
+line-for-line including the exact lib transition, domain-valid (nx-hearth is
+polish's hero domain), not drift. Epoch B 20s-paced re-read 418==418, A-to-B
+drift ZERO — single settled epoch, no epoch correction. Overlap: SAT 380
+bbox non-light / 260 exempt-classified / 0 coverage holes, exit 3 on exactly
+ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 339th sweep since routing, NOT new,
+no escalation due (the law keys on severity-1); hearth flip introduced ZERO
+new contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg
+real exit 0, legs run individually — core 64/64 maxArrival 0.380
+(next-walk-core-paths.ts) RE-WALKED over the new polish-332 hearth bytes
+(plaza-core r0, inside the re-verify band, sweep-371/372/378/379/380/382
+precedent — epoch-A legs not allowed to stand on SAT neutrality alone), NW
+5/5 (0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists canon-exact vs the
+sweep-319..382 canon. Tier-2 361st cycle per the committed sweep-382
+pointer: forge 6/6 ALL_PASS (interior-walk-forge.ts, dists
+0.261/0.307/0.300/0.315/0.375/0.261) + potter 6/6 ALL_PASS
+(interior-walk-potter.ts, dists 0.270/0.366/0.295/0.255/0.250/0.349), both
+tools ls-verified present BEFORE the walks (1559B + 1571B), dists
+canon-exact vs the sweep-379 record. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (337th consecutive clean); sweep89-battery 28/28
+PASS FIRST TRY on censusA bytes (comp-bearing 65 stable — hearth flip
+comp-neutral, no pin move; lights 38, thing 380, carousel comp bag exact 7 +
+lib 3ed80c49d16e89d8 census-verified via battery). Baseline lawfully
+rewritten like-for-like from the COMMITTED bytes
+(/tmp/s383/baseline-rewrite.py): pre-write asserts green (committed sha16
+7d48eef35f1796ff, arrivals [], departures [], substantive drift exactly
+[nx-hearth lib+bbox], comp byte-identical asserted, bbox change shape
+asserted x-min-only west growth), one-field lib+bbox transplant only,
+post-rewrite substantive drift vs live ZERO — final 418 entities / sha16
+29f2dc39a00f2ec5; git diff exactly 4 lines. Probe self-catches pre-verdict,
+disclosed: (a) walk-output parser typo'd an inline comprehension (SyntaxError
+on the SW leg parse — tool exit 0, parser-only; rewritten as a /tmp script
+file, sweep-48 schema class); (b) the first potter parse referenced a
+misspelled /tmp path — the || fallback caught it and parsed the true file.
+Foreign dirt in tree (engine files client/server, core-paths GLB + review
+json, windmill overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul +
+moon-moth prototype dirs, fauna32-*/fauna63-*/fauna64-*/fauna65-* tools,
+debug bower scripts, fleet shell scripts, polish review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-384): stable + market (362nd cycle —
+LRU chain re-derived from committed pointers this tick: forge/potter @383
+walked fresh, inn/tower-house @382, hall/bunkhouse @381, stable/market @380
+the stalest standing pair; walk tools interior-walk-stable.ts (1784B) +
+interior-walk-market.ts (1544B), ls-verify before walks per law).
+
+
 
