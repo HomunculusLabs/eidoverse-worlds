@@ -18252,3 +18252,81 @@ forge/potter @375 walked fresh, inn/tower-house @374, hall/bunkhouse
 @373, stable/market @372 the stalest standing pair; walk tools
 interior-walk-stable.ts + interior-walk-market.ts, ls-verify present
 1784B/1544B BEFORE walking).
+
+sweep-376: CLEAN SWEEP, arrival+flip classified tick (146th consecutive
+quiet-or-classified). Tick-start HEAD d2f85e79 (polish-327); standing gate
+ALL PASS real exit 0 FIRST TRY from repo root (absorbed mid-check
+struct-290 lawful hold to 43920376), ledger law EXACT 2371098. Census
+epoch A 414->415 vs the committed sweep-374 baseline (sha16
+00757313d8c1b963): exactly ONE arrival nx-dress-guine-001 @
+(45.25,-0.04717,-14) yaw -1.22 lib af852d2d004c5c52, 7 motion comps
+(guine_{a,b,c} + a/b_heads + tails bob/pendulum/neck-scan/tail-flick
+set), bbox 2.042x0.79x2.18 scale-sane — tuple matches COMMITTED fauna-67
+@ 1afdeccc line-for-line, domain-valid (fauna lane uses nx-dress-* ids),
+not drift. Plus exactly ONE classified drift field-set: nx-town-monument
+lib 1b4cca52->43c9dcf3 at identical tuple (-7,0,-7) yaw pi/4, bbox growth
+x 2.705->3.16 / z 5.675->6.155 y-span identical 3.441 = polish-327
+COMMITTED @ ac08b5d0 contact-shadow disc ring (collie-law two-step),
+ledger line matches the flip exactly, domain-valid, not drift. ZERO
+departures, ZERO substantive drift on the other 412 shared ids on
+id/pos/yaw/lib/scale/kind/bbox; ZERO comp-dict diffs (the 59-row compKeys
+projection flap re-derived: comp dicts byte-identical, sweep-372 class —
+pre-write assert caught it fresh this tick before any baseline write,
+repaired to the substantive field set). Epoch B 20s-paced re-read
+415==415, A-to-B drift ZERO — single settled epoch, no epoch correction.
+Overlap: SAT 377 bbox non-light / 256 exempt-classified / 0 coverage
+holes, exit 3 on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407, known Sev 2 routed to artwalk b26 choreography @ sweep-43, 332nd
+sweep since routing, NOT new, no escalation due (the law keys on
+severity-1); monument disc-ring growth + guine arrival introduced ZERO
+new contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every
+leg real exit 0, legs run individually — core 64/64 maxArrival 0.380
+(next-walk-core-paths.ts; core walked over the new monument bytes — flip
+was committed pre-tick, disc ring is ground-level), NW 5/5
+(0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists canon-exact vs
+the sweep-319..375 canon. The guinea fowl sits r47.2 E — outside every
+tier-1/tier-2 leg (all r<20); fauna-67's own committed walk ALL_PASS 3/3
+covers its adjacency. Tier-2 354th cycle per the committed sweep-375
+pointer: stable 5/5 ALL_PASS (interior-walk-stable.ts, dists
+0.295/0.388/0.383/0.396/0.369) + market 6/6 ALL_PASS
+(interior-walk-market.ts, dists 0.309/0.360/0.389/0.261/0.291/0.346),
+both tools ls-verified present BEFORE the walks (1784B/1544B).
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (330th
+consecutive clean); sweep89-battery 28/28 PASS after the lawful
+RED->GREEN comp-bearing pin bump 61->62 (first invocation correctly
+FAILed 61-vs-62 = expected classification; added-set census-verified
+exactly [nx-dress-guine-001], removed-set empty; sweep-301..373 fauna
+precedent chain); lights 38, thing 377, carousel comp bag exact 7 + lib
+3ed80c49d16e89d8 census-verified via battery. Interlane md5 86b2936f
+stable, SWEEP-LOOP md5 a5fd4f4f stable, both read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue rows), sweep owns
+no prefix; CITY-PLAN-V2 md5 cae6b928 unchanged — the audit-continues
+freeze banner governs via loop/plan reload. Baseline lawfully rewritten
+LIKE-FOR-LIKE from the COMMITTED bytes (/tmp/s376/baseline-rewrite.py):
+pre-write asserts green (committed sha16 00757313d8c1b963, arrivals
+exactly [nx-dress-guine-001], departures [], substantive drift exactly
+monument lib+bbox), one-field lib+bbox transplant + sorted insert of the
+guine block, post-rewrite drift vs live epoch B ZERO — 415 entities /
+330755B / sha16 807cf464e9fa97b7; git diff exactly the arrival block +
+monument transplant + count bump. Probe self-catches pre-verdict,
+disclosed: (a) the comp-diff probe first iterated comp as a list
+(AttributeError, zero rows diffed — census schema carries comp as a
+dict; re-derived); (b) the SAT real-exit probe first piped through tail
+and laundered the exit code (polish-270 class b; re-run unfiltered, real
+exit 3 captured); (c) the first baseline-rewrite assert failed closed on
+the 59-row compKeys projection flap before ANY write (nx-hearth first
+hit; classified sweep-372 class, assert narrowed to the substantive
+field set, baseline untouched on the failed run). Foreign dirt in tree
+(engine files client/server, core-paths GLB + review json, windmill
+overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth
+prototype dirs, fauna63-*/fauna64-*/fauna65-* tools, debug bower
+scripts, fleet shell scripts, review dirs) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use. Next tier-2 pair (sweep-377): hall + bunkhouse (355th cycle — LRU
+chain re-derived from committed pointers this tick: stable/market @376
+walked fresh, inn/tower-house @374, hall/bunkhouse @373 the stalest
+standing pair; walk tools interior-walk-hall.ts +
+interior-walk-bunkhouse.ts, ls-verify before walks per law).

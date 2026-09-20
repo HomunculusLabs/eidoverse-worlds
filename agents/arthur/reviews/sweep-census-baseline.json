@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 414,
+  "count": 415,
   "entities": [
     {
       "id": "nx-hearth",
@@ -1510,27 +1510,27 @@
       ],
       "yaw": 0.7853981633974483,
       "scale": 1,
-      "lib": "store/1b4cca52022ff356.glb",
+      "lib": "store/43c9dcf3ee52c6f3.glb",
       "bbox": {
         "min": [
-          -1.27,
+          -1.58,
           0,
-          -1.1
+          -1.58
         ],
         "max": [
-          1.435,
+          1.58,
           3.441,
           4.575
         ],
         "size": [
-          2.705,
+          3.16,
           3.441,
-          5.675
+          6.155
         ],
         "center": [
-          0.082,
+          0,
           1.72,
-          1.737
+          1.497
         ]
       },
       "compKeys": [],
@@ -4274,6 +4274,140 @@
       "lib": null,
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-guine-001",
+      "kind": "thing",
+      "pos": [
+        45.25,
+        -0.04717,
+        -14
+      ],
+      "yaw": -1.22,
+      "scale": 1,
+      "lib": "store/af852d2d004c5c52.glb",
+      "bbox": {
+        "min": [
+          -1.015,
+          -0.001,
+          -1.112
+        ],
+        "max": [
+          1.027,
+          0.789,
+          1.069
+        ],
+        "size": [
+          2.042,
+          0.79,
+          2.18
+        ],
+        "center": [
+          0.006,
+          0.394,
+          -0.021
+        ]
+      },
+      "compKeys": [
+        "motion:guine_a",
+        "motion:guine_a_head",
+        "motion:guine_a_tail",
+        "motion:guine_b",
+        "motion:guine_b_head",
+        "motion:guine_c",
+        "motion:guine_c_head"
+      ],
+      "comp": {
+        "motion:guine_a": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 3.8,
+          "phase": 0,
+          "t0": 1789924159271
+        },
+        "motion:guine_b": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.3,
+          "phase": 1.1,
+          "t0": 1789924159271
+        },
+        "motion:guine_c": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 4.8,
+          "phase": 2.3,
+          "t0": 1789924159271
+        },
+        "motion:guine_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.24,
+          "period": 1.8,
+          "phase": 0.4,
+          "t0": 1789924159271
+        },
+        "motion:guine_b_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.3,
+          "period": 2.1,
+          "phase": 2,
+          "t0": 1789924159271
+        },
+        "motion:guine_c_head": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 2.6,
+          "phase": 1.5,
+          "t0": 1789924159271
+        },
+        "motion:guine_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.18,
+          "period": 1.9,
+          "phase": 0.8,
+          "t0": 1789924159271
+        }
+      }
     },
     {
       "id": "nx-dress-kestr-001",
