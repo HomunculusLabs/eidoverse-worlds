@@ -2545,3 +2545,50 @@ next wake once the gateway answers.
   mkwater1 sibling — judge fresh), or (b) fountain v7 crown legibility
   (judge nit, needs crown wider than the ball), or (c) monument
   judge-named follow-ups (lower-tube night warmth, contact shadow).
+
+### polish-321 — fountain v7 burst crown (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (same tuple as polish-320; empty comp bag).
+  Build source `assets/mkwater1.ts` (live was 9c27a28e, polish-320's v6).
+  Queue-head (b) re-judged fresh: birdbath queue item FALSIFIED at census
+  (village_birdbath.glb has NO live entity in commons-next — era-1 commons
+  asset; routing a placement would be dress-lane scope, not polish).
+- Defect (ZAI judge on exact live bytes, 18m gameplay, disclosed fallback,
+  native re-judge owed — polish-285..320 class): the burst crown merged
+  DOWNWARD into the white jet — a "2-4px flare where jet meets ball",
+  white-on-white; polish-320's recorded cause (crown r == ball r) refined:
+  occlusion is NOT the failure mode, value-merge with the jet is.
+- Change (ONE edit): crown SphereGeometry r 0.14 -> 0.24 (same node/pos/
+  material, crest 2.35 stays under ball equator 2.42). Candidate
+  `d44315f635690f5e…` deterministic ×2 (mtime-verified); siblings
+  birdbath/chimes/weathervane byte-identical; decode: crown ±0.228 local,
+  finial ±0.140 unchanged, nodes/meshes/materials 39/39/3 unchanged.
+- Falsification: judge AFTER — burst reads as distinct wide cap (40px vs
+  8px jet neck, 5:1 ratio), ball still crowns, zero new defects
+  (float/clip/z-fight/proportion all clean). Night PASS (distinct
+  restrained burst cushion, hierarchy correct, contained 1-2px bloom).
+  Pixel diffs confined to the apex band in every view (gameplay 411px
+  x[468..491] y[278..308] = exactly the judge's ball/burst zone).
+- toGLB SCALE-DROP finding (probe-derived, pre-existing, affects v6+v7
+  identically): node.scale NEVER reaches the GLB — crown/dome/blobs ship
+  as full spheres in every build; the flatten read is the ball-overlap
+  composite. Recorded as kit-level candidate (glbwrite.ts scale support),
+  needs a dedicated rebuild-all tick; NOT treated mid-lane (mergekit/
+  glbwrite carry foreign uncommitted mods — polish-311 precedent).
+- Placed via updated `next-place-fountain.ts` (pins 9c27a28e -> d44315f6):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun already-live-no-verbs, live pin `store/d44315f635690f5e.glb` @
+  [12.5,0,4] yaw −π/4 exact.
+- Served-bytes proof (struct-104 law, durable `p321-verify-served.ts`,
+  p317 DRACO chassis): served DRACO keeps crown maxXZ 0.2283 (v6 0.133),
+  finial control 0.1400, all 3 emissive families exact, 12 strands + 15
+  foam + 8 named anchors, 0 non-finite. Probe self-caught its own unscaled
+  ySpan gate bug RED→GREEN before the scale-drop discovery reframed it.
+  P321_SERVED_PASS. Gate re-run after mutation: ALL PASS exit 0 at sibling
+  HEAD cdfbb966 (fauna-60 absorbed — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-321-fountain-crown/` (before/ =
+  live 9c27a28e baseline GLB + 10-view rig; after/ = candidate + rig;
+  probes: p321-abdiff.ts, p321-verify-served.ts).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  notes — brass ball washes to near-burst white at 18m (day) / foam-white
+  at night (brass tint candidate, material-only, judge fresh first).

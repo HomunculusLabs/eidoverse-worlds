@@ -6829,4 +6829,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [fauna-60] white stork PROPOSED (queue-empty branch, domain law) — nx-dress-stork-001 candidate row appended to FAUNA-PLAN queue 39: census-grounded ZERO stork/ciconiiform fauna across 409 entities (sole regex hit = artwalk four-wind-crown substring, non-fauna, magpie-proposal class); village logic = far-NW water-machinery corner (screwwell -88,0 + millrace -76.7,6.7, grain-chain head w/ sparrows fauna-48 + kingfisher fauna-50) gains THE European village-postcard bird — the fleet's missing CICONIIFORMES and tallest bird (~1.0-1.15m TRUE-SIZE); species contract: PAIR (one-leg-preen sentinel + channel-margin prober, white 0xf2ede0 + black trailing-edge wing band + long red bill 0xc23b22); motion contract: 2 bobs + head-scan + preen-settle + probe-peck staggered; anchors stork/stork_head/stork_tail/stork_bill (KEEP prefix, collision-verify owed at build); seat zone millrace-channel margin S/SE reader side, exact tuple owed to build tick; standing gate ALL PASS exit 0 FIRST at 0e7de49c; zero mutations/uploads/verbs — proposal only, build fauna-61 (D+0, E+0)
 
-**Running total: 2371080 / 2000000**
+- [polish-321] fountain burst crown widened for 18m separation (nx-dress-fountain 9c27a28e->d44315f6; crown r 0.14->0.24, judge-verified 5:1 burst-vs-jet ratio vs v6 2-4px flare; P321_SERVED_PASS; scale-drop finding documented) (D+1, E+1)
+
+**Running total: 2371082 / 2000000**

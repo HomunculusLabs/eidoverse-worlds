@@ -153,7 +153,13 @@ const fountain = new THREE.Group();
     jet.name = "ft_jet";
     jet.position.y = 2.055; // spans 1.82..2.29
     fountain.add(jet);
-    const crown = new THREE.Mesh(new THREE.SphereGeometry(0.14, 8, 5), foamMat);
+    // v7 (polish-321): burst widened r 0.14 -> 0.24 — at 18m the v6 crown
+    // (d 0.28m == ball d 0.28m) merged DOWNWARD into the white jet (judge:
+    // "2-4px flare where jet meets ball", white-on-white); the wider
+    // mushroom (d 0.48m, ~25px at 18m) reads as a distinct burst cap around
+    // the jet top, annulus ~0.10m each side proud of the ball silhouette.
+    // Crest stays 2.35 < ball equator 2.42 — ball still crowns the burst.
+    const crown = new THREE.Mesh(new THREE.SphereGeometry(0.24, 8, 5), foamMat);
     crown.name = "ft_crown";
     crown.scale.set(1, 0.28, 1);
     crown.position.y = 2.31; // crest 2.35 — burst kissing the finial base
