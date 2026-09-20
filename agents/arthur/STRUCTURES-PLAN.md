@@ -21529,3 +21529,171 @@ pentagonal hexecontahedron + snub cube/dodeca stay HELD for Bill's
 handedness call; rhombic dodeca BARRED rt-kin) — or Bill's verdict
 routing. The E band is AT soft cap 6 — R11-79 seats to a different
 octant.
+
+## struct-271 (2026-09-20): R11-79 THE TRIAKIS ICOSAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-272 committed carry)
+
+271%3=1 build-slot tick; bank EMPTY after the struct-270 placement carry
+(deltoid LIVE, E band AT soft cap 6), refine pool empty of payable items
+(40+ ticks) -> build+judge per the struct-240..270 precedent. Gate ALL
+PASS real exit 0 tick-start (unpiped /tmp/struct271-gate.log at 719fb066
+sweep-359 HEAD, foreign domain). Shard drained fresh (searched IMPROVE-
+PLAN for OPEN nx-struct rows: 0 hits). Ledger max re-derived struct-270
+-> struct-271 (numeric extraction, re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..270; owed board gains triakis v1,
+joins the riding queue).
+
+FORM SELECTION fresh grep (triakis|tetrakis|pentakis over the five-file
+set): 0 real claims — all four small Catalans unclaimed. Parent-band
+audit from the plan's own seat records: triakis tetra's parent tret
+stands E (AT CAP 6); triakis octa's parents toct/trcubo + tetrakis
+cube's parent toct stand N-E (5/6); triakis icosa's parent tdodec
+stands SW az196.5 r80 (5/6, holds its last slot). Selected: THE TRIAKIS
+ICOSAHEDRON — the dual of the freshest placed parent (tdodec
+struct-251/252), the dual-of-freshest-parent move a FOURTH time
+(gsd->gdodec, trico->dtria, rico->deltoid, tdodec->triakis), the
+richest of the four (60 sails, deg-3 apexes + deg-10 outer rank).
+ACHIRAL, machine-proven (T0b: closing maps [x->-x, y->-y, z->-z]; no
+handedness owed Bill). Per struct-270's closing directive the R11-80
+seat goes to the SW band beside its parent.
+
+CONCEPT: THE LIGHTEST CUT, READ THROUGH THE LOOKING GLASS. The parent
+told the dodecahedron's twenty vertices cut at the family's lightest
+touch (99.26% standing, u = 1/(2+phi)); the polar reciprocal about the
+tdodec's midsphere (rho == phi EXACT, closed-form proven) turns every
+parent face into a POINT and every one of the 60 tdodec VERTICES into
+an ISOCELES sail — one tri apex + two dec corners, every sail kissing
+ONE insphere at exactly rho^2/R (Catalan tangent property, T6). THE
+RANK INVERSION IS THE STORY: the parent's cut planes sit far out
+(h_tri 1.6101) while its decagon planes sit deep (h_dec 1.3764 =
+phi^2/sqrt(phi^2+1)) — so in the dual the TWENTY CUT-GHOSTS sink to the
+inner rank (rho^2/h_tri 1.6260, degree 3 — the sharpest apexes) and the
+TWELVE PARENT-FACES stand as the TWELVE GREAT OUTER POINTS (rho^2/h_dec
+= sqrt(phi^2+1) = 1.9021 EXACTLY — the ICOSAHEDRON's own vertex radius,
+the closed form the dual owes its grandparent; degree 10 — the
+decagon's tenness told at a point). The razors' ghosts point inward;
+the faces they cut become the crown. Presentation: DEC-RANK POINT-DOWN
+5-fold on the parent's own seated frame INHERITED (decagon-down +
+twist-snap, verbatim struct-251 math — no re-seat; lower pentad snapped
+dead-on az 0, upper interleaved 36.00deg, inversion-paired, all
+measured). STONE: all 60 isoceles sails (ONE face family = ONE sail
+material) + the SIXTY-sided dais (one side per sail, theme-number law).
+IRON: all 90 seam bonds + crown finial stem 1.30m. Night: TWELVE brass
+beads at the dec-rank points (the parent's OWN bead census told again —
+its twelve lit decagons become twelve lit points): 1 crown FINIAL +
+10 waist pentads + 1 pressed foot buried (tico's-twelfth idiom); the 20
+tri-rank apexes stay dark.
+
+PARAMETRIZATION (exact, closed-form): parent tdodec rebuilt verbatim
+from struct-251's closed forms (grandparent dodeca (±1,±1,±1) +
+(0,±1/phi,±phi)-cyclic, p = 2/phi; face normals the (0,±phi,±1)-cyclic
+family; U_CUT = 1/(2+phi); R 1.641471045 == (a/4)sqrt(74+30sqrt5));
+dual v_u = (rho^2/h_u).n_u with rho 1.618033989 == phi; dec radius
+1.902113 == sqrt(phi^2+1), tri radius 1.625961; SCALE 1.787485781 to
+height 6.8 (family ladder rico 6.3 -> dtria 6.6 -> deltoid 6.7 ->
+triakis 6.8); dais R3.25 APOTHEM-FIRST (apothem 3.246 >= reach+rod
+3.101); envelope 6.50x8.57x6.50.
+
+PROBE (struct271-probe-triakis.ts, tracked) ALL PASS real exit 0 + RED
+control exit 1 (5 law FAILs on displaced dual vertex: T2/T5/T6/T7/T8):
+T0 census 32/90/60 + midsphere spread 2.2e-16 + rho == phi + THE RANK
+INVERSION (dec outermost 1.902 > tri 1.626, ratio 1.1698); T0b
+ACHIRALITY; T1 Euler; T2 sail census (angle multiset IDENTICAL across
+all 60 faces: apex 119.0394deg / base 30.4803deg MEASURED; base-pair
+equal within every face — the isoceles mirror; sides 2 long + 1 base;
+sum pi); T3 degrees 10/3 by rank (the decagon's tenness at a point);
+T4 manifold; T5 exactly two edge classes dec-tri 60 + dec-dec 30, zero
+tri-tri (the cuts never met each other in the parent); T6 THE POLAR
+RECIPROCAL (all 60 sails kiss ONE insphere, worst dev 8.9e-16 vs depth
+2.850917501 scaled; every face normal EXACTLY one tdodec vertex
+direction, bijection 60/60); T7 seat (foot dec point ON the axis AT
+dais top 0.300000 AND the LOWEST VERTEX OVERALL — margin 1.0904m over
+the lowest tri apex; 72-deg symmetry 0 misses; central inversion exact;
+height 6.800000; reach+rod 3.101 <= apothem 3.246; pentads 5+5
+level/radii exact, upper offset 36.00deg; stem solved against worst
+occluder sight 6.483, finial clear 2.087 >= 0.225 law); T8 immersion
+worst poke -0.012 (fully inside).
+
+TWO probe self-catches RED-first (zero wasted builds): (a) my T2 first
+draft carried the deltoid's KITE sum law (2*pi) onto a TRIANGLE — first
+run failed red-honestly at worst sum dev 3.1 (== 2*pi - pi exactly),
+the LAW was wrong not the geometry, corrected to pi (same class as the
+deltoid's own T0b self-catch); (b) my T5 first draft carried a nonsense
+"dec-dec+same" key in the same-rank filter (dec-dec is a LEGITIMATE
+class here — only tri-tri is forbidden) plus a wrong header depth
+1.6101->1.6415 "fix" that the MEASURED h_tri 1.610146 falsified —
+both caught by hand-derivation BEFORE first run, reverted. RED control
+verified AFTER green: 5 FAILs, exit 1.
+
+BUILD (agents/arthur/assets/mkv3-triakis.ts, staged -f): root identity
+(struct-188); texMat lanes triakis_stone/triakis_iron (struct-38); bead
+emissive 0x9a7030 @ 1.4 in-GLB (family build-time law); 152 pre-merge
+meshes + 1 KEEP glow group glow_triakis_12; envelope law green in-build
+== probe contract. v1 deterministic x2 runs byte-identical sha256
+152085608aee50c429fa4388319e58faa2a37ff33a3481a776037c1c1b3cafd5
+(mtime-verified fresh).
+
+DECODE (struct271-decode-triakis.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (triakis_iron + triakis_stone + glow_triakis_12); D2
+60-gon dais TRUE box +/-3.250 corners present, sole min y -0.000000; D3
+6802 iron verts worst 60.00mm (<= 64) over the 90 exact segments + the
+NAMED finial stem, coverage 90/90; D4 1440 plate verts worst 58mm (<=
+62 shell); D5 beads 12/12 dec-rank clusters, emissive, sole night; D6
+sole at grade + foot bead pressed; D7 envelope drift 0.00mm; D8 texMats
+2/2. RED control (foreign bytes village_tdodec3.glb — the parent's own
+build): D1 census FAIL clean-stop exit 1 — RED_EXIT_REAL:1 (pipe-
+laundering self-catch: the first RED run showed exit 0 because tail's
+exit code masked bun's; re-verified unpiped).
+
+RENDERS: struct271-render-triakis.ts (tracked chassis, struct269
+lineage) 9 frames on the EXACT pinned bytes — bounds min[-3.250,
+-0.000, -3.250] max[3.250, 8.570, 3.250] == contract;
+reviews/struct271-triakis/ (9 frames, ignored — sha pin above is the
+durable record). One render-chassis self-catch: first draft imported
+{playwright} instead of {chromium} — caught by inspection before first
+run, fixed, no wasted run.
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as triakis v1): day
+gameplay 18m 4/4 PASS (identity "unmistakably a deliberate panelled
+pointed mathematical solid"; closed hull, zero floats/gaps; grounded
+with contact + cast shadow; ball census 6+1 visible consistent with
+half-hemisphere yield) — the judge's three notes are family-contract
+items, not defects: the "off-spec mast" IS the designed crown finial
+(tret v2 law, every fleet member carries it), the "vertex asymmetry"
+is perspective projection (T7 machine-measured pentads level to 4e-16,
+radii exact — decode outranks the render claim, probe law 11), the
+"unverifiable bottom finial" is the disclosed tico's-twelfth buried
+bead. Night 3/3 PASS (7 warm points resolved — the family single-
+azimuth-yield band, 12 in truth by decode D5; tight hard-edged, zero
+bloom; dark discipline clean; silhouette holds; dais-top-bright note =
+family-wide night margin). Closeface 4/4 PASS (sail joinery clean with
+uniform shadow-gap reveal, two material families distinct, beads seated
+AT junctions only at dec-rank corners, zero z-fighting/floats/through-
+gaps; one deep-V watch-item ambiguous with cast shadow, disclosed).
+12/12 real criteria PASS, zero real defects. v1 ACCEPTED BANKED NOT
+PLACED.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-272
+committed carry (fresh census scan, SW band beside parent tdodec
+(5/6 -> 6 at cap, disclosed), 8m NN + per-district soft cap 6,
+60-gon-exact polygon SAT struct-19/260 class, oblique-yaw struct-104
+band, terrain preflight over the TRUE rotated 60-gon, hash-gated plain
+spawn nx-struct-triakis, comp {}, ground circuit walk). Folly class.
+Zero world mutations, uploads, verbs, comp-edits, shared-budget use.
+Zero pushes.
+
+Files: struct271-probe-triakis.ts + struct271-decode-triakis.ts +
+struct271-render-triakis.ts + assets/mkv3-triakis.ts (NEW, tracked; mk
+staged -f per the ignored-parent law) + STRUCTURES-PLAN.md (this block)
++ IMPROVEMENTS.md (one append struct-271, D+0 E+0).
+
+Next queue head: struct-272 placement tick (the committed carry above).
+Then R11-81 build sweep re-derives from the form ledger: triakis
+tetra/octa + tetrakis cube remain unclaimed and achiral (parents E-cap
+and N-E 5/6); the pentagonal hexecontahedron + snub cube/dodeca stay
+HELD for Bill's handedness call (coin-flip = inventing a preference);
+rhombic dodeca BARRED rt-kin; fresh five-file grep before building —
+or Bill's verdict routing.
