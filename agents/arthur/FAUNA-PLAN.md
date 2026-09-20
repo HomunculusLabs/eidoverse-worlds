@@ -1187,7 +1187,64 @@ domain is commons-next `nx-dress-*` fauna only.
  - Rig/decode laws learned: (a) **a flat ground-strip read needs its width in PROJECTION, not just value** — a 0.30m lane at 18m grazing angle projects ~4px tall regardless of value; the lane's contract vantage is the discover stop (2.6m), and the scope discloses; (b) **sphere-crown beading** — overlapped spheres STILL read as discrete balls because each crown catches light separately; a tail that must read continuous is ONE tapered tube (judge prescription, third rodent's tail law: hmou prehensile rings / dmou fat drape / vole SHORT strut); (c) **a contained wrap can never render** (struct-52, again) — the muzzle collar had to sit at the THINNED skull cross-section to crest; containment arithmetic before shipping any collar; (d) **a multi-element entity's face cameras aim at the HEAD's world position, never authored coords** (fauna-44 law (a) generalized — the run's −0.6m span recentres the whole entity); (e) **a mark that must read as chaff/debris belongs at the FEATURE it explains** (the nose), not mid-scatter; (f) **the kestrel-entity composite camera must stand OUTSIDE the wander ring** — inside it, the 49cm bird at 0.5m lens distance reads as a giant garbled blob; (g) judge spatial claims decompose by PROJECTION math (swan law c) — the "full-width seam" was the rig's ground-plane far edge; the "disconnected hairline" was a grazing-angle lane.
 
 
- ### mute swan — fauna-63 (2026-09-20) CLOSED
+ 47. **[CANDIDATE — proposed fauna-72, 2026-09-20, build fauna-73] brown
+    hare at the open meadow — the lagomorph triad's missing member.** ONE
+    entity `nx-dress-hare-001` (short-id convention, magpi/pheas law).
+    Census-grounded (fauna72-census-hare.ts, READ-ONLY): 417 entities,
+    ZERO hare/lepus/lagomorph ids AND libs (magpie fauna-57 proposal law)
+    — the species slot is genuinely open. Village logic: the fleet's
+    lagomorphs are the DOMESTIC hutch pair (fauna-4) and the WILD rabbit
+    pair (fauna-38) — the brown hare (Lepus europaeus) is the third and
+    the classic English-countryside completion (the rodent triad's vole
+    law, applied to lagomorphs): the open-country animal of fallow
+    margins and arable edges that never burrows — it beds in a shallow
+    FORM in the open grass and outruns everything on long hind legs.
+    Bill's homestead language holds bunnies; the hare is the meadow's
+    own. Species contract: PAIR, TRUE-SIZE authored directly (hares are
+    BIG — body ~55cm, lankier and taller than every rabbit; carries 18m
+    natively, no bake expected; wrabbit chassis scaled honestly) —
+    hare_a THE UPRIGHT SENTINEL on its hocks (the tall sit-up, ears at
+    FULL HEIGHT ~12cm with THE BLACK TIPS — the 18m silhouette lock,
+    zero confusion risk with the rabbit's 8.5cm plain ears) + hare_b
+    FLAT IN THE FORM (pressed to the ground in a shallow grass
+    depression, ears pinned flat along the back — the classic
+    walk-past-then-it-moves discovery reward; maximum posture
+    contrast, both states species-true). Markers: grizzled brown-gold
+    coat 0x9c8a62 with black guard-hair ticking, LONG hind legs with
+    big feet (the athletic deep-chest build vs the rabbit's egg — the
+    profile distinction), amber eyes, black-tipped ears with pale
+    inner faces. Furniture: the FORM only — a shallow pressed-earth
+    dish + parted grass blades + 2 droppings at the rim (grain law;
+    zero timber — the open meadow IS the habitat, zoo-dump law).
+    Motion contract: 2 breathing bobs + sentinel tall ear-slow-scan Y
+    (hares scan slow, ~10s) + nested ear-flick + the flat one's
+    ear-shiver Z (the pinned ears twitch) + head-up check X (the form
+    hare lifts its head to look, ~12s — the signature: the patch of
+    grass that LOOKS BACK); phases staggered per individual, epoch t0.
+    Anchor contract: hare_a{,_head,_ears} + hare_b{,_head,_ears} (6
+    KEEP groups; `hare` prefix — collision-free, census-verified zero
+    hits this tick; rg over all mkv3 sources + gitignored assets owed
+    at build tick, magpi law). Siting: open-meadow GROUND seat,
+    FIRST-CHOICE the SW meadow S reach zone center (−24,−42) —
+    genuinely open (this tick's co-resident table: nearest solid
+    milestone sw-005 at 4.1m, donkey 8.1m, sheep 11.1m — the S reach
+    is the village's quietest open grass on a reader line), SECOND the
+    N gallery-ring margin (−26,30; hedgehog 3.8m the nearest
+    co-resident, amphi 7.8m); exact tuple owed to the build tick
+    (25cm-grid seat sweep + live heightAt + live SAT + walk-up
+    discover vantage on the SW-lane reader line, bearing 60.3° to
+    plaza, clean-slate law fauna-61 law a). Judge contract: profile
+    (the lanky build + black-tipped ears — the contract view) +
+    discover (the form find at ~2.6m) + 18m scope PRESENT (the
+    upright sentinel carries; robin-law encounter-reward disclosure
+    for the flat one). Provenance: wrabbit chassis verbatim (TRUE-SIZE
+    lagomorph, two-segment tapered ears), deer watch/graze
+    posture-contrast law, dog contact-shadow, vole grass-run furniture
+    discipline (the form is vole-lane pressed-earth, scaled up).
+    Proposal only — build fauna-73.
+
+
+### mute swan — fauna-63 (2026-09-20) CLOSED
 - **v12 sha16 9206edbedd472f61** (full 9206edbedd472f6195afd093bc742c0ddd5fbd4a7d6cf966defadb340c7779e9), NEW entity `nx-dress-swan-001` PLACED_VERIFIED at world (8.123, 0.05493, −92.482) yaw 0 scale 1 — the FRAME-COPY WATER-RIDER seat (ducks fauna-3 / frog fauna-29 class): entity origin == reedpool host origin + host-local swan_a baked seat (−1.6, −1.5); entity yaw == host yaw so entity-local == host-local VERBATIM. PY = water top world 0.08093 − baked WL 0.026 = 0.05493 (duck/fauna-31 waterline law). HOST HARD-GATE: nx-struct-reedpool (9.723, −0.05907, −90.982) yaw 0 lib 7d770620bb1b7bdc exact pre+post (artwalk-39 law; struct-lane-owned, foreign domain, never touched). Census 412→413 exactly, 6 verbs (upload+spawn+5 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 5/5 (SW-bank meadow 18m reader line + S bridge-deck sill lane, arrivals 0.00/0.38/0.31/0.25/0.31; foreign support-seam stderr = lanternhook/streamstones/stones/labyrinth/yard class, not ours), live bbox 2.305×1.429×1.896 == decode envelope.
 - Build: a mute-swan PAIR (ONE entity) — COB (swan_a) in patrol carriage: long low white hull (baked ~0.97m), high rounded back mantle, THE COCKED TAIL spike up-back with black tip (rotation law learned), thick-at-base TAPERED neck (3 overlapping tube segments 0.050→0.031 — uniform TubeGeometry cannot taper), upright S-curve crown ~1.37m after the ×1.30 bake; PEN (swan_b, ×0.92) in low feeding reach, neck stretched forward over the water, half-averse to the cob. Both: white 0xf2ede0 (magpie/stork-white family) + THE ORANGE BILL 0xd9701e + black face wedge + THE BLACK KNOB proud of the forehead (cob r0.022 > pen r0.015 — the dimorphism marker) + dark eyes + black feet underwater. Wakes: THE DARK WATER SEAT — a darker-than-water calm annulus (0x46606e) + deep-tone contact disk (0x3a4c58) + ripple torus per hull (the only idiom that passed the 18m gate). Anchors swan_a{,_neck,_head} + swan_b{,_neck,_head} (6 KEEP groups; `swan$|swan_` added to mergekit KEEP this tick — collision-free, rg-verified). 5 top-level / ~3852 tris (v3 census; v12 adds wake seats).
 - Motion: 5 comps live — 2 waterline bobs (swan_a .006/6.2s, swan_b .005/5.6s) + cob neck preen-sweep X (.07/8.0s) + cob head Y-scan (.22/9.5s, nested in the neck — rides the sweep, peacock-crest law) + pen dabble-reach X (.10/3.8s); phases staggered, epoch t0. Engine-true motion pair on final bytes: 432px differ @ the approach18 framing, x band 468-509 (the pair's column); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob VERBATIM + rotatePartAtPivot.
