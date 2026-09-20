@@ -18372,3 +18372,81 @@ re-derived from committed pointers this tick: hall/bunkhouse @377
 walked fresh, stable/market @376, forge/potter @375, inn/tower-house
 @374 the stalest standing pair; walk tools interior-walk-inn.ts +
 interior-walk-tower-house.ts, ls-verify present before walking).
+
+
+sweep-378: CLEAN SWEEP, arrival+flip classified tick (148th consecutive
+quiet-or-classified). Tick-start HEAD eee33861 (struct-293 lawful hold);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root, ledger law
+EXACT 2371100. Census epoch A 415->416 vs the committed sweep-377
+baseline (sha16 807cf464e9fa97b7): exactly ONE arrival nx-dress-pigeon-001
+@ (-6.25,0,2) yaw 0.4354 lib 2a46634ff0d0a2b8, 7 motion comps
+(pige_{a,b,c} + a/b_heads + b_tail) = COMMITTED fauna-69 @ eaaad53d, tuple
+matches its ledger line-for-line, domain-valid (fauna lane uses nx-dress-*
+ids), not drift; plus exactly ONE substantive lib flip nx-town-monument
+43c9dcf3->cfbb31a6 at identical tuple (-7,0,-7) yaw pi/4 = COMMITTED
+polish-328 @ ef28527b (satellite-bead material truth cure, bell-gold PBR
++ same-hue night floor), ledger-matched, domain-valid, not drift. The
+other 59 diff rows are the compKeys projection flap (comp dicts
+byte-identical, sweep-372/376 class — re-derived fresh this tick before
+any classification). Epoch B 20s-paced re-read 416==416, A-to-B drift
+ZERO — single settled epoch, no epoch correction. Overlap: SAT 378 bbox
+non-light / 259 exempt-classified / 0 coverage holes, exit 3 on exactly
+ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2
+routed to artwalk b26 choreography @ sweep-43, 334th sweep since routing,
+NOT new, no escalation due (the law keys on severity-1); pigeon + monument
+flip introduced ZERO new contacts. Walks: tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0, legs run individually — core
+64/64 maxArrival 0.380 (next-walk-core-paths.ts) RE-WALKED over the new
+pigeon+monument bytes (both plaza-core r<10, inside the re-verify band,
+sweep-371/372 precedent — epoch-A legs not allowed to stand on SAT
+neutrality alone), NW 5/5 (0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..377 canon.
+Tier-2 356th cycle per the committed sweep-377 pointer: inn 6/6 ALL_PASS
+(interior-walk-inn.ts, dists 0.320/0.318/0.341/0.350/0.364/0.288) +
+tower-house 6/6 ALL_PASS (interior-walk-tower-house.ts, dists
+0.245/0.245/0.263/0.377/0.374/0.309), both tools ls-verified present
+BEFORE the walks (1786B + 1523B), dists canon-exact vs the sweep-374
+record. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[]
+(332nd consecutive clean); sweep89-battery 27/28 RED on first invocation =
+expected classification (comp-bearing 62-vs-63), lawful pin bump 62->63
+per the sweep-301..376 fauna precedent chain — added-set census-verified
+exactly [nx-dress-pigeon-001], removed-set empty — battery then 28/28
+PASS GREEN; lights 38, thing 379, carousel comp bag exact 7 + lib
+3ed80c49d16e89d8 census-verified via battery. Interlane md5 86b2936f
+stable, SWEEP-LOOP md5 a5fd4f4f stable, both read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue rows), sweep owns no
+prefix; CITY-PLAN-V2 md5 cae6b928 unchanged — the audit-continues freeze
+banner governs via loop/plan reload. Baseline lawfully rewritten from the
+COMMITTED bytes (/tmp/s378/baseline-rewrite.py + insert-repair.py):
+pre-write asserts green (committed sha16 807cf464e9fa97b7, arrivals
+exactly [nx-dress-pigeon-001], departures [], substantive drift exactly
+[monument lib]), one-field lib transplant + pigeon block inserted beside
+its censusB predecessor nx-dress-pig-001, post-rewrite drift vs live ZERO
+— final 416 entities / 333369B / sha16 0f3616363c77d6fd; git diff
+exactly the arrival block + monument transplant + count bump. Probe
+self-catches pre-verdict, disclosed: (a) the comp-bearing set probe hit
+the gateway filter as a heredoc — rewritten as a /tmp script file, zero
+world contact; (b) the baseline rewrite first used a JS-ism
+(localeCompare) in python and failed CLOSED before any write, baseline
+untouched on the failed run, repaired and re-run; (c) the insert-index
+assert first demanded census-dump order in a baseline whose historical
+order was never the dump order (order is diff-irrelevant) — failed
+closed pre-write, repaired to the LOCAL convention (seat beside censusB
+predecessor) with both neighbors asserted; (d) a first plan patch
+mistakenly consumed one line of the sweep-377 record — caught by
+immediate re-read of the region, restored byte-identical (verified: git
+diff on the file empty) before this append ran; anchor for this block is
+the sweep-377 pointer line, asserted unique pre-write. Foreign dirt in
+tree (engine files client/server, core-paths GLB + review json, windmill
+overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth
+prototype dirs, fauna63-*/fauna64-*/fauna65-* tools, debug bower
+scripts, fleet shell scripts, review dirs) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0). Next tier-2 pair (sweep-379): forge + potter (357th cycle —
+LRU chain re-derived from committed pointers this tick: inn/tower-house
+@378 walked fresh, hall/bunkhouse @377, stable/market @376, forge/potter
+@375 the stalest standing pair; walk tools interior-walk-forge.ts +
+interior-walk-potter.ts, ls-verify present 1820B/1706B before walking).
