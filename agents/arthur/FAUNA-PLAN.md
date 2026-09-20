@@ -50,6 +50,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | woodpecker | `nx-dress-woodp-001` | (60.6,−0.0461,−30) yaw −2.3562 (FRAME COPY of the snag host) | **5b7e177e** (fauna-59) | NEW 2026-09-20 — the village's ONE standing dead tree now works: great spotted woodpecker SINGLE clinging VERTICALLY on `nx-dress-se-snagdead-001` bark shell B at snag-local (0.4239,1.726,−0.2382) ry 0.7752 (reader 18° oblique, plaza-facing), TRUE-SIZE ~24cm ×1.085 composite bake (0.775 normalize × 1.4 marginality); pied black 0x141216 + cream scapular saddle + white wing bars + buff hatch face w/ malar + RED vent 0xdb4f33 + grey feet; 4 motion comps (sidle Y + cling breath + THE DRUM + prop flex); v17 17 build versions, judge arc closed face SHIP 5/5 + profile SHIP + 18m scope PRESENT-CLINGING ×2 (ZAI-vision MCP fallback, native debt NATIVE-39); the bark-feeding guild's marker host is occupied — the snag's implied bird (dress-84) stands |
 | kestrel | `nx-dress-kestr-001` | (57.5,−0.05137,−24) yaw −2.4 | **941d1db7** (fauna-65) | NEW 2026-09-20 — the village's first DIURNAL RAPTOR: female kestrel wind-hovering over the SE wild-edge vole grass (wander ring r0.4 @ 6m + perch post + tufts; 5 motion comps incl THE HEAD-LOCK — head carries NO comp, dead still while the body bobs); v4 4 build versions 5 judged rounds, face 3/3 + rear SHIP + 18m scope SHIP (ZAI-vision MCP fallback, native debt NATIVE-42) — the day-hunting air tier stands |
 | guinea fowl | `nx-dress-guine-001` | (45.25,−0.04717,−14) yaw −1.22 | **af852d2d** (fauna-67) | NEW 2026-09-20 — the farmyard's third fowl family (NUMIDIDAE): THREE-bird keet company (patrol leader + upright sentinel + tick-patrol pecker), near-black pearl-dotted bodies + pale slate-blue bare heads + casque + red wattles, ×1.4 bake; 7 motion comps (3 bob + 2 jerky Y-scans ~1.8-2.1s + peck X + tail flick); v10 10 build versions 8 judged rounds, encounter PASS "species unambiguous" + face probe PASS casque/wattles/blue-gray (ZAI-vision MCP fallback, native debt NATIVE-43); the poultry yard's S margin lives |
+| feral pigeon | `nx-dress-pigeon-001` | (−6.25,0,2) yaw 0.4354 | **2a46634f** (fauna-69) | NEW 2026-09-20 — the plaza/civic core's FIRST fauna: THREE-bird feral-pigeon flock (pecker + strut walker + bowing cock) in the market stall's plaza-side fore-court, the grain chain's third gleaner (mill sparrows fauna-48 + cart mouse fauna-45 + market spill); blue-grey + green/purple metallic collar + two dark wing bars + white cere, ×1.4 bake; 7 motion comps incl THE COURTING BOW; v7 7 build versions 7 judged rounds, encounter SHIP ×2 + side profile SHIP + face SHIP-with-occlusion-disclosure (ZAI-vision MCP fallback, native debt NATIVE-44) |
 
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
@@ -1005,8 +1006,9 @@ domain is commons-next `nx-dress-*` fauna only.
  turkey blue-gray head values 0x8fa3ac, kfish casque-proud stacking,
  robin ×1.4 bake chassis, wrabbit contact shadows. Proposal only —
  build fauna-67.
- 43. **[PROPOSED fauna-68, 2026-09-20] feral pigeon — the market flock.**
- ONE entity `nx-dress-pigeon-001` (short-id convention, magpi/pheas
+ 43. **[CLOSED fauna-69 — full record row 44 below] feral pigeon — proposed
+ fauna-68, BUILT + SEATED fauna-69 (2026-09-20).** ONE entity
+ `nx-dress-pigeon-001` (short-id convention, magpi/pheas
  law). Census-grounded (fauna68-census-pigeon.ts, READ-ONLY): 415
  entities, ZERO columbid/pigeon ids AND libs (magpie fauna-57 proposal
  law); the dovecote's collared-dove trio is BAKED architecture inside
@@ -1051,6 +1053,78 @@ domain is commons-next `nx-dress-*` fauna only.
  sparrow TRUE-SIZE+×1.4 bake chassis, magpie metallic-sheen values,
  pheasant contact-shadow law, guinea depth-staggered front line.
  Proposal only — build fauna-69.
+ 44. **[CLOSED fauna-69, 2026-09-20] feral pigeon — proposed fauna-68, BUILT +
+ SEATED fauna-69 (2026-09-20).** ONE entity `nx-dress-pigeon-001`: the
+ plaza/civic core's FIRST fauna — a THREE-bird feral-pigeon flock
+ (pecker_a head-down at the spill + strut walker_b mid-stride + bowing
+ cock_c in THE COURTING BOW) in the market stall's plaza-side
+ fore-court. **v7 sha16 2a46634ff0d0a2b8** (full
+ 2a46634ff0d0a2b8c93930315d1336e79c1a9ee235ad964c64d99fb367faa34b —
+ judge-closed bytes: encounter SHIP ×2 (v1 + final-bytes re-confirm) +
+ side profile SHIP r7 + face SHIP with one disclosed occlusion-physics
+ note (the broad breast occludes the collar's purple from dead-front —
+ species-true; the collar's contract view is the profile/oblique where
+ BOTH colors are approved); decode GREEN + RED control vs sparrow
+ bytes; deterministic ×2; 48 nodes / 13488 tris). 7 motion comps live:
+ 3 breathing bobs + peck-bob X (the double-nod pigeon peck) + strut
+ head-bob scan Y + THE COURTING BOW (pige_c_head X-pendulum amp .30
+ 3.4s — the fleet's deepest display comp) + walker tail flick;
+ phases staggered, epoch t0. Engine-true motion pairs: 30px@18m rim
+ band 438-498 (presence read), 838px encounter band 422-596; rig
+ drives REAL motioneval.js pendulumTheta + motion.js evalPart bob
+ verbatim. **Seat: (−6.25, 0, 2) yaw 0.4354** — fauna69-seat-sweep
+ best of 45 qualifying (worst solid gap 2.122m vs nx-town-market — the
+ food-host designed adjacency; hearth clear 2.0m); stall-local
+ fore-court front corner (+3.0,+3.4 along the face diagonal); reader
+ lines W-gate spoke ~2m S + plaza→stall diagonal ~3m E — the flock
+ feeds BESIDE the reader line, never on it (lamp-in-path law).
+ Terrain: plaza-flat, PY = live heightAt 0 (13pt spread 0.0mm).
+ SAT solids mirror the sweep EXACTLY: films + suspended stringlights +
+ the streetlamp NETWORK (fat bbox) exempt — replaced by its 8 REAL
+ posts decoded from the hash-verified local GLB (fauna69-lampposts.ts,
+ world (±3.42,±9.397)/(±9.397,±3.42)). Census 415→416 exactly, 8 verbs
+ (upload+spawn+7 comps), idempotent rerun 0 verbs alreadySeated, walk
+ ALL_PASS 3/3 (18m N-rim reader line → SE-oblique 4.2m encounter →
+ back, arrivals 0.00/0.30/0.31m), live bbox 1.084×0.247×0.708 ==
+ decode envelope 1.102×0.245×0.729 (served DRACO re-encode rounding,
+ struct-104 class). Village logic closed: the grain chain's three
+ nodes each feed their own gleaner — the windmill door has its
+ sparrows (fauna-48), the loaded harvest cart its mouse (fauna-45),
+ and the MARKET STALL now has its piazza flock; the plaza/civic core
+ (r0-10) carries its first fauna. Judge identity: ZAI-vision MCP
+ fallback (cron lane, native absent) — native 18m re-judge debt
+ NATIVE-44 below. Build arc: v1 judge r1 encounter SHIP + profile FIX
+ (detached tail read + floating wing bars + one-leg edge-on) → v2
+ one-wedge tail + shortened bars + z-stagger → r2 tail connected,
+ bars still slabs, legs still one (arithmetic: my z-stagger CROSSED
+ the legs 4mm apart) → v3 TRUE peahen x-stagger (legs both read) +
+ slope-matched bars → r3 legs pass, bars slabs → v4 embedded thick
+ boxes → r4 slabs + tail-beam read (arithmetic: pale rump sphere
+ occluded the tail root from the side) → v5 curved ellipsoid bars +
+ rump→top cap → r5 bars NATURAL-PLUMAGE + tail FLOATING (cap opened a
+ 15mm gap) + olive shadow read moss → v6 tail root deep in body +
+ NEUTRAL grey shadow → r6 all approved, bars read as ovals-not-bands
+ → **v7 THE WING-BAR LAW: bars as ellipsoidal discs RINGING the wing
+ cross-section (a vertical dark stripe in profile — the species-true
+ side read; boxes always read as slabs, curved patches read as
+ plumage) = r7 side SHIP** + encounter SHIP re-confirm on final
+ bytes. 7 build versions, 7 judged rounds. Rig/decode laws learned:
+ (a) **a marking that must read as PLUMAGE is curved geometry ringing
+ the form, never a proud box** — three rounds of box variants (flat,
+ sunk, slope-matched, embedded) all read "raised slabs" while the
+ collar SPHERES read "natural" from round one; the discriminating
+ form is the ellipsoidal disc crossing the wing's y-z section;
+ (b) **the pale-rump sphere occludes the tail root from every side
+ view** — a top-cap rump (scaled y 0.45, high-set) lets the root
+ emerge attached below it; a full rump sphere buries the root and
+ fabricates a "floating tail" read (the 3D twin of the lit-pane law);
+ (c) **a leg pair staggers along the FACING axis, never z** — a
+ z-stagger of ±0.018 puts the legs 4mm apart in z and they superimpose
+ edge-on from every side (the peahen law's axis, mis-applied);
+ (d) **an olive shadow disc reads as MOSS on pale paving** — contact
+ shadows on stone take neutral grey (0x4c4c46), the green-family value
+ belongs on grass seats only. Queue: EMPTY — next tick proposes the
+ next species per domain law (homestead language first).
 
 
 ### mute swan — fauna-63 (2026-09-20) CLOSED
