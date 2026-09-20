@@ -2677,3 +2677,48 @@ next wake once the gateway answers.
   nits — ball matte-vs-specular read (needs sun-angle or higher-metal
   falsification; rig's static sun), ball +20-30% scale for a stronger
   crown read, judge fresh first.
+
+### polish-324 — fountain drum dead-mass cure (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (same tuple as polish-320..323; empty comp
+  bag, census-fresh this tick). Build source `assets/mkwater1.ts` (live was
+  6fa99d31; on-disk sha == live exact).
+- Defect (queue head from polish-323 close, judged fresh day+night on exact
+  live bytes, ZAI fallback disclosed — polish-285..323 class, native
+  re-judge owed): the drum read as a flat dead dark mass — night "near-black
+  wedge, no tonal separation from the shadowed basin" (4/10, weakest
+  element); day "single flat tone, smooth dark plug, not a constructed
+  stone drum".
+- Change (ONE defect class, 2 measured rounds): r1 = 3 stepped courses
+  (3cm reveals, top course cool night-spill 0x9fc9dd@0.05) — night PASS
+  (dead-mass cured, believable spill "falloff within 5-8px, no bloom"),
+  day judged invisible ("value, not geometry; zero contrast budget").
+  r2 = dressed limestone 0x75705a + 7cm reveals; the r2 judge's FAIL
+  ("limestone not present on any drum pixel") was FALSIFIED by the band
+  probe — day drum-upper (44,47,48)->(83,90,91) vs basin (35,32,21) = 2.4x
+  separation; probes outrank prose (polish-289/299 law). ACCEPT r2.
+- Candidate `9e6b197741bdd227e25de9fbc76999f97dc0ae525c03e17f352422dd3e3ae980`
+  deterministic x2 (mtime-verified); siblings birdbath/chimes/weathervane
+  byte-identical to live pins; nodes 43->45 (3 courses replace 1 pedestal).
+- Placed via updated `next-place-fountain.ts` (pins 6fa99d31 -> 9e6b1977):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun already-live-no-verbs, live pin `store/9e6b197741bdd227.glb` @
+  [12.5,0,4] yaw -pi/4 exact.
+- Served-bytes proof (struct-104 law, durable `p324-verify-served.ts`;
+  probe self-caught 2 bugs RED->GREEN before truth: VEC4-stride COLOR_0
+  misread + sRGB-vs-linear gate expectation): served DRACO f3dc568c…
+  P324_SERVED_PASS 35 gates — drum radii 0.435/0.365/0.295 (steps
+  0.070/0.070), heights 0.36/0.36/0.38, limestone linear (45,41,26),
+  cool-spill mat [0.017,0.029,0.036], all p320..323 regressions exact,
+  0 non-finite.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 34ca6e04
+  (dress-213 absorbed the live move mid-tick, classified polish-owned).
+- Evidence: `reviews/hero-assets/polish-324-fountain-pedestal/` (before/ =
+  live 6fa99d31 rig + baseline.glb; after/ = r1; after-v2/ = r2 ACCEPTED;
+  /tmp/p324-bandvals.ts drum-zone probe).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree) — recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) remaining
+  judge nits — foam blob-merge into a continuous spill line at the drum
+  foot (night), fin height/width variance, strand brightness variation,
+  basin water tone.
