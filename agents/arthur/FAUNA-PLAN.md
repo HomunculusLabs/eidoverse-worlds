@@ -850,6 +850,48 @@ domain is commons-next `nx-dress-*` fauna only.
     (long-leg water-margin stance + leg anatomy), magpie white-values +
     dark-hole family, robin/bird TRUE-SIZE law, kingfisher water-margin
     seat discipline. Proposal only — build fauna-61.
+40. **[PROPOSED fauna-62] mute swan — queue-empty proposal tick (2026-09-20).**
+    Census-grounded (fauna62-census-swan.ts, READ-ONLY): 412 entities,
+    ZERO swan/cygnid fauna across ids AND libs (magpie fauna-57 proposal
+    law) — the species slot is genuinely open. Village logic: the reedpool
+    is the village's richest habitat host (five residents — ducks W lobe,
+    robin N rim, geese SW bank, frog ON the surface, heron E bank) but its
+    FAR WATER, the S lobe, is empty, and the pool's one absent
+    large-waterbird class is the swan: the mute swan (Cygnus olor) is THE
+    European village-pond bird — the moated-estate read no other species
+    carries, any water a village keeps, the swan owns. ANSERIFORMES stands
+    (mallards + graylags) but its LARGEST member — the bird that makes a
+    small pool read as an estate water — is missing; the pen+cob pair bond
+    (mated for life, the pair that always travels as two) is the homestead
+    language itself. Species contract: PEN+COB PAIR TRUE-SIZE (cob ~1.5m
+    hull + ~2.2m folded wingspan ~1.0m wide, crown ~1.2m — the pool's
+    LARGEST bird, heron 18m-carry class; no bake) — all-white 0xf2ede0
+    (magpie/stork-white family; the pen's buff head-wash disclosed at
+    encounter scale only) + THE ORANGE BILL 0xd9701e WITH THE BLACK KNOB
+    (cob's knob larger — the species' one unmistakable marker; kfish
+    two-tone-stack law: knob proud of the face, never embedded) + black
+    face/base + black legs set far aft + THE LONG S-CURVED NECK (the 18m
+    silhouette lock: white + long-neck is unique on this pool — the heron
+    is grey, zero confusion risk) + cocked tail spike. Cob = patrol
+    carriage (neck fully upright, slow bill-down preen sweep); pen =
+    feeding reach (neck stretched low-forward over the water, half-averse
+    to the cob). Furniture: ripple wakes ONLY (ducks law — the pool IS
+    the host, zero ground geometry, zero island). Motion contract: 2
+    waterline bobs + cob neck preen-sweep X + pen dabble-reach X + cob
+    head-scan Y (phases staggered per individual, epoch t0); waterline
+    y-exactness by the duck/fauna-31 waterline law (entity y = decoded
+    water top + WL offset, decoded at build tick). Anchor contract:
+    swan_a/swan_b + _neck/_head/_tail (KEEP `swan` — collision-free
+    prefix, verify vs all mkv3 sources + gitignored assets at build
+    tick). Siting: S-lobe open water (water-rider concentric class,
+    ducks/angler precedent): exact tuple owed to the build tick (25cm-grid
+    seat sweep ON the water vs decoded reed clumps + live SAT vs all five
+    residents + angler empty-corner decode + pool rim; SW bank + N
+    plaza-spoke reader lines both judged — census bearing −5° = due N;
+    reader-bearing clean-slate law, fauna-61 law a). Provenance:
+    ducks/stork chassis (waterline discipline + white values + ripple
+    wakes), heron law (long-neck 18m read), magpie law b (bright albedo
+    carries markers, never metal). Proposal only — build fauna-63.
 
 ## Per-species rebuild records
 
