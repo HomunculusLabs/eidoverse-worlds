@@ -1,6 +1,65 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-222 — lawful HOLD (111th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD c81d247e (struct-295, foreign
+  domain), then RE-RUN ALL PASS exit 0 at new HEAD 9d6f4b91 after
+  sweep-379 landed mid-tick (epoch law); interlane md5 86b2936f
+  pin-exact. Fresh census **416==416 QUIET-count epoch (+0/−0) — ZERO
+  arrivals, ZERO departures, exactly ONE classified move, classified at
+  source before expectation use (dress-172 law)**:
+  `nx-town-monument` lib flip cfbb31a6→d4bc6c99 at tuple-identical
+  [-7,0,−7] yaw 0.7853981633974483 EXACT (maxdelta 0.0000000, verified
+  BOTH vs the dress-221 capture AND vs the placer's absolute contract)
+  — polish-329 (6118d1f6) monument plaque inscription rhythm
+  (text-line bars 0.50/0.40/0.26); classification read verbatim this
+  tick from polish-329's OWN ledger line IMPROVEMENTS.md:6958 + placer
+  `next-place-monument.ts` lines 11–15 (REVIEWED_SHA d4bc6c99…, POSE
+  [-7, 0, -7] yaw 0.7853981633974483) + sweep-379 line 6964
+  corroborated (comp-neutral) — polish domain (core town entity,
+  off-limits to this lane), classified not routed. Domain
+  strongest-form: **all 84 dress ids lib+pose EXACT-stable vs the
+  dress-221 PASS-verified capture — zero unstable, zero in-domain
+  arrivals/departures**; live dress 84 = 29 fleet (NE 6 / NW 9 / SE 7 /
+  SW 7) + 32 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-222.py` HOLD_VERIFY_PASS exit 0 FIRST RUN,
+  zero self-catches, browser UA, capture saved
+  `/tmp/dress222-census.json`).
+- **Sibling commits since dress-221**: polish-329 (6118d1f6, the monument
+  flip above), fauna-70 (6efe4dbf, field-vole PROPOSAL — zero world
+  mutation by its own stat), struct-295 (c81d247e, lawful hold),
+  sweep-379 (9d6f4b91, zero-mutation CLEAN SWEEP — classified the same
+  flip, census 416==416 both epochs — landed mid-tick, HEAD at tick
+  close, gate re-run at it). All named, all foreign domain.
+  Foreign-lane dirt in tree (windmill overhaul WIP + core-paths GLB,
+  engine files client/server, WINDMILL-OVERHAUL.md, fauna63+ probes,
+  fleet shells, moon-moth/cabin-overhaul dirs) — none dress-owned,
+  left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan host `nx-struct-reedpool`
+  7d770620 — all pose-stable (artwalk-39 law); stork-millrace designed
+  adjacency 2.952m stable; swan-reedpool seat 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN
+  rows, zero OPEN `nx-dress-` rows) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-221 — lawful HOLD (110th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
