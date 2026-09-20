@@ -44,6 +44,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | kingfisher | `nx-dress-kfish-001` | (−70.05,−0.02224,4.48) yaw 4.8932 | **cdf3bf7a** (fauna-50) | NEW 2026-09-20 — the millrace's own bird: SINGLE common kingfisher (the fleet's third single-bird species) perched at the tip of a 0.75-rad leaning dead-branch snag out OVER step-6's water film; cobalt+azure back, orange breast (modest shade-flank emissive lifts 0.10–0.18, night SHIP), two-tone dagger bill with the coral lower mandible proud; ×1.4 bake incl joints; 4 motion comps (bob + pre-dive lean + head Y-scan + tail flick); v5 5 build versions 6 judged rounds, lone SHIP 7/7 + encounter SHIP + night SHIP (ZAI-vision MCP fallback, native debt NATIVE-34); the village's only moving water now has its running-water specialist — the sole fauna-less water feature cured |
 | yellowhammers | `nx-dress-yham-001` | (−34.603,1.48,60.539) yaw −2.36 (FRAME COPY of the hedge host) | **0f7fdfea** (fauna-52) | NEW 2026-09-20 — the hedgerow's own bird: yellowhammer PAIR ON the NW hedge crown (host-rider concentric-above, frame-copy law — entity-local == hedge-local verbatim); cock singing (yellow head+breast 0xe8c832 + shade-flank emissive 0.24, chestnut rump, OPEN BILL with dropped lower mandible + gape wedge) + streaky hen alert; ×1.4 bake incl joints; 5 motion comps (2 bob + cock SONG-PUMP X 1.3s + cock tail flick + hen head Y-scan); v4 4 build versions 5 judged rounds, anatomy SHIP + discover SHIP + 18m scope SHIP "reads as a yellow bird, not a yellow smudge" + yellow probe 1819px (ZAI-vision MCP fallback, native debt NATIVE-35); the cultivation country's field boundary now sings — the last fauna-less habitat host cured |
 | tawny owls | `nx-dress-towl-001` | (−49.455,1.534,65.953) yaw 2.3562 (FRAME COPY of the espalier rows host) | **4e8d0997** (fauna-53) | NEW 2026-09-20 — the orchard's night voice: tawny owl PAIR (Strix aluco) roosting in the espalier rows' plant-2 crown (vertex-true crown decode; frame-copy law); upright sentinel (frame-ring facial disc + two spread dark eyes, rufous 0x9c6d4e) + clean-dark dozing sleeper; TRUE-SIZE no-bake; 5 motion comps (2 bob + sentinel Y-scan 9s + tail settle + sleeper doze-scan 11s); v8 8 build versions 8 judged rounds, encounter SHIP + 18m PRESENT (rufous 2043px) + night SHIP (BUFF emissive 0.12 moonlit) (ZAI-vision MCP fallback, native debt NATIVE-36); the orchard edge now has its night tier |
+| pheasant | `nx-dress-pheasant-001` | TBD (SE wild-edge meadow beside `nx-dress-se-snagdead-001` (60.6,−0.05,−30), plaza reader spoke) | TBD (fauna-54 proposal) | **CANDIDATE (row 36, proposed 2026-09-20 fauna-54)** — common pheasant PAIR: cock (chestnut-copper + long barred tapered tail ~0.5m — the 18m silhouette lock; dark green head, red face wattle, WHITE RING NECK marker) + skulking buff-mottled hen (dimorphism story); TRUE-SIZE ~0.9m; the SE hunting margin's game bird (fox-pheasant predator-prey read beside the den); exact tuple + build owed to the build tick |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -730,6 +731,31 @@ domain is commons-next `nx-dress-*` fauna only.
     PRESENT + night SHIP; decode GREEN + RED control; deterministic
     ×2; TRUE-SIZE no-bake). 5 motion comps live. Full record below.
     Queue: EMPTY — next tick proposes the next species per domain law.
+36. **[QUEUED fauna-54 proposal, 2026-09-20] common pheasant — the SE
+    wild-edge game bird.** ONE entity `nx-dress-pheasant-001` (proposed;
+    census-grounded: zero pheasant fauna in the 402-entity commons-next
+    census this tick). Village logic: the SE wild-edge screen is the
+    village's hunting margin — fox asleep at the den (fauna-5), roe deer
+    stepping from the treeline (fauna-40), and the game bird that
+    completes that ecology is the pheasant: the cock's kok-kok from the
+    field margin is THE village-edge sound, and the fox-pheasant pair is
+    the classic predator-prey read (den stands ~12m from the snag
+    anchor). Species contract: cock + hen PAIR — COCK in the alert
+    strut (chestnut-copper body ~0.35m + THE LONG TAPERED BARRED TAIL
+    ~0.5m — the 18m silhouette lock; dark green head, RED face wattle,
+    THE WHITE RING NECK breaking the green→chestnut boundary — the
+    species' one unmistakable marker; spurred grey legs) + HEN skulking
+    low in the grass (buff mottled camouflage read, long tail carried
+    lower — the dimorphism story, sparrow/yham class). Anchor host:
+    `nx-dress-se-snagdead-001` (60.6,−0.05,−30) — the field-edge dead
+    snag the birds flush toward; GROUND seat in the open meadow beside
+    it on the plaza reader spoke (deer fauna-40 facing law; exact tuple
+    owed to the build tick: seat sweep + terrain preflight + live SAT
+    vs forest screen / deer / chainvault / northneedle). TRUE-SIZE
+    (cock ~0.9m incl tail — carries 18m natively; no bake expected).
+    Motion contract: 2 breathing bobs + cock strut head-scan + alert
+    neck-stretch + tail flick + hen peck — phases staggered per
+    individual, epoch t0.
 
 ## Per-species rebuild records
 
