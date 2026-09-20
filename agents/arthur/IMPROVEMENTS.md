@@ -6997,4 +6997,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-301] R11-109 lawful HOLD (twenty-third) — next-family decision owed Bill (Catalan well dry, surfaced struct-278); gate exit 0 FIRST at 681e4fc0 (fauna-73, foreign); shard+refine+carry empty fresh; census 418 (417 + nx-dress-hare-001 foreign fauna arrival classified at source) tetrakis/trioct/trit PIN_EXACT 3/3 maxdelta 0.0, 127 struct-domain accounted; native cron-unpayable owed board rides; zero mutations (D+0, E+0)
 
+- [sweep-382] CLEAN SWEEP — hare arrival classified (fauna-73 census-exact) + hearth flip classified (polish-331 ledger-matched); census 417->418 settled; SAT only R-121 (338th); tier-1 81/81 + tier-2 inn/tower-house 360th; pins 15/15 (336th), battery 28/28 after lawful 64->65 bump; baseline 418 sha16 7d48eef35f1796ff  (D+0, E+0)
+
 **Running total: 2371106 / 2000000**

@@ -18658,3 +18658,83 @@ committed pointers this tick: hall/bunkhouse @381 walked fresh, stable/market
 tools interior-walk-inn.ts (1786B) + interior-walk-tower-house.ts (1523B),
 ls-verify before walks per law).
 
+sweep-382: CLEAN SWEEP, arrival+flip classified tick (152nd consecutive
+quiet-or-classified). Tick-start HEAD 681e4fc0 (fauna-73 committed PRE-tick);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root, ledger law EXACT
+2371106 at first probe. Interlane md5 86b2936f stable, SWEEP-LOOP md5
+a5fd4f4f stable, both read fresh; pools drained (IMPROVE-PLAN 7fa8a224
+unchanged zero open rows, CITY-PLAN-V2 cae6b928 unchanged — audit-continues
+freeze banner governs via loop/plan reload). Census epoch A 417->418 vs the
+committed sweep-381 baseline (sha16 943331dbcf79c3ae): exactly ONE arrival
+nx-dress-hare-001 @ (-24,-0.04237,-42) yaw 2.622 lib 79ce2c97253bc33e scale
+1, 6 motion comps (hare_{a,b} + _ears + _head) = COMMITTED fauna-73 @
+681e4fc0, tuple matches its ledger line-for-line, domain-valid (fauna lane
+uses nx-dress-* ids), not drift; live bbox 1.552x0.809x0.83 scale-sane; plus
+exactly ONE classified drift field-set nx-hearth lib 0bb8fb0e->74f16c88 at
+identical tuple (0,0,0) yaw 0 scale 1, comp bag exact 4 preserved, bbox
+y-min -0.048->-0.012 / y-span 1.785->1.75 strict-subset, sockets amendment
+log_{0..3} y 0.32->0.25 tale_seat untouched = COMMITTED polish-331 @
+852afa4f (hearth split-log benches re-grounded), ledger-matched
+line-for-line, domain-valid (nx-hearth is polish's hero domain), not drift.
+The hare sits r48.4 SW meadow — outside every walked band (nearest tier-1
+waypoint 50m+). Epoch B 20s-paced re-read 418==418, A-to-B drift ZERO —
+single settled epoch, no epoch correction. Overlap: SAT 380 bbox non-light /
+260 exempt-classified / 0 coverage holes, exit 3 on exactly ONE unclassified
+= R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 338th sweep since routing, NOT new, no escalation
+due (the law keys on severity-1); hare + hearth flip introduced ZERO new
+contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0, legs run individually — core 64/64 maxArrival 0.380
+(next-walk-core-paths.ts) RE-WALKED over the new hearth bytes (plaza-core
+r0, inside the re-verify band, sweep-371/372/378/379/380 precedent), NW 5/5
+(0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists canon-exact vs the
+sweep-319..381 canon. Tier-2 360th cycle per the committed sweep-381
+pointer: inn 6/6 ALL_PASS (interior-walk-inn.ts, dists
+0.320/0.318/0.341/0.350/0.364/0.288) + tower-house 6/6 ALL_PASS
+(interior-walk-tower-house.ts, dists
+0.245/0.245/0.263/0.377/0.374/0.309), both tools ls-verified present BEFORE
+the walks (1786B + 1523B), dists canon-exact vs the sweep-378 record.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (336th
+consecutive clean); sweep89-battery first invocation 27/28 RED on exactly
+comp-bearing (64-vs-65) = expected classification, lawful pin bump 64->65
+per the sweep-301..381 fauna precedent chain — added-set census-verified
+exactly [nx-dress-hare-001], removed-set empty — battery then 28/28 PASS
+GREEN (lights 38, thing 380, carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified via battery). Baseline lawfully rewritten from the COMMITTED
+bytes (/tmp/s382/baseline-rewrite.py): pre-write asserts green (committed
+sha16 943331dbcf79c3ae, arrivals exactly [nx-dress-hare-001], departures [],
+substantive drift exactly [nx-hearth lib+bbox], sockets amendment shape
+asserted field-by-field), hearth lib/bbox/comp transplanted + hare block
+inserted beside its censusB predecessor nx-dress-vole-001 with neighbors
+asserted (order is diff-irrelevant, sweep-378/381 class), post-rewrite
+substantive drift vs live ZERO — final 418 entities / sha16
+7d48eef35f1796ff; git diff 129 insertions 9 deletions (arrival block +
+hearth transplant + count bump). Ledger sweep-382 appended (D+0, E+0),
+tool-verified law exact 2371106. Probe self-catches pre-verdict,
+disclosed: (a) inline census-diff heredoc blocked by the gateway payload
+parser — rewritten as a /tmp script file per the sanctioned retry path,
+zero world contact; (b) walk-output parser keyed JSON-extraction that
+missed the banner-lines-then-JSON-block schema — schema read before
+re-parsing (sweep-48 class), re-derived anchored on the final JSON block,
+core 'dist' vs approach/interior 'distance' two-schema split handled;
+(c) battery first invoked without its census argv — IndexError caught,
+re-run with /tmp/s382/censusA.json; (d) ledger prose self-catch: the
+appended entry carried a duplicate (D+0, E+0) before the tool's own pair
+(loop h-1 class, sweep-379 precedent) — deduped surgically in the same
+tick, single-swap assert, verified 1 occurrence at line end before commit.
+Foreign dirt in tree (engine files client/server, core-paths GLB + review
+json, windmill overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul +
+moon-moth prototype dirs, fauna32-*/fauna63-*/fauna64-*/fauna65-* tools,
+debug bower scripts, fleet shell scripts, review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-383): forge +
+potter (361st cycle — LRU chain re-derived from committed pointers this
+tick: inn/tower-house @382 walked fresh, hall/bunkhouse @381,
+stable/market @380, forge/potter @379 the stalest standing pair; walk
+tools interior-walk-forge.ts (1559B) + interior-walk-potter.ts (1571B),
+ls-verify before walks per law).
+
+
