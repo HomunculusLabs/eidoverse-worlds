@@ -22637,3 +22637,50 @@ his handedness call, coin-flip = inventing a preference; (4) his own
 routing. Rhombic dodecahedron stays BARRED (rt-kin). Until he routes,
 build ticks hold (refine pool empty; shard empty); placement carries
 and verdict-routed items remain payable.
+
+## struct-279 (2026-09-20): R11-87 lawful HOLD — build ticks hold on
+## Bill's next-family decision (surfaced struct-278)
+
+279%3=0 refine-slot tick. Gate ALL PASS real exit 0 tick-start
+(unpiped GATE_EXIT:0 at 44f481b2 vocab-37 HEAD, foreign domain). No
+committed placement carry banked at struct-278 close (trit/trioct both
+LIVE); shard re-derived empty fresh (IMPROVE-PLAN OPEN nx-struct rows:
+0 hits); refine pool empty of payable items (40+ ticks); ledger max
+re-derived struct-278 -> struct-279 immediately before append
+(numeric extraction; entry verified landed exactly once, 3054898B).
+
+Native vision: ABSENT from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — the disclosed
+cron-unpayable class, struct-169..278 lineage). Owed board unchanged,
+riding: tetrakis/trit/trioct v1 ZAI-fallback judgments (banked frames
+are the re-judge substrate for the first windowed session with native).
+
+Task-prompt priority items checked fresh, both resolved: costa v2
+carry — long closed (judged ACCEPTED struct-167, live era struct-168+;
+fleet census confirms); hypar row 22 — closed natively survey-16
+(struct-48 record: debt board 4/4 CLEARED). The R11 Amendment-1
+HOLD-for-Bill weak reads (gyroid/enneper, struct-134) were cured in
+later ticks (survey-82 gyroid v2 post-cure CLEAN; enneper v2 lineage
+struct-170) — no open rows.
+
+Live census 412 entities (next-live-census.ts, exit 0): nx-struct-
+tetrakis store/f2e8a62adf84c7c8.glb [93.474581, -0.019616, -45.590599]
+yaw 4.6426; nx-struct-trioct store/9f5d016efcb3a6a5.glb [-95.721566,
+0.036572, 46.686527] yaw 1.501; nx-struct-trit store/c46f5a580e1da32b.
+glb [60.225526, -0.032430, -86.010965] yaw 5.1487 — all three at
+their exact pinned tuples, zero drift. No new arrivals classified
+struct-domain; foreign dirt (mergekit, client/server sources,
+cabin-overhaul, fauna files) left untouched per the ownership law.
+
+DISPOSITION: lawful hold. The blocker is Bill's next-family routing
+(struct-278 surfaced block above) — say-once: Johnson solids, Kepler-
+Poinsot, the chiral pair's handedness call, or his own routing; the
+probe/decode/render chassis extends to any of them on his word. Zero
+world mutations, uploads, verbs, comp-edits, shared-budget use. Zero
+pushes.
+
+Files: STRUCTURES-PLAN.md (this block) + IMPROVEMENTS.md (one append
+struct-279, D+0 E+0).
+
+Next queue head: Bill's routing — a placement/build tick executes it
+the same wakeup; until then the hold repeats with one-line status.
