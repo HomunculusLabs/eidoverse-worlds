@@ -2593,6 +2593,44 @@ next wake once the gateway answers.
   notes — brass ball washes to near-burst white at 18m (day) / foam-white
   at night (brass tint candidate, material-only, judge fresh first).
 
+### polish-323 — fountain cascade wire-read cure (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (same tuple as polish-320..322; empty comp
+  bag). Build source `assets/mkwater1.ts` (live was 657f3c22).
+- Defect (day+night judges' convergent #1 on exact live bytes — NOT the
+  queued apex nits, which held at 7/10): the cascade read as "harp strings
+  / chains, not water" — constant width, dead-straight, metronomic spacing,
+  strand tops floating 1-2px below the lip (night 4/10).
+- Change (ONE intervention, 7 measured in-tick rounds): overflow-curved
+  tapered strands (lean-out parabola s^1.35 from tucked-under-lip tops,
+  wTop 0.32x wBot, lower-third erosion, 2 merged pairs, wide-angle jitter);
+  foam pads re-aimed UNDER the six fat landings, grown to a connected foam
+  band (squash BAKED — polish-321 scale-drop law); foam night emissive
+  0.55->0.78 (polish-287 day-clip law: day +18 near-white px, night +468
+  bright-blue px); +6 vertical splash fins on pad crests (v6 fail = dress-79
+  inverted: flat pads compress to ~4px at 18m grazing; first fin attempt
+  entombed 0-px — polish-52 enclosure — rebased proud).
+- Judge arc: day 3->4.5->6->7->7.5 (v5), v7 regression PASS (fins natural
+  churn, zero defects); night 4->6->6->7 (v7 churn registers, hierarchy
+  water > ball correct). ZAI fallback disclosed, native re-judge owed
+  (polish-285..322 class).
+- Candidate `6fa99d31623d1b56c5b464ae5e542de8ce80df7515d4921d989b3bb9dbe6fd1a`
+  deterministic x2; siblings birdbath/chimes/weathervane byte-identical;
+  decode 43 nodes / 0 nonFinite / landings <= 1.13 < basin 1.38; diffs
+  confined to the cascade band all views.
+- Placed via `next-place-fountain.ts` (pins 657f3c22 -> 6fa99d31):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun zero verbs. Served proof `p323-verify-served.ts` P323_SERVED_PASS
+  (20 gates; served sha 3ef909f9d47699fd; strand bows 0.187+, pad squash
+  0.143, fin spans 0.130, 321/322 regressions exact). Gate re-run ALL PASS
+  exit 0 at sibling HEAD dress-211.
+- Evidence: `reviews/hero-assets/polish-323-fountain-ball/` (before/ +
+  after..after-v7/ = the 7 judge rounds, each with candidate.glb).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  nits — fin height/width variance (kill picket regularity), strand
+  brightness variation along length, pedestal dead-mass rim light
+  (night), basin water tone; apex ball scale+20-30% (polish-322 carry).
+
 ### polish-322 — fountain brass-ball identity (ACCEPTED, LIVE)
 
 - Subject: `nx-dress-fountain` (same tuple as polish-320/321; empty comp bag).
