@@ -2722,3 +2722,78 @@ next wake once the gateway answers.
   judge nits — foam blob-merge into a continuous spill line at the drum
   foot (night), fin height/width variance, strand brightness variation,
   basin water tone.
+
+### polish-325 — fountain bowl dead-hole cure (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (same tuple as polish-320..324; empty comp
+  bag, census-fresh this tick). Build source `assets/mkwater1.ts` (live was
+  9e6b1977, polish-324's drum build; on-disk sha == live exact).
+- Defect (day+night judges converge + pixel probes on exact live bytes, ZAI
+  fallback disclosed — no native vision tool loadable in this cron session,
+  polish-285..324 class, native re-judge owed): the bowl band (ft_bowl,
+  y 1.50..1.80 — the vessel connecting cascade to drum) read as a HOLE in
+  the silhouette — pixel-probe pure (0,0,0) in BOTH lighting states; night
+  judge "black doorway / water wings over a void / floating light fixture"
+  (identity 5/10); day judge "dark void, not a constructed structure".
+  Decode root cause: ft_bowl shipped material-NULL (legacy COLOR_0-only
+  mat() lane, polish-289/307 class) while drum/water/finial all had real
+  materials. Adjacent falsified judge claims recorded, not treated: day
+  "drum near-black" (band probe 2.4x separated, polish-324 stood);
+  "no basin water" (dress-79 rim-occlusion geometry, not absence);
+  night "foam blobs merge into a spill line" (probe: 7 separate runs,
+  2-8px — the polish-324 queue item is FALSIFIED at 18m; orphan-dot
+  read may merit a future variance pass, judge fresh).
+- Change (ONE edit, mkwater1.ts): ft_bowl joins the drum's own `drumStone`
+  material (dressed limestone 0x75705a + cool night spill @ 0.05) — one
+  stone, one structure (polish-307/308 one-metal precedent). No geometry,
+  no node, no light change.
+- Candidate `68e5b75e73a1405840c9a24137f283928816bc1dbdfcf01edcf5cb3d46f93999`
+  deterministic x2 (mtime-verified); round-trip control: git-stash revert ->
+  rebuild reproduced live 9e6b1977 byte-exact, stash-pop rebuild ->
+  68e5b75e. Nodes 45 / materials 5 unchanged; siblings birdbath/chimes/
+  weathervane byte-stable across the double rebuild (no live entities for
+  census pins — hash stability is the control).
+- Falsification: pixel diffs confined to the bowl band in ALL 7 views
+  (gameplay/night 792 px x[445..516] y[326..339]; close 16911; aerial
+  4830; mid 3184; zero collateral). Band values (0,0,0) -> day (45,54,56)
+  / night (37,48,54) — joins the drum spill family. Night A/B judge
+  (ui_diff): "B clearly better — model one-material edit; doorway cured,
+  continuous mass rim->drum, hierarchy water > stone intact, zero new
+  defects". Day A/B judge claimed "no visible change" — FALSIFIED by the
+  measured 792px/56-delta diff (judge sensitivity limit on a dark 14px
+  band, polish-324 class; probes outrank prose). Bowl-vs-drum-top value
+  split (45/68 day) is same-material normal-direction shading
+  (down-tilting bowl faces catch less sky) — physically correct, not a
+  material mismatch.
+- Placed via updated `next-place-fountain.ts` (pins 9e6b1977 -> 68e5b75e):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun "already live at reviewed tuple — no verbs", live census pin
+  `store/68e5b75e73a14058.glb` @ [12.5,0,4] yaw -0.7853981633974483 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p325-verify-served.ts`): served DRACO 9121494e… keeps
+  ft_bowl -> glow0 (limestone baseColor + spill emissive EXACT), geometry
+  span/radius unchanged, all 5 emissive families + p320..324 regressions
+  (3 stepped drum courses, 12 strands, 6 pads, 6 fins, crown/finial
+  controls) intact, 0 non-finite. P325_SERVED_PASS (31 gates).
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 56fa9eea
+  (struct-283 hold landed mid-tick — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-325-fountain-bowl/` (before/ =
+  live baseline GLB + 8-view rig; after/ = candidate GLB + 8-view rig).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree) — recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  nits — foam pad size/variance at 18m night (the "rivets" note, now that
+  blob-merge is falsified), fin height/width variance, strand brightness
+  variation, basin water tone.
+
+- ERRATUM (attribution, this tick): the polish-325 changeset (mkwater1.ts,
+  placer pin, plan record, ledger line, p325-verify-served.ts) was staged by
+  this lane but swept into sibling commit 6a1eedca (struct-284 HOLD, broad
+  index add at its commit time) before this lane's own `git add` batch ran —
+  the survey-318 misattribution class, foreign-direction. All content
+  verified byte-intact at HEAD under that commit (per-file grep: plan 1
+  section, mkwater1 1 edit block, placer pin 68e5b75e, probe present).
+  History rewrite is NOT safe (sibling commits landed on top would be
+  required to move); per the polish-324/322 erratum precedent this note is
+  the durable correction. Live world, ledger law, and evidence are
+  unaffected — attribution only.
