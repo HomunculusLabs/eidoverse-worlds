@@ -46,6 +46,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | tawny owls | `nx-dress-towl-001` | (−49.455,1.534,65.953) yaw 2.3562 (FRAME COPY of the espalier rows host) | **4e8d0997** (fauna-53) | NEW 2026-09-20 — the orchard's night voice: tawny owl PAIR (Strix aluco) roosting in the espalier rows' plant-2 crown (vertex-true crown decode; frame-copy law); upright sentinel (frame-ring facial disc + two spread dark eyes, rufous 0x9c6d4e) + clean-dark dozing sleeper; TRUE-SIZE no-bake; 5 motion comps (2 bob + sentinel Y-scan 9s + tail settle + sleeper doze-scan 11s); v8 8 build versions 8 judged rounds, encounter SHIP + 18m PRESENT (rufous 2043px) + night SHIP (BUFF emissive 0.12 moonlit) (ZAI-vision MCP fallback, native debt NATIVE-36); the orchard edge now has its night tier |
 | pheasant | `nx-dress-pheas-001` (build tick id; proposal drafted `nx-dress-pheasant-001` — fleet short-id convention won) | (55.75,−0.03754,−30.5) yaw −1.835 | **793f6fab** (fauna-55) | NEW 2026-09-20 — common pheasant PAIR (cock alert-strut with the 0.50m barred tapered tail + WHITE RING NECK collar at the neck base + hen skulking low, dimorphism Δ0.188) beside anchor host `nx-dress-se-snagdead-001` on the plaza reader spoke; 6 motion comps; v9 9 build versions, profile SHIP + cockface SHIP + scope SHIP + near fill-lit SHIP (ZAI-vision MCP fallback, native debt NATIVE-37); the hunting margin's game bird stands — fox-pheasant predator-prey with the den 23m NE |
 | magpie | `nx-dress-magpi-001` | (29.45,−0.02109,2.05) yaw −π/2 | **c0cf8da7** (fauna-57) | NEW 2026-09-20 — Eurasian magpie SINGLE (the fleet's first CORVID) at the inn-yard apron, 2.37m off the inn's west face on the plaza spoke, facing the approaching reader; TRUE-SIZE ×1.4 bake (63cm read); THE LONG GRADUATED TAIL 0.35m silhouette lock (pheasant-tail law) + white belly/flanks/wing panels on near-black + green/purple metallic sheen bands (peacock discipline); 4 motion comps incl THE HOP-STEP (magpi_body X-pendulum around planted feet); v6 6 build versions, profile SHIP 7/7 + scope SHIP + face SHIP (ZAI-vision MCP fallback, native debt NATIVE-38); the village's most public building now has its boldest opportunist |
+| woodpecker | `nx-dress-woodp-001` | TBD (host-rider on snag trunk face, ~1.6m reader height) | TBD (fauna-59 build owed) | **PROPOSED fauna-58 2026-09-20** — great spotted woodpecker SINGLE clinging vertically on `nx-dress-se-snagdead-001` (the village's ONE standing dead tree, bark-feeding guild's marker host, census-grounded zero woodpecker fauna across 406 entities); hatch face + RED VENT (cock) + pied shoulder patch on near-black (magpie values); STIFF TAIL PROPPED ON BARK (tripod cling, decode-gated); motion incl THE DRUM; TRUE-SIZE ~24cm + ×1.4 bake expected (sparrow chassis); host lib hard-gate + frame-copy law owed at build tick (fauna-53/55 class) — see queue row 38 |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -798,6 +799,48 @@ domain is commons-next `nx-dress-*` fauna only.
     pheasant tail-span decode gates (span ≥0.45 bird-class), peacock
     sheen discipline (metallic 0.45/.45, never emission). Proposal only
     — build fauna-57.
+38. **[PROPOSED fauna-58, 2026-09-20 — BUILD TICK OWED] great spotted
+    woodpecker — queue-empty proposal (domain law; rows 1-37 all CLOSED
+    through the magpie).** ONE entity `nx-dress-woodp-001` (proposed;
+    census-grounded this tick: zero woodpecker/drum/picus/dendro fauna
+    anywhere in the 406-entity commons-next census, ids AND libs —
+    regex-verified; 'moth' hit = Moon Moth art, 'fish' hits = kingfisher,
+    both standing). Village logic: the SE wild edge's dead snag
+    `nx-dress-se-snagdead-001` (60.6,−0.046,−30) yaw −2.356 lib
+    store/7ac8320374482a3c… (census-exact this tick, undisturbed) is the
+    village's ONE standing dead tree — the bark-feeding guild's marker
+    host — and it stands EMPTY of its bark-worker. The great spotted
+    woodpecker (Dendrocopos major) is THE snag bird of the English
+    village edge; its drum is the village's spring sound. The SE margin's
+    ecology completes: fox asleep at the den (fauna-5), pheasants beside
+    the snag (fauna-55), roe deer stepping from the treeline (fauna-40) —
+    and the snag itself now works, hammered. Species contract: SINGLE
+    bird TRUE-SIZE ~24cm (pied black/white contrast carries 18m as
+    presence + silhouette; ×1.4 marginality bake expected, sparrow
+    chassis incl joints) CLINGING VERTICALLY on the snag trunk — the
+    posture IS the species marker (no other standing bird clings):
+    sharp hatch face (pale buff, species-true) + RED VENT PATCH (cock)
+    as the two color markers, pied white shoulder patch + barred wings
+    on near-black (magpie values 0x141216 family + white 0xf2ede0),
+    chisel bill, STIFF TAIL PROPPED AGAINST THE BARK (the tripod cling —
+    decode-gated tail-bark contact, pheasant decode-gate discipline),
+    toes gripping. Motion contract: cling breathing bob + head Y-scan +
+    THE DRUM (head+bill fast small-amp peck cycle on the hatch face —
+    pendulum class, phases staggered, epoch t0). Anchor contract:
+    woodp/woodp_head/woodp_tail (3 KEEP groups; `woodp` collision-free
+    prefix, verify vs all mkv3 sources + gitignored assets at build
+    tick). Siting: HOST-RIDER on the snag trunk at ~1.6m reader height
+    on the plaza-facing trunk face (pheas-001 reader-vantage class,
+    fauna-55 law c); exact tuple owed to the build tick: frame-copy law
+    check (fauna-53 class — entity yaw == host yaw −2.3562 so
+    entity-local == snag-local verbatim) + HOST LIB HARD-GATE EXACT
+    (artwalk-39 law; the snag is dress-lane-owned, foreign domain,
+    never touched) + live SAT vs pheas-001/deer/foxden + member
+    clearances from a snag source decode (census local bbox x −0.803..1.005,
+    z −0.961..0.78, H 6.69 — trunk face from decode, never the union
+    box, sweep-319 class). Provenance: kingfisher single-bird chassis
+    (fauna-50), magpie pied values (fauna-57), yham ×1.4 bake incl
+    joints (fauna-52). Proposal only — build fauna-59.
 
 ## Per-species rebuild records
 
