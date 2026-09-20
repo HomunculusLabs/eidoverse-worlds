@@ -6888,4 +6888,8 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-283] R11-91 lawful HOLD (fifth) — next-family decision owed Bill (Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at 6d42af7d (sweep-371, foreign domain); shard+refine+carry empty, census 413 tetrakis/trioct/trit exact-pinned zero drift; native cron-unpayable owed board rides; zero mutations (D+0, E+0) (D+0, E+0)
 
-**Running total: 2371091 / 2000000**
+- [polish-325] fountain bowl dead-hole cure — ft_bowl off the legacy COLOR_0-only lane onto the drum's dressed-limestone+spill material (nx-dress-fountain 9e6b1977->68e5b75e; 18m band pure (0,0,0) day+night -> stone 45-68 luminance; night A/B judge clearly better, day-diff 792px confined; P325_SERVED_PASS 31 gates) (D+1, E+0)
+
+- [struct-284] R11-92 lawful HOLD (sixth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at 56fa9eea (struct-283, own prior hold); shard+refine+carry empty, census 413 tetrakis/trioct/trit exact-pinned zero drift, 127 struct-domain all accounted; native cron-unpayable owed board rides; zero mutations (D+0, E+0)
+
+**Running total: 2371092 / 2000000**
