@@ -22074,3 +22074,174 @@ first for the family — surface in the plan when it lands); pentagonal
 hexecontahedron + snub cube/dodeca stay HELD for Bill's handedness
 call (coin-flip = inventing a preference); rhombic dodeca BARRED
 rt-kin — or Bill's verdict routing.
+
+## struct-275 (2026-09-20): R11-83 THE TRIAKIS TETRAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-276 committed carry)
+
+275%3=2 build-slot tick; bank EMPTY after struct-274 placement (tetrakis
+LIVE, N-E band AT CAP 6), refine pool empty of payable items (40+ ticks)
+-> build+judge per the struct-240..274 precedent. Gate ALL PASS real exit
+0 tick-start (unpiped /tmp/struct275-gate.log at 04acdace sweep-364 HEAD,
+foreign domain). Shard drained fresh (IMPROVE-PLAN grep OPEN nx-struct
+rows: 0 hits). Ledger max re-derived struct-274 -> struct-275 (numeric
+extraction, re-checked immediately before append). Native absent from the
+cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as struct-169..274;
+owed board gains trit v1, joins the riding queue).
+
+FORM SELECTION fresh grep (triakis|tetrakis|pentakis + tkt/trit over the
+five-file set): 0 real claims — triakis tetra/octa were the only unclaimed
+achiral small Catalans. Selected: THE TRIAKIS TETRAHEDRON — the dual of
+the tret (struct-247/248, E band az4.0 r76.0 — AT CAP 6), the
+dual-of-standing-parent move a SIXTH time (gsd->gdodec, trico->dtria,
+rico->deltoid, tdodec->triakis, toct->tetrakis, tret->trit), the
+FIRST family member to seat OUTSIDE its parent's quarter (every parent
+band now capped — E/SW/N-E all 6/6). ACHIRAL, machine-proven (T0b: the
+three coordinate swap mirrors close both sets).
+
+CONCEPT: THE FIRST CUT'S GHOST, READ THROUGH THE LOOKING GLASS. The parent
+tret told the BALANCED REMAINDER — the tetrahedron cut at a third,
+exactly 23 of 27 parts standing. The polar reciprocal about its
+midsphere (rho == 1 EXACT — every tret edge midpoint on ONE sphere, both
+edge classes) turns every parent face into a POINT and every one of the
+12 tret VERTICES into an ISOCELES sail — one tri apex + two hex corners,
+every sail kissing ONE insphere at exactly rho^2/R == 3/sqrt(11) (the
+Catalan tangent property, T6). THE RANK INVERSION IS THE STORY: the four
+hexagon planes ARE the grandparent's own face planes (h 1/sqrt3) while
+the cut triangles sit deep (h 5/(3sqrt3)) — so in the dual the FOUR
+HEXAGONS stand as the FOUR GREAT OUTER POINTS at radius sqrt(3) along
+-V — THE GRANDPARENT TETRAHEDRON ITSELF, REFLECTED THROUGH THE CENTER,
+the closed form the dual owes the parent's parent — while the four
+cut-ghosts sink to 3*sqrt(3)/5 (ratio 5/3 EXACTLY — the DEEPEST RELIEF
+in the family fleet: deltoid 1.046, tetrakis 1.155, triakis 1.170, trit
+1.667) and short/base == 3/5 EXACTLY (the razor's own measure told in
+the sail's sides). Silhouette: TRI-GHOST POINT-DOWN 3-fold on the
+parent's own seated frame INHERITED (triangle-down + belt twist-snap —
+self-catch (c) below) — the foot spike rises to a WIDE three-shoulder
+belt low (r 4.125 at 1.467m), tapers through the cut-ghost dimple ring
+(r 2.475 at 3.800m, offset 60deg), and climbs to the tall reflected-
+grandparent crown point at 7.0m above the dais: a three-sided spire,
+point-down at both ends. STONE: all 12 sails (ONE face family = ONE sail
+material) + the TWELVE-sided dais (one side per sail, theme-number
+law). IRON: all 18 seam bonds + crown finial stem 1.30m. Night: the
+parent's own bead census transcribed to the dual — its four lit hexagon
+centers become the four H points: 1 crown FINIAL + 3 waist-belt beads
+at exact 120deg, ONE dead at az 0, NONE pressed (the parent's honest
+idiom; the foot is the cut-ghost, unlit — absence is the mark of the
+removed corner) = glow_trit_4.
+
+PARAMETRIZATION (exact, closed-form): parent tret rebuilt verbatim from
+struct-247's closed forms (grandparent tetra M=(1,1,1),(1,-1,-1),
+(-1,-1,1),(-1,1,-1), edge 2sqrt2; cut at 1/3; R (a/4)sqrt22 ==
+sqrt11/3; midsphere rho == 1 both edge classes); dual radii hex sqrt3
+(the reflected grandparent) / tri 3sqrt3/5 (ratio 5/3); sail closed
+forms apex arccos(-7/18) = 112.8854deg / base arccos(5/6) = 33.5573deg /
+short-base ratio 3/5; SCALE 2.525907428 to height 7.0 (family ladder
+next step rico 6.3 -> dtria 6.6 -> deltoid 6.7 -> triakis 6.8 ->
+tetrakis 6.9 -> 7.0); dais 12-gon R4.45 APOTHEM-FIRST (apothem 4.298 >=
+reach+rod 4.185); envelope 8.90x8.77x8.90.
+
+PROBE (struct275-probe-trit.ts, tracked) 10/10 ALL PASS real exit 0 +
+RED control exit 1 (5 law FAILs on displaced dual vertex: T2/T5/T6/T7/
+T8): T0 census 8/18/12 + midsphere spread 1.1e-16 + rho == 1 + radii
+ratio 5/3 measured; T0b ACHIRALITY (closing swaps [x<->y, x<->z,
+y<->z]); T1 Euler 8-18+12=2; T2 sail census (angle multiset IDENTICAL
+across all 12 faces; isoceles mirror exact; THE CLOSED FORMS apex
+arccos(-7/18) / base arccos(5/6) / short-base 3/5 MEASURED); T3 degrees
+6 at hex rank / 3 at tri rank (the parent face's side count told at a
+point); T4 manifold 36 slots; T5 exactly two edge classes hex-hex 6 +
+hex-tri 12, zero tri-tri (the cuts never met); T6 THE POLAR RECIPROCAL
+(all 12 sails kiss ONE insphere at rho^2/R, worst dev 3.1e-3 scaled;
+face normals EXACTLY the tret vertex directions, bijection 12/12); T7
+seat (foot tri-ghost on axis AT dais top 0.300000 AND lowest vertex
+overall — margin 1.1667m; crown hex point top by 3.5, exactly 7.0 above
+dais; 120-deg symmetry 0 misses; THE LOOKING GLASS — every cut-ghost
+EXACTLY collinear-opposite a hex point through the center, 4/4, worst
+dev 2.4e-16; belt triad level/radii exact, ONE dead at az 0, dimples
+60deg interleaved; rank inversion in plan; beads 3 aloft none pressed;
+finial clears worst occluder sight 4.143 by 4.627m >= 0.225 law); T8
+immersion worst poke -1.7e-2 (fully inside).
+
+FOUR probe self-catches RED-first (zero wasted builds — the honest red
+loop, family lineage): (a) my first derivation conflated the cut-point
+parameter with the dual radius — re-derived from h_tri MEASURED; (b) I
+over-carried the toct-lineage central-inversion test (the tetra is NOT
+centrally symmetric) — replaced by the LOOKING GLASS collinearity law;
+(c) the twist-snap selector (up-normal side hexagons) matched NOTHING on
+this seat — the side-hex normals ride BELOW the equator (elevation
+-19.47deg, M_0 points down), the twist silently degenerated to identity
+and the first run failed T7 red-honestly (belt lattice at -15deg offset,
+hasSnap false) — the snap now targets the BELT H-RING itself, belt landed
+{0, ±120deg} with the dimples at {±60, 180}; (d) my T3 first draft
+claimed "degree 3 at both ranks" from the false shortcut "tetra corners
+are deg-3 so the dual is too" — the honest Catalan law is dual vertex
+degree == parent face side count (hex 6 / tri 3), the struct-271/273
+law-error class, third+fourth instance this tick; (e) the looking-glass
+partner selection took MAX dot (a neighbor at +1/3) instead of MIN (the
+anti-parallel partner at -1) — 0/4 -> 4/4 after the fix; (f) the decode
+segDist transcription returned |p - t*ab| instead of |ap - t*ab| — the
+belt-distance endpoints ~4.4m off-origin injected a bogus ~4978mm worst
+read on PERFECTLY GOOD geometry; decode-first debugging (empirical
+vert-cluster print) located the arithmetic, not the model.
+
+BUILD (agents/arthur/assets/mkv3-trit.ts, staged -f): root identity
+(struct-188); texMat lanes trit_stone/trit_iron (struct-38); bead
+emissive 0x9a7030 @ 1.4 in-GLB (family build-time law); 32 pre-merge
+meshes + 1 KEEP glow group glow_trit_4; envelope law green in-build ==
+probe contract. v1 deterministic x2 runs byte-identical sha256
+c46f5a580e1da32bb35363e5f774e6022c6e41d87f59a183802210e620f4e78b
+(mtime-verified fresh).
+
+DECODE (struct275-decode-trit.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (trit_iron + trit_stone + glow_trit_4); D2 12-gon
+dais TRUE box ±4.450 corners present, sole min y -0.000000; D3 1402
+iron verts worst 60.00mm (<= 64) over the 18 exact segments + the NAMED
+finial stem, coverage 18/18; D4 276 plate verts worst 58mm (<= 62
+shell); D5 beads 4/4 clusters, emissive, sole night; D6 sole at grade +
+all 3 belt beads ALOFT none pressed; D7 envelope drift 0.00mm; D8
+texMats 2/2. RED control (village_tret3.glb — the parent's own bytes):
+D1 census FAIL clean-stop exit 1 (unpiped RED_EXIT:1).
+
+RENDERS: struct275-render-trit.ts (tracked chassis, struct273 lineage)
+9 frames on the EXACT pinned bytes — bounds min[-4.450,-0.000,-4.450]
+max[4.450,8.770,4.450] == contract; reviews/struct275-trit/ (9 frames,
+ignored — sha pin above is the durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as trit v1): day
+gameplay 18m 5/5 PASS (identity "unmistakably a deliberate faceted
+mathematical solid... spired apex"; closed hull; grounded with contact +
+cast shadow; stone/iron/brass three-way separation; zero real defects —
+one dais-rim cosmetic smudge noted, trivial). Night 5/5 PASS (3 warm
+points resolved = crown finial + 2 belt, the 4th correctly occluded —
+per-vantage contract class; every bead seated ON geometry; dark
+discipline clean, zero bloom; silhouette marginal-but-reading = the
+family-wide night margin, disclosed). Closeface 5/5 PASS (sail joinery
+clean with uniform shadow-gap reveal; isoceles read with needle-sharp
+apex convergence; two material families distinct at range; beads seated
+AT junctions; zero z-fighting/floats/gaps — the judge's bead-coverage
+note is the family census contract, decode D5 proves 4/4). 15/15 real
+criteria PASS, zero real defects. v1 ACCEPTED BANKED NOT PLACED.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-276
+committed carry (fresh census scan, under-served octant — NOT the E
+band, every parent band capped; 8m NN + per-district soft cap 6,
+12-gon-exact polygon SAT struct-19/260 class, oblique-yaw struct-104
+band, terrain preflight over the TRUE rotated 12-gon, hash-gated plain
+spawn nx-struct-trit, comp {}, ground circuit walk). Folly class. Zero
+world mutations, uploads, verbs, comp-edits, shared-budget use. Zero
+pushes.
+
+Files: struct275-probe-trit.ts + struct275-decode-trit.ts +
+struct275-render-trit.ts + assets/mkv3-trit.ts (NEW, tracked; mk staged
+-f per the ignored-parent law) + STRUCTURES-PLAN.md (this block) +
+IMPROVEMENTS.md (one append struct-275, D+0 E+0).
+
+Next queue head: struct-276 placement tick (the committed carry above).
+Then R11-85 build sweep re-derives from the form ledger: the triakis
+octahedron is the LAST unclaimed achiral small Catalan (parents
+toct/trcubo N-E AT CAP — it seats outside its parent's quarter too);
+the pentagonal hexecontahedron + snub cube/dodeca stay HELD for Bill's
+handedness call (coin-flip = inventing a preference); rhombic dodeca
+BARRED rt-kin; fresh five-file grep before building — or Bill's verdict
+routing.
