@@ -2927,6 +2927,14 @@ next wake once the gateway answers.
   re-quantization only, 0 px in the disc band).
 - Gate re-run after mutation: ALL PASS exit 0 at sibling HEADs
   2515bf60/2515bf60 (dress-218 absorbed mid-tick — normal interlane life).
+- Ledger-repair note (ledger-hygiene class, NEW): the dress-218 append
+  left a DUPLICATE running-total line mid-file (its D+0 entry made both
+  totals read 2371097, so every D+0 gate pass masked it); my +1 append
+  then failed the law (first total 2371097 vs run 2371098). Repair:
+  removed the stale mid-file total (commit 99ad2ab7), law EXACT 2371098,
+  gate ALL PASS real exit 0 verified unpiped. LAW: a duplicate-total
+  failure on append means a sibling's D+0 entry hid the stale line —
+  remove all but the EOF total; never re-append.
 - Evidence: `reviews/hero-assets/polish-327-monument/` (before/ = live
   1b4cca52 baseline GLB + 11-view live-light rig; after/ = candidate +
   rig; served/ = served-bytes render set; probes: p327-rig.ts,
