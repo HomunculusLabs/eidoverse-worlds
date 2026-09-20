@@ -18589,3 +18589,72 @@ re-derived from committed pointers this tick: stable/market @380 walked
 fresh, forge/potter @379, inn/tower-house @378, hall/bunkhouse @377 the
 stalest standing pair; walk tools interior-walk-hall.ts (1704B) +
 interior-walk-bunkhouse.ts (1538B), ls-verify before walks per law).
+
+
+sweep-381: CLEAN SWEEP, single-arrival tick (151st consecutive
+quiet-or-classified). Tick-start HEAD 8f843fbf (fauna-71 committed PRE-tick);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root, ledger law EXACT
+2371103 at first probe. Interlane md5 86b2936f stable, SWEEP-LOOP md5
+a5fd4f4f stable, both read fresh; pools drained (IMPROVE-PLAN 7fa8a224
+unchanged zero open rows, CITY-PLAN-V2 cae6b928 unchanged — audit-continues
+freeze banner governs via loop/plan reload). Census epoch A 416->417 vs the
+committed sweep-380 baseline (sha16 7e2452d4763f5f2a): exactly ONE arrival
+nx-dress-vole-001 @ (53.75,-0.04276,-25.5) yaw -1.863 lib
+f27037673949833b scale 1, comp bag 3x motion:vole{,_head,_snout} = COMMITTED
+fauna-71 @ 8f843fbf, tuple matches its ledger line-for-line, domain-valid
+(fauna lane uses nx-dress-* ids), not drift; live bbox 0.793x0.213x0.475 ==
+its decode envelope; 0 departures, 0 drift on all 416 shared ids across
+id/pos/yaw/lib/scale/kind/bbox, ZERO comp-dict drift. The vole sits r59.5 SE
+wild-edge — outside every walked band (nearest tier-1 waypoint 50m+). Epoch B
+20s-paced re-read 417==417, A-to-B drift ZERO — single settled epoch, no
+epoch correction. Mid-tick interleave: struct-298 @ f5468183 (lawful HOLD,
+zero mutations per its own entry — it observed the same 417 census and named
+fauna-71's arrival foreign; no re-verification debt). Overlap: SAT 379 bbox
+non-light / 259 exempt-classified / 0 coverage holes, exit 3 on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed to
+artwalk b26 choreography @ sweep-43, 337th sweep since routing, NOT new, no
+escalation due (the law keys on severity-1); vole introduced ZERO new
+contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0, legs run individually — core 64/64 maxArrival 0.380
+(next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..380 canon.
+Tier-2 359th cycle per the committed sweep-380 pointer: hall 8/8 ALL_PASS
+(interior-walk-hall.ts, dists 0.285/0.360/0.280/0.265/0.340/0.260/0.335/
+0.310) + bunkhouse 6/6 ALL_PASS (interior-walk-bunkhouse.ts, dists
+0.245/0.300/0.305/0.247/0.380/0.313), both tools ls-verified present BEFORE
+the walks (1704B + 1538B), dists canon-exact vs the sweep-377 record.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (335th
+consecutive clean); sweep89-battery first invocation 27/28 RED on exactly
+comp-bearing (63-vs-64) = expected classification, lawful pin bump 63->64
+per the sweep-301..378 fauna precedent chain — added-set census-verified
+exactly [nx-dress-vole-001], removed-set empty — battery then 28/28 PASS
+GREEN (lights 38, thing 379, carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified via battery). Baseline lawfully rewritten from the COMMITTED
+bytes (/tmp/s381/baseline-rewrite.py): pre-write asserts green (committed
+sha16 7e2452d4763f5f2a, arrivals exactly [nx-dress-vole-001], departures [],
+drift {}), vole block inserted beside its censusB predecessor
+nx-dress-pigeon-001 with both neighbors asserted (order is diff-irrelevant,
+sweep-378 class — the first tail-append attempt failed CLOSED on its own
+predecessor assert before any write, baseline untouched, repaired to the
+LOCAL convention), post-rewrite drift vs live ZERO — final 417 entities /
+sha16 943331dbcf79c3ae; git diff exactly the arrival block + count bump.
+Ledger sweep-381 appended (D+0, E+0), tool-verified law exact 2371103. Probe
+self-catches pre-verdict, disclosed: (a) ledger-max probe used a
+lexicographic sort that returned sweep-99 as max — re-derived numerically
+(max 380) before the append; (b) the approach-walk parser keyed 'dist' where
+those tool schemas use 'distance' (two schemas in play; re-anchored per
+result keys, sweep-380 class). Foreign dirt in tree (engine files
+client/server, core-paths GLB + review json, windmill overhaul scratch +
+WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype dirs,
+fauna32-*/fauna63-*/fauna64-*/fauna65-* tools, debug bower scripts, fleet
+shell scripts, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads, zero
+verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-382): inn + tower-house (360th cycle — LRU chain re-derived from
+committed pointers this tick: hall/bunkhouse @381 walked fresh, stable/market
+@380, forge/potter @379, inn/tower-house @378 the stalest standing pair; walk
+tools interior-walk-inn.ts (1786B) + interior-walk-tower-house.ts (1523B),
+ls-verify before walks per law).
+

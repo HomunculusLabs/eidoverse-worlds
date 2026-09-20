@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 416,
+  "count": 417,
   "entities": [
     {
       "id": "nx-hearth",
@@ -14631,6 +14631,85 @@
           "t0": 1789930529160
         }
       }
+    },
+    {
+      "id": "nx-dress-vole-001",
+      "lib": "store/f27037673949833b.glb",
+      "kind": "thing",
+      "pos": [
+        53.75,
+        -0.04276,
+        -25.5
+      ],
+      "yaw": -1.863,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "motion:vole": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 3.4,
+          "phase": 0,
+          "t0": 1789938353167
+        },
+        "motion:vole_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 8.5,
+          "phase": 0.4,
+          "t0": 1789938353167
+        },
+        "motion:vole_snout": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.15,
+          "period": 2.4,
+          "phase": 1,
+          "t0": 1789938353167
+        }
+      },
+      "bbox": {
+        "min": [
+          -0.6,
+          -0.004,
+          -0.236
+        ],
+        "max": [
+          0.193,
+          0.209,
+          0.239
+        ],
+        "size": [
+          0.793,
+          0.213,
+          0.475
+        ],
+        "center": [
+          -0.204,
+          0.103,
+          0.001
+        ]
+      },
+      "tris": 6196
     },
     {
       "id": "nx-dress-dovecote-001",
