@@ -2220,3 +2220,61 @@ next wake once the gateway answers.
 - Next ranked: (a) well night identity beyond the mouth glint (lantern
   hook candidate, judge-suggested at polish-313 close), (b) plaza-core
   re-survey on fresh evidence.
+
+### polish-315 — well night lantern (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-well` (same tuple as polish-313/314, empty comp bag).
+  Build source `assets/mkvillage-civic.ts` (well block) → `village_well.glb`
+  (live was 38ab2eef, polish-314's wood-frame build).
+- Defect (queue head from polish-313/314 close, judged fresh this tick on
+  exact live bytes, ZAI fallback disclosed — polish-285..314 class, native
+  re-judge owed): ZERO night identity — 18m night "no lamp, lantern,
+  emissive material, or warm glow anywhere"; below the roofline
+  night-invisible, read as "small dark shed or shrine"; water collapses
+  beyond ~6m. Both night judges independently prescribed a hanging lantern.
+- Change (ONE intervention): village streetlamp fixture grammar
+  (polish-312) at well scale — iron bracket arm on the W approach post
+  (0.34m, y 1.64, clears crossbar 1.72 + eave underside 1.78 by
+  construction) + hanging tab + warm-core lantern (0.09×0.13 core,
+  0xffc98a @ 0.9 = the canonical [0.9, 0.5257, 0.2287] streetlamp
+  emissive) under a peaked 4-sided iron cap at x −1.12, fully outside the
+  eave edge (polish-272 overhang law). Iron sheen 0.15 on arm/cap/tab
+  (polish-305/312 lineage). No new light entity — the emissive IS the
+  light.
+- Candidate `9a88e9a8c3d67d25…` deterministic ×2 (mtime-verified);
+  whole-14-set rebuild: banner/fountain siblings byte-identical to live
+  pins. Nodes 21→25, draws 21→25 (4 lantern meshes). bbox −x grows 0.19
+  (to −1.24); nearest non-rider entity 4.67m out (rooster) — no SAT
+  contact by construction; artwalk b27-waterline rider concentric,
+  ownership law, ignored during host judgment.
+- Judge verdicts: NIGHT A/B PASS as night-identity cure ("converts the
+  scene from unidentified dark shed to inhabited village well"; lantern
+  anchored by visible bracket + hanging yoke; restrained glow, no bleed;
+  zero new defects). DAY PASS ("natural unlit daytime hardware";
+  ~28–30cm lantern vs 2m roof plausible; no floating/clipping). Judge
+  nits recorded not treated: iron sheen faint at 18m exposure; no cast
+  light on post/roof underside (engine has no point-light-from-emissive;
+  emissive-tint near-lantern candidate noted for a future tick).
+- Pixel diffs: night 18m 2314 px confined to the lantern locus
+  x[422..542]; day diffs = whole-model ~3px shift (review rig
+  auto-recenters on the grown bbox) + lantern; close-rig rimclose/
+  oblique cameras frame +x — the −x lantern is outside those frames
+  (0 px, expected; polish-307 rig-law class).
+- Placed via NEW dedicated placer `next-place-polish315-well.ts` (p314
+  chassis, pins 38ab2eef→9a88e9a8): PLACED_VERIFIED, 1 upload + 1 verb,
+  comp bag {} preserved, idempotent rerun zero verbs, live pin
+  `store/9a88e9a8c3d67d25.glb` @ [30,0,-4.5] yaw 0 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `p315-verify-served.ts`; probe self-caught its own census gate
+  miscalibration RED→GREEN — the served re-encode DEDUPES meshes 25→19,
+  p310 law): served DRACO e4f1fdcc… keeps glow3 [0.9,0.5257,0.2287] on
+  well_lantern_core, glow2 [0.15,0.0876,0.0381] on arm/cap/tab, node
+  translations exact (core (−1.12, 1.44, 0)), water glow1 + wood-frame
+  regressions intact, 0 non-finite. P315_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 (sibling struct-265 landed
+  mid-tick — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-315-well-night/` (before/ = live
+  38ab2eef baseline GLB + 15-view rig; after/ = candidate + rig).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) recorded
+  candidates — near-lantern emissive cast-tint on the W post (night judge
+  ask, restrained), well rope thickness (polish-310 lineage).
