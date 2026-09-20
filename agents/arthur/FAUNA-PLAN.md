@@ -1125,9 +1125,60 @@ domain is commons-next `nx-dress-*` fauna only.
  shadows on stone take neutral grey (0x4c4c46), the green-family value
  belongs on grass seats only. Queue: EMPTY — next tick proposes the
  next species per domain law (homestead language first).
+ 45. **[CANDIDATE — proposed fauna-70, 2026-09-20, build fauna-71] field
+ vole at the SE wild-edge vole grass — the kestrel's prey.** ONE entity
+ `nx-dress-vole-001` (short-id convention, magpi/pheas law).
+ Census-grounded (fauna70-census-vole.ts, READ-ONLY): 416 entities,
+ ZERO vole/arvicoline ids AND libs (magpie fauna-57 proposal law) — the
+ species slot is genuinely open. Village logic (implied-fauna law,
+ woodpecker-at-the-snag fauna-59 class): the kestrel's own siting prose
+ (fauna-65) names its hover seat "the SE wild-edge vole grass" —
+ standing geography already named for a prey animal that does not stand
+ yet. The SE wild edge is the village's hunting margin and its
+ predator-prey theater is staged but missing its base link: kestrel
+ wind-hovering at 6m over that grass (fauna-65), fox asleep at the den
+ 20.6m (fauna-5), pheasants beside the snag 6.7m (fauna-55), roe deer
+ stepping from the treeline 15.6m (fauna-40) — every predator reads,
+ the prey they hunt is absent. The field vole (Microtus agrestis) is
+ THE European rough-grass small mammal and the base of exactly that
+ food web; the fleet's rodents are a house mouse (fauna-45) and a hazel
+ dormouse (fauna-46) — the vole is the third and the wild one: rounder
+ and shaggier, ears buried in fur, THE SHORT TAIL (~30% body length vs
+ the house mouse's ~90% — the rodent distinction that reads at
+ encounter distance), blunt muzzle, grass-run habit. Species contract:
+ SINGLE vole (hmou/dmou/hog single-precedent; voles are met singly in
+ the run even where hundreds live) in the mid-run feeding crouch,
+ TRUE-SIZE ~10cm pre-bake + ×2.2 marginality bake incl joints (hmou
+ chassis verbatim) = a 22cm read; shaggy chestnut-brown coat with
+ grizzled guard hairs, grey-buff venter, buried ears, dark eye beads,
+ short bicolored tail, pink-brown hands at a grass stem. Furniture: a
+ clipped GRASS RUN (the species' own architecture: a low tunnel-lane
+ of pressed stems voles maintain through rough grass) + vole-scale
+ tuft mass (hmou law b: ≤2.5× body height — the rough grass is the
+ HOST, never duplicated at reed scale) + a nibbled grass-cut pile at
+ the muzzle (grain law). Motion contract: breathing bob + slow head
+ Y-scan (the sit-and-freeze watcher) + nested snout nibble-bob X
+ (hog_snout pattern); phases staggered, epoch t0. Anchor contract:
+ vole/vole_head/vole_snout (3 KEEP groups; `vole` prefix —
+ collision-free at proposal: zero nx-*vole* ids, zero vole-named mk
+ sources this tick; rg over mkv3 + gitignored assets re-owed at build
+ tick, magpi law). Siting: rough-grass GROUND seat in the kestrel's
+ hover field between the perch post and the pheasant seat on the
+ plaza-spoke reader side (seat→plaza bearing 157.3° from the kestrel
+ post, clean-slate law fauna-61 law a; co-resident SAT set measured
+ this tick: pheas 6.7m, snag+woodp 6.8m, chainvault 6.9m, kestrel
+ post/tufts adjacent — exact tuple owed to the build tick: 25cm-grid
+ seat sweep + live heightAt + live SAT + walk-up discover vantage on
+ the spoke). Judge contract: encounter anatomy (short-tail + run) +
+ scope PRESENT (robin-law encounter-reward disclosure for 18m — the
+ image that carries is the composition: prey in the grass beneath the
+ hovering kestrel). Provenance: hmou bake/tuft/run chassis, dmou
+ short-tail distinction (fat vs prehensile vs SHORT), hog nested-snout
+ pattern, kestrel/pheas SE-margin seat discipline. Proposal only —
+ build fauna-71.
 
 
-### mute swan — fauna-63 (2026-09-20) CLOSED
+ ### mute swan — fauna-63 (2026-09-20) CLOSED
 - **v12 sha16 9206edbedd472f61** (full 9206edbedd472f6195afd093bc742c0ddd5fbd4a7d6cf966defadb340c7779e9), NEW entity `nx-dress-swan-001` PLACED_VERIFIED at world (8.123, 0.05493, −92.482) yaw 0 scale 1 — the FRAME-COPY WATER-RIDER seat (ducks fauna-3 / frog fauna-29 class): entity origin == reedpool host origin + host-local swan_a baked seat (−1.6, −1.5); entity yaw == host yaw so entity-local == host-local VERBATIM. PY = water top world 0.08093 − baked WL 0.026 = 0.05493 (duck/fauna-31 waterline law). HOST HARD-GATE: nx-struct-reedpool (9.723, −0.05907, −90.982) yaw 0 lib 7d770620bb1b7bdc exact pre+post (artwalk-39 law; struct-lane-owned, foreign domain, never touched). Census 412→413 exactly, 6 verbs (upload+spawn+5 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 5/5 (SW-bank meadow 18m reader line + S bridge-deck sill lane, arrivals 0.00/0.38/0.31/0.25/0.31; foreign support-seam stderr = lanternhook/streamstones/stones/labyrinth/yard class, not ours), live bbox 2.305×1.429×1.896 == decode envelope.
 - Build: a mute-swan PAIR (ONE entity) — COB (swan_a) in patrol carriage: long low white hull (baked ~0.97m), high rounded back mantle, THE COCKED TAIL spike up-back with black tip (rotation law learned), thick-at-base TAPERED neck (3 overlapping tube segments 0.050→0.031 — uniform TubeGeometry cannot taper), upright S-curve crown ~1.37m after the ×1.30 bake; PEN (swan_b, ×0.92) in low feeding reach, neck stretched forward over the water, half-averse to the cob. Both: white 0xf2ede0 (magpie/stork-white family) + THE ORANGE BILL 0xd9701e + black face wedge + THE BLACK KNOB proud of the forehead (cob r0.022 > pen r0.015 — the dimorphism marker) + dark eyes + black feet underwater. Wakes: THE DARK WATER SEAT — a darker-than-water calm annulus (0x46606e) + deep-tone contact disk (0x3a4c58) + ripple torus per hull (the only idiom that passed the 18m gate). Anchors swan_a{,_neck,_head} + swan_b{,_neck,_head} (6 KEEP groups; `swan$|swan_` added to mergekit KEEP this tick — collision-free, rg-verified). 5 top-level / ~3852 tris (v3 census; v12 adds wake seats).
 - Motion: 5 comps live — 2 waterline bobs (swan_a .006/6.2s, swan_b .005/5.6s) + cob neck preen-sweep X (.07/8.0s) + cob head Y-scan (.22/9.5s, nested in the neck — rides the sweep, peacock-crest law) + pen dabble-reach X (.10/3.8s); phases staggered, epoch t0. Engine-true motion pair on final bytes: 432px differ @ the approach18 framing, x band 468-509 (the pair's column); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob VERBATIM + rotatePartAtPivot.
