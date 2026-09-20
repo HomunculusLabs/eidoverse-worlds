@@ -22521,3 +22521,119 @@ Kepler-Poinsot, snub chirality call, or his routing) surfaced in the
 plan, never coin-flipped; pentagonal hexecontahedron + snub cube/
 dodeca stay HELD for his handedness call; rhombic dodeca BARRED
 rt-kin.
+
+## struct-278 (2026-09-20): R11-86 placement carry — THE TRIAKIS
+## OCTAHEDRON LIVE as nx-struct-trioct (S-SW band sixth form) —
+## THE PARENT REUNION
+
+The struct-277 committed carry executed. Bank re-verified
+byte-identical pre-mutation (on-disk sha256 9f5d016efcb3a6a5… ==
+struct-277 v1 pin; no rebuild — struct-262..276 precedent). Gate ALL
+PASS real exit 0 at tick start (unpiped /tmp/struct278-gate.log,
+GATE_EXIT:0 at 8f147b7c dress-210 HEAD, foreign domain). 278%3=2
+build-slot tick consumed by the judge-debt cadence law: the committed
+placement outranks a new form. Shard re-derived empty (IMPROVE-PLAN
+OPEN nx-struct rows: 0 hits).
+
+SEAT (struct278-scan-trioct, fresh 411-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own
+center reported -9.620, guaranteed overlap refused; coverage exact 1
+/ radial 309 / disc 2 / exempt 4): the R11 octant map printed (E oct0
+6 AT CAP; oct1 10; oct2 46 mosaic band EXCLUDED; oct3 5; SW oct4 6
+AT CAP; oct5 5; NW-N oct6 6 AT CAP after struct-276; N-E oct7 6 AT
+CAP). HONEST FINDING — THE PARENT REUNION: the live audit shows oct3
+(the trioct's own parent tcube's band: millrace, csaszar, ico, tcube,
+trico) at only 5 forms, SUPERSEDING struct-277's "every parent band
+capped" assumption (it held at struct-277's 409-census; the
+struct-276 trit had taken oct6, not oct3). The trioct therefore
+REJOINS ITS PARENT TCUBE per the family's canonical
+dual-beside-parent disposition — the SEVENTH instance (gsd->gdodec,
+trico->dtria, rico->deltoid, tdodec->triakis, toct->tetrakis,
+tret->trit, tcube->trioct) — instead of seating outside its quarter.
+Oct3 5->6 = AT CAP, no exceedance, disclosed. Selected: az154.0
+r106.5 (-95.721566, 46.686527) — innermost margin+constellation seat,
+gap 2.23 vs nx-cultivation-orchard-0012 (>= 2.2 real-margin law). NN
+21.68 to nx-struct-tcube (law 8; composed with tcube@21.7 + ico@32.1
+— the S-SW kin shelf, the dual standing 21.7m from its parent).
+
+YAW LAW (procession convention, struct-217..277): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az334 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120 -
+154.0 = -274.0 -> 86.00deg -> YAW = 1.500983 rad. DISCLOSED: the
+trioct is a 4-FOLD oct-rank point-down seat (probe T7: foot oct-point
+on-axis, waist 4 at the EXACT cardinals, ghost squares on the 45deg
+diagonals) and the oblique-lean band puts the yaw 4deg shy of the
+90deg cardinal lattice — near-lattice, the exact-mod bonus does NOT
+apply; the panelled-solid family reads at any azimuth (trico/SSD/
+gsd/gdodec/gicosa/dtria/deltoid/triakis/tetrakis/trit precedent) and
+the judged framing is preserved.
+
+TERRAIN (struct278-terrain-trioct.ts, this tick): 49pt over the TRUE
+rotated 24-gon (center + 24 verts + 24 edge-mids), spread 15.3mm,
+PY = lowest = 0.036572 (the dais-sole-at-grade build absorbs the
+spread). Known distant support-seam abstention lines only (foreign
+lanes).
+
+SAT LAW (N=24 class): the 24-gon dais R3.70 CORNERS-ON-AXES (ROT=0
+class, decode D2: corners present, TRUE box +/-3.700; apothem 3.668
+>= reach+rod 3.560 — apothem-first, struct-247) is the footprint;
+build envelope 7.40x8.77x7.40 — the solid NEVER overhangs (probe T8
+immersion: fully inside, worst poke -1.4e-2), so the 24-gon IS the
+true ground footprint. Exact convex-polygon SAT (edge-normal axes of
+both polys, max-gap law) replaces the square-bbox proxy — struct-19/
+260 disc law class.
+
+PLACEMENT: next-place-struct278.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 411), NN
+floor 21.68 + exact-SAT worst 2.23 re-proven against the FRESH
+411-set pre-verb [exact 2 radial 308 disc 2 exempt 4] + in-placer RED
+control PASS (exact-SAT at nx-craft-statuary-0026's own center ->
+gap -9.620; corner lists inspected pre-run, clean — the
+struct-266/268/270/274/276 class), upload
+store/9f5d016efcb3a6a5.glb (1 upload, shared budget), plain spawn
+1 verb paced 1200ms, PLACED_VERIFIED pos [-95.721566, 0.036572,
+46.686527] yaw 1.5009831567151233 lib store/9f5d016efcb3a6a5.glb
+comp {} census 411->412; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+az334 arrival-line approach + reading-face vantage az4.0 at 7m +
+full CW 8m standoff circuit, no phantom collider; folly by
+presentation, the PANELLED solid means the walk stays outside the
+3.70m dais; walk standoff 8m applies directly, edge mid clear
+4.33m — family disposition).
+
+ZAI-fallback judgment debt on trioct v1 rides the owed board (native
+absent from cron catalog, cron-unpayable class).
+
+Bill eye-check pointer: on the SW reach past the millrace and the
+csaszar — THE TRIAKIS OCTAHEDRON beside its parent. The tcube told
+THE DEEPER CUT (octagon regularity demanded cutting past the family's
+1/3 law; 96.65% of the cube still standing); its dual reads the same
+story inside-out: the six faces the razor never touched stand as the
+SIX GREAT OUTER POINTS — the octahedron itself, the cube's own dual
+surfacing through the cut — while the eight razor-ghosts sink to
+shallow dimples tenting the octahedron's faces with the flattest
+apexes in the fleet. Oct-point-down at 7.0m on a TWENTY-FOUR-sided
+dais; the four waist points on the cardinals, the ghost squares on
+the diagonals, each upper ghost directly above a lower one. After
+dark, five warm brass points read (crown finial + four waist) with
+the sixth honestly pressed into the earth beneath the foot — six in
+truth; the eight razor-ghosts stay dark, absence marking the removed
+corners. Walk the SW band and read it against the tcube 21.7m away —
+the cut and its ghost, two generations on one shelf.
+
+Files: struct278-scan-trioct.ts + struct278-terrain-trioct.ts +
+struct278-walk-trioct.ts + next-place-struct278.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one
+append struct-278, D+0 E+1). One upload, one verb. Zero pushes.
+
+SURFACED TO BILL (per struct-276/277 directive, decision owed — never
+coin-flipped): WITH struct-278 THE ACHIRAL CATALAN WELL IS DRY. Every
+achiral small Catalan now stands in commons-next. The next family is
+Bill's call: (1) Johnson solids (all-achiral, 92 forms, same
+probe/decode chassis extends directly); (2) Kepler-Poinsot stars
+(self-intersecting — new sail law needed, disclosed); (3) the HELD
+chiral pair (pentagonal hexecontahedron + snub cube/dodeca) — needs
+his handedness call, coin-flip = inventing a preference; (4) his own
+routing. Rhombic dodecahedron stays BARRED (rt-kin). Until he routes,
+build ticks hold (refine pool empty; shard empty); placement carries
+and verdict-routed items remain payable.
