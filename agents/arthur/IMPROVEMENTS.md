@@ -6908,4 +6908,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-286] R11-94 lawful HOLD (eighth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at 57673605 (sweep-373, foreign domain); shard+refine+carry empty, census 414 tetrakis/trioct/trit exact-pinned zero drift, 127 struct-domain all accounted, kestrel +1 foreign fauna; native cron-unpayable owed board rides; zero mutations (D+0, E+0) (D+0, E+0)
 
+- [struct-287] R11-95 lawful HOLD (ninth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at dd65a8e9 (struct-286, own prior hold); shard+refine+carry empty, census 414 tetrakis/trioct/trit PIN_EXACT zero drift, 127 struct-domain all accounted; native cron-unpayable owed board rides (tetrakis/trit/trioct v1 ZAI-fallback judgments banked as re-judge substrate); zero mutations/uploads/verbs (D+0, E+0) (D+0, E+0)
+
 **Running total: 2371094 / 2000000**
