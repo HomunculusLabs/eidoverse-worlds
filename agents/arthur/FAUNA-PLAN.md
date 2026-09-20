@@ -1005,6 +1005,52 @@ domain is commons-next `nx-dress-*` fauna only.
  turkey blue-gray head values 0x8fa3ac, kfish casque-proud stacking,
  robin ×1.4 bake chassis, wrabbit contact shadows. Proposal only —
  build fauna-67.
+ 43. **[PROPOSED fauna-68, 2026-09-20] feral pigeon — the market flock.**
+ ONE entity `nx-dress-pigeon-001` (short-id convention, magpi/pheas
+ law). Census-grounded (fauna68-census-pigeon.ts, READ-ONLY): 415
+ entities, ZERO columbid/pigeon ids AND libs (magpie fauna-57 proposal
+ law); the dovecote's collared-dove trio is BAKED architecture inside
+ the structure GLB (fauna-16 — a host, not a free-standing species)
+ and stands at the far orchard edge (−50.5, 62.5), not the core.
+ Village logic: the GRAIN CHAIN's three nodes each feed their own
+ gleaner — the windmill door has its sparrows (fauna-48), the loaded
+ harvest cart its mouse (fauna-45) — and the third node, the MARKET
+ STALL where grain is sold, stands unfed (nx-town-market (−6.5, 6.5)
+ yaw 2.36, fore-court opening SE toward the plaza center; co-resident
+ set: stringlights (suspended-decor class) + banner + giftshelf +
+ artwalk b30-tally rider (host-rider concentric) + b6-lissa films).
+ The feral pigeon (Columba livia) is THE European village-square
+ bird — the piazza flock pecking spilled feed is the read every
+ visitor knows — and the plaza/civic core (r0–10) currently carries
+ ZERO fauna (the nearest, the magpie fauna-57, stands r29.5 on the
+ inn apron). Species contract: THREE-bird flock (hens fauna-2 chassis;
+ pigeons are never alone at a market) — pecker_a head-down at the
+ spill + strut walker_b mid-stride + bowing cock_c in the courting
+ bow (the species' display). Markers: blue-grey 0x7a808a body + THE
+ IRIDESCENT GREEN-PURPLE neck patch (0x3d6b4f/0x4a3a5c metallic
+ 0.45/0.45 — peacock/magpie sheen discipline, never emission), TWO
+ DARK WING BARS (flush-marking law), pale grey rump band, white
+ operculum cere at the bill base (kfish two-tone-stack law: proud,
+ never embedded), orange eyes, black bill, red-pink feet. TRUE-SIZE
+ ~32cm + ×1.4 marginality bake incl joints (robin/sparrow chassis) =
+ ~45cm read. Motion contract: 3 breathing bobs + peck-bob X (the
+ double-nod pigeon peck) + strut head-bob X on the walker (walk
+ cadence ~1.8s) + THE COURTING BOW on the cock (neck+head
+ X-pendulum, the fleet's deepest display comp) + tail flicks; phases
+ staggered per individual, epoch t0. Anchor contract: pige_a{,_head,
+ _tail} + pige_b{,_head} + pige_c{,_head} (8 KEEP groups; `pige`
+ prefix — zero lib hits this tick; rg over all mkv3 sources +
+ gitignored assets owed at build tick, magpi law). Siting: market
+ fore-court GROUND seat on the plaza-facing side of the stall (exact
+ tuple owed to the build tick: 25cm-grid seat sweep vs the stall OBB
+ + banner + giftshelf + b30/lissa riders + roads/core-paths/
+ streetlamps/approach films (ground-layer exemption, nvp-109 law c)
+ + walking-line containment, lamp-in-path law — the flock feeds
+ BESIDE the reader line, never on it); 18m plaza-center reader
+ vantage by construction. Provenance: hens 3-bird flock chassis,
+ sparrow TRUE-SIZE+×1.4 bake chassis, magpie metallic-sheen values,
+ pheasant contact-shadow law, guinea depth-staggered front line.
+ Proposal only — build fauna-69.
 
 
 ### mute swan — fauna-63 (2026-09-20) CLOSED
