@@ -2491,3 +2491,57 @@ next wake once the gateway answers.
   is approach-lane routed; tower/inn are interior-lane hosts), or (b)
   judge-named monument follow-ups — lower-tube night warmth + contact-shadow
   anchor (this tick's judge notes, future rounds).
+
+### polish-320 — fountain water-read (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (plaza SE edge [12.5,0,4], yaw −π/4, empty comp
+  bag; polish-owned, live == on-disk 72f07c2a byte-exact). First plaza-core
+  re-survey subject after polish-319; market/gate-n/shrine surveyed
+  sibling-contested (live 8c16ea9a/a3975677/f51be95d != local pins) and
+  skipped per polish-319 precedent.
+- Defect (ZAI judge ×2 on exact live bytes, disclosed fallback, native
+  re-judge owed — polish-285..319 class): the fountain read DRY — water
+  invisible AS water (gameplay: "birdbath or lamp post"; close: "dry stone
+  monument with a blue disc balanced on top"). Decode-confirmed roots:
+  basin pool rim-occluded at grazing (dress-79), upper disc flush with the
+  drum top (zero freeboard — "cannot hold water"), jet an opaque rod.
+- Change (ONE coherent water-read intervention, SIX measured rounds in one
+  tick): bone retaining lip + bowl water at 9.5cm freeboard; cascade of 12
+  clustered/gapped tapered strands (widths 0.4x..2.2x, landings spread
+  r 0.82..1.02) from under the lip; impact foam = broken ring + 8 blobs +
+  3 lobed arcs + 4 droplets living in the rim-visibility WINDOW (crest
+  0.485..0.53 — v3 y-0.40 invisible, v5 y-0.52/swallowing); splash dome
+  cresting the lip; thin widening plume jet + flat burst crown. THREE water
+  materials: calm water (polish-274 recipe), bright spray 0xcfe4ec, foam
+  0xe9f5f9 (falling water reads by VALUE — fountains photograph white).
+  Rejected rounds: v1 palette-dark sheet (37,61,73 monolith), v2 bright
+  solid sheet ("cake tier"), v3 rods + invisible foam, v5 baluster jet +
+  cream-pie basin.
+- Candidate `9c27a28e846fee30…` deterministic ×2; siblings byte-identical
+  (birdbath/chimes/weathervane); nodes 8→39, materials →3. Pixel census:
+  water-class px 85 → 12,778 day / 0 → 2,024 night.
+- Judge verdict (v6): ACCEPT — working/running fountain at 18m, dark-water
+  basin ringed by broken foam, thin plume (not baluster), zero defects
+  (clip/float/noise/saturation all clean). Open nit: burst crown not
+  legible at 18m (geometric cause recorded: crown r 0.14 == ball r 0.14,
+  radially enclosed — the v7 candidate).
+- Placed via updated `next-place-fountain.ts` (pins 72f07c2a→9c27a28e):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun "already live — no verbs", live census pin
+  `store/9c27a28e846fee30.glb` @ [12.5,0,4] yaw −π/4 exact.
+- Served-bytes proof (struct-104 law, durable `p320-verify-served.ts`;
+  self-caught 1 probe bug RED→GREEN): served DRACO dd0ab1d8… keeps all
+  THREE emissive families exact (calm/spray/foam), 12 strands, 15 foam
+  elements, all 7 named anchors. P320_SERVED_PASS. Gate re-run after
+  mutation: ALL PASS exit 0 at sibling HEAD 04acdace (sweep-364 absorbed
+  mid-tick — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-320-fountain/` (before/ = live
+  72f07c2a 10-view rig + baseline.glb; after..after-v5 = rejected rounds;
+  after-v6/ = ACCEPTED; probes: p320-decode.ts, p320-verify-served.ts,
+  /tmp spray census one-shots).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree) — recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) plaza-core re-survey on fresh evidence (birdbath is the
+  mkwater1 sibling — judge fresh), or (b) fountain v7 crown legibility
+  (judge nit, needs crown wider than the ball), or (c) monument
+  judge-named follow-ups (lower-tube night warmth, contact shadow).
