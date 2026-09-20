@@ -2312,3 +2312,81 @@ next wake once the gateway answers.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) optional
   judge-noted future: warm rim-kiss on the ring crest near the lantern
   (restrained), well rope thickness (polish-310 lineage).
+
+### polish-317 — well rope mechanism (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-well` (same tuple as polish-313..316, empty comp
+  bag — census-fresh this tick). Build source `assets/mkvillage-civic.ts`
+  (well block) -> `village_well.glb` (live was f6320f9f, polish-316's
+  cast-light build; on-disk sha == live exact).
+- Defect (queue head named at polish-315/316 close, judged fresh on exact
+  live bytes via NEW `p317-rope-rig.ts` — polish-307 rig-law: frame the
+  element under judgment; the rope/bucket zone was never framed): the rope
+  mechanism read as RIGID ARCHITECTURE — close judges: the square 0.03
+  BONE rod read as "wooden dowel"/"post"/"mooring line" (~45% of post
+  width), flush merges at both ends ("pole glued to box", "column
+  supporting the beam"), no knot, no pulley; the bucket read as a crate
+  with no tie. polish-310 bell-rope lineage at well scale.
+- Change (ONE intervention, 7 measured judge rounds — v1 rejected: bell-
+  tower-canon olive rope separated from the LIGHT-olive wood frame by
+  value only; v2 rejected: sheave entombed inside the housing (polish-52
+  class) + knot sub-resolution; v3 rejected: tail floated 8mm beside the
+  wheel tangent and its end-knot merged into the main knot reading as a
+  "stray sphere"; v4 partial: wrap arc added but 180° left wheel face
+  visible; v5: brass bail arc (iron arc read "same tan as rope");
+  v6: lugs lifted proud + 270° wrap — still a gap read; v7 ACCEPTED):
+  round hemp rope r 0.016 in pale tan 0xcdb67e (hue-flip vs olive wood),
+  FULL-CIRCLE rope wrap (TorusGeometry r 0.046 tube 0.012) riding the
+  brass sheave rim — rope-in-groove from every vantage, top disappears
+  into the block slot; iron pulley block with EXPOSED brass sheave
+  (z ±0.026 beyond cheeks ±0.007, 14mm below); short kicked haul tail
+  (r 0.012, 19cm) leaving the wrap's E tangent with a whipped end knot;
+  brass bail arc (r 0.09) over the bucket with barrel knot at the apex
+  (seats across it) and brass lug pads cresting the rim 1.4cm proud.
+- Candidate `605bb2c2eba1327d552de392be4631d4f972e44ea3268363e15760ef8e0eefcd`
+  deterministic x2 (mtime-verified); round-trip control: HEAD source
+  rebuilt reproduced live f6320f9f byte-exact (determinism re-proven);
+  banner sibling byte-identical to its live pin d32e7bcb (edit confined).
+  Nodes 26 -> 35 (9 new named mechanism anchors), NaN 0/2361+.
+- Falsification: final judge (ZAI fallback disclosed — no native vision
+  loadable this cron session, polish-285..316 class, native re-judge
+  owed): pulley YES (continuous ring, no gap between ring and strand),
+  tie YES (knot-as-lashing, brass-vs-rope separation, both pads proud),
+  tail YES (free end, unambiguous), OVERALL YES — believable well-bucket
+  mechanism, "hierarchy reads instantly"; zero disqualifying geometry.
+  The judge's one ask (does the ring close behind the wheel) is answered
+  by construction: full TorusGeometry. Pixel diffs vs baseline confined
+  to the mechanism column x[381..592] (aerial 0 px — mechanism under the
+  roof; 18m gameplay/night 100 px sub-pixel; westclose 764 px). Judge
+  misreads falsified by decode/probe where they occurred (v6 "arc leg
+  draping over the edge" = the merged knot cluster, arc lies in z=0
+  plane; v5 "no E lug" = lugs flush inside the top plane — the REAL
+  entombment, cured v6).
+- Placed via NEW dedicated placer `next-place-polish317-well.ts`
+  (p316 chassis, pins f6320f9f -> 605bb2c2): PLACED_VERIFIED, 1 upload +
+  1 verb, comp bag {} preserved, idempotent rerun already-live-no-verbs,
+  live census pin `store/605bb2c2eba1327d.glb` @ [30,0,-4.5] yaw 0 exact.
+- Served-bytes proof (struct-104 law, durable probe
+  `agents/arthur/p317-verify-served.ts`): served DRACO 71f7552b… keeps
+  all 10 mechanism anchors at exact authored bands (rope 1.31..1.60, wrap
+  1.587..1.703, knot 1.258..1.342, sheave 1.632..1.658, lugs crest
+  1.214..1.242 > rim 1.22, handle apex 1.321), both COLOR_0 families
+  exact after x257 UINT16 normalization (rope tan 156,119,53; brass
+  90,92,17 — p314 value-range lane law), polish-313 water / 314 wood /
+  315 lantern glow3 / 316 cast-band glow0 regressions all intact,
+  0 non-finite. Probe self-caught 3 of its own bugs pre-truth (wrong
+  served-URL form, nodeTr not covering regression meshes, UINT16 color
+  scale + forgotten tube radius in the handle-band gate) — RED->GREEN.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD a2a72636
+  (fauna-56 landed mid-tick — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-317-well-rope/` (before/ = live
+  f6320f9f 18-view rig incl. the 6 new rope-rig views + baseline.glb;
+  after/ = v1 ff62d1a9; after-v2 d9d29997; after-v3 2e773b6e;
+  after-v4 0fc987e0; after-v5 4c3e033f; after-v6 aaa21499; after-v7
+  605bb2c2 = ACCEPTED; probes: p317-rope-rig.ts, p317-verify-served.ts,
+  /tmp pixdiff/hue/abdiff one-shots).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) the
+  two judge-named future notes — warm ring-crest rim-kiss near the
+  lantern (polish-316 lineage), bucket staves/rim read (v7 judge:
+  "plain box, no staves" — a value/geometry candidate, judge fresh
+  first).
