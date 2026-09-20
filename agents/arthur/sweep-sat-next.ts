@@ -203,6 +203,29 @@ const ALLOWED = new Set<string>([
   // either id re-surfaces as census drift at 16-hex precision and
   // re-derives this class.
   "nx-dress-stork-001|nx-struct-millrace",
+  // sweep-370 (standing-precedent class, angler|reedpool sweep-42 +
+  // heron|reedpool sweep-332 tier): fauna-63 mute swan PEN+COB pair in
+  // the reedpool S-lobe open water — DESIGNED concentric water-rider
+  // contact, declared in the sibling placement contract
+  // (fauna63-place-swan.ts header: FRAME-COPY WATER-RIDER seat, ducks
+  // fauna-3 / frog fauna-29 class, entity origin == reedpool host
+  // origin + host-local seat (-1.6,-1.5), PY = water top 0.08093 −
+  // baked WL 0.026 = 0.05493 duck/fauna-31 waterline law; host-gated
+  // at 7d770620 artwalk-39 law). Re-verified fresh at sweep-370 against
+  // the LIVE seat + LOCAL bytes: local sha16 9206edbedd472f61 == live
+  // lib prefix EXACT (content-addressed identity); fauna63-decode-swan
+  // re-run GREEN (6 anchors, keel breaks waterline, hull above water,
+  // cocked tail, RED stork control); MEMBER-GATE decode: the only
+  // geometry reaching the bridge-deck x-band (x > -0.95) is the
+  // ripple-wake waterline at y 0.028..0.045 vs deck band y 0.175..0.265
+  // = 0.130m vertical clearance, NO overlap; worst OTHER solid gap
+  // 0.591m (S sill), reed clusters ≥0.810m, masts ≥2.325m. The SAT
+  // -1.687 is the concentric water-rider design itself (bird floats IN
+  // the pool film — 2D SAT is blind to the member-gated vertical
+  // evidence). Evidence: SWEEP-PLAN sweep-370 row. Any pos/lib drift on
+  // either id re-surfaces as census drift at 16-hex precision and
+  // re-derives this class.
+  "nx-dress-swan-001|nx-struct-reedpool",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });

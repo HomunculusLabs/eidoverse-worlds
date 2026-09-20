@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 412,
+  "count": 413,
   "entities": [
     {
       "id": "nx-hearth",
@@ -18531,6 +18531,124 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-swan-001",
+      "kind": "thing",
+      "pos": [
+        8.123,
+        0.05493,
+        -92.482
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/9206edbedd472f61.glb",
+      "bbox": {
+        "min": [
+          -3.214,
+          -0.061,
+          -2.709
+        ],
+        "max": [
+          -0.908,
+          1.369,
+          -0.813
+        ],
+        "size": [
+          2.305,
+          1.429,
+          1.896
+        ],
+        "center": [
+          -2.061,
+          0.654,
+          -1.761
+        ]
+      },
+      "compKeys": [
+        "motion:swan_a",
+        "motion:swan_a_head",
+        "motion:swan_a_neck",
+        "motion:swan_b",
+        "motion:swan_b_neck"
+      ],
+      "comp": {
+        "motion:swan_a": {
+          "type": "bob",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "amp": 0.006,
+          "period": 6.2,
+          "phase": 0,
+          "t0": 1789909743944
+        },
+        "motion:swan_a_neck": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.07,
+          "period": 8,
+          "phase": 1.2,
+          "t0": 1789909743944
+        },
+        "motion:swan_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 9.5,
+          "phase": 2.4,
+          "t0": 1789909743944
+        },
+        "motion:swan_b": {
+          "type": "bob",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "amp": 0.005,
+          "period": 5.6,
+          "phase": 0.6,
+          "t0": 1789909743944
+        },
+        "motion:swan_b_neck": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.1,
+          "period": 3.8,
+          "phase": 1.8,
+          "t0": 1789909743944
+        }
+      }
     }
   ]
 }
