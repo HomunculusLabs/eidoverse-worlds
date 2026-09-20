@@ -10,7 +10,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-town-monument";
 const FILE = `${ROOT}/agents/arthur/assets/village_monument3.glb`;
-const REVIEWED_SHA = "43c9dcf3ee52c6f30ff2c82d724fbaa25135a6419714021cf86d8c74ed1a050a";
+const REVIEWED_SHA = "cfbb31a637ea7b743c8dd09ae3a5a9cd5d29134c658e96788d3cb90df464adae";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [-7, 0, -7] as [number, number, number], yaw: 0.7853981633974483, scale: 1 };
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -49,7 +49,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "monument — polish-327 contact shadow anchor");
+  u.searchParams.set("name", "monument — polish-328 satellite-bead material truth");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {

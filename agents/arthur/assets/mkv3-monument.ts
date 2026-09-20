@@ -108,6 +108,8 @@ knot.position.y = 2.05;
 //   bead (0.58 lum) and every plaza beacon. Sole user of this signature —
 //   no mergekit collision by construction.
 const knotMat = new THREE.MeshStandardMaterial({ color: 0xc9a86a, roughness: 0.45, metalness: 0.15, emissive: new THREE.Color(0xffc98a), emissiveIntensity: 0.025 });
+// polish-328 satellite-bead material: bell-gold PBR + subtle same-hue floor
+const beadMat = new THREE.MeshStandardMaterial({ color: 0xd9ac52, roughness: 0.45, metalness: 0.15, emissive: new THREE.Color(0xffc98a), emissiveIntensity: 0.02 });
 const core = new THREE.Mesh(
     new THREE.TorusKnotGeometry(0.85, 0.16, 140, 18, 2, 5),
     knotMat,
@@ -119,9 +121,22 @@ knot.add(core);
 // ALL six beads onto a single line at (±0.77, 0, 0) — the "stray dark dots"
 // seen at the knot's edge in renders. Parametrize on the knot's real path:
 // p=2 vertical wave, q=5 around the ring, so beads ride the tube (r 0.85).
+// polish-328: bead material TRUTH (judge-confirmed defect on fresh pixels:
+// 4 dark specks ~55-60% darker than the knot, no specular, faceted-against-
+// smooth-tube = "dirt/placeholder" read — the polish-289/307 COLOR_0-only
+// legacy class; mat(0xe8caa0,0.3,0.8) params never reached the wire, and
+// the authored COLOR_0 itself was the failing flat bone-tan). ONE coherent
+// re-author per village canon: bell-gold PBR (0xd9ac52 r.45 m.15, the
+// polish-307/319 recipe proven at 18m on this exact monument) + a subtle
+// same-hue emissive floor (polish-319 v3 law: LINEAR, dark-zone-only,
+// below the knot's own 0.025 floor) + smooth spheres (SphereGeometry r 0.07
+// 12x8, replacing the faceted icosahedron) so accent grammar matches the
+// smooth tube. All six beads share ONE material — mergekit folds them into
+// the bead bucket (no new KEEP name; they are statics riding the knot
+// GROUP's spin).
 for (let s = 0; s < 6; s++) {
     const t = (s / 6) * Math.PI * 2;
-    const bead = new THREE.Mesh(new THREE.IcosahedronGeometry(0.07, 0), mat(0xe8caa0, 0.3, 0.8));
+    const bead = new THREE.Mesh(new THREE.SphereGeometry(0.07, 12, 8), beadMat);
     bead.name = `bead_${s}`;
     bead.position.set(Math.cos(5 * t) * 0.85, Math.sin(2 * t) * 0.35, Math.sin(5 * t) * 0.85);
     knot.add(bead);

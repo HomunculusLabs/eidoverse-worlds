@@ -2872,6 +2872,71 @@ next wake once the gateway answers.
   arc segments) named by the day judge as the strongest remaining
   regularity anchors — a future round if 18m evidence warrants.
 
+### polish-328 — monument satellite-bead material truth (ACCEPTED, LIVE)
+
+- Subject: `nx-town-monument` (plaza NW, same tuple as polish-319/327; empty
+  comp bag). Build source `assets/mkv3-monument.ts` (live was 43c9dcf3,
+  polish-327's contact-shadow build; on-disk sha == live exact at survey).
+  Queue head from polish-327 close.
+- Defect (ZAI judge on fresh baseline pixels, disclosed fallback — no native
+  vision tool loadable in this cron session, polish-285..327 class, native
+  re-judge owed): the 6 satellite beads exported via `mat(0xe8caa0, 0.3,
+  0.8)` = the legacy COLOR_0-only lane (rough/metal params never reached the
+  wire, polish-289/307 class) — judge read them as 4 dark stray specks
+  ~55-60% darker than the knot, no specular, faceted-against-smooth-tube
+  ("dirt/placeholder/defect" read); at 18m one read as a detached dot.
+- Change (ONE coherent bead re-author): bell-gold PBR (0xd9ac52, r 0.45,
+  m 0.15 — the polish-307/319 recipe proven at 18m on this exact monument)
+  + subtle same-hue emissive floor 0xffc98a @ 0.02 (LINEAR [0.02,0.0117,
+  0.0051], below the knot's own 0.025 floor — polish-319 v3 law) + smooth
+  spheres (SphereGeometry r 0.07 12x8 replacing the faceted icosahedra).
+  All six beads share ONE material; they fold into the bead bucket riding
+  the knot GROUP's spin (no new KEEP name).
+- Candidate `cfbb31a637ea7b743c8dd09ae3a5a9cd5d29134c658e96788d3cb90df464adae`
+  deterministic x2 (mtime-verified). Decode probe `p328-decode.ts`
+  P328_DECODE_PASS (15 gates; probe self-caught its own bufferView-offset
+  bug RED->GREEN — GLB bufferView offsets are BIN-CHUNK-RELATIVE, not
+  absolute file offsets; absolute reads returned denormals ~1e-34): bead
+  material exact, 702 verts = 6x117 spheres, 100% on the knot path
+  (r 0.7..1.0, |y|<0.48), accessor envelope [-0.92,-0.373,-0.806]..matches
+  source math, emissive set stays exactly 3 (knot/lamp/bead — no stray),
+  discs-2 + knot/lamp regressions intact, 0 non-finite.
+- Falsification (3 A/B judges, ZAI fallback disclosed): DAY CLOSE — B
+  clearly better, 4/4 targeted beads cured (L~25 -> matched-family brass
+  9/9/9/8.5 out of 10, specular dots present, smooth spheres), zero new
+  defects, ~98% pixel-match outside bead regions. The judge's "unchanged
+  bead #5 (bright lemon at base)" is source-falsified: decode proves all
+  six beads share ONE material — that element is the under-glow LAMP
+  (emissive 0.9, intentional, polish-319's accepted night signal). NIGHT
+  CLOSE — clearly better: beads readable as quiet gold accents without
+  glow-orbs, hierarchy lamp > knot speculars > beads > tube intact, zero
+  bloom/bleed/artifacts, change provably material-scoped. 18M GAMEPLAY —
+  better: "the problematic dark detached dot visible in A is gone in B",
+  beads read as gold punctuation on the silhouette; identity/plinth/
+  contact-shadow/plaque approach all verified unchanged. Judge nit
+  (recorded, not treated): bead saturation ~10% hotter than the knot body —
+  within accent intent per the judge's own tolerance.
+- Placed via updated `next-place-monument.ts` (pins 43c9dcf3->cfbb31a6):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun "already live at reviewed tuple — no verbs", live census pin
+  `store/cfbb31a637ea7b74.glb` @ [-7,0,-7] yaw 0.7853981633974483 exact.
+- Served-bytes proof (struct-104 law, durable probe `p328-verify-served.ts`,
+  DRACO chassis p327): P328_SERVED_PASS (15 gates) — served bytes keep the
+  bead material + PBR + emissive exact, bead bucket 624 verts (DRACO dedup
+  from 702) 100% on-path, emissive set 3, both contact-shadow discs, knot/
+  lamp regressions, 0 non-finite.
+- Gate re-run after mutation: ALL PASS exit 0. Excalibur checkpoint: cast
+  reachable at `vessel/workings/eidoverse-hero-assets` (polish-326/327
+  precedent) — appending post-commit.
+- Evidence: `reviews/hero-assets/polish-328-monument/` (baseline.glb =
+  before-bytes captured FIRST; beads-before/ + beads-after/ = identical
+  11-view live-light rigs; probes: p328-decode.ts, p328-verify-served.ts).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) monument
+  judge-named candidates — knot specular/metal response at day (polish-319
+  judge #2, needs sun falsification), plaque night misread ("vent/grille"
+  note, value candidate), bead saturation trim (-10% if a future judge
+  flags it again).
+
 ### polish-327 — monument contact-shadow anchor (ACCEPTED, LIVE)
 
 - Subject: `nx-town-monument` (plaza NW, pos [-7,0,-7], yaw 0.7853981633974483,
