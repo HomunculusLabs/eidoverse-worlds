@@ -21797,3 +21797,173 @@ next form; SW band now AT CAP 6 too); the pentagonal hexecontahedron
 + snub cube/dodeca stay HELD for Bill's handedness call (coin-flip =
 inventing a preference); rhombic dodeca BARRED rt-kin — or Bill's
 verdict routing.
+
+## struct-273 (2026-09-20): R11-81 THE TETRAKIS HEXAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-274 committed carry)
+
+273%3=0 refine-slot tick consumed by the judge-debt cadence law: refine
+pool empty of payable items (40+ ticks), bank EMPTY after struct-272
+placement (triakis LIVE, SW band AT CAP 6) -> build+judge per the
+struct-240..272 precedent. Gate ALL PASS real exit 0 tick-start (unpiped
+/tmp/struct273-gate.log at e2e9e9cb dress-206 HEAD, foreign domain).
+Shard drained fresh (IMPROVE-PLAN grep OPEN nx-struct rows: 0 hits).
+Ledger max re-derived struct-272 -> struct-273 (numeric extraction,
+re-checked immediately before append). Native absent from the cron
+catalog all tick (tool_search fresh: terminal + zai-vision + repoprompt
+only — same disclosed cron-unpayable class as struct-169..272; owed
+board gains tetrakis v1, joins the riding queue).
+
+FORM SELECTION fresh grep (triakis|tetrakis|pentakis over the five-file
+set): 0 real claims — the three remaining small Catalans unclaimed.
+Band audit from the plan's own seat records: triakis tetra's parent
+tret stands E (AT CAP 6); tcube's S-SW band AT CAP 6; tetrakis cube's
+parent toct + triakis octa's parents toct/trcubo stand N-E (5/6). The
+tetrakis hexahedron is the ONLY remaining Catalan whose parent's band
+holds its last slot — dual-of-standing-parent move a FIFTH time
+(gsd->gdodec, trico->dtria, rico->deltoid, tdodec->triakis,
+toct->tetrakis). ACHIRAL, machine-proven (T0b: all six mirror planes
+close both vertex sets). Per struct-272's closing directive the R11-82
+seat goes to the N-E band beside parent toct (5/6 -> 6 at cap,
+disclosed).
+
+CONCEPT: SIX DOORS, READ THROUGH THE LOOKING GLASS. The parent told the
+SPACE FILLER — the one cell that tiles the universe by translation
+alone, its six squares the six doors to the six neighboring cells; the
+polar reciprocal about its midsphere (rho == 1/sqrt(2) EXACT) turns
+every parent face into a POINT and every one of the 24 toct vertices
+into a NEAR-EQUILATERAL ISOCELES sail — one sq apex + two hex wings,
+every sail kissing ONE insphere (Catalan tangent property, T6). THE
+RANK INVERSION IS THE STORY: the eight hexagon-faces stand as the
+EIGHT GREAT OUTER POINTS at sqrt(3)/2 along <111> — the CUBE ITSELF
+(the closed form the dual owes its grandparent octahedron, the
+door-framed cube surfacing through the cut) — while the six door-ghosts
+sink to the inner rank (3/4 along the axes, degree 4, the sharpest
+apexes). Closed forms: apex arccos(1/9) / base arccos(2/3) / long-base
+ratio exactly 3/4 — the shallowest relief in the family, the parent's
+t=1/3 razor deciding the rise. Presentation: HEX-RANK POINT-DOWN
+3-fold on the parent's own seated frame INHERITED (hexagon-down <111>
++ up-door twist-snap — no re-seat; one upper door-ghost apex dead-on
+az 0). STONE: all 24 sails (ONE face family = ONE sail material) + the
+TWENTY-FOUR-sided dais (one side per sail, theme-number law). IRON:
+all 36 seam bonds + crown finial stem. Night: the parent's OWN bead
+census told again — SIX brass beads at the six door-ghost apexes in
+two staggered triangles (3 upper + 3 lower, one dead at az 0), NONE
+pressed (the parent's honest idiom: the doors live at the waist) +
+crown finial = glow_tetrakis_7.
+
+PARAMETRIZATION (exact, closed-form): parent toct rebuilt verbatim
+from struct-245's closed forms (grandparent octa (±1,0,0)-cyclic, edge
+sqrt(2); cut at 1/3; 24 verts; R (a/2)sqrt(10)); midsphere rho
+1/sqrt(2); dual radii hex sqrt(3)/2 (the cube corners) / sq 3/4
+(door ghosts); SCALE 3.983716857 to height 6.9 (family ladder next
+step: rico 6.3 -> dtria 6.6 -> deltoid 6.7 -> triakis 6.8 -> 6.9);
+dais 24-gon R3.45 APOTHEM-FIRST (apothem 3.420 >= reach+rod 3.313);
+envelope 6.90x8.67x6.90.
+
+PROBE (struct273-probe-tetrakis.ts, tracked) 10/10 ALL PASS real exit
+0 + RED control exit 1 (5 law FAILs on displaced dual vertex 3):
+T0 census 14/36/24 + midsphere spread 0.0e+0 + rho == 1/sqrt2 + THE
+RANK INVERSION (hex sqrt(3)/2 outermost > sq 3/4 innermost, ratio
+1.1547 == 2/sqrt3); T0b ACHIRALITY (all six mirror planes close);
+T1 Euler 14-36+24=2; T2 sail census (angle multiset IDENTICAL across
+all 24 faces; isoceles mirror exact; THE CLOSED FORMS apex
+arccos(1/9)=83.6206deg / base arccos(2/3)=48.1897deg / long-base
+ratio exactly 3/4); T3 degrees 4/6 by rank; T4 manifold 48 slots;
+T5 exactly two edge classes hex-sq 24 + hex-hex 12, zero sq-sq (the
+doors never met in the parent); T6 THE POLAR RECIPROCAL (all 24 sails
+kiss ONE insphere, worst dev 2.7e-3 scaled vs depth 2.672359; every
+face normal EXACTLY one toct vertex direction, bijection 24/24); T7
+seat (foot hex point ON axis AT dais top 0.300000 AND lowest vertex
+overall, margin 1.7250m; 120-deg symmetry 0 misses; central inversion
+exact; height 6.900000; reach+rod 3.313 <= apothem 3.420; sq triads
+level/radii exact, 60deg interleave measured, az0 snap INHERITED,
+lower ring exact inversion mirror; beads 6 aloft NONE pressed;
+finial clears worst occluder by 2.595m); T8 immersion worst poke
+-0.012 fully inside.
+
+ONE probe self-catch RED-first (zero wasted builds): my T2 first
+draft claimed apex-supplement == the tetrahedral angle — a wrong
+mental shortcut, red-honestly falsified by the MEASURED 83.6206deg on
+the first run (the LAW was wrong, not the geometry — struct-271's own
+self-catch class); corrected to the exact closed forms (apex
+arccos(1/9) / base arccos(2/3) / ratio 3/4), re-run ALL PASS.
+
+BUILD (agents/arthur/assets/mkv3-tetrakis.ts, staged -f): root
+identity (struct-188); texMat lanes tetrakis_stone/tetrakis_iron
+(struct-38); bead emissive 0x9a7030 @ 1.4 in-GLB (family build-time
+law); 62 pre-merge meshes + 1 KEEP glow group glow_tetrakis_7;
+envelope law green in-build == probe contract. v1 deterministic x3
+runs byte-identical sha256
+f2e8a62adf84c7c854f9be64948b833ae611dfe6b13d83ae15b65dd09265434a
+(mtime-verified fresh).
+
+DECODE (struct273-decode-tetrakis.ts, tracked) 8/8 ALL PASS real
+exit 0: D1 census 3 nodes; D2 24-gon dais TRUE box ±3.450 corners
+present sole min y -0.000000; D3 2752 iron verts worst 60.00mm (<=
+64) over the 36 exact segments + the NAMED finial stem, coverage
+36/36; D4 576 plate verts worst 58mm (<= 62 shell); D5 beads 7/7
+clusters emissive sole-night; D6 grounding sole at grade + all 6
+apex beads ALOFT none pressed; D7 envelope drift 0.00mm; D8 texMats
+2/2. RED control (village_toct3.glb — the parent's own bytes): census
+FAIL clean-stop exit 1 real (unpiped).
+
+RENDERS: struct273-render-tetrakis.ts (tracked chassis, struct271
+lineage) 9 frames on the EXACT pinned bytes — bounds
+min[-3.450,-0.000,-3.450] max[3.450,8.670,3.450] == probe ENVELOPE
+contract (dais extents included); [transcription self-catch: the
+first draft of this line carried the triakis block's -3.250/8.570
+figures — caught on re-read before commit, render stdout
+authoritative];
+reviews/struct273-tetrakis/ (9 frames, ignored — sha pin above is the
+durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as tetrakis v1):
+day gameplay 18m 4/4 PASS (identity "unmistakably a deliberate
+mathematical solid... consistent with a cube carrying a shallow
+pyramid on each of its six faces"; closed hull zero floats/gaps;
+grounded with contact + attached cast shadow; counts 4 apex beads +
+finial all seated at vertices) — the judge's minor note (lower-left
+shade contrast) is cosmetic distance-residual, family-wide class.
+Night 3/3 PASS (5 warm points = 4 apex subset + crown finial,
+staggered; every bead seated ON geometry; zero bloom/halo; dark
+panels stay dark; silhouette reads). Closeface 4/5 (sail joinery
+clean + uniform shadow-gap reveal; two material families distinct;
+beads seated AT junctions only; zero z-fighting; the ONE FAIL is MY
+criterion artifact — 'dais facet edges legible' is not the family
+dais law (regularity + margin), a 24-gon at R3.45 has ~93mm sagitta
+and no fleet sibling shows facets either (rico 62-gon, dtria 120-gon
+'effectively the R-circle'); decode D2 proves the 24 facets exist
+geometrically). Top-view dais probe returned FAIL on occlusion — the
+point-down solid's 3.253m waist fully hides the 3.45m dais from any
+high vantage (sight line from y10 to the rim crosses the waist at
+x2.33 < 3.253) — the dais EXISTS by decode D2 (276 verts, corners
+present) and reads at walking distance (gameplay judge named it);
+classified probe-artifact, not defect (struct-269 class, decode
+outranks the render claim, probe law 11). 11/12 real criteria PASS,
+zero real defects. v1 ACCEPTED BANKED NOT PLACED.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-274
+committed carry (fresh census scan, N-E band beside parent toct
+(5/6 -> 6 at cap, disclosed), 8m NN + per-district soft cap 6,
+24-gon-exact polygon SAT struct-19/260 class, oblique-yaw struct-104
+band, terrain preflight over the TRUE rotated 24-gon, hash-gated
+plain spawn nx-struct-tetrakis, comp {}, ground circuit walk). Folly
+class. Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
+
+Files: struct273-probe-tetrakis.ts + struct273-decode-tetrakis.ts +
+struct273-render-tetrakis.ts + assets/mkv3-tetrakis.ts (NEW, tracked;
+mk staged -f per the ignored-parent law) + STRUCTURES-PLAN.md (this
+block) + IMPROVEMENTS.md (one append struct-273, D+0 E+0).
+
+Next queue head: struct-274 placement tick (the committed carry
+above). Then R11-83 build sweep re-derives from the form ledger:
+triakis tetra/octa remain unclaimed and achiral (parents tret E-band
+AT CAP, toct/trcubo N-E AT CAP after struct-274 — every parent band
+then capped; the next Catalan seats OUTSIDE its parent's quarter by
+necessity, a first for the family — surface in the plan when it
+lands); pentagonal hexecontahedron + snub cube/dodeca stay HELD for
+Bill's handedness call (coin-flip = inventing a preference); rhombic
+dodeca BARRED rt-kin; fresh five-file grep before building — or
+Bill's verdict routing.
