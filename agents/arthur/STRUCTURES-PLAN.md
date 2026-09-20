@@ -22684,3 +22684,45 @@ struct-279, D+0 E+0).
 
 Next queue head: Bill's routing — a placement/build tick executes it
 the same wakeup; until then the hold repeats with one-line status.
+
+## struct-280 (2026-09-20): R11-88 lawful HOLD — build ticks hold on
+## Bill's next-family decision (surfaced struct-278, second consecutive)
+
+280%3=2 build-slot tick. Gate ALL PASS real exit 0 tick-start (unpiped,
+GATE_EXIT:0 at 454828db dress-212 HEAD, foreign domain). No committed
+placement carry banked (trit/trioct both LIVE); shard re-derived empty
+fresh (IMPROVE-PLAN grep OPEN nx-struct rows: 0 hits); refine pool empty
+of payable items (40+ ticks); ledger max re-derived struct-279 ->
+struct-280 immediately before append (numeric extraction; entry verified
+landed exactly once).
+
+Native vision: ABSENT from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — the disclosed
+cron-unpayable class, struct-169..279 lineage). Owed board unchanged,
+riding: tetrakis/trit/trioct v1 ZAI-fallback judgments (banked frames
+are the re-judge substrate for the first windowed session with native).
+
+No verdict routing in HEAD since the struct-278 surfacing (git log
+inspected: dress-212/sweep-369/struct-279/vocab-37/polish-323/
+dress-211/sweep-368 — all foreign domain or own holds).
+
+Live census 412 entities (next-live-census.ts, exit 0): nx-struct-
+tetrakis store/f2e8a62adf84c7c8.glb [93.474581, -0.019616, -45.590599]
+yaw 4.642576; nx-struct-trioct store/9f5d016efcb3a6a5.glb [-95.721566,
+0.036572, 46.686527] yaw 1.500983; nx-struct-trit store/c46f5a580e1da32b.
+glb [60.225526, -0.032430, -86.010965] yaw 5.148721 — all three at
+their exact pinned tuples, zero drift.
+
+DISPOSITION: lawful hold (second consecutive). The blocker is Bill's
+next-family routing (struct-278 surfaced block; say-once satisfied
+struct-279, this tick's report carries the one-line pointer): Johnson
+solids, Kepler-Poinsot, the chiral pair's handedness call, or his own
+routing; the probe/decode/render chassis extends to any of them on his
+word. Zero world mutations, uploads, verbs, comp-edits, shared-budget
+use. Zero pushes.
+
+Files: STRUCTURES-PLAN.md (this block) + IMPROVEMENTS.md (one append
+struct-280, D+0 E+0).
+
+Next queue head: unchanged — Bill's routing executes the same wakeup it
+arrives; until then the hold repeats with one-line status.
