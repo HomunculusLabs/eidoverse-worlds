@@ -6943,4 +6943,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-292] R11-100 lawful HOLD (fourteenth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at 21968ec0 (struct-291, own prior hold); shard+refine+carry empty fresh, census 415 quiet tetrakis/trioct/trit PIN_EXACT 3/3 zero drift, 127 struct-domain all accounted; native cron-unpayable owed board rides; zero mutations (D+0, E+0) (D+0, E+0)
 
+- [dress-220] 109th post-close lawful HOLD — gate ALL PASS exit 0 FIRST at ef28527b (polish-328, foreign); probe HOLD_VERIFY_PASS first run zero self-catches: census 415==415 quiet-count epoch, ONE classified move all-at-source (nx-town-monument 43c9dcf3->cfbb31a6 tuple-identical [-7,0,-7] yaw pi/4, polish-328 ef28527b; ledger line 6942 + placer lines 11-15 verbatim; polish domain off-limits); 83 dress ids stable + 1 classified foreign = all accounted (29 fleet + 31 fauna + 23 non-fleet); pins 5/5 hosts 4/4 EXACT, stork 2.952m, swan seat 0.0; funguslogs LIVE fbc626eb; zero intake; Bill eye-gate 12cec3fa unchanged; zero mutations (D+0, E+0)
+
 **Running total: 2371099 / 2000000**
