@@ -20660,3 +20660,126 @@ this tick's tunnel star); the snub cube/dodeca stay named for Bill's
 handedness call; rhombic solids / non-Archimedean families per
 struct-253's grep; fresh five-file grep to confirm the gap before
 building — or Bill's verdict routing.
+
+## struct-264 (2026-09-19): R11-72 THE GREAT DODECAHEDRON PLACED —
+## the struct-263 committed carry executed (W-NW band fifth form az268.5 r98.5)
+
+264%3=0 refine slot with FULL bank (gdodec v1 accepted struct-263) ->
+committed carry per the struct-240..263 precedent (refine pool empty of
+payable items 40+ ticks). Gate ALL PASS real exit 0 tick-start (unpiped,
+GATE_EXIT:0 at 86b8c8c6 epoch — sweep-353 HEAD). Shard drained fresh
+(IMPROVE-PLAN md5 7fa8a22499d8e38dbde7031e7ed337cd unchanged since
+struct-238, 0 OPEN nx-struct rows). Ledger max re-derived struct-263 ->
+tag struct-264 (numeric extraction, re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search
+fresh: terminal + zai-vision + repoprompt only — same disclosed
+cron-unpayable class as struct-169..263; placement tick owes no new
+judgment — the gdodec was judged struct-263 ZAI 11/11; native re-judge
+rides the owed board as gdodec v1). No interrupted 264 window existed
+(no struct264-*/next-place-struct264 files pre-tick).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+398e4a640fd8c69c42086572259017c70fb29cbf9805290c50724a881c9caac4 ==
+struct-263 v1 pin (byte-identical — no rebuild this tick). Decode 8/8
+ALL PASS re-run THIS tick from repo ROOT on the exact banked bytes
+(D1 3 nodes gdodec_iron+gdodec_stone+glow_gdodec_12; D2 dodecagon dais
+TRUE box ±3.300 apothem-first, corners present, sole min y −0.000000;
+D3 rods 30/30 worst 48mm; D4 sails worst 4.96mm; D5 beads 12/12; D6
+grounding half-proud; D7 drift 0.00mm; D8 texMats 2/2).
+
+SEAT (struct264-scan-gdodec, fresh 399-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.336, guaranteed overlap refused; coverage exact 1 / radial
+301 / disc 2 / exempt 4): octant audit places W-NW az225-270 as the
+under-served band (4 forms standing — skymirror az228 r89.5,
+observatory az245.5 r96, tico az264.5 r66, srcubo az261.5 r84; +
+gdodec -> 5, soft cap 6, NO exceedance). The raw scan's innermost
+lawful seats (r73.5-76.5 az265-267, gap 1.40-2.03) were REJECTED by
+the margin filter (gap >= 2.2, struct-248/254/256/258/260/262
+real-margin law). Selected: az268.5 r98.5 (-2.578429, -98.466247) —
+second-innermost margin+constellation seat (the innermost r98.0 az269.5
+carries only 0.10m NN slack — angler 8.10 vs law 8.0; real-margin
+discipline). Gap 2.43 vs nx-temple-labyrinth-0051 (exact). NN 9.46 to
+nx-struct-angler (law 8; composed with srcubo @18.3m + tico @33.0m —
+the W-NW star shelf). 12-gon-exact SAT worst 2.43 (law 1.4).
+Walk-clear 69.41. ANGLER note: nx-struct-angler stands live at az272
+r91 (city-lane relocation, sibling domain — untouched, only observed;
+it holds this seat's NN floor).
+
+SCAN SELF-CATCH THIS TICK (RED-first, zero wasted mutation): my first
+adapted LOC used the corners-on-axes phase (k*30deg) — WRONG for this
+apothem-first dais; decode D2 says the TRUE box is ±3.300 with corners
+at ±15deg+k30deg (PLINTH_ROT -pi/12). Fixed to the TRUE corner phase
+((i+0.5)*30deg) and the scan re-run before any seat number was trusted
+(dress-80 TRUE-decoded-footprint law). Also a prose-only arithmetic
+self-catch: header said R3.41247; 3.30/cos15 = 3.416408 — comment
+corrected (code always computed it).
+
+YAW LAW (procession convention, struct-217..263): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az88.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120
+- 268.5 = -388.5 -> 331.50deg -> YAW = 5.7857664704 rad. DISCLOSED:
+the gdodec is a 5-FOLD seat (probe T7: grounded pole, tip ring
+horizontal at exact 72deg azimuths, summit antipodal) and the
+oblique-lean band puts the yaw 331.5 mod 72 = 43.5deg off the 72deg
+lattice — the exact-mod bonus does NOT apply; the star family reads
+its sails at any azimuth (SSD/csaszar/gsd placed likewise under the
+same convention) and the judged framing is preserved.
+
+TERRAIN (struct264-terrain-gdodec.ts, this tick): 25pt over the TRUE
+rotated 12-gon (center + 12 verts + 12 edge-mids), spread 4.4mm,
+PY = lowest = -0.025288 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=12 class): the 12-gon dais R3.416411 APOTHEM-FIRST (TRUE
+box ±3.300) is the footprint; build envelope 6.60x7.51x6.60 — the
+solid NEVER overhangs (probe T7 footprint law extent+bead 3.2764 <=
+apothem 3.30), so the 12-gon IS the true ground footprint. Exact
+convex-polygon SAT (edge-normal axes of both polys, max-gap law)
+replaces the square-bbox proxy — struct-19/260 disc law class.
+
+PLACEMENT: next-place-struct264.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 399), NN
+floor 9.46 + exact-SAT worst 2.43 re-proven against the FRESH 399-set
+pre-verb [exact 2 radial 300 disc 2 exempt 4] + in-placer RED control
+PASS (exact-SAT at nx-craft-statuary-0026's own center -> gap -9.220),
+upload store/398e4a640fd8c69c.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [-2.578429, -0.025288,
+-98.466247] yaw 5.785766470361202 lib store/398e4a640fd8c69c.glb
+comp {} census 399->400; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+az88.5 arrival-line approach + reading-face vantage at 7m on the
+az118.5 face normal + full CW standoff circuit at 8m — no phantom
+collider; folly by presentation, the PANELLED solid star means the
+walk stays outside the 3.42m dais; walk standoff 8m applies directly,
+chord-mid clear 4.70m — the struct-263 disposition). Walk stdout
+carries the known distant support-seam diagnostics class (temple/dress
+entities, foreign lanes, abstentions only).
+
+Bill eye-check pointer: on the W-NW reach past the srcubo and the
+tico — where the gsd grew the dodecahedron's corners into spikes, THE
+GREAT DODECAHEDRON keeps the icosa's own skeleton and re-faces it:
+twelve broad PENTAGON sails, five meeting at every vertex — impossible
+for a convex solid, so the sails pass through one another, and the
+tunnels that open where they cross are the theorem the form carries:
+genus four, chi = 12-30+12 = -6, the tunnel star, Kepler's second
+(1619), dual of the small stellated dodecahedron standing across the
+village. The bottom pole stands at the dais center, its own sail
+spread horizontal at head height — a stone canopy you walk beneath
+with five iron struts splayed from the point; the summit pole rises
+7.4m. After dark, twelve warm brass vertex beads — the grounded one
+half-proud in the twelve-sided dais top.
+
+Files: struct264-scan-gdodec.ts + struct264-terrain-gdodec.ts +
+struct264-walk-gdodec.ts + next-place-struct264.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-264, D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-265 build+judge tick (R11-73, empty bank —
+re-derive the form from the ledger grep: the GREAT ICOSAHEDRON {3,5/2}
+is the Kepler-Poinsot branch's last unclaimed member (dual of the
+standing gsd, chi = 20-30+12 = +2 genus 0 — the genus contrast with
+the tunnel star); the snub cube/dodeca stay named for Bill's
+handedness call; rhombic solids / non-Archimedean families per
+struct-253's grep; fresh five-file grep to confirm the gap before
+building) or Bill's verdict routing.
