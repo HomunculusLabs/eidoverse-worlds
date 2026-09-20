@@ -1246,6 +1246,62 @@ domain is commons-next `nx-dress-*` fauna only.
     SEATED — full record below.**
 
 
+48. **[CANDIDATE — proposed fauna-74, 2026-09-20, build fauna-75] common
+    carp at the reedpool NE open water — the fleet's first FISH, the
+    angler's implied catch.** ONE entity `nx-dress-carp-001` (short-id
+    convention, magpi/pheas/hare law). Census-grounded
+    (fauna74-census-carp.ts, READ-ONLY): 418 entities, ZERO fish fauna
+    ids AND libs (magpie fauna-57 proposal law; the 18 id hits are
+    substring classes — approach-lane/lamp names carrying 'roach' inside
+    'approach', plus kfish = the kingfisher BIRD; zero lib hits) — the
+    species slot is genuinely open. Queue-law note: the domain law's
+    first-priority homestead families all STAND (goats fauna-1, ducks
+    fauna-3, bunnies ×3: hutch fauna-4 + wild fauna-38 + hare fauna-73),
+    so the honest next head is the implied-fauna law (woodpecker
+    fauna-59 class): **the angler (`nx-struct-angler`) has fished a
+    fishless pool since placement** — heron wades it, swans swim it,
+    ducks dabble it, the frog sits on it, and nothing lives UNDER the
+    surface. The reedpool is the village's richest habitat host (six
+    residents) and its water column is empty; the NE open-water quadrant
+    carries no resident at all (this tick's quadrant table: NW frog,
+    SW ducks+swan, SE heron, geese/robin on banks). The common carp
+    (Cyprinus carpio) is THE European village-pond fish — the stocked
+    water every village keeps, the dark shadow that cruises just under
+    the surface. OPAQUE-WATER VISIBILITY LAW (fauna-29 law a) governs
+    the whole build: anything below the water face is invisible by
+    construction, so the carp reads as a SURFACE EVENT — the dark
+    bronze-olive back + the dorsal fin CRESTING the water plane (the
+    cruiser's shadow), never a full fish. Species contract: SINGLE large
+    mirror carp (~65cm class, mid-band male — carp are the pool's
+    largest underwater resident), cruising posture with the tail
+    half-cocked, deep-bodied hump back, ONE tall serrated dorsal fin
+    cresting ~40mm above the waterline, dark bronze-olive 0x4a4a30 back
+    water-slotted between wake geometry, surface WAKE ONLY as furniture
+    (ducks/swan law — dark calm annulus + ripple arcs, zero ground
+    geometry, the pool IS the host). Motion contract: THE CRUISE —
+    small-radius slow orbit r 0.5-0.7 degPerSec ~8-12 (the shadow
+    circles the NE water, ducks' duck_a precedent scaled slower) + fin
+    waterline bob + a slow tail-slide Z; phases staggered, epoch t0.
+    Anchor contract: carp (orbit root) / carp_body / carp_dfin (3 KEEP
+    groups; `carp` prefix — collision-free THIS TICK: rg over mkv3
+    sources + gitignored assets = carpet/carpentry prose only, zero
+    node-name tokens; re-verify at build tick, magpi law). Siting:
+    NE open-water concentric water-rider (ducks fauna-3 / swan fauna-63
+    class): entity PY = decoded water top arithmetic (host -0.05907 +
+    local water disc top 0.140 = world 0.08093, fauna-29's exact
+    derivation) with the fin crest composed ABOVE it; exact tuple owed
+    to the build tick (25cm-grid seat sweep ON the water vs decoded
+    residents + angler empty-corner decode + rim; host tuple+lib
+    hard-gated, artwalk-39 law). Judge contract: bridge-deck TOP
+    vantage (fauna-29 law d — the surface reader looks DOWN) + SW-bank
+    18m reader line + the angler's-rod sightline (the fish he is not
+    catching, read from his own vantage). Provenance: ducks/swan
+    waterline discipline + wake idiom (the ONLY water furniture that
+    passed the 18m gate, fauna-63 r11/r12), frog surface-rider chassis
+    (y=0 seat plane law), duck_a orbit precedent, kfish water-margin
+    reader discipline. Proposal only — build fauna-75.
+
+
 ### brown hare — fauna-73 (2026-09-20) CLOSED
 - **v2 sha16 79ce2c97253bc33e** (full 79ce2c97253bc33e18c69f8e71ce51ad24210c2ae4e821ab28e2c7a5a54d88d5), NEW entity `nx-dress-hare-001` PLACED_VERIFIED at world (−24, −0.04237, −42) yaw 2.622 scale 1 — the SW meadow S reach, the plan row-47 first-choice zone center verbatim (fauna73-seat-sweep best of 1887 qualifying: worst solid gap 3.313m vs nx-mile-sw-005, far; film-clear; facing = plaza-line derived yaw — the sentinel's nose points up the SW-lane reader spoke toward the plaza). Terrain preflight at the FINAL tuple: 9pt spread 3.5mm, PY = live heightAt −0.04237. Census 417→418 exactly, 7 verbs (upload+spawn+6 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 3/3 (18m SW-lane plaza line, arrivals 0.00/0.38/0.31m; foreign support-seam stderr = temple/se-stones class, not ours), live bbox 1.552×0.809×0.83 == decode envelope. Village logic closed: the lagomorph triad stands — the DOMESTIC hutch pair (fauna-4), the WILD rabbit pair (fauna-38), and now the open-country hare that never burrows: sentinel upright on its hocks + sleeper pressed in its FORM (the walk-past-then-it-moves discovery reward), and the village's quietest open grass now carries its largest lagomorph.
 - Build: a brown-hare PAIR (ONE entity, TRUE-SIZE authored directly — fauna-13/19/21/23/24 law; body ~0.48m, ear crest 0.80: hares are big and lankier than every rabbit, carries 18m natively, no bake) — hare_a THE UPRIGHT SENTINEL on its hocks: haunch + upright deep-chest egg + forepaws planted down the chest front, THE TALL TWO-SEGMENT TAPERED EARS with BLACK TIPS (wrabbit chassis scaled honestly: lower 0.028×0.095×0.052 + upper 0.022×0.085×0.040, V-splay 0.22 rad, the black tip segment 0.055 tall cresting past the upper's end — turkey cap law), grizzled brown-gold 0x9c8a62 + dark TIK saddle caps (sheep poll-crown law: dark over the top-back only), cream inner-ear faces + vent + scut underfur, big hind feet with splay (the track signature), amber→v2 DARK proud-seated eye beads, v2 proud dark nose. hare_b FLAT IN THE FORM: pressed long-low body (0.24-scaled egg, height 0.085), ears PINNED FLAT at 1.45 rad along the back with the black tips marking the species at the rear, v2 ears outside the skull z-span (read dead-front too), hind feet peeking at the rear, scut at the far rear. Furniture: THE FORM ONLY (zoo-dump law, zero timber — the open meadow IS the habitat): pressed-earth dish (EO outer disc + EI pressed inner + EDK/EI geometric blotches — sheep-pad law: stepped tones + pebbles read earth, flat discs read decals) + 8 parted rim blades (v2: 7mm × 55mm — a grass blade, not a fence post) + 2 droppings (grain law) + contact shadows (collie #1 floating-prop cure). Anchors hare_a{,_head,_ears(nested)} + hare_b{,_head,_ears(nested)} (6 KEEP groups; `hare$|hare_` added to mergekit KEEP this tick — collision-free, rg-verified zero hits across sources + gitignored assets). 31 nodes / ~4418 tris / 26 calls.
