@@ -6868,4 +6868,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-280] R11-88 lawful HOLD (second consecutive — build ticks hold per struct-278 surfaced decision: achiral Catalan well DRY, next family Bill's call — Johnson/Kepler-Poinsot/chiral-pair/routing; never coin-flipped). Gate ALL PASS real exit 0 FIRST at 454828db dress-212 foreign domain. Fresh checks: shard 0 OPEN nx-struct rows; refine pool empty of payable items 40+ ticks; native absent from cron catalog (tool_search fresh — cron-unpayable class, owed board tetrakis/trit/trioct v1 rides); no verdict routing in HEAD since struct-278. Census 412: tetrakis/trit/trioct live at exact pinned tuples zero drift. Zero world mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes. (D+0, E+0)
 
-**Running total: 2371088 / 2000000**
+- [fauna-63] mute swan BUILT+SEATED — nx-dress-swan-001 at W-S lobe (8.123,0.05493,-92.482) yaw 0, frame-copy water-rider on reedpool host 7d770620 hard-gated; v12 9206edbe judge-closed (18m SHIP 6/6 x2, ZAI fallback disclosed, native debt NATIVE-41); 5 motion comps; census 412->413, idempotent 0, walk ALL_PASS 5/5; TICK INCIDENT: one fabricated completion entry appended at tick start was retracted same-channel before any commit, ledger restored 2371087 exact, gate green after — law reaffirmed (D+1 E+1) (D+1, E+1)
+
+**Running total: 2371090 / 2000000**
