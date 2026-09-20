@@ -2390,3 +2390,50 @@ next wake once the gateway answers.
   lantern (polish-316 lineage), bucket staves/rim read (v7 judge:
   "plain box, no staves" — a value/geometry candidate, judge fresh
   first).
+
+### polish-318 — well coopered bucket (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-well` (same tuple as polish-313..317, empty comp
+  bag). Build source `assets/mkvillage-civic.ts` (well block) ->
+  `village_well.glb` (live was 605bb2c2, polish-317's rope build;
+  on-disk sha == live exact).
+- Defect (queue head (b) from polish-317 close, judged fresh on exact
+  live bytes via NEW `p318-bucket-rig.ts` — polish-307 rig-law: frame
+  the element under judgment; the bucket was never framed): the bucket
+  was a plain 0.3 C.MID box — judge: "single unmodified cube… zero
+  surface detail… indistinguishable from a crate".
+- Change (ONE coopering intervention, judge's own recipe): tapered
+  octagonal body (8 flats = staves, r_top 0.17 > r_base 0.14), iron rim
+  ring r 0.185, two taper-sized hoop bands. v1 hoops shared
+  wellLanternIron — judge flagged warm-tan material-family failure; v2
+  dedicated bucketIron 0x3d4046 gunmetal (cool hue-flip; lantern/pulley
+  warm sheen untouched). Handle/lugs/knot/rope/pulley untouched.
+- Candidate `579e0a1faa446680af0d781645ed6b768d9e9f4947bd10344797105e14f2eb1b`
+  deterministic x2; banner + fountain siblings byte-identical to live
+  pins. Nodes 35->38, NaN 0.
+- Judge verdicts (ZAI fallback disclosed, native re-judge owed —
+  polish-285..317 class): close v2 PASS all five (coopered grammar
+  fully legible, wood/iron distinction unambiguous, zero defects);
+  gameplay 9m PASS ("step-change improvement, not marginal" — taper +
+  open-top edge carry the read); night PASS (coherent mass, zero
+  artifacts). Non-blocking notes: bail olive = brass canon; capped top
+  + knot blob below threshold.
+- Placed via NEW `next-place-polish318-well.ts`: PLACED_VERIFIED, 1
+  upload + 1 verb, comp bag {} preserved, idempotent rerun
+  already-live-no-verbs, live pin `store/579e0a1faa446680.glb` @
+  [30,0,-4.5] yaw 0 exact.
+- Served-bytes proof (struct-104 law, durable `p318-verify-served.ts`;
+  probe self-caught its own sRGB-vs-linear COLOR_0 calibration bug
+  RED->GREEN): served DRACO d5858e2d… PROVES the taper (top r 0.17 vs
+  base r 0.14 y-stratified), rim/hoop bands exact, gunmetal + rope +
+  brass + all three emissive regressions intact, 0 non-finite.
+  P318_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 1bee51e6
+  (sweep-360 absorbed mid-tick — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-318-well-bucket/` (before/ =
+  live 605bb2c2 baseline GLB + 7-view bucket rig; after/ = v1
+  warm-iron rejected round; after-v2/ = ACCEPTED + rig).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b)
+  judge-noted candidates — warm ring-crest rim-kiss near the lantern
+  (polish-316 lineage), bucket open-top interior disc (this tick's
+  close-range note, judge fresh first).
