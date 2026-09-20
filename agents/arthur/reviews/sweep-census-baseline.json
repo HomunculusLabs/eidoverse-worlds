@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 402,
+  "count": 404,
   "entities": [
     {
       "id": "beb4c791",
@@ -35,6 +35,7 @@
           -0.421
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -70,6 +71,9 @@
           0.146
         ]
       },
+      "compKeys": [
+        "structure"
+      ],
       "comp": {
         "structure": {
           "tile": 1,
@@ -120,6 +124,7 @@
           0.02
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -133,7 +138,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -169,6 +174,7 @@
           0.02
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -182,7 +188,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -218,6 +224,7 @@
           0.02
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -231,7 +238,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -267,6 +274,7 @@
           0.02
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -280,7 +288,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -294,7 +302,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -308,7 +316,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -344,6 +352,7 @@
           42.208
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -357,7 +366,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -371,7 +380,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -407,6 +416,7 @@
           35.833
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -420,7 +430,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -434,7 +444,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -470,6 +480,7 @@
           -37.778
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -505,6 +516,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -540,6 +552,7 @@
           0.05
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -575,6 +588,7 @@
           0.039
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -610,6 +624,7 @@
           0.057
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -645,6 +660,7 @@
           0.023
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -680,6 +696,7 @@
           0.023
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -715,6 +732,7 @@
           0.025
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -750,6 +768,7 @@
           0.031
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -785,6 +804,7 @@
           0.027
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -820,6 +840,7 @@
           0.035
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -855,6 +876,7 @@
           0.026
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -890,6 +912,7 @@
           0.027
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -925,6 +948,7 @@
           0.017
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -960,6 +984,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -995,6 +1020,7 @@
           0.027
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1030,6 +1056,7 @@
           0.027
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1065,6 +1092,7 @@
           0.005
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1100,6 +1128,7 @@
           0.014
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1135,6 +1164,7 @@
           0.014
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1170,6 +1200,7 @@
           0.014
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1205,6 +1236,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1240,6 +1272,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1275,6 +1308,7 @@
           -1.964
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1310,6 +1344,7 @@
           -1.884
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1345,6 +1380,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1380,6 +1416,7 @@
           0.409
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1415,6 +1452,7 @@
           0.505
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1450,6 +1488,7 @@
           0.215
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1485,6 +1524,7 @@
           -0.276
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1520,6 +1560,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1555,6 +1596,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1590,6 +1632,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1625,6 +1668,7 @@
           0.018
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1660,6 +1704,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1695,6 +1740,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1730,6 +1776,7 @@
           0.032
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1765,6 +1812,7 @@
           0.019
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1800,6 +1848,7 @@
           0.019
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1835,6 +1884,7 @@
           0.047
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1870,6 +1920,7 @@
           0.034
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1905,6 +1956,7 @@
           0.034
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1940,6 +1992,7 @@
           0.917
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1953,7 +2006,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -1989,6 +2042,7 @@
           1.35
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2002,7 +2056,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2038,6 +2092,7 @@
           2.03
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2051,7 +2106,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2087,6 +2142,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2100,7 +2156,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2114,7 +2170,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2150,6 +2206,9 @@
           1.98
         ]
       },
+      "compKeys": [
+        "motion:chime"
+      ],
       "comp": {
         "motion:chime": {
           "type": "spin",
@@ -2169,7 +2228,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2205,6 +2264,9 @@
           1.45
         ]
       },
+      "compKeys": [
+        "motion:scope"
+      ],
       "comp": {
         "motion:scope": {
           "type": "spin",
@@ -2224,7 +2286,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2260,6 +2322,15 @@
           0.145
         ]
       },
+      "compKeys": [
+        "motion:carousel",
+        "motion:horse_0",
+        "motion:horse_2",
+        "motion:horse_4",
+        "motion:horse_6",
+        "particles:smoke",
+        "sockets"
+      ],
       "comp": {
         "motion:carousel": {
           "type": "spin",
@@ -2383,6 +2454,7 @@
           0.075
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2418,6 +2490,7 @@
           -0.609
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2453,6 +2526,9 @@
           0.03
         ]
       },
+      "compKeys": [
+        "particles:smoke"
+      ],
       "comp": {
         "particles:smoke": {
           "preset": "smoke",
@@ -2500,6 +2576,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2535,6 +2612,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2570,6 +2648,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2605,6 +2684,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2640,6 +2720,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2675,6 +2756,9 @@
           -0.147
         ]
       },
+      "compKeys": [
+        "particles"
+      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2722,6 +2806,9 @@
           -0.095
         ]
       },
+      "compKeys": [
+        "particles"
+      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2769,6 +2856,9 @@
           -0.201
         ]
       },
+      "compKeys": [
+        "particles"
+      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2816,6 +2906,9 @@
           -0.308
         ]
       },
+      "compKeys": [
+        "particles"
+      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2863,6 +2956,9 @@
           -0.265
         ]
       },
+      "compKeys": [
+        "particles"
+      ],
       "comp": {
         "particles": {
           "preset": "embers",
@@ -2910,6 +3006,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2945,6 +3042,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -2980,6 +3078,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3015,6 +3114,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3050,6 +3150,7 @@
           -0.007
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3085,6 +3186,7 @@
           0.003
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3120,6 +3222,7 @@
           0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3155,6 +3258,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3190,6 +3294,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3225,6 +3330,7 @@
           0.001
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3260,6 +3366,7 @@
           0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3295,6 +3402,7 @@
           0.001
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3330,6 +3438,7 @@
           -0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3365,6 +3474,7 @@
           -0.018
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3400,6 +3510,7 @@
           -0.036
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3435,6 +3546,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3470,6 +3582,7 @@
           0.011
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3505,6 +3618,7 @@
           0.007
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3540,6 +3654,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3575,6 +3690,15 @@
           1.303
         ]
       },
+      "compKeys": [
+        "motion:bee_1",
+        "motion:bee_2",
+        "motion:bee_3",
+        "motion:bee_4",
+        "motion:bee_5",
+        "motion:bee_6",
+        "motion:bee_7"
+      ],
       "comp": {
         "motion:bee_1": {
           "type": "orbit",
@@ -3680,6 +3804,7 @@
           0.169
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3715,6 +3840,12 @@
           0.067
         ]
       },
+      "compKeys": [
+        "motion:bcat",
+        "motion:bcat_ears",
+        "motion:bcat_head",
+        "motion:bcat_tail"
+      ],
       "comp": {
         "motion:bcat": {
           "type": "bob",
@@ -3809,6 +3940,7 @@
           0.232
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3844,6 +3976,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3879,6 +4012,7 @@
           0.01
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3914,6 +4048,7 @@
           0.607
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -3949,6 +4084,15 @@
           0.312
         ]
       },
+      "compKeys": [
+        "motion:cow_a",
+        "motion:cow_a_ears",
+        "motion:cow_a_head",
+        "motion:cow_a_tail",
+        "motion:cow_b",
+        "motion:cow_b_head",
+        "motion:cow_b_tail"
+      ],
       "comp": {
         "motion:cow_a": {
           "type": "bob",
@@ -4084,6 +4228,15 @@
           -0.019
         ]
       },
+      "compKeys": [
+        "motion:deer_a",
+        "motion:deer_a_ears",
+        "motion:deer_a_head",
+        "motion:deer_a_tail",
+        "motion:deer_b",
+        "motion:deer_b_ears",
+        "motion:deer_b_head"
+      ],
       "comp": {
         "motion:deer_a": {
           "type": "bob",
@@ -4219,6 +4372,12 @@
           0.012
         ]
       },
+      "compKeys": [
+        "motion:dmou",
+        "motion:dmou_ear",
+        "motion:dmou_head",
+        "motion:dmou_tail"
+      ],
       "comp": {
         "motion:dmou": {
           "type": "bob",
@@ -4313,6 +4472,13 @@
           0.06
         ]
       },
+      "compKeys": [
+        "motion:dog",
+        "motion:dog_chest",
+        "motion:dog_ears",
+        "motion:dog_head",
+        "motion:dog_tail"
+      ],
       "comp": {
         "motion:dog": {
           "type": "bob",
@@ -4424,6 +4590,15 @@
           -0.121
         ]
       },
+      "compKeys": [
+        "motion:donk_a",
+        "motion:donk_a_ears",
+        "motion:donk_a_head",
+        "motion:donk_a_tail",
+        "motion:donk_b",
+        "motion:donk_b_head",
+        "motion:donk_b_tail"
+      ],
       "comp": {
         "motion:donk_a": {
           "type": "bob",
@@ -4559,6 +4734,14 @@
           0.504
         ]
       },
+      "compKeys": [
+        "motion:dove_a",
+        "motion:dove_a_head",
+        "motion:dove_b",
+        "motion:dove_b_head",
+        "motion:dove_c",
+        "motion:dove_c_head"
+      ],
       "comp": {
         "motion:dove_a": {
           "type": "bob",
@@ -4667,6 +4850,14 @@
           0
         ]
       },
+      "compKeys": [
+        "motion:duck_a",
+        "motion:duck_a_head",
+        "motion:duck_a_tail",
+        "motion:duck_b",
+        "motion:duck_b_head",
+        "motion:duck_b_tail"
+      ],
       "comp": {
         "motion:duck_a": {
           "type": "bob",
@@ -4790,6 +4981,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -4825,6 +5017,11 @@
           0
         ]
       },
+      "compKeys": [
+        "motion:frog",
+        "motion:frog_head",
+        "motion:frog_throat"
+      ],
       "comp": {
         "motion:frog": {
           "type": "bob",
@@ -4902,6 +5099,14 @@
           0.101
         ]
       },
+      "compKeys": [
+        "motion:goose_a",
+        "motion:goose_a_head",
+        "motion:goose_a_tail",
+        "motion:goose_b",
+        "motion:goose_b_head",
+        "motion:goose_b_tail"
+      ],
       "comp": {
         "motion:goose_a": {
           "type": "bob",
@@ -5020,6 +5225,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -5055,6 +5261,14 @@
           0
         ]
       },
+      "compKeys": [
+        "motion:goat_a_head",
+        "motion:goat_a_tail",
+        "motion:goat_b_head",
+        "motion:goat_b_tail",
+        "motion:goat_c_head",
+        "motion:goat_c_tail"
+      ],
       "comp": {
         "motion:goat_a_head": {
           "type": "pendulum",
@@ -5193,6 +5407,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -5228,6 +5443,14 @@
           -0.121
         ]
       },
+      "compKeys": [
+        "motion:hen_a_head",
+        "motion:hen_a_tail",
+        "motion:hen_b_head",
+        "motion:hen_b_tail",
+        "motion:hen_c_head",
+        "motion:hen_c_tail"
+      ],
       "comp": {
         "motion:hen_a_head": {
           "type": "pendulum",
@@ -5366,6 +5589,12 @@
           -0.01
         ]
       },
+      "compKeys": [
+        "motion:heron",
+        "motion:heron_head",
+        "motion:heron_neck",
+        "motion:heron_tail"
+      ],
       "comp": {
         "motion:heron": {
           "type": "bob",
@@ -5465,6 +5694,11 @@
           0.019
         ]
       },
+      "compKeys": [
+        "motion:hmou",
+        "motion:hmou_head",
+        "motion:hmou_snout"
+      ],
       "comp": {
         "motion:hmou": {
           "type": "bob",
@@ -5542,6 +5776,11 @@
           0.004
         ]
       },
+      "compKeys": [
+        "motion:hog",
+        "motion:hog_head",
+        "motion:hog_snout"
+      ],
       "comp": {
         "motion:hog": {
           "type": "bob",
@@ -5619,6 +5858,13 @@
           0.339
         ]
       },
+      "compKeys": [
+        "motion:rabbit_alert",
+        "motion:rabbit_alert_ears",
+        "motion:rabbit_alert_head",
+        "motion:rabbit_sit",
+        "motion:rabbit_sit_head"
+      ],
       "comp": {
         "motion:rabbit_sit": {
           "type": "bob",
@@ -5720,6 +5966,12 @@
           -0.008
         ]
       },
+      "compKeys": [
+        "motion:kfish",
+        "motion:kfish_body",
+        "motion:kfish_head",
+        "motion:kfish_tail"
+      ],
       "comp": {
         "motion:kfish": {
           "type": "bob",
@@ -5814,6 +6066,7 @@
           -0.14
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -5849,6 +6102,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -5884,6 +6138,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -5919,6 +6174,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -5954,6 +6210,7 @@
           0.445
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -5989,6 +6246,7 @@
           0.285
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6024,6 +6282,7 @@
           -0.47
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6059,6 +6318,7 @@
           0.088
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6094,6 +6354,7 @@
           0.041
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6129,6 +6390,7 @@
           -3.34
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6164,6 +6426,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6199,6 +6462,7 @@
           0.312
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6234,6 +6498,7 @@
           0.118
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6269,6 +6534,7 @@
           0.209
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6304,6 +6570,7 @@
           -0.823
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6339,6 +6606,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -6374,6 +6642,11 @@
           0
         ]
       },
+      "compKeys": [
+        "motion:barnowl",
+        "motion:barnowl_head",
+        "motion:barnowl_tail"
+      ],
       "comp": {
         "motion:barnowl": {
           "type": "bob",
@@ -6451,6 +6724,14 @@
           -0.125
         ]
       },
+      "compKeys": [
+        "motion:peacock",
+        "motion:peacock_crest",
+        "motion:peacock_head",
+        "motion:peacock_tail",
+        "motion:peacock_train",
+        "motion:peacock_wings"
+      ],
       "comp": {
         "motion:peacock": {
           "type": "bob",
@@ -6579,6 +6860,12 @@
           0.022
         ]
       },
+      "compKeys": [
+        "motion:peahen",
+        "motion:peahen_crest",
+        "motion:peahen_head",
+        "motion:peahen_tail"
+      ],
       "comp": {
         "motion:peahen": {
           "type": "bob",
@@ -6641,6 +6928,132 @@
       }
     },
     {
+      "id": "nx-dress-pheas-001",
+      "kind": "thing",
+      "pos": [
+        55.75,
+        -0.03754,
+        -30.5
+      ],
+      "yaw": -1.835,
+      "scale": 1,
+      "lib": "store/793f6fabad825b88.glb",
+      "bbox": {
+        "min": [
+          -0.55,
+          0,
+          -0.392
+        ],
+        "max": [
+          0.46,
+          0.374,
+          0.29
+        ],
+        "size": [
+          1.01,
+          0.375,
+          0.682
+        ],
+        "center": [
+          -0.045,
+          0.187,
+          -0.051
+        ]
+      },
+      "compKeys": [
+        "motion:pheas_a",
+        "motion:pheas_a_head",
+        "motion:pheas_a_tail",
+        "motion:pheas_b",
+        "motion:pheas_b_head",
+        "motion:pheas_b_tail"
+      ],
+      "comp": {
+        "motion:pheas_a": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 4.4,
+          "phase": 0,
+          "t0": 1789874601387
+        },
+        "motion:pheas_a_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.26,
+          "period": 7.5,
+          "phase": 0.8,
+          "t0": 1789874601387
+        },
+        "motion:pheas_a_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0.14,
+            0
+          ],
+          "amp": 0.06,
+          "period": 5.5,
+          "phase": 1.4,
+          "t0": 1789874601387
+        },
+        "motion:pheas_b": {
+          "type": "bob",
+          "amp": 0.004,
+          "period": 5,
+          "phase": 2.1,
+          "t0": 1789874601387
+        },
+        "motion:pheas_b_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.2,
+          "period": 8.5,
+          "phase": 1.9,
+          "t0": 1789874601387
+        },
+        "motion:pheas_b_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0.16,
+            0
+          ],
+          "amp": 0.05,
+          "period": 6.2,
+          "phase": 0.5,
+          "t0": 1789874601387
+        }
+      }
+    },
+    {
       "id": "nx-dress-pig-001",
       "kind": "thing",
       "pos": [
@@ -6673,6 +7086,14 @@
           0.322
         ]
       },
+      "compKeys": [
+        "motion:pig_a",
+        "motion:pig_a_head",
+        "motion:pig_a_tail",
+        "motion:pig_b",
+        "motion:pig_b_ear",
+        "motion:pig_b_tail"
+      ],
       "comp": {
         "motion:pig_a": {
           "type": "bob",
@@ -6791,6 +7212,11 @@
           0
         ]
       },
+      "compKeys": [
+        "motion:robin",
+        "motion:robin_head",
+        "motion:robin_tail"
+      ],
       "comp": {
         "motion:robin": {
           "type": "bob",
@@ -6868,6 +7294,13 @@
           -0.169
         ]
       },
+      "compKeys": [
+        "motion:roost_a",
+        "motion:roost_a_comb",
+        "motion:roost_a_head",
+        "motion:roost_a_tail",
+        "motion:roost_a_wing"
+      ],
       "comp": {
         "motion:roost_a": {
           "type": "bob",
@@ -6979,6 +7412,7 @@
           -0.082
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7014,6 +7448,11 @@
           0.031
         ]
       },
+      "compKeys": [
+        "motion:fox",
+        "motion:fox_head",
+        "motion:fox_tail"
+      ],
       "comp": {
         "motion:fox": {
           "type": "bob",
@@ -7091,6 +7530,7 @@
           0.148
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7126,6 +7566,7 @@
           -0.257
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7161,6 +7602,7 @@
           0.188
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7196,6 +7638,7 @@
           -0.091
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7231,6 +7674,7 @@
           0.01
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7266,6 +7710,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7301,6 +7746,14 @@
           -0.55
         ]
       },
+      "compKeys": [
+        "motion:sheep_a",
+        "motion:sheep_a_head",
+        "motion:sheep_a_tail",
+        "motion:sheep_b",
+        "motion:sheep_b_head",
+        "motion:sheep_b_tail"
+      ],
       "comp": {
         "motion:sheep_a": {
           "type": "bob",
@@ -7419,6 +7872,15 @@
           0.15
         ]
       },
+      "compKeys": [
+        "motion:shorse_a",
+        "motion:shorse_a_ears",
+        "motion:shorse_a_head",
+        "motion:shorse_a_tail",
+        "motion:shorse_b",
+        "motion:shorse_b_head",
+        "motion:shorse_b_tail"
+      ],
       "comp": {
         "motion:shorse_a": {
           "type": "bob",
@@ -7554,6 +8016,13 @@
           0.053
         ]
       },
+      "compKeys": [
+        "motion:sparrow_a",
+        "motion:sparrow_a_head",
+        "motion:sparrow_a_tail",
+        "motion:sparrow_b",
+        "motion:sparrow_b_head"
+      ],
       "comp": {
         "motion:sparrow_a": {
           "type": "bob",
@@ -7655,6 +8124,17 @@
           -0.251
         ]
       },
+      "compKeys": [
+        "motion:sqrl_a",
+        "motion:sqrl_a_ears",
+        "motion:sqrl_a_head",
+        "motion:sqrl_a_paws",
+        "motion:sqrl_a_tail",
+        "motion:sqrl_b",
+        "motion:sqrl_b_ears",
+        "motion:sqrl_b_head",
+        "motion:sqrl_b_tail"
+      ],
       "comp": {
         "motion:sqrl_a": {
           "type": "bob",
@@ -7824,6 +8304,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7859,6 +8340,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7894,6 +8376,7 @@
           0.051
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7929,6 +8412,7 @@
           0.062
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7964,6 +8448,7 @@
           -0.01
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -7999,6 +8484,7 @@
           -0.026
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8034,6 +8520,7 @@
           0.114
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8069,6 +8556,7 @@
           0.26
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8104,6 +8592,7 @@
           0.484
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8139,6 +8628,17 @@
           1.568
         ]
       },
+      "compKeys": [
+        "motion:swallow_1",
+        "motion:swallow_1_wingL",
+        "motion:swallow_1_wingR",
+        "motion:swallow_2",
+        "motion:swallow_2_wingL",
+        "motion:swallow_2_wingR",
+        "motion:swallow_3",
+        "motion:swallow_3_wingL",
+        "motion:swallow_3_wingR"
+      ],
       "comp": {
         "motion:swallow_1": {
           "type": "orbit",
@@ -8313,6 +8813,13 @@
           0.013
         ]
       },
+      "compKeys": [
+        "motion:towl_a",
+        "motion:towl_a_head",
+        "motion:towl_a_tail",
+        "motion:towl_b",
+        "motion:towl_b_head"
+      ],
       "comp": {
         "motion:towl_a": {
           "type": "bob",
@@ -8414,6 +8921,15 @@
           0.042
         ]
       },
+      "compKeys": [
+        "motion:turkey_a",
+        "motion:turkey_a_fan",
+        "motion:turkey_a_head",
+        "motion:turkey_a_wings",
+        "motion:turkey_b",
+        "motion:turkey_b_head",
+        "motion:turkey_b_tail"
+      ],
       "comp": {
         "motion:turkey_a": {
           "type": "bob",
@@ -8549,6 +9065,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8584,6 +9101,15 @@
           0.03
         ]
       },
+      "compKeys": [
+        "motion:wrabbit_a",
+        "motion:wrabbit_a_ears",
+        "motion:wrabbit_a_head",
+        "motion:wrabbit_a_tail",
+        "motion:wrabbit_b",
+        "motion:wrabbit_b_ears",
+        "motion:wrabbit_b_head"
+      ],
       "comp": {
         "motion:wrabbit_a": {
           "type": "bob",
@@ -8719,6 +9245,13 @@
           0.005
         ]
       },
+      "compKeys": [
+        "motion:yham_a",
+        "motion:yham_a_head",
+        "motion:yham_a_tail",
+        "motion:yham_b",
+        "motion:yham_b_head"
+      ],
       "comp": {
         "motion:yham_a": {
           "type": "bob",
@@ -8820,6 +9353,10 @@
           -0.084
         ]
       },
+      "compKeys": [
+        "motion:fire_fg_coals",
+        "particles"
+      ],
       "comp": {
         "motion:fire_fg_coals": {
           "type": "bob",
@@ -8849,7 +9386,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8885,6 +9422,7 @@
           -0.001
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8920,6 +9458,7 @@
           0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8955,6 +9494,7 @@
           0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -8990,6 +9530,7 @@
           0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9025,6 +9566,12 @@
           -0.026
         ]
       },
+      "compKeys": [
+        "motion:pz_kettle",
+        "motion:well_",
+        "particles",
+        "sockets"
+      ],
       "comp": {
         "motion:pz_kettle": {
           "type": "pendulum",
@@ -9146,6 +9693,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9181,6 +9729,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9216,6 +9765,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9229,7 +9779,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9265,6 +9815,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9300,6 +9851,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9335,6 +9887,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9370,6 +9923,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9383,7 +9937,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9419,6 +9973,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9454,6 +10009,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9489,6 +10045,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9524,6 +10081,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9537,7 +10095,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9573,6 +10131,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9608,6 +10167,12 @@
           -0.421
         ]
       },
+      "compKeys": [
+        "lock",
+        "motion:moon_wing_left",
+        "motion:moon_wing_right",
+        "sockets"
+      ],
       "comp": {
         "sockets": {
           "seat": {
@@ -9670,7 +10235,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9706,6 +10271,7 @@
           2.839
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9741,6 +10307,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9776,6 +10343,7 @@
           0.13
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9811,6 +10379,7 @@
           -0.542
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9846,6 +10415,7 @@
           0.131
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9881,6 +10451,7 @@
           0.303
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9916,6 +10487,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9951,6 +10523,7 @@
           0.162
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -9986,6 +10559,7 @@
           0.132
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10021,6 +10595,7 @@
           0.589
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10056,6 +10631,7 @@
           -0.43
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10091,6 +10667,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10126,6 +10703,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10161,6 +10739,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10196,6 +10775,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10209,7 +10789,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10245,6 +10825,7 @@
           -0.001
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10280,6 +10861,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10315,6 +10897,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10350,6 +10933,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10385,6 +10969,7 @@
           0.078
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10420,6 +11005,7 @@
           0.004
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10455,6 +11041,7 @@
           0.1
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10490,6 +11077,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10525,6 +11113,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10560,6 +11149,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10595,6 +11185,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10630,6 +11221,7 @@
           -0.11
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10665,6 +11257,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10700,6 +11293,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10735,6 +11329,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10770,6 +11365,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10805,6 +11401,7 @@
           -0.136
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10840,6 +11437,43 @@
           0
         ]
       },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-dtria",
+      "kind": "thing",
+      "pos": [
+        75.483534,
+        -0.023725,
+        -48.088315
+      ],
+      "yaw": 4.756022211684548,
+      "scale": 1,
+      "lib": "store/20405927baf5f741.glb",
+      "bbox": {
+        "min": [
+          -3.25,
+          0,
+          -3.25
+        ],
+        "max": [
+          3.25,
+          8.37,
+          3.25
+        ],
+        "size": [
+          6.5,
+          8.37,
+          6.5
+        ],
+        "center": [
+          0,
+          4.185,
+          0
+        ]
+      },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10875,6 +11509,7 @@
           4
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10910,6 +11545,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10945,6 +11581,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -10980,6 +11617,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11015,6 +11653,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11050,6 +11689,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11085,6 +11725,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11120,6 +11761,7 @@
           0.385
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11155,6 +11797,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11190,6 +11833,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11225,6 +11869,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11260,6 +11905,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11295,6 +11941,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11330,6 +11977,7 @@
           0.35
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11365,6 +12013,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11400,6 +12049,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11435,6 +12085,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11470,6 +12121,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11505,6 +12157,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11540,6 +12193,7 @@
           0.037
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11575,6 +12229,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11610,6 +12265,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11645,6 +12301,7 @@
           0.029
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11680,6 +12337,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11715,6 +12373,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11750,6 +12409,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11785,6 +12445,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11820,6 +12481,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11855,6 +12517,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11890,6 +12553,7 @@
           3.432
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11925,6 +12589,7 @@
           -0.44
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11960,6 +12625,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -11995,6 +12661,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12030,6 +12697,7 @@
           0.35
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12065,6 +12733,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12100,6 +12769,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12135,6 +12805,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12170,6 +12841,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12205,6 +12877,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12218,7 +12891,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12254,6 +12927,7 @@
           0.34
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12267,7 +12941,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12303,6 +12977,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12338,6 +13013,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12373,6 +13049,9 @@
           0
         ]
       },
+      "compKeys": [
+        "motion:orb"
+      ],
       "comp": {
         "motion:orb": {
           "type": "spin",
@@ -12414,6 +13093,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12449,6 +13129,7 @@
           -0.275
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12484,6 +13165,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12519,6 +13201,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12554,6 +13237,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12589,6 +13273,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -12624,6 +13309,10 @@
           0
         ]
       },
+      "compKeys": [
+        "motion:pwheel_rr",
+        "motion:sails"
+      ],
       "comp": {
         "motion:pwheel_rr": {
           "type": "path",
@@ -13873,6 +14562,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -13908,6 +14598,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -13943,6 +14634,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -13978,6 +14670,7 @@
           -0.062
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14013,6 +14706,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14048,6 +14742,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14083,6 +14778,9 @@
           -1.013
         ]
       },
+      "compKeys": [
+        "motion:well_screw"
+      ],
       "comp": {
         "motion:well_screw": {
           "type": "spin",
@@ -14124,6 +14822,9 @@
           0
         ]
       },
+      "compKeys": [
+        "sockets"
+      ],
       "comp": {
         "sockets": {
           "crown": {
@@ -14170,6 +14871,7 @@
           0.924
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14205,6 +14907,7 @@
           0.373
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14240,6 +14943,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14275,6 +14979,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14310,6 +15015,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14345,6 +15051,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14380,6 +15087,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14415,6 +15123,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14450,6 +15159,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14485,6 +15195,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14520,6 +15231,7 @@
           0.38
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14555,6 +15267,7 @@
           -0.232
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14590,6 +15303,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14625,6 +15339,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14660,6 +15375,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14695,6 +15411,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14730,6 +15447,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14765,6 +15483,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14800,6 +15519,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14835,6 +15555,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14870,6 +15591,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14905,6 +15627,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14940,6 +15663,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -14975,6 +15699,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15010,6 +15735,7 @@
           0.01
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15045,6 +15771,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15080,6 +15807,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15115,6 +15843,7 @@
           -0.051
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15150,6 +15879,7 @@
           1.695
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15185,6 +15915,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15220,6 +15951,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15255,6 +15987,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15290,6 +16023,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15325,6 +16059,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15360,6 +16095,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15395,6 +16131,7 @@
           4.046
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15430,6 +16167,7 @@
           0.003
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15465,6 +16203,7 @@
           0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15500,6 +16239,7 @@
           0.002
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15535,6 +16275,7 @@
           0.001
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15570,6 +16311,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15605,6 +16347,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15640,6 +16383,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15675,6 +16419,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15710,6 +16455,7 @@
           5.805
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15745,6 +16491,7 @@
           5.805
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15780,6 +16527,7 @@
           5.805
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15815,6 +16563,7 @@
           5.805
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15850,6 +16599,7 @@
           5.805
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15885,6 +16635,9 @@
           0.175
         ]
       },
+      "compKeys": [
+        "sockets"
+      ],
       "comp": {
         "sockets": {
           "study": {
@@ -15931,6 +16684,9 @@
           0
         ]
       },
+      "compKeys": [
+        "ladder"
+      ],
       "comp": {
         "ladder": {
           "min": [
@@ -15979,6 +16735,7 @@
           0.025
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -15992,7 +16749,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16028,6 +16785,7 @@
           0.05
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16041,7 +16799,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16077,6 +16835,7 @@
           -0.6
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16090,7 +16849,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16126,6 +16885,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16161,6 +16921,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16196,6 +16957,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16231,6 +16993,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16266,6 +17029,7 @@
           0.69
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16279,7 +17043,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16315,6 +17079,7 @@
           0.714
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16328,7 +17093,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16364,6 +17129,7 @@
           0.135
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16377,7 +17143,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16413,6 +17179,7 @@
           0.689
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16426,7 +17193,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16462,6 +17229,7 @@
           0.001
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16497,6 +17265,7 @@
           0.034
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16510,7 +17279,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16546,6 +17315,7 @@
           1.737
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16581,6 +17351,9 @@
           -0.2
         ]
       },
+      "compKeys": [
+        "motion:pwheel"
+      ],
       "comp": {
         "motion:pwheel": {
           "type": "spin",
@@ -16609,7 +17382,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16645,6 +17418,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16680,6 +17454,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16693,7 +17468,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16729,6 +17504,7 @@
           0.55
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16764,6 +17540,7 @@
           -0.1
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16777,7 +17554,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16813,6 +17590,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16848,6 +17626,7 @@
           0.103
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16861,7 +17640,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -16897,6 +17676,10 @@
           -1.14
         ]
       },
+      "compKeys": [
+        "motion:sails",
+        "motion:well_millstone"
+      ],
       "comp": {
         "motion:sails": {
           "type": "spin",
@@ -16965,6 +17748,7 @@
           0.209
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17000,6 +17784,7 @@
           0.059
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17013,7 +17798,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
-      "bbox": null,
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17049,6 +17834,7 @@
           -0.146
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17084,6 +17870,7 @@
           -0.169
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17119,6 +17906,7 @@
           0.267
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17154,6 +17942,7 @@
           -0.687
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17189,6 +17978,7 @@
           -0.49
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17224,6 +18014,7 @@
           0.021
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17259,6 +18050,7 @@
           0.093
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17294,6 +18086,7 @@
           0.022
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17329,6 +18122,7 @@
           -0.029
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17364,6 +18158,7 @@
           0.072
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17399,6 +18194,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17434,6 +18230,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17469,6 +18266,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17504,6 +18302,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     },
     {
@@ -17539,6 +18338,7 @@
           0
         ]
       },
+      "compKeys": [],
       "comp": {}
     }
   ]
