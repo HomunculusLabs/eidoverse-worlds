@@ -6892,4 +6892,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-284] R11-92 lawful HOLD (sixth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at 56fa9eea (struct-283, own prior hold); shard+refine+carry empty, census 413 tetrakis/trioct/trit exact-pinned zero drift, 127 struct-domain all accounted; native cron-unpayable owed board rides; zero mutations (D+0, E+0)
 
+- [sweep-372] CLEAN SWEEP — single classified flip (142nd): polish-325 fountain next-cure 9e6b1977->68e5b75e in-flight placer-pinned (next-place-fountain.ts REVIEWED_SHA exact, commit pending) tuple-identical comp {}-neutral bbox byte-identical; compKeys flap 59 rows = comp dicts byte-identical 0 diffs; epoch B 20s-paced 0/0/0 settled; SAT 375/256/0 exit-3 ONLY known R-121 328th (law keys Sev 1); core re-walked 64/64 over new bytes (r13.1 re-verify band) + tier-1 81/81 + tier-2 350th stable/market; pins 15/15 (326th), battery 28/28 first try no pin move; baseline 413 ents 3700ea31abb6bafc like-for-like 1-line diff; gate ALL PASS exit 0 FIRST TRY at 56fa9eea (D+0, E+0)
+
 **Running total: 2371092 / 2000000**
