@@ -6914,4 +6914,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [sweep-374] CLEAN SWEEP — fountain flip #3 classified (polish-326 committed b2e56a52, placer pins live lib); census 414==414 zero drift/arrivals/departures, epoch B settled; SAT exit-3 on only R-121 (330th, known artwalk-routed Sev 2); core re-walked over new bytes 64/64; tier-1 81/81 + tier-2 inn/tower-house ALL_PASS; pins 15/15, battery 28/28; baseline rewritten 414/00757313 (D+0, E+0) within prose limits (D+0, E+0)
 
+- [dress-217] 106th post-close lawful HOLD — gate ALL PASS exit 0 FIRST at b2e56a52 (polish-326, foreign), RE-RUN ALL PASS exit 0 at b3685c3e after sweep-374 landed mid-tick (epoch law); probe HOLD_VERIFY_PASS first run: census 414==414 QUIET-count epoch, ONE classified move (nx-dress-fountain 68e5b75e->056157db polish-326 splash-zone variance, tuple-EXACT [12.5,0,4] yaw -0.7853981633974483, placer lines 27-29 verbatim; polish domain, off-limits); 81 dress ids stable + 1 classified = 82 accounted (29 fleet + 30 fauna + 23 non-fleet); pins 5/5 hosts 4/4 EXACT; funguslogs LIVE fbc626eb; zero intake; Bill eye-gate 12cec3fa unchanged; zero mutations (D+0, E+0)
+
 **Running total: 2371095 / 2000000**
