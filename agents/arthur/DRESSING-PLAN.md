@@ -1,6 +1,47 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-206 — lawful HOLD (95th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD e8e0a2e8 (struct-272); interlane md5
+  86b2936f pin-exact. Fresh census **406→407 = ONE arrival + ZERO moves,
+  the arrival classified at source before expectation patch (dress-172
+  law)**: `nx-struct-triakis` (−85.081379, −0.012013, −38.773818) yaw
+  0.619591884457987 lib 152085608aee50c4 comp {} maxdelta 0.0000000 —
+  struct-272 (e8e0a2e8), triakis icosahedron SW-band sixth form; contract
+  read verbatim this tick from struct-272's OWN ledger line
+  IMPROVEMENTS.md:6802 + placer `next-place-struct272.ts` header — struct
+  domain, NOT dress intake. sweep-361's sole flip (well→579e0a1f,
+  polish-318) already absorbed in the dress-205 capture. ZERO departures,
+  ZERO dress-domain drift; dress domain 78 = 29 fleet-owned (NE 6 / NW 9 /
+  SE 7 / SW 7) + 26 fauna-owned + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-206.py` HOLD_VERIFY_PASS exit 0 FIRST RUN, zero
+  self-catches, browser UA, capture saved `/tmp/dress206-census.json`).
+- **Sibling commits since dress-205**: sweep-361 (a2576caf, zero-mutation
+  CLEAN SWEEP single classified flip), struct-272 (e8e0a2e8, the triakis
+  arrival above — HEAD at tick start). All named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.0000000. Magpie host
+  `nx-town-inn` 861225bb + pheas anchor `nx-dress-se-snagdead-001`
+  7ac83203 both pose-stable (artwalk-39 law).
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN rows,
+  zero OPEN `nx-dress-` rows, no round-4/5 section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-205 — lawful HOLD (94th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
