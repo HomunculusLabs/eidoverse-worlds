@@ -6961,4 +6961,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-295] R11-103 lawful HOLD (seventeenth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at 6efe4dbf (fauna-70, foreign), HEAD re-checked post-census; shard+refine+carry empty fresh (IMPROVE-PLAN + IMPROVEMENTS OPEN nx-struct: 0 hits), no verdict routing in git 17a76e6f..HEAD (fauna-70/polish-329, zero keyword hits); census 416 exit 0 quiet vs struct-294 epoch tetrakis/trioct/trit PIN_EXACT 3/3 zero drift, 127 struct-domain all accounted; native vision absent from cron catalog fresh (terminal+repoprompt+zai only, cron-unpayable class, owed board rides); zero mutations, uploads, verbs, comp-edits, pushes (D+0, E+0)
 
+- [sweep-379] CLEAN SWEEP — monument plaque flip classified (polish-329 d4bc6c99 ledger-matched, comp-neutral); census 416==416 both epochs, epoch B settled 0/0/0; SAT exit-3 on only R-121 (335th, known artwalk-routed Sev 2); tier-1 81/81 + core re-walked over new bytes; tier-2 forge/potter 357th ALL_PASS; pins 15/15 (333rd), battery 28/28 first try; baseline rewritten one-field (D+0, E+0)
+
 **Running total: 2371101 / 2000000**

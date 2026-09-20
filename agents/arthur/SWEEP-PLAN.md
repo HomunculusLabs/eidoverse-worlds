@@ -18450,3 +18450,66 @@ LRU chain re-derived from committed pointers this tick: inn/tower-house
 @378 walked fresh, hall/bunkhouse @377, stable/market @376, forge/potter
 @375 the stalest standing pair; walk tools interior-walk-forge.ts +
 interior-walk-potter.ts, ls-verify present 1820B/1706B before walking).
+
+sweep-379: CLEAN SWEEP, single classified flip tick (149th consecutive
+quiet-or-classified). Tick-start HEAD 6efe4dbf (fauna-70 proposal-only);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root; ledger law EXACT
+2371101. Interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, both
+read fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows,
+CITY-PLAN-V2 cae6b928 unchanged — audit-continues freeze banner governs).
+Census epoch A 416==416 vs the committed sweep-378 baseline (sha16
+0f3616363c77d6fd): 0 arrivals, 0 departures, exactly ONE substantive drift
+field = nx-town-monument lib cfbb31a6->d4bc6c99 at identical tuple (-7,0,-7)
+yaw pi/4, comp {} both = COMMITTED polish-329 @ 6118d1f6 (plaque inscription
+rhythm cure: text-line bars 0.50/0.40/0.26 replacing uniform slats; night
+plaque 3->7 day 5->8 vent misread cured; P329_SERVED_PASS), ledger-matched
+line-for-line, domain-valid, not drift; comp dicts zero drift (the engine
+compKeys flap did not surface this tick). First census read hit a transient
+gateway reset (curl exit 56) — one paced retry per malformed-live-response
+discipline returned clean, classified gateway-side noise. Epoch B 20s-paced
+re-read 416==416, A-to-B drift ZERO — single settled epoch. Overlap: SAT 378
+bbox non-light / 259 exempt-classified / 0 coverage holes, exit 3 on exactly
+ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 335th sweep since routing, NOT new,
+no escalation due (the law keys on severity-1); monument flip introduced
+ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every
+leg real exit 0, legs run individually — core 64/64 maxArrival 0.380
+(next-walk-core-paths.ts) RE-WALKED over the polish-329 monument bytes
+(plaza-core r9.9, inside the re-verify band, sweep-371/372/378 precedent —
+epoch-A legs not allowed to stand on SAT neutrality alone); NW 5/5
+(0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists canon-exact vs the
+sweep-319..378 canon. Tier-2 357th cycle per the committed sweep-378
+pointer: forge 6/6 ALL_PASS (interior-walk-forge.ts, dists
+0.261/0.307/0.300/0.315/0.375/0.261) + potter 6/6 ALL_PASS
+(interior-walk-potter.ts, dists 0.270/0.366/0.295/0.255/0.250/0.349), both
+tools ls-verified present BEFORE the walks (1559B Aug 30 + 1571B Sep 7),
+dists canon-exact vs the sweep-375 record. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (333rd consecutive clean); sweep89-battery 28/28
+PASS first try on censusA bytes (comp-bearing 63 stable — monument flip
+comp-neutral, no pin move; lights 38, thing 378, carousel comp bag exact 7 +
+lib 3ed80c49d16e89d8 census-verified via battery). Baseline lawfully
+rewritten like-for-like from the COMMITTED bytes (/tmp/s379/baseline-rewrite
+chassis, format probe MATCH indent-2 + trailing newline): pre-write asserts
+green (416 ents, drift exactly [monument lib]), one-field lib transplant
+only, post-rewrite substantive drift vs live ZERO — final 416 entities /
+333369B / sha16 1199b14372bdeaf1; git diff exactly 1 line. Probe self-catch
+pre-verdict, disclosed: (a) walk-output parser keyed 'distance' where two
+tool schemas use 'dist' (re-anchored, sweep-48 class); (b) the first
+baseline-rewrite script failed CLOSED on its own format-inference assert
+before any write (baseline untouched) and was repaired to the proven
+indent-2 + newline form; (c) ledger prose self-catch: the appended entry
+carried a duplicate (D+0, E+0) before the tool's own pair (loop h-1 class)
+— deduped surgically in the same tick, single-swap assert, verified 1
+occurrence before commit. Foreign dirt in tree (engine files client/server,
+core-paths GLB + review json, windmill overhaul scratch, cabin-overhaul +
+moon-moth prototype dirs, fauna32-*/fauna63-*/fauna64-*/fauna65-* tools,
+debug bower scripts, fleet shell scripts, review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-380): stable + market (358th cycle —
+LRU chain re-derived from committed pointers this tick: forge/potter @379,
+inn/tower-house @378, hall/bunkhouse @377, stable/market @376 the stalest
+standing pair; walk tools interior-walk-stable.ts + interior-walk-market.ts,
+ls-verified present 1784B + 1544B before walking).
