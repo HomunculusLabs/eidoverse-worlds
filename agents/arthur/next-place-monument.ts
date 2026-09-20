@@ -10,7 +10,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-town-monument";
 const FILE = `${ROOT}/agents/arthur/assets/village_monument3.glb`;
-const REVIEWED_SHA = "cfbb31a637ea7b743c8dd09ae3a5a9cd5d29134c658e96788d3cb90df464adae";
+const REVIEWED_SHA = "d4bc6c990c713c78b4ff73403568aa44305b1ae5d6bf6a7fc778933f0e0fc237";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [-7, 0, -7] as [number, number, number], yaw: 0.7853981633974483, scale: 1 };
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -49,7 +49,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "monument — polish-328 satellite-bead material truth");
+  u.searchParams.set("name", "monument — polish-329 plaque inscription rhythm");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {

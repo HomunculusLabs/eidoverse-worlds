@@ -6955,4 +6955,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-294] R11-102 lawful HOLD (sixteenth) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at b70806ff (dress-221, foreign); shard+refine+carry empty fresh, census 416 quiet tetrakis/trioct/trit PIN_EXACT 3/3 zero drift, 127 struct-domain all accounted; native cron-unpayable owed board rides; zero mutations (D+0, E+0) (D+0, E+0)
 
-**Running total: 2371100 / 2000000**
+- [polish-329] monument plaque inscription rhythm — text-line bar widths 0.50/0.40/0.26 replacing three uniform full-width slats (cfbb31a6->d4bc6c99; plaque night 6.5/10 vent-or-grille coin-flip judged on exact live bytes; night A/B 3->7, day 5->8, zero new defects, 18m no-regression; diffs confined to plaque band all 11 views; P329_SERVED_PASS 16 gates incl rhythm 0.250/0.200/0.130 exact through DRACO; probe self-caught 2 gate bugs RED->GREEN) (D+1, E+0)
+
+**Running total: 2371101 / 2000000**

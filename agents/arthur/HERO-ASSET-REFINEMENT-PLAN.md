@@ -3012,3 +3012,48 @@ next wake once the gateway answers.
   307 cure), knot specular/metal response at day (judge #2 — needs sun
   falsification first), plaque night misread (judge-named "vent/grille"
   — value candidate).
+
+### polish-329 — monument plaque inscription rhythm (ACCEPTED, LIVE)
+
+- Subject: `nx-town-monument` (same tuple as polish-319/327/328; empty comp
+  bag, census-fresh). Queue head from polish-328 close (plaque night
+  "vent/grille" misread, judge-named), re-judged fresh on exact live bytes.
+- Defect (ZAI judge, disclosed fallback — no native vision tool loadable in
+  this cron session, polish-285..328 class, native re-judge owed): plaque
+  night identity 6.5/10 — all three pline bars were uniform 0.5-wide
+  full-width slats, exactly how a low-poly vent/grille is drawn; "coin flip"
+  between dedication plaque and grille.
+- Change (ONE edit, mkv3-monument.ts): inscription text-line rhythm —
+  bar widths 0.50 / 0.40 / 0.26 (title / dedication / date), centered; the
+  judge's own named cheapest fix. No other element touched.
+- Candidate `d4bc6c990c713c78b4ff73403568aa44305b1ae5d6bf6a7fc778933f0e0fc237`
+  deterministic x2 (mtime-verified; on-disk == live baseline cfbb31a6 was
+  verified BEFORE the first rebuild).
+- Falsification: pixel diffs confined to the plaque band in all 11 views
+  (plaquefront 637 px [434..525, 517..544]; gameplay 74; approach 136;
+  knotclose 6 at frame edge; sideeast 12; aerial 0). Night A/B judge:
+  plaque identity 3/10 -> 7/10, vent gestalt collapses, "Ship B", zero new
+  defects. Day A/B: 5/10 -> 8/10, correct typographic rhythm, zero defects.
+  18m gameplay A/B: change imperceptible at distance (LOW, cosmetic
+  close-range improvement), zero regressions — the misread it cures is the
+  close/mid-range read. Judge polish notes recorded, not treated (thinner
+  strokes, non-monotonic rag, 4th line).
+- Placed via updated `next-place-monument.ts` (pins cfbb31a6->d4bc6c99):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun "already live — no verbs", live census pin
+  `store/d4bc6c990c713c78.glb` @ [-7,0,-7] yaw pi/4 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p329-verify-served.ts`; probe self-caught 2 gate bugs
+  RED->GREEN: box-vert row tolerance must exceed bar half-height 0.0225,
+  and the offering bowls at |x|>=0.71 share the y/z band): served DRACO
+  keeps the rhythm exact — row half-widths 0.2500/0.2000/0.1300, 72 band
+  verts, plus every p319/327/328 regression (knot/bead PBR+emissive, lamp,
+  2 textures, both discs, anchors) — P329_SERVED_PASS (16 gates), 0
+  non-finite.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 17a76e6f
+  (struct-294 hold absorbed mid-tick — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-329-monument/` (before/ = live
+  baseline + 11-view live-light rig; after/ = candidate + rig).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  polish notes — thinner bar strokes / 4th date line (sub-threshold), knot
+  day specular (needs sun falsification), bead saturation trim.
