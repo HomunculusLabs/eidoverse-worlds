@@ -1,6 +1,59 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-208 — lawful HOLD (97th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 7462befe (struct-274); interlane md5
+  86b2936f pin-exact. Fresh census **407→408 = ONE arrival + ZERO moves,
+  the arrival classified at source before expectation patch (dress-172
+  law)**: `nx-struct-tetrakis` (93.474581, −0.019616, −45.590599) yaw
+  4.642575810304916 lib f2e8a62adf84c7c8 maxdelta 0.0000000 — struct-274
+  tetrakis hexahedron N-E band sixth form; contract read verbatim this
+  tick from struct-274's OWN ledger line IMPROVEMENTS.md:6816 + placer
+  `next-place-struct274.ts` — struct domain, NOT dress intake. ZERO
+  departures, ZERO dress-domain drift. **Domain check strengthened to the
+  strongest form this tick**: all 78 dress ids lib+pose EXACT-stable vs
+  the dress-207 PASS-verified capture (zero unstable), arrivals [] and
+  departures [] in-domain; 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 26
+  fauna-owned + 23 non-fleet decomposition inherited from dress-207's PASS
+  by identity (probe `/tmp/dress-hold-verify-208.py` HOLD_VERIFY_PASS exit
+  0, browser UA, capture saved `/tmp/dress208-census.json`). Four
+  disclosed probe authoring self-catches, all fixed at source BEFORE the
+  expectations were used, no world state misreported: (1) prior-capture
+  shape assumed list, is a wrapped dict; (2) hand-rebuilt fauna set was
+  fabricated-from-memory (17/26) — rebuilt at source from FAUNA-PLAN grep
+  + live enumeration; (3) inn host pose expectation hand-written from the
+  magpie's tuple; (4) fauna-bucket boundary mismatch vs prior probe
+  convention (fauna-5 fox resident `nx-dress-se-fox-001` is
+  district-qualified but fauna-owned — the plan's district counts are
+  FLEET-only).
+- **Sibling commits since dress-207**: struct-273 (7a7c22ea, tetrakis
+  build BANKED NOT PLACED — zero world mutation), sweep-363 (234cb951,
+  zero-mutation CLEAN SWEEP single classified flip — monument, polish-319
+  ledger-matched), struct-274 (7462befe, the tetrakis arrival above — HEAD
+  at tick start). All named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.0000000. Magpie host
+  `nx-town-inn` 861225bb + pheas anchor `nx-dress-se-snagdead-001`
+  7ac83203 both pose-stable (artwalk-39 law).
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN rows,
+  zero OPEN `nx-dress-` rows, no round-4/5 section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-207 — lawful HOLD (96th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
