@@ -6912,4 +6912,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [polish-326] fountain splash-zone variance — per-instance tables for pads/fins (size/squash/jitter/lean/height) + 3 strand brightness classes keyed to width; riveted-ring read cured at 18m night (judge PASS both items, close-range ring continuous), rejected r1 amplitude-diluted 431c07ae; nx-dress-fountain 68e5b75e->056157db, P326_SERVED_PASS 22 gates, diffs confined, idempotent 0 verbs (D+1, E+0)
 
+- [sweep-374] CLEAN SWEEP — fountain flip #3 classified (polish-326 committed b2e56a52, placer pins live lib); census 414==414 zero drift/arrivals/departures, epoch B settled; SAT exit-3 on only R-121 (330th, known artwalk-routed Sev 2); core re-walked over new bytes 64/64; tier-1 81/81 + tier-2 inn/tower-house ALL_PASS; pins 15/15, battery 28/28; baseline rewritten 414/00757313 (D+0, E+0) within prose limits (D+0, E+0)
+
 **Running total: 2371095 / 2000000**

@@ -18131,3 +18131,79 @@ committed pointers this tick: hall/bunkhouse @373 walked fresh,
 stable/market @372, inn/tower-house @371 the stalest standing pair; walk
 tools interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verify
 before walks per law).
+
+sweep-374: CLEAN SWEEP, single classified-flip tick (144th consecutive
+quiet-or-classified). Tick-start HEAD dd65a8e9 (struct-286 lawful hold);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root (ledger law
+EXACT 2371094). Census epoch A 414==414 vs the committed sweep-373
+baseline (sha16 d32b3ce9226c9eb1): 0 arrivals, 0 departures, exactly ONE
+substantive drift field — nx-dress-fountain lib 68e5b75e73a14058->
+056157db8d860b08 at identical tuple [12.5, 0, 4] yaw -0.7854, bbox
+byte-identical, comp {} both epochs — polish-326 COMMITTED @ b2e56a52
+(riveted-ring cure: per-instance pad/fin tables + 3 strand brightness
+classes; P326_SERVED_PASS 22 gates; D+1 E+0), ledger line matches the flip
+exactly and the in-tree placer next-place-fountain.ts pins REVIEWED_SHA
+056157db8d860b08... = live lib prefix — domain-valid, not drift. This is
+the THIRD consecutive fountain flip (polish-324 @ sweep-371, polish-325 @
+sweep-372, polish-326 @ sweep-374) — the polish lane's iteration series
+on the plaza fountain, each classified the same way. Comp-dict diffs ZERO
+(the compKeys flap class absent entirely this tick). Epoch B 20s-paced
+re-read 414==414, A->B drift ZERO — single settled epoch, no epoch
+correction. Overlap: SAT 376 bbox non-light / 256 exempt-classified / 0
+coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n|
+nx-town-mapboard -0.407, known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 330th sweep since routing, NOT new, no escalation due (the law
+keys on severity-1); zero new contacts over the polish-326 bytes. Core
+RE-WALKED at epoch A 64/64 ALL_PASS maxArrival 0.380 over the new
+fountain bytes — the fountain sits r13.1 plaza-core, inside the
+re-verify band (sweep-371/372 precedent), so epoch-A core legs were not
+allowed to stand on SAT neutrality alone. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually —
+core 64/64 maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5
+(0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists canon-exact vs
+the sweep-319..373 canon. Tier-2 352nd cycle per the committed sweep-373
+pointer: inn 6/6 ALL_PASS (interior-walk-inn.ts, dists
+0.320/0.318/0.341/0.350/0.364/0.288) + tower-house 6/6 ALL_PASS
+(interior-walk-tower-house.ts, dists
+0.245/0.245/0.263/0.377/0.374/0.309), both tools ls-verified present
+BEFORE the walks (1786B + 1523B), dists canon-exact vs the sweep-371
+record. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[]
+(328th consecutive clean); sweep89-battery 28/28 PASS first try on the
+censusA bytes — no pin move needed (the fountain flip is comp-neutral
+comp {} -> comp {}; comp-bearing 61 stable, lights 38, thing 376,
+carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified via
+battery). Interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable,
+both read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged
+(zero open queue rows), sweep owns no prefix; CITY-PLAN-V2 md5 cae6b928
+unchanged — the audit-continues freeze banner governs via loop/plan
+reload. Baseline lawfully rewritten LIKE-FOR-LIKE from the COMMITTED
+bytes (/tmp/s374/baseline-rewrite.py): pre-write asserts green (committed
+sha16 d32b3ce9226c9eb1, old-lib uniqueness = 1, fountain
+tuple+comp+bbox vs live epoch B), one-field lib transplant, post-rewrite
+substantive drift vs live ZERO — final 414 entities / 328124B / sha16
+00757313d8c1b963; git diff exactly 1 line. Probe self-catches
+pre-verdict, disclosed: (a) the terminal promoted long-running foreground
+commands to background sessions mid-tick (census/walks/SAT) — every one
+polled to real exit codes before any verdict was recorded, zero
+narrated-from-memory results; (b) the battery usage-grep probe errored on
+a flag-parse before the battery itself ran — the battery was invoked
+directly per its own docstring precedent and passed 28/28; (c) the ledger
+prose for this tick carried an inline mid-string "(D+0, E+0)" (loop h-1
+class) — the tool's own post-write law check still closed EXACT because
+both the inline and appended pairs are zero-delta (0+0), so the running
+total 2371095 is correct and no repair was needed; disclosed for the
+record, future ticks keep pairs out of prose entirely. Foreign dirt
+in tree (engine files client/server, core-paths GLB + review json,
+windmill overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul +
+moon-moth prototype dirs, fauna63-*/fauna64-*/fauna65-* tools, debug
+bower scripts, next-place-fountain.ts polish-326 committed set, fleet
+shell scripts, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-375): forge + potter (353rd cycle — LRU chain
+re-derived from committed pointers this tick: inn/tower-house @374
+walked fresh, hall/bunkhouse @373, stable/market @372, forge/potter
+@370 the stalest standing pair; walk tools interior-walk-forge.ts +
+interior-walk-potter.ts, ls-verify before walking).
