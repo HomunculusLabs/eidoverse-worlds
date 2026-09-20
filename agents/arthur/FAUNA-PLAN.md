@@ -952,8 +952,57 @@ domain is commons-next `nx-dress-*` fauna only.
     contract: hover-profile (posture + tail fan) + face (mustache) +
     18m scope PRESENT-with-motion (robin-law encounter-reward disclosure
     for identity). Provenance: sparrow bake chassis, kingfisher stacked
-    bill, magpie albedo-over-metal law, swallow nested-wing pendulums,
-    bees pure-motion zero-ground precedent. Proposal only — build fauna-65.
+ bill, magpie albedo-over-metal law, swallow nested-wing pendulums,
+ bees pure-motion zero-ground precedent. Proposal only — build fauna-65.
+ 42. **[PROPOSED fauna-66, 2026-09-20] helmeted guinea fowl — proposed
+ fauna-66 (2026-09-20).** ONE entity `nx-dress-guine-001` (census-grounded:
+ ZERO guinea/numidid fauna across ids AND libs in the 414-entity
+ commons-next census this tick — magpie fauna-57 proposal law; sole
+ regex hits = the English word "guinea" once in fauna-15 ledger prose,
+ nothing in any build source or asset, anchor prefix `guine` verified
+ collision-free by search over all *.ts/*.py/*.md/*.json). Village
+ logic: the poultry yard is the village's domestic-bird heart — hen
+ flock (fauna-2) + rooster sentinel (fauna-26) + turkey pair
+ (fauna-24) stand E of the coop, and the classic farmyard's missing
+ third fowl family is NUMIDIDAE: the helmeted guinea fowl (Numida
+ meleagris), Bill's own homestead language (he keeps ducks; guineas
+ are the pest-control fowl every mixed homestead runs — the tick-
+ patrol that walks the yard edge eating ticks, the alarm bird that
+ screams at hawks so the hens freeze). The fleet's bird families now
+ number 12 (game/water/song/owl/peafowl/corvid/ciconiiformes/raptor);
+ the farmyard's own third family is absent and the yard's S margin
+ (between hutch 38.5,−9.5 and turkey 45.25,−6.5, the cat's pocket
+ 40.7,−7.5 beside) is the honest gap — a fowl that PATROLS reads
+ exactly there, walking the yard edge in a small tight keet flock.
+ Species contract: SMALL FLOCK of 3 (guineas move as a company, never
+ a pair — the flocking read IS the species character; hens fauna-2
+ 3-bird precedent): rotund near-black bodies DENSELY dotted with
+ pearl-white spots (0x1f1c1a base + white speckle family — the 18m
+ read is the dark dotted mass, robin-bib contrast law inverted: light
+ dots on dark ground), THE BLUE-RED HELMETED HEAD (bluish-gray bare
+ skin 0x7a8a96 casque/helmet + red wattle pairs — the species' one
+ unmistakable marker, kfish two-tone-stack law: casque proud of the
+ skull, never embedded), short dropped tail, horn bill, strong grey
+ legs in the patrol stride. TRUE-SIZE ~53-58cm + ×1.4 marginality
+ bake incl joints (robin/owl/sparrow law) = a ~75cm read, hen-flock
+ scale class. Motion contract: 3 breathing bobs staggered + head
+ Y-scans staggered (the alert jerky head-tilt, fast periods ~1.5-2s —
+ the species' nervous character) + 2 peck pendulums (the tick-patrol
+ peck) + tail flicks; phases staggered per individual, epoch t0.
+ Anchor contract: guine_a{,_head,_tail} + guine_b{,_head} +
+ guine_c{,_head} (8 KEEP groups; `guine` prefix — collision-free,
+ verified this tick). Siting: poultry-yard S margin zone between
+ hutch and turkey (census this tick: hutch (38.5,−9.5) bbox
+ 1.65x1.33x1.43, turkey (45.25,−6.5) bbox 2.56x1.13x2.21, cat pocket
+ (40.7,−7.5), coop nx-dress-coop @(37.5,−6.5), yard→plaza bearing
+ −79.1° = the W reader spoke), GROUND seat class; exact tuple owed to
+ the build tick (25cm-grid seat sweep + live heightAt + live SAT vs
+ hutch/turkey/cat/coop OBBs + road films, head-count gate ≥3 clear of
+ every solid at flock spread) on the plaza-facing reader side.
+ Provenance: hens 3-bird flock chassis (bob/peck/scan comp family),
+ turkey blue-gray head values 0x8fa3ac, kfish casque-proud stacking,
+ robin ×1.4 bake chassis, wrabbit contact shadows. Proposal only —
+ build fauna-67.
 
 
 ### mute swan — fauna-63 (2026-09-20) CLOSED
