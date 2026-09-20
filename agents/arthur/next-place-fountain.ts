@@ -1,7 +1,8 @@
-// next-place-fountain.ts — polish lane (polish-271/274/320/321): re-place
+// next-place-fountain.ts — polish lane (polish-271/274/320/321/322): re-place
 // nx-dress-fountain with the water-read build (polish-320: strand cascade,
 // impact foam, splash dome, plume jet; polish-321: burst crown widened
-// r 0.14 -> 0.24 for 18m burst-vs-jet separation). The
+// r 0.14 -> 0.24 for 18m burst-vs-jet separation; polish-322: burst squash
+// baked into geometry — brass ball un-entombed + real bell-gold finial). The
 // live fountain carries an EMPTY comp bag, so EXPECTED_KEYS is [] — verified
 // empty before and after (comp-wipe law trivially satisfied; still asserted).
 // Verb choreography copied from the proven next-place-hearth.ts /
@@ -15,7 +16,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-dress-fountain";
 const FILE = `${ROOT}/agents/arthur/assets/village_fountain.glb`;
-const REVIEWED_SHA = "d44315f635690f5e25e41429e6e34e229844ff233b1b948eb4fa3f3cec017fae";
+const REVIEWED_SHA = "657f3c222e2ba98d35a3128d162b9951783de936f7ffd013c33f47c32cd422cb";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [12.5, 0, 4.0] as [number, number, number], yaw: -0.7853981633974483, scale: 1 };
 const EXPECTED_KEYS: string[] = [];

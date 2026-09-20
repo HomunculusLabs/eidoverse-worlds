@@ -25,7 +25,19 @@ const fountain = new THREE.Group();
     bowl.name = "ft_bowl";
     bowl.position.y = 1.65;
     fountain.add(bowl);
-    const finial = new THREE.Mesh(new THREE.SphereGeometry(0.14, 8, 6), mat(C.BRASS, 0.3, 0.85));
+    // polish-322 (brass-ball identity): the finial was mat(C.BRASS,.3,.85) —
+    // the legacy COLOR_0-only lane (no glTF material; params never reach the
+    // wire), and C.BRASS 0xa0a248 is an olive that reads grey-white at 18m.
+    // Judges (day+night, polish-321 close): "white blob on white spray" /
+    // "foam-white glowing orb, brightest element". Re-authored as REAL
+    // bell-gold (polish-307 belltower recipe 0xd9ac52 r.45 m.15) + faint
+    // warm night accent 0xffc98a@0.06 — quiet brass below the moonlit-water
+    // emissive ladder (strands .29, burst .42).
+    const finialMat = new THREE.MeshStandardMaterial({
+        color: 0xd9ac52, roughness: 0.45, metalness: 0.15,
+        emissive: new THREE.Color(0xffc98a), emissiveIntensity: 0.06,
+    });
+    const finial = new THREE.Mesh(new THREE.SphereGeometry(0.14, 8, 6), finialMat);
     finial.name = "ft_finial";
     finial.position.y = 2.42;
     fountain.add(finial);
@@ -159,10 +171,19 @@ const fountain = new THREE.Group();
     // mushroom (d 0.48m, ~25px at 18m) reads as a distinct burst cap around
     // the jet top, annulus ~0.10m each side proud of the ball silhouette.
     // Crest stays 2.35 < ball equator 2.42 — ball still crowns the burst.
+    // polish-322: node.scale.set(1,0.28,1) NEVER SHIPS (toGLB scale-drop,
+    // polish-321 finding) — the burst rendered as a FULL sphere r 0.24
+    // topping y 2.55 vs ball top 2.56, i.e. the brass ball ~96% ENCLOSED in
+    // white foam (polish-52: enclosure beats tint). Bake the authored squash
+    // into the GEOMETRY (flattened sphere y-semi-axis 0.067, crest 2.377 <
+    // ball equator 2.42) so the ball's crown reads above the burst disc.
     const crown = new THREE.Mesh(new THREE.SphereGeometry(0.24, 8, 5), foamMat);
     crown.name = "ft_crown";
     crown.scale.set(1, 0.28, 1);
-    crown.position.y = 2.31; // crest 2.35 — burst kissing the finial base
+    const crownPos = crown.geometry.attributes.position;
+    for (let vi = 0; vi < crownPos.count; vi++) crownPos.setY(vi, crownPos.getY(vi) * 0.28);
+    crownPos.needsUpdate = true;
+    crown.position.y = 2.31; // crest 2.377 — burst disc under the ball crown
     fountain.add(crown);
     // v6: lobes re-heighted into the window (0.49..0.515) + droplets in the
     // window (0.52..0.60, separated from the crest).

@@ -2592,3 +2592,50 @@ next wake once the gateway answers.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
   notes — brass ball washes to near-burst white at 18m (day) / foam-white
   at night (brass tint candidate, material-only, judge fresh first).
+
+### polish-322 — fountain brass-ball identity (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (same tuple as polish-320/321; empty comp bag).
+  Build source `assets/mkwater1.ts` (live was d44315f6, polish-321's v7).
+- Defect (queue head from polish-321 close, judged fresh day+night on exact
+  live bytes, ZAI fallback disclosed — polish-285..321 class, native re-judge
+  owed): apex read "white blob on white spray" (day; ball near-white #F2F0EA,
+  zero metal read) / "foam-white glowing orb, brightest element" (night).
+  Decode found TWO roots: (a) `ft_finial` was the legacy COLOR_0-only
+  mat(C.BRASS=0xa0a248 olive) lane — params never reached the wire
+  (polish-307 bell class); (b) the toGLB scale-drop (polish-321 finding)
+  shipped `ft_crown` as a FULL r0.24 sphere topping y2.55 vs ball top y2.56 —
+  the brass ball was ~96% ENCLOSED in white foam (polish-52: enclosure
+  beats tint; no material change could survive it).
+- Change (ONE apex intervention, mkwater1.ts): finial re-authored REAL
+  bell-gold 0xd9ac52 r.45 m.15 (polish-307 recipe) + warm night accent
+  0xffc98a@0.06; crown squash BAKED into vertex geometry (mesh-local y-span
+  0.48 -> 0.134, crest 2.377 < ball equator 2.42 — ball stands 0.18m clear
+  above the burst disc).
+- Candidate `657f3c222e2ba98d35a3128d162b9951783de936f7ffd013c33f47c32cd422cb`
+  deterministic x2; birdbath/chimes/weathervane siblings byte-identical (edit
+  confined — chimes/weathervane brass untouched). Pixel diffs confined to
+  the apex zone in all 8 views (maxDelta 493-722); materials 3->4 (finial's
+  unique emissive cannot merge — documented).
+- Judge verdicts: DAY PASS — no white bleed, ball hard-separates (L*55 vs
+  L*94), "ball crowning a water plume" NOT white blob, zero defects
+  (float/clip/z-fight/oversize all clean). NIGHT PASS — no foam-orb failure,
+  water brighter than brass (correct hierarchy), hue-separated, "warm brass
+  finial on a glowing water plume".
+- Placed via updated `next-place-fountain.ts` (pins d44315f6 -> 657f3c22):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun zero verbs, live census pin `store/657f3c222e2ba98d.glb` @
+  [12.5,0,4] yaw -pi/4 exact.
+- Served-bytes proof (struct-104 law, durable `p322-verify-served.ts`):
+  served DRACO bc2f93c0… P322_SERVED_PASS 17 gates — ft_finial binds the
+  emissive glTF mat exact [0.06,0.035,0.015], crown squash BAKED ySpan
+  0.1344, radial width 0.2283 held, all 320/321 regressions intact
+  (3 water families, 12 strands, 15 foam, anchors), 0 non-finite.
+- Ledger note: first append hit the loop-h-1 class (prose ended with its own
+  (D+1, E+0) pair — tool wrote its own, flagged BROKEN); stripped the
+  prose pair same tick, tool-arithmetic law re-verified EXACT (2336002 +
+  35082 = 2371084), single pair on the entry line.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  nits — ball matte-vs-specular read (needs sun-angle or higher-metal
+  falsification; rig's static sun), ball +20-30% scale for a stronger
+  crown read, judge fresh first.
