@@ -1,6 +1,61 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-221 — lawful HOLD (110th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 1385d30e (sweep-378, foreign
+  domain), HEAD unchanged through tick close — no epoch re-run due;
+  interlane md5 86b2936f pin-exact. Fresh census **415→416 = ONE arrival
+  + ZERO moves + ZERO departures, the arrival classified at source before
+  expectation use (dress-172 law), tuple-exact vs the sibling's OWN
+  sources read verbatim this tick**: `nx-dress-pigeon-001`
+  (−6.25, 0, 2) yaw 0.4354 scale 1 lib 2a46634f maxdelta 0.0000000 —
+  fauna-69 (eaaad53d) feral pigeon market flock at the market-stall
+  fore-court (ledger line 6948 + placer `fauna69-place-pigeon.ts` lines
+  16–19 verbatim; 7 motion comps: 3 bobs + peck X + strut scan Y + the
+  courting bow + tail flick), DRESS-PREFIXED but FAUNA-OWNED (fauna set
+  now 32 with pigeon) — NOT dress intake. ZERO moves — the polish-328
+  monument flip (cfbb31a6) was already absorbed in the dress-220 capture.
+  Domain strongest-form: **83 prior dress ids lib+pose EXACT-stable vs
+  the dress-220 PASS-verified capture + 1 fauna-owned arrival = all 84
+  accounted, zero unstable, zero in-domain arrivals/departures**; live
+  dress 84 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 32 fauna + 23
+  non-fleet (probe `/tmp/dress-hold-verify-221.py` HOLD_VERIFY_PASS exit
+  0 FIRST RUN, zero self-catches, browser UA, capture saved
+  `/tmp/dress221-census.json`).
+- **Sibling commits since dress-220**: struct-293 (eee33861, lawful
+  hold), fauna-69 (eaaad53d, the pigeon arrival above), sweep-378
+  (1385d30e, zero-mutation CLEAN SWEEP — classified the pigeon arrival +
+  monument flip, census 415→416, baseline rewritten 416 ents
+  0f3616363c77d6fd — HEAD at tick start, unchanged through tick close).
+  All named, all foreign domain. Foreign-lane dirt in tree (windmill
+  overhaul WIP + mergekit.ts edit + core-paths GLB, engine files
+  client/server, WINDMILL-OVERHAUL.md, fauna63+ probes, fleet shells,
+  moon-moth/cabin-overhaul dirs) — none dress-owned, left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan host `nx-struct-reedpool`
+  7d770620 — all pose-stable (artwalk-39 law); stork-millrace designed
+  adjacency 2.952m stable; swan-reedpool seat 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN rows,
+  zero OPEN `nx-dress-` rows) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-220 — lawful HOLD (109th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
