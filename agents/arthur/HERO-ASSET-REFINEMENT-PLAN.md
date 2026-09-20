@@ -2437,3 +2437,57 @@ next wake once the gateway answers.
   judge-noted candidates — warm ring-crest rim-kiss near the lantern
   (polish-316 lineage), bucket open-top interior disc (this tick's
   close-range note, judge fresh first).
+
+### polish-319 — monument knot night material (ACCEPTED, LIVE)
+
+- Subject: `nx-town-monument` (plaza NW, pos [-7,0,-7], yaw 0.7853981633974483,
+  empty comp bag; polish-owned — live d7d3b15c == on-disk build byte-exact).
+  First plaza-core re-survey subject after the September verdict; hall/welcome
+  skipped as sibling-contested (live dc871edb / 7d1bd0c9 != polish pins,
+  not byte-reproducible from HEAD — improve-lane lineage).
+- Defect (ZAI judge ×3, disclosed fallback, native re-judge owed —
+  polish-285..318 class): the KNOT — the monument's namesake — read as a
+  dark mass at night in BOTH rigs. Solo 18m: 3/10, "the brass never catches
+  the lamps". Live-light rig (NEW p319-monument-rig2.ts, dress-80 discipline:
+  PointLight(0xffd9a0,16,10,2) at the four real light positions via align-1
+  inverse): 5.5-6/10, "the focal object is the darkest interesting thing in
+  frame" — the night lane's "monument gold read inside pools" was pool-adjacent
+  prose, not knot material. Root cause: knot core mat(0xc9a86a,.28,.9) exported
+  COLOR_0-only (polish-307 class — params never reached the wire).
+- Change (ONE intervention, THREE measured rounds): knot material re-authored
+  v3 = rough 0.45 / metal 0.15 (polish-307 bell-gold recipe) + emissive
+  0xffc98a @ 0.025 → linear [0.025,0.0146,0.0064] (~+47 sRGB floor in dark
+  zones only). v1 @ 0.35 REJECTED (emissiveFactor is LINEAR — ~160 sRGB added
+  in ALL lighting; day p10 0→131 milky wash, polish-287 law; judge FAIL).
+  v2 @ 0.025 + rough .28/metal .9 REJECTED at the live-light probe (smooth-
+  metal conversion killed the broad diffuse pool response the engine-default
+  rough-1 baseline surface had — live night tube net delta ~0; polish-289
+  diffuse/metal trade, live variant). Bead/stones/plaque untouched.
+- Candidate `1b4cca52022ff356acfa045411f49c539c3b98ac1210c0f5d4b9142c562c2c1c`
+  deterministic ×2; decode ALL PASS (knot emissive exact, bead [0.9,0.5257,
+  0.2287] unchanged, node/mesh census 9/8 identical, 0 non-finite).
+- Falsification: day PASS ("satin/brushed brass, believable, no washout" —
+  p10 41 ≤ +50 law, span 94 vs v1's 54). Night solo PASS (3→6/10, quiet
+  self-lit metal, bead brightest, zero defects). Night LIVE PASS (5.5-6→7.5,
+  warm lit-form + speculars, hierarchy corrected, restraint clean). Tube
+  means: live night close (60,43,19)→(80,55,28); 18m (53,40,26)→(66,48,32).
+- Placed via updated `next-place-monument.ts` (pins d7d3b15c→1b4cca52):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent rerun
+  already-live-no-verbs, live census pin `store/1b4cca52022ff356.glb` exact.
+- Served-bytes proof (struct-104 law, durable `p319-verify-served.ts`;
+  self-caught 2 probe bugs RED→GREEN — 3-vs-4-component factor compare,
+  mergekit mn3_* bucket names): served DRACO bf2e4814… keeps knot
+  base/rough/metal/emissive EXACT + bead + both texture materials.
+  P319_SERVED_PASS. Gate re-run after mutation: ALL PASS exit 0 at sibling
+  HEAD e2e9e9cb (dress-206/struct-272 absorbed mid-tick).
+- Evidence: `reviews/hero-assets/polish-319-monument/` (before/ = live
+  baseline 12-view rig; after/ = v1 rejected; after-v2/ = rejected;
+  after-v3/ = ACCEPTED; live/ = the four live-light rig rounds ×3 views +
+  served-verified.glb; probes: p319-monument-rig/rig2, decode, bandvals,
+  tubestats, cropmean, verify-served).
+- Excalibur checkpoint: `eidoverse-hero-assets` cast NOT reachable (no
+  workings/ tree) — recorded here + ledger instead. Not fabricated.
+- Next ranked: (a) plaza-core re-survey (mapboard night slab N6-class note
+  is approach-lane routed; tower/inn are interior-lane hosts), or (b)
+  judge-named monument follow-ups — lower-tube night warmth + contact-shadow
+  anchor (this tick's judge notes, future rounds).
