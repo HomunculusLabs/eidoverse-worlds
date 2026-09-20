@@ -18,7 +18,27 @@ const well = new THREE.Group();
     // unreadable region). Cure: canon wood ACCENTS.WOOD 0xa09832 (lum 143)
     // for the whole frame class — two readable verticals between roof and
     // ring, material truth (village wood canon, loop #86 census).
-    box(well, "well_post_w", 0.1, 1.7, 0.1, -0.8, 0.85, 0, ACCENTS.WOOD);
+    // polish-316: the W post carries the night lantern but read as an
+    // ISOLATED GLOW DOT at night (judge on exact live bytes: post "dark,
+    // unaffected wood right up to the lantern", warm pixels stop at the
+    // fixture edge x~450, zero warmth on post/roof/ring — "emissive-
+    // material-only lantern"). The engine has no light-from-emissive, so
+    // the cast is AUTHORED as a baked falloff: the lantern-adjacent upper
+    // band of the mount post alone takes a faint warm emissive (lantern
+    // hue 0xffc98a @ 0.045, polish-311 cage-whisper lineage scaled to a
+    // wood surface), the lower band stays plain wood and merges with the
+    // E post's bucket. Physically truthful: light falls off with distance
+    // from the fixture (y~1.44); the E post and crossbar stay unlit.
+    // NOTE: box() takes a COLOR NUMBER (polish-309 law) — the lit band is
+    // an explicit Mesh so its material reaches the wire.
+    const litWood = mat(ACCENTS.WOOD, 0.95, 0);
+    litWood.emissive = new THREE.Color(0xffc98a);
+    litWood.emissiveIntensity = 0.012;
+    const postWHI = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.85, 0.1), litWood);
+    postWHI.name = "well_post_w_hi";
+    postWHI.position.set(-0.8, 1.275, 0);
+    well.add(postWHI);
+    box(well, "well_post_w_lo", 0.1, 0.85, 0.1, -0.8, 0.425, 0, ACCENTS.WOOD);
     box(well, "well_post_e", 0.1, 1.7, 0.1, 0.8, 0.85, 0, ACCENTS.WOOD);
     box(well, "well_crossbar", 1.8, 0.08, 0.08, 0, 1.72, 0, ACCENTS.WOOD);
     gableRoof(well, "well_roof", 1.6, 1.4, 0.5, 1.78, 0.2);

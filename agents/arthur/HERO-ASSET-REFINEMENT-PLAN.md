@@ -2278,3 +2278,37 @@ next wake once the gateway answers.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) recorded
   candidates — near-lantern emissive cast-tint on the W post (night judge
   ask, restrained), well rope thickness (polish-310 lineage).
+
+### polish-316 — well lantern cast-light (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-well` (same tuple as polish-313..315, empty comp bag).
+  Build source `assets/mkvillage-civic.ts` (well block) -> `village_well.glb`
+  (live was 9a88e9a8, polish-315's lantern build).
+- Defect (queue head from polish-315 close, confirmed fresh on exact live
+  bytes via NEW `p316-west-rig.ts` — polish-307 rig-law class: every standing
+  rig is a +Z camera; the -x lantern face was never framed): the lantern read
+  as an ISOLATED GLOW DOT — post "dark, unaffected wood right up to the
+  lantern", warm pixels stop at the fixture edge, zero warmth on post/roof/
+  ring (engine has no light-from-emissive).
+- Change (ONE edit): W mount post = two-band baked falloff. Upper band
+  `well_post_w_hi` (lantern-adjacent, full visible post) warm emissive
+  0xffc98a; lower band plain wood — seam lands behind the ring at every
+  vantage. Three measured rounds: 0.045 day-rejected (painted band read,
+  polish-311 permanent-shade law — the W face is under-eave), 0.02 day
+  seam-claim pixel-falsified (uniform to ring crest) but still warm,
+  0.012 ACCEPTED (day SHIP convention-aware; night PASS attached, posts
+  separable, plausible falloff).
+- Candidate `f6320f9f27334936...` deterministic x2; sibling control 406
+  files (only village_well changed; village_dtria3 = foreign struct-267
+  build); nodes 25->27. Served DRACO probe `p316-verify-served.ts`
+  P316_SERVED_PASS (glow0 [0.012,0.007,0.003] on well_post_w_hi only; all
+  313/314/315 regressions intact; 0 non-finite).
+- Placed via NEW `next-place-polish316-well.ts` (pins 9a88e9a8->f6320f9f):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun already-live-no-verbs, live pin `store/f6320f9f27334936.glb` @
+  [30,0,-4.5] yaw 0 exact.
+- Judges: ZAI fallback disclosed (no native vision tool loadable this cron
+  session, polish-285..315 class, native re-judge owed).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) optional
+  judge-noted future: warm rim-kiss on the ring crest near the lantern
+  (restrained), well rope thickness (polish-310 lineage).
