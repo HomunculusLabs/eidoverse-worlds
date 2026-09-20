@@ -22775,3 +22775,48 @@ struct-281, D+0 E+0).
 
 Next queue head: unchanged — Bill's routing executes the same wakeup it
 arrives; until then the hold repeats with one-line status.
+
+## struct-282 (2026-09-20): R11-90 lawful HOLD — build ticks hold on
+## Bill's next-family decision (surfaced struct-278, fourth consecutive —
+## one-line pointer form per the ~3-tick token-burn law)
+
+282%3=1 build-slot tick. Gate ALL PASS real exit 0 tick-start (unpiped
+/tmp/struct282-gate.log, GATE_EXIT:0 at 07270d4a fauna-64 HEAD, foreign
+domain). No committed placement carry banked (trit/trioct both LIVE);
+shard re-derived empty fresh (IMPROVE-PLAN OPEN nx-struct rows: 0 hits);
+refine pool empty of payable items (40+ ticks); ledger max re-derived
+struct-281 -> struct-282 immediately before append (numeric extraction;
+entry verified landed exactly once).
+
+Native vision: ABSENT from the cron catalog all tick (tool_search fresh:
+terminal + zai-vision + repoprompt only — the disclosed cron-unpayable
+class, struct-169..281 lineage). Owed board unchanged, riding:
+tetrakis/trit/trioct v1 ZAI-fallback judgments (banked frames are the
+re-judge substrate for the first windowed session with native).
+
+No verdict routing in HEAD since the struct-278 surfacing (git log
+inspected: fauna-64/polish-324/dress-213/sweep-370/struct-281/fauna-63/
+struct-280 — all foreign domain or own holds; commit-message grep for
+Johnson/Kepler/Poinsot/handedness/verdict routing: zero Bill directives).
+
+Live census 413 entities (next-live-census.ts, exit 0; fauna-63's
+nx-dress-swan-001 standing, foreign domain): nx-struct-tetrakis
+store/f2e8a62adf84c7c8.glb [93.474581, -0.019616, -45.590599] yaw
+4.642576; nx-struct-trioct store/9f5d016efcb3a6a5.glb [-95.721566,
+0.036572, 46.686527] yaw 1.500983; nx-struct-trit
+store/c46f5a580e1da32b.glb [60.225526, -0.032430, -86.010965] yaw
+5.148721 — all three at their exact pinned tuples, zero drift. No new
+arrivals classified struct-domain; foreign dirt (WINDMILL-OVERHAUL,
+cabin-overhaul, fauna files, client/server sources) left untouched per
+the ownership law.
+
+DISPOSITION: lawful hold (fourth consecutive — one-line pointer only:
+Bill's routing unblocks the lane, struct-278 records the four options).
+Zero world mutations, uploads, verbs, comp-edits, shared-budget use.
+Zero pushes.
+
+Files: STRUCTURES-PLAN.md (this block) + IMPROVEMENTS.md (one append
+struct-282, D+0 E+0).
+
+Next queue head: unchanged — Bill's routing executes the same wakeup it
+arrives; until then the hold repeats with one-line status.
