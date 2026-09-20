@@ -2786,14 +2786,14 @@ next wake once the gateway answers.
   blob-merge is falsified), fin height/width variance, strand brightness
   variation, basin water tone.
 
-- ERRATUM (attribution, this tick): the polish-325 changeset (mkwater1.ts,
-  placer pin, plan record, ledger line, p325-verify-served.ts) was staged by
-  this lane but swept into sibling commit 6a1eedca (struct-284 HOLD, broad
-  index add at its commit time) before this lane's own `git add` batch ran —
-  the survey-318 misattribution class, foreign-direction. All content
-  verified byte-intact at HEAD under that commit (per-file grep: plan 1
-  section, mkwater1 1 edit block, placer pin 68e5b75e, probe present).
-  History rewrite is NOT safe (sibling commits landed on top would be
-  required to move); per the polish-324/322 erratum precedent this note is
-  the durable correction. Live world, ledger law, and evidence are
-  unaffected — attribution only.
+- ERRATUM (attribution, this tick, corrected after sibling self-revert):
+  this lane's staged changeset (mkwater1.ts, placer pin, p325 probe) was
+  consumed by sibling struct-284's FIRST commit 6a1eedca (broad index add);
+  that lane then reset its own commit (reflog HEAD@{2}) and re-committed
+  cleanly as 0e202135 carrying only its own files — the whole-file
+  IMPROVEMENTS.md add preserved this lane's polish-325 ledger entry (law
+  verified EXACT at HEAD). This lane's remaining files are re-committed by
+  this lane in the erratum follow-up commit (survey-318 misattribution
+  class, foreign-direction, self-corrected by the owning lane). Live pin
+  68e5b75e, P325_SERVED_PASS, and evidence are unaffected — attribution
+  only.

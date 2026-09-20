@@ -58,7 +58,18 @@ const fountain = new THREE.Group();
         course.position.y = cy;
         fountain.add(course);
     });
-    const bowl = new THREE.Mesh(new THREE.CylinderGeometry(0.75, 0.5, 0.3, 12), mat(C.STONE, 0.95, 0));
+    // polish-325 (bowl dead-hole cure): ft_bowl was mat(C.STONE, 0.95, 0) —
+    // the legacy COLOR_0-only lane (mat:null in the GLB, polish-289/307
+    // class). Both 18m judges (day+night) read its y 1.50..1.80 band as a
+    // HOLE: pixel-probe pure (0,0,0) in BOTH lighting states — a black
+    // doorway mid-silhouette splitting the fountain into "water wings over
+    // a void" (night judge: "floating light fixture", 5/10 identity). The
+    // bowl is the vessel that connects cascade to drum; it now wears the
+    // drum's own dressed limestone + cool spill (one stone, one structure
+    // — polish-307/308 one-metal precedent). Night: joins the drum-top
+    // spill band (39,50,54 at 18m — 20x below foam, restraint law); day:
+    // reads as constructed stone instead of a hole.
+    const bowl = new THREE.Mesh(new THREE.CylinderGeometry(0.75, 0.5, 0.3, 12), drumStone);
     bowl.name = "ft_bowl";
     bowl.position.y = 1.65;
     fountain.add(bowl);
