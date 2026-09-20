@@ -17674,3 +17674,78 @@ committed pointers this tick: hall/bunkhouse @366 walked fresh, forge/potter
 @365, inn/tower-house @364 the stalest standing pair; walk tools
 interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verified present on
 disk — 1786B Aug 30 08:11 + 1523B Aug 30 09:53).
+
+|| sweep-367 | 2026-09-20 | 410==410 epoch-corrected (epoch A FULLY QUIET vs committed sweep-366 baseline 0a7bdd317b82cb18: 0 arrivals, 0 departures, 0 drift full-key; polish-322 fountain brass-ball landed mid-tick @ 1a7dde28 = epoch B: exactly ONE classified drift field = nx-dress-fountain lib d44315f635690f5e->657f3c222e2ba98d at identical tuple [12.5,0,4] yaw -0.7854, comp {} both, ledger-matched line-for-line (finial bell-gold 0xd9ac52 + crown squash baked, P322_SERVED_PASS 17 gates, PLACED_VERIFIED 1 upload + 1 verb, idempotent 0), domain-valid not drift; 0 arrivals/departures both epochs; snapshot rewritten like-for-like from the COMMITTED indent-2 bytes with the one-field change applied — pre-write asserts green, post-rewrite drift ZERO — 410 ents / 321188B / sha16 e4f6e6af63b2fa4d, git diff exactly 1 line) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 323rd sweep since routing, no escalation due — law keys Sev 1); SAT run at epoch A + re-run at epoch B over the new fountain bytes: 372 bbox non-light / 254 exempt-classified / 0 coverage holes, zero new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 maxArrival 0.380, NW 5/5 0.00/0.38/0.30/0.33/0.32, NE 7/7 0.00/0.29/0.32/0.29/0.38/0.25/0.31, SW 5/5 0.00/0.25/0.34/0.37/0.31 — dists canon-exact vs sweep-319..366 canon; core RE-WALKED AT EPOCH B over the new fountain bytes — fountain r13.1 plaza-core inside the re-verify band, sweep-58 precedent; NW/NE/SW epoch-A legs stand, no live change in their bands) + tier-2 345th cycle per committed pointer: inn 6/6 ALL_PASS dists 0.320/0.318/0.341/0.350/0.364/0.288 (interior-walk-inn.ts) + tower-house 6/6 ALL_PASS dists 0.245/0.245/0.263/0.377/0.374/0.309 (interior-walk-tower-house.ts), tools ls-verified present BEFORE the walks (1786B Aug 30 08:11 + 1523B Aug 30 09:53), dists canon-exact | pins 15/15 ALL_PINS_OK bad:[] (321st consecutive, epoch-B re-run), sweep89-battery 28/28 PASS both epochs (comp-bearing 58 stable, lights 38, thing 372; carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified), interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows, CITY-PLAN-V2 cae6b928 unchanged), ledger law exact, gate ALL PASS real exit 0 at 6efe9d08 tick-start + re-run 1a7dde28 post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due. Next pair (sweep-368): stable + market (346th cycle — LRU chain re-derived: inn/tower-house @367 fresh, hall/bunkhouse @366, forge/potter @365, stable/market @361 the stalest standing pair; tools interior-walk-stable.ts + interior-walk-market.ts, ls-verified 1784B Aug 31 14:15 + 1544B Aug 30 08:47) |
+
+
+sweep-367: CLEAN SWEEP, single-classified-flip epoch-correction tick (137th
+consecutive quiet-or-classified). Tick-start HEAD 6efe9d08 (dress-209 hold);
+standing gate ALL PASS real exit 0 FIRST TRY, re-run ALL PASS exit 0 at
+1a7dde28 after polish-322 interleaved mid-tick. Census epoch A 410==410 vs
+the committed sweep-366 baseline (sha16 0a7bdd317b82cb18): 0 arrivals, 0
+departures, 0 drift full-key. Epoch B (20s-paced re-read): exactly ONE
+classified drift field — nx-dress-fountain lib d44315f635690f5e->
+657f3c222e2ba98d at identical tuple [12.5, 0, 4] yaw -0.7854, comp {} both
+epochs, matching polish-322's committed ledger line-for-line (fountain
+brass-ball identity: ft_finial legacy COLOR_0-only olive -> real bell-gold
+0xd9ac52 r.45 m.15 + warm night accent, ft_crown squash baked into geometry
+y-span 0.48->0.134 so the ball stands 0.18m clear; P322_SERVED_PASS 17
+gates, PLACED_VERIFIED 1 upload + 1 verb, idempotent 0). Domain-valid, not
+drift; 0 arrivals/departures both epochs. Per the polish-270 epoch law all
+affected evidence was re-taken fresh before verdicts: SAT re-run at epoch B
+over the new fountain bytes — 372 bbox non-light / 254 exempt-classified /
+0 coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407, known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 323rd sweep since routing, NOT new, no escalation due (the law
+keys on severity-1); zero new contacts. Core RE-WALKED at epoch B 64/64
+ALL_PASS maxArrival 0.380 — the fountain sits r13.1 plaza-core, inside the
+re-verify band (sweep-58 precedent), so epoch-A core legs were not allowed
+to stand on SAT neutrality alone. Pins + battery re-run on epoch-B bytes.
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0,
+legs run individually — NW 5/5 (0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..366 canon.
+Support-seam abstentions normalized at POOL level this tick: per-run
+membership churned within the known ~10-entity far-off-route pool
+(dress stones/yard/logpile/skeps/streamstones/lanternhook + temple
+labyrinth bouders) — no new pool member across s361..s367 captures,
+verdicts unaffected; disclosed as a normalization refinement (the per-run
+sample is not the stable comparison unit). Tier-2 345th cycle per the
+committed sweep-366 pointer: inn 6/6 ALL_PASS (interior-walk-inn.ts, dists
+0.320/0.318/0.341/0.350/0.364/0.288) + tower-house 6/6 ALL_PASS
+(interior-walk-tower-house.ts, dists 0.245/0.245/0.263/0.377/0.374/0.309),
+tools ls-verified present BEFORE the walks (1786B Aug 30 08:11 + 1523B Aug
+30 09:53), dists canon-exact. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (321st consecutive clean); sweep89-battery 28/28 PASS
+both epochs first try (no pin move — comp-bearing 58 stable, lights 38,
+thing 372; carousel comp bag exact 7 + lib 3ed80c49d16e89d8
+census-verified). Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP
+md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224
+unchanged (zero open queue rows), sweep owns no prefix; CITY-PLAN-V2 md5
+cae6b928 unchanged — the audit-continues freeze banner governs via loop/
+plan reload. Baseline lawfully rewritten LIKE-FOR-LIKE from the COMMITTED
+indent-2 bytes with the one-field change applied (FORMAT SELF-CATCH
+disclosed, sweep-366 class, second consecutive tick: the first write
+emitted a compact 156461B projection sha16 8f8ab6fb3a14d5f5 — caught by
+the size probe vs committed 321188B before commit, recovered via git show
+HEAD and re-applied as a 1-line change): final 410 entities / 321188B /
+sha16 e4f6e6af63b2fa4d, pre-write asserts green (arrivals [], departures
+[], drift exactly [nx-dress-fountain.lib]), post-rewrite drift ZERO, git
+diff exactly 1 line. Ledger sweep-367 appended, law exact 2371084. Probe
+self-catches pre-verdict, disclosed: (a) diff-script sed over-replacement
+pointed at a nonexistent epoch-B file (re-anchored); (b) walk-parser keyed
+dist/distance wrong twice before reading the actual per-tool schemas
+(sweep-48/54 class, two iterations); (c) the census script hardcodes the
+epochA filename so the epoch-B re-read overwrote epoch A — comparison
+re-based directly on the committed baseline, equivalent. Foreign dirt in
+tree (engine files client/server, core-paths GLB + review json, windmill
+overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth
+prototype dirs, struct276 tools, fauna/debug tools, review dirs) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-368): stable +
+market (346th cycle — LRU chain re-derived: inn/tower-house @367 fresh,
+hall/bunkhouse @366, forge/potter @365, stable/market @361 the stalest
+standing pair; walk tools interior-walk-stable.ts 1784B Aug 31 14:15 +
+interior-walk-market.ts 1544B Aug 30 08:47, ls-verified present on disk).
