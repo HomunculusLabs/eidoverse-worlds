@@ -21434,3 +21434,98 @@ remain unclaimed and achiral; the pentagonal hexecontahedron + snub
 cube/dodeca stay HELD for Bill's handedness call (coin-flip = inventing
 a preference); rhombic dodeca BARRED rt-kin; fresh five-file grep
 before building — or Bill's verdict routing.
+
+## struct-270 (2026-09-20): R11-78 placement carry — THE DELTOIDAL
+## HEXEACONTAHEDRON LIVE as nx-struct-deltoid (E band sixth form)
+
+The struct-269 committed carry executed. Bank re-verified
+byte-identical pre-mutation (on-disk sha256 b434f496…4764 == struct-269
+v1 pin; no rebuild — struct-262/264/266/268 precedent). Gate ALL PASS
+real exit 0 at tick start (unpiped, GATE_EXIT:0 at 37b73015 polish-317,
+foreign domain). 270%3=0 refine-slot tick consumed by the judge-debt
+cadence law: the committed placement outranks refine (pool empty of
+payable items 40+ ticks) and a new form.
+
+SEAT (struct270-scan-deltoid, fresh 404-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.370, guaranteed overlap refused; coverage exact 1 / radial
+304 / disc 2 / exempt 4): octant audit places E az0-45 as the
+under-served band (5 forms standing — ssd az9.0 r66.0, tetrahelix az4.0
+r76.0, co az3.5 r96.5, tret az26.5 r102.0, rico az12.5 r105.5; +
+deltoid -> 6, soft cap 6, NO exceedance — at cap, disclosed). Selected:
+az37.5 r109.5 (86.872191, 66.659376) — innermost margin+constellation
+seat, gap 2.23 vs nx-craft-cloister-0016. NN 21.60 to nx-struct-tret
+(law 8; composed with tret@21.6 and the PARENT rico@46.7 — the dual
+standing in its parent's own quarter, the rico's 62 faces turned
+inside-out across the same E walk).
+
+YAW LAW (procession convention, struct-217..268): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az217.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120
+- 37.5 = -157.5 -> 202.50deg -> YAW = 3.5342917 rad. DISCLOSED: the
+deltoid is a 5-FOLD point-down seat (probe T7: foot + crown pent-rank
+on-axis, lower pentad snapped az 0, upper offset 36-deg, pentads
+inversion-paired) and the oblique-lean band puts the yaw 202.5 mod 72
+= 58.5deg off the 72deg lattice — the exact-mod bonus does NOT apply;
+the panelled-solid family reads at any azimuth (trico/SSD/gsd/gdodec/
+gicosa/dtria precedent) and the judged framing is preserved.
+
+TERRAIN (struct270-terrain-deltoid.ts, this tick): 121pt over the TRUE
+rotated 60-gon (center + 60 verts + 60 edge-mids), spread 19.2mm, PY =
+lowest = -0.048791 (the dais-sole-at-grade build absorbs the spread).
+
+SAT LAW (N=60 class): the 60-gon dais R3.45 CORNERS-ON-AXES (ROT=0
+class, decode D2: corners present, TRUE box +/-3.450; apothem 3.445 >=
+reach+rod 3.325 — apothem-first, struct-247) is the footprint; build
+envelope 6.90x8.47x6.90 — the solid NEVER overhangs (probe T8
+immersion: fully inside, worst poke -0.024), so the 60-gon IS the true
+ground footprint. Exact convex-polygon SAT (edge-normal axes of both
+polys, max-gap law) replaces the square-bbox proxy — struct-19/260
+disc law class.
+
+PLACEMENT: next-place-struct270.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 404), NN
+floor 21.60 + exact-SAT worst 2.23 re-proven against the FRESH 404-set
+pre-verb [exact 1 radial 304 disc 2 exempt 4] + in-placer RED control
+PASS (exact-SAT at nx-craft-statuary-0005's own center -> gap -9.370),
+upload store/b434f496b1a9c575.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [86.872191, -0.048791,
+66.659376] yaw 3.534291735288517 lib store/b434f496b1a9c575.glb comp {}
+census 404->405; idempotent rerun ALREADY_SEATED 0 verbs. Ground
+circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way az37.5
+arrival-line approach + reading-face vantage az247.5 at 7m + full CW
+8m standoff circuit, no phantom collider; folly by presentation, the
+PANELLED solid means the walk stays outside the 3.45m dais; walk
+standoff 8m applies directly, edge mid clear 4.56m — family
+disposition). Walk stdout carries the known distant support-seam
+diagnostics class (temple/dress entities, foreign lanes, abstentions
+only). One placer self-catch pre-run: the RED-control corner list
+carried a masked corner entry ([-rhz*0-rhx,-rhz] — evaluates right but
+is the exact struct-266/268 copy-error class), caught by inspection
+BEFORE execution, fixed to [-rhx,-rhz], no live effect.
+
+Bill eye-check pointer: on the E reach past the tret, the rico's
+quarter — THE DELTOIDAL HEXEACONTAHEDRON, two parents' child read
+through the looking glass. The rico told two parents in one skin (62
+faces, both element censuses mirrored); its dual reads the same story
+turned inside-out: every face a POINT (12 pent-rank outermost + 30 sq
++ 20 tri, depth ranking flipped) and every one of the 60 rico vertices
+a KITE sail (pent head + two sq sides + tri tail), every sail kissing
+ONE insphere. Point-down 5-fold at 6.7m on a SIXTY-sided dais — one
+side per sail, the theme number. After dark, twelve warm brass beads
+at the pent-rank points — crown finial + ten waist + the grounded one
+half-proud in the dais top. Walk the E band and read it against its
+parent across the field.
+
+Files: struct270-scan-deltoid.ts + struct270-terrain-deltoid.ts +
+struct270-walk-deltoid.ts + next-place-struct270.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-270, D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-271 build+judge tick (R11-79 build sweep —
+fresh five-file grep over the small Catalans: triakis
+tetra/octa/icosa, tetrakis cube remain unclaimed and achiral; the
+pentagonal hexecontahedron + snub cube/dodeca stay HELD for Bill's
+handedness call; rhombic dodeca BARRED rt-kin) — or Bill's verdict
+routing. The E band is AT soft cap 6 — R11-79 seats to a different
+octant.
