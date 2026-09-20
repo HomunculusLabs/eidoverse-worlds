@@ -20783,3 +20783,142 @@ the tunnel star); the snub cube/dodeca stay named for Bill's
 handedness call; rhombic solids / non-Archimedean families per
 struct-253's grep; fresh five-file grep to confirm the gap before
 building) or Bill's verdict routing.
+
+## struct-265 (2026-09-19): R11-73 THE GREAT ICOSAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-266 committed carry)
+
+265%3=2 build slot with EMPTY bank (gdodec placed struct-264) -> build+judge
+tick per the struct-240..264 precedent. Gate ALL PASS real exit 0 tick-start
+(unpiped, GATE_EXIT:0 at b3a173df epoch — struct-264 HEAD, own lane). Shard
+drained fresh (IMPROVE-PLAN md5 7fa8a22499d8e38dbde7031e7ed337cd unchanged
+since struct-238, 0 OPEN nx-struct rows). Ledger max re-derived struct-264 ->
+tag struct-265 (numeric extraction, re-checked immediately before append).
+Native absent from the cron catalog all tick (tool_search fresh: terminal +
+zai-vision + repoprompt only — same disclosed cron-unpayable class as
+struct-169..264; owed board gains gicosa v1, joins the riding queue). No
+interrupted 265 window existed (no struct265-*/mkv3-gicosa files pre-tick).
+
+FORM SELECTION fresh six-file grep (the struct-264 queue-head named the
+sweep): great icosa / gicosa / {3,5/2} — 0 real claims across
+STRUCTURES-PLAN, IMPROVEMENTS, CITY-PLAN, IMPROVE-PLAN, NEW-VILLAGE-PLAN,
+DRESSING-PLAN (only my own unclaimed-pointer lines). Selected: the GREAT
+ICOSAHEDRON {3,5/2} — the Kepler-Poinsot quartet's LAST member (SSD
+struct-231/232, gsd struct-261/262, gdodec struct-263/264 standing). Direct
+dual of the standing gsd ({3,5/2} <-> {5/2,3}); the genus twin of it (both
+χ = +2, genus 0) standing apart from the genus-4 pair (SSD ↔ gdodec, χ=−6);
+same 12-vertex cage as the gdodec (the icosa's own vertices) with the edge
+CLASS flipped to the star class — every edge a 2φ diagonal across an icosa
+face. Achiral (no handedness decision owed Bill). The snub cube/dodeca stay
+named for Bill's handedness call; rhombic solids / non-Archimedean families
+per struct-253's grep.
+
+CONCEPT: THE STAR THAT CLIMBS. Vertex-down seat — the bottom pole stands at
+the dais center, its five tip-sails rising STEEP from the point to the
+horizontal star-ring at 5.448m (r 3.494 — the star-class neighbor ring, the
+highest ring this cage makes), then the crown weaves to the summit pole at
+7.414m: the tall twin of the gdodec's low canopy (same height, same vertex
+count, opposite gesture). IRON carries the thirty 2φ star edges; STONE
+carries the twenty triangle sails + the TWENTY-sided dais (the theme
+number, corners-on-axes ROT=0 — TRUE box ±R 3.746, the 20-gon IS the true
+ground footprint: ring+bead extent 3.5888 <= apothem 3.70). Night contract:
+TWELVE warm brass vertex beads (glow_gicosa_12), the grounded one
+half-proud in the dais top (SSD/csaszar/gsd/gdodec lineage). The honest
+presentation of the interweave: iron rods pass through stone sails at the
+150 woven crossings (probe T9, disclosed in-build).
+
+PARAMETRIZATION (exact, closed-form — derived, not remembered): V = the
+icosa's 12 ((0,±1,±φ) cyclic), R = √((5+√5)/2) exact (T0a spread 0e0); E =
+the 30 pairs at distance 2φ (d² = 4φ² — the STAR class; the honest search
+also finds and discards the d²=4 class's 20 rings — the convex icosa's own
+faces, printed for the contrast: plane depth 1.512 vs ours 0.357); F = 20
+equilateral triangles, side 2φ exact; face plane depth h = 1/(φ√3) EXACT
+(four times deeper than the icosa's own), r_f = 2φ/√3, h·r_f = 2/3.
+
+PROBE (struct265-probe-gicosa.ts, tracked) ALL PASS real exit 0 + RED
+control exit 1 (6 law FAILs on corrupted ring 0: T3/T4/T5/T6/T8/T9):
+T0a co-sphere closed-form exact; T1 Euler 12−30+20 = +2 GENUS ZERO; T2
+degree 5 every vertex (figure {5/2}); T3 20 equilateral triangles over the
+star class (side 6.051447118 = 2φ·S exact, on-plane 6.7e-16); T4 manifold
+30/30; T5 five faces per vertex; T6 golden laws — every face plane at
+EXACTLY 1/(φ√3) = 0.356822089773 (worst 1.7e-16), h·r_f = 2/3 exact; T7
+pole-down seat (tip y 0.300000000 at dais top, star-ring horizontal y
+5.448 r 3.494 at exact 72deg azimuths, summit 7.414 antipodal-in-seat 0e0,
+footprint law 3.5888 <= 3.70); T8 outlines on-plane monotone (simple
+sails); T9 the symmetric interweave — exactly 150 non-adjacent crossings,
+15 per face, antipodal sails never cross (0), adjacent contacts 0 (sails
+meet only AT shared edges).
+
+THREE probe self-catches RED-first this tick (zero wasted builds): (a) my
+prose arithmetic said ring r 3.181 — the machine measured 3.494
+(1.8683×1.87; 3.181 was the icosa-edge class radius, the WRONG class) —
+extent law failed 3.589 > apothem 3.30 -> dais grown to 3.70; (b) the
+inherited pentagon T8 gap threshold (0.6π) false-fired 60 violations on
+triangles — a 3-ring's gaps are exactly 2π/3; law rewritten to the
+all-gaps-equal-2π/3 form, RED re-proven; (c) T9 ran census-first (symmetry
+only), measured 150/15 symmetric, then pinned — derive-then-pin, RED
+re-proven after pinning (143 asymmetric on corrupted ring = FAIL).
+
+BUILD (agents/arthur/assets/mkv3-gicosa.ts, staged -f): root identity
+(struct-188 law); texMat lanes gicosa_stone/gicosa_iron (struct-38 law);
+bead emissive 0x9a7030 @ 1.0 in-GLB (dusk lineage, struct-82); 51
+pre-merge meshes + 1 KEEP glow group glow_gicosa_12 (mergekit KEEP 'glow'
+prefix law); envelope law green in-build 7.49x7.51x7.49 == probe
+contract. v1 deterministic x2 byte-identical sha256
+3b87bdbc727152f42ae3c44d6485206526e7ec5ca4225a41ff1237f25c6301b4
+(mtime-verified 1789865436).
+
+DECODE (struct265-decode-gicosa.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (gicosa_iron + gicosa_stone + glow_gicosa_12); D2
+icosagon dais TRUE box ±3.746 (corners-on-axes, ROT=0 class), circumradius
+corners present, sole min y −0.000000; D3 rods 2250 verts worst 48.00mm
+(<= 52), coverage 30/30; D4 sails 480 plate verts worst 37.03mm (<= 96mm
+shell bound) over 20 face planes; D5 beads 12/12 vertex clusters,
+emissive, sole night; D6 grounding sole at grade + pole bead half-proud
+(min y 0.2050 in dais top 0.30); D7 envelope drift 0.00mm; D8 texMats 2/2.
+RED control (foreign bytes village_gdodec3.glb — the dual family's own
+build): D1 census FAIL clean-stop exit 1 — verified RED_EXIT:1.
+
+RENDERS: struct265-render-gicosa.ts (tracked chassis, struct263 lineage)
+9 frames on the EXACT pinned bytes — bounds
+min[−3.746,−0.000,−3.746] max[3.746,7.509,3.746] == contract;
+reviews/struct265-gicosa/ (9 frames, ignored — sha pin above is the
+durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as gicosa v1): day
+gameplay 18m 4/4 PASS (identity 'unmistakably a deliberate mathematical
+star sculpture'; silhouette closed dais-to-summit with the mid-height star
+ring; grounding flush + coherent cast shadow; zero defects — interweave
+reads intentional see-through overlap). Night 3/3 PASS (8-9 warm points
+resolved at this single azimuth incl. the half-embedded dais bead —
+rear occlusion the geometric expectation, decode D5 proves 12/12
+clusters; zero bloom/spill; constellation-crown read confirmed).
+Closeface 4/4 PASS (joinery clean alternating over-under through-laps;
+all 20 panels present + inset behind rod rims with uniform shadow seam;
+stone/iron distinguishable, beads seat at rod junctions; zero
+z-fighting/floats/tears). 11/11 total — no real defect. Cosmetic nits
+(family-wide class, disclosed): dais disc-smooth at 18m (the many-gon
+class, gsd identical), texMat camo-grain nit, lowest-bead contact
+marginal at closeface (decode D6 proves the half-proud embed).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-266
+committed carry (fresh census scan, under-served octant, 8m NN +
+per-district soft cap 6, 20-gon-exact polygon SAT struct-19/260 class,
+oblique-yaw struct-104 band, terrain preflight over the TRUE rotated
+20-gon, hash-gated plain spawn nx-struct-gicosa, comp {}, ground circuit
+walk). Folly class. Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
+
+Files: struct265-probe-gicosa.ts + struct265-decode-gicosa.ts +
+struct265-render-gicosa.ts + assets/mkv3-gicosa.ts (NEW, tracked; mk
+staged -f per the ignored-parent law) + STRUCTURES-PLAN.md (this block) +
+IMPROVEMENTS.md (one append struct-265, D+0 E+0).
+
+Next queue head: struct-266 placement tick (the committed carry above).
+Then R11-74 build sweep re-derives from the form ledger: the
+Kepler-Poinsot quartet is COMPLETE (all four standing or banked); the
+named-unclaimed surface = the snub cube / snub dodecahedron (BOTH owe
+Bill a handedness call — chirality is a Bill decision, not a lane one);
+per struct-253's grep the non-Archimedean families (rhombic solids,
+Catalan duals, Johnson solids) are the wider claim surface — fresh
+five-file grep before building. Or Bill's verdict routing.
