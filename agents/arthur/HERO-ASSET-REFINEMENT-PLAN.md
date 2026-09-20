@@ -3120,3 +3120,52 @@ next wake once the gateway answers.
   uniformity, and the SW firewood pile vs the old bench-read confusion;
   judge fresh first, or (b) hearth judge-named follow-ups (bowl interior
   warm-bounce, ring stone albedo contrast).
+
+### polish-331 — hearth split-log benches re-grounded (ACCEPTED, LIVE)
+
+- Subject: `nx-hearth` (village origin [0,0,0], yaw 0, 4-key comp bag,
+  census-fresh; live was polish-330's 0bb8fb0e; on-disk == live exact at
+  survey, determinism re-proven, before-bytes captured FIRST).
+- Defect: decode-proven at source (p331-decode-bench.ts, declared
+  accessor min/max) + fresh day-judge (ZAI fallback, native re-judge
+  owed): the bench "flatten" scale sat on the cylinder's local Y —
+  the LENGTH axis under rotation.z=PI/2 — so the intended split-flat
+  tops actually squashed the 1.15m seats into 0.71m ROUND stubs sunk
+  5cm (the firewood pile's own shape class; why judges kept reading
+  benches as logs, 2 of 4 silhouette-only). The end-grain disc offset
+  mirrored the z term (sin(-a)): all four discs sat ~45deg off their
+  bench ends, floating in the grass (monument collapsed-bead class).
+- Change (ONE bench-block edit, mkv3-plaza.ts): flatten the true
+  vertical (local X): full 1.15m seats, split tops y 0.198, grounded
+  (centerline 0.0992 = bottom exactly at grade); true-radial disc
+  offset at r 2.485, matching the bench elliptical section. polish-300
+  ring clearance restored to the DESIGNED 1.15m contract (tip 2.475 vs
+  flag inner 2.60).
+- Candidate `74f16c88b1e9c7392580997c8329c3125ff0160d507e9a91848f7ba93d70fac7`
+  deterministic x2; nodes 19 / meshes 17 / materials 6 unchanged; NaN
+  clean via served decode. Decode: bench y 0.00..0.20 full-length
+  (±1.86 union), discs concentric (±1.87), no grass-floaters.
+- Falsification (day + night ZAI judges): day — geometry CLEAN, no
+  float/clip/ring-poke, 3 of 4 benches shape-readable with pale sawn
+  tops (4th occluded by the tripod column — the "short front-right
+  form" the judge flagged is the woodpile itself); night — CLEAN,
+  grounded reads, fire > kettle > lantern hierarchy intact.
+- Placed via updated `next-place-hearth.ts` (pin 0bb8fb0e ->
+  74f16c88): PLACED_VERIFIED, 1 upload + 5 verbs, 4-key comp bag with
+  ONE authored amendment — sockets log_* y 0.32 -> 0.25 tracking the
+  re-grounded tops (tale_seat untouched; the captured bag would replay
+  the stub-era height); idempotent rerun zero verbs; live census pin
+  `store/74f16c88b1e9c739.glb` @ [0,0,0] yaw 0 exact.
+- Served-bytes proof (struct-104 law, durable probe
+  `agents/arthur/p331-verify-served.ts`): served DRACO 3afe281b…
+  keeps benches y 0.002..0.197 rMax 2.480 + concentric discs + all
+  anchors + potIron emissive. P331_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 (sibling HEAD 9364d854
+  fauna-72, foreign).
+- Evidence: `reviews/hero-assets/polish-331-hearth-bench/` (before/ =
+  live 0bb8fb0e baseline GLB + 10-view rig; after/ = candidate + rig).
+- Next ranked: (a) bench-top value lift (judge: tops carry the seat
+  read at 18m; 2 dark benches still bottom-tier), (b) woodpile
+  separation from bench (judge: strongest single fix — move pile
+  beside the ring or value-split), or (c) plaza-core re-survey on
+  fresh evidence.

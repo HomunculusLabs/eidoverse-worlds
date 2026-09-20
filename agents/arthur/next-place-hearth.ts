@@ -1,9 +1,11 @@
-// next-place-hearth.ts — polish lane (330): re-place nx-hearth with the
-// re-authored cooking kettle (polish-330 build). Captures the 4-key comp bag
-// before spawn, re-applies every key after (comp-wipe law), verifies tuple
-// + keys, idempotent rerun prints zero verbs. Verb choreography copied from
-// the proven next-place-carousel.ts (snapshot-gated paced sender, `comp`
-// verb shape).
+// next-place-hearth.ts — polish lane (331): re-place nx-hearth with the
+// re-authored split-log benches (polish-331 build). Captures the live comp bag
+// before spawn, re-applies every key after (comp-wipe law) — with ONE authored
+// amendment: the sockets' bench seat heights advance top+0.05 0.32 -> 0.25 to
+// track the polish-331 re-grounded benches (the captured bag would otherwise
+// replay the stale stub-era height). Verifies tuple + keys, idempotent rerun
+// prints zero verbs. Verb choreography copied from the proven
+// next-place-carousel.ts (snapshot-gated paced sender, `comp` verb shape).
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -12,10 +14,19 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-hearth";
 const FILE = `${ROOT}/agents/arthur/assets/village_plaza3.glb`;
-const REVIEWED_SHA = "0bb8fb0e973e6b35478378150b6589d30eaab1d1031269cc79fb0b48266bbe49";
+const REVIEWED_SHA = "74f16c88b1e9c7392580997c8329c3125ff0160d507e9a91848f7ba93d70fac7";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [0, 0, 0] as [number, number, number], yaw: 0, scale: 1 };
 const EXPECTED_KEYS = ["motion:pz_kettle", "motion:well_", "particles", "sockets"].sort();
+// polish-331 authored sockets amendment: bench tops now y 0.198 -> seat at
+// top+0.05 = 0.248 ~ 0.25 (stale 0.32 would float a rider 7cm above the seat).
+const amend = (bag: Record<string, any>) => {
+  const s = structuredClone(bag);
+  for (const k of ["log_0", "log_1", "log_2", "log_3"]) {
+    if (s.sockets?.[k]) s.sockets[k].pos[1] = 0.25;
+  }
+  return s;
+};
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 const die = (m: string): never => { throw new Error(m); };
@@ -41,7 +52,8 @@ if (sha !== REVIEWED_SHA) die(`reviewed hash mismatch: ${sha}`);
 const before = await geom();
 const live = before[ID];
 if (!live) die(`${ID} missing before placement`);
-const captured: Record<string, any> = structuredClone(live.comp ?? {});
+// polish-331: amend the captured bag (socket heights) -> this is the target bag.
+const captured: Record<string, any> = amend(structuredClone(live.comp ?? {}));
 const keys = Object.keys(captured).sort();
 if (JSON.stringify(keys) !== JSON.stringify(EXPECTED_KEYS)) die(`comp bag drift: ${JSON.stringify(keys)}`);
 
@@ -53,7 +65,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "the plaza hearth — polish-330 cooking kettle");
+  u.searchParams.set("name", "the plaza hearth — polish-331 split-log benches");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {

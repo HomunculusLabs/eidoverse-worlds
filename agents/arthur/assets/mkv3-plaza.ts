@@ -58,17 +58,27 @@ for (let s = 0; s < 4; s++) {
     bench.name = `log_${s}`;
     bench.rotation.z = Math.PI / 2;
     bench.rotation.y = -a;
-    // flatten the seating face: scale y to make the top sawn-flat
-    bench.scale.set(1, 0.62, 1);
-    bench.position.set(Math.cos(a) * 1.9, 0.11, Math.sin(a) * 1.9);
+    // polish-331 SPLIT-FACE FIX: with rotation.z=PI/2 (Euler XYZ: RY(-a) then
+    // RZ first), the cylinder's local Y is the LENGTH axis and local X is the
+    // VERTICAL — the old scale.set(1, 0.62, 1) squashed the LENGTH (1.15 ->
+    // 0.71m round stubs sunk 5cm, decode-proven: the firewood pile's own
+    // shape class) while leaving the cross-section round. Flatten the true
+    // vertical (local X): full 1.15m seat, split-log top 0.198, grounded
+    // (half-height 0.16*0.62 = 0.0992 -> bottom exactly at grade).
+    bench.scale.set(0.62, 1, 1);
+    bench.position.set(Math.cos(a) * 1.9, 0.0992, Math.sin(a) * 1.9);
     g.add(bench);
     // end-grain disc (lighter cut face on the outer end)
+    // polish-331: the offset used (cos(-a), sin(-a))*0.58 — sin(-a) = -sin(a)
+    // MIRRORED the z term, planting every disc ~45° off its bench end in the
+    // grass (decode: z-extent ±1.04 vs bench z ±1.344 ring). True radial
+    // offset + the bench's own elliptical section + same centerline y.
     const grain = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.15, 0.02, 9), mat(0x9e8e46, 0.85, 0));
     grain.name = `grain_${s}`;
     grain.rotation.z = Math.PI / 2;
     grain.rotation.y = -a;
-    grain.scale.set(1, 0.62, 1);
-    grain.position.set(Math.cos(a) * 1.9 + Math.cos(-a) * 0.58, 0.11, Math.sin(a) * 1.9 + Math.sin(-a) * 0.58);
+    grain.scale.set(0.62, 1, 1);
+    grain.position.set(Math.cos(a) * (1.9 + 0.585), 0.0992, Math.sin(a) * (1.9 + 0.585));
     g.add(grain);
 }
 // plaza-4 RING STONES: the hearth's own stone circle takes the UV-window
