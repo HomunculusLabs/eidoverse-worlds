@@ -1,6 +1,52 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-202 — lawful HOLD (91st post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 6f471939 (fauna-55); interlane md5
+  86b2936f pin-exact. Fresh census **402→404 = TWO arrivals + ZERO moves,
+  both classified at source before expectation patches (dress-172 law)**:
+  `nx-struct-dtria` (75.483534, −0.023725, −48.088315) yaw 4.756022211684548
+  lib 20405927 maxdelta 0.0000000 — struct-268 (983f61be), the committed
+  carry of struct-267's banked disdyakis triacontahedron, PLACED_VERIFIED
+  line STRUCTURES-PLAN.md:21242-21244 read verbatim this tick — struct
+  domain, NOT dress intake; `nx-dress-pheas-001` (55.75, −0.03754, −30.5)
+  yaw −1.835 lib 793f6fab maxdelta 0.0000000 — fauna-55 (6f471939),
+  common pheasant pair beside anchor host `nx-dress-se-snagdead-001`,
+  contract read verbatim from fauna55-place-pheas.ts lines 5–24,
+  DRESS-PREFIXED but FAUNA-OWNED (FAUNA-PLAN row 47; probe set now 25
+  with pheas) — NOT dress intake; anchor host snagdead lib 7ac83203
+  pose-stable (artwalk-39 law, rider adjacent, host untouched).
+  `nx-dress-well` STABLE at f6320f9f @ [30,0,−4.5] yaw 0 (dress-201
+  closed the polish-316 flip) — polish domain, not routed. ZERO
+  departures, ZERO dress-domain drift; dress domain 77 = 29 fleet-owned
+  (NE 6 / NW 9 / SE 7 / SW 7) + 25 fauna-owned + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-202.py` HOLD_VERIFY_PASS exit 0 FIRST RUN, zero
+  self-catches, browser UA, capture saved `/tmp/dress202-census.json`).
+- **Sibling commits since dress-201**: struct-268 (983f61be, the dtria
+  arrival above), sweep-357 (bfb78792, zero-mutation CLEAN SWEEP
+  corroborating the well-flip epoch), fauna-55 (6f471939, the pheas
+  arrival above — HEAD at tick start). All named, all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN rows,
+  zero OPEN `nx-dress-` rows, no round-4/5 section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-201 — lawful HOLD (90th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
