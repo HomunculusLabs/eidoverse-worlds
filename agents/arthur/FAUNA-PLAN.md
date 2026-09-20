@@ -45,6 +45,7 @@ One species per wakeup, worst-first. Bill alone may end this loop.
 | yellowhammers | `nx-dress-yham-001` | (−34.603,1.48,60.539) yaw −2.36 (FRAME COPY of the hedge host) | **0f7fdfea** (fauna-52) | NEW 2026-09-20 — the hedgerow's own bird: yellowhammer PAIR ON the NW hedge crown (host-rider concentric-above, frame-copy law — entity-local == hedge-local verbatim); cock singing (yellow head+breast 0xe8c832 + shade-flank emissive 0.24, chestnut rump, OPEN BILL with dropped lower mandible + gape wedge) + streaky hen alert; ×1.4 bake incl joints; 5 motion comps (2 bob + cock SONG-PUMP X 1.3s + cock tail flick + hen head Y-scan); v4 4 build versions 5 judged rounds, anatomy SHIP + discover SHIP + 18m scope SHIP "reads as a yellow bird, not a yellow smudge" + yellow probe 1819px (ZAI-vision MCP fallback, native debt NATIVE-35); the cultivation country's field boundary now sings — the last fauna-less habitat host cured |
 | tawny owls | `nx-dress-towl-001` | (−49.455,1.534,65.953) yaw 2.3562 (FRAME COPY of the espalier rows host) | **4e8d0997** (fauna-53) | NEW 2026-09-20 — the orchard's night voice: tawny owl PAIR (Strix aluco) roosting in the espalier rows' plant-2 crown (vertex-true crown decode; frame-copy law); upright sentinel (frame-ring facial disc + two spread dark eyes, rufous 0x9c6d4e) + clean-dark dozing sleeper; TRUE-SIZE no-bake; 5 motion comps (2 bob + sentinel Y-scan 9s + tail settle + sleeper doze-scan 11s); v8 8 build versions 8 judged rounds, encounter SHIP + 18m PRESENT (rufous 2043px) + night SHIP (BUFF emissive 0.12 moonlit) (ZAI-vision MCP fallback, native debt NATIVE-36); the orchard edge now has its night tier |
 | pheasant | `nx-dress-pheas-001` (build tick id; proposal drafted `nx-dress-pheasant-001` — fleet short-id convention won) | (55.75,−0.03754,−30.5) yaw −1.835 | **793f6fab** (fauna-55) | NEW 2026-09-20 — common pheasant PAIR (cock alert-strut with the 0.50m barred tapered tail + WHITE RING NECK collar at the neck base + hen skulking low, dimorphism Δ0.188) beside anchor host `nx-dress-se-snagdead-001` on the plaza reader spoke; 6 motion comps; v9 9 build versions, profile SHIP + cockface SHIP + scope SHIP + near fill-lit SHIP (ZAI-vision MCP fallback, native debt NATIVE-37); the hunting margin's game bird stands — fox-pheasant predator-prey with the den 23m NE |
+| magpie | `nx-dress-magpi-001` (proposed fauna-56, NOT seated) | TBD by build tick — inn-yard apron zone | — | CANDIDATE 2026-09-20 (fauna-56): Eurasian magpie SINGLE at the inn-yard ground (the village's boldest opportunist at its most public building); zero magpie/corvid fauna in the 404-entity census this tick; contract + seat zone in queue row 37 |
 
 Cross-world note: `verify-repairs.ts` pins `av-goats`/`av-hutch` in
 old commons (world=commons) — that gate stays untouched; this lane's
@@ -756,6 +757,45 @@ domain is commons-next `nx-dress-*` fauna only.
     Motion contract: 2 breathing bobs + cock strut head-scan + alert
     neck-stretch + tail flick + hen peck — phases staggered per
     individual, epoch t0.
+37. **[CANDIDATE fauna-56, 2026-09-20] Eurasian magpie — queue-empty
+    proposal (domain law: ONE species, no padding).** Census-grounded this
+    tick: zero magpie/corvid fauna in the 404-entity commons-next census
+    (regex magpi|corv|rook|jackdaw|raven|crow|jay over ids AND libs; sole
+    id hit = artwalk "four-wind-crown" substring, not fauna). Village
+    logic: the inn is the village's most public building (stable guests +
+    market strollers + the plaza 36m W), and the inn-yard apron is exactly
+    where Europe's boldest opportunist works a crowd — the magpie is the
+    classic village-edge corvid, and NO corvid has ever stood here. The
+    fleet's bird families now cover game birds (pheasant/turkey),
+    waterbirds (ducks/geese/heron/kingfisher), songbirds (robin/sparrow/
+    yellowhammer/swallow/dove), owls (barn + tawny), peafowl — the missing
+    family is CORVIDAE, and the magpie (Pica pica) is its most visual
+    member: the white belly + white wing-patch flash against near-black
+    is a distance marker set none of the standing dark birds carry.
+    Species contract: SINGLE bird TRUE-SIZE pre-bake ~45cm incl the LONG
+    GRADUATED TAIL (~25cm, over half the total length — the 18m silhouette
+    lock, pheasant-tail law) in the strutting hop-walk carriage, head up
+    alert; near-black 0x141216 head+breast+back (dark-hole law 0x17120e
+    family), WHITE flank patches + white belly, THE WHITE WING PANELS
+    (scapular/primary patches — the species' one unmistakable marker,
+    proud-of-surface per shorse-blaze law), metallic-green 0x2e5a48 +
+    purple 0x4a3a5c sheen bands on wing + tail (encounter scale, emission
+    never — flat material world), strong black bill, long tail carried
+    slightly cocked. Motion contract: breathing bob + strut head-scan Y +
+    tail flick Z + THE HOP-STEP (the magpie's bounding gait — a small X/
+    Z translate-pulse, phases staggered, epoch t0). Anchor contract:
+    magpi/magpi_head/magpi_tail (KEEP `magpi` — collision-free prefix,
+    verify vs all mkv3 sources + gitignored assets at build tick).
+    Siting: inn-yard apron zone (inn at (36,0,0) yaw −π/2, faces W toward
+    the plaza — the door apron + the west yard margin), GROUND seat class;
+    exact tuple owed to the build tick (25cm-grid seat sweep + live
+    heightAt + live SAT vs the inn's own OBB, inn-l light companion,
+    market/banner riders, paths films) on the plaza-facing reader side.
+    Provenance: sparrows/sparrow chassis (small-bird TRUE-SIZE + ×1.4
+    marginality bake incl joints, robin law), fox/donkey dark values,
+    pheasant tail-span decode gates (span ≥0.45 bird-class), peacock
+    sheen discipline (metallic 0.45/.45, never emission). Proposal only
+    — build fauna-57.
 
 ## Per-species rebuild records
 
