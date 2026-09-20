@@ -20922,3 +20922,115 @@ Bill a handedness call — chirality is a Bill decision, not a lane one);
 per struct-253's grep the non-Archimedean families (rhombic solids,
 Catalan duals, Johnson solids) are the wider claim surface — fresh
 five-file grep before building. Or Bill's verdict routing.
+
+## struct-266 (2026-09-19): R11-74 THE GREAT ICOSAHEDRON PLACED —
+## the struct-265 committed carry executed (NW-N band fifth form az291.0 r104.0)
+
+266%3=2 non-refine slot with FULL bank (gicosa v1 accepted struct-265)
+-> committed carry per the struct-240..265 precedent. Gate ALL PASS real
+exit 0 tick-start after ONE paced retry (first attempt threw
+SyntaxError: Failed to parse JSON — the known transient live-read class;
+retry at 20s recovered, GATE_EXIT:0 at a6274071 epoch — fauna-53 HEAD).
+Shard drained fresh (IMPROVE-PLAN md5 7fa8a22499d8e38dbde7031e7ed337cd
+unchanged since struct-238, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-265 -> tag struct-266 (numeric extraction, re-checked
+immediately before append). Native absent from the cron catalog all
+tick (tool_search fresh: terminal + zai-vision + repoprompt only — same
+disclosed cron-unpayable class as struct-169..265; placement tick owes
+no new judgment — the gicosa was judged struct-265 ZAI 11/11; native
+re-judge rides the owed board as gicosa v1). No interrupted 266 window
+existed (no struct266-*/next-place-struct266 files pre-tick).
+
+BANK RE-VERIFICATION before any mutation: on-disk sha256 re-verified
+3b87bdbc727152f42ae3c44d6485206526e7ec5ca4225a41ff1237f25c6301b4 ==
+struct-265 v1 pin (byte-identical — no rebuild this tick; the banked
+build is the exact judged v1 bytes). struct-265's decode 8/8 ALL PASS +
+probe ALL PASS were that tick's own real exit 0 on these exact bytes.
+
+SEAT (struct266-scan-gicosa, fresh 401-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.666, guaranteed overlap refused; coverage exact 1 / radial
+302 / disc 2 / exempt 4): octant audit places NW-N az270-315 as the
+under-served band (4 forms standing — soundmirror az302.5 r66, beacon
+az312.4 r90.4, angler az272 r91, reedpool az276.1 r91.5; + gicosa ->
+5, soft cap 6, NO exceedance). The raw scan's innermost lawful seats
+(r82-83 az270 gap 1.42-2.15; r88.5-90 az294.5-296 gap 1.42-2.10) were
+REJECTED by the margin filter (gap >= 2.2,
+struct-248/254/256/258/260/262/264 real-margin law). Selected: az291.0
+r104.0 (37.270267, -97.092364) — innermost margin+constellation seat,
+gap 2.28 vs nx-wild-cairn-0022 (exact). NN 28.22 to nx-struct-reedpool
+(law 8; composed with reedpool@28.2 + angler@34.6 — the NW-N
+water-family shelf). 20-gon-exact SAT worst 2.28 (law 1.4).
+Walk-clear 75.41.
+
+YAW LAW (procession convention, struct-217..265): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az111.0 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120
+- 291.0 = -411.0 -> 309.00deg -> YAW = 5.3930674 rad. DISCLOSED: the
+gicosa is a 5-FOLD seat (probe T7: tip at dais top, star-ring
+horizontal at exact 72deg azimuths, summit antipodal) and the
+oblique-lean band puts the yaw 309 mod 72 = 21.0deg off the 72deg
+lattice — the exact-mod bonus does NOT apply; the star family reads
+its sails at any azimuth (SSD/csaszar/gsd/gdodec placed likewise under
+the same convention) and the judged framing is preserved.
+
+TERRAIN (struct266-terrain-gicosa.ts, this tick): 41pt over the TRUE
+rotated 20-gon (center + 20 verts + 20 edge-mids), spread 10.3mm,
+PY = lowest = -0.065889 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=20 class): the 20-gon dais R3.746 CORNERS-ON-AXES (ROT=0
+class, decode D2: circumradius corners present, TRUE box +/-3.746) is
+the footprint; build envelope 7.49x7.51x7.49 — the solid NEVER
+overhangs (probe T7 footprint law ring+bead extent 3.5888 <= apothem
+3.70), so the 20-gon IS the true ground footprint. Exact
+convex-polygon SAT (edge-normal axes of both polys, max-gap law)
+replaces the square-bbox proxy — struct-19/260 disc law class.
+
+PLACEMENT: next-place-struct266.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 401), NN
+floor 28.22 + exact-SAT worst 2.28 re-proven against the FRESH 401-set
+pre-verb [exact 2 radial 301 disc 2 exempt 4] + in-placer RED control
+PASS (exact-SAT at nx-craft-statuary-0026's own center -> gap -9.666),
+upload store/3b87bdbc727152f4.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [37.270267, -0.065889,
+-97.092364] yaw 5.3930673886624785 lib store/3b87bdbc727152f4.glb
+comp {} census 401->402; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+az291 arrival-line approach + reading-face vantage at 7m on the az141
+face normal + full CW standoff circuit at 8m — no phantom collider;
+folly by presentation, the PANELLED solid star means the walk stays
+outside the 3.746m dais; walk standoff 8m applies directly, edge-mid
+clear 4.30m — the struct-265 disposition). Walk stdout carries the
+known distant support-seam diagnostics class (temple/dress entities,
+foreign lanes, abstentions only). One placer self-catch pre-run: the
+RED-control corner list carried a copy error ([-rhz,-rhz].slice) —
+caught by inspection before execution, fixed to [-rhx,-rhz], no live
+effect.
+
+Bill eye-check pointer: on the NW-N reach past the reedpool and the
+angler — THE GREAT ICOSAHEDRON, the star that climbs. Same twelve
+vertices as its standing siblings, but every edge is a long 2phi
+diagonal across an icosa face: twenty tall triangle sails, five meeting
+at each vertex point, weaving over and under through 150 crossings.
+Vertex-down: the bottom pole stands at the dais center with its five
+tip-sails rising steep from the point to the horizontal star-ring at
+5.4m — the highest ring this cage makes — then the crown weaves to the
+summit pole at 7.4m. The tall twin of the low-canopy gdodec across the
+village (same height, same vertex count, opposite gesture). The
+Kepler-Poinsot quartet now stands complete: SSD, gsd, gdodec, gicosa.
+After dark, twelve warm brass vertex beads — the grounded one
+half-proud in the twenty-sided dais top.
+
+Files: struct266-scan-gicosa.ts + struct266-terrain-gicosa.ts +
+struct266-walk-gicosa.ts + next-place-struct266.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-266, D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-267 build+judge tick (R11-75, empty bank —
+re-derive the form from the ledger grep: the snub cube / snub
+dodecahedron BOTH owe Bill a handedness call (chirality is a Bill
+decision, not a lane one — hold until his call or select achiral);
+rhombic solids / non-Archimedean families (Catalan duals, Johnson
+solids) per struct-253's grep are the wider claim surface — fresh
+five-file grep before building) or Bill's verdict routing.
