@@ -905,6 +905,54 @@ domain is commons-next `nx-dress-*` fauna only.
     ducks/stork chassis (waterline discipline + white values + ripple
     wakes), heron law (long-neck 18m read), magpie law b (bright albedo
     carries markers, never metal). Proposal only — build fauna-63.
+41. **[OPEN — build fauna-65] common kestrel — proposed fauna-64 (2026-09-20,
+    queue-empty law).** ONE entity `nx-dress-kestr-001` (census-grounded:
+    ZERO kestrel/falcon/diurnal-raptor fauna across ids AND libs in the
+    413-entity commons-next census this tick — magpie fauna-57 proposal law;
+    sole regex hits = none). Village logic: the fleet's raptor coverage is
+    NOCTURNAL-ONLY — barn owl on the livery post (fauna-8) + tawny owls in
+    the orchard crown (fauna-53) own the night, and the day-hunting air
+    tier is empty. The SE wild edge is the village's hunting margin (fox
+    asleep at the den, pheasants beside the snag, roe deer from the
+    treeline, woodpecker drumming the snag) and the classic predator above
+    that margin is the hunting kestrel: THE WIND-HOVER over rough grass,
+    head locked earthward, dropping on voles — the one hunting read no
+    standing species carries (the heron strikes, the owls roost; nothing
+    HUNTS in daylight). The air-tier precedent stands (swallows own the
+    livery yard's low air fauna-34, bees the apiary blossom air fauna-32);
+    the hover is a NEW motion class: quasi-stationary flight —
+    high-frequency wing micro-beat + tail-fan trim + THE HEAD-LOCKED-GAZE
+    (body bobs, head does not — the species' famous stabilization). Species
+    contract: SINGLE bird (kestrels hunt alone), the FEMALE (the classic
+    windhover image): rusty upperparts 0xb05a2c with dark barring, pale
+    spotted underparts, THE MUSTACHE malar stripe on the white face, dark
+    eye, hooked bill with yellow cere (kfish two-tone-stack law: cere proud,
+    never embedded), black wing-tips, long tail with black subterminal band
+    fanned DOWN as the hover brake, yellow feet tucked; body pitched ~45°
+    head-down hover posture. TRUE-SIZE ~34cm + ×1.4 marginality bake incl
+    joints (robin/owl law, sparrow chassis verbatim) = a 48cm read.
+    Motion contract (pure-motion fauna class, bees/swallows precedent,
+    zero ground geometry): hover bob on the body anchor (small-amp
+    high-freq ~0.5s) + wing pendulums NESTED in the body anchor (swallow
+    wing-survival law) + tail-fan micro-trim + head held STILL while the
+    body bobs (head anchor carries NO comp — the stabilization IS the
+    stillness) + a slow small-radius wander (r 0.3-0.5, very slow — the
+    bird holds station into the wind, never a fixed point); phases
+    staggered, epoch t0. Anchor contract: kestr/kestr_body/kestr_head/
+    kestr_tail (KEEP `kestr` — collision-free prefix, VERIFIED at proposal
+    time: rg over all sources + gitignored assets = zero hits, the sole
+    IMPROVEMENTS.md match is the English word "kestrel" in fauna-54 prose). Siting: SE wild-edge open
+    meadow AIR SEAT, hover band y≈5.5-7m over the vole grass between the
+    treeline and the pheasant seat (plaza-spoke reader bearing −61.4° from
+    the zone, clean-slate law); exact tuple owed to the build tick (air-
+    seat sweep: sightline vs forest-screen crowns + northneedle-l h12.9 +
+    chainvault + toct, wander-radius clearance decoded vs all 20m
+    co-residents, airborne SAT exemption bees/nvp-134 class). Judge
+    contract: hover-profile (posture + tail fan) + face (mustache) +
+    18m scope PRESENT-with-motion (robin-law encounter-reward disclosure
+    for identity). Provenance: sparrow bake chassis, kingfisher stacked
+    bill, magpie albedo-over-metal law, swallow nested-wing pendulums,
+    bees pure-motion zero-ground precedent. Proposal only — build fauna-65.
 
 
 ### mute swan — fauna-63 (2026-09-20) CLOSED
