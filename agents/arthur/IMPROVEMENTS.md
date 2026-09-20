@@ -6898,4 +6898,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [fauna-65] SEATED kestrel nx-dress-kestr-001 v4 941d1db7 at (57.5,-0.05137,-24) yaw -2.4 — the village's first DIURNAL RAPTOR: female kestrel wind-hovering over the SE wild-edge vole grass (wander ring r0.4 @6m + perch post + tufts); 5 motion comps incl THE HEAD-LOCK (kestr_head carries NO comp — dead still while kestr_body bobs; telescoping neck collar); face 3/3 + rear SHIP + 18m scope SHIP (ZAI-vision MCP fallback, native debt NATIVE-42); census 413-414, 6 verbs, idempotent 0, walk ALL_PASS 3/3; 4 build versions 5 judged rounds; rig laws: aimed-camera mode-swap class + DirectionalLight.target law + forward-face-plate law (D+1, E+1)
 
+- [struct-285] R11-93 lawful HOLD (seventh) — next-family decision owed Bill (achiral Catalan well dry, surfaced struct-278; one-line pointer per ~3-tick law); gate ALL PASS exit 0 FIRST at 1885aa7c (fauna-65, foreign domain); shard+refine+carry empty fresh, census 414 (kestrel +1 foreign, fauna-65) tetrakis/trioct/trit exact-pinned zero drift, 127 struct-domain all accounted; native absent from cron catalog (tool_search fresh, zai-vision MCP only — cron-unpayable class, owed board rides); zero mutations/uploads/verbs/pushes (D+0, E+0)
+
 **Running total: 2371094 / 2000000**
