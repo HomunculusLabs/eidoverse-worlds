@@ -1,6 +1,68 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-213 — lawful HOLD (102nd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD bcb2b7d9 (struct-281 lawful hold
+  by its own entry), then RE-RUN ALL PASS exit 0 at new HEAD ea4720b1
+  after sweep-370 landed mid-tick (epoch law); interlane md5 86b2936f
+  pin-exact. Fresh census **412→413 = ONE arrival + ONE classified move,
+  both classified at source before expectation patches (dress-172 law),
+  tuple-exact vs siblings' OWN sources read verbatim this tick**:
+  `nx-dress-swan-001` (8.123, 0.05493, −92.482) yaw 0 lib 9206edbe
+  maxdelta 0.0000000 — fauna-63 (c4dd2da3) mute swan, seated at the
+  reedpool host's designed baked-seat offset (host-local −1.6, −1.5,
+  measured 0.0000000), DRESS-PREFIXED but FAUNA-OWNED (set now 29 with
+  swan) — NOT dress intake; `nx-dress-fountain` lib flip 6fa99d31→
+  9e6b1977 at tuple-identical [12.5,0,4] yaw −0.7853981633974483 EXACT
+  — polish-324 drum dead-mass cure WORK-IN-FLIGHT (in-tree placer edit
+  `next-place-fountain.ts` mtime Sep 20 09:31 read verbatim: REVIEWED_SHA
+  9e6b197741bdd227…, POSE [12.5,0,4]; no ledger line yet — expect
+  polish-324 next epoch), polish domain (legacy CORE dress entity,
+  off-limits), classified not routed. Domain strongest-form: 79 dress
+  ids lib+pose EXACT-stable vs the dress-212 PASS-verified capture
+  + 1 classified flip + 1 fauna arrival = all 81 accounted, zero
+  unstable/departures; live dress 81 = 29 fleet (NE 6 / NW 9 / SE 7 /
+  SW 7) + 29 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-213.py` HOLD_VERIFY_PASS exit 0, browser UA,
+  capture saved `/tmp/dress213-census.json`; TWO disclosed probe
+  self-catches fixed at source BEFORE expectations used — (1) guessed
+  reedpool host id corrected to `nx-struct-reedpool` from fauna-63's
+  own placer line 25; (2) "frame-copy" comment corrected to the designed
+  host-local baked-seat offset per placer lines 4–6,26 — the 1.6m delta
+  I first read as drift was the seat itself).
+- **Sibling commits since dress-212**: sweep-370 (ea4720b1, zero-mutation
+  CLEAN SWEEP 140th — classified the swan arrival, landed mid-tick;
+  polish-324 fountain flip in flight: live entity swapped, sibling
+  commit not landed at tick close — expect its ledger line next epoch,
+  dress-197 class). All named, all foreign domain. Foreign-lane dirt in
+  tree (fountain placer edit, polish review dirs, engine files) — none
+  dress-owned, left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4 (swan host pin ADDED this tick):
+  inn `nx-town-inn` 861225bb, pheas/woodp anchor
+  `nx-dress-se-snagdead-001` 7ac83203, stork host `nx-struct-millrace`
+  6e82dd2e, swan host `nx-struct-reedpool` 7d770620 — all pose-stable
+  (artwalk-39 law); stork-millrace designed adjacency 2.952m stable;
+  swan-reedpool seat 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-212 — lawful HOLD (101st post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
