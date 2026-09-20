@@ -21034,3 +21034,151 @@ decision, not a lane one — hold until his call or select achiral);
 rhombic solids / non-Archimedean families (Catalan duals, Johnson
 solids) per struct-253's grep are the wider claim surface — fresh
 five-file grep before building) or Bill's verdict routing.
+
+## struct-267 (2026-09-19): R11-75 THE DISDYAKIS TRIACONTAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-268 committed carry)
+
+267%3=0 refine slot with EMPTY bank (gicosa placed struct-266) and the
+refine pool empty of payable items (40+ ticks) -> build+judge tick per the
+struct-240..266 precedent. Gate ALL PASS real exit 0 tick-start (unpiped,
+GATE_EXIT:0 at fb8ff286 epoch — fauna-54 HEAD, foreign domain). Shard
+drained fresh (IMPROVE-PLAN md5 7fa8a22499d8e38dbde7031e7ed337cd unchanged
+since struct-238, 0 OPEN nx-struct rows). Ledger max re-derived struct-266
+-> tag struct-267 (numeric extraction, re-checked immediately before
+append). Native absent from the cron catalog all tick (tool_search fresh:
+terminal + zai-vision + repoprompt only — same disclosed cron-unpayable
+class as struct-169..266; owed board gains dtria v1, joins the riding
+queue). No interrupted 267 window existed (no struct267-*/mkv3-dtria files
+pre-tick).
+
+FORM SELECTION fresh six-file grep (the struct-266 queue-head named the
+sweep): disdyakis|dtria|triakis|pentakis|tetrakis|deltoidal Catalan dual
+names — 0 real claims across STRUCTURES-PLAN, IMPROVEMENTS, CITY-PLAN,
+IMPROVE-PLAN, NEW-VILLAGE-PLAN, DRESSING-PLAN (only the unclaimed-pointer
+lines; mkv3-catalan.ts is the R11-8 MINIMAL SURFACE, not a solid). The
+CATALAN branch's SECOND member (the rt struct-235 opened it; the rhombic
+dodecahedron stays BARRED as rt-kin). Selected: the disdyakis
+triacontahedron — the dual of the standing TRICO (struct-259/260, the
+branch's freshest parent; gsd->gdodec precedent) AND the rt's richer
+sibling (each of the rt's 30 rhombi divides into 4 triangles). Narrative:
+the trico told the dodeca's F+E+V census by cutting; the dual reads the
+SAME census turned inside-out. Kin check: rt stands 3-fold point-down;
+this is 5-fold point-down (the rt's symmetry story at a NEW axis). The
+pentagonal hexecontahedron (rico's dual) + smaller Catalans stay
+unclaimed.
+
+CONCEPT: THE KNIFE'S WORK, TURNED INSIDE-OUT. Polar reciprocal of the
+trico's 62 face planes about its midsphere (the sphere every edge kisses):
+every face becomes a POINT (12 shallow dec-rank crown-points + 30 sq-rank
+mid + 20 hex-rank deep — the shallowest parent planes become the OUTERMOST
+points), every one of the 120 wedding corners (figure 4.6.10) becomes a
+scalene triangle sail. Every sail kisses ONE insphere — the Catalan
+tangent property, mirror of the parent's every-vertex-on-one-sphere.
+Presentation: POINT-DOWN 5-fold, the parent's own seated frame INHERITED
+(decagon-down + twist-snap = the dual's foot axis; no re-seat — twist
+proven by probe T7 snap law). STONE: all 120 triangle sails (ONE face
+family = ONE sail material — the face-transitivity read in the material
+law) + the 120-SIDED dais (one side per face, theme number). IRON: 180
+seam rods + crown finial stem. Night: TWELVE brass beads at the dec-rank
+crown-points (1 crown FINIAL + 10 waist in two inversion-paired 72-deg
+pentads upper interleaved 36-deg + 1 pressed foot buried — tico's-twelfth
+idiom); the 50 sq/hex-rank points stay dark.
+
+PARAMETRIZATION (exact, closed-form): parent rebuilt verbatim from
+struct-259's frozen source (Newton u 0.428186508 / w 0.200000000, parent
+edge 2); rho = 7.538754256 midsphere (spread 2.7e-15); dual verts v_u =
+(rho^2/h_u).n_u -> radii dec 8.258292 / sq 7.605966 / hex 7.745967;
+SCALE 0.399598390 to height 6.6 (family ladder: trico 6.5 -> 6.6); dais
+R3.25 APOTHEM-FIRST (apothem 3.249 >= reach+rod 3.100); envelope
+6.50x8.37x6.50.
+
+PROBE (struct267-probe-dtria.ts, tracked) ALL PASS real exit 0 + RED
+control exit 1 (5 law FAILs on displaced dual vertex: T2/T5/T6/T7/T8):
+T0 midsphere + three radii classes exact; T1 Euler 62-180+120=2; T2 120
+triangles, per-face angle multiset IDENTICAL across all faces (dec
+32.7703 / sq 88.9918 / hex 58.2379 — MEASURED), every face one dec + one
+sq + one hex; T3 degrees 10/4/6 by rank, Sum==2E; T4 manifold 180/180;
+T5 exactly three rank-pair edge classes 60 each (L 1.750380 / 2.058368 /
+1.114310 — face-transitive NOT uniform, the honest signature), zero
+same-rank; T6 THE POLAR RECIPROCAL — all 120 faces kiss ONE insphere at
+exactly rho^2/R (worst dev 3.1e-15), every face normal EXACTLY one parent
+vertex direction (bijection 120/120); T7 seat (foot + crown on-axis, foot
+AT dais top 0.300000, 72-deg symmetry 0 misses, central inversion exact,
+height 6.600000, never overhangs, lower pentad snapped dead-on az 0
+(parent twist INHERITED), upper offset 36.00-deg geometry-decided,
+pentads inversion-paired, FINIAL clear 2.622 >= 0.225 law); T8 immersion
+worst poke -0.012 (fully inside), corner tuck 0.0402m.
+
+TWO probe self-catches RED-first (zero wasted builds): (a) my remembered
+frame said "sq-hex" keys — the classes sort alphabetically ("hex-sq"); a
+TypeError crashed T5 before any law could lie, fixed to canonical-form
+lookup; (b) the seated-map double-scale bug (v[1]*SCALE on
+already-scaled verts) caught by re-reading the chassis before first run.
+
+BUILD (agents/arthur/assets/mkv3-dtria.ts, staged -f): root identity
+(struct-188 law); texMat lanes dtria_stone/dtria_iron (struct-38 law);
+bead emissive 0x9a7030 @ 1.4 in-GLB (family build-time law); 302
+pre-merge meshes + 1 KEEP glow group glow_dtria_12; envelope law green
+in-build 6.50x8.37x6.50 == probe contract. v1 deterministic x3 runs
+byte-identical sha256
+20405927baf5f741cb1efd108591c1ed1184d15777dfd0b927295598f808c09f
+(mtime-verified).
+
+DECODE (struct267-decode-dtria.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (dtria_iron + dtria_stone + glow_dtria_12); D2 120-gon
+dais TRUE box +/-3.250 (corners-on-axes, N%4==0), corners present, sole
+min y -0.000000; D3 13552 iron verts worst 60.00mm (<= 64) over the 180
+exact segments + the NAMED finial stem (authored member, tret v2 — the
+initial FAIL was my law omitting the stem, diagnosed by a vert-level
+probe: 26 outliers ALL at the stem top cap, radius <= 0.03; law amended,
+disclosed); coverage 180/180; D4 2840 plate verts worst 58mm (<= 62
+shell); D5 beads 12/12 dec-rank clusters, emissive, sole night; D6 sole
+at grade + foot bead pressed in the dais band; D7 envelope drift 0.00mm;
+D8 texMats 2/2. RED control (foreign bytes village_trico3.glb — the
+parent's own build): D1 census FAIL clean-stop exit 1 — verified
+RED_EXIT:1.
+
+RENDERS: struct267-render-dtria.ts (tracked chassis, struct265 lineage)
+9 frames on the EXACT pinned bytes — bounds min[-3.250, -0.000, -3.250]
+max[3.250, 8.370, 3.250] == contract; reviews/struct267-dtria/ (9 frames,
+ignored — sha pin above is the durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as dtria v1): day
+gameplay 18m 5/5 PASS (identity 'unmistakably a deliberate
+mathematical/gem-like object'; silhouette closed dais-to-summit;
+grounding point-contact + cast shadow; materials 3-way distinguishable;
+zero defects — lower darker triangles read as shaded undersides, not
+missing faces). Night 4/4 PASS (7 warm points resolved at this single
+azimuth — within the 6-9 occlusion band, decode D5 proves 12/12; tight
+hard-edged dots, zero bloom/spill; silhouette holds via edge-wires
+against navy sky). Closeface 5/5 PASS (joinery uniform shadow-gap
+reveal, panels recessed behind rods; coverage continuous incl. silhouette
+rim; 6 visible beads all seated at rod junctions; granite speckle reads
+deliberate; zero z-fighting/tears). 14/14 total — no real defect.
+Cosmetic nits disclosed (family-wide class): (a) at 18m the scalene
+pattern reads geodesic-like (identity criterion met; the judge's own
+caveat); (b) un-beaded rod junctions have no hub caps (strapwork
+shortcut, dark-material masked — polish candidate only).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-268
+committed carry (fresh census scan, under-served octant, 8m NN +
+per-district soft cap 6, 120-gon-exact polygon SAT struct-19/260 class —
+the N=120 polygon is effectively the R-circle, oblique-yaw struct-104
+band, terrain preflight over the TRUE rotated 120-gon, hash-gated plain
+spawn nx-struct-dtria, comp {}, ground circuit walk). Folly class. Zero
+world mutations, uploads, verbs, comp-edits, shared-budget use. Zero
+pushes.
+
+Files: struct267-probe-dtria.ts + struct267-decode-dtria.ts +
+struct267-render-dtria.ts + assets/mkv3-dtria.ts (NEW, tracked; mk staged
+-f per the ignored-parent law) + STRUCTURES-PLAN.md (this block) +
+IMPROVEMENTS.md (one append struct-267, D+0 E+0).
+
+Next queue head: struct-268 placement tick (the committed carry above).
+Then R11-76 build sweep re-derives from the form ledger: the pentagonal
+hexecontahedron (rico's dual, the Catalan branch's showpiece — 60
+irregular pentagons, Bill-handedness-free) and the smaller Catalans
+(triakis tetra/octa/icosa, tetrakis cube, rhombic dodeca BARRED rt-kin)
+are the unclaimed surface; fresh five-file grep before building — or
+Bill's verdict routing.
