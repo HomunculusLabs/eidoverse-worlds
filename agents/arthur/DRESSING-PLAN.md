@@ -1,6 +1,54 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-204 — lawful HOLD (93rd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD e254fb59 (fauna-57); interlane md5
+  86b2936f pin-exact. Fresh census **404→406 = TWO arrivals + ZERO moves,
+  both classified at source from the siblings' OWN placers BEFORE
+  expectation patches (dress-172/188 law), tuple-exact**:
+  `nx-struct-deltoid` (86.872191, −0.048791, 66.659376) yaw 3.5342917
+  (202.5°) lib b434f496 maxdelta 0.0000000 — struct-270 (d8646ec6), the
+  committed carry of struct-269's banked deltoidal hexecontahedron, E band
+  sixth form az37.5 r109.5; placer next-place-struct270.ts lines 51–53
+  read verbatim this tick — struct domain, NOT dress intake;
+  `nx-dress-magpi-001` (29.45, −0.02109, 2.05) yaw −π/2 lib c0cf8da7
+  maxdelta 0.0000000 — fauna-57 (e254fb59), the inn-yard Eurasian magpie
+  (fleet's first corvid, 4 motion comps, walk ALL_PASS 3/3 per its own
+  entry), DRESS-PREFIXED but FAUNA-OWNED (FAUNA-PLAN; probe fauna set now
+  26 with magpi) — NOT dress intake; host `nx-town-inn` lib 861225bb
+  pose-stable hard-gated (artwalk-39 law). `nx-dress-well` STABLE at
+  605bb2c2 @ [30,0,−4.5] yaw 0 (dress-203 closed the polish-317 flip) —
+  polish domain, not routed. ZERO departures, ZERO dress-domain drift;
+  dress domain 78 = 29 fleet-owned (NE 6 / NW 9 / SE 7 / SW 7)
+  + 26 fauna-owned + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-204.py` HOLD_VERIFY_PASS exit 0 FIRST RUN, zero
+  self-catches, browser UA, capture saved `/tmp/dress204-census.json`).
+- **Sibling commits since dress-203**: sweep-359 (719fb066, zero-mutation
+  CLEAN SWEEP epoch-correction tick — classified the well flip, snapshot
+  404 ents), struct-270 (d8646ec6, the deltoid arrival above), fauna-57
+  (e254fb59, the magpie arrival above — HEAD at tick start). All named,
+  all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.0000000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN rows,
+  zero OPEN `nx-dress-` rows, no round-4/5 section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-203 — lawful HOLD (92nd post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
