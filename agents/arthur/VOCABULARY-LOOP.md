@@ -4854,4 +4854,39 @@ Affordance, protocol contract, exact user/agent paths, RED/GREEN evidence,
 scratch-world result, authority/replay proof, ledger tag, commit, next item,
 and whether an eye-check remains open.
 
+## EYE-CHECK DEMO TICKETS (vocab lane — state after vocab-37)
+
+Eye-checks owed to Bill from the deferred-visual families, with their
+delivered demo captures (agents/arthur/vocab-demo/captures/, produced by
+agents/arthur/vocab-demo/stagehand.ts in a fresh scratch world — two
+completed runs 2026-09-20 07:11–07:33; run 1 removed as superseded):
+
+- vocab-5 lamp: captures vocab05-lamp-night/-snuffed. Fallback-judged
+  DISCRIMINATING (night pool + lit bulbs vs dark heads, no pool).
+- vocab-10 plate: capture vocab10-plate. Fallback-judged PASS (sprite
+  present, text transcribed verbatim).
+- vocab-11 water: captures vocab11-water-day/-night. Fallback judge read
+  NO visible spray in either frame (sub-threshold or absent in this
+  renderer path) and the audible loop is unjudgeable from stills — STILL
+  OWED, this time with a spray-read question named.
+- vocab-12 growth: captures vocab12-growth-sprout/-bloom. Fallback-judged
+  DISCRIMINATING (few-pixel speck → 1.5–2m Joshua tree).
+- vocab-13 companion: captures vocab13-companion-trailing/-stay. Fallback
+  judge found NO crate in either frame (beacon may have bounced or
+  framing missed it) — STILL OWED; source-grounded note: default role in
+  an open scratch world is builder (rights.ts), so a protocol bounce is
+  NOT proven from the stills.
+- vocab-18 soundpost: capture vocab18-soundpost-near. Orb model rendered;
+  audible read unjudgeable from stills — STILL OWED (audio, by
+  construction).
+- vocab-36 ropebridge: captures vocab36-ropebridge-approach/-crossed.
+  Avatar visibly crossed the span; creak/sway are non-visual by design
+  (deck geometry is builder work, not this family) — no visual owed
+  beyond presence, which the captures show.
+
+All judgments above are the zai-vision FALLBACK judge (cron session, no
+native vision tool) — disclosed per the cron law; they do NOT discharge
+the native-owed rows. Native re-judge debts CARRY to an interactive
+judge-capable session.
+
 ---8<--- END LOOP PROMPT ---8<---
