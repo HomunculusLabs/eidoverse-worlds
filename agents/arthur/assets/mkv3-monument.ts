@@ -60,6 +60,31 @@ for (const [oi, ox, oz] of [[0, 0.85, 0.85], [1, -0.85, 0.85]] as const) {
 for (let ap = 0; ap < 4; ap++) {
     texBox(`apave_${ap}`, 0.8, 0.05, 0.55, 0, 0.025, 1.6 + ap * 0.9, soilTex);
 }
+// polish-327: CONTACT SHADOW ANCHOR (collie law, monument scale — both
+// judges' unanimous #1 on fresh 18m pixels: "0 px of contact darkening
+// where the base tier meets the grass... binary perception issue,
+// distance-independent"; night judge grounding 3/10, day "pasted on").
+// The live engine's point-lights never cast (lightrig.js:70) and the
+// under-glow bead has no shadow — at night this baked anchor is the ONLY
+// grounding the monument has. Two-step falloff per the judges' spec:
+// penumbra r 1.58 (~144% of tier_0's 2.2m base width, just enclosing the
+// square's corner radius 1.1*sqrt(2)=1.556), core r 1.18 (footprint +7%),
+// both flat decal discs in the collie-law hue-kin green family
+// (0x3742a lineage: kfish/hog/magpi contact shadows). Discs y 0.004/0.008
+// sit inside tier_0's volume — only the rim beyond the plinth renders,
+// darkest at contact, exactly like every collie-law anchor in the village.
+const SHD_PEN = mat(0x37452a, 1, 0);
+const SHD_CORE = mat(0x2b3322, 1, 0);
+const shadowPen = new THREE.Mesh(new THREE.CircleGeometry(1.58, 28), SHD_PEN);
+shadowPen.name = "shadow_pen";
+shadowPen.rotation.x = -Math.PI / 2;
+shadowPen.position.y = 0.004;
+g.add(shadowPen);
+const shadowCore = new THREE.Mesh(new THREE.CircleGeometry(1.18, 28), SHD_CORE);
+shadowCore.name = "shadow_core";
+shadowCore.rotation.x = -Math.PI / 2;
+shadowCore.position.y = 0.008;
+g.add(shadowCore);
 // THE KNOT: named group (motion:knot — slow spin); brass torus knot centered
 // at group origin so the spin axis passes through its heart
 const knot = new THREE.Group();

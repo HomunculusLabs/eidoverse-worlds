@@ -2871,3 +2871,71 @@ next wake once the gateway answers.
   remaining nits: basin water tone, the two long rim streaks (ft_splash
   arc segments) named by the day judge as the strongest remaining
   regularity anchors — a future round if 18m evidence warrants.
+
+### polish-327 — monument contact-shadow anchor (ACCEPTED, LIVE)
+
+- Subject: `nx-town-monument` (plaza NW, pos [-7,0,-7], yaw 0.7853981633974483,
+  empty comp bag; polish-owned, live 1b4cca52 == on-disk byte-exact). First
+  plaza-core subject after the seven-tick fountain arc (320..326) — the
+  polish-319 queue item (b) judged fresh on current pixels.
+- Defect (day+night judges, ZAI fallback disclosed — no native vision
+  loadable in this cron session, polish-285..326 class, native re-judge
+  owed): ZERO grounding at the plinth base — both judges' unanimous #1.
+  Night: grounding 3/10, "0 px of contact darkening... cannot tell if the
+  plinth sits on the terrain or hovers"; day: "pasted on, binary
+  perception issue, distance-independent". Engine truth (lightrig.js:70):
+  point-lights never cast, so at night the monument had NO anchoring at
+  all — the defect is real in the live world, not rig-limited.
+- Change (ONE intervention, mkv3-monument.ts): collie-law contact shadow
+  at monument scale (village canon: kfish/hog/magpi `mat(0x37452a, 1, 0)`
+  discs, "the #1 floating-prop cure"). Two-step falloff per the judges'
+  own spec: penumbra disc r 1.58 (~144% of tier_0 base, enclosing the
+  corner radius 1.1·√2=1.556) @ y 0.004 + core disc r 1.18 (footprint +7%)
+  @ y 0.008 in darker 0x2b3322; discs under tier_0's volume so only the
+  rim beyond the plinth renders. Judge-noted stray dark dot ~ (525,340)
+  classified AUTHORED satellite bead (mat() COLOR_0-only legacy,
+  polish-289/307 class — queued as material-truth candidate, not a
+  geometry defect); knotclose-view diff 0 px confirms the edit is
+  confined to the ground band.
+- Candidate `43c9dcf3ee52c6f30ff2c82d724fbaa25135a6419714021cf86d8c74ed1a050a`
+  deterministic ×2 (mtime-verified); decode P327_DECODE_PASS (discs at
+  exact radii/y-bands, 0 non-finite, polish-319 knot/bead/texture
+  regressions intact, nodes 9→11 — mn3_5/mn3_6 merged buckets).
+- Falsification: pixel diffs confined to the base line in every view
+  (gameplay 465 px rows 444..456; approach 1506; plaquefront 10334;
+  sideeast 5843; aerial 16521 full ring; knotclose 0 — under frame).
+  Night A/B judge PASS: contact band drops 35–45% luminance, classic AO
+  falloff signature, "the plinth now visually presses into the ground",
+  zero artifacts, zero collateral. Day A/B PASS: grounding 8.5/10, hue
+  natural olive 9/10, zero artifacts; one LOW non-blocking note (outer
+  edge could be softer — recorded, no second edit per loop law).
+- Placed via updated `next-place-monument.ts` (pins 1b4cca52→43c9dcf3):
+  PLACED_VERIFIED, 1 upload + 1 verb, comp bag {} preserved, idempotent
+  rerun "already live at reviewed tuple — no verbs", live census pin
+  `store/43c9dcf3ee52c6f3.glb` @ [-7,0,-7] yaw 0.7853981633974483 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p327-verify-served.ts`, DRACO chassis p323; probe
+  self-caught 3 of its own bugs RED→GREEN — color heuristic grabbed
+  normals, unnormalized scale, linear-vs-sRGB lane): served DRACO keeps
+  BOTH discs (mn3_5 r 1.580 y 0.004, mn3_6 r 1.180 y 0.008, flat ySpan
+  0.0000) with COLOR_0 = exact LINEAR encodings of the authored sRGB
+  (10,15,6 / 6,8,4 == linear(55,69,42)/(43,51,34)); knot emissive + PBR,
+  bead, textures, anchors exact; 0 non-finite. P327_SERVED_PASS (13
+  gates). Served-render equality: NEW durable DRACO-aware rig
+  `p327-rig.ts` (struct-104/struct210 chassis) renders the served bytes —
+  vs local after: 19 px day / 12 px night (knot-band DRACO
+  re-quantization only, 0 px in the disc band).
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEADs
+  2515bf60/2515bf60 (dress-218 absorbed mid-tick — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-327-monument/` (before/ = live
+  1b4cca52 baseline GLB + 11-view live-light rig; after/ = candidate +
+  rig; served/ = served-bytes render set; probes: p327-rig.ts,
+  p327-abdiff.ts, p327-verify-served.ts).
+- Excalibur checkpoint: cast REACHABLE (`vessel/workings/
+  eidoverse-hero-assets`) — checkpoint appended post-commit.
+- Next ranked: (a) plaza-core re-survey on fresh evidence (streetlamp /
+  bell / welcome families), or (b) monument judge-named candidates —
+  satellite-bead material truth (COLOR_0-only legacy class, polish-289/
+  307 cure), knot specular/metal response at day (judge #2 — needs sun
+  falsification first), plaque night misread (judge-named "vent/grille"
+  — value candidate).
