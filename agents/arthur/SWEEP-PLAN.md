@@ -17278,3 +17278,78 @@ this tick: hall/bunkhouse @353 walked fresh, inn/tower-house @352,
 forge/potter @351 the stalest standing pair; walk tools interior-walk-forge.ts
 + interior-walk-potter.ts, ls-verified present on disk — 1559B Aug 30 08:32
 + 1571B Sep 7 13:44).
+
+| sweep-354 | 2026-09-19 | 399->400 epoch-stable (epoch A: ONE domain-valid arrival nx-struct-gdodec @ (-2.578429,-0.025288,-98.466247) yaw 331.50deg lib 398e4a640fd8c69c comp {} = struct-264 @ b3a173df PRE-tick (R11-72 great dodecahedron, W-NW az268.5 r98.5 — the exact tick-start HEAD commit), tuple matches its committed ledger line-for-line incl r98.5 recomputed exact; ONE classified flip nx-dress-well c02d594e->38ab2eef at identical tuple (30,0,-4.5) yaw 0 = polish-314 @ e8eef98c, bbox byte-identical, lib-only drift field, already pre-classified by sibling dress-197 same window; 0 departures, 0 unexplained drift; epochs B+C 20s-paced re-reads FULLY QUIET 400==400; snapshot rewritten 301780B / 400 ents / sha16 cb3ed525bca9aaec, pre-write assertions (baseline 8620a553739f8880, arrivals exactly [gdodec], drift exactly [well lib]), post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 310th sweep since routing, no escalation due — law keys Sev 1); 362 bbox non-light / 251 exempt-classified / 0 coverage holes, gdodec included in live SAT set (its own ledger exact 12-gon SAT worst 2.43 corroborated; NN 9.46 angler) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 ALL_PASS maxArrival 0.380; NW 5/5 0.00/0.38/0.30/0.33/0.32; NE 7/7 0.00/0.29/0.32/0.29/0.38/0.25/0.31; SW 5/5 0.00/0.25/0.34/0.37/0.31 — dists identical to the sweep-319..353 canon; gdodec r98.5 W-NW sits outside every tier-1 leg, canon stands by construction, sweep-53 precedent, struct-264's own 7/7 ground circuit walk covers the approach) + tier-2 332nd cycle per the committed sweep-353 pointer: forge 6/6 ALL_PASS (interior-walk-forge.ts, real exit 0, dists 0.261/0.307/0.300/0.315/0.375/0.261) + potter 6/6 ALL_PASS (interior-walk-potter.ts, real exit 0, dists 0.270/0.366/0.295/0.255/0.250/0.349), both tools ls-verified present on disk BEFORE the walks (1559B Aug 30 08:32 + 1571B Sep 7 13:44 — sizes/timestamps match the committed pointer exactly), dists byte-identical to the sweep-348/351 canon | pins 15/15 ALL_PINS_OK bad:[] (308th consecutive clean); sweep89-battery 28/28 PASS first try on settled bytes (no pin move needed — gdodec comp-neutral {}, well comp {} both sides, comp-bearing stays 54); carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified EXPLICIT this tick (motion:carousel spin 6deg/s + horse_{0,2,4,6} bob + particles:smoke + sockets, full payload); well pin 38ab2eef4aee6106 exact; comp-bearing 54; lights 38; thing 362 | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-354: CLEAN SWEEP, one-arrival + one-classified-flip epoch-stable tick
+(124th consecutive quiet-or-classified). Tick-start HEAD b3a173df (struct-264
+placement, zero-mutation-owed); standing gate ALL PASS real exit 0 FIRST at
+b3a173df. Census epoch A 399->400 vs the committed sweep-353 baseline (sha16
+8620a553739f8880): exactly ONE domain-valid arrival — nx-struct-gdodec @
+(-2.578429, -0.025288, -98.466247) yaw 331.50deg lib 398e4a640fd8c69c comp {}
+= struct-264 @ b3a173df PRE-tick (R11-72 THE GREAT DODECAHEDRON, W-NW
+az268.5 r98.5 — the exact tick-start HEAD commit), tuple matches its
+committed ledger line-for-line, r98.5 recomputed exact from the live pos
+(az sign convention cross-checked, sweep-48/54 probe class); 0 departures,
+0 drift on 399 shared ids beyond the one classified flip. ONE classified
+drift field — nx-dress-well lib c02d594e->38ab2eef at identical tuple (30,0,
+-4.5) yaw 0 = polish-314 @ e8eef98c (well wood frame, live pin
+store/38ab2eef4aee6106.glb exact per its ledger), bbox BYTE-IDENTICAL, comp
+{} both sides, already pre-classified by sibling dress-197 in the same
+window — domain-valid, not drift. Epochs B+C 20s-paced re-reads FULLY QUIET
+(400==400, zero A->B and B->C drift) — world settled, single-epoch
+absorption class. OVERLAP: SAT 362 bbox non-light / 251 exempt-classified /
+0 coverage holes, true exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 310th sweep since routing, NOT new, no escalation due (the law
+keys on severity-1); gdodec included in the live SAT set — zero new
+contacts, its own committed ledger exact 12-gon SAT worst 2.43 vs 1.4 law
+corroborated, NN 9.46 angler vs 8 law. WALKS: tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+ALL_PASS maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5
+(0.00/0.38/0.30/0.33/0.32), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31), SW
+5/5 (0.00/0.25/0.34/0.37/0.31) — dists identical to the sweep-319..353
+canon; gdodec r98.5 W-NW sits outside every tier-1 leg (canon stands by
+construction, sweep-53 precedent; struct-264's own 7/7 ground circuit walk
+covers the arrival-line approach). Tier-2 332nd cycle per the committed
+sweep-353 pointer: forge 6/6 ALL_PASS (interior-walk-forge.ts, real exit 0,
+dists 0.261/0.307/0.300/0.315/0.375/0.261) + potter 6/6 ALL_PASS
+(interior-walk-potter.ts, real exit 0, dists 0.270/0.366/0.295/0.255/
+0.250/0.349), both tools ls-verified present on disk BEFORE the walks
+(1559B Aug 30 08:32 + 1571B Sep 7 13:44 — sizes/timestamps match the
+committed pointer exactly), dists byte-identical to the sweep-348/351
+canon; skeps seam abstention = known foreign-seam diagnostic, normalized
+set unchanged. INTEGRITY: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[]
+(308th consecutive clean); sweep89-battery 28/28 PASS first try on settled
+bytes (no pin move needed — gdodec comp-neutral {}, well comp {} both
+sides, comp-bearing stays 54); carousel comp bag exact 7 + lib
+3ed80c49d16e89d8 census-verified EXPLICIT this tick (motion:carousel spin
+6deg/s + horse_{0,2,4,6} bob + particles:smoke + sockets, full payload
+printed and matched); well pin 38ab2eef4aee6106 exact; comp-bearing 54;
+lights 38; thing 362. Interlane md5 86b2936f stable, read fresh; SWEEP-LOOP
+md5 a5fd4f4f read fresh. Pools drained: IMPROVE-PLAN md5 7fa8a224 unchanged
+(zero open queue rows), sweep owns no prefix; CITY-PLAN-V2 cae6b928
+unchanged, assigns sweep no reset role — the audit-continues freeze banner
+governs via loop/plan reload. Baseline lawfully rewritten like-for-like
+(projection chassis verbatim from sweep-353; /tmp/s354/snapshot-rewrite.py):
+pre-write assertion verified committed baseline == 8620a553739f8880 (399
+ents), expected diff set exactly [arrival nx-struct-gdodec, well lib],
+counts 399->400, drift ZERO on shared ids; final 400 entities / 301780B /
+sha16 cb3ed525bca9aaec; post-rewrite drift vs live epoch C ZERO. Probe
+self-catches pre-verdict, disclosed: (a) the SW walk first ran inside a
+4-walk chained call that hit the 400s tool timeout — re-issued as its own
+call, real exit 0, sweep-12/18 chained-run class; (b) one inline python
+-c probe died on a nested-quote SyntaxError before anything ran — re-issued
+as a saved script (sanctioned-path precedent, sweep-335/339/343/351 class);
+(c) two inline heredocs blocked by the payload validator, re-issued as
+saved scripts under /tmp/s354/. Foreign dirt in tree (engine files
+client/server, core-paths GLB + review json, windmill overhaul scratch,
+cabin/carousel prototype dirs, fleet shells, fauna tools, review dirs) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-355): inn +
+tower-house (333rd cycle — LRU chain re-derived from committed pointers
+this tick: forge/potter @354 walked fresh, inn/tower-house @352,
+hall/bunkhouse @353 the stalest standing pair beyond the committed pointer;
+walk tools interior-walk-inn.ts + interior-walk-tower-house.ts,
+ls-verified present on disk — 1786B Aug 30 08:11 + 1523B Aug 30 09:53).
