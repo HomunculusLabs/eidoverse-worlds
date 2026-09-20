@@ -21967,3 +21967,110 @@ lands); pentagonal hexecontahedron + snub cube/dodeca stay HELD for
 Bill's handedness call (coin-flip = inventing a preference); rhombic
 dodeca BARRED rt-kin; fresh five-file grep before building — or
 Bill's verdict routing.
+
+## struct-274 (2026-09-20): R11-82 placement carry — THE TETRAKIS
+## HEXAHEDRON LIVE as nx-struct-tetrakis (N-E band sixth form)
+
+The struct-273 committed carry executed. Bank re-verified
+byte-identical pre-mutation (on-disk sha256 f2e8a62adf84c7c8… ==
+struct-273 v1 pin; no rebuild — struct-262..272 precedent). Gate ALL
+PASS real exit 0 at tick start (unpiped, GATE_EXIT:0 at 234cb951
+sweep-363 HEAD, foreign domain). 274%3=1 build-slot tick consumed by
+the judge-debt cadence law: the committed placement outranks a new
+form.
+
+SEAT (struct274-scan-tetrakis, fresh 407-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own
+center reported -9.370, guaranteed overlap refused; coverage exact 1
+/ radial 306 / disc 2 / exempt 4): the R11 octant map printed (E oct0
+6 AT CAP; oct2 SE-S 46 — the mosaic-district band; SW oct4 6 AT CAP
+after struct-272; every other octant 5). COMMITTED BAND (struct-273
+directive): N-E az315-360 beside parent toct (5 standing —
+vesicawindow az357.5 r70.1, rt az359.5 r87.5, toct az348.5 r66,
+trcubo az349 r104.5, dtria az327.5 r89.5; + tetrakis -> 6, soft cap
+6, NO exceedance — at cap, disclosed). Selected: az334.0 r104.0
+(93.474581, -45.590599) — innermost margin+constellation seat, gap
+2.53 vs nx-wild-cairn-0047. NN 18.16 to nx-struct-dtria (law 8;
+composed with dtria@18.2 + trcubo@27.2 — the N-E Catalan kin shelf:
+the dual standing beside the deltoidal icositetrahedron and the
+trcubo, the cube's door-frame surfacing through the cut on the same
+NE walk).
+
+YAW LAW (procession convention, struct-217..273): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az154 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120 -
+334.0 = -454.0 -> 266.00deg -> YAW = 4.642576 rad. DISCLOSED: the
+tetrakis is a 3-FOLD hex-rank point-down seat (probe T7: foot hex
+point on-axis, one upper door-ghost apex dead-on az 0, sq triads
+60-deg interleaved) and the oblique-lean band puts the yaw 266 mod
+120 = 26deg off the 120deg lattice — the exact-mod bonus does NOT
+apply; the panelled-solid family reads at any azimuth (trico/SSD/
+gsd/gdodec/gicosa/dtria/deltoid/triakis precedent) and the judged
+framing is preserved.
+
+TERRAIN (struct274-terrain-tetrakis.ts, this tick): 49pt over the
+TRUE rotated 24-gon (center + 24 verts + 24 edge-mids), spread 8.4mm,
+PY = lowest = -0.019616 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=24 class): the 24-gon dais R3.45 CORNERS-ON-AXES (ROT=0
+class, decode D2: corners present, TRUE box +/-3.450; apothem 3.420
+>= reach+rod 3.313 — apothem-first, struct-247) is the footprint;
+build envelope 6.90x8.67x6.90 — the solid NEVER overhangs (probe T8
+immersion: fully inside, worst poke -0.012), so the 24-gon IS the
+true ground footprint. Exact convex-polygon SAT (edge-normal axes of
+both polys, max-gap law) replaces the square-bbox proxy — struct-19/
+260 disc law class.
+
+PLACEMENT: next-place-struct274.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 407), NN
+floor 18.16 + exact-SAT worst 2.53 re-proven against the FRESH 407-set
+pre-verb [exact 1 radial 306 disc 2 exempt 4] + in-placer RED control
+PASS (exact-SAT at nx-craft-statuary-0026's own center -> gap -9.370;
+ONE RED-corner copy-error self-catch pre-run: [-rhz,-rhz] fixed to
+[-rhx,-rhz] — the struct-266/268/270 class named in the header,
+caught on read-back before first run), upload
+store/f2e8a62adf84c7c8.glb (1 upload, shared budget), plain spawn
+1 verb paced 1200ms, PLACED_VERIFIED pos [93.474581, -0.019616,
+-45.590599] yaw 4.642575810304916 lib store/f2e8a62adf84c7c8.glb
+comp {} census 407->408; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+az334 arrival-line approach + reading-face vantage az184 at 7m +
+full CW 8m standoff circuit, no phantom collider; folly by
+presentation, the PANELLED solid means the walk stays outside the
+3.45m dais; walk standoff 8m applies directly, edge mid clear 4.58m
+— family disposition). Walk stdout carries the known distant
+support-seam diagnostics class (dress/temple entities, foreign
+lanes, abstentions only).
+
+ZAI-fallback judgment debt on tetrakis v1 rides the owed board
+(native absent from cron catalog, cron-unpayable class).
+
+Bill eye-check pointer: on the NE reach past the beacon and dtria —
+THE TETRAKIS HEXAHEDRON, six doors read through the looking glass.
+The toct cut the octahedron's six vertices at the parent's own
+razor; its dual reads the same story inside-out: the eight hexagon
+faces the cut left alone stand as the EIGHT GREAT OUTER POINTS along
+the cube's own diagonals — the door-framed cube surfacing through
+the shallow pyramids — while the six door-ghosts sink to the sharp
+inner rank. Hex-rank point-down at 6.9m on a TWENTY-FOUR-sided dais
+— one side per sail. After dark, seven warm brass points: the crown
+finial and the six door-ghost beads in two staggered triangles at
+the waist, none pressed — the doors live where the neighbors touch.
+Walk the NE band and read it against the dtria and the trcubo across
+the same field — three generations of one family on one shelf.
+
+Files: struct274-scan-tetrakis.ts + struct274-terrain-tetrakis.ts +
+struct274-walk-tetrakis.ts + next-place-struct274.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one
+append struct-274, D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-275 build+judge tick (R11-83 build sweep —
+fresh five-file grep: triakis tetra/octa remain the only unclaimed
+achiral small Catalans; parents tret E-band AT CAP, toct/trcubo N-E
+AT CAP after this tick — EVERY parent band is now capped, so the
+next Catalan seats OUTSIDE its parent's quarter by necessity, a
+first for the family — surface in the plan when it lands); pentagonal
+hexecontahedron + snub cube/dodeca stay HELD for Bill's handedness
+call (coin-flip = inventing a preference); rhombic dodeca BARRED
+rt-kin — or Bill's verdict routing.
