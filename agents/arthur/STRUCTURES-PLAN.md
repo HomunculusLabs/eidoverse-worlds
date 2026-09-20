@@ -23541,3 +23541,62 @@ struct-295, D+0 E+0).
 
 Next queue head: unchanged — Bill's routing executes the same wakeup it
 arrives; until then the hold repeats with one-line status.
+
+
+## struct-297 (2026-09-20): R11-105 lawful HOLD — build ticks hold on
+## Bill's next-family decision (surfaced struct-278, nineteenth consecutive —
+## one-line pointer form per the ~3-tick token-burn law)
+
+297%3=0 refine-slot tick (pool empty 40+ ticks, so hold). Gate ALL PASS
+real exit 0 tick-start (unpiped /tmp/struct297-gate.log, GATE_EXIT:0 at
+8decdfdd dress-223 HEAD, foreign domain; HEAD re-checked at close, epoch
+law). No committed placement carry banked (tetrakis/trioct/trit all LIVE);
+shard re-derived empty fresh (IMPROVE-PLAN.md "[OPEN" lines naming
+nx-struct: 0 hits; IMPROVEMENTS.md same: 0); refine pool empty of payable
+items (40+ ticks); ledger max re-derived struct-296 -> struct-297
+immediately before append (numeric extraction; entry verified landed
+exactly once).
+
+Native vision: ABSENT from the cron catalog all tick (tool_search fresh:
+the 33-tool deferred catalog enumerates exactly terminal 1 + zai-vision 8
++ repoprompt 24 — no native vision tool; the disclosed cron-unpayable
+class, struct-169..296 lineage). Owed board unchanged, riding:
+tetrakis/trit/trioct v1 ZAI-fallback judgments (banked frames are the
+re-judge substrate for the first windowed session with native).
+
+No verdict routing in HEAD since the struct-278 surfacing (git log 8decdfdd
+-15 inspected: dress-223/sweep-380/polish-330/struct-296/dress-222/
+sweep-379/struct-295 — all foreign domain or own holds; commit-message
+keyword grep Johnson/Kepler/Poinsot/handedness/next-family: hits are own
+hold-commit prose naming the owed decision, zero Bill directives; fauna-70
+is a fauna-domain vole PROPOSAL, not struct routing).
+
+Task-prompt priority items verified resolved on prior ticks and re-confirmed
+by fleet census pins: costa v2 carry long closed (judged ACCEPTED struct-167,
+live era struct-168+); hypar row 22 closed natively survey-16 (struct-48
+record: debt board 4/4 CLEARED); R11 Amendment-1 weak reads (gyroid/enneper,
+struct-134) cured (survey-82 gyroid v2 post-cure CLEAN; enneper v2 lineage
+struct-170) — no open rows.
+
+Live census 416 entities (next-live-census.ts, exit 0; quiet tick 416==416
+vs struct-296 epoch by id-set diff, zero arrivals/departures):
+nx-struct-tetrakis store/f2e8a62adf84c7c8.glb [93.474581, -0.019616,
+-45.590599] yaw 4.642575810304916; nx-struct-trioct
+store/9f5d016efcb3a6a5.glb [-95.721566, 0.036572, 46.686527] yaw
+1.5009831567151233; nx-struct-trit store/c46f5a580e1da32b.glb [60.225526,
+-0.03243, -86.010965] yaw 5.1487212933832724 — all three PIN_EXACT
+(python deep-compare vs pins, maxdelta 0.0), zero drift. 127 struct-domain
+entities, all accounted. No new arrivals classified struct-domain; foreign
+dirt (WINDMILL-OVERHAUL, cabin-overhaul, fauna files, client/server
+sources, core-paths assets) left untouched per the ownership law.
+
+DISPOSITION: lawful hold (nineteenth consecutive — one-line pointer only:
+Bill's routing unblocks the lane, struct-278 records the four options).
+Zero world mutations, uploads, verbs, comp-edits, shared-budget use.
+Zero pushes.
+
+Files: STRUCTURES-PLAN.md (this block) + IMPROVEMENTS.md (one append
+struct-297, D+0 E+0).
+
+Next queue head: unchanged — Bill's routing executes the same wakeup it
+arrives; until then the hold repeats with one-line status.
