@@ -169,18 +169,67 @@ for (let tp = 0; tp < 3; tp++) {
 }
 // chain + kettle — Wakeup-37/38: the kettle rides a pz_kettle anchor group
 // (KEEP pz_kettle) so a simmer comp has a real target; chain hangs static.
-texBox("kchain", 0.02, 0.42, 0.02, 0, 1.55, 0, ironTex);
+// polish-330 KETTLE RE-AUTHOR: judged from current pixels (day+night ZAI
+// fallback, native re-judge owed), the bare squashed sphere at the tripod
+// apex — the composition's focal point, where the eye lands first — read
+// as a placeholder primitive ("no rim, no handle, no spout, no hanging
+// chain"; night: "the darkest object in the frame... actively contradicts
+// the fire"). One coherent pot intervention: tapered cast-iron body +
+// rim ring + domed lid w/ knob + bail arc + angled spout + three visible
+// chain links to the apex, all inside the KEPT pz_kettle group in ONE
+// firelit-iron material — the polish-312 streetlamp sheen recipe (ironTex
+// tones + warm emissive 0xffc98a @ 0.15 = the fire-underglow both judges
+// prescribed). Group-local folding keeps it out of the plain-iron pz3
+// buckets (polish-311 emissive-key law does NOT cross the KEEP boundary).
+// NOTE: the material NAME must differ from "iron" — glbwrite's texMat
+// export lane dedupes by name and would reuse the plain emissive-less
+// iron entry (name-collision variant of the polish-311 mergekit law,
+// caught by p330-decode RED).
+const potIron = texMat("potIron", [0x5c5c60, 0x54545a], { rough: 0.4, metal: 0.55, scale: 2, stripe: 2, weights: [2, 1] });
+potIron.emissive = new THREE.Color(0xffc98a);
+potIron.emissiveIntensity = 0.15;
 const kGrp = new THREE.Group();
 kGrp.name = "pz_kettle";
-const kettle = new THREE.Mesh(new THREE.SphereGeometry(0.24, 10, 8), ironTex);
-kettle.name = "kettle";
-kettle.scale.set(1, 0.8, 1);
-kettle.position.set(0, 1.12, 0);
-kGrp.add(kettle);
+const kbody = new THREE.Mesh(new THREE.CylinderGeometry(0.20, 0.15, 0.26, 12), potIron);
+kbody.name = "kbody";
+kbody.position.set(0, 1.07, 0);
+kGrp.add(kbody);
+const krim = new THREE.Mesh(new THREE.TorusGeometry(0.20, 0.02, 6, 14), potIron);
+krim.name = "krim";
+krim.rotation.x = Math.PI / 2;
+krim.position.set(0, 1.195, 0);
+kGrp.add(krim);
+const klid = new THREE.Mesh(new THREE.SphereGeometry(0.185, 12, 6, 0, Math.PI * 2, 0, Math.PI / 2), potIron);
+klid.name = "klid";
+klid.scale.set(1, 0.42, 1);
+klid.position.set(0, 1.20, 0);
+kGrp.add(klid);
+const kknob = new THREE.Mesh(new THREE.SphereGeometry(0.032, 8, 6), potIron);
+kknob.name = "kknob";
+kknob.position.set(0, 1.29, 0);
+kGrp.add(kknob);
+// bail handle: half-torus arch in the x-y plane, feet at the rim sides,
+// peak y 1.40 where the chain takes over
+const kbail = new THREE.Mesh(new THREE.TorusGeometry(0.21, 0.015, 6, 14, Math.PI), potIron);
+kbail.name = "kbail";
+kbail.position.set(0, 1.19, 0);
+kGrp.add(kbail);
+// pouring spout: tapered cylinder angled up-and-out to +x
+const kspout = new THREE.Mesh(new THREE.CylinderGeometry(0.026, 0.05, 0.24, 8), potIron);
+kspout.name = "kspout";
+kspout.rotation.z = -0.7;
+kspout.position.set(0.20, 1.16, 0);
+kGrp.add(kspout);
+// three chain links (alternating orientation) from the bail peak to the
+// tripod apex — a visible link read where the old 2cm bar was sub-pixel
+for (let kl = 0; kl < 3; kl++) {
+    const link = new THREE.Mesh(new THREE.TorusGeometry(0.038, 0.012, 5, 10), potIron);
+    link.name = `klink_${kl}`;
+    link.rotation.y = (Math.PI / 2) * (kl % 2);
+    link.position.set(0, 1.46 + kl * 0.115, 0);
+    kGrp.add(link);
+}
 g.add(kGrp);
-// kettle spout + lid handle
-texBox("kspout", 0.06, 0.05, 0.2, 0.2, 1.16, 0.1, ironTex);
-texBox("klid", 0.2, 0.03, 0.2, 0, 1.32, 0, ironTex);
 // firewood stacked between two hearth stones (SW side, off the seat diagonals)
 for (let fw = 0; fw < 5; fw++) {
     const log = new THREE.Mesh(new THREE.CylinderGeometry(0.055, 0.055, 0.55, 5), mat(0x6c5426, 0.95, 0));

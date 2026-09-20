@@ -3057,3 +3057,66 @@ next wake once the gateway answers.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
   polish notes — thinner bar strokes / 4th date line (sub-threshold), knot
   day specular (needs sun falsification), bead saturation trim.
+
+### polish-330 — hearth cooking kettle (ACCEPTED, LIVE)
+
+- Subject: `nx-hearth` (village origin [0,0,0], yaw 0, 4-key comp bag:
+  motion:pz_kettle pendulum + motion:well_ + particles:embers +
+  sockets x5 — census-fresh this tick, captured verbatim before spawn).
+  Build source `assets/mkv3-plaza.ts` -> `village_plaza3.glb` (live was
+  890163cb, polish-300's flagstone-ring build; on-disk == live exact at
+  survey; before-bytes captured FIRST).
+- Defect (day+night ZAI judges on exact live bytes, disclosed fallback —
+  no native vision tool in this cron session, polish-285..329 class,
+  native re-judge owed): the hanging kettle — bare squashed sphere at the
+  tripod apex, the composition's focal point — read as a placeholder
+  primitive (day: "no rim, no handle, no spout, no hanging chain"; night:
+  "the darkest object in the frame... actively contradicts the fire").
+- Change (ONE pot intervention, inside the KEPT pz_kettle group so the
+  pendulum comp swings it unchanged): tapered cast-iron body + rim torus
+  + domed lid w/ knob + bail-handle arch + angled spout + three
+  alternating chain links to the apex. One firelit `potIron` texMat (iron
+  tones) + warm underglow emissive 0xffc98a @ 0.15 (polish-312 streetlamp
+  sheen recipe — the fire-underglow BOTH judges prescribed).
+- **Build-law found (texMat name-collision)**: glbwrite's texMat export
+  dedupes BY NAME — a texMat("iron",...) clone with emissive silently
+  reuses the plain emissive-less iron entry (name-collision variant of
+  polish-311's emissive-key law). Caught RED by p330-decode before any
+  render; cured by naming the material `potIron`.
+- Candidate `0bb8fb0e973e6b35478378150b6589d30eaab1d1031269cc79fb0b48266bbe49`
+  deterministic x2; nodes 19 / meshes 17 unchanged; materials 5->6;
+  type-aware NaN scan 0 of 22344 (probe self-caught a VEC2-overread bug
+  RED->GREEN); anchors fire/pz_kettle/well_* intact; kettle envelope
+  y 0.940..1.738, maxR 0.297 (inside the fire column).
+- Falsification: pixel diffs confined to the kettle column in all 8
+  views (gameplay 510 px x[411..471]; night 489; well/benches/ring
+  byte-identical). Day judge: pot reads by spout + bail + suspension
+  ("unambiguous cultural signature of a cook kettle"), believable hang
+  height, correct scale, zero defects; chain links at legibility
+  threshold = close-range detail (recorded, not treated). Night judge:
+  PASS — shaped underglow attached to the underside, painted-iron-not-
+  lantern, coals decisively brightest (peak locked 0.15 vs 1.0 by
+  construction), zero bloom/bleed/floating defects.
+- Placed via updated `next-place-hearth.ts` (pins 890163cb -> 0bb8fb0e):
+  PLACED_VERIFIED, 1 upload + 5 verbs, 4-key comp bag replayed verbatim,
+  idempotent rerun zero verbs, live census pin `store/0bb8fb0e973e6b35.glb`
+  @ [0,0,0] yaw 0 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p330-verify-served.ts`; probe self-caught 2 of its own
+  bugs RED->GREEN — a dead Face() line from the chassis copy, then the
+  p313-law DracoFloat32Array receiver): served DRACO e3a8c083… keeps the
+  whole pot (649 verts, y 0.940..1.738, maxR 0.297), potIron emissive
+  [0.15,0.0876,0.0381] + texture, all 8 anchors, 0 non-finite.
+  P330_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 11750c4f
+  (struct-296 hold absorbed mid-tick — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-330-hearth/` (before/ = live
+  890163cb baseline GLB + 10-view rig; after/ = candidate + rig; probes:
+  p330-decode.ts, p330-pixdiff.py, p330-verify-served.ts).
+- Excalibur checkpoint: appended to
+  `vessel/workings/eidoverse-hero-assets/CHECKPOINT.md`.
+- Next ranked: (a) plaza-core re-survey on fresh evidence — this tick's
+  day-judge notes name bench value (logs read near-silhouette), ring
+  uniformity, and the SW firewood pile vs the old bench-read confusion;
+  judge fresh first, or (b) hearth judge-named follow-ups (bowl interior
+  warm-bounce, ring stone albedo contrast).

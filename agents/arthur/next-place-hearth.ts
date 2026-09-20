@@ -1,5 +1,5 @@
-// next-place-hearth.ts — polish lane (300): re-place nx-hearth with the
-// flagstone gathering ring (polish-300 build). Captures the 4-key comp bag
+// next-place-hearth.ts — polish lane (330): re-place nx-hearth with the
+// re-authored cooking kettle (polish-330 build). Captures the 4-key comp bag
 // before spawn, re-applies every key after (comp-wipe law), verifies tuple
 // + keys, idempotent rerun prints zero verbs. Verb choreography copied from
 // the proven next-place-carousel.ts (snapshot-gated paced sender, `comp`
@@ -12,7 +12,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-hearth";
 const FILE = `${ROOT}/agents/arthur/assets/village_plaza3.glb`;
-const REVIEWED_SHA = "890163cb872597e2d62b7861a8a954519fa1daf0a9a3cdf162a2ff940a104ecb";
+const REVIEWED_SHA = "0bb8fb0e973e6b35478378150b6589d30eaab1d1031269cc79fb0b48266bbe49";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [0, 0, 0] as [number, number, number], yaw: 0, scale: 1 };
 const EXPECTED_KEYS = ["motion:pz_kettle", "motion:well_", "particles", "sockets"].sort();
@@ -53,7 +53,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "the plaza hearth — polish-300 flagstone ring");
+  u.searchParams.set("name", "the plaza hearth — polish-330 cooking kettle");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {
