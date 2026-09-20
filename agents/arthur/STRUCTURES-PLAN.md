@@ -22353,3 +22353,171 @@ rt-kin. AFTER the triakis octahedron the achiral Catalan well is DRY
 — surface the next-family decision to Bill (Johnson solids,
 Kepler-Poinsot, or his routing) in the plan rather than coin-flipping
 a direction — or Bill's verdict routing.
+
+## struct-277 (2026-09-20): R11-85 THE TRIAKIS OCTAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-278 committed carry)
+
+277%3=1 build-slot tick; bank EMPTY after the struct-276 placement carry
+(trit LIVE, NW-N band at 6), refine pool empty of payable items (40+
+ticks) -> build+judge per the struct-240..276 precedent. Gate ALL PASS
+real exit 0 tick-start (unpiped, GATE_EXIT:0 at 71b05adc sweep-366 HEAD,
+foreign domain). Shard drained fresh (IMPROVE-PLAN grep OPEN nx-struct
+rows: 0 hits). Ledger max re-derived struct-276 -> struct-277 (numeric
+extraction, re-checked immediately before append). Native absent from
+the cron catalog all tick (tool_search fresh: terminal + zai-vision +
+repoprompt only — same disclosed cron-unpayable class as
+struct-169..276; owed board gains trioct v1, joins the riding queue).
+
+FORM SELECTION fresh grep (triakis octa|trioct|katasyon over the
+five-file set): 0 real claims — the LAST unclaimed achiral small
+Catalan, exactly as the struct-276 directive banked. Parent-band audit
+from the plan's own seat records: the trioct's parent tcube stands S-SW
+AT CAP 6 (struct-250); the N-E kin band (toct/trcubo) also 5/6 but
+toct's own dual tetrakis already took that last slot (struct-274) — the
+trioct is the SECOND family member to seat OUTSIDE its parent's quarter
+(trit struct-276 was first; every parent band now capped). Per the
+struct-276 directive the R11-86 seat goes to a fresh under-served
+octant. ACHIRAL, machine-proven (T0b: all six mirror planes close both
+vertex sets — no handedness owed Bill).
+
+CONCEPT: THE DEEPER CUT'S GHOST, READ THROUGH THE LOOKING GLASS. The
+parent tcube told THE DEEPER CUT — octagon regularity demands cutting
+past the family's 1/3 law to u = 1−1/√2 (at 1/3 the octagon side ratio
+is exactly √2 — irregular), and even then 96.65% of the cube stands
+(struct-249 T6). The polar reciprocal about its midsphere (rho == √2
+EXACT, both edge classes) turns every parent face into a POINT and
+every one of the 24 tcube vertices into an ISOCELES sail — one ghost
+apex + two oct wings, every sail kissing ONE insphere at rho^2/R (the
+Catalan tangent property, T6). THE RANK INVERSION IS THE STORY: the
+cut planes ride FAR out (h_tri = (1+√2)/√3 = 1.393847) while the face
+planes sit deep (h_oct = 1 — the cube's own skin) — so in the dual the
+SIX FACES stand as the SIX GREAT OUTER POINTS at exactly 2 on the axes:
+THE OCTAHEDRON ITSELF, the cube's own dual surfacing through the cut,
+the closed form this dual owes its grandparent — while the EIGHT
+RAZOR-GHOSTS sink to 2√3(√2−1) = 1.434878 (ratio (1+√2)/√3 EXACTLY —
+the depth ratio told in the radii), tenting the octahedron's eight
+faces with the flattest apexes in the family fleet (arccos((1−2√2)/4) =
+117.2006deg OBTUSE, vs the trit's 112.8859). Wings/base == 2−√2
+EXACTLY — the parent's own corner-tet leg constant (struct-249)
+returning in the dual's sail. Presentation: OCT-POINT-DOWN 4-fold on
+the parent's own seated frame INHERITED (face-down Rx(90°) + cardinals
+dead-on, NO twist-snap — verbatim struct-249 math; the bottom face's
+dual point is the foot, the four waist oct-points on the exact
+cardinals, the ghost squares on the exact 45° diagonals, each upper
+ghost DIRECTLY ABOVE a lower ghost — the cuts aligned through the
+center). STONE: all 24 sails (ONE face family = ONE sail material) +
+the TWENTY-FOUR-sided dais (one side per sail, theme-number law). IRON:
+all 36 seam bonds + crown finial stem 1.30m. Night contract: the
+parent's OWN bead census transcribed to the dual — its six lit octagon
+centers become the six OCT-POINTS: 1 crown FINIAL + 4 WAIST at the
+exact cardinals + the SIXTH PRESSED into the earth beneath the foot,
+fully buried in the dais band (tico's-twelfth idiom — five read at
+night, six in truth, disclosed); the eight razor-ghosts stay dark:
+absence is the mark of the removed corners = glow_trioct_6.
+
+PARAMETRIZATION (exact, closed-form): parent tcube rebuilt verbatim
+from struct-249's closed forms (grandparent cube (±1,±1,±1), edge 2;
+deeper cut u = 1−1/√2; 24 verts; R == √(5−2√2) to 1e-12); midsphere
+rho == √2 exact (spread 2.2e-16); dual radii oct 2 / ghost 2√3(√2−1);
+SCALE 1.750000000 clean to height 7.0 (family ladder rico 6.3 -> dtria
+6.6 -> deltoid 6.7 -> triakis 6.8 -> tetrakis 6.9 -> 7.0); dais 24-gon
+R3.70 APOTHEM-FIRST (apothem 3.668 >= reach+rod 3.560); envelope
+7.40x8.77x7.40.
+
+PROBE (struct277-probe-trioct.ts, tracked) 10/10 ALL PASS real exit 0
++ RED control 5-FAIL exit 1 (T2/T5/T6/T7/T8 on displaced dual vertex
+3): T0 census 14/36/24 + midsphere spread 2.2e-16 + rho == sqrt2 +
+THE RANK INVERSION (oct 2.000000 outermost == the octahedron > ghost
+1.434878 innermost, ratio (1+√2)/√3 == the depth ratio exactly);
+T0b ACHIRALITY (all six mirror planes close); T1 Euler 14−36+24=2;
+T2 sail census (angle multiset IDENTICAL across all 24 faces; isoceles
+mirror exact; THE CLOSED FORMS apex arccos((1−2√2)/4) = 117.2006deg
+OBTUSE / base arccos((2+√2)/4) = 31.3997deg / wings/base exactly 2−√2);
+T3 degrees 8/3 by rank (the octagon's eightness told at a point —
+the parent's every-vertex-deg-3 inverted); T4 manifold 48 slots;
+T5 exactly two edge classes oct-ghost 24 + oct-oct 12, zero
+ghost-ghost (the deeper cut still not deep enough for the razors to
+meet); T6 THE POLAR RECIPROCAL (all 24 sails kiss ONE insphere at
+rho^2/R; every face normal EXACTLY one tcube vertex direction,
+bijection 24/24); T7 seat (foot oct-point ON axis AT dais top 0.300000
+AND the lowest vertex overall — margin 2.0503m over the nearest ghost;
+90-degree symmetry 0 misses; central inversion exact; height 7.000000;
+reach+rod 3.560 <= apothem 3.668; waist 4 at the EXACT cardinals
+level/radii exact; ghost squares on the 45-degree diagonal lattice,
+vertically stacked upper-over-lower, inversion-closed; beads 4 aloft +
+1 pressed buried; finial clears worst occluder sight 5.712 by 3.058m
+>= 0.225 law); T8 immersion worst poke −1.4e-2 fully inside.
+
+TWO probe self-catches RED-first (zero wasted builds — the honest red
+loop, family lineage): (a) derivation-law self-catch — my first
+triangle-depth arithmetic produced h 0.9529/0.3573, which CONTRADICTED
+the rank order the closed forms demanded; re-derived from the centroid
+law h_tri = (1+√2)/√3 = 1.393847, restoring the inversion (struct-271
+law-error class: the LAW was wrong, not the geometry); (b) check-law
+self-catch — the first diagonal-lattice check used (az−45°)·2, but the
+4-fold residues {0,90,180,270}° doubled land on 180/540°, which atan2
+wraps to π not 0 (the tetrakis 3-fold ×3 trick works because its
+residues triple to 0 mod 360); the 4-fold-correct multiplier is 4 —
+the GEOMETRY was exact all along (stacked/level/radius all green),
+GREEN run 1 FAIL -> fixed -> GREEN 10/10.
+
+BUILD (agents/arthur/assets/mkv3-trioct.ts, staged -f): root identity
+(struct-188); texMat lanes trioct_stone/trioct_iron (struct-38); bead
+emissive 0x9a7030 @ 1.4 in-GLB (family build-time law); 62 pre-merge
+meshes + 1 KEEP glow group glow_trioct_6; envelope law green in-build
+== probe contract. v1 deterministic x2 runs byte-identical sha256
+9f5d016efcb3a6a5a24f9f2a1b0dce7607a64cf2f5035da3c28f8b1ca26c5f47
+(mtime-verified fresh).
+
+DECODE (struct277-decode-trioct.ts, tracked) 8/8 ALL PASS real exit
+0: D1 census 3 nodes (trioct_iron + trioct_stone + glow_trioct_6);
+D2 24-gon dais TRUE box ±3.700 corners present sole min y −0.000000;
+D3 2752 iron verts worst 60.00mm (<= 64) over the 36 exact segments +
+the NAMED finial stem, coverage 36/36; D4 576 plate verts worst 58mm
+(<= 62 shell); D5 beads 6/6 clusters emissive sole-night; D6 grounding
+sole at grade + 4 waist beads ALOFT + the pressed sixth BURIED
+y[0.00,0.30] inside the dais band; D7 envelope drift 0.00mm; D8
+texMats 2/2. RED control (village_tcube3.glb — the parent's own
+bytes): census FAIL clean-stop exit 1 real.
+
+RENDERS: struct277-render-trioct.ts (tracked chassis, struct273
+lineage) 9 frames on the EXACT pinned bytes — bounds min[−3.700,
+−0.000, −3.700] max[3.700, 8.770, 3.700] == contract; reviews/
+struct277-trioct/ (9 frames, ignored — sha pin above is the durable
+record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as trioct v1): day
+gameplay 18m 5/5 PASS (identity "unmistakably reads as a deliberate
+octahedron… clean diamond silhouette… constructed mathematical solid";
+closed hull watertight finial-to-foot; grounded with point-contact +
+cast shadow; stone/iron/brass three-way separation; zero defects); 
+night 4/4 PASS (4 warm beads resolved = crown finial + 3 waist, the
+back waist legitimately occluded — the family single-azimuth-yield
+band, disclosed; tight hard-edged, zero bloom; dark discipline clean;
+the buried sixth correctly invisible; silhouette holds); closeface
+4/4 PASS (seam joinery clean with uniform shadow-gap reveal, panels
+never poke through rods; every face cleanly tented into its three
+panels; beads seated AT junctions; zero z-fighting/cracks/tears). 13/13
+real criteria PASS, zero real defects. v1 ACCEPTED BANKED NOT PLACED.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-278
+committed carry (fresh census scan, under-served octant — every parent
+band capped; 8m NN + per-district soft cap 6, 24-gon-exact polygon SAT
+struct-19/260 class, oblique-yaw struct-104 band, terrain preflight
+over the TRUE rotated 24-gon, hash-gated plain spawn nx-struct-trioct,
+comp {}, ground circuit walk). Folly class. Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+Files: struct277-probe-trioct.ts + struct277-decode-trioct.ts +
+struct277-render-trioct.ts + assets/mkv3-trioct.ts (NEW, tracked; mk
+staged -f per the ignored-parent law) + STRUCTURES-PLAN.md (this
+block) + IMPROVEMENTS.md (one append struct-277, D+0 E+0).
+
+Next queue head: struct-278 placement tick (the committed carry
+above). AFTER it the ACHIRAL CATALAN WELL IS DRY — per the struct-276
+directive the next-family decision goes to Bill (Johnson solids,
+Kepler-Poinsot, snub chirality call, or his routing) surfaced in the
+plan, never coin-flipped; pentagonal hexecontahedron + snub cube/
+dodeca stay HELD for his handedness call; rhombic dodeca BARRED
+rt-kin.
