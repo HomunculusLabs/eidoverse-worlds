@@ -22245,3 +22245,111 @@ the pentagonal hexecontahedron + snub cube/dodeca stay HELD for Bill's
 handedness call (coin-flip = inventing a preference); rhombic dodeca
 BARRED rt-kin; fresh five-file grep before building — or Bill's verdict
 routing.
+
+## struct-276 (2026-09-20): R11-84 placement carry — THE TRIAKIS
+## TETRAHEDRON LIVE as nx-struct-trit (NW-N band sixth form)
+
+The struct-275 committed carry executed. Bank re-verified
+byte-identical pre-mutation (on-disk sha256 c46f5a580e1da32b… ==
+struct-275 v1 pin; no rebuild — struct-262..274 precedent). Gate ALL
+PASS real exit 0 at tick start (unpiped, GATE_EXIT:0 at 0c55d028
+polish-321 HEAD, foreign domain). 276%3=0 refine-slot tick consumed by
+the judge-debt cadence law (refine pool empty of payable items 40+
+ticks): the committed placement outranks a new form.
+
+SEAT (struct276-scan-trit, fresh 409-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own
+center reported -10.370, guaranteed overlap refused; coverage exact 1
+/ radial 307 / disc 2 / exempt 4): the R11 octant map printed (E oct0
+6 AT CAP; oct1 10; oct2 46 — the mosaic-district band, EXCLUDED; oct3
+5; SW oct4 6 AT CAP; oct5 5; oct6 5; N-E oct7 6 AT CAP). AUTO
+under-served selection (struct-275 directive: NOT the E band — the
+FIRST family member outside its parent's quarter, every parent band
+capped): octants 3/5/6 at 5 forms; oct6 (NW-N) carries the kin shelf
+(soundmirror, beacon, angler, reedpool, gicosa). Selected: az305.0
+r105.0 (60.225526, -86.010965) — innermost margin+constellation
+seat, gap 2.34 vs nx-wild-cairn-0048. NN 19.26 to nx-struct-beacon
+(law 8; composed with beacon@19.3 + gicosa@25.5 — the NW-N kin
+shelf, the tret's dual standing beside the beacon and the gicosa
+across the same NW walk).
+
+YAW LAW (procession convention, struct-217..275): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az125 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120 -
+305.0 = -425.0 -> 295.00deg -> YAW = 5.148721 rad. DISCLOSED: the
+trit is a 3-FOLD tri-rank point-down seat (probe T7: foot tri-ghost
+on-axis, belt H-ring snapped {0,±120}, dimples 60deg interleaved) and
+the oblique-lean band puts the yaw 295 mod 120 = 55deg off the
+120deg lattice — the exact-mod bonus does NOT apply; the
+panelled-solid family reads at any azimuth (trico/SSD/gsd/gdodec/
+gicosa/dtria/deltoid/triakis/tetrakis precedent) and the judged
+framing is preserved.
+
+TERRAIN (struct276-terrain-trit.ts, this tick): 25pt over the TRUE
+rotated 12-gon (center + 12 verts + 12 edge-mids), spread 32.5mm,
+PY = lowest = -0.032430 (the dais-sole-at-grade build absorbs the
+spread).
+
+SAT LAW (N=12 class): the 12-gon dais R4.45 CORNERS-ON-AXES (ROT=0
+class, decode D2: corners present, TRUE box +/-4.450; apothem 4.298
+>= reach+rod 4.185 — apothem-first, struct-247) is the footprint;
+build envelope 8.90x8.77x8.90 — the solid NEVER overhangs (probe T8
+immersion: fully inside, worst poke -1.7e-2), so the 12-gon IS the
+true ground footprint. Exact convex-polygon SAT (edge-normal axes of
+both polys, max-gap law) replaces the square-bbox proxy —
+struct-19/260 disc law class.
+
+PLACEMENT: next-place-struct276.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 409), NN
+floor 19.26 + exact-SAT worst 2.34 re-proven against the FRESH
+409-set pre-verb [exact 1 radial 307 disc 2 exempt 4] + in-placer RED
+control PASS (exact-SAT at nx-craft-statuary-0026's own center ->
+gap -10.370; ONE RED-corner copy-error self-catch pre-run:
+[-rhz,-rhz] fixed to [-rhx,-rhz] — the struct-266/268/270/274 class
+named in the header, caught on read-back before first run), upload
+store/c46f5a580e1da32b.glb (1 upload, shared budget), plain spawn
+1 verb paced 1200ms, PLACED_VERIFIED pos [60.225526, -0.032430,
+-86.010965] yaw 5.1487212933832724 lib store/c46f5a580e1da32b.glb
+comp {} census 409->410; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+az305 arrival-line approach + reading-face vantage az155 at 7m +
+full CW 8m standoff circuit, no phantom collider; folly by
+presentation, the PANELLED solid means the walk stays outside the
+4.45m dais; walk standoff 8m applies directly, edge mid clear 3.70m
+— family disposition). Walk stdout carries the known distant
+support-seam diagnostics class (dress/temple entities, foreign
+lanes, abstentions only).
+
+ZAI-fallback judgment debt on trit v1 rides the owed board (native
+absent from cron catalog, cron-unpayable class).
+
+Bill eye-check pointer: on the NW reach past the beacon and the
+gicosa — THE TRIAKIS TETRAHEDRON, the first cut's ghost read through
+the looking glass. The tret cut the tetrahedron at a third (23 of 27
+parts standing); its dual reads the same story inside-out: the four
+faces the razor never touched stand as the FOUR GREAT OUTER POINTS —
+the grandparent tetrahedron itself, reflected through the center —
+while the four cut-ghosts sink to the deepest dimples in the family
+fleet, and every one of the 12 vertices becomes an isoceles sail
+kissing one insphere. Tri-ghost point-down at 7.0m on a TWELVE-sided
+dais — one side per sail; a three-sided spire, point-down at both
+ends. After dark, four warm brass points: the crown finial and three
+belt beads at exact 120deg — the foot cut-ghost stays dark, absence
+marking the removed corner. Walk the NW band and read it against the
+beacon and the gicosa across the same field.
+
+Files: struct276-scan-trit.ts + struct276-terrain-trit.ts +
+struct276-walk-trit.ts + next-place-struct276.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-276, D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-277 build+judge tick (R11-85 build sweep —
+fresh five-file grep: the triakis octahedron is the LAST unclaimed
+achiral small Catalan; parents toct/trcubo N-E AT CAP — it seats
+outside its parent's quarter too, second of the class); pentagonal
+hexecontahedron + snub cube/dodeca stay HELD for Bill's handedness
+call (coin-flip = inventing a preference); rhombic dodeca BARRED
+rt-kin. AFTER the triakis octahedron the achiral Catalan well is DRY
+— surface the next-family decision to Bill (Johnson solids,
+Kepler-Poinsot, or his routing) in the plan rather than coin-flipping
+a direction — or Bill's verdict routing.
