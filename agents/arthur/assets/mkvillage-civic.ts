@@ -1,7 +1,7 @@
 // mkvillage-civic.ts — plaza, paths, decor, art for the village.
 import * as THREE from "three";
 import { toGLB, mat } from "./glbwrite.ts";
-import { C, box, gableRoof, coneRoof } from "./housekit.ts";
+import { C, ACCENTS, box, gableRoof, coneRoof } from "./housekit.ts";
 import { writeFileSync } from "node:fs";
 
 // ---- WELL: stone ring + posts + tiny gable roof + bucket ----
@@ -12,10 +12,15 @@ const well = new THREE.Group();
     ring.position.y = 0.375;
     well.add(ring);
     box(well, "well_base", 2.1, 0.12, 2.1, 0, 0.06, 0, C.DARK);
-    // two posts + crossbar + tiny gable
-    box(well, "well_post_w", 0.1, 1.7, 0.1, -0.8, 0.85, 0, C.DARK);
-    box(well, "well_post_e", 0.1, 1.7, 0.1, 0.8, 0.85, 0, C.DARK);
-    box(well, "well_crossbar", 1.8, 0.08, 0.08, 0, 1.72, 0, C.DARK);
+    // polish-314: the frame (posts+crossbar) wore C.DARK (lum 64) against the
+    // ring's C.STONE (lum 80) — judge-named "single dark mass" (posts merge
+    // with ring at distance; the frame-to-ring boundary was the largest
+    // unreadable region). Cure: canon wood ACCENTS.WOOD 0xa09832 (lum 143)
+    // for the whole frame class — two readable verticals between roof and
+    // ring, material truth (village wood canon, loop #86 census).
+    box(well, "well_post_w", 0.1, 1.7, 0.1, -0.8, 0.85, 0, ACCENTS.WOOD);
+    box(well, "well_post_e", 0.1, 1.7, 0.1, 0.8, 0.85, 0, ACCENTS.WOOD);
+    box(well, "well_crossbar", 1.8, 0.08, 0.08, 0, 1.72, 0, ACCENTS.WOOD);
     gableRoof(well, "well_roof", 1.6, 1.4, 0.5, 1.78, 0.2);
     // bucket on rope
     box(well, "well_rope", 0.03, 0.5, 0.03, 0, 1.45, 0, C.BONE);

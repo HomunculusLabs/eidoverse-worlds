@@ -2173,3 +2173,50 @@ next wake once the gateway answers.
   secondary note: posts merge with ring at distance — a value/material
   candidate), (b) well night identity beyond the mouth glint (lantern hook
   candidate, judge-suggested), or (c) plaza-core re-survey on fresh evidence.
+
+### polish-314 — well wood frame (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-well` (same tuple as polish-313, empty comp bag).
+  Build source `assets/mkvillage-civic.ts` (well block) → `village_well.glb`
+  (live was c02d594e, polish-313's water build; on-disk sha == live exact).
+- Defect (queue head (a) from polish-313 close, judged fresh this tick on
+  exact live bytes, ZAI fallback disclosed — polish-285..313 class, native
+  re-judge owed): the frame (posts+crossbar) wore C.DARK lum 64 against the
+  ring's C.STONE lum 80 — aerial judge: "frame dissolves into a shadow
+  mass… cannot count two posts", frame-to-ring boundary "the single largest
+  unreadable region"; 2.5 parts not 3.
+- Change (ONE edit): canon wood ACCENTS.WOOD 0xa09832 (lum 143) on the
+  three frame boxes (posts + crossbar) — material truth, village wood canon
+  (loop #86 census). Ring/roof/water/bucket untouched.
+- Candidate `38ab2eef4aee610697cb0ac571f9928b806bcc450e115e78c487addab591f113`
+  deterministic ×2 (mtime-verified); whole-14-set rebuild: banner sibling
+  byte-identical to its live pin (edit provably confined to the well).
+  Nodes 22 / draws 21 unchanged. Pixel diffs confined to the post bands
+  (aerial 1306 px x[528..552], front 1357, right 1519, gameplay 307;
+  night-18m/top/back/left 0 px — unlit wood, no new glow).
+- Falsification: aerial after — "no longer a fused mass… three parts",
+  lit post clean against water + ring, palette natural ("brightness is not
+  the problem"); 18m gameplay — "reads as three parts — not a single dark
+  mass", two posts visible, zero new defects. Shaded-side post = the rig's
+  static sun (both posts share ONE material; in-world the rated-sky sun
+  moves) — recorded, not treated.
+- Placed via NEW dedicated placer `next-place-polish314-well.ts` (p313
+  chassis, hash gate c02d594e→38ab2eef): PLACED_VERIFIED, 1 upload + 1
+  verb, comp bag {} preserved, idempotent rerun "already live — no verbs",
+  live pin `store/38ab2eef4aee6106.glb` @ [30,0,-4.5] yaw 0 exact.
+- Served-bytes proof (struct-104 law, durable `p314-verify-served.ts`):
+  served DRACO 84947bf8… keeps wood COLOR_0 24/24 verts on all three frame
+  meshes, zero dark remnants, node translations exact, polish-313 water
+  disc + emissive intact, 0 non-finite. P314_SERVED_PASS. **Probe law
+  found**: the served re-encode assigns generic attribute ids per-mesh
+  non-deterministically and GetAttributeId can disagree with GetAttribute
+  (normals misread as colors on one mesh) — classify candidate lanes by
+  value range (colors ≫ 1, normals = units), never by semantic id alone.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD dd9d5a28
+  (dress-197 hold absorbed mid-tick and pre-classified this placement as
+  polish-314 in-flight — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-314-well-frame/` (before/ = live
+  c02d594e 13-view rig + baseline.glb; after/ = candidate).
+- Next ranked: (a) well night identity beyond the mouth glint (lantern
+  hook candidate, judge-suggested at polish-313 close), (b) plaza-core
+  re-survey on fresh evidence.
