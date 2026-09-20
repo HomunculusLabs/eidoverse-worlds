@@ -18065,3 +18065,69 @@ this tick: stable/market @372 walked fresh, inn/tower-house @371,
 forge/potter @370, hall/bunkhouse @369 the stalest standing pair; walk
 tools interior-walk-hall.ts + interior-walk-bunkhouse.ts, ls-verify
 before walks per law).
+
+sweep-373: CLEAN SWEEP, single-arrival tick (143rd consecutive
+quiet-or-classified). Tick-start HEAD 937c04db (struct-285 lawful hold);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root, ledger law
+EXACT 2371094. Census epoch A 413->414 vs the committed sweep-372 baseline
+(sha16 3700ea31abb6bafc): exactly ONE arrival nx-dress-kestr-001 @
+(57.5,-0.05137,-24) yaw -2.4 lib 941d1db792e25010, 5 motion comps
+(kestr,kestr_body,kestr_tail,kestr_wingL,kestr_wingR — THE HEAD-LOCK: head
+node carries NO comp), bbox 0.951x6.12x0.824 (wander ring r0.4 @6m + perch
+post) — tuple matches the COMMITTED fauna-65 ledger @ 1885aa7c
+line-for-line, domain-valid (fauna lane uses nx-dress-* ids), not drift.
+ZERO substantive drift on all 413 shared ids on id/pos/yaw/lib/scale/kind/
+bbox; ZERO comp-dict diffs (the compKeys flap class absent entirely this
+tick). Epoch B 20s-paced re-read 414==414, A->B drift ZERO — single
+settled epoch, no epoch correction. Overlap: SAT 376 bbox non-light / 256
+exempt-classified / 0 coverage holes, exit 3 on exactly ONE unclassified =
+R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 329th sweep since routing, NOT new, no escalation
+due (the law keys on severity-1). Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/
+0.32, nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..372 canon. The
+kestrel sits r62.2 SE — outside every tier-1/tier-2 leg (all r<20);
+fauna-65's own committed walk ALL_PASS 3/3 covers its adjacency. Tier-2
+351st cycle per the committed sweep-372 pointer: hall 8/8 ALL_PASS
+(interior-walk-hall.ts, dists 0.285/0.36/0.28/0.265/0.34/0.26/0.335/0.31)
++ bunkhouse 6/6 ALL_PASS (interior-walk-bunkhouse.ts, dists
+0.245/0.3/0.305/0.247/0.38/0.313), both tools ls-verified present BEFORE
+the walks (1704B + 1538B). Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (327th consecutive clean); sweep89-battery 28/28 PASS
+after the lawful RED->GREEN comp-bearing pin bump 60->61 (first invocation
+correctly FAILed 60-vs-61 = expected classification; added-set
+census-verified exactly [nx-dress-kestr-001], removed-set empty;
+sweep-301..370 fauna precedent chain); lights 38, carousel comp bag exact 7
++ lib 3ed80c49d16e89d8 census-verified via battery. Interlane md5 86b2936f
+stable, SWEEP-LOOP md5 a5fd4f4f stable, both read fresh. Pools drained:
+IMPROVE-PLAN md5 7fa8a224 unchanged (zero open queue rows), sweep owns no
+prefix; CITY-PLAN-V2 md5 cae6b928 unchanged — the audit-continues freeze
+banner governs via loop/plan reload. Baseline lawfully rewritten
+LIKE-FOR-LIKE from the COMMITTED bytes (/tmp/s373/baseline-rewrite.py):
+pre-write asserts green (committed sha16 3700ea31abb6bafc, arrivals
+exactly [nx-dress-kestr-001], departures [], substantive drift {}), sorted
+insert of the kestrel block at its alphabetical position, post-rewrite
+drift vs live epoch B ZERO — 414 entities / 328124B / sha16
+d32b3ce9226c9eb1; git diff exactly the arrival block + count bump (116
+insertions, 2 deletions). Probe self-catches pre-verdict, disclosed: (a)
+the battery was first invoked with bun against the .py (module-class
+error, zero checks ran) — re-invoked with python3 per its own docstring;
+(b) the walk-output parser first keyed 'legs' then int-iterated 'routes'
+(mixed-schema class, sweep-371/372 disclosure kin) — re-read the actual
+output schema (results[] with per-leg ok/dist) and re-anchored before
+recording any dist. Foreign dirt in tree (engine files client/server,
+core-paths GLB + review json, windmill overhaul scratch +
+WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype dirs,
+fauna63-*/fauna64-*/fauna65-* tools, debug bower scripts,
+next-place-fountain.ts polish-325 in-flight set, fleet shell scripts,
+review dirs) is sibling work-in-flight, untouched per the ownership law.
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero
+comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-374): inn + tower-house (352nd cycle — LRU chain re-derived from
+committed pointers this tick: hall/bunkhouse @373 walked fresh,
+stable/market @372, inn/tower-house @371 the stalest standing pair; walk
+tools interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verify
+before walks per law).
