@@ -21279,3 +21279,158 @@ showpiece — 60 irregular pentagons, achiral, no handedness owed Bill)
 and the smaller Catalans (triakis tetra/octa/icosa, tetrakis cube,
 rhombic dodeca BARRED rt-kin) are the unclaimed surface; fresh
 five-file grep before building — or Bill's verdict routing.
+
+## struct-269 (2026-09-19): R11-77 THE DELTOIDAL HEXEACONTAHEDRON —
+## build+judge tick, v1 ACCEPTED BANKED NOT PLACED (placement = struct-270 committed carry)
+
+269%3=2 build-slot tick; bank EMPTY after the struct-268 placement carry
+(dtria LIVE), refine pool empty of payable items (40+ ticks) -> build+judge
+per the struct-240..268 precedent. Gate ALL PASS real exit 0 tick-start
+(unpiped /tmp/struct269-gate.log, GATE_EXIT:0 at 6f471939 fauna-55 HEAD,
+foreign domain). Shard drained fresh (IMPROVE-PLAN md5
+7fa8a22499d8e38dbde7031e7ed337cd unchanged since struct-238, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-268 -> struct-269
+(numeric extraction, re-checked immediately before append). Native
+absent from the cron catalog all tick (tool_search fresh: terminal +
+zai-vision + repoprompt only — same disclosed cron-unpayable class as
+struct-169..268; owed board gains deltoid v1, joins the riding queue).
+
+QUEUE-HEAD CORRECTION (durable, this tick): struct-268's queue head
+named the "pentagonal hexecontahedron (rico's dual, achiral)". BOTH
+claims wrong: it is the dual of the SNUB DODECAHEDRON (not the rico) and
+is CHIRAL — two mirror forms, a Bill handedness decision under the
+struct-253/255 snub law. The snub-family duals stay HELD for Bill's call
+(coin-flip = inventing a preference). The rico's TRUE dual is THIS form.
+
+FORM SELECTION fresh seven-file grep (deltoid|pentakis|triakis|tetrakis|
+hexecontahedron): 0 real claims — the only "deltoid" hits are the
+reuleauxrotor's deltoid PATH (plane curve, different object class,
+struct-13367 notes it taken as a curve). Selected: the DELTOIDAL
+HEXEACONTAHEDRON — the dual of the standing rico (struct-257/258, E
+band az12.5 r105.5), Catalan branch member 3 (rt opened, dtria member
+2), the dual-of-freshest-parent move a THIRD time (gsd->gdodec,
+trico->dtria, rico->deltoid). ACHIRAL, machine-proven (T0b: three
+closing mirror planes x/y/z->-n; no handedness owed Bill).
+
+CONCEPT: TWO PARENTS' CHILD, READ THROUGH THE LOOKING GLASS. The rico
+told two parents in one skin (62 faces, both element censuses F<->V
+mirrored, machine-proven struct-257 T6b); the polar reciprocal about
+the rico's midsphere (rho 4.352501799, edge-2 frame) turns every face
+into a POINT (12 pent-rank OUTERMOST — the dodeca parent's faces,
+radii 4.587940/4.472136/4.391307, depth ranking flips) and every one
+of the 60 rico vertices (figure 3.4.5.4) into a KITE sail — one pent
+head + two sq sides + one tri tail, every sail kissing ONE insphere at
+exactly rho^2/R (the Catalan tangent property). TWO honest edge classes
+only (long pent-sq 60, short sq-tri 60; L 1.809608/1.175570 scaled) —
+the kite told globally. Presentation: PENT-RANK POINT-DOWN 5-fold, the
+rico's own seated frame INHERITED (pentagon-down + twist-snap — no
+re-seat; lower pentad snapped dead-on az 0, upper interleaved 36.00deg,
+inversion-paired, all measured). STONE: all 60 kite sails (ONE face
+family = ONE sail material) + the SIXTY-sided dais (one side per face).
+IRON: all 120 seam bonds + crown finial stem 1.30m. Night: TWELVE brass
+beads at the pent-rank points (the rico's OWN bead census told again —
+its twelve lit pentagons become twelve lit points): 1 crown FINIAL +
+10 waist pentads + 1 pressed foot buried (tico's-twelfth idiom); the 30
+sq + 20 tri points stay dark.
+
+PARAMETRIZATION (exact, closed-form): rico rebuilt verbatim from
+struct-257's Wikipedia even-permutation families (R 4.465901019 ==
+sqrt(8phi+7) exact); depths MEASURED per family (pent 4.129146 / sq
+4.236068 / tri 4.314040 — the sq depth is exactly sqrt5, the closed
+form, unforced); dual v_u = (rho^2/h_u).n_u; SCALE 0.730175241 to
+height 6.7 (family ladder rico 6.3 -> dtria 6.6 -> deltoid 6.7); dais
+R3.45 APOTHEM-FIRST (apothem 3.445 >= reach+rod 3.325); envelope
+6.90x8.47x6.90.
+
+PROBE (struct269-probe-deltoid.ts, tracked) ALL PASS real exit 0 + RED
+control exit 1 (5 law FAILs on displaced dual vertex: T2/T5/T6/T7/T8):
+T0 census 62/120/60 + midsphere spread 8.9e-16 + three radii classes
+exact; T0b ACHIRALITY (some improper map closes both sets — winners
+[x->-x, y->-y, z->-z]); T1 Euler; T2 kite census (angle multiset
+IDENTICAL across all 60 faces: pent 67.7830 / sq 86.9742 / tri
+118.2687 deg MEASURED; sq-pair equal within every face — the kite
+mirror law; sides 2 long + 2 short; sum 2pi); T3 degrees 5/4/3 by rank
+(tri-rank = the SHARPEST spikes); T4 manifold; T5 exactly two edge
+classes 60+60 zero same-rank; T6 THE POLAR RECIPROCAL (all 60 kites
+kiss ONE insphere, worst dev 8.9e-4 vs depth 3.097390256 scaled; every
+face normal EXACTLY one rico vertex direction, bijection 60/60); T7
+seat (foot pent point ON the axis AT dais top 0.300000 AND the LOWEST
+VERTEX OVERALL — margin 0.5722m over the lowest sq-rank vertex; 72-deg
+symmetry 0 misses; central inversion exact; height 6.700000; reach+rod
+3.325 <= apothem 3.445; pentads 5+5 level/radii exact; stem solved
+against the WORST occluder sight 6.931, finial clear 1.539 >= 0.225
+law); T8 immersion worst poke -0.024 (fully inside).
+
+THREE probe self-catches RED-first (zero wasted builds): (a) the seated
+double-scale y bug (struct-267's own class (b)) caught re-reading the
+chassis before first run; (b) a dead nonsense line in buildFace removed
+pre-run; (c) the FIRST T0b asserted the x<->y mirror — an ARBITRARY
+improper map that is NOT a symmetry of the standard orientation; the
+law is "SOME improper map closes the set", now tested over all six
+candidates — first run FAILED T0b red-honestly and the law was
+corrected, not the data.
+
+BUILD (agents/arthur/assets/mkv3-deltoid.ts, staged -f): root identity
+(struct-188); texMat lanes deltoid_stone/deltoid_iron (struct-38); bead
+emissive 0x9a7030 @ 1.4 in-GLB (family build-time law); 182 pre-merge
+meshes + 1 KEEP glow group glow_deltoid_12; envelope law green in-build
+== probe contract. v1 deterministic x3 runs byte-identical sha256
+b434f496b1a9c5758d3081d257f6bd725c920c68c4a87f434b546ad3d3994764
+(mtime-verified fresh).
+
+DECODE (struct269-decode-deltoid.ts, tracked) 8/8 ALL PASS real exit 0:
+D1 census 3 nodes (deltoid_iron + deltoid_stone + glow_deltoid_12); D2
+60-gon dais TRUE box +/-3.450 corners present, sole min y -0.000000;
+D3 9052 iron verts worst 60.00mm (<= 64) over the 120 exact segments +
+the NAMED finial stem, coverage 120/120; D4 2138 plate verts worst
+58mm (<= 62 shell); D5 beads 12/12 pent-rank clusters, emissive, sole
+night; D6 sole at grade + foot bead pressed; D7 envelope drift 0.00mm;
+D8 texMats 2/2. RED control (foreign bytes village_rico3.glb — the
+parent's own build): D1 census FAIL clean-stop exit 1 — RED_EXIT:1.
+
+RENDERS: struct269-render-deltoid.ts (tracked chassis, struct267
+lineage) 9 frames on the EXACT pinned bytes — bounds
+min[-3.450, -0.000, -3.450] max[3.450, 8.470, 3.450] == contract;
+reviews/struct269-deltoid/ (9 frames, ignored — sha pin above is the
+durable record).
+
+JUDGMENT v1 (ZAI FALLBACK — native absent from cron catalog all tick,
+tool_search fresh; disclosed; rides the owed board as deltoid v1): day
+gameplay 18m 5/5 PASS (identity 'unmistakably a deliberate mathematical
+sculpture'; point-down convergence reads; attached dais+ground shadow;
+iron/stone/brass three-way separation; zero defects). Night 3/3 PASS (7
+warm points resolved — within the family 6-9 occlusion band, decode D5
+proves 12/12; tight hard-edged, zero bloom; silhouette holds, lower-
+hemisphere contrast thin = the family-wide night margin). Closeface 4/5
+(kite read PASS incl. long/short pair; joinery shadow-gap uniform;
+coverage continuous rim-to-rim; beads seated at junctions; the ONE FAIL
+is MY criterion artifact — 'dais facet edges legible' is not the family
+dais law, which is theme-number + apothem-first; a 60-gon at R3.45 has
+~5mm sagitta and no fleet sibling shows facets either (rico 62-gon,
+dtria 120-gon 'effectively the R-circle'); decode D2 proves the 60
+facets exist geometrically). 12/13 real criteria PASS, zero real
+defects. Cosmetic nits disclosed (family-wide class): finial bead flat
+in DAY render (emissive is a night contract — same note on every fleet
+member); panel speckle heavy at close range; mid-height bead placement
+(the lower pentad — geometry-decided); uniform rod gauge.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED; placement = struct-270
+committed carry (fresh census scan, under-served octant, 8m NN +
+per-district soft cap 6, 60-gon-exact polygon SAT struct-19/260 class,
+oblique-yaw struct-104 band, terrain preflight over the TRUE rotated
+60-gon, hash-gated plain spawn nx-struct-deltoid, comp {}, ground
+circuit walk). Folly class. Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
+
+Files: struct269-probe-deltoid.ts + struct269-decode-deltoid.ts +
+struct269-render-deltoid.ts + assets/mkv3-deltoid.ts (NEW, tracked; mk
+staged -f per the ignored-parent law) + STRUCTURES-PLAN.md (this block)
++ IMPROVEMENTS.md (one append struct-269, D+0 E+0).
+
+Next queue head: struct-270 placement tick (the committed carry above).
+Then R11-78 build sweep re-derives from the form ledger: the small
+Catalans (triakis tetra/octa/icosa, tetrakis cube — simple stackers)
+remain unclaimed and achiral; the pentagonal hexecontahedron + snub
+cube/dodeca stay HELD for Bill's handedness call (coin-flip = inventing
+a preference); rhombic dodeca BARRED rt-kin; fresh five-file grep
+before building — or Bill's verdict routing.
