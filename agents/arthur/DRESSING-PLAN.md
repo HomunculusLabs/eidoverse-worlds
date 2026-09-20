@@ -1,6 +1,69 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-209 — lawful HOLD (98th post-close, NO PLACEMENT) — INTERRUPTED-SIBLING RECOVERY
+
+- **Duplicate-window event, disclosed once (duplicate same-lane instance
+  class)**: a second dress cron window authored a dress-209 probe at 04:59
+  (HOLD_VERIFY_PASS on a 409-ent epoch) and DIED before ledger/plan/commit
+  — ledger grep `dress-209` = 0 and plan top block dress-208 at this
+  tick's start (struct-9 law: interrupted pre-bookkeeping window). This
+  tick is the delivering wakeup: its capture pre-dated struct-276 +
+  polish-321, so the probe was REWRITTEN with current-epoch expectations
+  (all from source, dress-172 law) and re-run fresh. Recommendation stands:
+  run only ONE dress cron instance (or convert the closed hold to a no-LLM
+  monitor) — two windows risk duplicate tags, and this tick's recovery is
+  the workaround, not the design.
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 71b05adc (sweep-366
+  correction-of-record); interlane md5 86b2936f pin-exact. Fresh census
+  **408→410 = TWO arrivals + ONE classified net move, all classified at
+  source before expectation use (dress-172 law), tuple-exact vs siblings'
+  OWN sources read verbatim this tick**:
+  `nx-dress-woodp-001` (60.6, −0.0461, −30) yaw −2.356194490192345 lib
+  5b7e177e282446f9 maxdelta 0.0 — fauna-59 (line 6824 + placer line 27),
+  DRESS-PREFIXED but FAUNA-OWNED (set now 27 with woodp); host
+  `nx-dress-se-snagdead-001` 7ac83203 frame-copy co-location re-verified
+  EXACT 0.0/0.0 (artwalk-39 law) — NOT dress intake;
+  `nx-struct-trit` (60.225526, −0.032430, −86.010965) yaw 5.1487212933832724
+  lib c46f5a580e1da32b maxdelta 0.0 — struct-276 (line 6834, triakis
+  tetrahedron NW-N sixth form), struct domain — NOT dress intake;
+  `nx-dress-fountain` lib flip 72f07c2a→d44315f6 net (polish-320 line 6822
+  + polish-321 line 6832), tuple-identical, absolute tuple [12.5,0,4.0]
+  yaw −0.7853981633974483 EXACT — polish domain (legacy CORE dress
+  entity), classified not routed. Domain strongest-form: 77 prior dress
+  ids lib+pose EXACT-stable + 1 classified flip = all 78 accounted, zero
+  unstable/departures; live dress 79 = 29 fleet (NE 6 / NW 9 / SE 7 /
+  SW 7) + 27 fauna + 23 non-fleet (probe `/tmp/dress-hold-verify-209.py`
+  HOLD_VERIFY_PASS exit 0, browser UA, capture saved
+  `/tmp/dress209-census.json`).
+- **Sibling commits since dress-208**: struct-275 (ebf68e09, banked not
+  placed), fauna-59 (0e7de49c, woodp arrival), polish-320 (dc84be3f,
+  fountain v6), sweep-365 (aec71691, zero-mutation), polish-321 (0c55d028,
+  fountain v7), struct-276 (83fef1a8, trit arrival), sweep-366 ×2
+  (43587349 + 71b05adc correction-of-record, zero-mutation). All named,
+  all foreign domain.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8 — worst maxdelta 0.0000000. Magpie host
+  `nx-town-inn` 861225bb + pheas/woodp anchor
+  `nx-dress-se-snagdead-001` 7ac83203 both pose-stable (artwalk-39 law).
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; probe grep at source carries: zero STATE-OPEN rows,
+  zero OPEN `nx-dress-` rows, no round-4/5 section) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-208 — lawful HOLD (97th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
