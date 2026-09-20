@@ -1,11 +1,11 @@
-// next-place-hearth.ts — polish lane (331): re-place nx-hearth with the
-// re-authored split-log benches (polish-331 build). Captures the live comp bag
-// before spawn, re-applies every key after (comp-wipe law) — with ONE authored
-// amendment: the sockets' bench seat heights advance top+0.05 0.32 -> 0.25 to
-// track the polish-331 re-grounded benches (the captured bag would otherwise
-// replay the stale stub-era height). Verifies tuple + keys, idempotent rerun
-// prints zero verbs. Verb choreography copied from the proven
-// next-place-carousel.ts (snapshot-gated paced sender, `comp` verb shape).
+// next-place-hearth.ts — polish lane (332): re-place nx-hearth with the
+// rebuilt firewood stack (polish-332 build). Captures the live comp bag
+// before spawn, re-applies every key after (comp-wipe law); the sockets
+// amendment (bench seat y 0.25, polish-331) is retained — idempotent on
+// the live bag which already carries 0.25. Verifies tuple + keys,
+// idempotent rerun prints zero verbs. Verb choreography copied from the
+// proven next-place-carousel.ts (snapshot-gated paced sender, `comp` verb
+// shape).
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -14,7 +14,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-hearth";
 const FILE = `${ROOT}/agents/arthur/assets/village_plaza3.glb`;
-const REVIEWED_SHA = "74f16c88b1e9c7392580997c8329c3125ff0160d507e9a91848f7ba93d70fac7";
+const REVIEWED_SHA = "ad165b6ee4f0d0e45337f74596ed5c2b27191e01ca7d1af45a24c8f561519b01";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [0, 0, 0] as [number, number, number], yaw: 0, scale: 1 };
 const EXPECTED_KEYS = ["motion:pz_kettle", "motion:well_", "particles", "sockets"].sort();
@@ -65,7 +65,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "the plaza hearth — polish-331 split-log benches");
+  u.searchParams.set("name", "the plaza hearth — polish-332 firewood stack");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {

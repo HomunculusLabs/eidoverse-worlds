@@ -240,14 +240,58 @@ for (let kl = 0; kl < 3; kl++) {
     kGrp.add(link);
 }
 g.add(kGrp);
-// firewood stacked between two hearth stones (SW side, off the seat diagonals)
-for (let fw = 0; fw < 5; fw++) {
-    const log = new THREE.Mesh(new THREE.CylinderGeometry(0.055, 0.055, 0.55, 5), mat(0x6c5426, 0.95, 0));
-    log.name = `plog_${fw}`;
-    log.rotation.z = Math.PI / 2;
-    const a = ((202.5 + (fw % 2) * 11) * Math.PI) / 180;
-    log.position.set(Math.cos(a) * 1.45, 0.06 + Math.floor(fw / 2) * 0.12, Math.sin(a) * 1.45 + (fw % 2) * 0.08);
-    g.add(log);
+// polish-332 FIREWOOD STACK: the old 5 loose logs at r 1.45 INSIDE the ring
+// shared the bench bark color and read as scattered debris merging with the
+// seats (judge: only 2 of 4 benches parsed at 18m; "strongest single fix =
+// move the pile beside the ring"). Re-authored as ONE deliberate stack at
+// 202.5deg (the wide SW arc between benches 1 and 2, off both seat
+// diagonals): 6 logs in 3 crisscrossed courses (4+2), aligned axis per
+// course, sawn cut faces outward on the SW-facing ends, raised 0.30m on a
+// rustic split-log cradle so the pile reads as fuel STORE, not ground
+// litter. Value-split per the same judge note: bark one step lighter than
+// the bench bark (0x6c5426 -> 0x7a6234; the merge was albedo identity) and
+// end-grain popped 2 steps (0x9e8e46 -> 0xb59d55). Grounded at grade,
+// outside the flag ring (r 2.60 inner edge; pile center r 3.60, half-span
+// 0.55 tangential -> nearest flag 0.45m clear).
+const PILA = (202.5 * Math.PI) / 180;
+const PC = { x: Math.cos(PILA) * 3.75, z: Math.sin(PILA) * 3.75 }; // pile center
+const TAN = { x: -Math.sin(PILA), z: Math.cos(PILA) }; // tangential unit at PILA
+// cradle: two split-log bearers, long axis TANGENTIAL (perpendicular to
+// the radial courses above them)
+for (let cr = -1; cr <= 1; cr += 2) {
+    const bearer = new THREE.Mesh(new THREE.CylinderGeometry(0.075, 0.075, 0.8, 7), mat(0x7a6234, 0.95, 0));
+    bearer.name = `plog_cr${cr > 0 ? "p" : "m"}`;
+    bearer.rotation.z = Math.PI / 2;
+    bearer.rotation.y = -PILA + Math.PI / 2; // local Y -> tangential
+    bearer.scale.set(0.6, 1, 1);
+    bearer.position.set(PC.x + TAN.x * cr * 0.28, 0.047, PC.z + TAN.z * cr * 0.28);
+    g.add(bearer);
+}
+// courses: bottom 4 parallel RADIAL logs (ends SW-outward), top 2 skewed
+// ~20deg — the crisscross. Radial extent 3.40..4.10 (flags end 3.30).
+const COURSE_Y = [0.155, 0.29];
+const COURSE_N = [4, 2];
+const COURSE_LEN = [0.68, 0.5];
+const COURSE_SKEW = [0, 0.35];
+for (let c = 0; c < 2; c++) {
+    for (let k = 0; k < COURSE_N[c]; k++) {
+        const log = new THREE.Mesh(new THREE.CylinderGeometry(0.062, 0.062, COURSE_LEN[c], 7), mat(0x7a6234, 0.95, 0));
+        log.name = `plog_${c}${k}`;
+        log.rotation.z = Math.PI / 2;
+        log.rotation.y = -PILA + COURSE_SKEW[c] * (k === 0 ? 1 : -1); // local Y -> radial (inward)
+        const tanOff = (c === 0 ? (k - 1.5) * 0.135 : (k - 0.5) * 0.16) + (k % 2) * 0.012;
+        log.position.set(PC.x + TAN.x * tanOff, COURSE_Y[c] + (k % 2) * 0.008, PC.z + TAN.z * tanOff);
+        g.add(log);
+        // sawn end-grain disc on the OUTER (SW) end: after RZ(PI/2)*RY, the
+        // log's length axis is local Y (inward) — slide -Y to go outward.
+        const face = new THREE.Mesh(new THREE.CylinderGeometry(0.052, 0.052, 0.022, 7), mat(0xb59d55, 0.85, 0));
+        face.name = `pface_${c}${k}`;
+        face.rotation.z = Math.PI / 2;
+        face.rotation.y = log.rotation.y;
+        face.position.copy(log.position);
+        face.translateY(-(COURSE_LEN[c] / 2 + 0.012));
+        g.add(face);
+    }
 }
 
 // THE WELL — stone drum, twin posts, crossbar, rope + bucket, at plaza E

@@ -3169,3 +3169,54 @@ next wake once the gateway answers.
   separation from bench (judge: strongest single fix — move pile
   beside the ring or value-split), or (c) plaza-core re-survey on
   fresh evidence.
+
+### polish-332 — hearth firewood stack re-sited (ACCEPTED, LIVE)
+
+- Subject: `nx-hearth` (village origin [0,0,0], yaw 0, 4-key comp bag,
+  census-fresh; live was 74f16c88, polish-331's benches build; on-disk ==
+  live exact at survey, before-bytes captured FIRST).
+- Defect (queue head from polish-331 close, confirmed fresh by day judge on
+  exact live bytes; ZAI fallback, native re-judge owed — polish-285..331
+  class): the 5 loose logs at r 1.45 INSIDE the ring shared the bench bark
+  color and read as scattered debris merging with the seats — only 2-3 of 4
+  benches parsed at 18m; the big log mass read as clutter ~0.5m from the
+  focal fire. Judge's own #1 fix: move the pile beside the ring + value-split.
+- Change (ONE intervention, mkv3-plaza.ts firewood block): deliberate stack
+  at 202.5deg OUTSIDE the ring (center r 3.75, in the deliberate 18deg flag
+  gap): 2 split-log bearers + 6 logs in 2 radial courses (4+2, top skewed
+  20deg — crisscross), sawn cut faces outward, bark one step lighter
+  (0x6c5426 -> 0x7a6234) + end-grain popped 2 steps (0x9e8e46 -> 0xb59d55).
+  Zero wood remains inside r 3.0 (decode-proven).
+- Candidate `ad165b6ee4f0d0e45337f74596ed5c2b27191e01ca7d1af45a24c8f561519b01`
+  deterministic x2; nodes 19 / meshes 17 / materials 6 unchanged (merges
+  into 2 COLOR_0 buckets pz3_6/pz3_7); NaN scan 0/3544. Decode: bark r
+  3.221..4.122 y -0.009..0.358 theta 192..213; old debris zone now holds
+  only flags (255,255,255 texture-white) + stone.
+- Falsification (ZAI fallback disclosed): pile-day SHIP (deliberate stack
+  on bearers, organized courses, cut faces visible; judge's one conditional
+  — peak-vs-flag contact — resolves CLEAN by decode: wood band r 3.41..4.10
+  vs flags outer 3.30, disjoint; 2D contact was projection of flags behind
+  the stack); pile-night PASS (grounded store, fire/kettle still brightest,
+  zero bloom/bleed/float); gameplay-18m SHIP — bench legibility 3/4 -> 4/4,
+  stack reads as outside-the-ring fuel store, hierarchy unchanged. Pixel
+  diffs confined to the SW wood zones in all 9 views (gameplay 993 px band
+  y[392..413] = debris removal + distant stack; zero collateral).
+- Placed via updated `next-place-hearth.ts` (pins 74f16c88 -> ad165b6e):
+  PLACED_VERIFIED, 1 upload + 5 verbs, 4-key comp bag replayed verbatim
+  (sockets amendment retained, idempotent on the live 0.25 bag), idempotent
+  rerun zero verbs, live census pin `store/ad165b6ee4f0d0e4.glb` @ [0,0,0]
+  yaw 0 exact.
+- Served-bytes proof (struct-104 law, durable probe `p332-verify-served.ts`,
+  p331 DRACO chassis): served 7d862f41… P332_SERVED_PASS — bark bucket r
+  3.410..4.099 theta 192..213 (nothing inside 2.95), cut faces r 3.974..4.122
+  at the outer ends, bench/grain/potIron regressions exact, 0 non-finite.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 1fb3b028
+  (dress-226 absorbed mid-tick — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-332-hearth-woodpile/` (before/ =
+  live baseline GLB + 10-view rig incl. dedicated pile views; after/ =
+  candidate + rig; probes: /tmp/p332-decode3.ts chunk-walk audit,
+  p332-verify-served.ts durable).
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  polish notes — stack contact-shadow under the bearers (18m judge "placed
+  on" note, collie-law candidate), optional bark-vs-bench tint widening
+  (recorded, one intervention per tick).
