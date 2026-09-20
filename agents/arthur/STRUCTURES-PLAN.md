@@ -21182,3 +21182,100 @@ irregular pentagons, Bill-handedness-free) and the smaller Catalans
 (triakis tetra/octa/icosa, tetrakis cube, rhombic dodeca BARRED rt-kin)
 are the unclaimed surface; fresh five-file grep before building — or
 Bill's verdict routing.
+
+## struct-268 (2026-09-19): R11-76 placement carry — THE DISDYAKIS
+## TRIACONTAHEDRON LIVE as nx-struct-dtria (N-E band fifth form)
+
+The struct-267 committed carry executed. Bank re-verified byte-identical
+pre-mutation (on-disk sha256 20405927baf5f741... == struct-267 v1 pin;
+no rebuild — struct-262/264 precedent). Gate ALL PASS real exit 0 at
+tick start (7b82a1fb polish-316, foreign domain). 268%3=1 build-slot
+tick consumed by the judge-debt cadence law: the committed placement
+outranks a new form (build+judge one tick, place next).
+
+SEAT (struct268-scan-dtria, fresh 402-entity census, SELFTEST
+RED->GREEN PASS: exact-SAT fired at nx-craft-statuary-0026's own center
+reported -9.170, guaranteed overlap refused; coverage exact 1 / radial
+303 / disc 2 / exempt 4): octant audit places N-E az315-360 as the
+under-served band (4 forms standing — vesicawindow az357.5 r70.1, rt
+az359.5 r87.5, toct az348.5 r66.0, trcubo az349.0 r104.5; + dtria -> 5,
+soft cap 6, NO exceedance). The raw scan's innermost lawful seats
+(r78.5-81 az348-358, gap 1.41-1.82) were REJECTED by the margin filter
+(gap >= 2.2, struct-248..266 real-margin law). Selected: az327.5 r89.5
+(75.483534, -48.088315) — innermost margin+constellation seat, gap 2.27
+vs nx-wild-cairn-0047 (radial). NN 23.69 to nx-struct-beacon (law 8;
+composed with toct@36.6 + trcubo@39.1 — the N-E rt-family shelf: the
+rt's richer sibling, every one of its 30 rhombi divided into four,
+standing beside the cutters).
+
+YAW LAW (procession convention, struct-217..266): local az alpha ->
+world az (alpha - yaw). Judged reading face local az90 at anti-travel
+az147.5 + 30deg east lean (struct-104 oblique band) -> yaw_deg = -120
+- 327.5 = -447.5 -> 272.50deg -> YAW = 4.7560222 rad. DISCLOSED: the
+dtria is a 5-FOLD point-down seat (probe T7: foot + crown on-axis,
+lower pentad snapped az 0, upper offset 36-deg, pentads
+inversion-paired) and the oblique-lean band puts the yaw 272.5 mod 72
+= 56.5deg off the 72deg lattice — the exact-mod bonus does NOT apply;
+the panelled-solid family reads at any azimuth (trico/SSD/gsd/gdodec/
+gicosa precedent) and the judged framing is preserved.
+
+TERRAIN (struct268-terrain-dtria.ts, this tick): 241pt over the TRUE
+rotated 120-gon (center + 120 verts + 120 edge-mids — the family's 2N+1
+law), spread 12.4mm, PY = lowest = -0.023725 (the dais-sole-at-grade
+build absorbs the spread).
+
+SAT LAW (N=120 class): the 120-gon dais R3.25 CORNERS-ON-AXES (ROT=0
+class, decode D2: corners present, TRUE box +/-3.250; apothem 3.249 —
+R minus apothem 1.1mm, the N=120 polygon is effectively the R-circle)
+is the footprint; build envelope 6.50x8.37x6.50 — the solid NEVER
+overhangs (probe T8 immersion: fully inside, corner tuck 0.0402m), so
+the 120-gon IS the true ground footprint. Exact convex-polygon SAT
+(edge-normal axes of both polys, max-gap law) replaces the square-bbox
+proxy — struct-19/260 disc law class.
+
+PLACEMENT: next-place-struct268.ts hash-gated (local sha re-verified
+pre-place; fresh-spawn contract: entity ABSENT confirmed at 402), NN
+floor 23.69 + exact-SAT worst 2.27 re-proven against the FRESH 402-set
+pre-verb [exact 2 radial 302 disc 2 exempt 4] + in-placer RED control
+PASS (exact-SAT at nx-craft-statuary-0026's own center -> gap -9.170),
+upload store/20405927baf5f741.glb (1 upload, shared budget), plain
+spawn 1 verb paced 1200ms, PLACED_VERIFIED pos [75.483534, -0.023725,
+-48.088315] yaw 4.756022211684548 lib store/20405927baf5f741.glb
+comp {} census 402->403; idempotent rerun ALREADY_SEATED 0 verbs.
+Ground circuit walk 7/7 CORE_ALL_PASS maxArrival 0.368m (two-way
+az327.5 arrival-line approach + reading-face vantage at 7m on the
+az177.5 face normal + full CW standoff circuit at 8m — no phantom
+collider; folly by presentation, the PANELLED solid means the walk
+stays outside the 3.25m dais; walk standoff 8m applies directly, edge
+mid clear 4.75m — family disposition). Walk stdout carries the known
+distant support-seam diagnostics class (temple/dress entities, foreign
+lanes, abstentions only). One placer self-catch pre-run: the
+RED-control corner list carried the copy error ([-rhz,-rhz]) — the
+exact struct-266 self-catch class, this time caught by inspection
+BEFORE execution, fixed to [-rhx,-rhz], no live effect.
+
+Bill eye-check pointer: on the N-E reach past the beacon's quarter —
+THE DISDYAKIS TRIACONTAHEDRON, the knife's work turned inside-out. The
+trico told the dodeca's F+E+V census by cutting; its dual reads the
+SAME census turned inside-out: every face a point (12 shallow
+crown-points + 30 mid + 20 deep), every one of the 120 wedding corners
+a scalene sail, every sail kissing ONE insphere. Point-down 5-fold at
+6.6m on a 120-sided dais — one side per face, the theme number. Each
+of the rt's 30 rhombi divided into four, standing beside the rt itself
+and the toct/trcubo cutters two fields over. After dark, twelve warm
+brass beads at the dec-rank crown-points — the grounded one
+half-proud in the dais top.
+
+Files: struct268-scan-dtria.ts + struct268-terrain-dtria.ts +
+struct268-walk-dtria.ts + next-place-struct268.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-268, D+0 E+1). One upload, one verb. Zero pushes.
+
+Next queue head: struct-269 build+judge tick (R11-77 build sweep —
+renumbered: struct-267's prose called this next sweep "R11-76" but the
+placement carry took R11-76, per the struct-260/262/264/266 numbering
+pattern): pentagonal hexecontahedron (rico's dual, the Catalan branch's
+showpiece — 60 irregular pentagons, achiral, no handedness owed Bill)
+and the smaller Catalans (triakis tetra/octa/icosa, tetrakis cube,
+rhombic dodeca BARRED rt-kin) are the unclaimed surface; fresh
+five-file grep before building — or Bill's verdict routing.
