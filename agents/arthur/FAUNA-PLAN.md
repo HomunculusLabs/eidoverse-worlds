@@ -802,8 +802,45 @@ domain is commons-next `nx-dress-*` fauna only.
 38. **[CLOSED fauna-59, 2026-09-20] great spotted woodpecker — proposed
     fauna-58, BUILT + SEATED fauna-59 (2026-09-20).** ONE entity
     `nx-dress-woodp-001` at the snag's frame-copy tuple. Full record
-    below. Queue: EMPTY — next tick proposes the next species per
-    domain law (homestead language first).
+    below. Queue: EMPTY — next tick proposes the next species per domain
+    law (homestead language first).
+39. **[OPEN — fauna-60 proposal, 2026-09-20] white stork — new species
+    (village-postcard tier).** Proposed `nx-dress-stork-001`
+    (census-grounded: ZERO stork/ciconiiform fauna in the 409-entity
+    commons-next census this tick; sole regex hit = artwalk
+    "four-wind-crown" substring, non-fauna — magpie-proposal class).
+    Village logic: the far-NW corner is the village's water-machinery
+    corner — screwwell (−88,0) + millrace (−76.7,6.7) feeding the windmill
+    (the grain chain's head, sparrows at its door fauna-48, kingfisher on
+    the race fauna-50) — and the white stork is THE European village bird:
+    the stork walking the millrace channel and standing sentinel at the
+    well is the classic village postcard, a read no standing species
+    carries. The fleet's bird families gain their missing CICONIIFORMES,
+    and the village gains its TALLEST bird (standing ~1.0–1.15m — taller
+    than the heron; TRUE-SIZE authored directly, carries 18m natively, no
+    bake expected). Species contract: stork PAIR — sentinel_a in THE
+    STANDING-ON-ONE-LEG preen stance (upright, one red leg folded, the
+    posture marker no other fleet bird has) + prober_b head-down probing
+    the channel margin (the walk-and-stab feeding read); white body
+    0xf2ede0 (magpie-white family) + THE BLACK TRAILING-EDGE WING BAND
+    down the folded back (the 18m distance signature: white body, black
+    inner-wing band, the two-tone read) + THE LONG RED BILL 0xc23b22
+    (straight, thick-based, decurved tip hint — the encounter marker) +
+    red-pink legs + dark eye-line + loose neck crest feathers at rest.
+    Motion contract: 2 breathing bobs + sentinel head-scan Y + one-leg
+    preen-settle + prober probe-peck X (phases staggered per individual,
+    epoch t0). Anchor contract: stork/stork_head/stork_tail/stork_bill
+    (KEEP `stork` — collision-free prefix, verify vs all mkv3 sources +
+    gitignored assets at build tick). Siting: millrace-channel-margin
+    zone between the race and the screwwell on the S/SE reader side
+    (village-facing), GROUND seat class; exact tuple owed to the build
+    tick (25cm-grid seat sweep + live heightAt + live SAT vs screwwell
+    OBB, millrace, trico, temple-terrace-0035, moonmoth, kfish) on the
+    plaza-facing reader side; kingfisher co-resident precedent (fauna-50
+    den-mate class) noted for SAT. Provenance: heron wader chassis
+    (long-leg water-margin stance + leg anatomy), magpie white-values +
+    dark-hole family, robin/bird TRUE-SIZE law, kingfisher water-margin
+    seat discipline. Proposal only — build fauna-61.
 
 ## Per-species rebuild records
 
