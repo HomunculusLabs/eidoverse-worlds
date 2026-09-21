@@ -1999,3 +1999,20 @@ correct chassis; box corners under affine stay exact).
     + tail decode-gate law (applied to the snout), carp surface-event
     law (inverted — visibility by construction), wrabbit/hog garden-edge
     seat discipline. Proposal only — build fauna-83.
+
+    **[EXECUTED — fauna-83, 2026-09-21]** BUILT+SEATED as row contracted.
+    v7 sha 31717975 (6 rounds: v4 rim-ring → v5 heap → v5.2 half-size G6
+    catch → v6 compact-heap proportion law → v7 snout-relax/clods/ridge;
+    plus the round-3 YAW CATCH — every judge failure until then was the
+    RUMP facing the reader; seat flipped 2.2004 → 2.2004−π so the nose
+    faces the N/NW approach). Final tuple (-24.5, 0.01447, 26.5) yaw
+    -0.9412 — the plan's first-choice W/SW band FAILED the 1.4m law
+    (fauna83-seat-sweep.ts: 27 lawful seats all in the N/NW margin;
+    best in-band 1.400 exact vs cottage — the dig line runs along the
+    margin, the mole noses the reader). Decode GREEN+RED (heap 0.090
+    crest 3 buckets, emerge +27.4mm, snout pride +28.8mm, hands z-flank,
+    dig span 0.559). Judge round-6 PASS 5/5 at encounter 2.6m fov14 —
+    ZAI glm-4.6v FALLBACK (native down in this cron window; NATIVE
+    RE-JUDGE OWED at the next native-capable window). 3 slow-mole bob
+    comps (5.2/8.5/2.8s) live; PLACED_VERIFIED idempotent; census
+    422→423. Closed as built.
