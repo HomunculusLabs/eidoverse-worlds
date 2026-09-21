@@ -10,8 +10,11 @@
   Plan is source of truth.
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
   real exit 0 FIRST at tick-start HEAD 64ee1b9a (sweep-385, foreign
-  domain), HEAD unchanged through tick close — no epoch re-run due;
-  interlane md5 86b2936f pin-exact. Fresh census **418→419 = ONE
+  domain); EPOCH CORRECTION (dress-229v): fauna-76 (6eacba92, badger
+  PROPOSAL — zero world mutation by its own entry, consistent with this
+  tick's 419 census) landed mid-tick beneath the bookkeeping, so HEAD
+  DID advance before close; gate RE-RUN ALL PASS real exit 0 at final
+  HEAD fd787f79. Interlane md5 86b2936f pin-exact. Fresh census **418→419 = ONE
   arrival + ZERO moves + ZERO departures, the arrival classified at
   source before expectation use (dress-172 law), tuple+lib+comp EXACT
   vs the sibling's OWN placer read verbatim this tick**:
@@ -39,8 +42,9 @@
   its own entry), sweep-385 (64ee1b9a, zero-mutation CLEAN SWEEP —
   classified the carp arrival + corroborated the polish-333 hearth flip,
   battery pin bump 65→66 added-set exactly [nx-dress-carp-001], baseline
-  rewritten 419 ents 296216e2 — HEAD at tick start, unchanged through
-  tick close). All named, all foreign domain. Foreign-lane dirt in tree
+  rewritten 419 ents 296216e2 — HEAD at tick start), fauna-76 (6eacba92,
+  badger proposal — zero world mutation, landed mid-tick beneath the
+  dress-229 bookkeeping). All named, all foreign domain. Foreign-lane dirt in tree
   (engine files client/server, core-paths GLB + review json,
   WINDMILL-OVERHAUL.md, cabin-overhaul, fauna probes, debug bower
   scripts, fleet shells) — none dress-owned, left untouched.
