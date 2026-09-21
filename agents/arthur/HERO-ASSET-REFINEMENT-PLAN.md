@@ -3220,3 +3220,58 @@ next wake once the gateway answers.
   polish notes — stack contact-shadow under the bearers (18m judge "placed
   on" note, collie-law candidate), optional bark-vs-bench tint widening
   (recorded, one intervention per tick).
+
+### polish-333 — hearth pile contact shadow (ACCEPTED, LIVE)
+
+- Subject: `nx-hearth` (village origin [0,0,0], yaw 0, 4-key comp bag,
+  census-fresh; live was ad165b6e, polish-332's firewood stack build;
+  on-disk == live exact at survey, before-bytes captured FIRST).
+- Defect (queue head from polish-332 close, confirmed fresh by day+night
+  judges on exact live bytes; ZAI fallback, native re-judge owed —
+  polish-285..332 class): "zero contact evidence where the bearers meet
+  the grass" (day 6/10, night 3/10 — "placed ON the scene rather than IN
+  it"). Engine point-lights never cast (lightrig.js), so a baked anchor is
+  the only cure.
+- Change (ONE intervention, mkv3-plaza.ts): two-step collie-law contact
+  shadow under the pile — penumbra + core discs (24-gon, rotated YXZ to
+  the radial axis at 202.5deg). Four measured judge rounds: r1 monument
+  hues 0x37452a/0x2b3322 at footprint scale read "dark puddle" 65-75% +
+  overshoot past log ends (KEEP A); r2 lighter but same fails (KEEP A);
+  r3 geometric discovery — the log courses ride ELEVATED on the bearers
+  (y 0.155/0.29), so any disc reaching the log-end radius shows as bare
+  crescent; r4 hugs the BEARER band only (radial 3.57..3.93 / 3.61..3.89,
+  tangential 0.66/0.52) with rig-calibrated values 0xeaeecc/0xa4aa84
+  (renders ~2% iso-luminant warm pen tint + 39% core strip).
+- Candidate `69ccd14a7d01901fb62b2e12cd52c8147ecccfddccb140e2fa376ba2cb75e602`
+  deterministic x2; nodes 19 / meshes 20 / materials 6 unchanged counts;
+  discs merge as new buckets pz3_8/pz3_9 (COLOR_0 lane, +2 meshes — bucket
+  renumber shifts well buckets, extents byte-identical).
+- Falsification (ZAI fallback disclosed): r4 day A/B SHIP B — "two-layer
+  construction mimics true contact occlusion... no visible hard boundary...
+  doesn't read as a decal... fixes the stack being the only ungrounded
+  prop in the scene" (the judge's own scene-consistency observation). r4
+  night A/B SHIP B — grounded, fire glow hierarchy intact, zero artifacts.
+  Pixel diffs confined to the pile zone in all 10 views (pile 2623 px x
+  [339..622] y[366..433]; kettle/ring/benches byte-identical).
+- Placed via updated `next-place-hearth.ts` (pins ad165b6e -> 69ccd14a):
+  PLACED_VERIFIED, 1 upload + 5 verbs, 4-key comp bag replayed verbatim
+  (sockets 0.25 amendment retained), idempotent rerun zero verbs, live
+  census pin `store/69ccd14a7d01901f.glb` @ [0,0,0] yaw 0 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p333-verify-served.ts`, p332 chassis): served DRACO
+  f004c012… P333_SERVED_PASS — both discs flat at 0.0040/0.0080, radial
+  bands + theta centered 202.5 exact, >= 20 verts, all p330/331/332
+  regressions (potIron, pile bark/faces, bench/grain) intact, 0
+  non-finite.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD b3e7737f
+  (sweep-384, foreign).
+- Evidence: `reviews/hero-assets/polish-333-hearth-pileshadow/` (before/ =
+  live ad165b6e baseline GLB + 10-view rig; after/ = candidate + rig;
+  probes: /tmp/p333-rig.ts, p333-decode rounds, p333-probe band analyses,
+  p333-verify-served.ts durable).
+- Excalibur checkpoint: appending to
+  `vessel/workings/eidoverse-hero-assets/CHECKPOINT.md`.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  notes — night fire-rim warm tint on the pile (judge #1 night note,
+  recorded not treated), scene-wide AO consistency is the live engine's
+  own lighting law, not a per-model defect.
