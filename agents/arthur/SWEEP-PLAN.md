@@ -19932,12 +19932,13 @@ canon-exact. Tier-2 378th cycle per the committed sweep-399 pointer: forge
 the walks (1559B + 1571B), max dists canon-exact vs the sweep-397 record.
 Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (354th
 consecutive clean); sweep89-battery 28/28 GREEN. Baseline lawfully
-rewritten (/tmp/s400/baseline-rewrite.py + baseline-repair.py, both
-committed alongside this row): pre-write asserts green (committed sha16
+rewritten: pre-write asserts green (committed sha16
 dd1d725f33309a2b, arrivals exactly [nx-dress-mole-001], departures [],
 substantive drift exactly [nx-town-streetlamps lib+bbox], compKeys artifact
 signature tolerated, nothing else), post-rewrite substantive drift vs live
-ZERO — final 423 entities / 350069B / sha16 4d7283150d1a3c13. PROBE
+ZERO — final 423 entities / 350069B / sha16 4d7283150d1a3c13
+(/tmp/s400/baseline-rewrite.py + baseline-repair.py, run from scratch like
+the s399 precedent). PROBE
 SELF-CATCH (disclosed, repaired in-tick): the first baseline write's
 mole-record insert anchored on the anvilpad "id" token, which sits INSIDE
 that entity's object — the block landed nested and the file failed to
