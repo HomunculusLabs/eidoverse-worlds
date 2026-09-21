@@ -1,6 +1,67 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-234 — lawful HOLD (123rd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 7cc194c4 (fauna-78, foreign —
+  bats PROPOSAL-only, zero mutations by its own line; direct
+  ~/.bun/bin/bun run — no PATH self-catch this tick), HEAD unchanged
+  through tick close — no epoch re-run due; interlane md5 86b2936f
+  pin-exact. Fresh census **420==420 QUIET-count epoch (+0/−0) — ZERO
+  arrivals, ZERO departures, exactly ONE classified move, classified at
+  source before expectation use (dress-172 law)**:
+  `nx-carousel` lib flip 3d4550fa→c0c8c565 at tuple-identical [-18,
+  0.00014950061063032772, 18] yaw 2.35619 scale 1 EXACT (d=0.0000000
+  dyaw=0.0000000, 7-key comp bag verbatim live: motion:carousel/horse_0/
+  horse_2/horse_4/horse_6 + sockets + particles:smoke — verified BOTH vs
+  the dress-233 PASS-verified capture AND vs polish-336's OWN ledger
+  line IMPROVEMENTS.md:7072 read verbatim this tick: PLACED_VERIFIED
+  1 upload + 8 verbs, 7-key comp bag verbatim, idempotent 0/0, live pin
+  store/c0c8c565e244bbc3.glb exact tuple) — polish-336 carousel
+  panel-ring cloth read, polish domain (core town entity, off-limits to
+  this lane), classified not routed. Domain strongest-form: **all 88
+  prior dress ids lib+pose EXACT-stable vs the dress-233 PASS-verified
+  capture — zero unstable, zero in-domain arrivals/departures**; live
+  dress 88 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 36 fauna + 23
+  non-fleet (probe `/tmp/dress-hold-verify-234.py` HOLD_VERIFY_PASS
+  exit 0 FIRST RUN, zero self-catches, browser UA, capture saved
+  `/tmp/dress234-census.json`).
+- **Sibling commits since dress-233**: struct-313 (3549fc14, lawful
+  hold — zero mutations by its own entry), sweep-390 (4cc0037c,
+  zero-mutation CLEAN SWEEP — classified the badger arrival its epoch
+  caught, battery pin bump 66→67 added-set exactly [nx-dress-badger-001],
+  baseline pure-insertion rewrite 420 ents c6ba39bd), polish-336
+  (bcc60f92, the carousel flip above), fauna-78 (7cc194c4, pipistrelle
+  bats PROPOSAL — queue-empty proposal append, zero world mutation —
+  HEAD at tick start, unchanged through tick close). All named, all
+  foreign domain. Foreign-lane dirt in tree — none dress-owned, left
+  untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan+carp host `nx-struct-reedpool`
+  7d770620 — all pose-stable (artwalk-39 law); stork-millrace designed
+  adjacency 2.952m stable; swan-reedpool seat 0.0000000;
+  carp-reedpool frame-copy dx/dz 0.0000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-233. Blocked on
+  Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock
+  remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-233 — lawful HOLD (122nd post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
