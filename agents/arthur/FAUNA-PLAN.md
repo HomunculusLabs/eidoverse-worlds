@@ -1368,6 +1368,58 @@ domain is commons-next `nx-dress-*` fauna only.
     law (the spoil), vole run-furniture discipline, deer/pheas SE-margin
     seat discipline. Proposal only — build fauna-77.
 
+ 50. **[CANDIDATE — proposed fauna-78, 2026-09-21, build fauna-79] pipistrelle
+    bats over the reedpool — the evening air tier, CHIROPTERA's first
+    member.** ONE entity `nx-dress-bats-001` (short-id convention,
+    magpi/pheas/hare law). Census-grounded (fauna78-census-bats.ts,
+    READ-ONLY): 420 entities, ZERO bat/chiroptera/pipistrelle ids AND
+    libs (magpie fauna-57 proposal law) — the family slot is genuinely
+    open. Village logic: the fleet's air tier is DIURNAL-ONLY — bees work
+    the apiary blossom by day (fauna-32), swallows circle the livery yard
+    (fauna-34), the kestrel wind-hovers the SE margin (fauna-65) — and
+    the night's air is empty: tawny owls roost the orchard crown
+    (fauna-53), the badger digs at the woodland edge (fauna-77), and
+    nothing flies at dusk. The pipistrelle (Pipistrellus pipistrellus) is
+    THE European village-dusk animal — the flickering swarm over the pond
+    at last light, feeding on the midges every water hatches — and the
+    reedpool is the village's richest habitat host (seven residents:
+    ducks, swan, frog, heron, geese off-bank, robin on the rim, carp
+    under the surface) with its AIR still unoccupied: the pool's own
+    hatch is the honest food source, the evening swarm is the read.
+    Pure-motion fauna class (bees fauna-32 / swallows fauna-34 precedent):
+    zero ground geometry, zero perch furniture — the swarm IS the entity.
+    Species contract: FIVE-bat swarm (bats hunt in loose companies; hens
+    3-bird / keet 3-bird flock precedent, air-tier form), TRUE-SIZE
+    wingspan ~22cm + ×1.6 marginality bake incl joints (a ~35cm read —
+    swallow-adjacent; exact bake owed to the build tick's judge math):
+    tiny brown fur hull + THE DARKER MEMBRANE WINGS (the bat's one
+    marker: membrane darker than fur, the wing-to-body value contrast)
+    swept in the jink-turn bank + short muzzle + tragus ear nubs.
+    Motion contract (pure-motion, the wing-beat class): 5 orbit rings at
+    staggered centers/radii (r 0.6-1.2, 60-85°/s — erratic vs the
+    swallow's glide) + wing pendulums NESTED per bat (fast ~0.22s,
+    swallow wing-survival law) + THE FLICK-JINK (a small wander orbit
+    r ~0.2 inside each ring — the bat's characteristic sudden course
+    change, kestrel station-keeping kin); phases staggered per
+    individual, epoch t0. Anchor contract: bats_N orbit roots +
+    nested wing groups (≤10 KEEP groups; `bats` prefix — collision-free
+    at proposal: zero census hits this tick; rg over mkv3 sources +
+    gitignored assets owed at build tick, magpi law). Siting: reedpool
+    open-water AIR SEAT, frame-copy water-rider class (ducks fauna-3 /
+    swan fauna-63 / carp fauna-75 precedent): entity origin == pool host
+    origin + host yaw 0 verbatim; flight band ~2.5-4m above the water
+    (the dusk-feeding band, above every resident's crown, below the
+    swallow band — exact band + ring-swept-worst clearance vs bridge
+    deck + masts + all seven resident OBBs owed to the build tick,
+    carp's orbit-swept-worst law). Judge contract: the swarm MOTION read
+    at the bank vantage (18m presence = the flickering cloud against the
+    dusk sky, bees zero-bees law disclosed) + solo encounter profile at
+    4m (a bat reads: dark wings, jink bank, tiny body) + plan layout
+    CLEAR (swallow fauna-34 precedent). Provenance: bees pure-motion
+    chassis (orbit rings, zero ground), swallow nested-wing pendulum law,
+    kestrel wander orbit, sparrow-class marginality bake discipline.
+    Proposal only — build fauna-79.
+
 
 ### common carp — fauna-75 (2026-09-20) CLOSED
 - **v10 sha16 2f91932ddbd14ff4** (full 2f91932ddbd14ff4028f6f03b2ef61982a84b44f18b4bd86e82f0c614f003b8a), NEW entity `nx-dress-carp-001` PLACED_VERIFIED at world (9.723, 0.06093, −90.982) yaw 0 scale 1 — the FRAME-COPY WATER-RIDER seat (ducks fauna-3 / frog fauna-29 / swan fauna-63 class): entity origin == reedpool host origin; entity yaw == host yaw (0) so entity-local == host-local VERBATIM; PY = water top world 0.08093 − WL 0.02 = 0.06093 (duck/fauna-31 waterline law). HOST HARD-GATE: nx-struct-reedpool (9.723,−0.05907,−90.982) yaw 0 lib 7d770620bb1b7bdc exact pre+post (artwalk-39 law; struct-lane-owned, foreign domain, never touched). Census 418→419 exactly, 4 verbs (upload+spawn+3 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 4/4 (18m N-bank approach + FULL bridge-deck N→S crossing — the contract vantage — arrivals 0.00/0.30/0.37/0.31m; foreign support-seam stderr = logpile/skeps/woodstack/yard/stones class, not ours), live bbox 1.012×0.363×0.300 (the SURFACE envelope — back + fin crest + wake films).
