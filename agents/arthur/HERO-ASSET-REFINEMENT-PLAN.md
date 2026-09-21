@@ -3452,3 +3452,47 @@ next wake once the gateway answers.
 - Next ranked: (a) judge polish notes — per-panel 1-2deg yaw skew + wider
   darker straps (deck judge's named cheapest drape wins; one intervention
   per tick), or (b) plaza-core re-survey on fresh evidence.
+
+### polish-337 — carousel panel-ring skew + binding straps (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` @ polish-336 bytes `c0c8c565` (on-disk verified ==
+  live identity at survey; fresh census 7-key bag). Queue head from
+  polish-336's close: the deck judge's named cheapest drape wins.
+- ONE intervention (new production step `carousel-horse-prototype/skew.ts`,
+  clothswag chassis): per-panel alternating 2deg YAW twists about each
+  panel's own arc-mid + straps widened 0.035->0.055m arc, darkened COLOR_0
+  0.35->0.24. Hems, drape gradient, base color, night emissive untouched.
+- r1 boarding judge (ZAI fallback disclosed, native re-judge owed) exposed a
+  REAL 0.146m air gap: strap tops y 4.90 vs canopy skin y 5.046 at r 2.52
+  (decoded from exact bytes — an orbit-rotation of the straps was rejected at
+  design time; the gap was always there, the new dark tapes made it legible).
+  Cured in-family same tick: Y_STRAP_HI 4.90->5.06, a 14mm angled pierce
+  occluded from below by the skin itself (aerial delta 44px = rim ticks).
+- r2 `b1f1154962631d22…` deterministic x2; 49 nodes unchanged; 0 non-finite
+  of 404098; zero material diffs; extent drift exactly cr_scenery_ring
+  0.16m (the strap extension); frame-independent radial signature exact in
+  local AND served DRACO (32 bulged r 2.6127 = 2.6+0.3628·sin2°, mids
+  2.6000, y-set {5.06×32, 4.28×80, 3.00×32, 2.80/2.94×16}, slits alternating
+  6.47/7.41deg — probe `agents/arthur/p337-radialproof.ts` durable).
+- Falsification (ZAI fallback disclosed): boarding r2 — no gap visible, no
+  new defects, hung-read holds; deck A/B — straps "the most successful
+  change in the build", wedge gaps "read as natural cloth hung by hand, not
+  errors", zero new defects, horses/deck/columns/roof unchanged. Watch-items
+  recorded: 2deg skew at the perception threshold (4-6deg would require
+  narrowing panels to keep slit floors — next decision point, one
+  intervention per tick); perspective "inconsistent tape width" is inherent
+  to a flat-strap ring (edge-on vs face-on), not treated.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED, 1 upload + 8
+  verbs, 7-key comp bag replayed verbatim; idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/b1f1154962631d22.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact. Served DRACO carries the exact
+  skew signature (P337 radial proof on verified.served bytes).
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 64f08592
+  (dress-235, foreign — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-337-carousel-skew/` (before/ = live
+  c0c8c565 baseline GLB + 11-view rig; after/ = candidate + rig; reports/ =
+  baseline-entity + deploy dry/apply/idem + verified served bytes).
+- Next ranked: (a) skew amplitude decision — 4-6deg + narrowed panels (deck
+  judge's priority-1; compositional change, judge fresh first), or (b)
+  plaza-core re-survey on fresh evidence, or (c) strap shade one notch
+  darker (LOW judge note).
