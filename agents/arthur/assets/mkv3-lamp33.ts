@@ -53,10 +53,17 @@ const lamp = (deg: number, tag: string) => {
     // frame. Four iron corner posts (0.025 sq, half-proud of the glass face
     // at ±0.0875 vs glass ±0.075 — no coplanarity) from the collar-top plane
     // 2.36 up into the eave body to 2.63 (solid seat, ends hidden).
+    // polish-343 pane recess (p341 day judge's named next upgrade, confirmed
+    // fresh: bars at ±0.075 centered ON the glass face plane read as strips
+    // painted on a glowing block): bars moved OUT to ±0.095 so the glass
+    // faces (±0.075) sit 7.5mm BEHIND the bar inner faces (±0.0825) — a true
+    // frame-plane reveal + corner notches, glass box untouched (polish-312
+    // night dot size preserved). Bar outer 0.1075 stays under the eave
+    // overhang (half 0.135).
     for (const sx of [-1, 1]) for (const sz of [-1, 1]) {
         const bar = new THREE.Mesh(new THREE.BoxGeometry(0.025, 0.27, 0.025), ironTex);
         bar.name = `${tag}_cage`;
-        bar.position.set(x + sx * 0.075, 2.495, z + sz * 0.075);
+        bar.position.set(x + sx * 0.095, 2.495, z + sz * 0.095);
         g.add(bar);
     }
     {

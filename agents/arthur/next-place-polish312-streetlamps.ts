@@ -1,7 +1,7 @@
-// next-place-polish312-streetlamps.ts — polish lane (polish-342): re-place
-// nx-town-streetlamps with the cap-articulation build (pin advanced
-// 9b8cdb73 → a4b572a3; prior pins: e815a897 → a7b05aef polish-312 →
-// 9b8cdb73 polish-341 glass cage).
+// next-place-polish312-streetlamps.ts — polish lane (polish-343): re-place
+// nx-town-streetlamps with the pane-recess build (pin advanced
+// a4b572a3 → fdade00c; prior pins: e815a897 → a7b05aef polish-312 →
+// 9b8cdb73 polish-341 glass cage → a4b572a3 polish-342 cap articulation).
 // Live entity carries an EMPTY comp bag (census 2026-09-21);
 // ground-layer network at the exact standing tuple.
 // Chassis: next-place-stringlights.ts (polish-309).
@@ -13,7 +13,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-town-streetlamps";
 const FILE = `${ROOT}/agents/arthur/assets/village_streetlamps3.glb`;
-const REVIEWED_SHA = "a4b572a315b9a9793236bb049a19afadb397589e4beade75ef647fa0efc45256";
+const REVIEWED_SHA = "fdade00cdd911e44f3976d5d476581c7ec3ca8b057752fe429d8c9a4ad7e62ee";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [0.0, 0.0, 0.0] as [number, number, number], yaw: Math.PI, scale: 1 };
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -44,7 +44,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "core streetlamps — polish-342 cap articulation");
+  u.searchParams.set("name", "core streetlamps — polish-343 pane recess");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {

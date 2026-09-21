@@ -3797,3 +3797,62 @@ next wake once the gateway answers.
   first), or (b) plaza-core re-survey — post-color-at-night-distance
   (gp18 judge note), or (c) least-recently-judged pinned subjects (well
   p314, fountain p326, hearth p334).
+
+### polish-343 — streetlamp glass-pane recess (ACCEPTED, LIVE)
+
+- Subject: `nx-town-streetlamps` (ground-layer network at origin, pos
+  [0,0,0], yaw pi, EMPTY comp bag — census-fresh this tick). Build source
+  `assets/mkv3-lamp33.ts` -> `village_streetlamps3.glb` (live was a4b572a3,
+  polish-342's cap build; on-disk == live exact at survey, before-bytes
+  captured FIRST). Queue head from polish-342's close: the day judge's
+  named cheapest upgrade (panes inset behind the frame plane).
+- Survey (fresh p341-rig renders of exact live bytes; ZAI fallback
+  disclosed — no native vision loadable this cron session, polish-285..342
+  class, native re-judge owed): the p341 cage bars sit centered ON the
+  glass face plane (bars ±0.075 == glass ±0.075) — judge: glass "flush,
+  borderline proud", posts read as "coplanar strips painted on the surface
+  of a glowing box", zero separation cues; weakest element the corner-post
+  contact read. Source-true by construction.
+- Change (ONE intervention, mkv3-lamp33.ts): cage bars moved OUT
+  ±0.075 -> ±0.095 — glass faces now sit 7.5mm BEHIND the bar inner faces
+  (±0.0825) with notched corners at every corner. Glass box untouched
+  (polish-312 night-dot size preserved by moving the FRAME, not shrinking
+  the glass); bar outer 0.1075 stays under the eave overhang (half 0.135).
+  Nodes 24 / meshes 16 / materials 2 UNCHANGED; both emissive materials
+  byte-identical.
+- Candidate `fdade00cdd911e44…` deterministic x2 (mtime-verified). Decode
+  (NEW durable probe `p343-decode.ts`; self-caught 2 of its own RED bugs —
+  emissive-presence cannot classify materials when BOTH carry emissive,
+  and modeled BoxGeometry face counts are wrong: dumped the empirical
+  multiset instead, 12 verts/bar/plane = 4 corners x 3 face-duplicates):
+  768 bar verts in the new corner envelope (empirical 576 max-coord +
+  192 inner-corner baseline control), 0 at the old flush loci, glass 192
+  verts at extent 0.075 exact, 0 non-finite, deltaVerts 0.
+- Falsification: pixel diffs confined to lantern-head zones all views
+  (near-day 5063 px bbox 418..543 x 250..381; base-day 0 px perfect
+  control). Judges (ZAI fallback disclosed): near-day A/B — frame-around-
+  glass IMPROVED (real step + shadowed gap at junctions), overall
+  IMPROVED/ship; gp18-day A/B — SHIP, distance-neutral, zero new defects;
+  near-night A/B — SAME (no regression, glow containment PASS, zero new
+  night defects; recess sub-threshold under emissive dominance, expected).
+  Judge nit recorded not treated: exposed post feet above the collar read
+  as cut ends (pre-existing p341 class, amplified) — next queue head.
+- Placed via updated `next-place-polish312-streetlamps.ts` (pins
+  a4b572a3 -> fdade00c): PLACED_VERIFIED, 1 upload + 1 verb, comp bag {}
+  preserved, idempotent rerun zero verbs, live census pin
+  `store/fdade00cdd911e44.glb` @ (0,0,0) yaw pi exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `p343-verify-served.ts`, p342 chassis): P343_SERVED_PASS — served DRACO
+  keeps 768 bar verts at the new corner loci, oldFlush 0, headTop 3.06,
+  8/8 lamp groups, both emissive factors exact WITH baseColorTexture,
+  0 non-finite; negative control (p342 served lib) fails the gates exactly.
+- Gate re-run after mutation: ALL PASS real exit 0 (HEAD 045ae187 at
+  close — no sibling landing mid-tick this window).
+- Evidence: `reviews/hero-assets/polish-343-streetlamps/` (before/ =
+  baseline GLB + 12-view rig; after/ = candidate + rig; ab-*.jpg panels).
+  Probes durable: p343-decode.ts, p343-verify-served.ts.
+- Next ranked: (a) cage-bar feet anchoring at the collar (judge nit:
+  outward move exposes bar feet as cut ends hovering above the collar
+  throat — judge fresh first), or (b) plaza-core re-survey on fresh
+  evidence, or (c) least-recently-judged pinned subjects (well p318,
+  fountain p326, hearth p334).
