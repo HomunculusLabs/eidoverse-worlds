@@ -2088,3 +2088,63 @@ correct chassis; box corners under affine stay exact).
     - Judge arc (ZAI-vision MCP fallback glm, native debt NATIVE-50 below): 3 build versions, 5 judged rounds. r1 field-edge FAIL both (tortoise a 3-5px ambiguous dot; admiral invisible dark-on-dark against the field's dark far edge; judge's own prescriptions: scale 2-3×, brighter flash, light-backdrop discipline) → v2 ×4.2 bake + red-band lift 0xd24a2e + admiral ring pulled in over the light purple interior = r2 pair PRESENT (orange clearly a butterfly focal accent; dark one marginal) → v3 dark-wing lift + apex dots enlarged = r3 BOTH confirmed butterflies, "the field is being visited" MOSTLY-YES ("two butterflies in close proximity reads naturally as a small flutter passing through"); anatomy gates: tortoise PASS (butterfly yes, orange+black the identity carrier "survives the low-poly simplification well", connected silhouette; blue/cream sub-pixel at 3m disclosed — modeled for photo mode; no ground shadow = air-tier idiom, bees/swallows/bats carry none) + admiral PASS (red bands "clearly legible… the strongest contrast element", hindwing band visible, unambiguously a DIFFERENT species — "dark-ground-with-red-banding… not a tortoiseshell"; white dots sub-pixel disclosed). 18m TRUE read is the moving color (bees zero-bees law class, disclosed); the judged field-edge vantage is the honest stroll pause at 9.2m where both resolve. Judge scene findings HOST-OWNED, routed to the dress/cultivation register, never patched (fauna-44 law f): the lavender white-cap flower variants (the host's authored blossom tips), the hedge's pale gap-stone (yham r3's named designed feature), the hedge-line "tan pillar".
     - Rig/decode laws learned (fauna-85): (a) **THE PHASE-THEN-AIM LAW** — a dynamically-aimed encounter camera must PHASE FIRST, THEN AIM: setView reads the live part position, so aiming at t=11 and jumping to t=8 walks the subject ~2.7m around its ring OUT of the 3m frame — the first two 0-px motion pairs were framing, not dead motion (the fix is the standing order for every dynamic-aim rig); (b) **a same-period pair diffs to zero at Δt == period** — an N-px motion pair must use a HALF-period delta (8.0 vs 8.13) to catch the flap mid-cycle; (c) **the 18m pixel budget for a 55mm flyer needs ×4+ bake** — sub-15px spans read as ambiguous dots regardless of color; at ~16-20px the same geometry reads unambiguously as a butterfly (bats law b, calibrated one size class down); (d) **a dark-winged insect needs a LIGHT backing at distance** — ring geography is a legibility parameter (the admiral's far-side sweep died against the field's dark far edge; tightening the ring over the light purple interior cured it without touching geometry); (e) the composite rig's lavender host rendered from the LOCAL UPLOAD TWIN (mason retex bytes, hash-exact to the live lib) — no DRACOLoader needed, hmou law e standing.
     - Native re-judge debt: NATIVE-50 (below) — the fallback arc stands until natively confirmed.
+
+54. **[CANDIDATE — proposed fauna-86, 2026-09-21, build fauna-87] common
+    lizard on the kiln-yard stone — REPTILIA's first member, the village's
+    warmest stone finally basking.** ONE entity `nx-dress-lizd-001`
+    (short-id convention, magpi/pheas/hare/rat/mole law). Census-grounded
+    (fauna86-census.ts, READ-ONLY): 424 entities, ZERO reptilian ids AND
+    libs (lizard/zootoca/lacert/snake/natrix/slowworm — magpie fauna-57
+    proposal law; shrew/finch/dragonfly also probed zero, all four slots
+    open, reptile wins on missing-class + idle-host) — the CLASS slot is
+    genuinely open. Village logic (missing-class law, kestrel fauna-64
+    class): the fleet spans mammals, birds, fish, amphibian, and four
+    insect orders — REPTILIA is the village's one absent vertebrate class,
+    and the standing geography already implies exactly one reptile seat:
+    the charcoal kiln (nx-town-kiln (19.16,−0.021,22.43) yaw −2.443) is
+    the village's WARMEST built stone and stands fauna-less while every
+    other trade building has its animal (livery horses, mill sparrows,
+    market pigeons, coop hens, dye sheep, potter…); a cold-blooded animal
+    basking on warm stone is the read no other seat carries (idle-host
+    law, bats-at-the-pool fauna-78 class). Bill's homestead language:
+    warm-stone reptiles are native country. Species contract: SINGLE
+    common/viviparous lizard (Zootoca vivipara — THE European village
+    reptile; met singly, hmou/dmou/hog/vole/rat/mole single-precedent),
+    TRUE-SIZE ~7cm HB + ~11cm tail, ×2.2 marginality bake incl joints
+    (hmou chassis verbatim) = a ~40cm full read; THE FLAT PRESSED BASKING
+    POSE on the stone's sunny face (belly down, legs splayed, head level
+    — the posture IS the class marker: no fleet bird or mammal lies this
+    flat with a tail). Markers: brown-grey scaled 0x8a7464 with darker
+    speckle family + pale flanks, THE LONG TAPERED TAIL ~1.5× HB trailing
+    along the stone (vole tail decode-gate law applied: [1.3,1.7]), dark
+    dorsal stripe + broken side stripes, dark bead eye with a pale lid
+    ring, short five-toed splayed feet, throat pulse. Furniture: ZERO —
+    the kiln stone IS the host (bees/carp zero-ground law; the basking
+    stone is furniture enough). Motion contract: throat breathe-bob (the
+    visible pulse — reptiles breathe visibly) + slow head Y-scan (the
+    flat watch) + tail slow-curl settle Z (phases staggered, epoch t0 —
+    a basking lizard's whole life is small motion; no dart, closed
+    return law). Anchor contract: lizd (planted on stone) / lizd_body /
+    lizd_head / lizd_tail (4 KEEP groups; `lizd` prefix — collision-free
+    at proposal: rg over sources = sole hit my own census regex; re-owed
+    at build tick, magpi law). Siting: FRAME-COPY HOST-RIDER on the
+    kiln, AUTHORED SEATED in the GLB at kiln-local coordinates on the
+    sunward S/SW stone face (woodpecker-on-snag fauna-59 class — bird
+    authored at bark-local; host lib 3e96c8b074852ddc hard-gated EXACT
+    pre+post, artwalk-39 law; entity tuple == live kiln tuple verbatim);
+    co-residents at the host: kiln-l light companion (18.71,1.079,23.85),
+    kiln sign rider (18.61,2.429,21.77), heat-contours art rider
+    (18.42,−0.021,21.55) — rider-concentric SAT exemption vs the host,
+    non-host clearance + reader-side face decision owed to the build tick
+    (the pig sty 15.0,40.2 and cow 24,40.75 meadow spoke is the natural
+    reader approach from the N/NE; sun/sky side vs reader side resolved
+    by render falsification at build tick, struct-104 oblique law).
+    Judge contract: encounter anatomy at ~2.6m (flat pressed pose + tail
+    + splayed feet + eye) + fill-lit face + 18m scope PRESENT-disclosed
+    (robin law — a 40cm basking read at 18m is a speck on a stone; the
+    encounter is the species vantage) + night read (the kiln's warm
+    glow — a lizard gone still at dusk). Provenance: woodp frame-copy
+    rider chassis (authored-seated + host hard-gate + AIR-class SAT
+    exemption), hmou ×2.2 bake chassis, vole tail decode-gate law, badger
+    low-wedge pressed-body law, stork contact-shadow chassis. Proposal
+    only — build fauna-87.
