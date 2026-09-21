@@ -20147,3 +20147,55 @@ inn/tower-house walked @403 (this tick), stable/market @402,
 forge/potter @400, hall/bunkhouse @399 the stalest standing pair; walk
 tools interior-walk-hall.ts (1704B) + interior-walk-bunkhouse.ts
 (1538B), ls-verify before walks per law).
+
+sweep-404: CLEAN SWEEP, fully-quiet steady-state tick (175th consecutive
+quiet-or-classified). Tick-start HEAD 6f05c18e (struct-335 read-only hold);
+standing gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun from repo
+root (cron PATH class, sweep-391..403); ledger law EXACT 2371137 at first
+probe, ledger max sweep-403 (no collision); interlane md5 86b2936f +
+SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools drained
+(IMPROVE-PLAN 7fa8a224 zero open rows, CITY-PLAN-V2 cae6b928 — audit
+-freeze banner governs via loop/plan reload). Census epoch A 424==424
+(386 thing + 38 light) vs committed sweep-403 baseline sha16
+db01fdcbe21cc4ff: 0 arrivals, 0 departures, 0 substantive drift; 61
+compKeys-only diffs = known sweep-56 baseline artifact (payloads
+deep-equal — live bags populated, healthy); live raw census sha16
+c6eb1bee1ca50c5c byte-identical to sweep-403's settled epoch-B read.
+Epoch B 20s-paced re-read byte-identical — single settled epoch, no
+baseline rewrite due. Overlap: SAT 386 bbox non-light / 263
+exempt-classified / 0 coverage holes, real exit 3 (unpiped,
+polish-270(b) law) on exactly ONE unclassified = R-121 lamp-n|
+nx-town-mapboard -0.407 (known Sev 2 routed artwalk b26 choreography @
+sweep-43, 360th sweep since routing, NOT new, no escalation due — the
+law keys on severity-1). Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 dists
+0/0.38/0.30/0.33/0.32 (nw-approach1-walk.ts), NE 7/7 dists
+0/0.29/0.32/0.29/0.38/0.25/0.31 (ne-approach2-walk.ts), SW 5/5 dists
+0/0.25/0.34/0.37/0.31 (sw-approach3-walk.ts) — dists canon-exact vs the
+sweep-319..403 canon. Tier-2 382nd cycle per the committed sweep-403
+pointer: hall 8/8 ALL_PASS dists
+0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310 max 0.360
+(interior-walk-hall.ts, 1704B) + bunkhouse 6/6 ALL_PASS dists
+0.245/0.300/0.305/0.247/0.380/0.313 max 0.380 (interior-walk-bunkhouse.ts,
+1538B), both tools ls-verified present BEFORE the walks. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (358th consecutive
+clean); sweep89-battery 28/28 PASS GREEN FIRST TRY on censusA bytes — no
+pin bump due (quiet census; comp-bearing 71, lights 38, thing 386).
+PROBE SELF-CATCH pre-verdict, disclosed: first core-walk parser keyed
+'legs' as a list of per-leg dicts where the schema is legs:<count int> +
+results[] (sweep-402 self-catch (b) class — raw schema read first,
+re-parsed, no verdict affected); first plan-append anchor guessed line
+wraps (0 matches, caught by assert; re-derived from exact bytes).
+Foreign dirt in tree (engine files client/server, core-paths GLB +
+review json, windmill overhaul scratch + WINDMILL-OVERHAUL.md,
+cabin-overhaul + moon-moth prototype dirs, fauna tools, debug bower
+scripts, fleet shell scripts, review dirs) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0). Next tier-2 pair (sweep-405): forge + potter (383rd cycle —
+LRU chain re-derived from committed pointers fresh this tick:
+hall/bunkhouse walked @404 (this tick), inn/tower-house @403,
+stable/market @402, forge/potter @400 the stalest standing pair; walk
+tools interior-walk-forge.ts + interior-walk-potter.ts, ls-verify before
+walks per law).
