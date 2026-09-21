@@ -20074,3 +20074,76 @@ this tick: stable/market walked fresh @402, forge/potter @400,
 hall/bunkhouse @399, inn/tower-house @401 the stalest standing pair; walk
 tools interior-walk-inn.ts (1786B) + interior-walk-tower-house.ts (1523B),
 ls-verify before walks per law).
+
+sweep-403: CLEAN SWEEP, single-classified-flip steady-state tick (174th
+consecutive quiet-or-classified). Tick-start HEAD a0cfcda2 (struct-334
+hold); standing gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun
+from repo root (cron PATH class, sweep-391..402); ledger law EXACT
+2371137 at first probe, ledger max sweep-402 (no collision); interlane
+md5 86b2936f + SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools
+drained (IMPROVE-PLAN 7fa8a224 zero open rows, CITY-PLAN-V2 cae6b928 —
+audit-continues freeze banner governs via loop/plan reload). Census epoch
+A 424==424 (386 thing + 38 light) vs the committed sweep-402 baseline
+sha16 ff9327302514cdb8: 0 arrivals, 0 departures, exactly ONE substantive
+drift field-set = nx-town-streetlamps lib fdade00cdd911e44->530fc49a9c31e441
+at identical tuple (0,0,0) yaw pi, comp {} preserved, bbox byte-identical
+= COMMITTED polish-344 @ 5a35882e (streetlamp cage base plate, 530fc49a
+deterministic x2, PLACED_VERIFIED + idempotent per its own entry; ALSO
+independently classified at source by struct-334's same-window hold
+census BEFORE this sweep used any expectation — dress-172 law),
+ledger-matched, domain-valid (polish hero domain), not drift. Zero
+compKeys-only diffs at either epoch this tick. Epoch B 21s-paced re-read
+424==424 byte-identical (census sha16 c6eb1bee1ca50c5c both reads),
+A-to-B drift ZERO — single settled epoch. Overlap: SAT 386 bbox
+non-light / 263 exempt-classified / 0 coverage holes, real exit 3
+(unpiped, polish-270(b) law) on exactly ONE unclassified = R-121
+lamp-n|nx-town-mapboard -0.407 (known Sev 2 routed artwalk b26
+choreography @ sweep-43, 359th sweep since routing, NOT new, no
+escalation due — the law keys on severity-1); the lamp flip introduced
+ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0, legs run individually — core 64/64 maxArrival
+0.380 (next-walk-core-paths.ts), NW 5/5 @ 0.38 (nw-approach1-walk.ts,
+dists 0/0.38/0.30/0.33/0.32), NE 7/7 @ 0.38 (ne-approach2-walk.ts, dists
+0/0.29/0.32/0.29/0.38/0.25/0.31), SW 5/5 @ 0.37
+(sw-approach3-walk.ts, dists 0/0.25/0.34/0.37/0.31) — dists canon-exact
+vs the sweep-319..402 canon. Tier-2 381st cycle per the committed
+sweep-402 pointer: inn 6/6 ALL_PASS (interior-walk-inn.ts, dists
+0.320/0.318/0.341/0.350/0.364/0.288, max 0.364) + tower-house 6/6
+ALL_PASS (interior-walk-tower-house.ts, dists
+0.245/0.245/0.263/0.377/0.374/0.309, max 0.377), both tools ls-verified
+present BEFORE the walks (1786B + 1523B), max dists canon-exact vs the
+sweep-401 record. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (357th consecutive clean); sweep89-battery 28/28 PASS GREEN FIRST
+TRY on censusA bytes — no pin bump due (streetlamps carries no battery
+pin; belltower 886a0615, carousel 193c897d + 7-key bag, windmill
+a557d918, woodyard 333e85a4, comp-bearing 71, lights 38 all exact).
+Baseline lawfully rewritten like-for-like (/tmp/s403/baseline-rewrite.py):
+pre-write asserts green (committed sha16 ff9327302514cdb8 round-trip
+byte-identity probe indent=2, arrivals [], departures [], substantive
+drift exactly [nx-town-streetlamps lib] and nothing else, compKeys
+artifact set empty this tick), one-field lib transplant only, surgical
+raw-text replace (single-occurrence assert both directions), post-rewrite
+substantive drift vs live ZERO — final 424 entities / 353737B / sha16
+db01fdcbe21cc4ff. PROBE SELF-CATCHES pre-verdict, disclosed: (a) guessed
+the battery tool path as sweep89-battery.ts where the committed tool is
+sweep89-battery.py (.ts-in-prose class; located via file search, run
+clean); (b) the naive walk-output JSON parser choked on the [physics]
+banner prefix (sweep-386(b)/389/398 class — raw output read first,
+re-parsed from the first brace); (c) the first NW/NE/SW dist extraction
+keyed 'dist' where the approach-walk schema uses 'distance' (canon
+values re-extracted, sweep-402 self-catch (c) class, third occurrence —
+standing schema note); (d) the first plan-append anchor (pointer-text
+tail) matched N prior sweep blocks — re-anchored on the sweep-402-unique
+LRU chain (@402/@400/@399/@401 token set) with asserted uniqueness.
+Foreign dirt in tree (engine files client/server, core-paths GLB +
+review json, windmill overhaul scratch + WINDMILL-OVERHAUL.md,
+cabin-overhaul + moon-moth prototype dirs, fauna tools, debug bower
+scripts, fleet shell scripts, review dirs) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0). Next tier-2 pair (sweep-404): hall + bunkhouse (382nd cycle
+— LRU chain re-derived from committed pointers fresh this tick:
+inn/tower-house walked @403 (this tick), stable/market @402,
+forge/potter @400, hall/bunkhouse @399 the stalest standing pair; walk
+tools interior-walk-hall.ts (1704B) + interior-walk-bunkhouse.ts
+(1538B), ls-verify before walks per law).
