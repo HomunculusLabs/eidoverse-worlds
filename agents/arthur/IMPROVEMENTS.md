@@ -7013,4 +7013,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-303] R11-111 lawful HOLD (twenty-fifth) — next-family decision owed Bill (surfaced struct-278); gate exit 0 FIRST at 4b3ba6e1 (sweep-383, foreign zero-mutation observer); 303%3=0 refine-slot pool empty; shard+carry empty fresh; census 418 quiet tick tetrakis/trioct/trit PIN_EXACT 3/3 maxdelta 0.0, 127 struct-domain accounted; native cron-unpayable owed board rides; zero mutations (D+0, E+0)
 
+- [struct-304] R11-112 lawful HOLD (twenty-sixth) — next-family decision owed Bill (surfaced struct-278); gate ALL PASS exit 0 FIRST at 847ed870 (struct-303, own prior hold); 304%3=1 build-slot holds; shard+carry empty fresh (sole IMPROVEMENTS [OPEN line is fauna-18, foreign); census 418 quiet tick tetrakis/trioct/trit PIN_EXACT 3/3 maxdelta 0.0, 127 struct-domain accounted; native cron-unpayable owed board rides; zero mutations (D+0 E+0) (D+0, E+0)
+
 **Running total: 2371107 / 2000000**
