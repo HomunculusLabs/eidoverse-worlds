@@ -3569,3 +3569,51 @@ next wake once the gateway answers.
   cloth at 5m; next weakest core element by fresh judge), or (b) per-panel
   albedo jitter follow-up (deck judge's amplifier — low priority, one
   intervention per tick), or (c) strap shade one notch darker (LOW note).
+
+### polish-339 — mapboard roads out of the village (ACCEPTED, LIVE)
+
+- Subject: `nx-town-mapboard` (same tuple as polish-301..303, empty comp bag,
+  census-fresh; live was 02f6cb96442af8cd, polish-303's gates build — the
+  least-recently-judged subject still at a polish pin, 09-19 07:44).
+- Defect (third independent judge, ZAI fallback disclosed, native re-judge
+  owed — polish-285..338 class): 18m reader-side read "sign with wheel
+  emblem, not a map" — every outlying chip floated on bare parchment
+  because ALL spokes stop at the ring; the p301/p303 convergent
+  "settlements at crossroads" recipe was half-delivered (gates yes, roads
+  no). Source-true: spokes end at authored 0.83.
+- ONE intervention (mkv3-mapboard.ts): 8 road extensions ring centerline
+  0.83 -> fringe 1.30 — cardinals run under the gate plaques (road-under-
+  gate p303 language), diagonals to the districts; waylamp rides the SW
+  ray; quarry (1.74) + whisper (1.73) stay beyond the fringe (the road
+  fades before the unknown). inkMat family (merges; no new
+  material/node), 0.05 width; z-ladder front -0.0358 (0.3mm proud of
+  parchment, 0.2mm behind chip plane so chips read ON roads, 3cm behind
+  plaques). Torus crest -0.066 = reader extreme unchanged (b22 law).
+- Candidate `db9e564dbf0166f8…` deterministic ×2 (mtime-verified);
+  p339-decode multiset diff: +192 verts = exactly 8×24 at analytic radii
+  0.4158..0.6505 on all 8 rays, ZERO removed, 0 non-finite, 29/29/26
+  nodes/meshes/materials unchanged. Pixel diffs map-side ONLY (back 937px
+  close / 249px 18m / 254px night; every other view byte-identical).
+- Judges: close-range A/B SHIP (4 cardinals continuous to fringe, chips
+  read as settlements on roads — E grainfield / N road-cap / W mid-road,
+  single-road junctions, zero regressions, "settlement network vs wheel
+  emblem"); 18m HOLD dispositioned — extensions are approach-range detail
+  by the board's own source contract (polish-16 floors law; 18m skeleton
+  unchanged + eye-gate-approved); "stripes" = pre-existing tangential
+  chip row (byte-identical); diagonal-shortness = tilt foreshortening.
+- Placed via updated `next-place-polish301-mapboard.ts` (pins
+  02f6cb96→db9e564d): PLACED_VERIFIED, 1 upload + 2 verbs, comp bag {}
+  preserved, idempotent rerun ALREADY_LIVE_NO_VERBS, live census pin
+  `store/db9e564dbf0166f8.glb` @ (2.5,0,9.5) yaw -2.9441970937399127.
+- Served proof (NEW durable probe `p339-verify-served.ts`; first draft
+  self-caught RED — filtering inside the DRACO read loop, rewritten on the
+  proven p303 chassis): served DRACO keeps all 8 extensions — uniform +12
+  verts per ray vs p303 served control, ink envelope 1.79, 0 non-finite.
+- Gate re-run after mutation: ALL PASS real exit 0 at absorbed sibling
+  HEAD ab2cb14c (sweep-395). Evidence:
+  `reviews/hero-assets/polish-339-mapboard/` (before 13-view + baseline;
+  after rig; ab-back / ab-backgameplay panels).
+- Next ranked: (a) belltower (p311 pin, 09-19) or streetlamps (p312 pin)
+  fresh survey — the least-recently-judged pinned plaza-core subjects, or
+  (b) the 18m judge's amplifier (thicker cardinal roads / larger diagonal
+  chips — falsify at 18m first).
