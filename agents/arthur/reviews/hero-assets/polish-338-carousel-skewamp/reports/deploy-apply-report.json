@@ -1,0 +1,3125 @@
+{
+  "status": "PLACED_VERIFIED",
+  "world": "commons-next",
+  "id": "nx-carousel",
+  "apply": true,
+  "inputs": {
+    "file": "/tmp/polish338/carousel-skewamp-r1.glb",
+    "sha": "193c897dd511b5e050cf4dddf34d2c18a8793ab81fbae631d864bef666bfca8f",
+    "fromLib": "store/b1f1154962631d22.glb",
+    "baseline": "agents/arthur/reviews/hero-assets/polish-338-carousel-skewamp/reports/baseline-entity.json",
+    "out": "agents/arthur/reviews/hero-assets/polish-338-carousel-skewamp/reports/deploy-apply-report.json",
+    "apply": true
+  },
+  "uploadAttempts": 1,
+  "verbAttempts": 8,
+  "updatedAt": "2026-09-21T07:13:49.037Z",
+  "endpoint": "https://eidoverse.billding.dev",
+  "probeId": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+  "baseline": {
+    "id": "nx-carousel",
+    "lib": "store/b1f1154962631d22.glb",
+    "pos": [
+      -18,
+      0.00014950061063032772,
+      18
+    ],
+    "yaw": 2.35619,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:carousel": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "degPerSec": 6
+      },
+      "motion:horse_0": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 0
+      },
+      "motion:horse_2": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 1.57
+      },
+      "motion:horse_4": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 3.14
+      },
+      "motion:horse_6": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 4.71
+      },
+      "particles:smoke": {
+        "preset": "smoke",
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35,
+        "origin": [
+          0,
+          6.3,
+          0
+        ]
+      },
+      "sockets": {
+        "horse_0": {
+          "pos": [
+            2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_0"
+        },
+        "horse_2": {
+          "pos": [
+            0,
+            3.035,
+            2
+          ],
+          "yaw": 0,
+          "part": "horse_2"
+        },
+        "horse_4": {
+          "pos": [
+            -2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_4"
+        },
+        "horse_6": {
+          "pos": [
+            0,
+            3.035,
+            -2
+          ],
+          "yaw": 0,
+          "part": "horse_6"
+        }
+      }
+    }
+  },
+  "dryRunScope": "HTTP tuple only; apply also gates fresh snapshot occupants, collision, rights and live log drift",
+  "originalUploadSha256": "193c897dd511b5e050cf4dddf34d2c18a8793ab81fbae631d864bef666bfca8f",
+  "acknowledgements": [
+    {
+      "seq": 1583,
+      "ts": 1789974817955,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "spawn",
+      "args": {
+        "id": "nx-carousel",
+        "lib": "store/193c897dd511b5e0.glb",
+        "pos": [
+          -18,
+          0.00014950061063032772,
+          18
+        ],
+        "yaw": 2.35619,
+        "scale": 1
+      }
+    },
+    {
+      "seq": 1584,
+      "ts": 1789974818719,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "comp",
+      "args": {
+        "id": "nx-carousel",
+        "type": "motion:carousel",
+        "data": {
+          "type": "spin",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "degPerSec": 6
+        }
+      }
+    },
+    {
+      "seq": 1585,
+      "ts": 1789974819488,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "comp",
+      "args": {
+        "id": "nx-carousel",
+        "type": "motion:horse_0",
+        "data": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 0
+        }
+      }
+    },
+    {
+      "seq": 1586,
+      "ts": 1789974820262,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "comp",
+      "args": {
+        "id": "nx-carousel",
+        "type": "motion:horse_2",
+        "data": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 1.57
+        }
+      }
+    },
+    {
+      "seq": 1587,
+      "ts": 1789974821712,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "comp",
+      "args": {
+        "id": "nx-carousel",
+        "type": "motion:horse_4",
+        "data": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 3.14
+        }
+      }
+    },
+    {
+      "seq": 1588,
+      "ts": 1789974822475,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "comp",
+      "args": {
+        "id": "nx-carousel",
+        "type": "motion:horse_6",
+        "data": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 4.71
+        }
+      }
+    },
+    {
+      "seq": 1589,
+      "ts": 1789974823235,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "comp",
+      "args": {
+        "id": "nx-carousel",
+        "type": "particles:smoke",
+        "data": {
+          "preset": "smoke",
+          "count": 50,
+          "size": 0.4,
+          "speed": 0.35,
+          "origin": [
+            0,
+            6.3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "seq": 1590,
+      "ts": 1789974824011,
+      "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+      "verb": "comp",
+      "args": {
+        "id": "nx-carousel",
+        "type": "sockets",
+        "data": {
+          "horse_0": {
+            "pos": [
+              2,
+              3.035,
+              0
+            ],
+            "yaw": 0,
+            "part": "horse_0"
+          },
+          "horse_2": {
+            "pos": [
+              0,
+              3.035,
+              2
+            ],
+            "yaw": 0,
+            "part": "horse_2"
+          },
+          "horse_4": {
+            "pos": [
+              -2,
+              3.035,
+              0
+            ],
+            "yaw": 0,
+            "part": "horse_4"
+          },
+          "horse_6": {
+            "pos": [
+              0,
+              3.035,
+              -2
+            ],
+            "yaw": 0,
+            "part": "horse_6"
+          }
+        }
+      }
+    }
+  ],
+  "targetLib": "store/193c897dd511b5e0.glb",
+  "before": {
+    "id": "nx-carousel",
+    "lib": "store/b1f1154962631d22.glb",
+    "pos": [
+      -18,
+      0.00014950061063032772,
+      18
+    ],
+    "yaw": 2.35619,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:carousel": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "degPerSec": 6
+      },
+      "motion:horse_0": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 0
+      },
+      "motion:horse_2": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 1.57
+      },
+      "motion:horse_4": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 3.14
+      },
+      "motion:horse_6": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 4.71
+      },
+      "particles:smoke": {
+        "preset": "smoke",
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35,
+        "origin": [
+          0,
+          6.3,
+          0
+        ]
+      },
+      "sockets": {
+        "horse_0": {
+          "pos": [
+            2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_0"
+        },
+        "horse_2": {
+          "pos": [
+            0,
+            3.035,
+            2
+          ],
+          "yaw": 0,
+          "part": "horse_2"
+        },
+        "horse_4": {
+          "pos": [
+            -2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_4"
+        },
+        "horse_6": {
+          "pos": [
+            0,
+            3.035,
+            -2
+          ],
+          "yaw": 0,
+          "part": "horse_6"
+        }
+      }
+    },
+    "geometry": {
+      "tris": 93672,
+      "bbox": {
+        "min": [
+          -3.55,
+          0,
+          -3.55
+        ],
+        "max": [
+          3.55,
+          6.77,
+          3.84
+        ],
+        "size": [
+          7.1,
+          6.77,
+          7.39
+        ],
+        "center": [
+          0,
+          3.385,
+          0.145
+        ]
+      },
+      "topSurfaces": [
+        {
+          "y": 0.22,
+          "area": 34.679,
+          "x": [
+            -3.35,
+            3.35
+          ],
+          "z": [
+            -3.35,
+            3.35
+          ]
+        },
+        {
+          "y": 5.203,
+          "area": 31.941,
+          "x": [
+            -3.12,
+            3.12
+          ],
+          "z": [
+            -3.12,
+            3.12
+          ]
+        },
+        {
+          "y": 4.89,
+          "area": 29.8,
+          "x": [
+            -3.12,
+            3.12
+          ],
+          "z": [
+            -3.12,
+            3.12
+          ]
+        },
+        {
+          "y": 0.44,
+          "area": 28.183,
+          "x": [
+            -3.02,
+            3.02
+          ],
+          "z": [
+            -3.02,
+            3.02
+          ]
+        },
+        {
+          "y": 1.37,
+          "area": 26.665,
+          "x": [
+            -2.93,
+            2.93
+          ],
+          "z": [
+            -2.93,
+            2.93
+          ]
+        },
+        {
+          "y": 1.33,
+          "area": 26.121,
+          "x": [
+            -2.9,
+            2.9
+          ],
+          "z": [
+            -2.9,
+            2.9
+          ]
+        },
+        {
+          "y": 0.751,
+          "area": 25.626,
+          "x": [
+            -2.86,
+            2.86
+          ],
+          "z": [
+            -2.86,
+            3.54
+          ]
+        },
+        {
+          "y": 1.08,
+          "area": 24.004,
+          "x": [
+            -2.78,
+            2.78
+          ],
+          "z": [
+            -2.78,
+            2.78
+          ]
+        }
+      ],
+      "nodes": [
+        {
+          "name": "cr3_0",
+          "center": [
+            0,
+            0.11,
+            0
+          ],
+          "size": [
+            7.1,
+            0.22,
+            7.1
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.11,
+              0
+            ],
+            "size": [
+              7.1,
+              0.22,
+              7.1
+            ]
+          },
+          "tris": 80
+        },
+        {
+          "name": "cr3_1",
+          "center": [
+            0,
+            0.33,
+            0
+          ],
+          "size": [
+            6.36,
+            0.22,
+            6.36
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.33,
+              0
+            ],
+            "size": [
+              6.36,
+              0.22,
+              6.36
+            ]
+          },
+          "tris": 80
+        },
+        {
+          "name": "cr3_2",
+          "center": [
+            0,
+            2.89,
+            0
+          ],
+          "size": [
+            5.84,
+            4.92,
+            5.84
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              2.89,
+              0
+            ],
+            "size": [
+              5.84,
+              4.92,
+              5.84
+            ]
+          },
+          "tris": 176
+        },
+        {
+          "name": "cr3_3",
+          "center": [
+            0,
+            3.615,
+            0
+          ],
+          "size": [
+            6.24,
+            5.11,
+            6.24
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              3.615,
+              0
+            ],
+            "size": [
+              6.24,
+              5.11,
+              6.24
+            ]
+          },
+          "tris": 712
+        },
+        {
+          "name": "cr3_4",
+          "center": [
+            0,
+            5.4,
+            0
+          ],
+          "size": [
+            6.336,
+            1.18,
+            6.382
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              5.4,
+              0
+            ],
+            "size": [
+              6.336,
+              1.18,
+              6.382
+            ]
+          },
+          "tris": 64
+        },
+        {
+          "name": "cr3_5",
+          "center": [
+            0,
+            5.675,
+            0
+          ],
+          "size": [
+            6.336,
+            2.19,
+            6.382
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              5.675,
+              0
+            ],
+            "size": [
+              6.336,
+              2.19,
+              6.382
+            ]
+          },
+          "tris": 116
+        },
+        {
+          "name": "cr3_6",
+          "center": [
+            0,
+            4.42,
+            0
+          ],
+          "size": [
+            5.743,
+            0.2,
+            5.733
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              4.42,
+              0
+            ],
+            "size": [
+              5.743,
+              0.2,
+              5.733
+            ]
+          },
+          "tris": 1120
+        },
+        {
+          "name": "cr_tread_0",
+          "center": [
+            0,
+            0.54,
+            3.68
+          ],
+          "size": [
+            1.25,
+            0.12,
+            0.28
+          ],
+          "origin": [
+            0,
+            0.54,
+            3.68
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1.25,
+              0.12,
+              0.28
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_tread_1",
+          "center": [
+            0,
+            0.7,
+            3.4
+          ],
+          "size": [
+            1.25,
+            0.12,
+            0.28
+          ],
+          "origin": [
+            0,
+            0.7,
+            3.4
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1.25,
+              0.12,
+              0.28
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_tread_2",
+          "center": [
+            0,
+            0.86,
+            3.12
+          ],
+          "size": [
+            1.25,
+            0.12,
+            0.28
+          ],
+          "origin": [
+            0,
+            0.86,
+            3.12
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1.25,
+              0.12,
+              0.28
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_stair_cheek_-0.68",
+          "center": [
+            0.68,
+            0.31,
+            3.4
+          ],
+          "size": [
+            0.12,
+            0.62,
+            0.88
+          ],
+          "origin": [
+            0.68,
+            0.31,
+            3.4
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.12,
+              0.62,
+              0.88
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_stair_cheek_0.68",
+          "center": [
+            -0.68,
+            0.31,
+            3.4
+          ],
+          "size": [
+            0.12,
+            0.62,
+            0.88
+          ],
+          "origin": [
+            -0.68,
+            0.31,
+            3.4
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.12,
+              0.62,
+              0.88
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "carousel_0",
+          "center": [
+            0,
+            1,
+            0
+          ],
+          "size": [
+            5.72,
+            0.16,
+            5.72
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              5.72,
+              0.16,
+              5.72
+            ]
+          },
+          "tris": 96
+        },
+        {
+          "name": "carousel_1",
+          "center": [
+            0,
+            1.19,
+            0
+          ],
+          "size": [
+            5.8,
+            0.28,
+            5.8
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.19,
+              0
+            ],
+            "size": [
+              5.8,
+              0.28,
+              5.8
+            ]
+          },
+          "tris": 96
+        },
+        {
+          "name": "carousel_2",
+          "center": [
+            0,
+            3.18,
+            0
+          ],
+          "size": [
+            5.86,
+            3.86,
+            5.86
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              2.18,
+              0
+            ],
+            "size": [
+              5.86,
+              3.86,
+              5.86
+            ]
+          },
+          "tris": 544
+        },
+        {
+          "name": "carousel_3",
+          "center": [
+            0,
+            1.11,
+            0
+          ],
+          "size": [
+            5.18,
+            0.035,
+            5.18
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.11,
+              0
+            ],
+            "size": [
+              5.18,
+              0.035,
+              5.18
+            ]
+          },
+          "tris": 96
+        },
+        {
+          "name": "carousel_4",
+          "center": [
+            0,
+            2.961,
+            0
+          ],
+          "size": [
+            4.832,
+            3.737,
+            4.832
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              1.961,
+              0
+            ],
+            "size": [
+              4.832,
+              3.737,
+              4.832
+            ]
+          },
+          "tris": 128
+        },
+        {
+          "name": "carousel_5",
+          "center": [
+            0,
+            4.68,
+            0
+          ],
+          "size": [
+            6.48,
+            0.3,
+            6.48
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              3.68,
+              0
+            ],
+            "size": [
+              6.48,
+              0.3,
+              6.48
+            ]
+          },
+          "tris": 32
+        },
+        {
+          "name": "horse_2_0",
+          "center": [
+            0.083,
+            2.757,
+            2
+          ],
+          "size": [
+            1.983,
+            1.633,
+            0.613
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.737,
+              0.083
+            ],
+            "size": [
+              0.613,
+              1.633,
+              1.983
+            ]
+          },
+          "tris": 16034
+        },
+        {
+          "name": "horse_2_1",
+          "center": [
+            -0.04,
+            2.79,
+            2
+          ],
+          "size": [
+            0.62,
+            0.25,
+            0.6
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.77,
+              -0.04
+            ],
+            "size": [
+              0.6,
+              0.25,
+              0.62
+            ]
+          },
+          "tris": 1696
+        },
+        {
+          "name": "horse_2_2",
+          "center": [
+            -0.04,
+            2.697,
+            2
+          ],
+          "size": [
+            0.49,
+            0.825,
+            0.664
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.677,
+              -0.04
+            ],
+            "size": [
+              0.664,
+              0.825,
+              0.49
+            ]
+          },
+          "tris": 2176
+        },
+        {
+          "name": "horse_2_3",
+          "center": [
+            -0.015,
+            2.681,
+            2
+          ],
+          "size": [
+            2.123,
+            1.531,
+            0.554
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.661,
+              -0.015
+            ],
+            "size": [
+              0.554,
+              1.531,
+              2.123
+            ]
+          },
+          "tris": 2452
+        },
+        {
+          "name": "horse_2_4",
+          "center": [
+            0,
+            2.04,
+            2
+          ],
+          "size": [
+            0.371,
+            0.56,
+            0.39
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.02,
+              0
+            ],
+            "size": [
+              0.39,
+              0.56,
+              0.371
+            ]
+          },
+          "tris": 152
+        },
+        {
+          "name": "horse_0_0",
+          "center": [
+            2,
+            2.757,
+            -0.083
+          ],
+          "size": [
+            0.613,
+            1.633,
+            1.983
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.737,
+              0.083
+            ],
+            "size": [
+              0.613,
+              1.633,
+              1.983
+            ]
+          },
+          "tris": 16034
+        },
+        {
+          "name": "horse_0_1",
+          "center": [
+            2,
+            2.79,
+            0.04
+          ],
+          "size": [
+            0.6,
+            0.25,
+            0.62
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.77,
+              -0.04
+            ],
+            "size": [
+              0.6,
+              0.25,
+              0.62
+            ]
+          },
+          "tris": 1696
+        },
+        {
+          "name": "horse_0_2",
+          "center": [
+            2,
+            2.697,
+            0.04
+          ],
+          "size": [
+            0.664,
+            0.825,
+            0.49
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.677,
+              -0.04
+            ],
+            "size": [
+              0.664,
+              0.825,
+              0.49
+            ]
+          },
+          "tris": 2176
+        },
+        {
+          "name": "horse_0_3",
+          "center": [
+            2,
+            2.681,
+            0.015
+          ],
+          "size": [
+            0.554,
+            1.531,
+            2.123
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.661,
+              -0.015
+            ],
+            "size": [
+              0.554,
+              1.531,
+              2.123
+            ]
+          },
+          "tris": 2452
+        },
+        {
+          "name": "horse_0_4",
+          "center": [
+            2,
+            2.04,
+            0
+          ],
+          "size": [
+            0.39,
+            0.56,
+            0.371
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.02,
+              0
+            ],
+            "size": [
+              0.39,
+              0.56,
+              0.371
+            ]
+          },
+          "tris": 152
+        },
+        {
+          "name": "horse_4_0",
+          "center": [
+            -2,
+            2.757,
+            0.083
+          ],
+          "size": [
+            0.613,
+            1.633,
+            1.983
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.737,
+              0.083
+            ],
+            "size": [
+              0.613,
+              1.633,
+              1.983
+            ]
+          },
+          "tris": 16034
+        },
+        {
+          "name": "horse_4_1",
+          "center": [
+            -2,
+            2.79,
+            -0.04
+          ],
+          "size": [
+            0.6,
+            0.25,
+            0.62
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.77,
+              -0.04
+            ],
+            "size": [
+              0.6,
+              0.25,
+              0.62
+            ]
+          },
+          "tris": 1696
+        },
+        {
+          "name": "horse_4_2",
+          "center": [
+            -2,
+            2.697,
+            -0.04
+          ],
+          "size": [
+            0.664,
+            0.825,
+            0.49
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.677,
+              -0.04
+            ],
+            "size": [
+              0.664,
+              0.825,
+              0.49
+            ]
+          },
+          "tris": 2176
+        },
+        {
+          "name": "horse_4_3",
+          "center": [
+            -2,
+            2.681,
+            -0.015
+          ],
+          "size": [
+            0.554,
+            1.531,
+            2.123
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.661,
+              -0.015
+            ],
+            "size": [
+              0.554,
+              1.531,
+              2.123
+            ]
+          },
+          "tris": 2452
+        }
+      ],
+      "sampled": false
+    },
+    "note": "geometry coords are the MODEL's local frame; sockets use the same frame, so a topSurface center is a socket pos verbatim"
+  },
+  "plan": {
+    "action": "replace",
+    "verbs": [
+      {
+        "verb": "spawn",
+        "args": {
+          "id": "nx-carousel",
+          "lib": "store/193c897dd511b5e0.glb",
+          "pos": [
+            -18,
+            0.00014950061063032772,
+            18
+          ],
+          "yaw": 2.35619,
+          "scale": 1
+        }
+      },
+      {
+        "verb": "comp",
+        "args": {
+          "id": "nx-carousel",
+          "type": "motion:carousel",
+          "data": {
+            "type": "spin",
+            "axis": [
+              0,
+              1,
+              0
+            ],
+            "pivot": [
+              0,
+              0,
+              0
+            ],
+            "degPerSec": 6
+          }
+        }
+      },
+      {
+        "verb": "comp",
+        "args": {
+          "id": "nx-carousel",
+          "type": "motion:horse_0",
+          "data": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 0
+          }
+        }
+      },
+      {
+        "verb": "comp",
+        "args": {
+          "id": "nx-carousel",
+          "type": "motion:horse_2",
+          "data": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 1.57
+          }
+        }
+      },
+      {
+        "verb": "comp",
+        "args": {
+          "id": "nx-carousel",
+          "type": "motion:horse_4",
+          "data": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 3.14
+          }
+        }
+      },
+      {
+        "verb": "comp",
+        "args": {
+          "id": "nx-carousel",
+          "type": "motion:horse_6",
+          "data": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 4.71
+          }
+        }
+      },
+      {
+        "verb": "comp",
+        "args": {
+          "id": "nx-carousel",
+          "type": "particles:smoke",
+          "data": {
+            "preset": "smoke",
+            "count": 50,
+            "size": 0.4,
+            "speed": 0.35,
+            "origin": [
+              0,
+              6.3,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "verb": "comp",
+        "args": {
+          "id": "nx-carousel",
+          "type": "sockets",
+          "data": {
+            "horse_0": {
+              "pos": [
+                2,
+                3.035,
+                0
+              ],
+              "yaw": 0,
+              "part": "horse_0"
+            },
+            "horse_2": {
+              "pos": [
+                0,
+                3.035,
+                2
+              ],
+              "yaw": 0,
+              "part": "horse_2"
+            },
+            "horse_4": {
+              "pos": [
+                -2,
+                3.035,
+                0
+              ],
+              "yaw": 0,
+              "part": "horse_4"
+            },
+            "horse_6": {
+              "pos": [
+                0,
+                3.035,
+                -2
+              ],
+              "yaw": 0,
+              "part": "horse_6"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "beforeSnapshot": {
+    "id": "nx-carousel",
+    "lib": "store/b1f1154962631d22.glb",
+    "pos": [
+      -18,
+      0.00014950061063032772,
+      18
+    ],
+    "yaw": 2.35619,
+    "scale": 1,
+    "actor": "arthur-carousel-rollout-9bc7a1c98c0341b3b7ce5fec",
+    "ts": 1789969004556,
+    "comp": {
+      "motion:carousel": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "degPerSec": 6
+      },
+      "motion:horse_0": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 0
+      },
+      "motion:horse_2": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 1.57
+      },
+      "motion:horse_4": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 3.14
+      },
+      "motion:horse_6": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 4.71
+      },
+      "particles:smoke": {
+        "preset": "smoke",
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35,
+        "origin": [
+          0,
+          6.3,
+          0
+        ]
+      },
+      "sockets": {
+        "horse_0": {
+          "pos": [
+            2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_0"
+        },
+        "horse_2": {
+          "pos": [
+            0,
+            3.035,
+            2
+          ],
+          "yaw": 0,
+          "part": "horse_2"
+        },
+        "horse_4": {
+          "pos": [
+            -2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_4"
+        },
+        "horse_6": {
+          "pos": [
+            0,
+            3.035,
+            -2
+          ],
+          "yaw": 0,
+          "part": "horse_6"
+        }
+      }
+    },
+    "parent": null
+  },
+  "snapshotSeq": 1582,
+  "upload": {
+    "path": "store/193c897dd511b5e0.glb",
+    "originalSha256": "193c897dd511b5e050cf4dddf34d2c18a8793ab81fbae631d864bef666bfca8f"
+  },
+  "servedAfterUpload": {
+    "sha256": "193c897dd511b5e050cf4dddf34d2c18a8793ab81fbae631d864bef666bfca8f",
+    "bytes": 359688,
+    "matchesOriginalUpload": true,
+    "provenance": "served-library-bytes; may be server-optimized",
+    "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/hero-assets/polish-338-carousel-skewamp/reports/deploy-apply-report.json.upload.served.glb",
+    "lib": "store/193c897dd511b5e0.glb",
+    "fetchedAt": "2026-09-21T07:13:38.122Z",
+    "note": "Library prefers asynchronous store-min shadow; this is exactly what was served at fetchedAt, not proof optimization has finished."
+  },
+  "afterSnapshot": {
+    "id": "nx-carousel",
+    "lib": "store/193c897dd511b5e0.glb",
+    "pos": [
+      -18,
+      0.00014950061063032772,
+      18
+    ],
+    "yaw": 2.35619,
+    "scale": 1,
+    "actor": "arthur-carousel-rollout-8c119e759cd2491ba74c7c7e",
+    "ts": 1789974817955,
+    "comp": {
+      "motion:carousel": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "degPerSec": 6
+      },
+      "motion:horse_0": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 0
+      },
+      "motion:horse_2": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 1.57
+      },
+      "motion:horse_4": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 3.14
+      },
+      "motion:horse_6": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 4.71
+      },
+      "particles:smoke": {
+        "preset": "smoke",
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35,
+        "origin": [
+          0,
+          6.3,
+          0
+        ]
+      },
+      "sockets": {
+        "horse_0": {
+          "pos": [
+            2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_0"
+        },
+        "horse_2": {
+          "pos": [
+            0,
+            3.035,
+            2
+          ],
+          "yaw": 0,
+          "part": "horse_2"
+        },
+        "horse_4": {
+          "pos": [
+            -2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_4"
+        },
+        "horse_6": {
+          "pos": [
+            0,
+            3.035,
+            -2
+          ],
+          "yaw": 0,
+          "part": "horse_6"
+        }
+      }
+    },
+    "parent": null
+  },
+  "after": {
+    "id": "nx-carousel",
+    "lib": "store/193c897dd511b5e0.glb",
+    "pos": [
+      -18,
+      0.00014950061063032772,
+      18
+    ],
+    "yaw": 2.35619,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:carousel": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "degPerSec": 6
+      },
+      "motion:horse_0": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 0
+      },
+      "motion:horse_2": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 1.57
+      },
+      "motion:horse_4": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 3.14
+      },
+      "motion:horse_6": {
+        "type": "bob",
+        "amp": 0.18,
+        "period": 2.4,
+        "phase": 4.71
+      },
+      "particles:smoke": {
+        "preset": "smoke",
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35,
+        "origin": [
+          0,
+          6.3,
+          0
+        ]
+      },
+      "sockets": {
+        "horse_0": {
+          "pos": [
+            2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_0"
+        },
+        "horse_2": {
+          "pos": [
+            0,
+            3.035,
+            2
+          ],
+          "yaw": 0,
+          "part": "horse_2"
+        },
+        "horse_4": {
+          "pos": [
+            -2,
+            3.035,
+            0
+          ],
+          "yaw": 0,
+          "part": "horse_4"
+        },
+        "horse_6": {
+          "pos": [
+            0,
+            3.035,
+            -2
+          ],
+          "yaw": 0,
+          "part": "horse_6"
+        }
+      }
+    },
+    "geometry": {
+      "tris": 93672,
+      "bbox": {
+        "min": [
+          -3.55,
+          0,
+          -3.55
+        ],
+        "max": [
+          3.55,
+          6.77,
+          3.84
+        ],
+        "size": [
+          7.1,
+          6.77,
+          7.39
+        ],
+        "center": [
+          0,
+          3.385,
+          0.145
+        ]
+      },
+      "topSurfaces": [
+        {
+          "y": 0.22,
+          "area": 34.679,
+          "x": [
+            -3.35,
+            3.35
+          ],
+          "z": [
+            -3.35,
+            3.35
+          ]
+        },
+        {
+          "y": 5.203,
+          "area": 31.941,
+          "x": [
+            -3.12,
+            3.12
+          ],
+          "z": [
+            -3.12,
+            3.12
+          ]
+        },
+        {
+          "y": 4.89,
+          "area": 29.8,
+          "x": [
+            -3.12,
+            3.12
+          ],
+          "z": [
+            -3.12,
+            3.12
+          ]
+        },
+        {
+          "y": 0.44,
+          "area": 28.183,
+          "x": [
+            -3.02,
+            3.02
+          ],
+          "z": [
+            -3.02,
+            3.02
+          ]
+        },
+        {
+          "y": 1.37,
+          "area": 26.665,
+          "x": [
+            -2.93,
+            2.93
+          ],
+          "z": [
+            -2.93,
+            2.93
+          ]
+        },
+        {
+          "y": 1.33,
+          "area": 26.121,
+          "x": [
+            -2.9,
+            2.9
+          ],
+          "z": [
+            -2.9,
+            2.9
+          ]
+        },
+        {
+          "y": 0.751,
+          "area": 25.626,
+          "x": [
+            -2.86,
+            2.86
+          ],
+          "z": [
+            -2.86,
+            3.54
+          ]
+        },
+        {
+          "y": 1.08,
+          "area": 24.004,
+          "x": [
+            -2.78,
+            2.78
+          ],
+          "z": [
+            -2.78,
+            2.78
+          ]
+        }
+      ],
+      "nodes": [
+        {
+          "name": "cr3_0",
+          "center": [
+            0,
+            0.11,
+            0
+          ],
+          "size": [
+            7.1,
+            0.22,
+            7.1
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.11,
+              0
+            ],
+            "size": [
+              7.1,
+              0.22,
+              7.1
+            ]
+          },
+          "tris": 80
+        },
+        {
+          "name": "cr3_1",
+          "center": [
+            0,
+            0.33,
+            0
+          ],
+          "size": [
+            6.36,
+            0.22,
+            6.36
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.33,
+              0
+            ],
+            "size": [
+              6.36,
+              0.22,
+              6.36
+            ]
+          },
+          "tris": 80
+        },
+        {
+          "name": "cr3_2",
+          "center": [
+            0,
+            2.89,
+            0
+          ],
+          "size": [
+            5.84,
+            4.92,
+            5.84
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              2.89,
+              0
+            ],
+            "size": [
+              5.84,
+              4.92,
+              5.84
+            ]
+          },
+          "tris": 176
+        },
+        {
+          "name": "cr3_3",
+          "center": [
+            0,
+            3.615,
+            0
+          ],
+          "size": [
+            6.24,
+            5.11,
+            6.24
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              3.615,
+              0
+            ],
+            "size": [
+              6.24,
+              5.11,
+              6.24
+            ]
+          },
+          "tris": 712
+        },
+        {
+          "name": "cr3_4",
+          "center": [
+            0,
+            5.4,
+            0
+          ],
+          "size": [
+            6.336,
+            1.18,
+            6.382
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              5.4,
+              0
+            ],
+            "size": [
+              6.336,
+              1.18,
+              6.382
+            ]
+          },
+          "tris": 64
+        },
+        {
+          "name": "cr3_5",
+          "center": [
+            0,
+            5.675,
+            0
+          ],
+          "size": [
+            6.336,
+            2.19,
+            6.382
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              5.675,
+              0
+            ],
+            "size": [
+              6.336,
+              2.19,
+              6.382
+            ]
+          },
+          "tris": 116
+        },
+        {
+          "name": "cr3_6",
+          "center": [
+            0,
+            4.42,
+            0
+          ],
+          "size": [
+            5.743,
+            0.2,
+            5.733
+          ],
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              4.42,
+              0
+            ],
+            "size": [
+              5.743,
+              0.2,
+              5.733
+            ]
+          },
+          "tris": 1120
+        },
+        {
+          "name": "cr_tread_0",
+          "center": [
+            0,
+            0.54,
+            3.68
+          ],
+          "size": [
+            1.25,
+            0.12,
+            0.28
+          ],
+          "origin": [
+            0,
+            0.54,
+            3.68
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1.25,
+              0.12,
+              0.28
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_tread_1",
+          "center": [
+            0,
+            0.7,
+            3.4
+          ],
+          "size": [
+            1.25,
+            0.12,
+            0.28
+          ],
+          "origin": [
+            0,
+            0.7,
+            3.4
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1.25,
+              0.12,
+              0.28
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_tread_2",
+          "center": [
+            0,
+            0.86,
+            3.12
+          ],
+          "size": [
+            1.25,
+            0.12,
+            0.28
+          ],
+          "origin": [
+            0,
+            0.86,
+            3.12
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1.25,
+              0.12,
+              0.28
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_stair_cheek_-0.68",
+          "center": [
+            0.68,
+            0.31,
+            3.4
+          ],
+          "size": [
+            0.12,
+            0.62,
+            0.88
+          ],
+          "origin": [
+            0.68,
+            0.31,
+            3.4
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.12,
+              0.62,
+              0.88
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "cr_stair_cheek_0.68",
+          "center": [
+            -0.68,
+            0.31,
+            3.4
+          ],
+          "size": [
+            0.12,
+            0.62,
+            0.88
+          ],
+          "origin": [
+            -0.68,
+            0.31,
+            3.4
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.12,
+              0.62,
+              0.88
+            ]
+          },
+          "tris": 12
+        },
+        {
+          "name": "carousel_0",
+          "center": [
+            0,
+            1,
+            0
+          ],
+          "size": [
+            5.72,
+            0.16,
+            5.72
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              5.72,
+              0.16,
+              5.72
+            ]
+          },
+          "tris": 96
+        },
+        {
+          "name": "carousel_1",
+          "center": [
+            0,
+            1.19,
+            0
+          ],
+          "size": [
+            5.8,
+            0.28,
+            5.8
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.19,
+              0
+            ],
+            "size": [
+              5.8,
+              0.28,
+              5.8
+            ]
+          },
+          "tris": 96
+        },
+        {
+          "name": "carousel_2",
+          "center": [
+            0,
+            3.18,
+            0
+          ],
+          "size": [
+            5.86,
+            3.86,
+            5.86
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              2.18,
+              0
+            ],
+            "size": [
+              5.86,
+              3.86,
+              5.86
+            ]
+          },
+          "tris": 544
+        },
+        {
+          "name": "carousel_3",
+          "center": [
+            0,
+            1.11,
+            0
+          ],
+          "size": [
+            5.18,
+            0.035,
+            5.18
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.11,
+              0
+            ],
+            "size": [
+              5.18,
+              0.035,
+              5.18
+            ]
+          },
+          "tris": 96
+        },
+        {
+          "name": "carousel_4",
+          "center": [
+            0,
+            2.961,
+            0
+          ],
+          "size": [
+            4.832,
+            3.737,
+            4.832
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              1.961,
+              0
+            ],
+            "size": [
+              4.832,
+              3.737,
+              4.832
+            ]
+          },
+          "tris": 128
+        },
+        {
+          "name": "carousel_5",
+          "center": [
+            0,
+            4.68,
+            0
+          ],
+          "size": [
+            6.48,
+            0.3,
+            6.48
+          ],
+          "origin": [
+            0,
+            1,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              3.68,
+              0
+            ],
+            "size": [
+              6.48,
+              0.3,
+              6.48
+            ]
+          },
+          "tris": 32
+        },
+        {
+          "name": "horse_2_0",
+          "center": [
+            0.083,
+            2.757,
+            2
+          ],
+          "size": [
+            1.983,
+            1.633,
+            0.613
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.737,
+              0.083
+            ],
+            "size": [
+              0.613,
+              1.633,
+              1.983
+            ]
+          },
+          "tris": 16034
+        },
+        {
+          "name": "horse_2_1",
+          "center": [
+            -0.04,
+            2.79,
+            2
+          ],
+          "size": [
+            0.62,
+            0.25,
+            0.6
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.77,
+              -0.04
+            ],
+            "size": [
+              0.6,
+              0.25,
+              0.62
+            ]
+          },
+          "tris": 1696
+        },
+        {
+          "name": "horse_2_2",
+          "center": [
+            -0.04,
+            2.697,
+            2
+          ],
+          "size": [
+            0.49,
+            0.825,
+            0.664
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.677,
+              -0.04
+            ],
+            "size": [
+              0.664,
+              0.825,
+              0.49
+            ]
+          },
+          "tris": 2176
+        },
+        {
+          "name": "horse_2_3",
+          "center": [
+            -0.015,
+            2.681,
+            2
+          ],
+          "size": [
+            2.123,
+            1.531,
+            0.554
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.661,
+              -0.015
+            ],
+            "size": [
+              0.554,
+              1.531,
+              2.123
+            ]
+          },
+          "tris": 2452
+        },
+        {
+          "name": "horse_2_4",
+          "center": [
+            0,
+            2.04,
+            2
+          ],
+          "size": [
+            0.371,
+            0.56,
+            0.39
+          ],
+          "origin": [
+            0,
+            2.02,
+            2
+          ],
+          "local": {
+            "center": [
+              0,
+              0.02,
+              0
+            ],
+            "size": [
+              0.39,
+              0.56,
+              0.371
+            ]
+          },
+          "tris": 152
+        },
+        {
+          "name": "horse_0_0",
+          "center": [
+            2,
+            2.757,
+            -0.083
+          ],
+          "size": [
+            0.613,
+            1.633,
+            1.983
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.737,
+              0.083
+            ],
+            "size": [
+              0.613,
+              1.633,
+              1.983
+            ]
+          },
+          "tris": 16034
+        },
+        {
+          "name": "horse_0_1",
+          "center": [
+            2,
+            2.79,
+            0.04
+          ],
+          "size": [
+            0.6,
+            0.25,
+            0.62
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.77,
+              -0.04
+            ],
+            "size": [
+              0.6,
+              0.25,
+              0.62
+            ]
+          },
+          "tris": 1696
+        },
+        {
+          "name": "horse_0_2",
+          "center": [
+            2,
+            2.697,
+            0.04
+          ],
+          "size": [
+            0.664,
+            0.825,
+            0.49
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.677,
+              -0.04
+            ],
+            "size": [
+              0.664,
+              0.825,
+              0.49
+            ]
+          },
+          "tris": 2176
+        },
+        {
+          "name": "horse_0_3",
+          "center": [
+            2,
+            2.681,
+            0.015
+          ],
+          "size": [
+            0.554,
+            1.531,
+            2.123
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.661,
+              -0.015
+            ],
+            "size": [
+              0.554,
+              1.531,
+              2.123
+            ]
+          },
+          "tris": 2452
+        },
+        {
+          "name": "horse_0_4",
+          "center": [
+            2,
+            2.04,
+            0
+          ],
+          "size": [
+            0.39,
+            0.56,
+            0.371
+          ],
+          "origin": [
+            2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.02,
+              0
+            ],
+            "size": [
+              0.39,
+              0.56,
+              0.371
+            ]
+          },
+          "tris": 152
+        },
+        {
+          "name": "horse_4_0",
+          "center": [
+            -2,
+            2.757,
+            0.083
+          ],
+          "size": [
+            0.613,
+            1.633,
+            1.983
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.737,
+              0.083
+            ],
+            "size": [
+              0.613,
+              1.633,
+              1.983
+            ]
+          },
+          "tris": 16034
+        },
+        {
+          "name": "horse_4_1",
+          "center": [
+            -2,
+            2.79,
+            -0.04
+          ],
+          "size": [
+            0.6,
+            0.25,
+            0.62
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.77,
+              -0.04
+            ],
+            "size": [
+              0.6,
+              0.25,
+              0.62
+            ]
+          },
+          "tris": 1696
+        },
+        {
+          "name": "horse_4_2",
+          "center": [
+            -2,
+            2.697,
+            -0.04
+          ],
+          "size": [
+            0.664,
+            0.825,
+            0.49
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.677,
+              -0.04
+            ],
+            "size": [
+              0.664,
+              0.825,
+              0.49
+            ]
+          },
+          "tris": 2176
+        },
+        {
+          "name": "horse_4_3",
+          "center": [
+            -2,
+            2.681,
+            -0.015
+          ],
+          "size": [
+            0.554,
+            1.531,
+            2.123
+          ],
+          "origin": [
+            -2,
+            2.02,
+            0
+          ],
+          "local": {
+            "center": [
+              0,
+              0.661,
+              -0.015
+            ],
+            "size": [
+              0.554,
+              1.531,
+              2.123
+            ]
+          },
+          "tris": 2452
+        }
+      ],
+      "sampled": false
+    },
+    "note": "geometry coords are the MODEL's local frame; sockets use the same frame, so a topSurface center is a socket pos verbatim"
+  },
+  "served": {
+    "sha256": "2d4306ecede6e7493f72851792da16a085604931372beddf74cd398bc7ec1096",
+    "bytes": 328572,
+    "matchesOriginalUpload": false,
+    "provenance": "served-library-bytes; may be server-optimized",
+    "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/hero-assets/polish-338-carousel-skewamp/reports/deploy-apply-report.json.verified.served.glb",
+    "lib": "store/193c897dd511b5e0.glb",
+    "fetchedAt": "2026-09-21T07:13:49.035Z",
+    "note": "Library prefers asynchronous store-min shadow; this is exactly what was served at fetchedAt, not proof optimization has finished."
+  }
+}

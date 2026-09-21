@@ -1,0 +1,112 @@
+{
+ "deck-day": {
+  "changed_px": 61366,
+  "bbox": [
+   0,
+   0,
+   960,
+   601
+  ],
+  "total": 691200
+ },
+ "deck-night": {
+  "changed_px": 38918,
+  "bbox": [
+   0,
+   0,
+   956,
+   598
+  ],
+  "total": 691200
+ },
+ "boarding-day": {
+  "changed_px": 56035,
+  "bbox": [
+   0,
+   0,
+   960,
+   464
+  ],
+  "total": 691200
+ },
+ "boarding-night": {
+  "changed_px": 33747,
+  "bbox": [
+   0,
+   0,
+   960,
+   463
+  ],
+  "total": 691200
+ },
+ "gameplay-day": {
+  "changed_px": 9968,
+  "bbox": [
+   313,
+   172,
+   644,
+   520
+  ],
+  "total": 691200
+ },
+ "gameplay-night": {
+  "changed_px": 7274,
+  "bbox": [
+   332,
+   177,
+   616,
+   520
+  ],
+  "total": 691200
+ },
+ "aerial-day": {
+  "changed_px": 3107,
+  "bbox": [
+   0,
+   11,
+   960,
+   708
+  ],
+  "total": 691200
+ },
+ "aerial-night": {
+  "changed_px": 449,
+  "bbox": [
+   0,
+   11,
+   958,
+   708
+  ],
+  "total": 691200
+ },
+ "approach-day": {
+  "changed_px": 33962,
+  "bbox": [
+   161,
+   0,
+   795,
+   701
+  ],
+  "total": 691200
+ },
+ "approach-night": {
+  "changed_px": 23233,
+  "bbox": [
+   164,
+   0,
+   790,
+   647
+  ],
+  "total": 691200
+ },
+ "side-day": {
+  "changed_px": 14554,
+  "bbox": [
+   189,
+   84,
+   711,
+   574
+  ],
+  "total": 691200
+ }
+}

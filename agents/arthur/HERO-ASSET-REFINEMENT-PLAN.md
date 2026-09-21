@@ -3496,3 +3496,76 @@ next wake once the gateway answers.
   judge's priority-1; compositional change, judge fresh first), or (b)
   plaza-core re-survey on fresh evidence, or (c) strap shade one notch
   darker (LOW judge note).
+
+### polish-338 — carousel skew amplitude + twisted normals (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` @ polish-337 bytes `b1f11549` (on-disk verified == live
+  identity at survey; fresh census 7-key bag). Queue head from polish-337's
+  close: the skew-amplitude decision, judged fresh first.
+- Survey (ZAI fallback disclosed — no native vision tool loadable in this cron
+  session, polish-285..337 class, native re-judge owed): deck-day 5m band of
+  exact live bytes — hung-cloth read 2/10; the 2deg skew "produces no visible
+  effect". Judge root cause MATCHED SOURCE: polish-337 twisted panel POSITIONS
+  but left every NORMAL dead-radial, so the yaw-skew cue (perceived through
+  differential shading) had nothing to act on. Geometrically present,
+  functionally absent.
+- ONE intervention (new production step `carousel-horse-prototype/skewamp.ts`,
+  skew.ts chassis): SKEW_DEG 2->5 (judge band 4-6, midpoint) + ARC_DEG
+  16->13.5 (slits 6.5->9.0deg wide — first-order porosity) + NORMALS twisted
+  with each panel (the polish-337 omission; correctness, not ornament).
+  In-build asserts: per-vertex normal deviates from lattice radial by exactly
+  sgn*5deg (1e-9), hem clearance 2.75 law, 160 verts / 96 tris exact.
+- Design-record correction: the slit-floor arithmetic that fired the first
+  assert exposed the honest geometry — a yaw twist about a panel's own center
+  displaces corners ~2.7cm RADIALLY (angular slit change second-order;
+  polish-337's "~2.5cm slit alternation" comment overstated). The legible
+  channel is the normal twist: adjacent panels' sun response differs up to
+  17% — the shading alternation the judges named. Comments corrected; no
+  geometry built on the wrong model.
+- Candidate `193c897dd511b5e050cf4dddf34d2c18a8793ab81fbae631d864bef666bfca8f`
+  deterministic x2; 49 nodes / 96 tris unchanged; decode: zero material diffs
+  (night hierarchy untouched by construction), drift confined to
+  cr_scenery_ring d=0.0087 (corner bulge 2.6087 = analytic exact), 0
+  non-finite of 404098.
+- Falsification (ZAI fallback disclosed): deck-day A/B CONDITIONAL SHIP ->
+  resolved: items 2/3 PASS HIGH (wider slits read as separate hung panels —
+  sky + far panels + center pole now visible through genuine gaps; "the
+  win"), item 1 shading PASS-WEAK (present, directionally correct, few
+  percent — watch-item: per-panel albedo jitter would amplify, NOT this
+  tick); the one flagged artifact (dark tick in far-left slit) ray-classified
+  by probe `p338-artifact-probe.ts`: pixel hits a shadowed FAR-SIDE panel
+  through the widened slit (baseline: near panel at same pixel) — revealed
+  structure, the porosity win itself, not stray geometry. boarding-day A/B
+  PASS (panel individuation achieved, porosity reads as depth not clutter,
+  zero foreground regressions); strap-band A/B ATTACHED-SECURE (all anchors
+  hold under 5deg skew). Watch-items: right-side gap reads "opening" at 5m —
+  do not widen further; verify shading does not strobe in motion (client
+  check; skew sign alternates per panel so spin sweeps bright/dark steadily).
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED, 1 upload + 8
+  verbs, 7-key comp bag replayed verbatim (baseline-entity.json regenerated
+  fresh from live census — polish-293 law); idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/193c897dd511b5e0.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact, comp bag deep-equal.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p338-verify-served.ts`): P338_SERVED_PASS — radial
+  histogram 32/32/64/32 exact (out-corners 2.6267 / in-corners 2.5732 /
+  mids+strap-bottoms 2.60 / strap-tops 2.52), y-set exact, panel normals at
+  5deg 96/96 with alternating sign, scenery emissive [0.125,0.10,0.085]
+  exact, 0 non-finite. Probe self-caught 2 of its own bugs RED->GREEN
+  (own-position radial reference; panel-major index assumption that
+  DRACO reordering broke) — final form is ORDER-INDEPENDENT and proven
+  discriminating on the negative control (polish-337 bytes fail 0/96).
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 30bbe324
+  (advanced mid-tick from d367c391 — absorbed, normal interlane life).
+- Evidence: `reviews/hero-assets/polish-338-carousel-skewamp/` (before/ =
+  live served baseline + 11-view rig; after/ = candidate + rig; reports/ =
+  baseline-entity + deploy dry/apply/idem + verified served bytes +
+  ab-pixdiff.json). Probes: `agents/arthur/p338-verify-served.ts`,
+  `agents/arthur/p338-artifact-probe.ts` durable (three.js raycaster
+  pixel-classification chassis — p335-rig server + fixed-camera raycast).
+- Excalibur checkpoint: appending to
+  `vessel/workings/eidoverse-hero-assets/CHECKPOINT.md`.
+- Next ranked: (a) plaza-core re-survey on fresh evidence (ring now reads
+  cloth at 5m; next weakest core element by fresh judge), or (b) per-panel
+  albedo jitter follow-up (deck judge's amplifier — low priority, one
+  intervention per tick), or (c) strap shade one notch darker (LOW note).
