@@ -24982,3 +24982,58 @@ struct-320, D+0 E+0).
 
 Next queue head: unchanged — Bill's routing executes the same wakeup it
 arrives; until then the hold repeats with one-line status.
+
+## struct-321 (2026-09-21): R11-130 lawful HOLD — build ticks hold on
+## Bill's next-family decision (surfaced struct-278, forty-third consecutive
+## — one-line pointer form per the ~3-tick token-burn law)
+
+321%3=0 refine-slot tick (refine pool empty of payable items, 40+ ticks;
+owed re-judges cron-unpayable — tool_search fresh 33 tools: terminal 1 +
+zai-vision 8 + repoprompt 24, no native vision tool in session catalog,
+struct-169..320 lineage). Gate ALL PASS real exit 0 tick-start (unpiped
+/tmp/struct321-gate.log, GATE_EXIT:0 + ALL PASS verdict at 49e468a9
+dress-238 HEAD, foreign domain; range 6b569323..HEAD = one foreign hold
+commit, keyword grep Johnson/Kepler/Poinsot/handedness/next-family/Bill/
+verdict: zero hits, zero Bill directives). No committed placement carry
+banked (tetrakis/trioct/trit all LIVE); shard re-derived empty fresh
+(IMPROVE-PLAN.md [OPEN] rows: 0 lines; IMPROVEMENTS.md open-row grep hits
+are long-closed historical prose in struct-60/90/91/97/98 entries,
+disclosed class); ledger max re-derived struct-320 -> struct-321
+immediately before append (numeric extraction; entry landed exactly once,
+law exact 2371123).
+
+Native vision: ABSENT from the cron catalog all tick (disclosed
+cron-unpayable class). Owed board unchanged, riding: tetrakis/trit/trioct
+v1 ZAI-fallback judgments (banked frames are the re-judge substrate for
+the first windowed session with native).
+
+Task-prompt priority items verified resolved on prior ticks (re-confirmed
+by pins this tick): costa v2 carry long closed (judged ACCEPTED
+struct-167, live era struct-168+); hypar row 22 closed natively survey-16
+(struct-48: debt board 4/4 CLEARED); R11 Amendment-1 weak reads cured
+(survey-82 gyroid v2 post-cure CLEAN; enneper v2 lineage struct-170) —
+no open rows.
+
+Live census 421 entities (next-live-census.ts via ~/.bun/bin/bun, exit
+0; FULLY QUIET tick vs struct-320's /tmp/struct320-census.json capture by
+id-set + tuple diff: 421==421, ZERO arrivals / ZERO departures / ZERO
+tuple moves): nx-struct-tetrakis store/f2e8a62adf84c7c8.glb [93.474581,
+-0.019616, -45.590599] yaw 4.642575810304916; nx-struct-trioct
+store/9f5d016efcb3a6a5.glb [-95.721566, 0.036572, 46.686527] yaw
+1.5009831567151233; nx-struct-trit store/c46f5a580e1da32b.glb [60.225526,
+-0.03243, -86.010965] yaw 5.1487212933832724 — all three PIN_EXACT
+(python deep-compare vs pins, maxdelta 0.0), zero drift. 127 struct-domain
+entities, all accounted. Foreign dirt left untouched per the ownership
+law.
+
+DISPOSITION: lawful hold (forty-third consecutive — one-line pointer
+only: Bill's routing unblocks the lane, struct-278 records the four
+options: Johnson solids / Kepler-Poinsot stars / the chiral pair's
+handedness call / his own routing). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
+
+Files: STRUCTURES-PLAN.md (this block) + IMPROVEMENTS.md (one append
+struct-321, D+0 E+0).
+
+Next queue head: unchanged — Bill's routing executes the same wakeup it
+arrives; until then the hold repeats with one-line status.
