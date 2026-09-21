@@ -19060,3 +19060,54 @@ sweep-59 rotation-repair class; committed pointer honored per law, both
 pairs remain well inside cadence); walk tools interior-walk-forge.ts
 (1559B) + interior-walk-potter.ts (1571B), ls-verify before walks per
 law).
+
+
+sweep-388: CLEAN SWEEP, fully quiet tick (159th consecutive
+quiet-or-classified). Tick-start HEAD d7d4d5a3 (dress-231 lawful hold);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root (cron PATH
+lacks bun — invoked via ~/.bun/bin/bun per the dress-231/struct-309 env
+note), ledger law EXACT 2371111 at first probe. Interlane md5 86b2936f
+stable, SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools drained
+(IMPROVE-PLAN 7fa8a224 unchanged zero open rows, CITY-PLAN-V2 cae6b928
+unchanged — audit-continues freeze banner governs via loop/plan reload);
+no sweep-owned dirt. Census 419==419 (381 thing + 38 light) vs the
+committed sweep-387 baseline sha16 80f1805a4036cb40: 0 arrivals, 0
+departures, 0 drift on id/pos/yaw/lib/scale/kind/bbox/comp across BOTH
+pairwise diffs (baseline-vs-A and A-vs-B, 20s-paced epoch-B re-read) —
+single settled epoch, no baseline rewrite due (sweep-384/387 class).
+Overlap: SAT 381 bbox non-light / 261 exempt-classified / 0 coverage
+holes, real exit 3 on exactly ONE unclassified = R-121 lamp-n|
+nx-town-mapboard -0.407, known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 344th sweep since routing, NOT new, no escalation due (law keys
+severity-1); zero new contacts. Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/
+0.32, nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..387 canon.
+Tier-2 366th cycle per the committed sweep-387 pointer: forge 6/6 ALL_PASS
+(interior-walk-forge.ts, dists 0.261/0.307/0.300/0.315/0.375/0.261) +
+potter 6/6 ALL_PASS (interior-walk-potter.ts, dists
+0.270/0.366/0.295/0.255/0.250/0.349), both tools ls-verified present
+BEFORE the walks (1559B + 1571B), dists canon-exact vs the sweep-383
+record. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[]
+(342nd consecutive clean); sweep89-battery 28/28 PASS on censusA bytes;
+count evidence derived fresh from the census bytes themselves
+(comp-bearing 66 stable, lights 38, thing 381, carousel lib
+3ed80c49d16e89d8 + exact 7-key bag motion:carousel + motion:horse_{0,2,4,6}
++ particles:smoke + sockets census-verified). Ledger sweep-388 appended
+(D+0, E+0), tool-verified law exact 2371111, tag re-derived from ledger
+max (sweep-387 -> sweep-388) immediately before append; entry verified
+exactly-once in-file post-append. Foreign dirt in tree (engine files
+client/server, core-paths GLB + review json, windmill overhaul scratch +
+WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype dirs,
+fauna32-*/fauna63-*/fauna64-*/fauna65-*/fauna76-* tools, debug bower
+scripts, fleet shell scripts, review dirs) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect notes,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0). Next tier-2 pair (sweep-389): hall + bunkhouse (367th cycle —
+LRU chain re-derived from committed pointers this tick: forge/potter @388
+walked fresh, stable/market @387, inn/tower-house @386, hall/bunkhouse
+@385 the stalest standing pair; walk tools interior-walk-hall.ts (1704B)
++ interior-walk-bunkhouse.ts (1538B), ls-verified present this tick,
+ls-verify before walks per law).
