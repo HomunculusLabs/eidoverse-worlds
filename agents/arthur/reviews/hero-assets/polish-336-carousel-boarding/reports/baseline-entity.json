@@ -1,0 +1,102 @@
+{
+ "id": "nx-carousel",
+ "kind": "thing",
+ "pos": [
+  -18,
+  0.00014950061063032772,
+  18
+ ],
+ "yaw": 2.35619,
+ "scale": 1,
+ "lib": "store/3d4550fac7d1cf21.glb",
+ "parent": null,
+ "comp": {
+  "motion:carousel": {
+   "type": "spin",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "degPerSec": 6
+  },
+  "motion:horse_0": {
+   "type": "bob",
+   "amp": 0.18,
+   "period": 2.4,
+   "phase": 0
+  },
+  "motion:horse_2": {
+   "type": "bob",
+   "amp": 0.18,
+   "period": 2.4,
+   "phase": 1.57
+  },
+  "motion:horse_4": {
+   "type": "bob",
+   "amp": 0.18,
+   "period": 2.4,
+   "phase": 3.14
+  },
+  "motion:horse_6": {
+   "type": "bob",
+   "amp": 0.18,
+   "period": 2.4,
+   "phase": 4.71
+  },
+  "particles:smoke": {
+   "preset": "smoke",
+   "count": 50,
+   "size": 0.4,
+   "speed": 0.35,
+   "origin": [
+    0,
+    6.3,
+    0
+   ]
+  },
+  "sockets": {
+   "horse_0": {
+    "pos": [
+     2,
+     3.035,
+     0
+    ],
+    "yaw": 0,
+    "part": "horse_0"
+   },
+   "horse_2": {
+    "pos": [
+     0,
+     3.035,
+     2
+    ],
+    "yaw": 0,
+    "part": "horse_2"
+   },
+   "horse_4": {
+    "pos": [
+     -2,
+     3.035,
+     0
+    ],
+    "yaw": 0,
+    "part": "horse_4"
+   },
+   "horse_6": {
+    "pos": [
+     0,
+     3.035,
+     -2
+    ],
+    "yaw": 0,
+    "part": "horse_6"
+   }
+  }
+ }
+}

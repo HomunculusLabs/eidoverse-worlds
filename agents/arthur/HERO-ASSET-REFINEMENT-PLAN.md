@@ -3396,3 +3396,59 @@ next wake once the gateway answers.
   re-survey on fresh evidence (belltower/deck/boarding views of the new
   ring at 5m from the next tick's survey), or (c) the residual judge
   polish notes (deeper swags at close range, panel warm tint).
+
+### polish-336 — carousel panel-ring cloth read (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` @ polish-335 bytes `3d4550fa` (on-disk verified-served
+  == live identity at survey; fresh census 7-key bag). Queue head from
+  polish-335's close: judge the re-authored ring at the un-judged 5m views.
+- Survey (fresh p335-rig renders of exact live bytes, boarding + deck day;
+  ZAI fallback disclosed — no native vision tool loadable in this cron
+  session, polish-285..335 class, native re-judge owed): ring clean but
+  reads as flat uniform CARDS — swag below threshold (dip 0.10m = 7% of
+  panel height; judges name 15-20% legible), identical-panel copy-paste
+  repetition, straps invisible (same COLOR_0 as panel), fill reads
+  desaturated gray ("placeholder slab"). Judges' "short floating panels"
+  item FALSIFIED at source: all tops y 4.28 with straps 4.281..4.90 —
+  projection of the 6.5deg slits, not geometry.
+- Change (ONE cloth-read intervention, new production step
+  `carousel-horse-prototype/clothswag.ts`, panelring chassis): alternating
+  deep/shallow swag hems (odd panels mid-dip 2.80 = 15.6% of height, even
+  2.94; head clearance 2.75 law kept, min hem 2.78); per-vertex COLOR_0
+  drape gradient 0.80 top -> 1.0 hem; strap tape COLOR_0 0.35 (binding-tape
+  read); baseColor warmed at constant luminance [0.63,0.52,0.40] ->
+  [0.71,0.52,0.38]. Night emissive UNTOUCHED (polish-335 hierarchy holds).
+- Candidate `c0c8c565e244bbc3…` deterministic x2 (49 nodes unchanged;
+  160 verts / 96 tris). P336 decode: 0 non-finite of 404098 floats;
+  exactly ONE material diff (scenery baseColor, emissive identical);
+  geometry drift confined to cr_scenery_ring d=0.100 exactly (the hem);
+  COLOR_0 range [0.35,1.0]; extents r 2.6 / hem 2.80 / strap 4.899 exact.
+- Falsification (ZAI fallback disclosed): boarding-day A/B — identical-card
+  read destroyed, long-short rhythm visible, warm intentional fill, zero
+  new defects; deck-day A/B — "hanging boards" 60% toward cloth, warmth
+  working, horses now judged the strongest element (judge residuals:
+  gradient below 5m perception floor, straight hems, straps 1-2px —
+  recorded). Deck "long panels hide horse heads" dispositioned as rig
+  vantage (camera y 3.4 outside the r 2.6 ring shoots down THROUGH the near
+  panels; no occupied vantage does — rider eye 3.3 looks out over hems,
+  boarder eye 2.2 sight lines cross under the 2.80 hem; boarding judge
+  confirms zero obstruction). boarding-night A/B PASS — panels read as dim
+  hung cloth, hierarchy lanterns > teeth > ceiling > horses > panels > sky,
+  all four coats distinct, no glow-wall, zero new defects.
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED, 1 upload +
+  8 verbs, 7-key comp bag replayed verbatim; idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0); live census pin `store/c0c8c565e244bbc3.glb`
+  @ (-18, 0.0001495, 18) yaw 2.35619 exact. Served DRACO 9b13ed64…
+  P336_SERVED_PASS — hem/straps/gradient/COLOR_0 range/scenery factors all
+  exact in served decode, 0 non-finite (horse-material baseColor diffs are
+  the store's texture-baking re-encode; every emissive identical).
+- Evidence: `reviews/hero-assets/polish-336-carousel-boarding/` (before/ =
+  live baseline GLB + 11-view rig; after/ = candidate + rig; reports/ =
+  baseline-entity + deploy dry/apply/idem + verified served bytes).
+  Probes: `agents/arthur/p336-decode.ts` durable (self-caught 2 probe bugs
+  RED->GREEN: getAttributes API misuse; uint8-as-float NaN overread).
+- Excalibur checkpoint: appending to `vessel/workings/eidoverse-hero-assets/
+  CHECKPOINT.md`.
+- Next ranked: (a) judge polish notes — per-panel 1-2deg yaw skew + wider
+  darker straps (deck judge's named cheapest drape wins; one intervention
+  per tick), or (b) plaza-core re-survey on fresh evidence.
