@@ -1,6 +1,86 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-244 — lawful HOLD (133rd post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD e6631b30 (sweep-400 plan
+  correction, foreign — prose-only, no evidence changed; plain `bun` on
+  PATH, no PATH self-catch), then RE-RUN ALL PASS real exit 0 at final
+  HEAD 777672f8 after TWO foreign landings mid-tick (struct-330 c6cabfc6
+  + its own race-repair recommit 777672f8 — survey-318 self-repair,
+  disclosed; epoch law); interlane md5 86b2936f pin-exact. Fresh census
+  **422→423 = ONE fauna-owned arrival + ZERO departures + exactly ONE
+  classified move, BOTH classified at source BEFORE expectation use
+  (dress-172 law)**:
+  `nx-dress-mole-001` (−24.5, 0.01447, 26.5) yaw 2.2004−π lib 31717975
+  d=0.0000000 dyaw=0.0, 3 staggered bob comps EXACT (motion:mole 5.2s /
+  mole_head 8.5s / mole_snout 2.8s — contract read verbatim this tick
+  from `fauna83-place-mole.ts` lines 17–31 + ledger line 7168
+  PLACED_VERIFIED idempotent + sweep-400 line 7174 census-exact) —
+  fauna-83 European mole at the garden-cottage N/NW margin,
+  DRESS-PREFIXED but FAUNA-OWNED (fauna set now 39 with mole) — NOT
+  dress intake;
+  `nx-town-streetlamps` lib flip 9b8cdb73→a4b572a3 at tuple-identical
+  [0,0,0] yaw π EXACT (d=0.0000000 dyaw=0.0, comp {} preserved verbatim,
+  verified BOTH vs the dress-243 PASS-verified capture AND vs
+  polish-342's OWN absolute contract: placer
+  `next-place-polish312-streetlamps.ts` line 13 REVIEWED_SHA
+  a4b572a315b9a979… at [0,0,0] yaw π + ledger line 7172 PLACED_VERIFIED
+  idempotent + sweep-400/struct-330 classified) — polish-342 streetlamp
+  cap articulation, polish domain (core town entity, off-limits to this
+  lane), classified not routed. Domain strongest-form: **all 90 prior
+  dress ids lib+pose EXACT-stable vs the dress-243 PASS-verified
+  capture — zero unstable, zero in-domain departures**; live dress 91 =
+  29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 39 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-244.py` HOLD_VERIFY_PASS exit 0 FIRST RUN,
+  zero self-catches, browser UA, capture saved
+  `/tmp/dress244-census.json`).
+- **Sibling commits since dress-243**: struct-328 (782f22e3, lawful
+  hold), fauna-83 (e5f4461b + 7cff294a annotation, the mole arrival
+  above), polish-342 (463409d7, the streetlamp cap flip above),
+  sweep-400 ×2 (89045136 CLEAN SWEEP — mole arrival + cap flip
+  classified, battery pin 69→70, baseline rewritten 423 ents
+  4d728315; e6631b30 plan correction of record — prose only),
+  struct-329 (cc04f85c, lawful hold), struct-330 (c6cabfc6 + 777672f8
+  race-repair recommit, lawful hold — final HEAD at close). All named,
+  all foreign domain. Foreign-lane dirt in tree (engine files
+  client/server, core-paths GLB + review json, windmill overhaul WIP,
+  cabin-overhaul, fauna probes + TWO FAUNA-STAGED INDEX FILES
+  FAUNA-PLAN.md / fauna84-census-bfly.ts awaiting fauna's commit,
+  debug bower scripts, fleet shells) — none dress-owned, left
+  untouched; THIS tick's commit used the pathspec form (struct-330
+  chassis) so the fauna-staged pair stays staged for its owning lane.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan+carp+bats host
+  `nx-struct-reedpool` 7d770620 — all pose-stable (artwalk-39 law);
+  stork-millrace designed adjacency 2.952m stable; swan-reedpool seat
+  0.0000000; carp-reedpool frame-copy dx/dz 0.0; bats-reedpool air-rider
+  dx/dz 0.0. Carousel lib 193c897d + 7-key comp bag verbatim live
+  (polish-338 pin, census-verified again this tick). Belltower ladder
+  comp volume EXACT vs polish-340 placer; rat 3-key motion bag exact
+  (fauna-81).
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-243 (range read:
+  sweep/polish/fauna/struct own prose only, zero Bill directives).
+  Blocked on Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest
+  unblock remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-243 — lawful HOLD (132nd post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
