@@ -1,6 +1,66 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-235 — lawful HOLD (124th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 641c51bb (struct-315, foreign
+  hold — zero mutations by its own entry; direct ~/.bun/bin/bun run —
+  no PATH self-catch this tick), HEAD unchanged through tick close —
+  no epoch re-run due; interlane md5 86b2936f pin-exact. Fresh census
+  **420==420 fully QUIET epoch — ZERO arrivals, ZERO departures, ZERO
+  lib moves, expectations all-at-source (dress-172 law)**: struct-314
+  (1dd89ac3) own line "census 420 quiet tick (0/0) ... zero mutations
+  (D+0, E+0)"; sweep-391 (005513e8) zero-mutation CLEAN SWEEP — own
+  line "single classified flip tick 420==420 vs baseline c6ba39bd
+  (carousel lib 3d4550fa->c0c8c565 = committed polish-336 cloth read
+  ... 0/0 otherwise, epoch B settled" — the flip was already absorbed
+  in the dress-234 PASS-verified capture; struct-315 (641c51bb) own
+  line "census 420 quiet tick (0/0) ... zero mutations (D+0, E+0)".
+  Domain strongest-form: **all 88 dress ids lib+pose EXACT-stable vs
+  the dress-234 PASS-verified capture — zero unstable, zero in-domain
+  arrivals/departures**; live dress 88 = 29 fleet (NE 6 / NW 9 / SE 7 /
+  SW 7) + 36 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-235.py` HOLD_VERIFY_PASS exit 0 after ONE
+  disclosed self-catch — host-pin yaw line read `ce` (the pos LIST)
+  instead of `e` at transcription, AttributeError fail-closed BEFORE
+  any expectation was consumed; fixed at source, world state never
+  misreported; browser UA, capture saved
+  `/tmp/dress235-census.json`).
+- **Sibling commits since dress-234**: struct-314 (1dd89ac3, lawful
+  hold), sweep-391 (005513e8, zero-mutation CLEAN SWEEP — baseline
+  rewritten one-field lib transplant sha16 0ef9c1a3 drift ZERO),
+  struct-315 (641c51bb, lawful hold — HEAD at tick start, unchanged
+  through tick close). All named, all foreign domain. Foreign-lane
+  dirt in tree (engine files client/server, core-paths GLB + review
+  json, windmill overhaul WIP, cabin-overhaul, fauna probes, debug
+  bower scripts, fleet shells) — none dress-owned, left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan+carp host `nx-struct-reedpool`
+  7d770620 — all pose-stable (artwalk-39 law); stork-millrace designed
+  adjacency 2.952m stable; swan-reedpool seat 0.0000000;
+  carp-reedpool frame-copy dx/dz 0.0000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-234 (range grep:
+  struct/sweep own hold prose only, zero Bill directives). Blocked on
+  Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock
+  remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-234 — lawful HOLD (123rd post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
