@@ -1,6 +1,69 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-229 — lawful HOLD (118th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 64ee1b9a (sweep-385, foreign
+  domain), HEAD unchanged through tick close — no epoch re-run due;
+  interlane md5 86b2936f pin-exact. Fresh census **418→419 = ONE
+  arrival + ZERO moves + ZERO departures, the arrival classified at
+  source before expectation use (dress-172 law), tuple+lib+comp EXACT
+  vs the sibling's OWN placer read verbatim this tick**:
+  `nx-dress-carp-001` (9.723, 0.06093, −90.982) yaw 0 scale 1 lib
+  2f91932ddbd14ff4 maxdelta 0.0000000 — fauna-75 (1b9df356) common
+  carp, the fleet's first fish, frame-copy water-rider on the reedpool
+  NE open water; 3 motion comps live (motion:carp orbit r0.5 @8deg/s +
+  carp_dfin bob + carp_tail pendulum — placer fauna75-place-carp.ts
+  lines 23–26, 53–56 + ledger line 7024 verbatim); reedpool host
+  7d770620 hard-gated pose-stable pre+post. DRESS-PREFIXED but
+  FAUNA-OWNED (fauna set now 35 with carp) — NOT dress intake.
+  Domain strongest-form: **all 86 prior dress ids lib+pose EXACT-stable
+  vs the dress-228 PASS-verified capture — zero unstable, zero
+  in-domain departures**; live dress 87 = 29 fleet (NE 6 / NW 9 / SE 7
+  / SW 7) + 35 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-229.py` HOLD_VERIFY_PASS exit 0 after ONE
+  disclosed self-catch fixed at source BEFORE the pass — the comp-key
+  expectation was first misbuilt from sweep-385's compressed shorthand
+  `(motion:carp,_dfin,_tail)`; corrected to the placer-literal MOTION
+  keys read at fauna75-place-carp.ts lines 53–56; the LIVE comps were
+  never wrong. Browser UA, capture saved
+  `/tmp/dress229-census.json`).
+- **Sibling commits since dress-228**: fauna-75 (1b9df356, the carp
+  arrival above), struct-305 (b1b0a86d, lawful hold — zero mutations by
+  its own entry), sweep-385 (64ee1b9a, zero-mutation CLEAN SWEEP —
+  classified the carp arrival + corroborated the polish-333 hearth flip,
+  battery pin bump 65→66 added-set exactly [nx-dress-carp-001], baseline
+  rewritten 419 ents 296216e2 — HEAD at tick start, unchanged through
+  tick close). All named, all foreign domain. Foreign-lane dirt in tree
+  (engine files client/server, core-paths GLB + review json,
+  WINDMILL-OVERHAUL.md, cabin-overhaul, fauna probes, debug bower
+  scripts, fleet shells) — none dress-owned, left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan+carp host `nx-struct-reedpool`
+  7d770620 — all pose-stable (artwalk-39 law); stork-millrace designed
+  adjacency 2.952m stable; swan-reedpool seat 0.0000000;
+  carp-reedpool frame-copy dx/dz 0.0000.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-228. Blocked on
+  Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock
+  remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-228 — lawful HOLD (117th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
