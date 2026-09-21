@@ -19548,3 +19548,62 @@ re-derived from committed pointers this tick: inn/tower-house @394 walked
 fresh, forge/potter @392, stable/market @391 the stalest standing pair;
 walk tools interior-walk-stable.ts (1784B) + interior-walk-market.ts
 (1544B), ls-verify before walks per law).
+
+sweep-395: CLEAN SWEEP, fully-quiet tick (166th consecutive quiet-or-
+classified). Tick-start HEAD 49e468a9 (dress-238, foreign hold); standing
+gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun from repo root,
+ledger law EXACT 2371123 at first probe. Interlane md5 86b2936f stable,
+SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools drained (IMPROVE-
+PLAN 7fa8a224 unchanged zero open rows, CITY-PLAN-V2 cae6b928 unchanged —
+audit-continues freeze banner governs via loop/plan reload). Census BOTH
+EPOCHS byte-identical (censusA sha16 d7562ba0ae973f84 == censusB sha16
+d7562ba0ae973f84, 20s-paced re-read): 421==421 (383 thing + 38 light),
+0 arrivals, 0 departures, 0 drift on id/pos/yaw/scale/lib/comp/bbox —
+first fully-quiet delta since sweep-394's close; single settled epoch, no
+sibling landed through the whole tick. NO baseline rewrite due: diff vs
+committed sweep-394 baseline sha16 e8945c43c0bdceb5 = ZERO on every
+substantive field (the baseline already describes the live world
+exactly), baseline left byte-identical. Overlap: SAT 383 bbox non-light /
+262 exempt-classified / 0 coverage holes, real exit 3 on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 351st sweep since routing, NOT
+new, no escalation due (the law keys on severity-1). Walks: tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually — core 64/64 maxArrival 0.380 (next-walk-core-paths.ts), NW
+5/5 0.00/0.38/0.30/0.33/0.32 (nw-approach1-walk.ts), NE 7/7
+0.00/0.29/0.32/0.29/0.38/0.25/0.31 (ne-approach2-walk.ts), SW 5/5
+0.00/0.25/0.34/0.37/0.31 (sw-approach3-walk.ts) — dists canon-exact vs
+the sweep-319..394 canon; support-seam abstentions = known normalized
+foreign set, unchanged. Tier-2 373rd cycle per the committed sweep-394
+pointer: stable 5/5 ALL_PASS (interior-walk-stable.ts, dists
+0.295/0.388/0.383/0.396/0.369, max 0.396) + market 6/6 ALL_PASS
+(interior-walk-market.ts, dists 0.309/0.360/0.389/0.261/0.291/0.346, max
+0.389), both tools ls-verified present BEFORE the walks (1784B + 1544B),
+max dists canon-exact vs the sweep-391/393 records. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (349th consecutive
+clean); sweep89-battery 28/28 PASS GREEN first invocation on censusA
+bytes (no pin bump due — no flip this tick; carousel lib 193c897d +
+7-key bag census-verified live from this tick's census bytes);
+comp-bearing 68, lights 38, thing 383. Probe self-catches pre-verdict,
+disclosed: (a) baseline loader iterated the top dict instead of the
+entities list — fail-closed TypeError twice before the schema was read
+raw (sweep-394 class); (b) sweep-tag numeric-max grep came back
+lexicographic (tail sweep-9) — re-derived numerically (max 394, next
+395); (c) FIRST plan-block draft of this very row came out corrupted
+(garbage tokens, wrong sweep count, fabricated banner text — adjacent-
+token-bleed class, sweep-55/391 family); the unique-anchor assert caught
+it BEFORE the write landed and a second draft was corrupted in the same
+way — both discarded, this clean third draft re-derived from this tick's
+own evidence chain; file verified post-write. Foreign dirt in tree
+(engine files client/server, core-paths GLB + review json, windmill
+overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth
+prototype dirs, fauna32-*/fauna63-*/fauna64-*/fauna65-*/fauna76-* tools,
+debug bower scripts, fleet shell scripts, review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-396): hall +
+bunkhouse (374th cycle — LRU chain re-derived from committed pointers
+this tick: stable/market @395 walked fresh, inn/tower-house @394,
+forge/potter @392, hall/bunkhouse @389 the stalest standing pair; walk
+tools interior-walk-hall.ts (1704B) + interior-walk-bunkhouse.ts (1538B),
+ls-verified present this tick; ls-verify before walks per law).
