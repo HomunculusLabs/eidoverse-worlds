@@ -19111,3 +19111,84 @@ walked fresh, stable/market @387, inn/tower-house @386, hall/bunkhouse
 @385 the stalest standing pair; walk tools interior-walk-hall.ts (1704B)
 + interior-walk-bunkhouse.ts (1538B), ls-verified present this tick,
 ls-verify before walks per law).
+
+
+sweep-389: CLEAN SWEEP, single classified flip tick (160th consecutive
+quiet-or-classified). Tick-start HEAD 7efee20f (struct-311 lawful hold);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root via
+~/.bun/bin/bun (cron PATH lacks bun, dress-231/struct-309 env note),
+ledger law EXACT 2371113 at first probe. Interlane md5 86b2936f stable,
+SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools drained
+(IMPROVE-PLAN 7fa8a224 unchanged zero open rows, CITY-PLAN-V2 cae6b928
+unchanged — audit-continues freeze banner governs via loop/plan reload).
+Census epoch A 419==419 (381 thing + 38 light) vs the committed sweep-388
+baseline sha16 80f1805a4036cb40: 0 arrivals, 0 departures, exactly ONE
+substantive drift field-set = nx-carousel lib 3ed80c49d16e89d8 ->
+3d4550fac7d1cf21 at identical tuple (-18, 0.00014950061063032772, 18)
+yaw 2.35619 scale 1, comp bag exact 7 preserved verbatim (motion:carousel,
+motion:horse_{0,2,4,6}, particles:smoke, sockets), bbox BYTE-IDENTICAL =
+COMMITTED polish-335 @ 89e011e2 (carousel panel-ring re-author: scenery
+panels value-dropped, swag hems + canopy straps cure floating cards;
+3d4550fa deterministic x2, PLACED_VERIFIED 1 upload + 8 verbs with the
+7-key comp bag verbatim, idempotent, served==upload P335_SERVED_PASS) —
+ledger-matched, domain-valid (nx-carousel is polish's hero domain), not
+drift. The flip landed PRE-tick: HEAD lineage carried it at tick start;
+sweep-387/388 recorded it as the known epoch for this baseline rewrite.
+Epoch B 20s-paced re-read 419==419, A-to-B drift ZERO — single settled
+epoch. Overlap: SAT 381 bbox non-light / 261 exempt-classified / 0
+coverage holes, real exit 3 on exactly ONE unclassified = R-121 lamp-n|
+nx-town-mapboard -0.407, known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 345th sweep since routing, NOT new, no escalation due (the law
+keys on severity-1); the carousel flip introduced ZERO new contacts.
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0,
+legs run individually — core 64/64 maxArrival 0.380
+(next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/0.32,
+nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..388 canon.
+Tier-2 367th cycle per the committed sweep-388 pointer: hall 8/8 ALL_PASS
+(interior-walk-hall.ts, dists
+0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310, max 0.360) + bunkhouse
+6/6 ALL_PASS (interior-walk-bunkhouse.ts, dists
+0.245/0.300/0.305/0.247/0.380/0.313, max 0.380), both tools ls-verified
+present BEFORE the walks (1704B + 1538B), max dists canon-exact vs the
+sweep-385 record. Foreign-entity abstentions in hall/bunkhouse walks =
+known normalized set, unchanged. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (343rd consecutive clean); sweep89-battery
+first invocation 27/28 RED on exactly carousel-lib (3ed80c49 pin stale
+vs live 3d4550fa) = expected classification, lawful pin bump per the
+sweep-301..385 fauna/carousel precedent chain — added-set
+census-verified exactly [nx-carousel lib], live 7-key bag + tuple
+census-verified from THIS tick's bytes — battery then 28/28 PASS GREEN;
+comp-bearing 66 stable (flip comp-neutral), lights 38, thing 381.
+Baseline lawfully rewritten like-for-like from the COMMITTED bytes
+(/tmp/s389/baseline-rewrite.py): pre-write asserts green (committed
+sha16 80f1805a4036cb40, round-trip byte-identity probe, arrivals [],
+departures [], substantive drift exactly [nx-carousel lib]), one-field
+lib transplant only, post-rewrite drift vs live ZERO — final 419
+entities / 338591B / sha16 88ce4d29c0d9017f. Ledger sweep-389 appended
+D+0 E+0, tool-verified law exact 2371113, tag re-derived from ledger
+max (sweep-388 -> sweep-389) immediately before append. Probe
+self-catches pre-verdict, disclosed: (a) first walk batch chained six
+tools in one call and hit the 420s tool ceiling — hall's output
+truncated to abstention lines with no verdict JSON and bunkhouse never
+started; both re-run individually per the sweep-18/19 class with full
+verdicts captured; (b) the walk-output parser v1 keyed the 'legs' int as
+the results list on approach walks — schema read before re-parsing,
+re-derived (sweep-386(b) class); (c) the first comp probe read a
+nonexistent 'comps' key and printed carousel comp [] — actual field is
+'comp', the 7-key bag is live, re-read before any comp-erosion verdict
+(guessed-key class). Foreign dirt in tree (engine files client/server,
+core-paths GLB + review json, windmill overhaul scratch +
+WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype dirs,
+fauna32-*/fauna63-*/fauna64-*/fauna65-*/fauna76-* tools, debug bower
+scripts, fleet shell scripts, review dirs) is sibling work-in-flight,
+untouched per the ownership law. Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0). Next tier-2 pair (sweep-390): inn + tower-house (368th cycle
+— LRU chain re-derived from committed pointers this tick: hall/bunkhouse
+@389 walked fresh, forge/potter @388, stable/market @387, inn/
+tower-house @386 the stalest standing pair; walk tools
+interior-walk-inn.ts (1786B) + interior-walk-tower-house.ts (1523B),
+ls-verify before walks per law).
+
