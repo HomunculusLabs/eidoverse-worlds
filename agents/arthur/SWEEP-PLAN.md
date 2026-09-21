@@ -19751,3 +19751,83 @@ tick: forge/potter @397 walked fresh, hall/bunkhouse @396, stable/market
 @395, inn/tower-house @394 the stalest standing pair; walk tools
 interior-walk-stable.ts (1784B) + interior-walk-market.ts (1544B),
 ls-verify before walks per law).
+
+sweep-398: CLEAN SWEEP, single classified flip tick (169th consecutive
+quiet-or-classified). Tick-start HEAD 3f8055c1 (dress-241, foreign hold);
+standing gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun from repo
+root (cron PATH class, sweep-391..397), ledger law EXACT 2371129 at first
+probe (advanced +2 since sweep-397's 2371127 by sibling D+2 — absorbed
+normally). Interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable,
+both read fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open
+rows, CITY-PLAN-V2 cae6b928 unchanged — audit-continues freeze banner
+governs via loop/plan reload). Census epoch A 422==422 (384 thing + 38
+light) vs the committed sweep-397 baseline sha16 ffd7a2b8d6619676: 0
+arrivals, 0 departures, exactly ONE substantive drift field-set =
+nx-town-belltower lib 6359999041251ad9->886a06156db18add at identical
+tuple (6.5, 0, 6.5) yaw -2.356194490192345 scale 1, ladder comp preserved
+verbatim, bbox byte-identical 3.4x7.9x3.4 = COMMITTED polish-340 @
+f35e09e2 (belfry lantern re-author, p312 streetlamp-head idiom, nodes
+12->11, PLACED_VERIFIED per its own entry; ALSO independently classified
+by dress-241's structural ladder-volume probe at source) — ledger-matched,
+domain-valid (polish hero domain), not drift; the flip landed PRE-tick.
+Census diff flagged 61 compKeys-only diffs on shared ids — classified as
+the KNOWN baseline artifact (sweep-56 comps-key class): comp PAYLOADS
+deep-equal on all 61, substantive drift on shared ids ZERO. Epoch B
+20s-paced re-read 422==422 byte-identical (census sha16 aff62d51f0b5c06b
+both reads), A-to-B drift ZERO — single settled epoch. Overlap: SAT 384
+bbox non-light / 262 exempt-classified / 0 coverage holes, real exit 3 on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 (known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 354th sweep since
+routing, NOT new, no escalation due — the law keys on severity-1); the
+belltower flip introduced ZERO new contacts. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually —
+core 64/64 maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (nw-
+approach1-walk.ts), NE 7/7 (ne-approach2-walk.ts), SW 5/5 (sw-approach3-
+walk.ts) — dists canon-exact vs the sweep-319..397 canon. Tier-2 POINTER
+DEFECT repaired (sweep-59 class, disclosed): sweep-397's committed
+pointer named stable+market but its own LRU chain named inn/tower-house
+@394 the stalest — BOTH pairs walked fresh this wakeup: inn 6/6 ALL_PASS
+(interior-walk-inn.ts, dists 0.320/0.318/0.341/0.350/0.364/0.288, max
+0.364) + tower-house 6/6 ALL_PASS (interior-walk-tower-house.ts, dists
+0.245/0.245/0.263/0.377/0.374/0.309, max 0.377) per the LRU chain, PLUS
+stable 5/5 ALL_PASS (interior-walk-stable.ts, dists
+0.295/0.388/0.383/0.396/0.369, max 0.396) + market 6/6 ALL_PASS
+(interior-walk-market.ts, dists 0.309/0.360/0.389/0.261/0.291/0.346, max
+0.389) per the committed pointer — all four tools ls-verified present
+BEFORE the walks (1786B + 1523B + 1784B + 1544B), max dists canon-exact
+vs the sweep-391/393/394 records. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (352nd consecutive clean); sweep89-battery
+first invocation on censusA 27/28 RED on exactly belltower-lib (pin
+63599990 stale vs live 886a0615 = expected classification), lawful pin
+bump per the sweep-301..394 chain — live lib + ladder comp census-verified
+from THIS tick's censusA bytes, pin comment carries the polish-340
+provenance, prior history preserved verbatim; battery then 28/28 PASS
+GREEN on censusA AND censusB bytes; comp-bearing 69 stable (flip
+comp-neutral), lights 38, thing 384. Baseline lawfully rewritten
+like-for-like (/tmp/s398/baseline-rewrite.py): pre-write asserts green
+(committed sha16 ffd7a2b8d6619676, round-trip byte-identity probe,
+arrivals [], departures [], substantive drift exactly [nx-town-belltower
+lib] with the known compKeys artifact signature explicitly tolerated and
+nothing else), one-field lib transplant only, post-rewrite substantive
+drift vs live ZERO — final 422 entities / 348865B / sha16 f9b7eb79c5a5b2a0.
+PROBE SELF-CATCHES pre-verdict, disclosed: (a) the first SAT invocation
+was piped through tail and echoed tail's exit 0 — re-run unpiped for the
+real exit 3 (polish-270(b) content-verdict class); (b) the core-walk
+parser first keyed top-level legs as a list where the schema carries an
+int count + results list, and the file opens with the [physics] banner
+(sweep-386(b)/389 class — schema read from raw output before re-parsing);
+(c) the baseline-rewrite over-strict record-equality asserts fired
+fail-closed TWICE on the known compKeys artifact (belltower is one of the
+61 artifact records; sweep-397(a) class) — narrowed to the exact artifact
+signature with everything else still hard-gated. Foreign dirt in tree
+(engine files client/server, core-paths GLB + review json, windmill
+overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth
+prototype dirs, fauna tools, debug bower scripts, fleet shell scripts,
+review dirs) is sibling work-in-flight, untouched per the ownership law.
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero
+comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-399): hall + bunkhouse (377th cycle — LRU chain re-derived from
+committed pointers this tick: inn/tower-house + stable/market BOTH walked
+fresh @398, forge/potter @397, hall/bunkhouse @396 the stalest standing
+pair; walk tools interior-walk-hall.ts (1704B) + interior-walk-bunkhouse.
+ts (1538B), ls-verify before walks per law).
