@@ -19417,6 +19417,7 @@ committed pointers this tick: forge/potter @392 walked fresh,
 inn/tower-house @390, hall/bunkhouse @389, stable/market @391 the stalest
 standing pair; walk tools interior-walk-stable.ts (1784B) +
 interior-walk-market.ts (1544B), ls-verify before walks per law).
+
 sweep-393: CLEAN SWEEP, arrival-classified tick (164th consecutive
 quiet-or-classified). Tick-start HEAD 7e1498a0 (dress-236v erratum, foreign);
 standing gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun (cron PATH
@@ -19490,3 +19491,60 @@ inn/tower-house @390 the stalest standing pair; walk tools
 interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verify before
 walks per law).
 
+sweep-394: CLEAN SWEEP, single classified flip tick (165th consecutive
+quiet-or-classified). Tick-start HEAD 490c3083 (polish-338, foreign);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root via
+~/.bun/bin/bun (cron PATH lacks bun), ledger law EXACT 2371123 at first
+probe. Interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, both
+read fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows,
+CITY-PLAN-V2 cae6b928 unchanged — audit-continues freeze banner governs via
+loop/plan reload). Census epoch A 421==421 (383 thing + 38 light) vs the
+committed sweep-393 baseline sha16 b509d09c2f984c61: 0 arrivals, 0
+departures, exactly ONE substantive drift field-set = nx-carousel lib
+b1f1154962631d22 -> 193c897dd511b5e0 at identical tuple
+(-18, 0.00014950061063032772, 18) yaw 2.35619 scale 1, comp bag exact 7
+preserved verbatim, bbox BYTE-IDENTICAL = COMMITTED polish-338 @ 490c3083
+(panel-ring skew amplitude + twisted normals; PLACED_VERIFIED 1 upload + 8
+verbs 7-key bag verbatim, idempotent 0/0, live pin store/193c897dd511b5e0.glb,
+P338_SERVED_PASS) — ledger-matched, domain-valid (polish hero domain), not
+drift. The flip landed PRE-tick; sweep-393 recorded it as the known epoch
+for this baseline rewrite. Epoch B 20s-paced re-read 421==421
+byte-identical (census sha16 d7562ba0ae973f84 both reads), A-to-B drift
+ZERO — single settled epoch. Overlap: SAT 383 bbox non-light / 262
+exempt-classified / 0 coverage holes, real exit 3 on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed to
+artwalk b26 choreography @ sweep-43, 350th sweep since routing, NOT new, no
+escalation due (the law keys on severity-1); the carousel flip introduced
+ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every
+leg real exit 0, legs run individually — core 64/64 maxArrival 0.380, NW
+5/5 (0.00/0.38/0.30/0.33/0.32), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31),
+SW 5/5 (0.00/0.25/0.34/0.37/0.31) — dists canon-exact vs the sweep-319..393
+canon. Tier-2 372nd cycle per the committed sweep-393 pointer: inn 6/6
+ALL_PASS (dists 0.320/0.318/0.341/0.350/0.364/0.288, max 0.364) +
+tower-house 6/6 ALL_PASS (dists 0.245/0.245/0.263/0.377/0.374/0.309, max
+0.377), both tools ls-verified present BEFORE the walks (1786B + 1523B),
+max dists canon-exact vs the sweep-390 record. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (348th consecutive
+clean); sweep89-battery first invocation 27/28 RED on exactly carousel-lib
+(pin b1f11549 stale vs live 193c897d = expected classification), lawful pin
+bump per the sweep-301..393 chain — live tuple + 7-key bag census-verified
+from THIS tick's censusA bytes, pin comment carries the polish-338
+provenance; battery then 28/28 PASS GREEN; comp-bearing 68 stable (flip
+comp-neutral), lights 38, thing 383. Baseline lawfully rewritten
+like-for-like (/tmp/s394/baseline-rewrite.py): pre-write asserts green
+(committed sha16 b509d09c2f984c61, single lib occurrence, entity diff vs
+live exactly [nx-carousel lib]), one-field lib transplant only,
+post-rewrite substantive drift vs live ZERO — final 421 entities / 347681B
+/ sha16 e8945c43c0bdceb5. Probe self-catches pre-verdict, disclosed:
+(a) walk outputs carry a leading [physics] banner line — schema read from
+raw output before parsing (sweep-389 class); (b) the approach-walk parser
+keyed 'dist' where that schema uses 'distance' (sweep-386(b)/391(b) class);
+(c) battery tool invoked without its census argv — arg-probe class
+(sweep-392(b)). Foreign dirt in tree is sibling work-in-flight, untouched
+per the ownership law. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-395): stable + market (373rd cycle — LRU chain
+re-derived from committed pointers this tick: inn/tower-house @394 walked
+fresh, forge/potter @392, stable/market @391 the stalest standing pair;
+walk tools interior-walk-stable.ts (1784B) + interior-walk-market.ts
+(1544B), ls-verify before walks per law).
