@@ -2089,15 +2089,45 @@ correct chassis; box corners under affine stay exact).
     - Rig/decode laws learned (fauna-85): (a) **THE PHASE-THEN-AIM LAW** — a dynamically-aimed encounter camera must PHASE FIRST, THEN AIM: setView reads the live part position, so aiming at t=11 and jumping to t=8 walks the subject ~2.7m around its ring OUT of the 3m frame — the first two 0-px motion pairs were framing, not dead motion (the fix is the standing order for every dynamic-aim rig); (b) **a same-period pair diffs to zero at Δt == period** — an N-px motion pair must use a HALF-period delta (8.0 vs 8.13) to catch the flap mid-cycle; (c) **the 18m pixel budget for a 55mm flyer needs ×4+ bake** — sub-15px spans read as ambiguous dots regardless of color; at ~16-20px the same geometry reads unambiguously as a butterfly (bats law b, calibrated one size class down); (d) **a dark-winged insect needs a LIGHT backing at distance** — ring geography is a legibility parameter (the admiral's far-side sweep died against the field's dark far edge; tightening the ring over the light purple interior cured it without touching geometry); (e) the composite rig's lavender host rendered from the LOCAL UPLOAD TWIN (mason retex bytes, hash-exact to the live lib) — no DRACOLoader needed, hmou law e standing.
     - Native re-judge debt: NATIVE-50 (below) — the fallback arc stands until natively confirmed.
 
-54. **[CANDIDATE — proposed fauna-86, 2026-09-21, build fauna-87] common
-    lizard on the kiln-yard stone — REPTILIA's first member, the village's
-    warmest stone finally basking.** ONE entity `nx-dress-lizd-001`
-    (short-id convention, magpi/pheas/hare/rat/mole law). Census-grounded
-    (fauna86-census.ts, READ-ONLY): 424 entities, ZERO reptilian ids AND
-    libs (lizard/zootoca/lacert/snake/natrix/slowworm — magpie fauna-57
-    proposal law; shrew/finch/dragonfly also probed zero, all four slots
-    open, reptile wins on missing-class + idle-host) — the CLASS slot is
-    genuinely open. Village logic (missing-class law, kestrel fauna-64
+54. **[BUILT+PLACED fauna-87, 2026-09-21 — EXECUTED RECORD] common
+    lizard on the kiln's ENE drum face — REPTILIA's first member,
+    standing.** Entity `nx-dress-lizd-001` LIVE: sha16 **4866e1a3**
+    (v3, deterministic ×2), PLACED_VERIFIED at the live kiln tuple
+    verbatim (19.158717, −0.02065, 22.431976) yaw −2.443242, census
+    424→425, idempotent rerun 0 verbs; host `nx-town-kiln` lib 3e96c8b0
+    hard-gated EXACT pre+post. SEAT (served-bytes 668692f7 decode +
+    probe): drum face kiln-local (−0.0290, −1.01) y 1.50 → world
+    (19.83, 1.49, 23.17), face-normal az 48° ENE, 27–55° oblique to the
+    pig-sty/cow meadow readers, opposite the mouth (sign+heat at az
+    230°). ERRATUM: seat constants were authored under a flipped
+    compass (x/z swap + N/S flip) intending "SSW"; the
+    rendered+judged+decode-verified ENE pose is BETTER (reader-oblique,
+    morning sun) and is the standing contract — bytes as-judged.
+    Build: pressed-flat pose (belly embed 2–5mm vertex-true), SVL 0.152
+    + tail 0.228 (ratio 1.501, decode gate [1.3,1.7]), brown-grey
+    0x8a7464 + dorsal stripe + pale flanks + bead eyes w/ pale lids +
+    3-toe fans, ×2.2 bake incl joints; 11 nodes ~2900 tris. MOTION 3
+    comps (body bob throat-breath / head Y flat-watch / tail Z settle),
+    engine-true pair 422px. **TICK LAW LEARNED — the COLOR_0-only
+    materials defect (fleet-wide): glbwrite's flat-mat lane emitted NO
+    glTF material, so the whole dress fauna lineage (woodp, rat, and
+    every build via the flat lane) loads as the glTF default
+    metallicFactor 1.0 = dark-metal silhouettes in every standard glTF
+    client (LIVE served woodp/rat verified 0 materials; the accepted
+    fauna81-rat review PNG re-reads near-black). Fixed at the writer:
+    v3.5 flat-mat lane emits real dielectric materials (white
+    baseColorFactor so COLOR_0 carries tint, authored rough/metal);
+    lizd v3 is the first correctly-materialized build. EXISTING GLBs on
+    disk untouched. FOLLOWUP QUEUED: re-materialize the standing dress
+    fauna fleet (rebuild each species under v3.5, re-verify hash+
+    decode, re-upload+re-place same ids — a multi-tick job, worst-first
+    by visibility). JUDGE: ZAI-vision fallback (cron, native debt
+    NATIVE-51 owed): discover 2.5m PASS + true-composite re-judge PASS
+    (no sign interference; strap member clears crown by 0.76m
+    source-decoded); 18m scope marginal DISCLOSED (pitfall-13
+    legibility floor — the encounter is the species vantage). SAT
+    ladder numbers in the placer: heat clear 2.03m, sign fat-bbox
+    exemption gap-bounded, light exempt.** Village logic (missing-class law, kestrel fauna-64
     class): the fleet spans mammals, birds, fish, amphibian, and four
     insect orders — REPTILIA is the village's one absent vertebrate class,
     and the standing geography already implies exactly one reptile seat:
