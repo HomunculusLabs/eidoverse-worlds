@@ -18924,3 +18924,80 @@ use (D+0, E+0). Next tier-2 pair (sweep-386): inn + tower-house (364th cycle
 @385 walked fresh, stable/market @384, forge/potter @383, inn/tower-house
 @382 the stalest standing pair; walk tools interior-walk-inn.ts (1786B) +
 interior-walk-tower-house.ts (1523B), ls-verify before walks per law).
+
+
+sweep-386: CLEAN SWEEP, single classified flip tick (157th consecutive
+quiet-or-classified). Tick-start HEAD 106ba951 (dress-229v epoch correction);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root, ledger law EXACT
+2371110 at first probe. Interlane md5 86b2936f stable, SWEEP-LOOP md5
+a5fd4f4f stable, both read fresh; pools drained (IMPROVE-PLAN 7fa8a224
+unchanged zero open rows, CITY-PLAN-V2 cae6b928 unchanged — audit-continues
+freeze banner governs via loop/plan reload). Census epoch A 419==419 vs the
+committed sweep-385 baseline (sha16 296216e21f070c97): 0 arrivals, 0
+departures, exactly ONE substantive drift field-set = nx-hearth lib
+69ccd14a->8f095330 at identical tuple (0,0,0) yaw 0 scale 1, comp bag exact
+4 preserved verbatim (motion:pz_kettle, motion:well_, particles, sockets),
+bbox BYTE-IDENTICAL. Classification upgraded in-tick: at census time the
+in-tree placer next-place-hearth.ts pinned exactly the live lib
+(REVIEWED_SHA 8f095330, uncommitted-placer class, sweep-30/91 family); at
+append time polish-334 COMMITTED @ 399b4859 mid-tick naming the exact
+transition (pins 69ccd14a->8f095330, PLACED_VERIFIED 1 upload + 5 verbs,
+4-key comp bag verbatim incl the sockets-0.25 amendment, idempotent zero
+verbs, P334_SERVED_PASS) — ledger-matched line-for-line, domain-valid
+(nx-hearth is polish's hero domain), not drift. Epoch B 20s-paced re-read
+419==419, A-to-B drift ZERO — single settled epoch. Overlap: SAT 381 bbox
+non-light / 261 exempt-classified / 0 coverage holes, real exit 3 on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev
+2 routed to artwalk b26 choreography @ sweep-43, 342nd sweep since routing,
+NOT new, no escalation due (the law keys on severity-1); the hearth flip
+introduced ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts) RE-WALKED over the new
+polish-334 hearth bytes (plaza-core r0, re-verify band, sweep-378..385
+precedent), NW 5/5 (0.00/0.38/0.30/0.33/0.32, nw-approach1-walk.ts), NE 7/7
+(0.00/0.29/0.32/0.29/0.38/0.25/0.31, ne-approach2-walk.ts), SW 5/5
+(0.00/0.25/0.34/0.37/0.31, sw-approach3-walk.ts) — dists canon-exact vs the
+sweep-319..385 canon. Tier-2 364th cycle per the committed sweep-385
+pointer: inn 6/6 ALL_PASS (interior-walk-inn.ts, dists
+0.320/0.318/0.341/0.350/0.364/0.288, max 0.364) + tower-house 6/6 ALL_PASS
+(interior-walk-tower-house.ts, dists 0.245/0.245/0.263/0.377/0.374/0.309,
+max 0.377), both tools ls-verified present BEFORE the walks (1786B +
+1523B), max dists canon-exact vs the sweep-382 record. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (340th consecutive
+clean); sweep89-battery 28/28 PASS FIRST TRY on censusA bytes (comp-bearing
+66 stable — hearth flip comp-neutral, no pin move; lights 38, thing 381,
+carousel comp bag exact 7 + lib 3ed80c49d16e89d8 census-verified via
+battery). Baseline lawfully rewritten like-for-like from the COMMITTED
+bytes (/tmp/s386/baseline-rewrite.py): pre-write asserts green (committed
+sha16 296216e21f070c97, round-trip byte-identity probe, arrivals [],
+departures [], substantive drift exactly [nx-hearth lib]), one-field lib
+transplant only, post-rewrite substantive drift vs live ZERO — final 419
+entities / 338591B / sha16 80f1805a4036cb40. Mid-tick interleaves absorbed
+per the epoch law: polish-334 @ 399b4859 + struct-307 @ bdbdea52 (lawful
+hold, zero mutations per its own entry) landed AFTER census B; both are
+comp-neutral/pose-neutral to my evidence (polish-334's verbs predate
+census A — the flip is IN the census; struct-307 mutated nothing), so no
+evidence re-take was due. Ledger sweep-386 appended D+0 E+0, tool-verified
+law exact 2371111 (base re-read fresh immediately before append — the
+mid-tick D+1 from polish-334 was absorbed, 2371110 at gate -> 2371111 at
+append). Probe self-catches pre-verdict, disclosed: (a) battery invoked
+with a stale .ts path from sweep-385 shorthand — tool located as
+sweep89-battery.py via file search, re-run correct (sweep-48 class); (b)
+the core walk parser v1 iterated the 'legs' count int instead of the
+'results' list — schema read before re-parsing, re-derived (sweep-48
+class); (c) tier-2 per-leg dist 'canon' invented from memory failed both
+matches — discarded the invented per-leg canon, anchored on the committed
+HEADLINE MAXES (inn 0.364 / tower-house 0.377) which match the sweep-382
+record exactly (guessed-canon class, sweep-51). Foreign dirt in tree
+(engine files client/server, core-paths GLB + review json, windmill
+overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth
+prototype dirs, fauna32-*/fauna63-*/fauna64-*/fauna65-* tools, debug bower
+scripts, fleet shell scripts, polish review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-387): stable +
+market (365th cycle — LRU chain re-derived from committed pointers this
+tick: inn/tower-house @386 walked fresh, hall/bunkhouse @385,
+stable/market @384 the stalest standing pair; walk tools
+interior-walk-stable.ts (1784B) + interior-walk-market.ts (1544B),
+ls-verify before walks per law).
