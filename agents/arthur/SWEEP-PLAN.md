@@ -19831,3 +19831,63 @@ committed pointers this tick: inn/tower-house + stable/market BOTH walked
 fresh @398, forge/potter @397, hall/bunkhouse @396 the stalest standing
 pair; walk tools interior-walk-hall.ts (1704B) + interior-walk-bunkhouse.
 ts (1538B), ls-verify before walks per law).
+
+sweep-399: CLEAN SWEEP, single classified flip tick (170th consecutive
+quiet-or-classified). Tick-start HEAD 8642950e (polish-341, streetlamp
+glass cage committed PRE-tick); standing gate ALL PASS real exit 0 FIRST
+TRY via ~/.bun/bin/bun from repo root (cron PATH class, sweep-391..398),
+ledger law EXACT 2371129 at first probe (unchanged since sweep-398),
+interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, both read
+fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows,
+CITY-PLAN-V2 cae6b928 unchanged — audit-continues freeze banner governs
+via loop/plan reload). Census epoch A 422==422 (384 thing + 38 light) vs
+the committed sweep-398 baseline sha16 f9b7eb79c5a5b2a0: 0 arrivals, 0
+departures, exactly ONE substantive drift field-set = nx-town-streetlamps
+lib a7b05aefe1e971e8->9b8cdb73051beb5e at identical tuple, comp {}
+preserved, bbox byte-identical = COMMITTED polish-341 @ 8642950e (9b8cdb73
+deterministic x2, PLACED_VERIFIED idempotent per its own entry; ALSO
+independently classified by struct-328's same-window hold census at
+source) — ledger-matched, domain-valid (polish hero domain), not drift.
+Census diff flagged 61 compKeys-only diffs on shared ids — classified as
+the KNOWN baseline artifact (sweep-56 comps-key class): comp PAYLOADS
+deep-equal on all 61, substantive drift on shared ids ZERO. Epoch B
+20s-paced re-read 422==422 byte-identical (census sha16 5e8328153f0d612f
+both reads), A-to-B drift ZERO — single settled epoch. Overlap: SAT 384
+bbox non-light / 262 exempt-classified / 0 coverage holes, real exit 3 on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 (known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 355th sweep since
+routing, NOT new, no escalation due — the law keys on severity-1); the
+streetlamp flip introduced ZERO new contacts. Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually —
+core 64/64 max dist 0.380 (next-walk-core-paths.ts), NW 5/5 @ 0.38
+(nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts), SW 5/5 @
+0.37 (sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..398
+canon. Tier-2 377th cycle per the committed sweep-398 pointer: hall 8/8
+ALL_PASS (interior-walk-hall.ts, dists
+0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310, max 0.360) + bunkhouse
+6/6 ALL_PASS (interior-walk-bunkhouse.ts, dists
+0.245/0.300/0.305/0.247/0.380/0.313, max 0.380), both tools ls-verified
+present BEFORE the walks (1704B + 1538B), max dists canon-exact vs the
+sweep-396 record. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (353rd consecutive clean); sweep89-battery 28/28 PASS GREEN FIRST
+TRY on censusA AND censusB bytes — no pin bump due (streetlamps carries
+no battery pin; belltower 886a0615, carousel 193c897d + 7-key bag,
+windmill a557d918, woodyard 333e85a4, comp-bearing 69, lights 38 all
+exact). Baseline lawfully rewritten like-for-like
+(/tmp/s399/baseline-rewrite.py): pre-write asserts green (committed
+sha16 f9b7eb79c5a5b2a0, arrivals [], departures [], substantive drift
+exactly [nx-town-streetlamps lib] with the known compKeys artifact
+signature explicitly tolerated and nothing else), one-field lib
+transplant only, post-rewrite substantive drift vs live ZERO — final 422
+entities / 348865B / sha16 dd1d725f33309a2b. Foreign dirt in tree (engine
+files client/server, core-paths GLB + review json, windmill overhaul
+scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype
+dirs, fauna tools, debug bower scripts, fleet shell scripts, review
+dirs) is sibling work-in-flight, untouched per the ownership law. Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-400):
+forge + potter (378th cycle — LRU chain re-derived from committed
+pointers this tick: inn/tower-house + stable/market BOTH walked fresh
+@398, hall/bunkhouse @399, forge/potter @397 the stalest standing pair;
+walk tools interior-walk-forge.ts (1559B) + interior-walk-potter.ts
+(1571B), ls-verify before walks per law).
