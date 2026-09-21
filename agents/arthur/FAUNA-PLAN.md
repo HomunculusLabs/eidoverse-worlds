@@ -1937,3 +1937,65 @@ correct chassis; box corners under affine stay exact).
     census 421→422. Discovery class: yard loop behind the coop (hutch
     rabbits → cat pocket), occluded from plaza vantages — encounter-class
     by design, disclosed.
+
+ 52. **[CANDIDATE — proposed fauna-82, 2026-09-21, build fauna-83] European
+    mole at the garden cottage's working margin — Talpidae's first member,
+    the garden's subterranean adversary.** ONE entity `nx-dress-mole-001`
+    (short-id convention, magpi/pheas/hare/rat law). Census-grounded
+    (fauna82-census-mole.ts, READ-ONLY): 422 entities, ZERO mole/talpa
+    ids AND libs (magpie fauna-57 proposal law; the sole source hit is
+    'molecule' in struct243-probe-tico.ts — substring class, carp
+    'roach'-in-'approach' law) — the family slot is genuinely open.
+    Village logic: the fleet's small-mammal tier now covers the harvest
+    mouse (fauna-45), dormouse (fauna-46), field vole (fauna-71), brown
+    rat (fauna-81), squirrel (fauna-44), hedgehog (fauna-42), rabbits
+    ×3 + hare — TALPIDAE, the garden's own subterranean architect, is
+    absent. The garden cottage is the village's garden building (yaw 2.2
+    facing the plaza) and its wildlife edge already carries the
+    companion-adversary pair: wild rabbits at the SE reader edge (fauna-38
+    — the grazers) + hedgehog at the quiet NW back margin (fauna-42 — the
+    rootler). The classic garden trio's missing member is the mole
+    (Talpa europaea) — Bill's own homestead language (the gardener's
+    oldest adversary, the molehill line across the lawn) — and the
+    read no other species carries: a fresh MOLEHILL CLUSTER at the
+    working margin, earth pushed up from below, the garden's third
+    species living BENEATH it. Species contract: SINGLE mole (met singly
+    at the surface; hmou/dmou/hog/vole/rat single-precedent), TRUE-SIZE
+    ~13cm + ×2.0 marginality bake incl joints (hmou ×2.2 chassis law) =
+    a ~26cm read IF surfaced — but the contract pose is THE SURFACE
+    EMERGE: head+spade shoulders breaking the fresh hill's crater rim,
+    body still in the earth (the carp fauna-75 law inverted — the mole
+    is a SUBTERRANEAN event; most of the animal is invisible by
+    construction, the crater is the read). Markers: black-velvet coat
+    0x2a2622 (the mole's famous fur), PINK spade hands at the crater rim
+    (the digging read, flush-proud), THE PINK TAPERED SNOUT proud of the
+    face (the probe organ — the 18m/encounter lock, kfish two-tone-stack
+    law: snout past the face plane, never embedded), pinprick eyes (the
+    nearly-blind species marker — dark beads nearly buried in fur,
+    vole-buried-ear law inverted), no external ear (species-true). The
+    molehill furniture (vole grass-run law applied to earthworks):
+    2-3 fresh cratered mounds (sheep-pad geometric-mottle stepped earth
+    tones — flat discs read decals) + a surface run ridge (the raised
+    seam of a shallow tunnel) + earth crumbs on the grass. Motion
+    contract: breathing bob + head Y-scan (the surface pause-and-listen)
+    + nested snout probe-bob X (hog/vole/rat pattern); phases staggered,
+    epoch t0. Anchor contract: mole/mole_head/mole_snout (3 KEEP groups;
+    `mole$|mole_` prefix — collision-free at proposal: zero census hits,
+    zero mkv3 node tokens this tick; rg over mkv3 sources + gitignored
+    assets re-owed at build tick, magpi law). Siting: garden-cottage
+    working-margin GROUND seat — the W/SW margin band between the
+    cottage's 1.4m skirt and the mosaic 0052 film edge (mosaic at 13.7m
+    this tick — molehills beside art never on it, sheep law; exact tuple
+    owed to the build tick: 25cm-grid seat sweep + live heightAt + live
+    SAT vs cottage/wrabbit-001/hog-001/hypar OBBs + b17 rider + walking
+    lines, lamp-in-path law — the hill line runs ALONG the margin, never
+    across the reader line). Judge contract: encounter anatomy (velvet
+    coat + pink snout + spade hands + crater emerge) + discover (the
+    molehill find at ~2.6m, the gardener's double-take) + 18m scope
+    PRESENT (the fresh-earth disturbance reads as garden life — robin-law
+    encounter-reward disclosure for the animal itself). Provenance:
+    badger sett earthwork chassis (geometric-mottle spoil law), hog
+    rootling snout + nested-snout comp, vole run-furniture discipline
+    + tail decode-gate law (applied to the snout), carp surface-event
+    law (inverted — visibility by construction), wrabbit/hog garden-edge
+    seat discipline. Proposal only — build fauna-83.
