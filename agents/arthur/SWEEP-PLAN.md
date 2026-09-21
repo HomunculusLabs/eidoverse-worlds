@@ -19994,3 +19994,83 @@ tier-2 pair (sweep-402): stable + market (380th cycle — LRU chain:
 inn/tower-house @401, forge/potter @400, hall/bunkhouse @399,
 stable/market @398 stalest; walk tools interior-walk-stable.ts +
 interior-walk-market.ts, ls-verify before walks per law).
+
+sweep-402: CLEAN SWEEP, classified-arrival + single-flip tick (173rd consecutive
+quiet-or-classified). Tick-start HEAD 5a842a3b (struct-332); standing gate ALL
+PASS real exit 0 FIRST TRY via ~/.bun/bin/bun from repo root (cron PATH class);
+ledger law EXACT 2371135 at first probe; interlane md5 86b2936f + SWEEP-LOOP
+md5 a5fd4f4f stable, both read fresh; pools drained (IMPROVE-PLAN 7fa8a224
+zero open rows, CITY-PLAN-V2 cae6b928 — freeze banner governs via loop/plan
+reload). Census epoch A 423->424: exactly ONE arrival = nx-dress-bfly-001 @
+(-39.5826, 0.04025, 62.8918) yaw 2.3562 lib 77232f5398b06ab5 scale 1, 10x
+motion:bfly_{a,b}{,_hover,_jink,_wingL,_wingR} (2 wander rings + 2 hover bobs
++ 2 jinks + 4 wing pendulums), bbox 3.83x0.13x1.47 air-band y0.70-0.83
+scale-sane — fauna-85 butterfly pair (LEPIDOPTERA first member: small
+tortoiseshell + red admiral) over the NW lavender nx-cultivation-lavender-0040,
+committed MID-TICK @ fa5ebbb9 (parent of tick-start HEAD; the live world
+landed it during this window), tuple-matches its ledger line-for-line (yaw ==
+host 2.3562, frame-copy air seat over the blossom crowns), classified
+domain-valid, not drift. ONE substantive drift field-set = nx-town-streetlamps
+lib a4b572a3->fdade00c at identical tuple (0,0,0) yaw pi, comp {} preserved,
+= polish-343 @ d9267601 committed PRE-tick (streetlamp glass-pane recess),
+ALSO independently classified by struct-332's same-window hold census at
+source BEFORE this sweep used any expectation (dress-172 law). 61
+compKeys-only diffs on shared ids = known sweep-56 baseline artifact, comp
+payloads deep-equal on all 61. Epoch B 20s-paced re-read 424==424
+byte-identical, A->B drift ZERO — single settled epoch. Overlap: SAT 386
+bbox non-light / 263 exempt-classified / 0 coverage holes, real exit 3
+(unpiped, polish-270(b) law) on exactly ONE unclassified = R-121 lamp-n|
+nx-town-mapboard -0.407 (known Sev 2 routed artwalk b26 choreography @
+sweep-43, 358th sweep since routing, NOT new, no escalation due — the law
+keys on severity-1); the bfly arrival + lamp flip introduced ZERO new
+contacts. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0, legs run individually — core 64/64 maxArrival 0.380
+(next-walk-core-paths.ts), NW 5/5 (nw-approach1-walk.ts), NE 7/7
+(ne-approach2-walk.ts), SW 5/5 (sw-approach3-walk.ts), dists canon-exact
+vs the sweep-319..401 canon. Tier-2 380th cycle per the committed sweep-401
+pointer: stable 5/5 ALL_PASS max 0.396 (interior-walk-stable.ts, dists
+0.295/0.388/0.383/0.396/0.369) + market 6/6 ALL_PASS max 0.389
+(interior-walk-market.ts, dists 0.309/0.360/0.389/0.261/0.291/0.346), both
+tools ls-verified present BEFORE the walks (1784B + 1544B), max dists
+canon-exact vs the sweep-398 record. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (356th consecutive clean); sweep89-battery first
+invocation on censusA 27/28 RED on exactly comp-bearing-23 (pin 70 stale vs
+live 71 = expected classification), lawful pin bump 70->71 per the
+sweep-301..400 fauna precedent chain — added-set census-verified exactly
+[nx-dress-bfly-001] removed-set empty, pin comment carries the fauna-85
+provenance, prior history preserved verbatim; battery then 28/28 PASS GREEN
+on censusA bytes; comp-bearing 71 (arrival is the 71st), lights 38, thing
+386. Standing gate re-run ALL PASS real exit 0 at mid-tick HEAD fa5ebbb9
+(polish-270 epoch law — fauna-85 landed as a mid-tick forward advance,
+parent of tick-start HEAD). Baseline lawfully rewritten like-for-like
+(/tmp/s402/baseline-rewrite.py): pre-write asserts green (committed sha16
+697dd10476866161, round-trip byte-identity probe, arrivals exactly
+[nx-dress-bfly-001], departures [], substantive drift exactly
+[nx-town-streetlamps lib] with the known compKeys artifact signature
+payload-equality hard-gated and nothing else), sorted insertion + one-field
+lib transplant + count bump 423->424, post-rewrite substantive drift vs live
+ZERO — final 424 entities / 353737B / sha16 ff9327302514cdb8. PROBE
+SELF-CATCHES disclosed: (a) the first plan-append patch fuzzy-matched an
+interior sweep-375 block instead of the file tail (adjacent-token-bleed
+class, sweep-43/50/53 family) — caught by re-reading the diff region
+immediately, restored byte-exact from HEAD (git checkout, zero other
+changes in flight on this file), re-applied via asserted unique-tail-anchor
+python append; (b) the baseline-rewrite script's final print crashed
+POST-WRITE on a shifted record index (arrival insert moved the streetlamp
+record; post-drift was already verified ZERO inside the script) — on-disk
+bytes re-verified green by an independent parse, print-only bug, no data
+effect; (c) walk-output parsers keyed schema shapes before reading raw
+output (core top-level legs count+results; NW/NE/SW 'distance' key; tier-2
+per-leg results without a top-level count — sweep-386(b)/391(b)/394(b)/398(b)
+class, re-anchored each time). Foreign dirt in tree (engine files
+client/server, core-paths GLB + review json, windmill overhaul scratch +
+WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype dirs, fauna
+tools, debug bower scripts, fleet shell scripts, review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-403): inn +
+tower-house (381st cycle — LRU chain re-derived from committed pointers
+this tick: stable/market walked fresh @402, forge/potter @400,
+hall/bunkhouse @399, inn/tower-house @401 the stalest standing pair; walk
+tools interior-walk-inn.ts (1786B) + interior-walk-tower-house.ts (1523B),
+ls-verify before walks per law).
