@@ -48,6 +48,17 @@ const lamp = (deg: number, tag: string) => {
     core.name = `${tag}_core`;
     core.position.set(x, 2.49, z);
     g.add(core);
+    // polish-341 glass cage: day+night judges' convergent #1 — the core read
+    // as a bare glowing slab clamped between plates, not lantern glass in a
+    // frame. Four iron corner posts (0.025 sq, half-proud of the glass face
+    // at ±0.0875 vs glass ±0.075 — no coplanarity) from the collar-top plane
+    // 2.36 up into the eave body to 2.63 (solid seat, ends hidden).
+    for (const sx of [-1, 1]) for (const sz of [-1, 1]) {
+        const bar = new THREE.Mesh(new THREE.BoxGeometry(0.025, 0.27, 0.025), ironTex);
+        bar.name = `${tag}_cage`;
+        bar.position.set(x + sx * 0.075, 2.495, z + sz * 0.075);
+        g.add(bar);
+    }
     {
         const eave = new THREE.Mesh(new THREE.BoxGeometry(0.27, 0.045, 0.27), ironTex);
         eave.name = `${tag}_eave`;

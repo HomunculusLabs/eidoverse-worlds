@@ -3673,3 +3673,58 @@ next wake once the gateway answers.
 - Next ranked: (a) streetlamps (p312 pin) fresh survey — now the
   least-recently-judged pinned plaza-core subject, or (b) plaza-core
   re-survey on fresh evidence.
+
+### polish-341 — streetlamp glass cage (ACCEPTED, LIVE)
+
+- Subject: `nx-town-streetlamps` (ground-layer network at origin, pos
+  [0,0,0], yaw pi, EMPTY comp bag — census-fresh this tick). Build source
+  `assets/mkv3-lamp33.ts` -> `village_streetlamps3.glb` (live was a7b05aef,
+  polish-312's lantern-head build; on-disk == live exact at survey,
+  before-bytes captured FIRST). Queue head from polish-340's close: the
+  least-recently-judged pinned plaza-core subject.
+- Survey (NEW 12-view rig `p341-rig.ts`, p340 chassis; ZAI fallback
+  disclosed — no native vision tool loadable in this cron session,
+  polish-285..340 class, native re-judge owed): near-night 7/10 and day
+  6.5/10 judges CONVERGED on one defect — the glass core read as a bare
+  glowing slab "clamped top and bottom" / "lampshade on a stick", the
+  head's largest surface with zero ironwork. gp18-night 7/10 (p312 cures
+  hold: lamps read as lamps, not floating dots).
+- Change (ONE intervention, mkv3-lamp33.ts): glass cage — four iron corner
+  posts per lantern (0.025 sq, half-proud of the glass faces at corner
+  offset 0.075, y 2.36..2.63 seating collar-to-eave), all 8 lamps, +768
+  verts (32 x 24). merges into the existing iron bucket — nodes 24 /
+  meshes 16 / materials 2 UNCHANGED; both emissive materials untouched.
+- Candidate `9b8cdb73051beb5eaf7821c3581f1863f4c55683e1bbcf022e317a196083711e`
+  deterministic x2 (mtime-verified). Decode (p341-decode.ts, probe
+  self-caught its own GLB-chunk-NUL + bufferView-offset bugs RED->GREEN):
+  +768 verts exact, 0 non-finite, y extent 0..2.947 (census bbox exact).
+- Falsification: pixel diffs confined to lantern-head zones in all views
+  (near 3941 px; base-day 0 px = perfect control; aerial 104 px = the 8
+  head dots at r10). Judges: night A/B CLEARLY BETTER ("glowing glass
+  panes in an iron frame", zero night penalties); day A/B ship ("framed
+  lantern", no defects, nit: posts read dark-brown not near-black iron —
+  recorded); 18m night A/B BETTER (framing detail at zero legibility
+  cost; watch-item: aliasing in motion at ~35m — client check, recorded).
+- Placed via updated `next-place-polish312-streetlamps.ts` (pins
+  a7b05aef -> 9b8cdb73): PLACED_VERIFIED, 1 upload + 1 verb, comp bag {}
+  preserved, idempotent rerun zero verbs, live census pin
+  `store/9b8cdb73051beb5e.glb` @ (0,0,0) yaw pi exact, bbox unchanged.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `p341-verify-served.ts`, p312 chassis): P341_SERVED_PASS — 32/32 cage
+  clusters at the glass-corner loci in served DRACO, ironVerts 2096
+  (= baseline 1328 + 768 exact), 8/8 lamp groups, headTop 2.9475, both
+  emissive factors exact WITH baseColorTexture, 0 non-finite.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD 65c7e90d
+  (struct-327 absorbed mid-tick — normal interlane life).
+- Excalibur checkpoint: cast REACHABLE — appended to
+  `vessel/workings/eidoverse-hero-assets/CHECKPOINT.md`.
+- Evidence: `reviews/hero-assets/polish-341-streetlamps/` (before/ =
+  baseline GLB + 12-view rig; after/ = candidate + rig; ab-*.jpg panels).
+  Probes durable: p341-rig.ts, p341-decode.ts, p341-abdiff.py,
+  p341-verify-served.ts.
+- Next ranked: (a) plaza-core re-survey on fresh evidence — judge-named
+  residuals this tick: roof-pitch/fused-cap read (near-night judge #2,
+  needs steepening + finial re-base — compositional, judge fresh first),
+  post color at night distance (gp18 judge), or (b) another
+  least-recently-judged pinned subject (well p314, fountain p326,
+  hearth p334 pins) fresh survey.
