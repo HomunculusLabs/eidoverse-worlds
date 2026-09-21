@@ -1303,6 +1303,70 @@ domain is commons-next `nx-dress-*` fauna only.
     reader discipline. Proposal only — build fauna-75. **CLOSED fauna-75
     (2026-09-20): BUILT + SEATED — full record below.**
 
+    49. **[CANDIDATE — proposed fauna-76, 2026-09-20, build fauna-77] European
+    badger at the SE woodland margin — the mustelid family's first member,
+    the sett at the wild edge.** ONE entity `nx-dress-badger-001`
+    (short-id convention, magpi/pheas/hare law). Census-grounded
+    (fauna76-census-badger.ts, READ-ONLY): 419 entities, ZERO
+    badger/meles/mustelid fauna across ids AND libs (the three id regex
+    hits are 'potter'-contains-'otter' substring classes — nx-town-potter
+    + light + sign, the carp 'roach'-in-'approach' law); the family slot
+    is genuinely open. Village logic: the fleet's carnivora are the fox
+    (canid, asleep at its den fauna-5), the cat + collie (domestic working
+    partners fauna-7/37), and three raptors — MUSTELIDAE, the woodland's
+    own carnivore family, is absent. The SE wild edge is the village's
+    wild-mammal theater (fox den, roe deer, pheasants, field vole,
+    kestrel, woodpecker — the food web staged and closed through
+    fauna-75) and its one absent class is the burrowing nocturne: the
+    badger is THE European woodland-margin animal — the sett, the striped
+    face, the night digger every English smallholding knows (Bill's
+    homestead language: the closed-loop land's own night visitor) — and
+    its classical coexistence with the fox (foxes rear earths at old
+    setts — the "foxearth" of every country book) makes the woodland edge
+    beside the fox's country the honest seat. Species contract: SINGLE
+    dog badger (badgers forage singly; the SETT is the community read —
+    hmou/dmou/hog/vole single-precedent), TRUE-SIZE authored directly
+    (~0.75m wedge body + furniture, fauna-13/19/21 law — carries 18m by
+    silhouette; no bake expected), in the ambling forage crouch at the
+    sett mouth: LOW WEDGE body (deep-chested at the digging end, tapered
+    aft — the anti-biped build-true cousin), grizzled grey-brown coat,
+    THE STRIPED FACE — white muzzle-to-cheek with TWO BROAD DARK BANDS
+    through the eyes (the 18m lock, robin-bib contrast class), small
+    round ears set in the cheeks (earless read at distance — the owl's
+    marker class, deliberate), short thick dusty tail, big pale foreclaws
+    (encounter scale), dark legs. Furniture: THE SETT (vole grass-run law
+    applied to burrows — the species' own architecture, zero timber):
+    fresh spoil heap at the entrance (sheep-pad geometric-mottle law:
+    stepped earth tones + clods read earth, flat discs read decals), the
+    dark entrance hole with a pale worn lip, old weathered spoil
+    flattened beside it (fresh-vs-old two-tone earth), ONE worn forage
+    path from the door, a margin latrine pit (the badger's famous
+    cleanliness — the field-sign classic), worm casts at the snout (grain
+    law). Motion contract: breathing bob + slow head Y-scan (the
+    forager's pause-and-listen) + nested snout root-bob (hog/vole
+    pattern — the worm probe) + tail settle; phases staggered, epoch t0.
+    Anchor contract: badger/badger_head/badger_snout (3 KEEP groups;
+    `badger` prefix — collision-free at proposal: zero census hits this
+    tick; rg over mkv3 sources + gitignored assets owed at build tick,
+    magpi law). Siting: SE wild-edge woodland margin GROUND seat,
+    FIRST-CHOICE the quiet corner between the forest screen W skirt and
+    the meadow S of the deer band (zone center (48,-40); this tick's
+    co-resident table: deer 3.7m, villarceau 5.9m, northneedle 8.1m,
+    se-stones 9.1m, forest-0057 15.2m — the margin's own geography),
+    SECOND the E-margin band between the fox den country and the mosaic
+    (zone (62,-20): kestrel 6.0m, toct 7.3m, foxden 14.5m — the foxearth
+    adjacency); exact tuple owed to the build tick (25cm-grid seat sweep
+    + live heightAt + live SAT vs deer/villarceau/northneedle/stones/
+    forest-screen OBBs + walk-up discover vantage on the plaza-spoke
+    reader line, clean-slate bearing law fauna-61 law a). Judge contract:
+    sett composition (mound + hole read as a burrow) + badger profile
+    (striped face + wedge + low carriage — the contract view) + 18m scope
+    (the sett reads as a woodland-edge feature, the badger as its
+    resident). Provenance: fox chassis (dark low quadruped build family),
+    hog rootling snout + nested snout comp, sheep geometric-mottle earth
+    law (the spoil), vole run-furniture discipline, deer/pheas SE-margin
+    seat discipline. Proposal only — build fauna-77.
+
 
 ### common carp — fauna-75 (2026-09-20) CLOSED
 - **v10 sha16 2f91932ddbd14ff4** (full 2f91932ddbd14ff4028f6f03b2ef61982a84b44f18b4bd86e82f0c614f003b8a), NEW entity `nx-dress-carp-001` PLACED_VERIFIED at world (9.723, 0.06093, −90.982) yaw 0 scale 1 — the FRAME-COPY WATER-RIDER seat (ducks fauna-3 / frog fauna-29 / swan fauna-63 class): entity origin == reedpool host origin; entity yaw == host yaw (0) so entity-local == host-local VERBATIM; PY = water top world 0.08093 − WL 0.02 = 0.06093 (duck/fauna-31 waterline law). HOST HARD-GATE: nx-struct-reedpool (9.723,−0.05907,−90.982) yaw 0 lib 7d770620bb1b7bdc exact pre+post (artwalk-39 law; struct-lane-owned, foreign domain, never touched). Census 418→419 exactly, 4 verbs (upload+spawn+3 comps), idempotent rerun 0 verbs alreadySeated, walk ALL_PASS 4/4 (18m N-bank approach + FULL bridge-deck N→S crossing — the contract vantage — arrivals 0.00/0.30/0.37/0.31m; foreign support-seam stderr = logpile/skeps/woodstack/yard/stones class, not ours), live bbox 1.012×0.363×0.300 (the SURFACE envelope — back + fin crest + wake films).
