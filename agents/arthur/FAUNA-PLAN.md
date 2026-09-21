@@ -1728,6 +1728,7 @@ domain is commons-next `nx-dress-*` fauna only.
 | NATIVE-46 | fauna-73 (2026-09-20) | brown hare v2 79ce2c97 lone_near (the SHIP view — eyes/nose seated, both black-tipped ears separate) + seat_gameplay (the 18m SHIP view: sentinel silhouette + flat form read) + lone_formface-fill (the r5 SHIP view: pinned ears + form dish) frames (`reviews/fauna73-hare/v2-{lone_near,seat_gameplay,lone_formface-fill}.png`) — fallback arc stands (lone_near SHIP + 18m SHIP + formface SHIP; judge = ZAI-vision MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-45 | fauna-71 (2026-09-20) | field vole v15 f2703767 lone_near (the SHIP view ×2: r3 tube-tail + r7 final-bytes) + lone_face-fill (the r7 PASS view: two eye beads + collar/muzzle/nose stack) + comp_near (the r12 DISCOVER SHIP view: face break + tail stub + dorsal two-tone + run band + nose chaff) + comp_scope (the PRESENT view) frames (`reviews/fauna71-vole/new-{lone_near,lone_face-fill,comp_near,comp_scope}.png`) — fallback arc stands (near SHIP ×2 + face PASS + discover SHIP + scope PRESENT with lane-grazing-angle disclosure; judge = ZAI-vision MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-41 | fauna-63 (2026-09-20) | mute swan v12 9206edbe approach18 (the SHIP view ×2: two swans / S-neck / floating / pen distinguishable) + flankNE12 (profile: species+postures SHIP; disk-as-shadow southern-vantage disclosed) + cobface + night frames (`reviews/fauna63-swan/v3-{approach18,flankNE12,cobface,night}.png`) — fallback arc stands (18m SHIP 6/6 on final bytes; judge = ZAI-vision MCP fallback glm, cron lane native-absent) until natively confirmed |
+| NATIVE-49 | fauna-81 (2026-09-21) | brown rat v9 9b1cb0d6 comp_near (the r6 DISCOVER SHIP view 4/4: species + tan wall-run lane + contact shadow + no scale anomaly) + lone_near (encounter SHIP r2 view: anatomy) + lone_profile (the tail contract view) frames (`reviews/fauna81-rat/new-{comp_near,lone_near,lone_profile}.png`) — fallback arc stands (r2 anatomy SHIP + fill-lit face adjudication SHIP + r6 discover 4/4 SHIP; judge = ZAI-vision MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-42 | fauna-65 (2026-09-20) | kestrel v4 941d1db7 face (the 3/3 SHIP view: pale plate + both mustaches + yellow-dark bill) + rear (fan + subterminal band SHIP view) + spoke18 (18m scope SHIP view: hover reads, post+bird composition) frames (`reviews/fauna65-kestrel/new-{face-kestrel,rear-kestrel,spoke18}.png`) — fallback arc stands (face 3/3 + rear SHIP + 18m scope SHIP; judge = ZAI-vision MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-37 | fauna-55 (2026-09-20) | pheasants v9 793f6fab lone_profile (the tail SHIP view) + lone_cockface (ring SHIP view) + snag_scope (18m scope SHIP view) + snag_near-fill (the lit-pass encounter SHIP view) frames (`reviews/fauna55-pheas/new-{lone_profile,lone_cockface,snag_scope,snag_near-fill}.png`) — fallback arc stands (profile SHIP + cockface SHIP + scope SHIP + near fill-lit SHIP; 18m wide-FOV speck disclosed robin-law; judge = ZAI-vision MCP fallback glm, cron lane native-absent) until natively confirmed |
 | NATIVE-35 | fauna-52 (2026-09-20) | yellowhammers v4 0f7fdfea hedge_scope (18m — the SHIP view: "reads as a yellow bird, not a yellow smudge") + hedge_near (discover placement SHIP view) + lone_near (anatomy SHIP r2 view) frames (`reviews/fauna52-yham/new-{hedge_scope,hedge_near,lone_near}.png`) — fallback arc stands (anatomy SHIP r2 + discover SHIP r3 + 18m scope SHIP r4; judge = ZAI-vision MCP fallback glm, cron lane native-absent) until natively confirmed |
@@ -1916,3 +1917,23 @@ correct chassis; box corners under affine stay exact).
     bake/tuft chassis, vole run-furniture discipline + tail decode-gate
     law, hare proud-eye law, hog nested-snout pattern, cat-7 coop-yard
     seat discipline. Proposal only — build fauna-81.
+    **[BUILT+SEATED — fauna-81, 2026-09-21]** v9 sha 9b1cb0d6 (4928 tri, 6
+    top nodes). Decode GREEN+RED ×2: tail/HB 0.994 [0.9,1.3], ear crest
+    +17.8mm, husk-contact 7mm, joints head y 0.064/snout −0.003. Judge r6
+    4/4 SHIP at discover 2.6m (ZAI glm-4.5v fallback — native debt
+    NATIVE-49: native vision down in the cron window, re-judge of r6 +
+    encounter views owed when native returns) after 5 fix
+    rounds: v3 two-segment draped tail + flesh 0xb59a8a + blades deleted;
+    v5 husk tighten; v6 mound base + lane 0.95; v8 lane east tongue
+    (+0.55 sunlit, total 1.255 × 0.30); v9 lane TRUE TAN 0x8a7a4e (v5-v8
+    values all rendered shadow-dark). Two rig bugs caught by the
+    instrument chain: composite ground plane at seat PY (−0.039, not 0),
+    sun moved reader-side ESE (fauna-61 law b). Seat: sweep found the W/S
+    corner hutch-PINCHED (SAT 1.0–1.36 < 1.4) — lawful seat at the coop's
+    ESE back-wall (38.95, −0.03909, −6.5) yaw −2.35, hug 0.471, worst
+    non-host 1.491 (hutch), lanes 2.58/3.59; terrain 9pt spread 1.5mm.
+    Placed remove+spawn+3 staggered bob comps (rat 4.7s ph2.4 / head 3.1s
+    / snout 2.3s ph1.1), PLACED_VERIFIED, idempotent rerun zero verbs,
+    census 421→422. Discovery class: yard loop behind the coop (hutch
+    rabbits → cat pocket), occluded from plaza vantages — encounter-class
+    by design, disclosed.
