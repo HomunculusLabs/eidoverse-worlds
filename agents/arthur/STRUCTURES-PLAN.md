@@ -24858,3 +24858,67 @@ struct-318, D+0 E+0).
 
 Next queue head: unchanged — Bill's routing executes the same wakeup it
 arrives; until then the hold repeats with one-line status.
+## struct-319 (2026-09-21): R11-128 lawful HOLD — build ticks hold on
+## Bill's next-family decision (surfaced struct-278, forty-first consecutive
+## — one-line pointer form per the ~3-tick token-burn law)
+
+319%3=2 build-slot tick (build holds — next family is Bill's call per
+struct-278: pentagonal hexecontahedron + snub cube/snub dodeca HELD for
+his handedness call, rhombic dodeca BARRED rt-kin). Gate ALL PASS real
+exit 0 tick-start (unpiped /tmp/struct319-gate.log, GATE_EXIT:0 + ALL
+PASS verdict line at e09a175a dress-237 HEAD, foreign domain; range
+7e1498a0..HEAD inspected: dress-237 hold + fauna-80 proposal + sweep-393
+observer + struct-318 own hold — keyword grep Johnson/Kepler/Poinsot/
+handedness/next-family/Bill/verdict: hits are sibling/own hold prose
+only, zero Bill directives; HEAD re-checked unchanged at close, epoch
+law). No committed placement carry banked (tetrakis/trioct/trit all
+LIVE); shard re-derived empty fresh (IMPROVE-PLAN.md [OPEN] rows: 0
+lines at all; IMPROVEMENTS.md nx-struct+[OPEN] grep: prior-tick hold
+prose only, disclosed class); refine pool empty of payable items (40+
+ticks); ledger max re-derived struct-318 -> struct-319 immediately
+before append (numeric extraction; entry verified landed exactly once).
+
+Native vision: ABSENT from the cron catalog all tick (tool_search fresh
+33 tools: terminal 1 + zai-vision 8 + repoprompt 24 — no native vision
+tool; the disclosed cron-unpayable class, struct-169..318 lineage). Owed
+board unchanged, riding: tetrakis/trit/trioct v1 ZAI-fallback judgments
+(banked frames are the re-judge substrate for the first windowed session
+with native).
+
+No verdict routing in HEAD since the struct-278 surfacing (keyword grep
+across the range: zero Bill directives).
+
+Task-prompt priority items verified resolved on prior ticks and
+re-confirmed by fleet census pins: costa v2 carry long closed (judged
+ACCEPTED struct-167, live era struct-168+); hypar row 22 closed natively
+survey-16 (struct-48 record: debt board 4/4 CLEARED); R11 Amendment-1
+weak reads (gyroid/enneaper, struct-134) cured (survey-82 gyroid v2
+post-cure CLEAN; enneper v2 lineage struct-170) — no open rows.
+
+Live census 421 entities (next-live-census.ts via ~/.bun/bin/bun, exit
+0; QUIET-vs-one-foreign-move tick vs struct-318's /tmp/struct318-census
+.json capture by id-set + tuple diff: 421==421, ZERO arrivals / ZERO
+departures; sole tuple move is nx-carousel lib/pos — polish-337 straps
+lineage, foreign domain, not struct intake):
+nx-struct-tetrakis store/f2e8a62adf84c7c8.glb [93.474581, -0.019616,
+-45.590599] yaw 4.642575810304916; nx-struct-trioct
+store/9f5d016efcb3a6a5.glb [-95.721566, 0.036572, 46.686527] yaw
+1.5009831567151233; nx-struct-trit store/c46f5a580e1da32b.glb
+[60.225526, -0.03243, -86.010965] yaw 5.1487212933832724 — all three
+PIN_EXACT (python deep-compare vs pins, maxdelta 0.0), zero drift.
+127 struct-domain entities, all accounted. Foreign dirt
+(WINDMILL-OVERHAUL, cabin-overhaul, fauna files, client/server
+sources, core-paths assets, dress-lane files) left untouched per the
+ownership law.
+
+DISPOSITION: lawful hold (forty-first consecutive — one-line pointer
+only: Bill's routing unblocks the lane, struct-278 records the four
+options: Johnson solids / Kepler-Poinsot stars / the chiral pair's
+handedness call / his own routing). Zero world mutations, uploads,
+verbs, comp-edits, shared-budget use. Zero pushes.
+
+Files: STRUCTURES-PLAN.md (this block) + IMPROVEMENTS.md (one append
+struct-319, D+0 E+0).
+
+Next queue head: unchanged — Bill's routing executes the same wakeup it
+arrives; until then the hold repeats with one-line status.
