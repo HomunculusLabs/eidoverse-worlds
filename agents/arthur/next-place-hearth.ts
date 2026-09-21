@@ -1,5 +1,5 @@
-// next-place-hearth.ts — polish lane (333): re-place nx-hearth with the
-// pile contact-shadow build (polish-333; chassis unchanged from 332).
+// next-place-hearth.ts — polish lane (334): re-place nx-hearth with the
+// pile fire-rim build (polish-334; chassis unchanged from 333).
 // Captures the live comp bag before spawn, re-applies every key after
 // (comp-wipe law); the sockets amendment (bench seat y 0.25, polish-331)
 // is retained — idempotent on the live bag which already carries 0.25.
@@ -14,7 +14,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-hearth";
 const FILE = `${ROOT}/agents/arthur/assets/village_plaza3.glb`;
-const REVIEWED_SHA = "69ccd14a7d01901fb62b2e12cd52c8147ecccfddccb140e2fa376ba2cb75e602";
+const REVIEWED_SHA = "8f095330ef8bc1c748a78205f0318e3f681c188949c4b7eb72bfff9666838898";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [0, 0, 0] as [number, number, number], yaw: 0, scale: 1 };
 const EXPECTED_KEYS = ["motion:pz_kettle", "motion:well_", "particles", "sockets"].sort();
@@ -65,7 +65,7 @@ const already = live.lib === REVIEWED_LIB
 if (!already) {
   const u = new URL(`${base}/upload`);
   u.searchParams.set("token", cfg.agentToken);
-  u.searchParams.set("name", "the plaza hearth — polish-333 pile contact shadow");
+  u.searchParams.set("name", "the plaza hearth — polish-334 pile fire-rim");
   u.searchParams.set("by", cfg.id);
   let lib = "";
   for (let attempt = 1; attempt <= 6; attempt++) {

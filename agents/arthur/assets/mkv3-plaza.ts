@@ -253,13 +253,32 @@ g.add(kGrp);
 // end-grain popped 2 steps (0x9e8e46 -> 0xb59d55). Grounded at grade,
 // outside the flag ring (r 2.60 inner edge; pile center r 3.60, half-span
 // 0.55 tangential -> nearest flag 0.45m clear).
+// polish-334: FIRE-RIM WARM WASH on the pile bark (polish-316 cast-light
+// lineage). The engine never casts light from the fire emissive
+// (lightrig.js), so at night the fuel store — the one prop whose STORY is
+// "fuel for that fire" — read as a dead black mass beside it (night judge
+// 2.5-3/10: "night obstacle on the grass, not fuel for that fire; zero
+// warm-light linkage"). Bake a faint fire-rim into the BARK ONLY: the sawn
+// cut faces stay neutral because they face SW, AWAY from the fire — the
+// bark/face split preserves the directional hint (fire-side warm,
+// away-side dark). Intensity well under the kettle underglow (0.15) and
+// far under smolder reads (embers 0.9): night ladder fire 1.0 > kettle
+// 0.15 > pile fire-rim 0.055. Day-invisible by the polish-287 law (linear
+// +0.055 on a sunlit albedo ≈ +10-12 sRGB, sub-perceptual). ONE shared
+// material instance for bearers + logs (polish-311 mergekit law: the
+// emissive-bearing material must be the sole 0x7a6234 user or the buckets
+// silently merge); bench bark 0x6c5426 untouched (different bucket, and
+// seats are seats — the pile alone is the fire's store).
 const PILA = (202.5 * Math.PI) / 180;
 const PC = { x: Math.cos(PILA) * 3.75, z: Math.sin(PILA) * 3.75 }; // pile center
 const TAN = { x: -Math.sin(PILA), z: Math.cos(PILA) }; // tangential unit at PILA
+const pileBark = mat(0x7a6234, 0.95, 0);
+pileBark.emissive = new THREE.Color(0xffc98a);
+pileBark.emissiveIntensity = 0.055;
 // cradle: two split-log bearers, long axis TANGENTIAL (perpendicular to
 // the radial courses above them)
 for (let cr = -1; cr <= 1; cr += 2) {
-    const bearer = new THREE.Mesh(new THREE.CylinderGeometry(0.075, 0.075, 0.8, 7), mat(0x7a6234, 0.95, 0));
+    const bearer = new THREE.Mesh(new THREE.CylinderGeometry(0.075, 0.075, 0.8, 7), pileBark);
     bearer.name = `plog_cr${cr > 0 ? "p" : "m"}`;
     bearer.rotation.z = Math.PI / 2;
     bearer.rotation.y = -PILA + Math.PI / 2; // local Y -> tangential
@@ -275,7 +294,7 @@ const COURSE_LEN = [0.68, 0.5];
 const COURSE_SKEW = [0, 0.35];
 for (let c = 0; c < 2; c++) {
     for (let k = 0; k < COURSE_N[c]; k++) {
-        const log = new THREE.Mesh(new THREE.CylinderGeometry(0.062, 0.062, COURSE_LEN[c], 7), mat(0x7a6234, 0.95, 0));
+        const log = new THREE.Mesh(new THREE.CylinderGeometry(0.062, 0.062, COURSE_LEN[c], 7), pileBark);
         log.name = `plog_${c}${k}`;
         log.rotation.z = Math.PI / 2;
         log.rotation.y = -PILA + COURSE_SKEW[c] * (k === 0 ? 1 : -1); // local Y -> radial (inward)

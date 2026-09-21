@@ -3275,3 +3275,61 @@ next wake once the gateway answers.
   notes — night fire-rim warm tint on the pile (judge #1 night note,
   recorded not treated), scene-wide AO consistency is the live engine's
   own lighting law, not a per-model defect.
+
+### polish-334 — hearth pile fire-rim (ACCEPTED, LIVE)
+
+- Subject: `nx-hearth` (village origin [0,0,0], yaw 0, 4-key comp bag,
+  census-fresh; live was ad165b6e→69ccd14a lineage; on-disk == live 69ccd14a
+  exact at survey, before-bytes captured FIRST).
+- Defect (queue head from polish-333 close — its night judge's #1 note —
+  confirmed fresh this tick by a new ZAI judge on exact live bytes,
+  disclosed fallback, native re-judge owed — polish-285..333 class): the
+  fuel store read at night 2.5-3/10 — "night obstacle on the grass, not
+  fuel for that fire… zero warm-light linkage" — silhouette-only, interior
+  a hole, bark ~#141008 black. Root: `mat(0x7a6234, .95, 0)` COLOR_0-only
+  + the engine never casts light from the fire emissive (lightrig.js) —
+  the pile cannot be lit by anything.
+- Change (ONE intervention, polish-316 cast-light lineage): faint fire-rim
+  warm wash baked into the pile BARK only — shared material instance
+  `pileBark` (0x7a6234 + emissive 0xffc98a @ 0.055) on bearers + both log
+  courses; sawn cut faces stay neutral (they face SW, AWAY from the fire —
+  the split preserves the directional hint); bench bark 0x6c5426 untouched
+  (seats are seats; the pile alone is the fire's store). Night ladder
+  fire 1.0 > kettle 0.15 > pile fire-rim 0.055 (far under smolder reads).
+- Candidate `8f095330ef8bc1c7…` deterministic ×2 (mtime-verified);
+  P334_DECODE_PASS (glow4 factor [0.055,0.0321,0.014] bound by exactly
+  pz3_6, pile radial/y extents unchanged, NaN 0/368, potIron/fire/anchors
+  intact; probe self-caught its own missing-glow5-whitelist bug
+  RED→GREEN). Pixel diffs confined to the pile locus in all 10 views
+  (pile-night 10338 px warm-lift 100%, bbox x[330..632] y[309..404];
+  gameplay-night 970; day maxDelta 80 on shadow-side bark only).
+- Falsification: night A/B judge PASS all four items — pile now reads as
+  "fuel store lit by the hearth" (tonally rhymes with the lit bucket),
+  bark-only distribution is the correct tell vs smolder (cut faces dark),
+  fire decisively #1, zero new defects; watch-items recorded: peak
+  headroom (do not raise intensity), directionality gradient (optional),
+  cut-face near-black contrast (optional). Day A/B judge PASS —
+  sub-perceptual in sun, no halo/banding, change trapped inside dark
+  end-grain dots reading as heartwood figure; canary pixels named
+  ((437..524, 351..353) — first to read as embers if ever raised).
+- Placed via updated `next-place-hearth.ts` (pins 69ccd14a -> 8f095330):
+  PLACED_VERIFIED, 1 upload + 5 verbs, 4-key comp bag replayed verbatim
+  (sockets 0.25 amendment retained), idempotent rerun zero verbs, live
+  census pin `store/8f095330ef8bc1c7.glb` @ [0,0,0] yaw 0 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `agents/arthur/p334-verify-served.ts`, p333 DRACO chassis): served
+  DRACO 265e1aa2… keeps glow4 [0.055,0.0321,0.014] EXACT bound to pz3_6
+  only, all p330..333 regressions (potIron underglow, cut faces,
+  benches/grain, both contact-shadow discs, anchors), 0 non-finite.
+  P334_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEADs
+  106ba951/fd787f79 (dress-229v absorbed mid-tick — normal interlane
+  life).
+- Evidence: `reviews/hero-assets/polish-334-hearth-firerim/` (before/ =
+  live 69ccd14a baseline GLB + 10-view rig; after/ = candidate + rig;
+  probes: agents/arthur/p334-decode.ts, /tmp/p334-abdiff.py one-shot).
+- Excalibur checkpoint: appending to
+  `vessel/workings/eidoverse-hero-assets/CHECKPOINT.md`.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
+  watch-items — pile peak-intensity headroom law (never raise), optional
+  directionality gradient, optional cut-face neutral lift.
