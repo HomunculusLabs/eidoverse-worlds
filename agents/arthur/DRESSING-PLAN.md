@@ -1,6 +1,64 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-248 — lawful HOLD (137th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed live**: prompt again carried the
+  dress-77 SE fungus-log claim — resolved FALSE since dress-152; probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+- **State verified fresh this tick**: gate ALL PASS real exit 0 FIRST at
+  tick-start HEAD ead12620 (sweep-404, foreign — fully-quiet steady state
+  by its own line; plain `bun` 127 PATH self-catch disclosed, rerun via
+  ~/.bun/bin/bun — dress-231 class), then EPOCH RE-RUN ALL PASS real
+  exit 0 at final HEAD f4be56b3 (struct-337 lawful hold, dress-244 epoch
+  law) after ONE foreign landing mid-tick (polish-345 ledger entry rode
+  it — in-flight M-status settled, normal-interleaving class). Interlane
+  md5 86b2936f pin-exact. **/tmp captures+probe were PRUNED (72h)** —
+  probe re-derived from DURABLE PLAN PINS (struct-336 class);
+  HOLD_VERIFY_PASS exit 0 after TWO disclosed probe self-catches fixed
+  at source BEFORE world conclusions: (a) census lib is
+  `store/<hash>.glb` — raw startswith false-failed every pin while ALL
+  were EXACT; libhash() parse added. (b) fleet/fauna/non-fleet split
+  regex reconstructed 30+13+50=93≠92 — split demoted informational;
+  gating = durable counts total 424 + live dress 92. Fresh census
+  **424==424 — ZERO arrivals, ZERO departures, exactly ONE classified
+  lib move, classified at source BEFORE expectation use (dress-172 law)**:
+  `nx-dress-well` 88f6d0dc→1ec50a25 at tuple-identical [30,0,-4.5] yaw 0
+  comp {} preserved — polish-345 well open-bucket re-author (entry live
+  pin store/1ec50a257e616096.glb read verbatim this tick; core-sixteen
+  entity, polish domain, off-limits), classified not routed. Streetlamps
+  settled at polish-344 530fc49a. Domain strongest-form: **all 92 dress
+  ids lib+pose EXACT-stable — zero unstable, zero in-domain
+  arrivals/departures** (29 fleet NE 6/NW 9/SE 7/SW 7 + 40 fauna + 23
+  non-fleet; pins 5/5 + hosts 5/5 libhash-exact: se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8; hosts inn 861225bb, snagdead 7ac83203,
+  millrace 6e82dd2e, reedpool 7d770620, lavender-0040 5e04ce4b; bfly
+  10-key bag EXACT, carousel 7-key bag verbatim, rat+mole 3-key bags
+  exact, stork-millrace 2.952m, swan/carp/bats dx/dz 0.0; capture saved
+  /tmp/dress248-census.json, probe /tmp/dress-hold-verify-248.py).
+- **Sibling commits since dress-247**: struct-336 (0cebacc0, lawful
+  hold), sweep-404 (ead12620, zero-mutation CLEAN SWEEP — fully quiet),
+  struct-337 (f4be56b3, lawful hold — polish-345's ledger entry rides
+  it, final HEAD at close, gate re-run at it), + polish-345 (nx-dress-well
+  flip above, commit not in log — entry live in ledger). All named, all
+  foreign domain. Foreign-lane dirt in tree (engine files client/server,
+  civic mk + core-paths GLB/review json, windmill overhaul WIP,
+  cabin-overhaul, fauna probes, debug bower scripts, fleet shells) —
+  none dress-owned, left untouched.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN nx-dress- rows) —
+  zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-247 (range read:
+  sweep/struct hold prose + polish-345 own prose, zero Bill directives).
+  Blocked on Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest
+  unblock remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-247 — lawful HOLD (136th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
