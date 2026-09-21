@@ -3333,3 +3333,66 @@ next wake once the gateway answers.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b) judge
   watch-items — pile peak-intensity headroom law (never raise), optional
   directionality gradient, optional cut-face neutral lift.
+
+### polish-335 — carousel scenery panel-ring re-author (ACCEPTED, LIVE)
+
+- Subject: `nx-carousel` @ polish-299 bytes `3ed80c49` (September-verdict
+  pin; on-disk served == live identity at survey, fresh census 7-key bag).
+  First resume tick after Bill's September wave verdict (hold lifted).
+- Survey (NEW DRACO-aware rig `agents/arthur/p335-rig.ts`, p327 chassis,
+  11 views of exact live served bytes; ZAI fallback disclosed — no native
+  vision tool loadable in this cron session, polish-285..334 class, native
+  re-judge owed): DAY 6/10 — panel band (225,208,186) vs bone horse head
+  (224,210,186) Δ≈0, hero coat dissolving into the backdrop at EVERY
+  rotation phase (far panels back every near horse head — phase-persistent,
+  not phase-transient); panels read as floating cards (decode: flat quads
+  y 3.00..4.28, 0.66m air gap below cone underside at r 2.6). NIGHT 5/10 —
+  panels (emissive .213) + bone (.254) the brightest large masses,
+  architecture outshining lanterns — hierarchy inverted.
+- Change (ONE intervention, new production step `carousel-horse-prototype/
+  panelring.ts`, scenerysep chassis): value drop base [0.87,0.76,0.58] →
+  [0.63,0.52,0.40], emissive [0.28,0.20,0.15] → [0.125,0.10,0.085]; hung-
+  cloth geometry — scalloped swag hem (corners 3.00, mid-dip 2.90; head
+  clearance 2.75 law kept) + 3-column grid; one 7cm strap per panel r 2.60
+  → 2.52 tilted inward, y 4.281..4.90, tucking under the cone slope.
+  Same node/material name; spin subtree, sockets, motion roots, all other
+  materials untouched.
+- BUILD-LAW (RED caught pre-placement): adding a SECOND primitive to
+  cr_scenery_ring produced a garbage duplicate (decoded extents r 0..1.79,
+  y {0,4.9}) rendering as a cream wedge near the boarding stair — caught
+  by decode3 + the A/B judge, root-caused by unprojection (zero ray hits),
+  CURED by deleting the added primitive (single rewritten primitive carries
+  panels+straps). Accessor law reaffirmed: one primitive, plain
+  createAccessor(). Rejected v1 `881dd1be`; evidence flagcrop in reports/.
+- Accepted v2 `3d4550fac7d1cf21…` deterministic ×2; 49 nodes / 27
+  materials unchanged; single prim 160 verts / 96 tris, y 2.9..4.9,
+  r 2.52..2.60 exact.
+- Falsification: pixel diffs confined to the panel band in all 11 views
+  (gameplay 20406 px; aerial 1 px = canopy overhang law holds; lantern/
+  crown/teeth/plinth probes byte-identical). Day A/B judge: bone-horse
+  separation HIGH impact (full silhouette reads), hung-cloth MEDIUM-HIGH,
+  wedge absent, zero new defects — slightly better (18m is incremental by
+  nature). Night A/B judge: hierarchy FIXED (spire/lanterns unambiguously
+  brightest), white horse pops, "lit machine not glowing box", zero new
+  defects — CLEARLY better. Watch-item recorded: navy-horse edge contrast
+  slightly reduced by the dim-down (one intervention per tick).
+- Placed via sanctioned `deploy.ts --apply`: PLACED_VERIFIED, 1 upload + 8
+  verbs, 7-key comp bag replayed verbatim, idempotent rerun
+  ALREADY_TARGET_VERIFIED (0/0), live census pin
+  `store/3d4550fac7d1cf21.glb` @ (-18, 0.0001495, 18) yaw 2.35619 exact.
+  Served sha == upload sha (identity); P335_SERVED_PASS (1 prim, 160 verts,
+  extents + factors exact in served DRACO).
+- Gate re-run after mutation: ALL PASS exit 0 at absorbed sibling HEAD
+  b382ebd1 (sweep-388 — normal interlane life).
+- Excalibur checkpoint: appended to `vessel/workings/eidoverse-hero-assets/
+  CHECKPOINT.md`.
+- Evidence: `reviews/hero-assets/polish-335-carousel-panelring/` (before/ =
+  live served baseline + 11-view rig; after/ = v2; reports/ = deploy dry/
+  apply/idem + verified served + rejected-v1 flagcrop; probes:
+  p335-rig.ts, p335-decode/2/3.ts).
+- Next ranked: (a) navy-horse night edge (watch-item; judge fresh —
+  whisper panel lift BEHIND navy only would be the surgical form, but
+  violates uniform-ring simplicity; default no-action), or (b) plaza-core
+  re-survey on fresh evidence (belltower/deck/boarding views of the new
+  ring at 5m from the next tick's survey), or (c) the residual judge
+  polish notes (deeper swags at close range, panel warm tint).

@@ -7055,4 +7055,6 @@ walk-potter.ts, ls-verified present on disk BEFORE this prose — 1559B Aug 30
 
 - [struct-310] R11-118 lawful HOLD (thirty-second) — next-family decision owed Bill (surfaced struct-278); gate ALL PASS exit 0 FIRST at d7d4d5a3 (dress-231, foreign); 310%3=1 build-slot build holds; shard+carry empty fresh (IMPROVE-PLAN nx-struct OPEN rows 0; IMPROVEMENTS OPEN foreign-only fauna-18); census 419 quiet tick vs struct-309 capture (419==419, 0/0 id-set diff; self-catch: dict-shape TypeError probe rerun tolerant, errored probe not a verdict) tetrakis/trioct/trit PIN_EXACT 3/3 maxdelta 0.0, 127 struct-domain accounted; native cron-unpayable owed board rides (tool_search fresh 33 tools, no native vision); zero mutations (D+0, E+0) (D+0, E+0)
 
-**Running total: 2371111 / 2000000**
+- [polish-335] carousel panel-ring re-author: scenery panels value-dropped (base .87/.76/.58 to .63/.52/.40, emissive lum .213 to .10), swag hems + canopy straps cure the floating-card read; bone-horse day collision (panel 225,208,186 vs bone head 224,210,186 at every rotation phase) and night hierarchy inversion (panels outshining lanterns) both cured; first build's garbage second primitive (cream wedge) caught by decode+unprojection and rejected pre-placement; deterministic x2, PLACED_VERIFIED 1 upload + 8 verbs with 7-key comp bag verbatim, idempotent, served sha == upload sha with P335_SERVED_PASS, live pin store/3d4550fac7d1cf21.glb at exact tuple; evidence in reviews/hero-assets/polish-335-carousel-panelring/ (D+2, E+0)
+
+**Running total: 2371113 / 2000000**
