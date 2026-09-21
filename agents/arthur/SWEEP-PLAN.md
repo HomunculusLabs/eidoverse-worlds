@@ -19678,3 +19678,76 @@ pointers this tick: hall/bunkhouse @396 walked fresh, stable/market @395,
 inn/tower-house @394, forge/potter @392 the stalest standing pair; walk tools
 interior-walk-forge.ts (1559B) + interior-walk-potter.ts (1571B), ls-verify
 before walks per law).
+
+sweep-397: CLEAN SWEEP, arrival-classified tick (168th consecutive
+quiet-or-classified). Tick-start HEAD a01946de (struct-324, foreign hold);
+standing gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun from repo
+root (cron PATH class, sweep-391..396), ledger law EXACT 2371127 at first
+probe. Interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, both
+read fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows,
+CITY-PLAN-V2 cae6b928 unchanged — audit-continues freeze banner governs via
+loop/plan reload). Census epoch A 421->422 (384 thing + 38 light) vs the
+committed sweep-396 baseline sha16 67352a07465501f4: 0 departures, exactly
+ONE arrival = nx-dress-rat-001 @ (38.95,-0.03909,-6.5) yaw -2.35 lib
+9b1cb0d657c42d3f scale 1, 3 bob comps (motion:rat{,_head,_snout}) —
+fauna-81 brown rat (fauna domain, DRESS-PREFIXED but FAUNA-OWNED per its
+ledger + corroborated by dress-240/struct-324 holds), tuple-exact vs the
+COMMITTED fauna-81 ledger line (PLACED_VERIFIED idempotent, census
+421->422 per its own entry; coop ESE back-wall v9 bake) — domain-valid,
+not drift. Census diff flagged 61 compKeys-only diffs on shared ids —
+classified as the KNOWN baseline artifact (sweep-56 comps-key class): comp
+PAYLOADS deep-equal verified on all 61, baseline compKeys stale-empty while
+comp complete; substantive drift on shared ids ZERO. Epoch B 20s-paced
+re-read 422==422 byte-identical (census sha16 408668465903ec14 both
+reads), A-to-B drift ZERO — single settled epoch. Overlap: SAT 384 bbox
+non-light / 262 exempt-classified / 0 coverage holes, exit 3 on exactly
+ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 (known Sev 2
+routed to artwalk b26 choreography @ sweep-43, 353rd sweep since routing,
+NOT new, no escalation due — the law keys on severity-1); the rat arrival
+produced ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (nw-approach1-walk.ts),
+NE 7/7 (ne-approach2-walk.ts), SW 5/5 (sw-approach3-walk.ts) — dists
+canon-exact vs the sweep-319..396 canon. Tier-2 375th cycle per the
+committed sweep-396 pointer: forge 6/6 ALL_PASS (interior-walk-forge.ts,
+dists 0.261/0.307/0.300/0.315/0.375/0.261, max 0.375) + potter 6/6
+ALL_PASS (interior-walk-potter.ts, dists 0.270/0.366/0.295/0.255/0.250/
+0.349, max 0.366), both tools ls-verified present BEFORE the walks
+(1559B + 1571B), max dists canon-exact vs the sweep-392 record. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (351st consecutive
+clean); sweep89-battery first invocation on censusA 27/28 RED on exactly
+comp-bearing-23 (pin 68 stale vs live 69 = expected classification),
+lawful pin bump per the sweep-301..393 fauna precedent chain — added-set
+census-verified exactly [nx-dress-rat-001] removed-set empty, pin comment
+carries the fauna-81 provenance, history preserved verbatim; battery then
+28/28 PASS GREEN on censusA AND censusB bytes; comp-bearing 69 (arrival is
+the 69th), lights 38, thing 384. Baseline lawfully rewritten like-for-like
+from the COMMITTED bytes (/tmp/s397/baseline-rewrite.py): pre-write asserts
+green (committed sha16 67352a07465501f4, round-trip byte-identity probe,
+arrivals exactly [nx-dress-rat-001], departures [], substantive drift
+ZERO with the known compKeys artifact signature explicitly tolerated and
+nothing else), pure sorted insertion + count bump, post-rewrite
+substantive drift vs live ZERO — final 422 entities / 348865B / sha16
+ffd7a2b8d6619676. PROBE SELF-CATCHES pre-verdict, disclosed: (a) the
+first baseline-rewrite draft asserted full-field drift including compKeys
+and fired fail-closed on the known artifact — assert narrowed to the exact
+artifact signature with everything else still hard-gated (the fail-closed
+behavior is correct; disclosed as the intended catch); (b) the core-walk
+output parser first keyed a nonexistent top-level legs list — schema read
+from raw output before re-parsing (sweep-386(b)/391(b) class); (c) the
+approach-walk parser keyed 'dist' where that schema uses 'distance'
+(sweep-386(b)/391(b)/394(b) class); (d) the tier-2 interior-walk parser
+recursed correctly but printed legs None where the interior schema carries
+per-leg results without a top-level count — dists extracted canon-exact.
+Foreign dirt in tree (engine files client/server, core-paths GLB + review
+json, windmill overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul +
+moon-moth prototype dirs, fauna32-*/fauna63-*/fauna64-*/fauna65-*/
+fauna76-* tools, debug bower scripts, fleet shell scripts, review dirs)
+is sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-398): stable +
+market (376th cycle — LRU chain re-derived from committed pointers this
+tick: forge/potter @397 walked fresh, hall/bunkhouse @396, stable/market
+@395, inn/tower-house @394 the stalest standing pair; walk tools
+interior-walk-stable.ts (1784B) + interior-walk-market.ts (1544B),
+ls-verify before walks per law).
