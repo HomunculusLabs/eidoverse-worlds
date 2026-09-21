@@ -19891,3 +19891,66 @@ pointers this tick: inn/tower-house + stable/market BOTH walked fresh
 @398, hall/bunkhouse @399, forge/potter @397 the stalest standing pair;
 walk tools interior-walk-forge.ts (1559B) + interior-walk-potter.ts
 (1571B), ls-verify before walks per law).
+
+sweep-400: CLEAN SWEEP, epoch-corrected arrival tick (171st consecutive
+quiet-or-classified). Tick-start HEAD cc04f85c (struct-329 hold); standing
+gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun from repo root (cron
+PATH class, sweep-391..399), ledger law EXACT 2371132 at first probe,
+interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, both read
+fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero open rows,
+CITY-PLAN-V2 cae6b928 unchanged — audit-continues freeze banner governs
+via loop/plan reload). Census epoch A 422->423 (385 thing + 38 light): 0
+departures, exactly ONE arrival = nx-dress-mole-001 @ (-24.5,0.01447,26.5)
+yaw -0.94119 lib 31717975fcc5323b scale 1, 3x motion:mole{,_head,_snout}
+comps, bbox 0.64x0.127x0.151 scale-sane — fauna-83 European mole (Talpa
+europaea) @ e5f4461b, committed PRE-tick in the struct-329 window and
+classified at source by struct-329's own same-window hold census BEFORE
+this sweep used any expectation (dress-172 law); added-set census-verified
+exactly [nx-dress-mole-001], removed-set empty. Substantive drift on shared
+ids ZERO at epoch A. Mid-tick polish-342 @ 463409d7 re-placed
+nx-town-streetlamps 9b8cdb73->a4b572a3 (streetlamp cap articulation:
+tuple-identical, comp {} preserved, bbox y-max 2.947->3.06 cap growth only,
+footprint byte-identical) — epoch B caught it, epoch C 20s-paced re-read
+byte-identical to B (settled). Per the polish-270 epoch law ALL affected
+evidence re-taken fresh: SAT re-run at epoch-B bytes (385 bbox non-light /
+262 exempt-classified / 0 coverage holes, exit 3 on exactly ONE unclassified
+= R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 artwalk-routed @
+sweep-43, 356th sweep since routing, NOT new, no escalation due — the law
+keys severity-1; the lamp flip introduced ZERO new contacts), core walk
+re-run 64/64 ALL_PASS @ 0.380 over the new lamp bytes, battery re-run
+28/28 GREEN FIRST TRY on censusB (comp-bearing pin lawfully bumped 69->70:
+RED on censusA (69-vs-70, expected classification), added-set exactly
+[nx-dress-mole-001] removed-set empty verified BEFORE the bump, sweep-301
+..397 fauna precedent chain), standing gate re-run ALL PASS real exit 0 at
+463409d7. Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0, legs run individually: core 64/64 max dist 0.380 (next-walk-core-paths.
+ts), NW 5/5 @ 0.38 (nw-approach1-walk.ts), NE 7/7 @ 0.38
+(ne-approach2-walk.ts), SW 5/5 @ 0.37 (sw-approach3-walk.ts) — dists
+canon-exact. Tier-2 378th cycle per the committed sweep-399 pointer: forge
+6/6 ALL_PASS (interior-walk-forge.ts, max 0.375) + potter 6/6 ALL_PASS
+(interior-walk-potter.ts, max 0.366), both tools ls-verified present BEFORE
+the walks (1559B + 1571B), max dists canon-exact vs the sweep-397 record.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (354th
+consecutive clean); sweep89-battery 28/28 GREEN. Baseline lawfully
+rewritten (/tmp/s400/baseline-rewrite.py + baseline-repair.py, both
+committed alongside this row): pre-write asserts green (committed sha16
+dd1d725f33309a2b, arrivals exactly [nx-dress-mole-001], departures [],
+substantive drift exactly [nx-town-streetlamps lib+bbox], compKeys artifact
+signature tolerated, nothing else), post-rewrite substantive drift vs live
+ZERO — final 423 entities / 350069B / sha16 4d7283150d1a3c13. PROBE
+SELF-CATCH (disclosed, repaired in-tick): the first baseline write's
+mole-record insert anchored on the anvilpad "id" token, which sits INSIDE
+that entity's object — the block landed nested and the file failed to
+parse; the script's own fail-closed post-verify caught it before any
+verdict, the repair moved the exact chunk to the correct sibling position
+(sorted order verified), parse+drift+order re-verified green. Foreign dirt
+in tree (engine files client/server, core-paths GLB + review json, windmill
+overhaul scratch, cabin-overhaul, fauna tools, debug bower scripts) is
+sibling work-in-flight, untouched per the ownership law. Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-401): inn +
+tower-house (379th cycle — LRU chain re-derived from committed pointers
+this tick: forge/potter walked fresh @400, hall/bunkhouse @399,
+stable/market @398, inn/tower-house @398 the stalest standing pair; walk
+tools interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verify
+before walks per law).
