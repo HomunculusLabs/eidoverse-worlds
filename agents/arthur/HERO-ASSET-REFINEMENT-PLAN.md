@@ -3617,3 +3617,59 @@ next wake once the gateway answers.
   fresh survey — the least-recently-judged pinned plaza-core subjects, or
   (b) the 18m judge's amplifier (thicker cardinal roads / larger diagonal
   chips — falsify at 18m first).
+
+### polish-340 — belltower belfry lantern re-author (ACCEPTED, LIVE)
+
+- Subject: `nx-town-belltower` (same tuple as polish-306..311; ladder
+  comp). Build source `assets/mkv3-landmarks.ts` (belltower block) ->
+  `village_belltower3.glb` (live was 63599990, polish-311's cage build —
+  the least-recently-judged pinned plaza-core subject).
+- Fresh survey (NEW `p340-rig.ts`, p311 chassis, 14 views of exact live
+  bytes; ZAI fallback disclosed — no native vision loadable this cron
+  session, polish-285..339 class, native re-judge owed): day 18m the lamp
+  read as a "bare saturated yellow dot"/artifact — cage posts 1.3px, hood
+  4px, dark iron dissolved into the shadowed belfry; night BOTH judges
+  read "floating pixel / detached ember" — the tower's sole night signal
+  was sub-resolution (p312's identical streetlamp class). One crownClose
+  judge claim ("finial absent") falsified at source (p308 decode lineage)
+  — framing artifact, discarded.
+- DEP-DRIFT FINDING (disclosed): HEAD-source rebuild of the UNTOUCHED
+  script gives 3d99b847, not live 63599990 — the dep chain (mergekit KEEP
+  widenings etc.) changed bytes without source change. Decode-diff: live
+  vs HEAD-source structurally IDENTICAL (12/11/4, zero node/material
+  diffs) — serialization-only. Candidate evaluated against this
+  proven-equivalent baseline; round-trip git-checkout rebuild reproduced
+  63599990 at p311's era deps is NOT current law — record this drift.
+- Change (ONE intervention, p312 streetlamp-head idiom at belltower
+  scale): hanging lantern OFF the cap-ring corner eave in open air —
+  bracket plate laged on the ring face + drop strap + yoke + twin bail
+  straps + lantern body (base, glass core 0.14x0.26 = 2.4x area,
+  overhanging eave, pyramid roof, finial) at radial 2.02, y 5.38..6.01,
+  clear of the cap cone (polish-272 overhang law). Old sub-pixel cage +
+  lamp_hood removed. Core KEEP-named `lamp`, glow3 emissive
+  [0.9,0.5257,0.2287] carried over exact; iron whisper 0.02 kept. Bbox
+  UNCHANGED (fixture max axis extent 1.598 < base 1.7).
+- Candidate `886a06156db18add…` deterministic ×2; NaN 0/10584 (upload
+  bytes); nodes 12→11. Judges: day A/B CLEARLY BETTER (support+mass+form
+  legible, zero new defects); night A/B CLEARLY BETTER (housed landmark
+  signal, restraint correct, no ghost of the old bead); close-range 4/4
+  PASS (clean removal, plausible forged hardware, bell dominant). Judge
+  nits recorded not treated: strap thin at 25m+, no bounce light (rig has
+  no point lights).
+- Placed via NEW `next-place-polish340-belltower.ts` (pins
+  63599990→886a0615): PLACED_VERIFIED, 1 upload + 3 verbs, ladder comp
+  replayed verbatim, rider b5 standing, idempotent rerun
+  ALREADY_LIVE_NO_VERBS; live census pin `store/886a06156db18add.glb` @
+  (6.5,0,6.5) yaw -2.35619 exact.
+- Served proof (NEW durable `p340-verify-served.ts`; self-caught its own
+  radial-gate bug RED→GREEN, analytic corner radial 2.0911): served DRACO
+  keeps census 11/10, anchors bell/bell_0/bell_1/lamp, both emissives
+  exact, lamp locus exact, 0 non-finite. P340_SERVED_PASS.
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD a01946de
+  (struct-324 absorbed — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-340-belltower/` (before/ = live
+  baseline + 14-view rig; after/ = candidate + rig; ab-*.jpg A/B panels).
+  Probes: p340-rig, p340-decode-diff, p340-nan, p340-verify-served.
+- Next ranked: (a) streetlamps (p312 pin) fresh survey — now the
+  least-recently-judged pinned plaza-core subject, or (b) plaza-core
+  re-survey on fresh evidence.
