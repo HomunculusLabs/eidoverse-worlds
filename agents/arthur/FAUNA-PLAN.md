@@ -2016,3 +2016,64 @@ correct chassis; box corners under affine stay exact).
     RE-JUDGE OWED at the next native-capable window). 3 slow-mole bob
     comps (5.2/8.5/2.8s) live; PLACED_VERIFIED idempotent; census
     422→423. Closed as built.
+
+53. **[CANDIDATE — proposed fauna-84, 2026-09-21, build fauna-85]
+    butterfly pair over the NW lavender field — LEPIDOPTERA's first
+    member, the village's largest flower mass finally visited.** ONE
+    entity `nx-dress-bfly-001` (short-id convention, magpi/pheas/rat
+    law). Census-grounded (fauna84-census-bfly.ts, READ-ONLY): 423
+    entities, ZERO butterfly/lepidoptera/vanessa/aglais ids AND libs
+    (magpie fauna-57 proposal law) — the family slot is genuinely open.
+    Village logic (habitat-host law, bees-at-the-apiary fauna-32 class):
+    `nx-cultivation-lavender-0040` is the village's LARGEST flower host
+    (bbox 19.84×0.55×12.05m, 82,176 verts per the fauna-29/52 decodes)
+    and it blooms UNVISITED — the skep bees ring their own hives 16.3m
+    away at the apiary bed, no nectar feeder works THIS field. The
+    butterfly is THE European lavender-summer read — the fluttering
+    color over purple blooms — and the show-corner stroll line (stile
+    10.2m → dovecote 10.9m → peacock display 7.8m) borders the field
+    directly: the reader walks past the blooms by construction. The
+    air-tier precedent stands three-deep (bees fauna-32 day / swallows
+    fauna-34 livery / bats fauna-79 dusk); the butterfly is the fourth
+    air species, the first flower-feeding one, and the fleet's smallest
+    flyer. Species contract: PAIR — SMALL TORTOISESHELL (Aglais
+    urticae: orange 0xd97a2e wing fields + black margins + yellow bands
+    + THE BLUE MARGINAL SPOT row, the encounter lock) + RED ADMIRAL
+    (Vanessa atalanta: near-black 0x1a1418 wings + THE RED BANDS
+    0xc23b22 crossing both wings + white apex dots) — the two classic
+    garden butterflies, complementary color reads, no confusion risk.
+    TRUE-SIZE wingspan ~55mm + marginality bake INCL JOINTS owed to the
+    build tick's judge math (bees ×2.8 law — the exact factor settles by
+    the pixel budget at the 3-4m encounter vantage; expect ~×2.5-3 =
+    a ~150mm read). Wing geometry: TWO-PLANE fore+hind pairs per side at
+    a slight dihedral, banking into the turn (bats M-kink law: at pixel
+    budget the wing ANGLE reads, not the venation). Motion contract
+    (pure-motion fauna class, bees/swallows/bats precedent — zero ground
+    geometry, the field IS the host): 2 slow wandering flutter-orbits
+    over the blossom crowns (small radius, LOW speed — butterflies never
+    fly straight; the flick-jink inside each ring, bats law) + wing
+    pendulums NESTED per butterfly (fast ~0.25s beat against slow
+    progress — THE species signature) + a nectar hover-bob at the
+    blossom stops; phases staggered per individual, epoch t0; the
+    reader-instant slot law (bats law a) governs phase solving. Anchor
+    contract: bfly_a{,_wingL,_wingR} + bfly_b{,_wingL,_wingR} (6 KEEP
+    groups; `bfly` prefix — collision-free at proposal: zero census hits
+    this tick; rg over mkv3 sources + gitignored assets owed at build
+    tick, magpi law). Siting: FRAME-COPY AIR SEAT over the lavender
+    field (bees fauna-32 / bats fauna-79 law): entity origin ==
+    lavender host origin (−39.583, 0.04025, 62.892) + host yaw 3π/4
+    verbatim so entity-local == field-local; flight band ~0.55-0.85m
+    above the plant tops (the blossom-crown working band, above the
+    0.55 plant crowns, below the yham/towl crown riders at 1.48/1.53);
+    exact band + ring-swept-worst clearance vs hedge 4.3m + yham 5.5m +
+    peahen 7.2m + peacock 7.8m + stile 10.2m + dovecote 10.9m OBBs owed
+    to the build tick (carp orbit-swept-worst law); host tuple + lib
+    hard-gated (artwalk-39 law; cultivation-lane-owned, foreign domain,
+    never touched). Judge contract: encounter profile at 3-4m (a
+    butterfly reads: wing color panels + flutter + bank) + the field
+    composition at 18m (presence-motion over purple — bees zero-bees
+    law disclosed; the 18m read is the moving color) + plan layout
+    CLEAR (bats precedent). Provenance: bees pure-motion chassis (orbit
+    rings, zero ground, marginality math), bats flick-jink +
+    reader-instant slot law + pixel-budget law, swallows nested-wing
+    pendulums, kestrel wander ring. Proposal only — build fauna-85.
