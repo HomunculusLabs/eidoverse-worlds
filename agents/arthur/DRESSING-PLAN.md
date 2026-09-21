@@ -1,6 +1,71 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-237 — lawful HOLD (126th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST at tick-start HEAD 3be458e2 (fauna-80, foreign —
+  queue-empty brown-rat proposal, zero mutations by its own line; direct
+  ~/.bun/bin/bun run — no PATH self-catch this tick), HEAD unchanged
+  through tick close — no epoch re-run due; interlane md5 86b2936f
+  pin-exact. Fresh census **421==421 FULLY QUIET epoch — ZERO arrivals,
+  ZERO departures, ZERO lib moves, expectations all-at-source (dress-172
+  law)**: dress-236v (7e1498a0) erratum changeset-attribution-only
+  zero-mutation by its own line; struct-318 (545225c3) lawful hold — own
+  line "census 421==421 QUIET vs struct-317 capture (zero arrivals, zero
+  departures, zero moves)"; sweep-393 (410bff74) zero-mutation CLEAN
+  SWEEP whose single classified bats arrival (fauna-79, committed
+  PLACED_VERIFIED) was already absorbed in the dress-236 PASS-verified
+  capture, baseline rewritten 421 ents b509d09c; fauna-80 (3be458e2)
+  queue-empty proposal — no arrival expected or found. Domain
+  strongest-form: **all 89 dress ids lib+pose EXACT-stable vs the
+  dress-236 PASS-verified capture — zero unstable, zero in-domain
+  arrivals/departures**; live dress 89 = 29 fleet (NE 6 / NW 9 / SE 7 /
+  SW 7) + 37 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-237.py` HOLD_VERIFY_PASS exit 0 FIRST RUN,
+  zero self-catches, browser UA, capture saved
+  `/tmp/dress237-census.json`).
+- **Sibling commits since dress-236**: dress-236v (7e1498a0, ERRATUM on
+  d367c391 — changeset attribution only, the survey-318 shared-index race
+  class; 7 fauna-owned insertions rode the dress-236 commit, history
+  intact, zero world mutation), struct-318 (545225c3, lawful hold — zero
+  mutations by its own entry), sweep-393 (410bff74, zero-mutation CLEAN
+  SWEEP — arrival-classified tick, bats|reedpool concentric AIR-rider
+  ALLOWED-classified with full decode, battery pin bump 67→68 added-set
+  exactly [nx-dress-bats-001], baseline rewritten 421 ents b509d09c),
+  fauna-80 (3be458e2, queue-empty brown-rat proposal — zero world
+  mutation, HEAD at tick start, unchanged through tick close). All
+  named, all foreign domain. Foreign-lane dirt in tree (windmill
+  overhaul WIP, cabin-overhaul, engine files client/server, fleet
+  shells, fauna probes, debug bower scripts) — none dress-owned, left
+  untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan+carp+bats host
+  `nx-struct-reedpool` 7d770620 — all pose-stable (artwalk-39 law);
+  stork-millrace designed adjacency 2.952m stable; swan-reedpool seat
+  0.0000000; carp-reedpool frame-copy dx/dz 0.0; bats-reedpool air-rider
+  dx/dz 0.0.
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-236 (range read:
+  erratum/hold/sweep/proposal prose only, zero Bill directives). Blocked
+  on Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock
+  remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-236 — lawful HOLD (125th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
