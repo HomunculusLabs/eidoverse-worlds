@@ -1857,3 +1857,62 @@ correct chassis; box corners under affine stay exact).
 - Motion: 4 comps live — breathing bob (.005/5.2s) + pause-and-listen head Y-scan (.26/9.5s) + nested snout forage flick (.16/2.6s) + tail sway (.10/3.4s); phases staggered, epoch t0. Engine-true motion pair on final bytes: 123px differ @ seat_gameplay (x band 477-495), 10686px @ seat_near (x band 465-655); rig drives REAL motioneval.js pendulumTheta + motion.js evalPart bob VERBATIM.
 - Judge arc (ZAI-vision MCP fallback glm, native debt NATIVE-41 below): 13 build versions, 13 judged rounds — the longest fauna arc. v1 lone_sett 5/6 (latrine ring read stray — deleted) + profile REJECT-borderline (body hung off ground, uniform coat, tail merged) + face 4/6 → v2-v3 body rebuilds (wedge topline, belly drop, silver saddle, flank plates) → r4 6/7 (tail clear of the mound — the v4/v5 moves out the door, member-true shoulder-lobe arithmetic) → r5/r6 tail-vocabulary saga (boxes=beams, boxes=debris; sphere chain v7) → **r7 crown-occlusion diagnosis** (the grey crown at z 0.050 nearly matched the skull 0.052 — occluding white from every side view; fill-lit frontal passes r2/r4 were the tell) → v8 overlap arithmetic (r7's "gaps between beads" was TRUE geometry — spacing 0.06 vs radius sums 0.047) → **r8 pixel-probe falsification** (the judge's "zero white on the head" verified by cropping: 0 white px in the head zone; then the SKY-bbox trap — 20.9% "white" was sky; then the 3x edge-crop probe: the judge was seeing a MIS-FRAMED EDGE, the head sat past frame right) → **v9 DYNAMIC AIM** (camera aims at the badger_head node's live world position — five hand-aimed cameras had all missed; framing class killed structurally) + smooth cylinder tail + stripe at crown → r9 face LANDS (species PASS) but head-aim cropped the rump → v10 full-body static aim + worm casts deleted → r10 6/7 (khaki box = foreclaw, third strike — deleted v11) → r11 variance round (4/7 on byte-identical face — crown still large; disclosed as variance, one decisive fix) → v12 crown pulled in + silver brighter → r12 all-PASS but face (white confined below the stripe) → **v13 taller skull + brow-line stripe → r13 ALL-7 SHIP** ("reads European badger immediately"). 18m seat read 3/5 DISCLOSED with the dress-80 in-family control: the ACCEPTED live hare re-judged in the same solo-18m framing ALSO fails POI legibility (3 PASS/1 FAIL/1 borderline) — the solo-empty-plane presentation systematically degrades 18m reads; the binding verdicts are r13 SHIP at contract distance + den-door carries the 18m POI (judge: PASS) + 4 motion comps sell life in-world. Native re-judge of r13 + 18m OWED when native vision returns (NATIVE-41).
 - Rig/decode laws learned: (a) **THE DYNAMIC-AIM LAW** — never hand-derive review-camera coordinates for a moved subject: five consecutive rounds judged mis-framed edge crops while the model was innocent; aim at the named node's live world position (or full-body bbox center) computed IN the rig; (b) **THE SKY-BBOX TRAP** — a whole-frame "white pixel" count is dominated by the sky (20.9% white = sky); always bound y BELOW the horizon line before counting a ground-level subject's markers; (c) **edge-crop magnification probe** — when a judge's "marker missing" claim disagrees with a prior PASS on identical bytes, crop 3x at the claimed location and re-ask BEFORE editing geometry: the probe showed "no white anywhere" was framing, not material; (d) **judge variance on identical bytes is real** (r10 face PASS vs r11 face FAIL on byte-identical heads; only the claw differed, nowhere near the face) — respond with ONE decisive fix to the persistent theme, not ping-pong edits; (e) **the tail vocabulary ladder** — rotated boxes read as beams/debris, sphere chains read as beads (even overlapping), a single tapered cylinder + rounded tip reads as a tail at every distance; (f) **crown-width occlusion** — a rear head mass as wide as the skull occludes the face from every off-axis view while frontal fill-lit probes still pass; narrow it below the skull's half-width minus the stripe crest; (g) **rump proximity** — the tail's backdrop must be verified against EVERY sett member at its z (the "merged with den" rounds were the SHOULDER LOBE at z 0.641, not the main mound; member-true containment, never bbox spans).
+
+
+ 51. **[CANDIDATE — proposed fauna-80, 2026-09-21, build fauna-81] brown rat
+    at the coop-yard feed margin — the murid tier's classic member, the
+    mouser's prey made visible.** ONE entity `nx-dress-rat-001` (short-id
+    convention, magpi/pheas/hare law). Census-grounded (fauna80-census.ts,
+    READ-ONLY): 421 entities, ZERO rat/rattus/murid ids AND libs (the two
+    regex hits are substrings — 'generate' inside house id `house-35_-22`
+    and 'quadratrix' inside `nx-struct-quadratrix`; carp 'roach'-in-
+    'approach' law) — the family slot is genuinely open. Village logic
+    (implied-fauna law, woodpecker-at-the-snag fauna-59 class): the
+    watch-cat stands facing the hen flock (fauna-7, "the mouser built and
+    seated"), the coop-yard's grain chain (hen flock fauna-2 + rooster
+    sentinel fauna-26 + hutch fauna-4 + guinea fowl fauna-67 + turkey
+    fauna-24) feeds sparrows at the mill door (fauna-48) and pigeons at
+    the market (fauna-69) — and the one animal every coop yard actually
+    HAS, the one the cat is there for, is absent: the brown rat
+    (Rattus norvegicus), THE farmyard opportunist, the animal that eats
+    spilled layer mash where the hens are fed. The fleet's rodents are
+    house mouse (fauna-45), dormouse (fauna-46), field vole (fauna-71),
+    squirrel (fauna-44) — MURIDAE's commensal giant is missing, and it is
+    the only rodent species whose ABSENCE the standing village itself
+    implies (a mouser with no quarry). Species contract: SINGLE rat
+    (met singly at the run; hmou/dmou/hog/vole single-precedent),
+    TRUE-SIZE ~24cm body + ~20cm tail, ×2.0 marginality bake incl joints
+    (hmou ×2.2 chassis law) = a ~48cm read; brown-grey dorsum 0x6b5d4d
+    with grizzle, pale grey venter, THE LONG NAKED TAIL longer than the
+    head-body (the murid vs vole distinction that reads at encounter
+    distance — vole law applied: vole tail 0.35×HB, rat tail 1.0-1.2×HB,
+    decode-gated [0.9,1.3]), blunt muzzle with pale nose, flesh-pink
+    hands/feet, dark eye beads proud (hare law a: dark value + proud
+    seat), round naked ears proud of the skull (the murid marker the vole
+    deliberately lacks — the fleet's two rodents must read APART).
+    Posture: the pause-and-listen feed crouch, body low, head up at the
+    alert angle. Furniture: a WALL-RUN lane (vole grass-run law applied
+    to masonry: pressed dust lane along the coop's wall base) + dust
+    motes + a gnawed grain husk pile at the nose (grain law). Motion
+    contract: breathing bob + head Y-scan (the pause-and-listen) +
+    nested snout nibble-bob X (hog/vole pattern); phases staggered, epoch
+    t0. Anchor contract: rat/rat_head/rat_snout (3 KEEP groups; `rat`
+    prefix — collision-free at proposal: zero census hits this tick
+    (both regex hits substring-class, verified above); rg over mkv3
+    sources + gitignored assets owed at build tick, magpi law). Siting:
+    coop-yard GROUND seat at the coop's own wall base on the plaza-side
+    reader line — first-choice zone the coop's W/S wall base band
+    (37.5,−6.5) size 2.125×2.266 → wall faces at local ±1.06/±1.13,
+    wall-run along the S face (plaza-facing); exact tuple owed to the
+    build tick (25cm-grid seat sweep + live heightAt + live SAT vs
+    coop/hutch/cat-001/rooster/hens OBBs + walking-line containment,
+    lamp-in-path law — the run runs along the wall, never on the walking
+    line); 18m coop-yard reader vantage by construction (the lane from
+    the plaza runs straight to the coop). Judge contract: encounter
+    anatomy (long naked tail + wall-run + pink hands) + 18m scope
+    PRESENT-with-motion (robin-law encounter-reward disclosure — the
+    rat's honest read distance is the encounter vantage, 18m is the
+    composition: the cat's quarry at the coop wall). Provenance: hmou
+    bake/tuft chassis, vole run-furniture discipline + tail decode-gate
+    law, hare proud-eye law, hog nested-snout pattern, cat-7 coop-yard
+    seat discipline. Proposal only — build fauna-81.
