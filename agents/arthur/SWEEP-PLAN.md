@@ -19955,3 +19955,42 @@ this tick: forge/potter walked fresh @400, hall/bunkhouse @399,
 stable/market @398, inn/tower-house @398 the stalest standing pair; walk
 tools interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verify
 before walks per law).
+
+sweep-401: CLEAN SWEEP, fully-quiet steady-state tick (172nd consecutive
+quiet-or-classified). Tick-start HEAD ca68cee1 (fauna-84 proposal);
+standing gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun from
+repo root; ledger law EXACT 2371133 at first probe; interlane md5
+86b2936f + SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools
+drained (IMPROVE-PLAN 7fa8a224, CITY-PLAN-V2 cae6b928 — freeze banner
+governs). Census epoch A 423==423 (385 thing + 38 light) vs committed
+sweep-400 baseline sha16 4d7283150d1a3c13: 0 arrivals, 0 departures,
+0 substantive drift; 61 compKeys-only diffs = known sweep-56 baseline
+artifact (payloads deep-equal); epoch B 20s-paced re-read
+byte-identical (raw sha16 25955f49fe08f850) — single settled epoch.
+BASELINE WRAPPER-COUNT REPAIR (disclosed, new defect class caught by
+this tick's parse probe): committed baseline count field said 422
+while the entities list holds 423 records (sweep-400's mole-insert
+repair bumped the list, not the count); fixed byte-level
+single-anchor patch, post sha16 697dd10476866161, substantive drift
+vs live ZERO; the first repair attempt re-serialized with the wrong
+indent and was self-caught by its own fail-closed assert BEFORE any
+verdict — mangled bytes restored from committed sha16-verified bytes
+first (sweep-56 indent class). Overlap: SAT 385/262/0 holes, real
+exit 3 on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 (known Sev 2 artwalk-routed @ sweep-43, 357th sweep since
+routing, no escalation due — law keys severity-1). Tier-1 4/4
+per-leg verified 81/81 ALL_PASS every leg real exit 0 (core 64/64 @
+0.380, NW 5/5, NE 7/7, SW 5/5 — dists canon-exact). Tier-2 379th
+cycle per committed pointer: inn 6/6 @ 0.364 + tower-house 6/6 @
+0.377 ALL PASS, tools ls-verified before walks. Integrity: pins 15/15
+ALL_PINS_OK (355th consecutive); battery 28/28 PASS GREEN FIRST TRY
+on censusA bytes (no bump due — quiet census; comp-bearing 70, lights
+38). Mid-tick HEAD advance 045ae187 = struct-331 read-only hold,
+zero mutations per its own entry, census fully quiet corroborating
+this tick — no evidence re-take owed. Foreign dirt untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-402): stable + market (380th cycle — LRU chain:
+inn/tower-house @401, forge/potter @400, hall/bunkhouse @399,
+stable/market @398 stalest; walk tools interior-walk-stable.ts +
+interior-walk-market.ts, ls-verify before walks per law).
