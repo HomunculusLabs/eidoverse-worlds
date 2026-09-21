@@ -3856,3 +3856,54 @@ next wake once the gateway answers.
   throat — judge fresh first), or (b) plaza-core re-survey on fresh
   evidence, or (c) least-recently-judged pinned subjects (well p318,
   fountain p326, hearth p334).
+
+### polish-344 — streetlamp cage base plate (ACCEPTED, LIVE)
+
+- Subject: `nx-town-streetlamps` (ground-layer network at origin, pos
+  [0,0,0], yaw pi, EMPTY comp bag — census-fresh this tick). Build source
+  `assets/mkv3-lamp33.ts` -> `village_streetlamps3.glb` (live was fdade00c,
+  polish-343's pane-recess build; on-disk == live exact at survey,
+  before-bytes captured FIRST). Queue head from polish-343's close: the
+  judge nit (outward bar move exposes bar feet as cut ends).
+- Defect confirmed AT SOURCE before rendering: bar feet at y 2.36 sit
+  beside the neck collar, whose top disc is only r 0.062 while bar
+  footprints reach ~0.117 diagonal — feet ended in OPEN AIR (the judge's
+  "cut ends hovering above the collar throat", now source arithmetic).
+- Change (ONE intervention, mkv3-lamp33.ts): iron cage base plate
+  0.25 sq x 0.04 @ y 2.35 (spans 2.33..2.37) — bars seat 1cm deep, collar
+  overlap 3cm (solid union), glass base seam covered; half-width 0.125
+  under the eave 0.135 — the eave plate's mirror, honest cage-lantern
+  anatomy. Merges into the iron bucket; nodes/meshes/materials UNCHANGED.
+- Candidate `530fc49a9c31e441fa5240162e718084cd09949b67d18ea2d64e3ff1c7f62027`
+  deterministic x2 (mtime-verified). Decode (NEW durable `p344-decode.ts`):
+  P344_DECODE_PASS — +192 verts exact (24/box x 8) at the plate's unique
+  planes 2.33/2.37, p343 bar gates held (beyondOld 576 / innerOld 0),
+  glass 192 verts extent 0.075 untouched, 0 non-finite.
+- Falsification (p344-abdiff.py): changes confined to lantern-head zones
+  all 12 views; base-day 0 px perfect control. Judges (ZAI fallback
+  disclosed — no native vision loadable this cron session, polish-285..343
+  class, native re-judge owed): close-day IMPROVED -> effectively SHIP
+  (feet terminate in ironwork, assembled cage read, glass bottom edge
+  captured, plate reads designed not patched, zero new defects); near-night
+  IMPROVED -> SHIP (glow has a hard physical terminus, stack reads
+  cap->cage->sill->collar->pole, brightness parity, zero night defects).
+  Judge close-questions answered at source (3cm collar overlap = rests ON;
+  symmetric loop = all four feet identical; ±0.075 vs ±0.125 = no coplanar
+  face, no z-fight).
+- Placed via updated `next-place-polish312-streetlamps.ts` (pins
+  fdade00c -> 530fc49a): PLACED_VERIFIED, 1 upload + 1 verb, comp bag {}
+  preserved, idempotent rerun zero verbs, live census pin
+  `store/530fc49a9c31e441.glb` @ (0,0,0) yaw pi exact.
+- Served-bytes proof (struct-104 law, NEW durable `p344-verify-served.ts`):
+  P344_SERVED_PASS — 192 plate verts at 8/8 lamps in served DRACO, p343
+  loci regression gates held, headTop 3.06, both emissives exact, 0
+  non-finite; negative control (fdade00c lib) 0 plate verts.
+- Gate re-run after mutation: ALL PASS real exit 0 (HEAD 33738b23
+  unchanged — no sibling landing mid-tick this window).
+- Evidence: `reviews/hero-assets/polish-344-streetlamps/` (before/ =
+  baseline GLB + 12-view rig; after/ = candidate + rig; ab-*.jpg A/B
+  panels). Probes durable: p344-decode.ts, p344-abdiff.py,
+  p344-verify-served.ts.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b)
+  least-recently-judged pinned subjects (well p318, fountain p326, hearth
+  p334).

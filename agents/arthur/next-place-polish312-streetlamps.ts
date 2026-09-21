@@ -1,7 +1,8 @@
-// next-place-polish312-streetlamps.ts — polish lane (polish-343): re-place
-// nx-town-streetlamps with the pane-recess build (pin advanced
-// a4b572a3 → fdade00c; prior pins: e815a897 → a7b05aef polish-312 →
-// 9b8cdb73 polish-341 glass cage → a4b572a3 polish-342 cap articulation).
+// next-place-polish312-streetlamps.ts — polish lane (polish-344): re-place
+// nx-town-streetlamps with the cage-base-plate build (pin advanced
+// fdade00c → 530fc49a; prior pins: e815a897 → a7b05aef polish-312 →
+// 9b8cdb73 polish-341 glass cage → a4b572a3 polish-342 cap articulation →
+// fdade00c polish-343 pane recess).
 // Live entity carries an EMPTY comp bag (census 2026-09-21);
 // ground-layer network at the exact standing tuple.
 // Chassis: next-place-stringlights.ts (polish-309).
@@ -13,7 +14,7 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const ID = "nx-town-streetlamps";
 const FILE = `${ROOT}/agents/arthur/assets/village_streetlamps3.glb`;
-const REVIEWED_SHA = "fdade00cdd911e44f3976d5d476581c7ec3ca8b057752fe429d8c9a4ad7e62ee";
+const REVIEWED_SHA = "530fc49a9c31e441fa5240162e718084cd09949b67d18ea2d64e3ff1c7f62027";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [0.0, 0.0, 0.0] as [number, number, number], yaw: Math.PI, scale: 1 };
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
