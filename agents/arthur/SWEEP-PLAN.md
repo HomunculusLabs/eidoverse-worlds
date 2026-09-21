@@ -18925,6 +18925,81 @@ use (D+0, E+0). Next tier-2 pair (sweep-386): inn + tower-house (364th cycle
 @382 the stalest standing pair; walk tools interior-walk-inn.ts (1786B) +
 interior-walk-tower-house.ts (1523B), ls-verify before walks per law).
 
+| sweep-390 | 2026-09-21 | 419->420 (+1 domain-valid arrival nx-dress-badger-001 @ (47.5,-0.02251,-40.25) yaw -2.274 lib 2f62aae90ac7cdd1 comp 4x motion:badger{,_head,_snout,_tail} = fauna-77 European badger @ 7dc08566, tuple matches committed ledger line-for-line, corroborated by dress-233 + struct-312 holds; 0 departures, 0 drift on 419 shared ids; epoch B 20s-paced re-read 0/0/0 settled; snapshot rewritten pure-insertion 420 ents / sha16 c6ba39bd1e35b690, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 346th sweep since routing, no escalation due — law keys Sev 1); 382 bbox non-light / 261 exempt-classified / 0 coverage holes, badger introduced zero new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5; badger r62.5 SE >40m off every leg — walks stand by construction, sweep-53 precedent) + tier-2 368th cycle per committed pointer inn 6/6 @ 0.364 + tower-house 6/6 @ 0.377 ALL_PASS | pins 15/15 ALL_PINS_OK 344th consecutive; battery 28/28 after lawful comp-bearing pin bump 66->67 (sweep-301..389 fauna chain; first invocation RED on exactly comp-bearing vs live 67 = expected classification; added-set census-verified exactly [nx-dress-badger-001] removed-set empty); lights 38, thing 382, comp-bearing 67, carousel lib 3d4550fa + exact 7-key bag census-verified; ledger law exact 2371117 at append; standing gate ALL PASS real exit 0 FIRST TRY at tick-start 4fd90dbc | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-390: CLEAN SWEEP, arrival + lawful pin-bump tick (161st consecutive
+quiet-or-classified). Tick-start HEAD 4fd90dbc (dress-233 lawful hold);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root via
+~/.bun/bin/bun, ledger law EXACT at first probe, interlane md5 86b2936f
+stable, SWEEP-LOOP md5 a5fd4f4f stable, both read fresh; pools drained
+(IMPROVE-PLAN 7fa8a224 unchanged zero open rows, CITY-PLAN-V2 cae6b928
+unchanged — audit-continues freeze banner governs via loop/plan reload); no
+sweep-owned dirt at tick start. Census epoch A 419->420 vs the committed
+sweep-389 baseline sha16 88ce4d29c0d9017f: exactly ONE arrival
+nx-dress-badger-001 @ (47.5, -0.02251, -40.25) yaw -2.274 scale 1, lib
+store/2f62aae90ac7cdd1.glb, bag 4x motion:badger{,_head,_snout,_tail} (bob +
+head/snout pendulums + tail), bbox 3.4x0.385x2.411 scale-sane — FAUNA-77
+European badger, DRESS-PREFIXED but FAUNA-OWNED per FAUNA-PLAN (the dress
+lane's own hold prose classifies it the same way); tuple matches the
+committed fauna-77 ledger line-for-line, and dress-233 + struct-312 holds
+independently observed the same arrival. 0 departures, 0 drift on all 419
+shared ids on id/pos/yaw/lib/scale/kind/bbox. Epoch B 20s-paced re-read
+420==420, A-to-B drift ZERO — single settled epoch. Overlap: SAT 382 bbox
+non-light / 261 exempt-classified / 0 coverage holes, real exit 3 on exactly
+ONE unclassified = R-121 lamp-n | nx-town-mapboard -0.407, known Sev 2
+routed to artwalk b26 choreography @ sweep-43, 346th sweep since routing,
+NOT new, no escalation due (the law keys on severity-1); the badger
+introduced ZERO new contacts. Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (0.00/0.38/0.30/0.33/
+0.32, nw-approach1-walk.ts), NE 7/7 (0.00/0.29/0.32/0.29/0.38/0.25/0.31,
+ne-approach2-walk.ts), SW 5/5 (0.00/0.25/0.34/0.37/0.31,
+sw-approach3-walk.ts) — dists canon-exact vs the sweep-319..389 canon. The
+badger sits r62.5 SE, >40m from every walked waypoint and the standing
+route list has no SE approach legs — epoch-A walks stand by construction
+(sweep-53 precedent); the SAT run covers the collision surface. Tier-2
+368th cycle per the committed sweep-389 pointer: inn 6/6 ALL_PASS
+(interior-walk-inn.ts, dists 0.320/0.318/0.341/0.350/0.364/0.288, max
+0.364) + tower-house 6/6 ALL_PASS (interior-walk-tower-house.ts, dists
+0.245/0.245/0.263/0.377/0.374/0.309, max 0.377), both tools ls-verified
+present BEFORE the walks (1786B + 1523B), max dists canon-exact vs the
+sweep-382..386 records. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (344th consecutive clean); sweep89-battery first
+invocation on censusA 27/28 RED on exactly comp-bearing (pin 66 vs live 67 =
+expected classification), lawful pin bump 66->67 per the sweep-301..389
+fauna precedent chain — added-set census-verified exactly
+[nx-dress-badger-001] with the 4-key motion bag live from THIS tick's
+census bytes, removed-set empty; battery then 28/28 PASS GREEN on censusA
+AND censusB bytes; comp-bearing 67, lights 38, thing 382, carousel lib
+3d4550fac7d1cf21 + exact 7-key bag (motion:carousel, motion:horse_{0,2,4,6},
+particles:smoke, sockets) census-verified via battery. Baseline lawfully
+rewritten like-for-like (/tmp/s390/baseline-rewrite2.py): pre-write asserts
+green (committed sha16 88ce4d29c0d9017f, round-trip byte-identity probe,
+arrivals exactly [nx-dress-badger-001], departures [], substantive drift on
+shared ids ZERO), PURE-INSERTION one-record transplant after census
+prev-neighbor nx-cultivation-orchard-0059 + count bump — final 420 entities
+/ 340476B / sha16 c6ba39bd1e35b690, post-rewrite substantive drift vs live
+ZERO. Probe self-catches pre-verdict, disclosed: (a) baseline rewrite v1
+re-sorted the legacy entity array (24704-line diff caught by the diff-stat
+probe) and missed the count field — discarded wholesale via git checkout,
+v2 rewritten insertion-only (sweep-55(c) snapshot-format class); (b)
+core-walk parser v1 ran json.load on the tool's banner-prefixed output —
+schema read, JSON taken from the first '{' (sweep-386(b) class); (c)
+approach-walk parser keyed 'dist' where the tool prints 'distance' —
+re-derived from the actual schema (sweep-386 class). Foreign dirt in tree
+(engine files client/server, core-paths GLB + review json, windmill overhaul
+scratch + WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype dirs,
+fauna32-*/fauna63-*/fauna64-*/fauna65-*/fauna76-* tools, debug bower
+scripts, fleet shell scripts, polish review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-391): stable +
+market (369th cycle — LRU chain re-derived from committed pointers this
+tick: inn/tower-house @390 walked fresh, forge/potter @388, stable/market
+@387 the stalest standing pair; walk tools interior-walk-stable.ts (1784B)
++ interior-walk-market.ts (1544B), ls-verify before walks per law).
+
+
 
 sweep-386: CLEAN SWEEP, single classified flip tick (157th consecutive
 quiet-or-classified). Tick-start HEAD 106ba951 (dress-229v epoch correction);

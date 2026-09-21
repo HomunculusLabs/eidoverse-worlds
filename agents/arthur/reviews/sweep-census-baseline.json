@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 419,
+  "count": 420,
   "entities": [
     {
       "id": "nx-hearth",
@@ -7942,6 +7942,106 @@
       },
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-badger-001",
+      "kind": "thing",
+      "pos": [
+        47.5,
+        -0.02251,
+        -40.25
+      ],
+      "yaw": -2.274,
+      "scale": 1,
+      "lib": "store/2f62aae90ac7cdd1.glb",
+      "bbox": {
+        "min": [
+          -1.535,
+          -0.035,
+          -1.225
+        ],
+        "max": [
+          1.865,
+          0.35,
+          1.186
+        ],
+        "size": [
+          3.4,
+          0.385,
+          2.411
+        ],
+        "center": [
+          0.165,
+          0.157,
+          -0.02
+        ]
+      },
+      "compKeys": [
+        "motion:badger",
+        "motion:badger_head",
+        "motion:badger_snout",
+        "motion:badger_tail"
+      ],
+      "comp": {
+        "motion:badger": {
+          "type": "bob",
+          "amp": 0.005,
+          "period": 5.2,
+          "phase": 0,
+          "t0": 1789962895628
+        },
+        "motion:badger_head": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.26,
+          "period": 9.5,
+          "phase": 1.1,
+          "t0": 1789962895628
+        },
+        "motion:badger_snout": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.16,
+          "period": 2.6,
+          "phase": 0.7,
+          "t0": 1789962895628
+        },
+        "motion:badger_tail": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.1,
+          "period": 3.4,
+          "phase": 1.5,
+          "t0": 1789962895628
+        }
+      }
     },
     {
       "id": "nx-cultivation-orchard-0012",
