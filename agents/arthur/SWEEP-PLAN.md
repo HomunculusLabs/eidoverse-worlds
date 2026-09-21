@@ -19607,3 +19607,74 @@ this tick: stable/market @395 walked fresh, inn/tower-house @394,
 forge/potter @392, hall/bunkhouse @389 the stalest standing pair; walk
 tools interior-walk-hall.ts (1704B) + interior-walk-bunkhouse.ts (1538B),
 ls-verified present this tick; ls-verify before walks per law).
+
+sweep-396: CLEAN SWEEP, single classified flip tick (167th consecutive
+quiet-or-classified). Tick-start HEAD e0604396 (dress-239, foreign);
+standing gate ALL PASS real exit 0 FIRST TRY from repo root via
+~/.bun/bin/bun (cron PATH class, sweep-391..395), ledger law EXACT 2371125
+at first probe (advanced +2 since sweep-395's 2371123 by sibling D+2 polish-339
+— absorbed normally). Interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f
+stable, both read fresh; pools drained (IMPROVE-PLAN 7fa8a224 unchanged zero
+open rows, CITY-PLAN-V2 cae6b928 unchanged — audit-continues freeze banner
+governs via loop/plan reload). Census epoch A 421==421 (383 thing + 38 light)
+vs the committed sweep-395 baseline sha16 e8945c43c0bdceb5: 0 arrivals, 0
+departures, exactly ONE substantive drift field-set = nx-town-mapboard lib
+02f6cb96442af8cd -> db9e564dbf0166f8 at identical tuple (2.5, 0, 9.5) yaw
+-2.9441970937399127 scale 1, comp bag {} preserved (mapboard is comp-free by
+contract), bbox byte-identical 2.5x2.532x0.543 = COMMITTED polish-339 @
+da2bc873 (mapboard roads out of the village — 8 road extensions ring->fringe,
++192 verts exactly 8x24 at analytic radii, zero removed, 29/29/26
+nodes/meshes/materials unchanged, pixel diffs map-side only; PLACED_VERIFIED 1
+upload + 2 verbs, idempotent ALREADY_LIVE_NO_VERBS, live pin
+store/db9e564dbf0166f8.glb at exact standing tuple, served DRACO proof
+p339-verify-served P338-class +12/ray) — ledger-matched line-for-line,
+domain-valid (polish hero domain), not drift. The flip landed PRE-tick:
+dress-239 classified it at source from the in-tree placer BEFORE the polish-339
+ledger line landed; this sweep ledger-matched it against the committed entry.
+Epoch B 20s-paced re-read 421==421 byte-identical (census sha16 f3a74d5776901f40
+both reads), A-to-B drift ZERO — single settled epoch. Overlap: SAT 383 bbox
+non-light / 262 exempt-classified / 0 coverage holes, real exit 3 on exactly
+ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407, known Sev 2 routed to
+artwalk b26 choreography @ sweep-43, 352nd sweep since routing, NOT new, no
+escalation due (the law keys on severity-1); the mapboard flip introduced ZERO
+new contacts (ink-only change, collision envelope byte-identical). Walks:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually — core 64/64 maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5
+0.00/0.38/0.30/0.33/0.32 (nw-approach1-walk.ts), NE 7/7
+0.00/0.29/0.32/0.29/0.38/0.25/0.31 (ne-approach2-walk.ts), SW 5/5
+0.00/0.25/0.34/0.37/0.31 (sw-approach3-walk.ts) — dists canon-exact vs the
+sweep-319..395 canon. Tier-2 374th cycle per the committed sweep-395 pointer:
+hall 8/8 ALL_PASS (interior-walk-hall.ts, dists
+0.285/0.360/0.280/0.265/0.340/0.260/0.335/0.310, max 0.360) + bunkhouse 6/6
+ALL_PASS (interior-walk-bunkhouse.ts, dists
+0.245/0.300/0.305/0.247/0.380/0.313, max 0.380), both tools ls-verified present
+BEFORE the walks (1704B + 1538B), max dists canon-exact vs the sweep-389
+record. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (350th
+consecutive clean); sweep89-battery 28/28 PASS GREEN first invocation on
+censusA bytes (no pin bump due — the battery carries no mapboard lib pin; the
+flip is battery-neutral; mapboard live tuple + comp {} + bbox census-verified
+from THIS tick's censusA bytes; carousel 193c897dd511b5e0 + 7-key bag
+census-verified); comp-bearing 68 stable (flip comp-neutral), lights 38, thing
+383. Baseline lawfully rewritten like-for-like (/tmp/s396/baseline-rewrite.py):
+pre-write asserts green (committed sha16 e8945c43c0bdceb5, 421 ents, arrivals
+[], departures [], substantive drift exactly [nx-town-mapboard lib]), one-field
+lib transplant only, format round-trip probe indent2 (first probe run fired
+fail-closed pre-write on a trailing-newline comparison bug — corrected in the
+probe, disclosed, sweep self-catch class), post-rewrite substantive drift vs
+live ZERO — final 421 entities / 347681B / sha16 67352a07465501f4. Probe
+self-catches pre-verdict, disclosed: (a) approach-walk parser keyed 'dist'
+where that schema uses 'distance' (sweep-386(b)/391(b)/394(b) class — schema
+read from raw output before re-parsing); (b) baseline round-trip probe
+trailing-newline comparison bug, caught fail-closed by its own assert BEFORE
+the write landed, corrected, rewrite then green. Foreign dirt in tree (engine
+files client/server, core-paths GLB + review json, windmill overhaul scratch +
+WINDMILL-OVERHAUL.md, cabin-overhaul + moon-moth prototype dirs,
+fauna32-*/fauna63-*/fauna64-*/fauna65-*/fauna76-* tools, debug bower scripts,
+fleet shell scripts, review dirs) is sibling work-in-flight, untouched per the
+ownership law. Zero world mutations, zero defect notes, zero uploads, zero
+verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-397): forge + potter (375th cycle — LRU chain re-derived from committed
+pointers this tick: hall/bunkhouse @396 walked fresh, stable/market @395,
+inn/tower-house @394, forge/potter @392 the stalest standing pair; walk tools
+interior-walk-forge.ts (1559B) + interior-walk-potter.ts (1571B), ls-verify
+before walks per law).
