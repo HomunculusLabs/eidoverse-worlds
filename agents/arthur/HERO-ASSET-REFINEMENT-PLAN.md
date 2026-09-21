@@ -3728,3 +3728,72 @@ next wake once the gateway answers.
   post color at night distance (gp18 judge), or (b) another
   least-recently-judged pinned subject (well p314, fountain p326,
   hearth p334 pins) fresh survey.
+
+### polish-342 — streetlamp cap articulation (ACCEPTED, LIVE)
+
+- Subject: `nx-town-streetlamps` (ground-layer network at origin, pos
+  [0,0,0], yaw pi, EMPTY comp bag — census-fresh this tick). Build source
+  `assets/mkv3-lamp33.ts` -> `village_streetlamps3.glb` (live was 9b8cdb73,
+  polish-341's glass-cage build; on-disk == live exact at survey,
+  before-bytes captured FIRST). Queue head from polish-341's close: the
+  near-night judge's #2 residual (roof-pitch/fused-cap read).
+- Survey (fresh p341-rig renders of exact live bytes, 12 views; ZAI fallback
+  disclosed — no native vision tool loadable in this cron session,
+  polish-285..341 class, native re-judge owed): BOTH fresh judges confirmed
+  the residual. Night: cap reads medium-pitch (~30-35deg apparent vs the
+  ~49deg built) with the roof value nearly merging into the sky and the
+  roof-finial seat blending tonally. Day close: finial named weakest —
+  "one pointed hood with a tack on top" (16% of roof span, tangent seat,
+  no collar); pitch 38-40deg apparent, "safe middle".
+- Change (ONE cap-articulation intervention, mkv3-lamp33.ts): roof
+  steepened h 0.16 -> 0.24 on r 0.14 (true pitch ~49 -> ~60deg), iron
+  collar bead (CylinderGeometry 0.055/0.068 x 0.035) engulfing the apex
+  seam (bottom 2.895 vs roof apex 2.9075 — no tangent seat), finial
+  widened r 0.04 -> 0.05 and re-based on the collar (2.93..3.06). The
+  polish-272 crown language in the tex-33 one-smith's-iron family (no new
+  material); cap collar merges into the iron bucket — nodes 24 / meshes 16
+  / materials 2 UNCHANGED.
+- Candidate `a4b572a315b9a9793236bb049a19afadb397589e4beade75ef647fa0efc45256`
+  deterministic x2 (mtime-verified). Decode (NEW durable probe
+  `p342-decode.ts`; first draft's +336-vert guess failed RED against the
+  real build — corrected to the three.js-empirical 52 verts/collar = +416,
+  the exact observed delta; all other gates green first run): +416 verts
+  exact, 0 non-finite, maxY 3.06 exact, collar band present (344) vs
+  baseline 0, both emissive materials byte-identical, counts unchanged.
+- Falsification (ZAI fallback disclosed): night near A/B — pitch 8/10
+  ("steepening survived the projection", clean glass->brim->slope->finial
+  step), articulation 7/10 (tangent seam gone; watch-item: bead only
+  ~10% wider than spike base — "ball finial" read), hierarchy 9/10, zero
+  new defects. Day close A/B — articulation 8/10 ("assembled ironwork,
+  not a fused cone", genuine collar notch), pitch 9/10 (54deg on-screen,
+  consistent with spec), cage read 7/10 holds, zero new defects; judge
+  named glass-pane recess as next candidate (recorded). First A/B call
+  passed the WRONG plate (before image) — the judge caught it itself
+  ("either is the BEFORE plate or the fix didn't survive export"),
+  re-run on the true after plate; no verdict was taken from the bad call.
+  Pixel diffs confined to the CAP zones in all 12 views (near-day/night
+  bbox (437,119)-(529,244), strictly above polish-341's glass band; base-day
+  0 px perfect control; distance views head-top dots only).
+- Placed via updated `next-place-polish312-streetlamps.ts` (pins
+  9b8cdb73 -> a4b572a3): PLACED_VERIFIED, 1 upload + 1 verb, comp bag {}
+  preserved, idempotent rerun zero verbs, live census pin
+  `store/a4b572a315b9a979.glb` @ (0,0,0) yaw pi exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `p342-verify-served.ts`, p341 chassis): P342_SERVED_PASS — headTop
+  3.0599 exact, collarBand 448 verts at the analytic locus, 8/8 lamp
+  groups, iron sheen + glow1 factors exact with baseColorTexture kept,
+  0 non-finite, ring locus intact; negative control (polish-341 served
+  lib) fails the new-cap gates exactly as required (headTop 2.9475,
+  collarBand 0) — the probe discriminates. finialZone gate corrected to
+  the geometry-true bound (cones carry no intermediate height rings; 40
+  observed = ~5 x 8 lamps).
+- Gate re-run after mutation: ALL PASS exit 0 at sibling HEAD cc04f85c
+  (struct-329 absorbed mid-tick — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-342-streetlamps/` (before/ =
+  baseline GLB + 12-view rig; after/ = candidate + 12-view rig).
+  Probes durable: p342-decode.ts, p342-abdiff.py, p342-verify-served.ts.
+- Next ranked: (a) streetlamp glass-pane recess (day judge's named
+  cheapest upgrade — panes inset behind the frame plane; judge fresh
+  first), or (b) plaza-core re-survey — post-color-at-night-distance
+  (gp18 judge note), or (c) least-recently-judged pinned subjects (well
+  p314, fountain p326, hearth p334).

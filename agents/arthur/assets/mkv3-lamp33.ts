@@ -65,16 +65,30 @@ const lamp = (deg: number, tag: string) => {
         eave.position.set(x, 2.645, z);
         g.add(eave);
     }
+    // polish-342 cap articulation (polish-341 residual, confirmed fresh by
+    // day+night judges): roof read medium-pitch (~30-40deg apparent vs ~49deg
+    // built) and the finial a tangent-seated tack (16% of roof span, no
+    // collar). ONE intervention: roof steepened h 0.16 -> 0.24 (true pitch
+    // ~49 -> ~60deg, reads ~45 at distance), iron collar bead engulfing the
+    // apex seam (1.5cm overlap, no tangent seat), finial widened r 0.04 ->
+    // 0.05 and re-based on the collar — the village crown language
+    // (polish-272) in the tex-33 one-smith's-iron family (no new material).
     {
-        const roof = new THREE.Mesh(new THREE.ConeGeometry(0.14, 0.16, 4), ironTex);
+        const roof = new THREE.Mesh(new THREE.ConeGeometry(0.14, 0.24, 4), ironTex);
         roof.name = `${tag}_roof`;
-        roof.position.set(x, 2.7475, z);
+        roof.position.set(x, 2.7875, z);
         roof.rotation.y = Math.PI / 4;
         g.add(roof);
     }
-    const fin = new THREE.Mesh(new THREE.ConeGeometry(0.04, 0.12, 5), ironTex);
+    {
+        const collar = new THREE.Mesh(new THREE.CylinderGeometry(0.055, 0.068, 0.035, 8), ironTex);
+        collar.name = `${tag}_capcollar`;
+        collar.position.set(x, 2.9125, z);
+        g.add(collar);
+    }
+    const fin = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.13, 5), ironTex);
     fin.name = `${tag}_fin`;
-    fin.position.set(x, 2.8875, z);
+    fin.position.set(x, 2.995, z);
     g.add(fin);
     return g;
 };
