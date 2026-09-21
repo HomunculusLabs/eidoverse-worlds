@@ -1,6 +1,80 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-246 — lawful HOLD (135th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD 1792d88a (sweep-402, foreign —
+  zero-mutation CLEAN SWEEP by its own line; plain `bun` on PATH), HEAD
+  re-checked unchanged at close — no epoch re-run due; interlane md5
+  86b2936f pin-exact. Fresh census **423→424 = ONE fauna-owned arrival +
+  ZERO departures + exactly ONE classified lib move, BOTH classified at
+  source BEFORE expectation use (dress-172 law)**:
+  `nx-dress-bfly-001` (-39.5826, 0.0402, 62.8918) yaw 2.3562 lib
+  77232f53 d=0.0000000, 10 motion comps EXACT (2 wander rings + 2 jinks
+  + 2 hovers + 4 wing pendulums — contract read verbatim this tick from
+  `fauna85-place-bfly.ts` lines 21–77 + ledger line 7192 PLACED_VERIFIED
+  + sweep-402 line 7194 census-exact) — fauna-85 butterflies (small
+  tortoiseshell + red admiral, LEPIDOPTERA first member) frame-copy air
+  seat over `nx-cultivation-lavender-0040` (host pin 5e04ce4b added this
+  tick; PY gated EXACT vs live host 0.04024847…), DRESS-PREFIXED but
+  FAUNA-OWNED (fauna set now 40 with bfly) — NOT dress intake;
+  `nx-town-streetlamps` lib flip a4b572a3→fdade00c at tuple-identical
+  [0,0,0] yaw π EXACT (d=0.0000000 dyaw=0.0, comp {} preserved verbatim,
+  verified BOTH vs the dress-245 PASS-verified capture AND vs
+  polish-343's OWN absolute contract: placer
+  `next-place-polish312-streetlamps.ts` line 16 REVIEWED_SHA
+  fdade00cdd911e44… at [0,0,0] yaw pi + ledger PLACED_VERIFIED
+  idempotent + sweep-402/struct-332 classified) — polish-343 streetlamp
+  glass-pane recess, polish domain (core town entity, off-limits to this
+  lane), classified not routed. Domain strongest-form: **all 91 prior
+  dress ids lib+pose EXACT-stable vs the dress-245 PASS-verified
+  capture — zero unstable, zero in-domain departures**; live dress 92 =
+  29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 40 fauna (39 + bfly) + 23
+  non-fleet (probe `/tmp/dress-hold-verify-246.py` HOLD_VERIFY_PASS
+  exit 0 FIRST RUN, zero self-catches, browser UA, capture saved
+  `/tmp/dress246-census.json`).
+- **Sibling commits since dress-245**: polish-343 (d9267601, the
+  streetlamp flip above), fauna-85 (fa5ebbb9, the bfly arrival above),
+  struct-332 (5a842a3b, lawful hold), struct-333 (6a4cae52, lawful
+  hold), sweep-402 (1792d88a, zero-mutation CLEAN SWEEP — classified
+  BOTH foreign changes, baseline rewritten 424 ents ff932730 — HEAD at
+  tick start, unchanged through tick close). All named, all foreign
+  domain. Foreign-lane dirt in tree (engine files client/server,
+  core-paths GLB/review json, windmill overhaul WIP, cabin-overhaul,
+  fauna probes, debug bower scripts, fleet shells) — none dress-owned,
+  left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 5/5: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan+carp+bats host
+  `nx-struct-reedpool` 7d770620, bfly host `nx-cultivation-lavender-0040`
+  5e04ce4b — all pose-stable (artwalk-39 law); stork-millrace designed
+  adjacency 2.952m stable; swan-reedpool seat 0.0000000;
+  carp-reedpool frame-copy dx/dz 0.0; bats-reedpool air-rider dx/dz 0.0;
+  bfly-lavender frame-copy dx 0.0000342. Carousel lib 193c897d + 7-key
+  comp bag verbatim live (polish-338 pin, census-verified again this
+  tick). Belltower ladder comp volume EXACT vs polish-340 placer; rat +
+  mole 3-key motion bags exact (fauna-81/83).
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-245 (range read:
+  polish/fauna/struct/sweep own prose only, zero directives from Bill).
+  Blocked on Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest
+  unblock remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-245 — lawful HOLD (134th post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
