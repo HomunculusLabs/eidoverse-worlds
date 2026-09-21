@@ -226,6 +226,23 @@ const ALLOWED = new Set<string>([
   // either id re-surfaces as census drift at 16-hex precision and
   // re-derives this class.
   "nx-dress-swan-001|nx-struct-reedpool",
+  // sweep-393: fauna-79 pipistrelle bats AIR-RIDER concentric contact —
+  // pure-motion swarm (bees/swallows class, zero ground geometry) over
+  // the reedpool open water. SAT -5.025 is the designed concentric air
+  // seat (2D SAT height-blind); member-gate decode THIS sweep against
+  // the LIVE host lib (local village_reedpool3.glb sha16 7d770620bb1b7bdc
+  // == live lib prefix EXACT, content-addressed identity): bats rest bbox
+  // world y 2.469..3.073 (entity y 0.06093 + local 2.408..3.012); swept
+  // annulus = five concentric rings r 0.50..1.80 (ledger), in-annulus
+  // pool top = reed cluster world y 1.227 (reedpool_2 @ rho 1.11) =>
+  // VERTICAL CLEARANCE 1.242m at band bottom (1.16m vs ledger motion
+  // band 2.39); the ONLY members reaching the band are the rim cross
+  // arms (reedpool_5, world top 2.576) at rho 3.90..4.00 — >=2.1m
+  // outside the outermost ring, ZERO tris within rho<=2.05. Same class
+  // as swan|reedpool (sweep-370 concentric water-rider). Any pos/lib
+  // drift on either id re-surfaces as census drift and re-derives this
+  // class. Evidence: SWEEP-PLAN sweep-393 row.
+  "nx-dress-bats-001|nx-struct-reedpool",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });

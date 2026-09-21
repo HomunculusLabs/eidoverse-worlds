@@ -19417,4 +19417,76 @@ committed pointers this tick: forge/potter @392 walked fresh,
 inn/tower-house @390, hall/bunkhouse @389, stable/market @391 the stalest
 standing pair; walk tools interior-walk-stable.ts (1784B) +
 interior-walk-market.ts (1544B), ls-verify before walks per law).
+sweep-393: CLEAN SWEEP, arrival-classified tick (164th consecutive
+quiet-or-classified). Tick-start HEAD 7e1498a0 (dress-236v erratum, foreign);
+standing gate ALL PASS real exit 0 FIRST TRY via ~/.bun/bin/bun (cron PATH
+class, sweep-391), ledger law EXACT 2371121 at first probe, re-run ALL PASS
+real exit 0 at mid-tick HEAD 545225c3 (struct-318 hold, foreign) + ledger law
+re-exact. Interlane md5 86b2936f stable, SWEEP-LOOP md5 a5fd4f4f stable, both
+read fresh; pools drained (IMPROVE-PLAN 7fa8a224, CITY-PLAN-V2 cae6b928 —
+audit-continues freeze banner governs via loop/plan reload). Census epoch A
+421==421 (383 thing + 38 light) vs the committed sweep-392 baseline sha16
+dfe7daefc51987c9: 0 departures, exactly ONE arrival = nx-dress-bats-001 @
+(9.723, 0.06093, -90.982) yaw 0 lib d89f04bbceef2f98 scale 1, 20 motion
+comps (bats_{1..5}{,_jink,_wingL,_wingR}), bbox y-band world 2.469..3.073 —
+fauna-79 pipistrelle bats (fauna domain, DRESS-PREFIXED but FAUNA-OWNED per
+its ledger + corroborated by dress-236/struct-317/struct-318 holds),
+tuple-exact vs the COMMITTED fauna-79 ledger line (PLACED_VERIFIED,
+frame-copy air seat over reedpool, host nx-struct-reedpool hard-gated
+7d770620, flight band world y 2.39-2.84, walk 4/4 + idempotent 22-verb cure
+per its own entry) — domain-valid, not drift. 0 drift on all 420 shared ids.
+Epoch B 20s-paced re-read 421==421 byte-identical (census sha16
+6580da96f3604638 both reads), A-to-B drift ZERO — single settled epoch.
+Overlap: SAT 383 bbox non-light / 262 exempt-classified / 0 coverage holes,
+exit 3 on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407
+(known Sev 2 routed to artwalk b26 choreography @ sweep-43, 349th sweep
+since routing, NOT new, no escalation due — the law keys on severity-1).
+The bats arrival produced ONE new SAT pair (bats|reedpool -5.025): member-
+gate decoded at source THIS sweep against the live host lib (local
+village_reedpool3.glb sha16 7d770620bb1b7bdc == live prefix EXACT) — in the
+swept annulus (rings r 0.50-1.80 + margin) the pool's top solid is a reed
+cluster at world y 1.227 vs bats band bottom 2.469 = 1.242m VERTICAL
+CLEARANCE (1.16m vs the ledger motion band 2.39); the only members reaching
+the band are the rim cross arms (world top 2.576) at rho 3.90-4.00, >=2.1m
+outside the outermost ring, ZERO tris within rho<=2.05 — the designed
+concentric AIR-rider contact class (swan|reedpool sweep-370 precedent),
+classified ALLOWED in sweep-sat-next.ts with the full decode in the comment,
+SAT re-run green (262 classified). Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually — core 64/64
+maxArrival 0.380 (next-walk-core-paths.ts), NW 5/5 (nw-approach1-walk.ts),
+NE 7/7 (ne-approach2-walk.ts), SW 5/5 (sw-approach3-walk.ts). Tier-2 371st
+cycle per the committed sweep-392 pointer: stable 5/5 ALL_PASS
+(interior-walk-stable.ts, dists 0.295/0.388/0.383/0.396/0.369, max 0.396) +
+market 6/6 ALL_PASS (interior-walk-market.ts, dists
+0.309/0.360/0.389/0.261/0.291/0.346, max 0.389), both tools ls-verified
+present BEFORE the walks (1784B + 1544B), max dists canon-exact vs the
+sweep-391 record. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (347th consecutive clean); sweep89-battery first invocation on
+censusA 27/28 RED on exactly comp-bearing-23 (pin 67 stale vs live 68) =
+expected classification, lawful pin bump per the sweep-301..392 fauna
+precedent chain — added-set census-verified exactly [nx-dress-bats-001]
+(20 motion comps) removed-set empty, pin comment carries the fauna-79
+provenance, history preserved byte-identical (first patch attempt
+introduced transcription typos into the historical comment — CAUGHT by the
+history-suffix assert BEFORE write, restored from HEAD, minimal insert
+re-applied; sweep-55 adjacent-token-bleed class); battery then 28/28 PASS
+GREEN on censusA AND censusB bytes; comp-bearing 68 (arrival is the 68th),
+lights 38, thing 383. Baseline lawfully rewritten like-for-like from the
+COMMITTED bytes (pure insertion of the new entity record at sorted
+position, count 420->421): pre-write asserts green (committed sha16
+dfe7daefc51987c9, round-trip byte-identity probe, arrivals exactly
+[nx-dress-bats-001], departures [], drift []), post-rewrite substantive
+drift vs live ZERO — final 421 entities / 347681B / sha16 b509d09c2f984c61.
+Foreign dirt in tree (engine files client/server, core-paths GLB + review
+json, windmill overhaul scratch + WINDMILL-OVERHAUL.md, cabin-overhaul +
+moon-moth prototype dirs, fauna32-*/fauna63-*/fauna64-*/fauna65-*/fauna76-*
+tools, debug bower scripts, fleet shell scripts, review dirs) is sibling
+work-in-flight, untouched per the ownership law. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-394): inn +
+tower-house (372nd cycle — LRU chain re-derived from committed pointers
+this tick: stable/market @393 walked fresh, forge/potter @392,
+inn/tower-house @390 the stalest standing pair; walk tools
+interior-walk-inn.ts + interior-walk-tower-house.ts, ls-verify before
+walks per law).
 

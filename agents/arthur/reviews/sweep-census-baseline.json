@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 420,
+  "count": 421,
   "entities": [
     {
       "id": "nx-hearth",
@@ -4356,6 +4356,359 @@
       "lib": null,
       "compKeys": [],
       "comp": {}
+    },
+    {
+      "id": "nx-dress-bats-001",
+      "kind": "thing",
+      "pos": [
+        9.723,
+        0.06093,
+        -90.982
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/d89f04bbceef2f98.glb",
+      "bbox": {
+        "min": [
+          -0.957,
+          2.408,
+          -1.442
+        ],
+        "max": [
+          1.753,
+          3.012,
+          1.025
+        ],
+        "size": [
+          2.71,
+          0.604,
+          2.467
+        ],
+        "center": [
+          0.398,
+          2.71,
+          -0.209
+        ]
+      },
+      "compKeys": [
+        "motion:bats_1",
+        "motion:bats_1_jink",
+        "motion:bats_1_wingL",
+        "motion:bats_1_wingR",
+        "motion:bats_2",
+        "motion:bats_2_jink",
+        "motion:bats_2_wingL",
+        "motion:bats_2_wingR",
+        "motion:bats_3",
+        "motion:bats_3_jink",
+        "motion:bats_3_wingL",
+        "motion:bats_3_wingR",
+        "motion:bats_4",
+        "motion:bats_4_jink",
+        "motion:bats_4_wingL",
+        "motion:bats_4_wingR",
+        "motion:bats_5",
+        "motion:bats_5_jink",
+        "motion:bats_5_wingL",
+        "motion:bats_5_wingR"
+      ],
+      "comp": {
+        "motion:bats_1": {
+          "type": "orbit",
+          "center": [
+            0,
+            2.45,
+            0.3
+          ],
+          "radius": 0.5,
+          "degPerSec": 84,
+          "phase": 5.895,
+          "t0": 1789971501911
+        },
+        "motion:bats_2": {
+          "type": "orbit",
+          "center": [
+            0,
+            2.7,
+            0.3
+          ],
+          "radius": 0.9,
+          "degPerSec": 66,
+          "phase": 2.973,
+          "t0": 1789971501911
+        },
+        "motion:bats_3": {
+          "type": "orbit",
+          "center": [
+            0,
+            2.55,
+            0.3
+          ],
+          "radius": 1.2,
+          "degPerSec": 52,
+          "phase": 3.821,
+          "t0": 1789971501911
+        },
+        "motion:bats_4": {
+          "type": "orbit",
+          "center": [
+            0,
+            2.9,
+            0.3
+          ],
+          "radius": 1.55,
+          "degPerSec": 76,
+          "phase": 1.806,
+          "t0": 1789971501911
+        },
+        "motion:bats_5": {
+          "type": "orbit",
+          "center": [
+            0,
+            2.6,
+            0.3
+          ],
+          "radius": 1.8,
+          "degPerSec": 60,
+          "phase": 2.56,
+          "t0": 1789971501911
+        },
+        "motion:bats_1_jink": {
+          "type": "orbit",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "radius": 0.18,
+          "degPerSec": 170,
+          "phase": 0.7,
+          "face": false,
+          "t0": 1789971501911
+        },
+        "motion:bats_2_jink": {
+          "type": "orbit",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "radius": 0.16,
+          "degPerSec": -150,
+          "phase": 2.3,
+          "face": false,
+          "t0": 1789971501911
+        },
+        "motion:bats_3_jink": {
+          "type": "orbit",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "radius": 0.2,
+          "degPerSec": 135,
+          "phase": 4.1,
+          "face": false,
+          "t0": 1789971501911
+        },
+        "motion:bats_4_jink": {
+          "type": "orbit",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "radius": 0.15,
+          "degPerSec": -190,
+          "phase": 1.1,
+          "face": false,
+          "t0": 1789971501911
+        },
+        "motion:bats_5_jink": {
+          "type": "orbit",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "radius": 0.17,
+          "degPerSec": 160,
+          "phase": 3.3,
+          "face": false,
+          "t0": 1789971501911
+        },
+        "motion:bats_1_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.62,
+          "period": 0.22,
+          "phase": 0,
+          "t0": 1789971501911
+        },
+        "motion:bats_1_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.62,
+          "period": 0.22,
+          "phase": 0,
+          "t0": 1789971501911
+        },
+        "motion:bats_2_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.58,
+          "period": 0.24,
+          "phase": 0.8,
+          "t0": 1789971501911
+        },
+        "motion:bats_2_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.58,
+          "period": 0.24,
+          "phase": 0.8,
+          "t0": 1789971501911
+        },
+        "motion:bats_3_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.66,
+          "period": 0.2,
+          "phase": 1.6,
+          "t0": 1789971501911
+        },
+        "motion:bats_3_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.66,
+          "period": 0.2,
+          "phase": 1.6,
+          "t0": 1789971501911
+        },
+        "motion:bats_4_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.55,
+          "period": 0.26,
+          "phase": 2.4,
+          "t0": 1789971501911
+        },
+        "motion:bats_4_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.55,
+          "period": 0.26,
+          "phase": 2.4,
+          "t0": 1789971501911
+        },
+        "motion:bats_5_wingL": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": -0.6,
+          "period": 0.23,
+          "phase": 3.2,
+          "t0": 1789971501911
+        },
+        "motion:bats_5_wingR": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.6,
+          "period": 0.23,
+          "phase": 3.2,
+          "t0": 1789971501911
+        }
+      }
     },
     {
       "id": "nx-dress-guine-001",
