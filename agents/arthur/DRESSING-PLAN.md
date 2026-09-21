@@ -1,6 +1,70 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-245 — lawful HOLD (134th post-close, NO PLACEMENT)
+
+- **Cron-prompt staleness re-confirmed at source AND live**: prompt again
+  carried the dress-77 SE fungus-log "placement pending" claim — resolved
+  FALSE since dress-152 (dress-78 closed it long ago); this tick's probe
+  live-verified `nx-dress-se-funguslogs-001` standing at lib fbc626eb.
+  Plan is source of truth.
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD e4b6efe5 (sweep-401, foreign —
+  zero-mutation CLEAN SWEEP by its own line, census 423==423 both epochs
+  byte-identical; plain `bun` on PATH, no PATH self-catch), HEAD re-checked
+  unchanged at close — no epoch re-run due; interlane md5 86b2936f
+  pin-exact. Fresh census **423==423 FULLY QUIET epoch — ZERO arrivals,
+  ZERO departures, ZERO lib moves, expectations all-at-source (dress-172
+  law)**: fauna-84 (ca68cee1) butterfly PROPOSAL read-only (own line
+  D+0 E+0, no arrival expected or found); struct-331 (045ae187) lawful
+  hold — own line "census 423==423 FULLY QUIET vs struct-330 (zero
+  arrivals/departures/moves)"; sweep-401 (e4b6efe5) CLEAN SWEEP — own
+  line both census epochs byte-identical vs sweep-400 baseline, sole
+  substantive action a committed-baseline wrapper-count repair (prose
+  record vs live, drift ZERO). Domain strongest-form: **all 91 dress ids
+  lib+pose EXACT-stable vs the dress-244 PASS-verified capture — zero
+  unstable, zero in-domain arrivals/departures**; live dress 91 = 29
+  fleet (NE 6 / NW 9 / SE 7 / SW 7) + 39 fauna + 23 non-fleet (probe
+  `/tmp/dress-hold-verify-245.py` HOLD_VERIFY_PASS exit 0 FIRST RUN
+  after ONE disclosed probe self-catch fixed at source BEFORE any run —
+  PINS table transcription `timberyards`→`timberyard`, caught at
+  write-verify, never consumed by a probe execution; browser UA, capture
+  saved `/tmp/dress245-census.json`).
+- **Sibling commits since dress-244**: fauna-84 (ca68cee1, butterfly
+  PROPOSAL — zero world mutation), struct-331 (045ae187, lawful hold —
+  zero mutations by its own entry), sweep-401 (e4b6efe5, zero-mutation
+  CLEAN SWEEP — baseline wrapper-count repair of record, HEAD at tick
+  start, unchanged through tick close). All named, all foreign domain.
+  Foreign-lane dirt in tree (engine files client/server, mergekit.ts +
+  mkv3-lamp33.ts + core-paths GLB/review json, windmill overhaul WIP,
+  cabin-overhaul, fauna probes + the fauna-staged index pair, debug
+  bower scripts, fleet shells) — none dress-owned, left untouched.
+- **Pins 5/5 EXACT** (true-id pin table): se-foxden 0ff1d071,
+  sw-lanternhook 639c5480, sw-seats cb34bd36, se-streamstones aabbc23d,
+  ne-timberyard dfafb8c8. Hosts 4/4: inn `nx-town-inn` 861225bb,
+  pheas/woodp anchor `nx-dress-se-snagdead-001` 7ac83203, stork host
+  `nx-struct-millrace` 6e82dd2e, swan+carp+bats host
+  `nx-struct-reedpool` 7d770620 — all pose-stable (artwalk-39 law);
+  stork-millrace designed adjacency 2.952m stable; swan-reedpool seat
+  0.0000000; carp-reedpool frame-copy dx/dz 0.0; bats-reedpool air-rider
+  dx/dz 0.0. Carousel lib 193c897d + 7-key comp bag verbatim live
+  (polish-338 pin, census-verified again this tick). Belltower ladder
+  comp volume EXACT vs polish-340 placer; rat 3-key motion bag exact
+  (fauna-81).
+- **Shard/intake**: IMPROVE-PLAN unchanged since Sep 18 10:44 (mtime
+  verified this tick; zero STATE-OPEN rows, zero OPEN `nx-dress-` rows)
+  — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail since dress-244 (range read:
+  fauna/struct/sweep own prose only; keyword hits = siblings' own
+  blocked-on-Bill surface lines, zero directives from Bill). Blocked on
+  Bill standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock
+  remains the two one-line rulings in
+  `agents/arthur/reviews/dress-round3-eye-gate.md`; either releases
+  placement work next tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-244 — lawful HOLD (133rd post-close, NO PLACEMENT)
 
 - **Cron-prompt staleness re-confirmed at source AND live**: prompt again
