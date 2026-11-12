@@ -1,0 +1,83 @@
+[
+  {
+    "name": "hall",
+    "view": "front",
+    "file": "reviews/parent-native/batch-A/hall-front.png",
+    "sha256": "ebc81356986dbd7f99a1302d81a0191f73228ec23c4c8040ba595a3f3ab0255f",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/hall-review-assembly-after.glb",
+    "renderModelSha256": "86178f736ce2aa761e69ac41493123c3a3f3a8583fba7dc0a67902f115d554a6",
+    "renderManifest": "reviews/hall-detail-after/render-manifest.json"
+  },
+  {
+    "name": "hall",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-A/hall-aerial.png",
+    "sha256": "64783b5af840d0e5be76a8d629fdb91805245e0e504999b7201765f82931e648",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/hall-review-assembly-after.glb",
+    "renderModelSha256": "86178f736ce2aa761e69ac41493123c3a3f3a8583fba7dc0a67902f115d554a6",
+    "renderManifest": "reviews/hall-detail-after/render-manifest.json"
+  },
+  {
+    "name": "hall",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-A/hall-interior.png",
+    "sha256": "5f5b2f074be992b1e4bb480dbad70401a28787a6ee4af183f51498971a141666",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/hall-review-assembly-after.glb",
+    "renderModelSha256": "86178f736ce2aa761e69ac41493123c3a3f3a8583fba7dc0a67902f115d554a6",
+    "renderManifest": "reviews/hall-detail-after/render-manifest.json"
+  },
+  {
+    "name": "inn",
+    "view": "front",
+    "file": "reviews/parent-native/batch-A/inn-front.png",
+    "sha256": "62c4b870a4f670a9c61f4ba1dc965509934d2f6d9f4fc6953750ace32e0f62b7",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/inn-final-assembly.glb",
+    "renderModelSha256": "96f0dd0d9f425897fe860559698615213512d91608e8c9b6a1210dbdcd24fe9d",
+    "renderManifest": "reviews/inn-detail-final/render-manifest.json"
+  },
+  {
+    "name": "inn",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-A/inn-aerial.png",
+    "sha256": "7d250c9d391e5248cd1c04d92255e4ffdf8127f7ee5633e5fbe4e4ebc57d54dd",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/inn-final-assembly.glb",
+    "renderModelSha256": "96f0dd0d9f425897fe860559698615213512d91608e8c9b6a1210dbdcd24fe9d",
+    "renderManifest": "reviews/inn-detail-final/render-manifest.json"
+  },
+  {
+    "name": "inn",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-A/inn-interior.png",
+    "sha256": "458917339596e5423ead8f8d4b8813826b69a96fcf396b6683bcbaf5938ee959",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/inn-final-assembly.glb",
+    "renderModelSha256": "96f0dd0d9f425897fe860559698615213512d91608e8c9b6a1210dbdcd24fe9d",
+    "renderManifest": "reviews/inn-detail-final/render-manifest.json"
+  },
+  {
+    "name": "stable",
+    "view": "front",
+    "file": "reviews/parent-native/batch-A/stable-front.png",
+    "sha256": "e591b797e2af8c5b089e645b0559944ce71b64c0a8ec95282c0252bcbdf71dec",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-stable-candidate-assembly.glb",
+    "renderModelSha256": "e40764f60990586848b3a134bda01494979c68e615744025e55543c7a6b55b0c",
+    "renderManifest": "reviews/nx-town-stable-candidate-details/render-manifest.json"
+  },
+  {
+    "name": "stable",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-A/stable-aerial.png",
+    "sha256": "9246aa38300e8dbbc8400ed3d50d2fb2d47a67ded5af0ad302a8d3c210525214",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-stable-candidate-assembly.glb",
+    "renderModelSha256": "e40764f60990586848b3a134bda01494979c68e615744025e55543c7a6b55b0c",
+    "renderManifest": "reviews/nx-town-stable-candidate-details/render-manifest.json"
+  },
+  {
+    "name": "stable",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-A/stable-interior.png",
+    "sha256": "90b2bace5aca02421b2e3043cb9a99bb7cab416472b9b7d3767ecf698c942312",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-stable-candidate-assembly.glb",
+    "renderModelSha256": "e40764f60990586848b3a134bda01494979c68e615744025e55543c7a6b55b0c",
+    "renderManifest": "reviews/nx-town-stable-candidate-details/render-manifest.json"
+  }
+]

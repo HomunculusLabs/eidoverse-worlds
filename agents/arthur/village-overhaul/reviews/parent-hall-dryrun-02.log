@@ -1,0 +1,4 @@
+{"time":"2026-09-08T02:37:25.937Z","status":"OUTSIDE_SCOPE_DRIFT_OBSERVED","id":"nx-carousel","currentSha256":"a800be385dceaa77dba5c06ba66bae6e368038565a5b5005335e203b769680fa","action":"preserved-unrelated-live-state"}
+{"time":"2026-09-08T02:37:36.040Z","status":"PARENT_PREFLIGHT_VERIFIED","id":"nx-town-hall","stage":"local","modelSha256":"dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a","contextSha256":"b2a068b36cef517d6a374b54d234334eef89b5845af9db6b180743ecd9795131","evidence":[{"file":"verification/nx-town-hall/local-dc871edb1b45ce0f-b2a068b36cef517d/details.json","sha256":"0a93a965a49692ab3d05e2725aef89b0929288e5e98afb76a509074ca93407ff"}]}
+{"time":"2026-09-08T02:37:37.917Z","status":"PREFLIGHT_PASS","id":"nx-town-hall","mode":"dry-run","plannedVerbs":2,"protectedCaptured":279,"protectedRelevant":12}
+{"time":"2026-09-08T02:37:37.917Z","status":"DRY_RUN_VERIFIED","uploads":0,"verbs":0,"selected":["nx-town-hall"]}

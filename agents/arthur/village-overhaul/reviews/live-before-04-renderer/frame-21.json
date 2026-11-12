@@ -1,0 +1,119 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-b2f6bc6d-ccd",
+    "view": "first",
+    "startedAt": "2026-09-08T02:18:29.063Z"
+  },
+  "completedAt": "2026-09-08T02:18:29.479Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "19580483ad77110eb34966add98d6cd9f99cdb0468e92fa0a843ce687d0b2334",
+  "bytes": 436666,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-dyehouse",
+  "view": "workstation",
+  "bodyPose": {
+    "p": [
+      -20.17148380406509,
+      0,
+      -20.938569397400457
+    ],
+    "yaw": -2.200592653589793,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    0,
+    0,
+    3.5
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-dyehouse",
+    "lib": "store/888be3597d2f772f.glb",
+    "kind": "thing",
+    "pos": [
+      -23,
+      0,
+      -23
+    ],
+    "yaw": 0.941,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.5,
+        0,
+        -1.046
+      ],
+      "max": [
+        1.775,
+        2.141,
+        1.146
+      ],
+      "size": [
+        3.275,
+        2.141,
+        2.191
+      ],
+      "center": [
+        0.138,
+        1.071,
+        0.05
+      ]
+    },
+    "tris": 788
+  },
+  "targetAfter": {
+    "id": "nx-town-dyehouse",
+    "lib": "store/888be3597d2f772f.glb",
+    "kind": "thing",
+    "pos": [
+      -23,
+      0,
+      -23
+    ],
+    "yaw": 0.941,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.5,
+        0,
+        -1.046
+      ],
+      "max": [
+        1.775,
+        2.141,
+        1.146
+      ],
+      "size": [
+        3.275,
+        2.141,
+        2.191
+      ],
+      "center": [
+        0.138,
+        1.071,
+        0.05
+      ]
+    },
+    "tris": 788
+  },
+  "beforeObservedAt": "2026-09-08T02:18:26.062Z",
+  "afterObservedAt": "2026-09-08T02:18:31.338Z",
+  "protectedBeforeSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "protectedAfterSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "file": "nx-town-dyehouse-workstation.png"
+}

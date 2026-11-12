@@ -1,0 +1,1783 @@
+{
+  "status": "CAPTURED",
+  "world": "commons-next",
+  "phase": "before",
+  "evidenceKind": "actual-live-snap-api",
+  "startedAt": "2026-09-08T01:00:29.800Z",
+  "bodyId": "arthur-cabin-eye-91d08c81-5b1",
+  "contractsSha256": "682fcc0410d72128cccea0cc5dcd1a30f5db5d62f8cee54db267b4dcc5b7ad30",
+  "sourceSha256": "089d5bbb4390162c4f1ecda7d7d3ada1ff65801e10f874e39c9bf1b34f6252bf",
+  "wireCounts": {
+    "join": 1,
+    "pose": 453,
+    "verb": 0
+  },
+  "frames": [
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:00:36.607Z"
+      },
+      "completedAt": "2026-09-08T01:00:37.566Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "3cfbe6e6d733a90360edcfe592a4f9dbfa8190431672e151a795dc230d81300c",
+      "bytes": 1067286,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-bunkhouse",
+      "view": "approach",
+      "bodyPose": {
+        "p": [
+          -7.705862758441697,
+          0,
+          -22.00435126668874
+        ],
+        "yaw": -2.828368080172068,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0,
+        4.2
+      ],
+      "requestedLookLocal": [
+        0,
+        0,
+        0.8
+      ],
+      "targetBefore": {
+        "id": "nx-town-bunkhouse",
+        "lib": "store/c8636968968672af.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          -26
+        ],
+        "yaw": 0.31322457341772525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.15,
+            0,
+            -2.621
+          ],
+          "max": [
+            4.15,
+            4.05,
+            2.621
+          ],
+          "size": [
+            8.3,
+            4.05,
+            5.241
+          ],
+          "center": [
+            0,
+            2.025,
+            0
+          ]
+        },
+        "tris": 1064
+      },
+      "targetAfter": {
+        "id": "nx-town-bunkhouse",
+        "lib": "store/c8636968968672af.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          -26
+        ],
+        "yaw": 0.31322457341772525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.15,
+            0,
+            -2.621
+          ],
+          "max": [
+            4.15,
+            4.05,
+            2.621
+          ],
+          "size": [
+            8.3,
+            4.05,
+            5.241
+          ],
+          "center": [
+            0,
+            2.025,
+            0
+          ]
+        },
+        "tris": 1064
+      },
+      "beforeObservedAt": "2026-09-08T01:00:34.407Z",
+      "afterObservedAt": "2026-09-08T01:00:40.159Z",
+      "file": "nx-town-bunkhouse-approach.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:00:43.824Z"
+      },
+      "completedAt": "2026-09-08T01:00:44.842Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "8658c54371a2b85f4c11392e74d384c33d3c1697e7c48c848a0c3eb65e525759",
+      "bytes": 1219295,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-bunkhouse",
+      "view": "interior",
+      "bodyPose": {
+        "p": [
+          -8.753497668274608,
+          0.2598974406719208,
+          -25.238924050797856
+        ],
+        "yaw": 2.6391253036912956,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0.2598974406719208,
+        0.8
+      ],
+      "requestedLookLocal": [
+        0.85,
+        0.2598974406719208,
+        0
+      ],
+      "targetBefore": {
+        "id": "nx-town-bunkhouse",
+        "lib": "store/c8636968968672af.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          -26
+        ],
+        "yaw": 0.31322457341772525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.15,
+            0,
+            -2.621
+          ],
+          "max": [
+            4.15,
+            4.05,
+            2.621
+          ],
+          "size": [
+            8.3,
+            4.05,
+            5.241
+          ],
+          "center": [
+            0,
+            2.025,
+            0
+          ]
+        },
+        "tris": 1064
+      },
+      "targetAfter": {
+        "id": "nx-town-bunkhouse",
+        "lib": "store/c8636968968672af.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          -26
+        ],
+        "yaw": 0.31322457341772525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.15,
+            0,
+            -2.621
+          ],
+          "max": [
+            4.15,
+            4.05,
+            2.621
+          ],
+          "size": [
+            8.3,
+            4.05,
+            5.241
+          ],
+          "center": [
+            0,
+            2.025,
+            0
+          ]
+        },
+        "tris": 1064
+      },
+      "beforeObservedAt": "2026-09-08T01:00:41.623Z",
+      "afterObservedAt": "2026-09-08T01:00:47.043Z",
+      "file": "nx-town-bunkhouse-interior.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:00:50.596Z"
+      },
+      "completedAt": "2026-09-08T01:00:50.826Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "c0a58dcec4cd9a515279b433bb6fe679266d3487350792216cf147ec5c0f680b",
+      "bytes": 85865,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-garden-cottage",
+      "view": "approach",
+      "bodyPose": {
+        "p": [
+          -22.76705401508658,
+          0.0009494488404761625,
+          16.644567925277364
+        ],
+        "yaw": -0.9411511441487405,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0,
+        4
+      ],
+      "requestedLookLocal": [
+        0,
+        0,
+        0.7
+      ],
+      "targetBefore": {
+        "id": "nx-town-garden-cottage",
+        "lib": "store/cee52aca03429a62.glb",
+        "kind": "thing",
+        "pos": [
+          -26,
+          0.0009494488404761625,
+          19
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -5.105,
+            -0.13,
+            -3.905
+          ],
+          "max": [
+            4.4,
+            5.419,
+            2.7
+          ],
+          "size": [
+            9.505,
+            5.549,
+            6.605
+          ],
+          "center": [
+            -0.352,
+            2.644,
+            -0.602
+          ]
+        },
+        "tris": 2104
+      },
+      "targetAfter": {
+        "id": "nx-town-garden-cottage",
+        "lib": "store/cee52aca03429a62.glb",
+        "kind": "thing",
+        "pos": [
+          -26,
+          0.0009494488404761625,
+          19
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -5.105,
+            -0.13,
+            -3.905
+          ],
+          "max": [
+            4.4,
+            5.419,
+            2.7
+          ],
+          "size": [
+            9.505,
+            5.549,
+            6.605
+          ],
+          "center": [
+            -0.352,
+            2.644,
+            -0.602
+          ]
+        },
+        "tris": 2104
+      },
+      "beforeObservedAt": "2026-09-08T01:00:48.394Z",
+      "afterObservedAt": "2026-09-08T01:00:52.270Z",
+      "file": "nx-town-garden-cottage-approach.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:00:55.830Z"
+      },
+      "completedAt": "2026-09-08T01:00:56.162Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "69a398a4f9245b47c00cc197a87fb3db800e3eaa8988e79b9d465ffea6172c05",
+      "bytes": 57134,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-garden-cottage",
+      "view": "interior",
+      "bodyPose": {
+        "p": [
+          -25.43423445264015,
+          0.13079441239104378,
+          18.58779938692354
+        ],
+        "yaw": -1.6811260281246125,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0.12984496355056763,
+        0.7
+      ],
+      "requestedLookLocal": [
+        1.05,
+        0.12984496355056763,
+        -0.45
+      ],
+      "targetBefore": {
+        "id": "nx-town-garden-cottage",
+        "lib": "store/cee52aca03429a62.glb",
+        "kind": "thing",
+        "pos": [
+          -26,
+          0.0009494488404761625,
+          19
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -5.105,
+            -0.13,
+            -3.905
+          ],
+          "max": [
+            4.4,
+            5.419,
+            2.7
+          ],
+          "size": [
+            9.505,
+            5.549,
+            6.605
+          ],
+          "center": [
+            -0.352,
+            2.644,
+            -0.602
+          ]
+        },
+        "tris": 2104
+      },
+      "targetAfter": {
+        "id": "nx-town-garden-cottage",
+        "lib": "store/cee52aca03429a62.glb",
+        "kind": "thing",
+        "pos": [
+          -26,
+          0.0009494488404761625,
+          19
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -5.105,
+            -0.13,
+            -3.905
+          ],
+          "max": [
+            4.4,
+            5.419,
+            2.7
+          ],
+          "size": [
+            9.505,
+            5.549,
+            6.605
+          ],
+          "center": [
+            -0.352,
+            2.644,
+            -0.602
+          ]
+        },
+        "tris": 2104
+      },
+      "beforeObservedAt": "2026-09-08T01:00:53.630Z",
+      "afterObservedAt": "2026-09-08T01:00:57.672Z",
+      "file": "nx-town-garden-cottage-interior.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:01:01.337Z"
+      },
+      "completedAt": "2026-09-08T01:01:01.620Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "fbc50c07212caa69efc9cc7e0743288d983dd0398faa977a249dc180f1b9589d",
+      "bytes": 196294,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-longhouse",
+      "view": "approach",
+      "bodyPose": {
+        "p": [
+          7.5517988011133275,
+          0,
+          21.5286787984374
+        ],
+        "yaw": 0.3132245734177254,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0,
+        4.7
+      ],
+      "requestedLookLocal": [
+        0,
+        0,
+        0.7
+      ],
+      "targetBefore": {
+        "id": "nx-town-longhouse",
+        "lib": "store/c4aaa7833a1336ac.glb",
+        "kind": "thing",
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.7,
+            -0.2,
+            -2.923
+          ],
+          "max": [
+            4.7,
+            5.245,
+            4.301
+          ],
+          "size": [
+            9.4,
+            5.445,
+            7.224
+          ],
+          "center": [
+            0,
+            2.522,
+            0.689
+          ]
+        },
+        "tris": 1774
+      },
+      "targetAfter": {
+        "id": "nx-town-longhouse",
+        "lib": "store/c4aaa7833a1336ac.glb",
+        "kind": "thing",
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.7,
+            -0.2,
+            -2.923
+          ],
+          "max": [
+            4.7,
+            5.245,
+            4.301
+          ],
+          "size": [
+            9.4,
+            5.445,
+            7.224
+          ],
+          "center": [
+            0,
+            2.522,
+            0.689
+          ]
+        },
+        "tris": 1774
+      },
+      "beforeObservedAt": "2026-09-08T01:00:59.136Z",
+      "afterObservedAt": "2026-09-08T01:01:03.248Z",
+      "file": "nx-town-longhouse-approach.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:01:06.822Z"
+      },
+      "completedAt": "2026-09-08T01:01:07.572Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "7f27ab25f57e4ae8b74dde50bd23bb2b15af82bad9b246a5ae5f3ff2decfa406",
+      "bytes": 953899,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-longhouse",
+      "view": "interior",
+      "bodyPose": {
+        "p": [
+          8.784310459740283,
+          0.19991452991962433,
+          25.334058544448123
+        ],
+        "yaw": 1.8840209002126214,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0.19991452991962433,
+        0.7
+      ],
+      "requestedLookLocal": [
+        -2.5,
+        0.19991452991962433,
+        0.7
+      ],
+      "targetBefore": {
+        "id": "nx-town-longhouse",
+        "lib": "store/c4aaa7833a1336ac.glb",
+        "kind": "thing",
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.7,
+            -0.2,
+            -2.923
+          ],
+          "max": [
+            4.7,
+            5.245,
+            4.301
+          ],
+          "size": [
+            9.4,
+            5.445,
+            7.224
+          ],
+          "center": [
+            0,
+            2.522,
+            0.689
+          ]
+        },
+        "tris": 1774
+      },
+      "targetAfter": {
+        "id": "nx-town-longhouse",
+        "lib": "store/c4aaa7833a1336ac.glb",
+        "kind": "thing",
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.7,
+            -0.2,
+            -2.923
+          ],
+          "max": [
+            4.7,
+            5.245,
+            4.301
+          ],
+          "size": [
+            9.4,
+            5.445,
+            7.224
+          ],
+          "center": [
+            0,
+            2.522,
+            0.689
+          ]
+        },
+        "tris": 1774
+      },
+      "beforeObservedAt": "2026-09-08T01:01:04.620Z",
+      "afterObservedAt": "2026-09-08T01:01:09.529Z",
+      "file": "nx-town-longhouse-interior.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:01:13.122Z"
+      },
+      "completedAt": "2026-09-08T01:01:13.501Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "202b2c35bf2d978e0b7643be391d6b4192db1c577692859233317e25a331f35d",
+      "bytes": 455117,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-row-cottage",
+      "view": "approach",
+      "bodyPose": {
+        "p": [
+          -19.76705401508658,
+          0,
+          -14.644567925277364
+        ],
+        "yaw": -1.947887233662993,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0,
+        4
+      ],
+      "requestedLookLocal": [
+        -0.8,
+        0,
+        0.9
+      ],
+      "targetBefore": {
+        "id": "nx-town-row-cottage",
+        "lib": "store/add42aeacca2ecc8.glb",
+        "kind": "thing",
+        "pos": [
+          -23,
+          0,
+          -17
+        ],
+        "yaw": 0.9411511441487406,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.95,
+            -0.2,
+            -2.673
+          ],
+          "max": [
+            2.95,
+            4.495,
+            2.72
+          ],
+          "size": [
+            5.9,
+            4.695,
+            5.393
+          ],
+          "center": [
+            0,
+            2.147,
+            0.023
+          ]
+        },
+        "tris": 1320
+      },
+      "targetAfter": {
+        "id": "nx-town-row-cottage",
+        "lib": "store/add42aeacca2ecc8.glb",
+        "kind": "thing",
+        "pos": [
+          -23,
+          0,
+          -17
+        ],
+        "yaw": 0.9411511441487406,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.95,
+            -0.2,
+            -2.673
+          ],
+          "max": [
+            2.95,
+            4.495,
+            2.72
+          ],
+          "size": [
+            5.9,
+            4.695,
+            5.393
+          ],
+          "center": [
+            0,
+            2.147,
+            0.023
+          ]
+        },
+        "tris": 1320
+      },
+      "beforeObservedAt": "2026-09-08T01:01:10.920Z",
+      "afterObservedAt": "2026-09-08T01:01:15.410Z",
+      "file": "nx-town-row-cottage-approach.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:01:19.050Z"
+      },
+      "completedAt": "2026-09-08T01:01:19.993Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "41c08ee975e84d14d349abbe6c7eabc94a483c2ba5a25a7222db26f9c8ada65f",
+      "bytes": 1304816,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-row-cottage",
+      "view": "interior",
+      "bodyPose": {
+        "p": [
+          -22.74367356833901,
+          0.2001037746667862,
+          -15.823438586204723
+        ],
+        "yaw": -2.2004415094410534,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        -0.8,
+        0.2001037746667862,
+        0.9
+      ],
+      "requestedLookLocal": [
+        -0.8,
+        0.2001037746667862,
+        -0.55
+      ],
+      "targetBefore": {
+        "id": "nx-town-row-cottage",
+        "lib": "store/add42aeacca2ecc8.glb",
+        "kind": "thing",
+        "pos": [
+          -23,
+          0,
+          -17
+        ],
+        "yaw": 0.9411511441487406,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.95,
+            -0.2,
+            -2.673
+          ],
+          "max": [
+            2.95,
+            4.495,
+            2.72
+          ],
+          "size": [
+            5.9,
+            4.695,
+            5.393
+          ],
+          "center": [
+            0,
+            2.147,
+            0.023
+          ]
+        },
+        "tris": 1320
+      },
+      "targetAfter": {
+        "id": "nx-town-row-cottage",
+        "lib": "store/add42aeacca2ecc8.glb",
+        "kind": "thing",
+        "pos": [
+          -23,
+          0,
+          -17
+        ],
+        "yaw": 0.9411511441487406,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.95,
+            -0.2,
+            -2.673
+          ],
+          "max": [
+            2.95,
+            4.495,
+            2.72
+          ],
+          "size": [
+            5.9,
+            4.695,
+            5.393
+          ],
+          "center": [
+            0,
+            2.147,
+            0.023
+          ]
+        },
+        "tris": 1320
+      },
+      "beforeObservedAt": "2026-09-08T01:01:16.850Z",
+      "afterObservedAt": "2026-09-08T01:01:22.266Z",
+      "file": "nx-town-row-cottage-interior.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:01:25.911Z"
+      },
+      "completedAt": "2026-09-08T01:01:26.190Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "18d08d39455e3d7e4ee74b0017b6a4cca2f67e08cda8ea17893e4c2018ec5203",
+      "bytes": 110943,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-tower-house",
+      "view": "approach",
+      "bodyPose": {
+        "p": [
+          -7.675049966976023,
+          0,
+          21.909216773038473
+        ],
+        "yaw": -0.31322457341772514,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0,
+        4.3
+      ],
+      "requestedLookLocal": [
+        0,
+        0,
+        0.8
+      ],
+      "targetBefore": {
+        "id": "nx-town-tower-house",
+        "lib": "store/11b31000ff639083.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          26
+        ],
+        "yaw": 2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -3.25,
+            0,
+            -3.25
+          ],
+          "max": [
+            3.329,
+            8.3,
+            3.33
+          ],
+          "size": [
+            6.579,
+            8.3,
+            6.58
+          ],
+          "center": [
+            0.039,
+            4.15,
+            0.04
+          ]
+        },
+        "tris": 2359
+      },
+      "targetAfter": {
+        "id": "nx-town-tower-house",
+        "lib": "store/11b31000ff639083.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          26
+        ],
+        "yaw": 2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -3.25,
+            0,
+            -3.25
+          ],
+          "max": [
+            3.329,
+            8.3,
+            3.33
+          ],
+          "size": [
+            6.579,
+            8.3,
+            6.58
+          ],
+          "center": [
+            0.039,
+            4.15,
+            0.04
+          ]
+        },
+        "tris": 2359
+      },
+      "beforeObservedAt": "2026-09-08T01:01:23.710Z",
+      "afterObservedAt": "2026-09-08T01:01:27.815Z",
+      "file": "nx-town-tower-house-approach.png"
+    },
+    {
+      "request": {
+        "world": "commons-next",
+        "follow": "arthur-cabin-eye-91d08c81-5b1",
+        "view": "first",
+        "endpoint": "https://eidoverse.billding.dev/snap",
+        "startedAt": "2026-09-08T01:01:31.529Z"
+      },
+      "completedAt": "2026-09-08T01:01:31.723Z",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "cacheControl": "no-store",
+      "status": "CAPTURED",
+      "pngSha256": "d226d4cbfaf559f0a8ae9989b60d122756b521b1f7b95002b19441d3731d57cd",
+      "bytes": 36650,
+      "width": 1280,
+      "height": 960,
+      "id": "nx-town-tower-house",
+      "view": "interior",
+      "bodyPose": {
+        "p": [
+          -8.753497668274608,
+          0.174945667386055,
+          25.238924050797856
+        ],
+        "yaw": -0.19379564739938743,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "requestedBodyLocal": [
+        0,
+        0.174945667386055,
+        0.8
+      ],
+      "requestedLookLocal": [
+        -0.15,
+        0.174945667386055,
+        -0.45
+      ],
+      "targetBefore": {
+        "id": "nx-town-tower-house",
+        "lib": "store/11b31000ff639083.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          26
+        ],
+        "yaw": 2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -3.25,
+            0,
+            -3.25
+          ],
+          "max": [
+            3.329,
+            8.3,
+            3.33
+          ],
+          "size": [
+            6.579,
+            8.3,
+            6.58
+          ],
+          "center": [
+            0.039,
+            4.15,
+            0.04
+          ]
+        },
+        "tris": 2359
+      },
+      "targetAfter": {
+        "id": "nx-town-tower-house",
+        "lib": "store/11b31000ff639083.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          26
+        ],
+        "yaw": 2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -3.25,
+            0,
+            -3.25
+          ],
+          "max": [
+            3.329,
+            8.3,
+            3.33
+          ],
+          "size": [
+            6.579,
+            8.3,
+            6.58
+          ],
+          "center": [
+            0.039,
+            4.15,
+            0.04
+          ]
+        },
+        "tris": 2359
+      },
+      "beforeObservedAt": "2026-09-08T01:01:29.327Z",
+      "afterObservedAt": "2026-09-08T01:01:33.595Z",
+      "file": "nx-town-tower-house-interior.png"
+    }
+  ],
+  "targets": [
+    {
+      "id": "nx-town-tower-house",
+      "lib": "store/11b31000ff639083.glb",
+      "kind": "thing",
+      "pos": [
+        -9,
+        0,
+        26
+      ],
+      "yaw": 2.828368080172068,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -3.25,
+          0,
+          -3.25
+        ],
+        "max": [
+          3.329,
+          8.3,
+          3.33
+        ],
+        "size": [
+          6.579,
+          8.3,
+          6.58
+        ],
+        "center": [
+          0.039,
+          4.15,
+          0.04
+        ]
+      },
+      "tris": 2359
+    },
+    {
+      "id": "nx-town-bunkhouse",
+      "lib": "store/c8636968968672af.glb",
+      "kind": "thing",
+      "pos": [
+        -9,
+        0,
+        -26
+      ],
+      "yaw": 0.31322457341772525,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -4.15,
+          0,
+          -2.621
+        ],
+        "max": [
+          4.15,
+          4.05,
+          2.621
+        ],
+        "size": [
+          8.3,
+          4.05,
+          5.241
+        ],
+        "center": [
+          0,
+          2.025,
+          0
+        ]
+      },
+      "tris": 1064
+    },
+    {
+      "id": "nx-town-row-cottage",
+      "lib": "store/add42aeacca2ecc8.glb",
+      "kind": "thing",
+      "pos": [
+        -23,
+        0,
+        -17
+      ],
+      "yaw": 0.9411511441487406,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -2.95,
+          -0.2,
+          -2.673
+        ],
+        "max": [
+          2.95,
+          4.495,
+          2.72
+        ],
+        "size": [
+          5.9,
+          4.695,
+          5.393
+        ],
+        "center": [
+          0,
+          2.147,
+          0.023
+        ]
+      },
+      "tris": 1320
+    },
+    {
+      "id": "nx-town-garden-cottage",
+      "lib": "store/cee52aca03429a62.glb",
+      "kind": "thing",
+      "pos": [
+        -26,
+        0.0009494488404761625,
+        19
+      ],
+      "yaw": 2.2004415094410525,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -5.105,
+          -0.13,
+          -3.905
+        ],
+        "max": [
+          4.4,
+          5.419,
+          2.7
+        ],
+        "size": [
+          9.505,
+          5.549,
+          6.605
+        ],
+        "center": [
+          -0.352,
+          2.644,
+          -0.602
+        ]
+      },
+      "tris": 2104
+    },
+    {
+      "id": "nx-town-longhouse",
+      "lib": "store/c4aaa7833a1336ac.glb",
+      "kind": "thing",
+      "pos": [
+        9,
+        0,
+        26
+      ],
+      "yaw": -2.828368080172068,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -4.7,
+          -0.2,
+          -2.923
+        ],
+        "max": [
+          4.7,
+          5.245,
+          4.301
+        ],
+        "size": [
+          9.4,
+          5.445,
+          7.224
+        ],
+        "center": [
+          0,
+          2.522,
+          0.689
+        ]
+      },
+      "tris": 1774
+    }
+  ],
+  "limitations": [
+    "Native visual judgment is not performed by this capture tool.",
+    "Stationary viewpoint presence is not a collision-tested live walk."
+  ],
+  "pre": {
+    "observedAt": "2026-09-08T01:00:31.723Z",
+    "httpStatus": 200,
+    "targets": [
+      {
+        "id": "nx-town-tower-house",
+        "lib": "store/11b31000ff639083.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          26
+        ],
+        "yaw": 2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -3.25,
+            0,
+            -3.25
+          ],
+          "max": [
+            3.329,
+            8.3,
+            3.33
+          ],
+          "size": [
+            6.579,
+            8.3,
+            6.58
+          ],
+          "center": [
+            0.039,
+            4.15,
+            0.04
+          ]
+        },
+        "tris": 2359
+      },
+      {
+        "id": "nx-town-bunkhouse",
+        "lib": "store/c8636968968672af.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          -26
+        ],
+        "yaw": 0.31322457341772525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.15,
+            0,
+            -2.621
+          ],
+          "max": [
+            4.15,
+            4.05,
+            2.621
+          ],
+          "size": [
+            8.3,
+            4.05,
+            5.241
+          ],
+          "center": [
+            0,
+            2.025,
+            0
+          ]
+        },
+        "tris": 1064
+      },
+      {
+        "id": "nx-town-row-cottage",
+        "lib": "store/add42aeacca2ecc8.glb",
+        "kind": "thing",
+        "pos": [
+          -23,
+          0,
+          -17
+        ],
+        "yaw": 0.9411511441487406,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.95,
+            -0.2,
+            -2.673
+          ],
+          "max": [
+            2.95,
+            4.495,
+            2.72
+          ],
+          "size": [
+            5.9,
+            4.695,
+            5.393
+          ],
+          "center": [
+            0,
+            2.147,
+            0.023
+          ]
+        },
+        "tris": 1320
+      },
+      {
+        "id": "nx-town-garden-cottage",
+        "lib": "store/cee52aca03429a62.glb",
+        "kind": "thing",
+        "pos": [
+          -26,
+          0.0009494488404761625,
+          19
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -5.105,
+            -0.13,
+            -3.905
+          ],
+          "max": [
+            4.4,
+            5.419,
+            2.7
+          ],
+          "size": [
+            9.505,
+            5.549,
+            6.605
+          ],
+          "center": [
+            -0.352,
+            2.644,
+            -0.602
+          ]
+        },
+        "tris": 2104
+      },
+      {
+        "id": "nx-town-longhouse",
+        "lib": "store/c4aaa7833a1336ac.glb",
+        "kind": "thing",
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.7,
+            -0.2,
+            -2.923
+          ],
+          "max": [
+            4.7,
+            5.245,
+            4.301
+          ],
+          "size": [
+            9.4,
+            5.445,
+            7.224
+          ],
+          "center": [
+            0,
+            2.522,
+            0.689
+          ]
+        },
+        "tris": 1774
+      }
+    ]
+  },
+  "rendererCheck": {
+    "request": {
+      "world": "commons-next",
+      "follow": "arthur-cabin-eye-91d08c81-5b1",
+      "view": "first",
+      "endpoint": "https://eidoverse.billding.dev/snap",
+      "startedAt": "2026-09-08T01:00:31.724Z"
+    },
+    "completedAt": "2026-09-08T01:00:31.798Z",
+    "httpStatus": 404,
+    "contentType": "text/plain;charset=utf-8",
+    "cacheControl": null,
+    "status": "WORLD_OR_BODY_MISSING"
+  },
+  "viewsSha256": "a5192ff0bcb82c3a7b82e94dc0c2d493004510e9ff283bbd3a5f177f51183021",
+  "join": {
+    "you": "arthur-cabin-eye-91d08c81-5b1",
+    "world": "commons-next",
+    "throughSeq": 691,
+    "observedAt": "2026-09-08T01:00:32.167Z"
+  },
+  "post": {
+    "observedAt": "2026-09-08T01:01:35.011Z",
+    "httpStatus": 200,
+    "targets": [
+      {
+        "id": "nx-town-tower-house",
+        "lib": "store/11b31000ff639083.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          26
+        ],
+        "yaw": 2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -3.25,
+            0,
+            -3.25
+          ],
+          "max": [
+            3.329,
+            8.3,
+            3.33
+          ],
+          "size": [
+            6.579,
+            8.3,
+            6.58
+          ],
+          "center": [
+            0.039,
+            4.15,
+            0.04
+          ]
+        },
+        "tris": 2359
+      },
+      {
+        "id": "nx-town-bunkhouse",
+        "lib": "store/c8636968968672af.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          -26
+        ],
+        "yaw": 0.31322457341772525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.15,
+            0,
+            -2.621
+          ],
+          "max": [
+            4.15,
+            4.05,
+            2.621
+          ],
+          "size": [
+            8.3,
+            4.05,
+            5.241
+          ],
+          "center": [
+            0,
+            2.025,
+            0
+          ]
+        },
+        "tris": 1064
+      },
+      {
+        "id": "nx-town-row-cottage",
+        "lib": "store/add42aeacca2ecc8.glb",
+        "kind": "thing",
+        "pos": [
+          -23,
+          0,
+          -17
+        ],
+        "yaw": 0.9411511441487406,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.95,
+            -0.2,
+            -2.673
+          ],
+          "max": [
+            2.95,
+            4.495,
+            2.72
+          ],
+          "size": [
+            5.9,
+            4.695,
+            5.393
+          ],
+          "center": [
+            0,
+            2.147,
+            0.023
+          ]
+        },
+        "tris": 1320
+      },
+      {
+        "id": "nx-town-garden-cottage",
+        "lib": "store/cee52aca03429a62.glb",
+        "kind": "thing",
+        "pos": [
+          -26,
+          0.0009494488404761625,
+          19
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -5.105,
+            -0.13,
+            -3.905
+          ],
+          "max": [
+            4.4,
+            5.419,
+            2.7
+          ],
+          "size": [
+            9.505,
+            5.549,
+            6.605
+          ],
+          "center": [
+            -0.352,
+            2.644,
+            -0.602
+          ]
+        },
+        "tris": 2104
+      },
+      {
+        "id": "nx-town-longhouse",
+        "lib": "store/c4aaa7833a1336ac.glb",
+        "kind": "thing",
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.7,
+            -0.2,
+            -2.923
+          ],
+          "max": [
+            4.7,
+            5.245,
+            4.301
+          ],
+          "size": [
+            9.4,
+            5.445,
+            7.224
+          ],
+          "center": [
+            0,
+            2.522,
+            0.689
+          ]
+        },
+        "tris": 1774
+      }
+    ]
+  },
+  "completedAt": "2026-09-08T01:01:35.011Z",
+  "captured": 10
+}

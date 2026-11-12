@@ -1,0 +1,317 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-a872c498-7e5",
+    "view": "first",
+    "startedAt": "2026-09-08T04:26:15.686Z"
+  },
+  "completedAt": "2026-09-08T04:26:16.583Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "0ef75a0409c2832c4a2b1f7dbe7570138168997624d6ff7b3897ab805d099885",
+  "bytes": 763226,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-forge",
+  "view": "workstation",
+  "rendererModels": [
+    {
+      "id": "nx-forge",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "loaded": true
+    },
+    {
+      "id": "nx-sign-smithy",
+      "loaded": true
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "loaded": true
+    }
+  ],
+  "companionsBefore": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-forge-l",
+      "kind": "light",
+      "pos": [
+        21.60565223135312,
+        1.5,
+        -7.557382793287093
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "kind": "thing",
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/54555b39274bc00c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-smithy",
+      "kind": "thing",
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "kind": "thing",
+      "pos": [
+        24.765,
+        0,
+        -4.57
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/65d686b023348c9b.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "companionsAfter": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-forge-l",
+      "kind": "light",
+      "pos": [
+        21.60565223135312,
+        1.5,
+        -7.557382793287093
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "kind": "thing",
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/54555b39274bc00c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-smithy",
+      "kind": "thing",
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "kind": "thing",
+      "pos": [
+        24.765,
+        0,
+        -4.57
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/65d686b023348c9b.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "bodyPose": {
+    "p": [
+      20.298079490930622,
+      0,
+      -5.901256732715615
+    ],
+    "yaw": 2.417143470852278,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    0.5,
+    0,
+    2.7
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-forge",
+    "lib": "store/d55c86d706774923.glb",
+    "kind": "thing",
+    "pos": [
+      22.11785473473295,
+      0,
+      -7.957568494595163
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:fire_fg_coals": {
+        "type": "bob",
+        "axis": "y",
+        "amp": 0.014,
+        "period": 1.8
+      },
+      "particles": {
+        "preset": "embers",
+        "origin": [
+          0,
+          0.45,
+          0.42
+        ],
+        "count": 84
+      }
+    },
+    "bbox": {
+      "min": [
+        -0.873,
+        -0.005,
+        -0.777
+      ],
+      "max": [
+        1.46,
+        2.96,
+        0.61
+      ],
+      "size": [
+        2.333,
+        2.965,
+        1.387
+      ],
+      "center": [
+        0.294,
+        1.478,
+        -0.084
+      ]
+    },
+    "tris": 2712
+  },
+  "targetAfter": {
+    "id": "nx-forge",
+    "lib": "store/d55c86d706774923.glb",
+    "kind": "thing",
+    "pos": [
+      22.11785473473295,
+      0,
+      -7.957568494595163
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:fire_fg_coals": {
+        "type": "bob",
+        "axis": "y",
+        "amp": 0.014,
+        "period": 1.8
+      },
+      "particles": {
+        "preset": "embers",
+        "origin": [
+          0,
+          0.45,
+          0.42
+        ],
+        "count": 84
+      }
+    },
+    "bbox": {
+      "min": [
+        -0.873,
+        -0.005,
+        -0.777
+      ],
+      "max": [
+        1.46,
+        2.96,
+        0.61
+      ],
+      "size": [
+        2.333,
+        2.965,
+        1.387
+      ],
+      "center": [
+        0.294,
+        1.478,
+        -0.084
+      ]
+    },
+    "tris": 2712
+  },
+  "beforeObservedAt": "2026-09-08T04:26:12.682Z",
+  "afterObservedAt": "2026-09-08T04:26:18.544Z",
+  "protectedBeforeSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "protectedAfterSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "file": "nx-forge-workstation.png"
+}

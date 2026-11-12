@@ -1,0 +1,14 @@
+{
+  "status": "ACCEPTED_HOST_PRESERVATION_AND_CONTEXT",
+  "id": "nx-town-kiln",
+  "sourceSha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+  "evidence": {
+    "file": "build/nx-town-kiln-functionality.json",
+    "sha256": "f3a3ee19d5b8acb239cbbe572eab8eff10e3d583d6f9ea3df0a0954c3f498646"
+  },
+  "nativeReview": {
+    "file": "reviews/parent-native/final-kiln-belltower.md",
+    "sha256": "4db6e74ec4b1a2d75c9d14e40b74e82f20314b973d9acbdab5533b35119bf315"
+  },
+  "scope": "New host geometry; frozen exterior companions unchanged. Fresh pipeline independently proves neighbor body routes and physical triangle support. Not universal all-world intersection certification."
+}

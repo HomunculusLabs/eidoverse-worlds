@@ -1,0 +1,119 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-b2f6bc6d-ccd",
+    "view": "first",
+    "startedAt": "2026-09-08T02:17:45.007Z"
+  },
+  "completedAt": "2026-09-08T02:17:45.667Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "8ecf406186c4d7f738442c59c057ff8bb15f67475311402a27e3d1e1222362f0",
+  "bytes": 821922,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-stable",
+  "view": "interior",
+  "bodyPose": {
+    "p": [
+      42,
+      0.2,
+      -1.35
+    ],
+    "yaw": 0.7051113481144318,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    -1.35,
+    0.2,
+    1
+  ],
+  "requestedLookLocal": [
+    1,
+    0.2,
+    -1
+  ],
+  "targetBefore": {
+    "id": "nx-town-stable",
+    "lib": "store/98f2d5b6e1b6c429.glb",
+    "kind": "thing",
+    "pos": [
+      43,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -3,
+        -0.2,
+        -2.775
+      ],
+      "max": [
+        3,
+        3.442,
+        2.575
+      ],
+      "size": [
+        6,
+        3.642,
+        5.35
+      ],
+      "center": [
+        0,
+        1.621,
+        -0.1
+      ]
+    },
+    "tris": 776
+  },
+  "targetAfter": {
+    "id": "nx-town-stable",
+    "lib": "store/98f2d5b6e1b6c429.glb",
+    "kind": "thing",
+    "pos": [
+      43,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -3,
+        -0.2,
+        -2.775
+      ],
+      "max": [
+        3,
+        3.442,
+        2.575
+      ],
+      "size": [
+        6,
+        3.642,
+        5.35
+      ],
+      "center": [
+        0,
+        1.621,
+        -0.1
+      ]
+    },
+    "tris": 776
+  },
+  "beforeObservedAt": "2026-09-08T02:17:42.005Z",
+  "afterObservedAt": "2026-09-08T02:17:48.069Z",
+  "protectedBeforeSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "protectedAfterSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "file": "nx-town-stable-interior.png"
+}

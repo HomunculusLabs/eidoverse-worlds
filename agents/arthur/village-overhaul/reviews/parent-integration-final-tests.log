@@ -1,0 +1,46 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/verify-approach.test.ts:
+(pass) external workstation approach executes real box collider without pretending it is a room [6.24ms]
+(pass) external access rejects a high neighbor beam missed by the hip collider [7.89ms]
+(pass) vacuous one-point routes are refused, not reported as passing access [0.11ms]
+(pass) declared floating approach elevations do not become physical ground [0.85ms]
+
+agents/arthur/village-overhaul/rollout.test.ts:
+(pass) exact frozen campaign allows a READY approval subset, never narrowed baselines or migrations [52.81ms]
+(pass) model, transitive sources and acceptance evidence are hash-pinned and confined [7.75ms]
+(pass) focused live gate protects every unselected host and exact originals, but permits unrelated new arrivals [14.44ms]
+(pass) only explicitly evidenced eligible collision amendments alter spawn-only collide in the real fold [2.25ms]
+(pass) full GLB decoding traverses real default-scene triangles and refuses malformed or external content [34.58ms]
+(pass) midflight shared-fold scope accepts distant new entities but stops intruders, riders and lost ACKs [10.37ms]
+(pass) parent preflight must bind exact local/served bytes, fresh context and bounded geometry coverage without invented residuals [1.34ms]
+(pass) OFFLINE injected network: complete dry-run writes nothing; focused apply/readback then rerun is no-op [125.71ms]
+(pass) OFFLINE retry/drift: 429 is paced and regated; changed sources or malformed served bytes never reach remove [100.23ms]
+(pass) successful send without authoritative receipt cannot claim completion [48.23ms]
+(pass) CLI rejects invalid options before loading credentials, approval, or preflight [0.26ms]
+(pass) OFFLINE network adapter uses read-only snapshots and actual cabin ACK transport, checking before each send [711.34ms]
+(pass) loader audits every saved original byte without importing builders or touching credentials [23.81ms]
+(pass) paced upload resumes from the previous process attempt timestamp [73.47ms]
+(pass) all 17 real captured host component bags roundtrip through unchanged core and actual shared fold [2.41ms]
+(pass) only a pinned passing collision evidence report admits an eligible functional type [3.89ms]
+(pass) regional protection permits unrelated outside carousel drift but refuses neighbor movement into or out of scope [8.10ms]
+(pass) persistent upload clock reads only recorded attempts and refuses corrupt receipts [3.97ms]
+(pass) affected region must contain the removed original extent, not merely the smaller candidate [1.81ms]
+(pass) CLI is dry-run by default and has an exact focused target
+
+agents/arthur/village-overhaul/preflight.test.ts:
+(pass) terrain binding tolerates only negligible captured pose roundoff, not raised phantom floors [0.96ms]
+(pass) explicit quarter-turn proof frames rotate the whole assembly and route, without changing world placement or mutating inputs [0.74ms]
+(pass) preflight refuses content/source/route binding drift before decoding
+(pass) bidirectional surface proof rejects hidden displacement despite equal outer bounds [5.10ms]
+(pass) full inspection refuses unbound source before any runtime network or file operation [0.55ms]
+(pass) live neighbor adapter keeps loaded wrapper and composes neighbor into host, never reversed
+
+agents/arthur/village-overhaul/assembly.test.ts:
+(pass) neighbor selection uses transformed mesh extents, not center distance, including road networks [0.14ms]
+(pass) inverted decoded bounds cannot silently skip an obstacle
+
+ 32 pass
+ 0 fail
+ 222 expect() calls
+Ran 32 tests across 4 files. [1340.00ms]

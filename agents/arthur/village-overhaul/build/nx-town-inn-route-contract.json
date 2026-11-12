@@ -1,0 +1,565 @@
+{
+  "id": "nx-town-inn",
+  "sha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+  "pos": [
+    36,
+    0,
+    0
+  ],
+  "yaw": -1.5707963267948966,
+  "scale": 1,
+  "parent": null,
+  "comp": {},
+  "terrainY": 0,
+  "doors": [
+    {
+      "name": "protected-inlay-main-door",
+      "x": 0,
+      "z": [
+        2.63,
+        3.25
+      ],
+      "floorY": 0.2499852861762047,
+      "width": 1.4,
+      "headroom": 2.2
+    },
+    {
+      "name": "porch-open-arrival",
+      "x": 0,
+      "z": [
+        4.35,
+        4.8
+      ],
+      "floorY": 0.198,
+      "width": 1.4,
+      "headroom": 2.2
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "street",
+      "pos": [
+        0,
+        0,
+        5.45
+      ]
+    },
+    {
+      "name": "porch-entry",
+      "pos": [
+        0,
+        0.198,
+        4.5
+      ]
+    },
+    {
+      "name": "porch-settle-service",
+      "pos": [
+        1.25,
+        0.198,
+        4
+      ]
+    },
+    {
+      "name": "porch-central",
+      "pos": [
+        0,
+        0.198,
+        3.65
+      ]
+    },
+    {
+      "name": "threshold",
+      "pos": [
+        0,
+        0.2499852861762047,
+        2.95
+      ]
+    },
+    {
+      "name": "tavern-arrival",
+      "pos": [
+        0,
+        0.198,
+        2.35
+      ]
+    },
+    {
+      "name": "tavern-center",
+      "pos": [
+        0,
+        0.198,
+        0
+      ]
+    },
+    {
+      "name": "table-aisle",
+      "pos": [
+        3.2,
+        0.198,
+        0
+      ]
+    },
+    {
+      "name": "south-table-service",
+      "pos": [
+        3.2,
+        0.198,
+        1.3
+      ]
+    },
+    {
+      "name": "table-aisle-return",
+      "pos": [
+        3.2,
+        0.198,
+        0
+      ]
+    },
+    {
+      "name": "north-table-service",
+      "pos": [
+        3.2,
+        0.198,
+        -1.3
+      ]
+    },
+    {
+      "name": "table-aisle-back",
+      "pos": [
+        3.2,
+        0.198,
+        0
+      ]
+    },
+    {
+      "name": "common-room",
+      "pos": [
+        0,
+        0.198,
+        0
+      ]
+    },
+    {
+      "name": "bar-and-cask-service",
+      "pos": [
+        0.15,
+        0.198,
+        -1.6
+      ]
+    },
+    {
+      "name": "hearth-turn",
+      "pos": [
+        -2.3,
+        0.198,
+        -1.6
+      ]
+    },
+    {
+      "name": "hearth-service",
+      "pos": [
+        -2.3,
+        0.198,
+        -0.1
+      ]
+    },
+    {
+      "name": "room-return",
+      "pos": [
+        0,
+        0.198,
+        0
+      ]
+    },
+    {
+      "name": "exit-foyer",
+      "pos": [
+        0,
+        0.198,
+        2.35
+      ]
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-dress-hens",
+      "min": [
+        -4.581018383287812,
+        0.052757930010557175,
+        3.936502236345679
+      ],
+      "max": [
+        -4.207972065911619,
+        0.2672491669654846,
+        4.296194775473018
+      ]
+    },
+    {
+      "id": "nx-dress-coop",
+      "min": [
+        -7.723102156397543,
+        -5.9604645663569045e-9,
+        -2.2058378649630934
+      ],
+      "max": [
+        -5.138765523584139,
+        1.407923936843872,
+        0.4841682893988597
+      ]
+    },
+    {
+      "id": "nx-dress-stablebench",
+      "min": [
+        5.149999976158142,
+        -1.1920929132713809e-8,
+        -6.2249999940395355
+      ],
+      "max": [
+        7.1105769872665405,
+        1.6950000524520874,
+        -5.7749664187431335
+      ]
+    },
+    {
+      "id": "nx-dress-well",
+      "min": [
+        -5.549999952316284,
+        -2.3841858265427618e-8,
+        4.950000047683716
+      ],
+      "max": [
+        -3.450000047683716,
+        2.3699896335601807,
+        7.049999952316284
+      ]
+    },
+    {
+      "id": "nx-artwalk-b2-inn-lintel",
+      "min": [
+        -1.1749999523162842,
+        2.499999998807907,
+        2.9449999991059315
+      ],
+      "max": [
+        1.1749999523162842,
+        3.059995113611221,
+        3.150015874505044
+      ]
+    },
+    {
+      "id": "nx-artwalk-b2-inn-threshold",
+      "min": [
+        -0.8299999833106995,
+        0.19800000044703484,
+        2.7699999928474455
+      ],
+      "max": [
+        0.8299999833106995,
+        0.2499852861762047,
+        3.1300060868263273
+      ]
+    },
+    {
+      "id": "nx-artwalk-b27-waterline",
+      "min": [
+        -5.531333327293396,
+        0.4099999964237213,
+        4.968666672706604
+      ],
+      "max": [
+        -3.468666672706604,
+        0.6099576950073242,
+        7.031333327293396
+      ]
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "min": [
+        -0.24999999999999958,
+        2.0199999809265137,
+        -4.899999999329446
+      ],
+      "max": [
+        0.25000000000000044,
+        2.700000047683716,
+        -4.576223814487456
+      ]
+    },
+    {
+      "id": "nx-struct-cellardoor",
+      "min": [
+        4.8,
+        -0.2854272115410877,
+        -1.3799999952316282
+      ],
+      "max": [
+        6.500003743171692,
+        2.1145580869732785,
+        1.379999995231629
+      ]
+    }
+  ],
+  "assembly": [
+    {
+      "id": "nx-dress-hens",
+      "lib": "store/edc1a4c7ca62d56f.glb",
+      "pos": [
+        33.5,
+        0,
+        -6
+      ],
+      "yaw": -1.8,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-hens.glb",
+      "sha256": "5a6ec4335d8b6bc2d164a929cbcf85367eed3e64b9b2f7460215b85973a97bb5",
+      "hostLocalBounds": {
+        "min": [
+          -4.581018383287812,
+          0.052757930010557175,
+          3.936502236345679
+        ],
+        "max": [
+          -4.207972065911619,
+          0.2672491669654846,
+          4.296194775473018
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-coop",
+      "lib": "store/f5d4039489c1ce4b.glb",
+      "pos": [
+        37.5,
+        0,
+        -6.5
+      ],
+      "yaw": -1.8,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-coop.glb",
+      "sha256": "5b8702617ab578cc56f65250f4333112fa58248343b92fe727153a190c3b42dc",
+      "hostLocalBounds": {
+        "min": [
+          -7.723102156397543,
+          -5.9604645663569045e-9,
+          -2.2058378649630934
+        ],
+        "max": [
+          -5.138765523584139,
+          1.407923936843872,
+          0.4841682893988597
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-stablebench",
+      "lib": "store/c24b7628da5f74ae.glb",
+      "pos": [
+        42,
+        0,
+        6
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-stablebench.glb",
+      "sha256": "3b5554bb59aefce157b57cb3a57f3fb463a91eb6d56560fc3e4fce059df77301",
+      "hostLocalBounds": {
+        "min": [
+          5.149999976158142,
+          -1.1920929132713809e-8,
+          -6.2249999940395355
+        ],
+        "max": [
+          7.1105769872665405,
+          1.6950000524520874,
+          -5.7749664187431335
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-well",
+      "lib": "store/35f17cf4f6a6db9f.glb",
+      "pos": [
+        30,
+        0,
+        -4.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-well.glb",
+      "sha256": "0a3efe7f3720abb35e277a6132187fabc55fc6d79f7441920b8f68f9c984a888",
+      "hostLocalBounds": {
+        "min": [
+          -5.549999952316284,
+          -2.3841858265427618e-8,
+          4.950000047683716
+        ],
+        "max": [
+          -3.450000047683716,
+          2.3699896335601807,
+          7.049999952316284
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b2-inn-lintel",
+      "lib": "store/875942618767052c.glb",
+      "pos": [
+        32.97,
+        2.78,
+        1.85533990070824e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b2-inn-lintel.glb",
+      "sha256": "851e4027d43f12b05fcc4ecf57adf2540c8fca7c909c7893f92938b786e1fa97",
+      "hostLocalBounds": {
+        "min": [
+          -1.1749999523162842,
+          2.499999998807907,
+          2.9449999991059315
+        ],
+        "max": [
+          1.1749999523162842,
+          3.059995113611221,
+          3.150015874505044
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b2-inn-threshold",
+      "lib": "store/cc80fa377494a76c.glb",
+      "pos": [
+        33.05,
+        0.198,
+        1.806354028742346e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b2-inn-threshold.glb",
+      "sha256": "937dae4febdabcb5d0e887aa588ada7b86ede319cc7cbdae4c9d6441b93a0e58",
+      "hostLocalBounds": {
+        "min": [
+          -0.8299999833106995,
+          0.19800000044703484,
+          2.7699999928474455
+        ],
+        "max": [
+          0.8299999833106995,
+          0.2499852861762047,
+          3.1300060868263273
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b27-waterline",
+      "lib": "store/580706ad8e46212c.glb",
+      "pos": [
+        30,
+        0,
+        -4.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b27-waterline.glb",
+      "sha256": "05db8263eef436e4fcc96270f4e2e704cfa5ec1d4482d52b37d180b341c57737",
+      "hostLocalBounds": {
+        "min": [
+          -5.531333327293396,
+          0.4099999964237213,
+          4.968666672706604
+        ],
+        "max": [
+          -3.468666672706604,
+          0.6099576950073242,
+          7.031333327293396
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "lib": "store/afee37dd9a5b5d67.glb",
+      "pos": [
+        40.9,
+        0,
+        1.285879139104721e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-stable-001.glb",
+      "sha256": "d470868b35865794630da8427221cb63776e2523aed56c6d934464843689bc56",
+      "hostLocalBounds": {
+        "min": [
+          -0.24999999999999958,
+          2.0199999809265137,
+          -4.899999999329446
+        ],
+        "max": [
+          0.25000000000000044,
+          2.700000047683716,
+          -4.576223814487456
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-stable",
+      "lib": "store/98f2d5b6e1b6c429.glb",
+      "pos": [
+        43,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-stable.glb",
+      "sha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+      "hostLocalBounds": {
+        "min": [
+          -2.9999999999999996,
+          -0.20000000298023224,
+          -9.775000095367432
+        ],
+        "max": [
+          3.0000000000000004,
+          3.4417715072631836,
+          -4.425027370452881
+        ]
+      },
+      "protected": false
+    },
+    {
+      "id": "nx-struct-cellardoor",
+      "lib": "store/fe755f78b3f300d9.glb",
+      "pos": [
+        36,
+        -0.04542721690550573,
+        5.55
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-struct-cellardoor.glb",
+      "sha256": "e6837a8f61f2e328c3d31dbc98ba236bef8fabb226db19cd32e53f4dc5b216cb",
+      "hostLocalBounds": {
+        "min": [
+          4.8,
+          -0.2854272115410877,
+          -1.3799999952316282
+        ],
+        "max": [
+          6.500003743171692,
+          2.1145580869732785,
+          1.379999995231629
+        ]
+      },
+      "protected": true
+    }
+  ]
+}

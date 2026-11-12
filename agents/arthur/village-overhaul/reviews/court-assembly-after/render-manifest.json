@@ -1,0 +1,500 @@
+{
+  "status": "RENDERED",
+  "evidenceKind": "local-solo-render-not-in-world",
+  "modelPath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/court-assembly-after.glb",
+  "modelSha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581",
+  "rendererSha256": "623d07cd956d2a1c8dfb26878b98de24c7cd076ed43d1dd57ef5ff8a783e496f",
+  "cameraSha256": "5486b8bb3f4e8f2c3b88314e6b1323182408f6f059e2e911cce471040cbafde4",
+  "referenceModelSha256": null,
+  "cameraReference": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/court-before/camera.json",
+  "limitations": [
+    "No live terrain, neighbors, component evaluators or authored world lights.",
+    "Interior camera is model-local; inspect/adjust the BEFORE camera.json once per target, then reuse verbatim.",
+    "Rendered evidence is not native visual acceptance."
+  ],
+  "stats": {
+    "bounds": {
+      "min": [
+        -6.829999988079072,
+        -0.20000000298023224,
+        -3.951000051498415
+      ],
+      "max": [
+        8.833000038146972,
+        4.775000095367432,
+        3.140000456571579
+      ],
+      "size": [
+        15.663000026226044,
+        4.975000098347664,
+        7.091000508069994
+      ]
+    },
+    "meshes": 60,
+    "triangles": 16208,
+    "namedNodes": [
+      "local-companion-assembly",
+      "nx-court",
+      "village_court_0",
+      "village_court_1",
+      "village_court_2",
+      "village_court_3",
+      "village_court_4",
+      "village_court_5",
+      "village_court_6",
+      "village_court_7",
+      "village_court_8",
+      "village_court_9",
+      "village_court_10",
+      "fire",
+      "flame",
+      "fire2",
+      "lamp_scale_0",
+      "lamp_scale_1",
+      "flame_sconce_bk_l",
+      "flame_sconce_bk_r",
+      "flame_sconce_ws_l",
+      "flame_sconce_ws_r",
+      "lamp_foot",
+      "lamp_post",
+      "lamp_arm",
+      "lamp_collar",
+      "lamp",
+      "glow_quench_water",
+      "nx-artwalk-b16-forge-seven-strikes",
+      "b16_0",
+      "b16_1",
+      "b16_2",
+      "nx-artwalk-b23-cistern-rain-count",
+      "b23_0",
+      "b23_1",
+      "b23_2",
+      "nx-artwalk-b28-bake-count",
+      "b28_0",
+      "b28_1",
+      "b28_2",
+      "nx-artwalk-b29-strike-count",
+      "b29_0",
+      "b29_1",
+      "b29_2",
+      "nx-sign-bakery",
+      "sgb_0",
+      "sgb_1",
+      "sgb_2",
+      "sgb_3",
+      "nx-sign-smithy",
+      "sgs_0",
+      "sgs_1",
+      "sgs_2",
+      "sgs_3",
+      "nx-cistern",
+      "bc3_0",
+      "bc3_1",
+      "bc3_2",
+      "bc3_3",
+      "nx-forge",
+      "village_forge_0",
+      "village_forge_1",
+      "village_forge_2",
+      "village_forge_3",
+      "village_forge_4",
+      "village_forge_5",
+      "village_forge_6",
+      "fire_fg_coals",
+      "fire_fg_coals_0",
+      "fire_fg_coals_1",
+      "glow_quench_water_1"
+    ],
+    "materials": [
+      "(unnamed)",
+      "cabin-cedar",
+      "cabin-glass",
+      "cabin-iron",
+      "cabin-lime",
+      "cabin-slate",
+      "cabin-slate-alt",
+      "cabin-stone",
+      "cabin-timber",
+      "court-brass",
+      "court-crust",
+      "court-oven-brick",
+      "forge-leather",
+      "forge-refractory",
+      "forge-water",
+      "glow1",
+      "glow11",
+      "glow12",
+      "glow13",
+      "glow7",
+      "glow8",
+      "iron",
+      "sign_bone",
+      "sign_handle",
+      "stone",
+      "timber"
+    ],
+    "extensionsUsed": [
+      "EXT_texture_webp"
+    ]
+  },
+  "frames": [
+    {
+      "view": "front",
+      "file": "front.png",
+      "sha256": "069abb83e07dc90355d047aada203cee7c5a422412ab0cbdf9b0de31af0edce7",
+      "bytes": 73264,
+      "camera": {
+        "eye": [
+          0,
+          2.2026925407350064,
+          26.67999997138977
+        ],
+        "quaternion": [
+          -0.013929348293840274,
+          0,
+          0,
+          0.9999029819218007
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "right",
+      "file": "right.png",
+      "sha256": "b87d4a5cbdc4a6580c71407fde2fb123072741b353ce48e039e723e4ec7716ff",
+      "bytes": 44897,
+      "camera": {
+        "eye": [
+          26.65,
+          2.2026925407350064,
+          0.029999971389770508
+        ],
+        "quaternion": [
+          -0.009849536636083723,
+          0.7070381790455551,
+          0.009849536636083723,
+          0.7070381790455551
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "back",
+      "file": "back.png",
+      "sha256": "6f2fe56a99a5746ba38a92b7a74f8c48ab8a42a61531cf988e990d68b13e0a8d",
+      "bytes": 47017,
+      "camera": {
+        "eye": [
+          0,
+          2.2026925407350064,
+          -26.620000028610228
+        ],
+        "quaternion": [
+          0,
+          0.9999029819218007,
+          0.013929348293840274,
+          0
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "left",
+      "file": "left.png",
+      "sha256": "0d414303e8ec9328cf53c0354bc122bca26102f564e6f864b501f5ce43f99a82",
+      "bytes": 41872,
+      "camera": {
+        "eye": [
+          -26.65,
+          2.2026925407350064,
+          0.029999971389770508
+        ],
+        "quaternion": [
+          -0.009849536636083723,
+          -0.7070381790455551,
+          -0.009849536636083723,
+          0.7070381790455551
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "gameplay",
+      "file": "gameplay.png",
+      "sha256": "928aba573cb65f8ad3582bcccf8e679c86a848f04069126bd5c3c722079451f7",
+      "bytes": 129726,
+      "camera": {
+        "eye": [
+          0,
+          1.4499999970197677,
+          18.02999997138977
+        ],
+        "quaternion": [
+          0.00027894777611812375,
+          0,
+          0,
+          0.9999999610940684
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "aerial",
+      "file": "aerial.png",
+      "sha256": "998d21a6f6332fde08990458a8ccbd82201239cce96b9d02dfa21361f37bd5f4",
+      "bytes": 132193,
+      "camera": {
+        "eye": [
+          14.95,
+          16.69999999701977,
+          14.97999997138977
+        ],
+        "quaternion": [
+          -0.28384436222323295,
+          0.36417494539530365,
+          0.11757218443600448,
+          0.8791960922498233
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "top",
+      "file": "top.png",
+      "sha256": "0e3dea89440a4887730a99253b93b5052f4bd847d2d7baed596631cbb2e3f362",
+      "bytes": 56278,
+      "camera": {
+        "eye": [
+          0,
+          27.749999997019767,
+          0.03099997138977051
+        ],
+        "quaternion": [
+          -0.7070933328290383,
+          0,
+          0,
+          0.7071202292882893
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "night",
+      "file": "night.png",
+      "sha256": "670a7705fbfd91a58c3be40f3322ceb8a495093afc01c25b77c40279427cd792",
+      "bytes": 94745,
+      "camera": {
+        "eye": [
+          0,
+          1.4499999970197677,
+          18.02999997138977
+        ],
+        "quaternion": [
+          0.00027894777611812375,
+          0,
+          0,
+          0.9999999610940684
+        ],
+        "projectionMatrix": [
+          1.9538167985203512,
+          0,
+          0,
+          0,
+          0,
+          2.6050890646938014,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 61,
+        "triangles": 16210
+      }
+    },
+    {
+      "view": "interior",
+      "file": "interior.png",
+      "sha256": "917aae9fb3c6bfc8527a17391a75f406bfd334e54fb6c223409e339ce449dfbe",
+      "bytes": 214387,
+      "camera": {
+        "eye": [
+          0,
+          1.4499999970197677,
+          1.35
+        ],
+        "quaternion": [
+          -0.09445847793568798,
+          0,
+          0,
+          0.9955288021680102
+        ],
+        "projectionMatrix": [
+          1.1772641828381178,
+          0,
+          0,
+          0,
+          0,
+          1.5696855771174902,
+          0,
+          0,
+          0,
+          0,
+          -1.000500125031258,
+          -1,
+          0,
+          0,
+          -0.1000250062515629,
+          0
+        ],
+        "drawCalls": 11,
+        "triangles": 10814
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ]
+}

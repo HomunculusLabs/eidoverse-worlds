@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "sha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+  "poses": [
+    {
+      "seconds": 0,
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "seconds": 0,
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "seconds": 2.5,
+      "quaternion": [
+        0,
+        0.19509032201612825,
+        0,
+        0.9807852804032304
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "seconds": 10,
+      "quaternion": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "seconds": 20,
+      "quaternion": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "seconds": 40,
+      "quaternion": [
+        0,
+        1.2246467991473532e-16,
+        0,
+        -1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "staticMeshes": 10,
+  "movingMeshes": 3,
+  "restRestored": true,
+  "staticTransformsUnchanged": true,
+  "negativeControls": {
+    "missingPartRejected": true,
+    "frozenPartRejected": true,
+    "movingStaticRejected": true
+  },
+  "frames": [
+    {
+      "file": "t-0.png",
+      "sha256": "1b19344d687b61480096cab89512bbc4b2f1bcf06ffc5a0f416290c84a6c6d62",
+      "pose": {
+        "seconds": 0,
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "file": "t-2.5.png",
+      "sha256": "22fcc5b0dc1857ec130707f49b34a6e717af8eb6356002fd2d4c8a02f02ffdbe",
+      "pose": {
+        "seconds": 2.5,
+        "quaternion": [
+          0,
+          0.19509032201612825,
+          0,
+          0.9807852804032304
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "file": "t-10.png",
+      "sha256": "c47f1e00e33ecda535acf6278ee68b8b2020bcf16cfd022d9d55b98617b4921d",
+      "pose": {
+        "seconds": 10,
+        "quaternion": [
+          0,
+          0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "file": "t-20.png",
+      "sha256": "4b48a085ff8204aaff9b10a6b2295372e4ff229cd3ceb28d07871bc3a9210c8b",
+      "pose": {
+        "seconds": 20,
+        "quaternion": [
+          0,
+          1,
+          0,
+          6.123233995736766e-17
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "file": "t-40.png",
+      "sha256": "10d1c87e92d7727fad2753b1b5132cb9f0d3dcb9f50a567c21fd8e3e8a169ec0",
+      "pose": {
+        "seconds": 40,
+        "quaternion": [
+          0,
+          1.2246467991473532e-16,
+          0,
+          -1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "bearingDetail": {
+    "file": "bearing-detail.png",
+    "sha256": "96da7ab92886dc7beb3de11e2d5186e75979975214885baa11702294eb687dba",
+    "camera": [
+      0.85,
+      0.19,
+      1.45
+    ],
+    "target": [
+      0,
+      0.19,
+      0
+    ]
+  },
+  "errors": [],
+  "externalRequests": [],
+  "provenance": {
+    "engineSha256": "185da65ffd3aa4563c395f9d5166136b8abdf153ab686227a51af7c54eb7947b",
+    "evaluatorSha256": "8d08b13135b0df660a51a4aa7402bd655c28920708de2a4a1320732a0029ea08",
+    "lookupSha256": "7af56fd2ca7c853a0ead41b6884544833f22c4765af44c774a9a2f2fd897c55b",
+    "htmlSha256": "448f430daf87b9bd4b8bed539190da634146ea4d172364a1c5e423e310e24af6",
+    "actualGLTFLoader": true,
+    "unmodifiedEngineModules": true
+  },
+  "limitations": [
+    "Standalone file:// Chromium run; not live world or public served-runtime motion parity.",
+    "Ambient entities/comps/time/camera isolated; collider reindex no-op. Unchanged component retains local epoch fallback."
+  ]
+}

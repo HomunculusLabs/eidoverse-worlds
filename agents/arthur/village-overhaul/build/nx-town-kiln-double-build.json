@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "sourceHashes": {
+    "agents/arthur/village-overhaul/build-potter.ts": "f69f83e38095d983fd1fa5319c2642b64c3d7655b000daa8bc119e9f4dfada94",
+    "agents/arthur/village-overhaul/build-kiln.ts": "8d8b1162af481a7fb5a9208efb8cda13204b285fd3c75dbe691accea08c7176e",
+    "agents/arthur/village-overhaul/kit.ts": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51",
+    "agents/arthur/assets/glbwrite.ts": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121",
+    "agents/arthur/assets/mergekit.ts": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+  },
+  "builds": [
+    {
+      "run": 1,
+      "sha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+      "bytes": 2198868,
+      "mtime_ns": 1788835583965411958,
+      "prior_mtime_ns": 1788835319966984791,
+      "stdout": "{\"id\":\"nx-town-kiln\",\"sha256\":\"ab4189a1146e95be31d23aaa94a7afb79c7ce5c3ae96ec57f08bffb9a6898d69\",\"bytes\":2147736,\"nodes\":19,\"meshes\":17,\"bounds\":{\"min\":[-2.195000001192093,-0.058523829780851244,-1.2603233840377897],\"max\":[2.6100000023841856,3.1105334087615812,1.5303233840377892]},\"parts\":614}\n{\"id\":\"nx-town-kiln\",\"stage\":\"FINAL_ALIGNED\",\"sha256\":\"3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03\",\"bytes\":2198868}\n",
+      "stderr": ""
+    },
+    {
+      "run": 2,
+      "sha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+      "bytes": 2198868,
+      "mtime_ns": 1788835585071685124,
+      "prior_mtime_ns": 1788835583965411958,
+      "stdout": "{\"id\":\"nx-town-kiln\",\"sha256\":\"ab4189a1146e95be31d23aaa94a7afb79c7ce5c3ae96ec57f08bffb9a6898d69\",\"bytes\":2147736,\"nodes\":19,\"meshes\":17,\"bounds\":{\"min\":[-2.195000001192093,-0.058523829780851244,-1.2603233840377897],\"max\":[2.6100000023841856,3.1105334087615812,1.5303233840377892]},\"parts\":614}\n{\"id\":\"nx-town-kiln\",\"stage\":\"FINAL_ALIGNED\",\"sha256\":\"3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03\",\"bytes\":2198868}\n",
+      "stderr": ""
+    }
+  ]
+}

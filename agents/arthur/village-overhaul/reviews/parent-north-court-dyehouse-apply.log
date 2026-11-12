@@ -1,0 +1,17 @@
+BEGIN nx-town-gate-n
+{"time":"2026-09-08T03:15:01.472Z","status":"OUTSIDE_SCOPE_DRIFT_OBSERVED","id":"nx-carousel","currentSha256":"a800be385dceaa77dba5c06ba66bae6e368038565a5b5005335e203b769680fa","action":"preserved-unrelated-live-state"}
+{"time":"2026-09-08T03:15:03.204Z","status":"PARENT_PREFLIGHT_VERIFIED","id":"nx-town-gate-n","stage":"local","modelSha256":"a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7","contextSha256":"a60aea8eae9d3ddf25b8ec29d15ba76075cb81a99bc76a50c0140731940ba646","evidence":[{"file":"verification/nx-town-gate-n/local-a39756779c671759-a60aea8eae9d3ddf/details.json","sha256":"73bf6125700b5484b168fa6851dd4301563a89d0e692335c5430c825b14259a9"}]}
+{"time":"2026-09-08T03:15:04.982Z","status":"PREFLIGHT_PASS","id":"nx-town-gate-n","mode":"apply","plannedVerbs":2,"protectedCaptured":279,"protectedRelevant":6}
+{"time":"2026-09-08T03:15:07.706Z","status":"UPLOAD_ATTEMPT","id":"nx-town-gate-n","at":1788837307706}
+{"time":"2026-09-08T03:15:12.008Z","status":"PARENT_PREFLIGHT_VERIFIED","id":"nx-town-gate-n","stage":"served","modelSha256":"ae015327b05b5531371e871d1b4ad4672028869f75b33c3c53bc9f33213d0d6d","contextSha256":"a60aea8eae9d3ddf25b8ec29d15ba76075cb81a99bc76a50c0140731940ba646","evidence":[{"file":"verification/nx-town-gate-n/served-ae015327b05b5531-a60aea8eae9d3ddf/details.json","sha256":"c02fbf27f32962176babc5c02b54c8603362b41cc6978a1ece8ee710441b30fc"}]}
+{"time":"2026-09-08T03:15:14.629Z","status":"VERB_SENT_NOT_YET_VERIFIED","id":"nx-town-gate-n","verb":"remove","args":{"id":"nx-town-gate-n"}}
+{"time":"2026-09-08T03:15:14.749Z","status":"VERB_ACKNOWLEDGED","id":"nx-town-gate-n","entry":{"seq":871,"ts":1788837314163,"actor":"arthur-village-overhaul","verb":"remove","args":{"id":"nx-town-gate-n"}}}
+{"time":"2026-09-08T03:15:15.328Z","status":"VERB_SENT_NOT_YET_VERIFIED","id":"nx-town-gate-n","verb":"spawn","args":{"id":"nx-town-gate-n","lib":"store/a39756779c671759.glb","pos":[0,0,-19.5],"yaw":0,"scale":1,"collide":"exact"}}
+{"time":"2026-09-08T03:15:15.517Z","status":"VERB_ACKNOWLEDGED","id":"nx-town-gate-n","entry":{"seq":872,"ts":1788837314925,"actor":"arthur-village-overhaul","verb":"spawn","args":{"id":"nx-town-gate-n","lib":"store/a39756779c671759.glb","pos":[0,0,-19.5],"yaw":0,"scale":1,"collide":"exact"}}}
+{"time":"2026-09-08T03:15:19.454Z","status":"PARENT_PREFLIGHT_VERIFIED","id":"nx-town-gate-n","stage":"served","modelSha256":"ae015327b05b5531371e871d1b4ad4672028869f75b33c3c53bc9f33213d0d6d","contextSha256":"7019fa16b5d4d0a50cbeaf3ceb4926d9491627388a411a1137dc26eaded9d1dd","evidence":[{"file":"verification/nx-town-gate-n/served-ae015327b05b5531-7019fa16b5d4d0a5/details.json","sha256":"94c55e524eee7d3ece493e674c3ebd9c61c830a341090421152cf005068c80f6"}]}
+{"time":"2026-09-08T03:15:21.232Z","status":"PLACED_VERIFIED","id":"nx-town-gate-n","lib":"store/a39756779c671759.glb","servedSha256":"ae015327b05b5531371e871d1b4ad4672028869f75b33c3c53bc9f33213d0d6d","verbs":2,"protectedCaptured":279,"protectedRelevant":6}
+{"time":"2026-09-08T03:15:21.232Z","status":"ROLLOUT_VERIFIED","uploads":1,"verbs":2,"selected":["nx-town-gate-n"]}
+VERIFIED nx-town-gate-n
+BEGIN nx-court
+{"time":"2026-09-08T03:15:23.723Z","status":"OUTSIDE_SCOPE_DRIFT_OBSERVED","id":"nx-carousel","currentSha256":"a800be385dceaa77dba5c06ba66bae6e368038565a5b5005335e203b769680fa","action":"preserved-unrelated-live-state"}
+PARENT_DIAGNOSTIC: route terrain must match the captured zero-height village terrain, not a declared upper floor

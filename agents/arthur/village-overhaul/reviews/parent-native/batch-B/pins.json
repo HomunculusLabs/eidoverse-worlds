@@ -1,0 +1,83 @@
+[
+  {
+    "name": "woodyard",
+    "view": "front",
+    "file": "reviews/parent-native/batch-B/woodyard-front.png",
+    "sha256": "4ebeeb73240e0b3c17f4234d99129216fbf7bd1645bc19992d6038c9397dc6d4",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-woodyard-candidate-assembly.glb",
+    "renderModelSha256": "0d85f3c18c3e3f8be1cea19d48e2979cd2aa2d3c4370fc65139ad2c0e5b2e318",
+    "renderManifest": "reviews/nx-town-woodyard-candidate-details/render-manifest.json"
+  },
+  {
+    "name": "woodyard",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-B/woodyard-aerial.png",
+    "sha256": "443b1dd137109e44b0af23d005ef3848c71b4c94454479ea9cfe03f3897feeaf",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-woodyard-candidate-assembly.glb",
+    "renderModelSha256": "0d85f3c18c3e3f8be1cea19d48e2979cd2aa2d3c4370fc65139ad2c0e5b2e318",
+    "renderManifest": "reviews/nx-town-woodyard-candidate-details/render-manifest.json"
+  },
+  {
+    "name": "woodyard",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-B/woodyard-interior.png",
+    "sha256": "7f453256a02ae65a8f2fd6da48ee79919ac07cb898a271b62f2e69fb7728453d",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-woodyard-candidate-assembly.glb",
+    "renderModelSha256": "0d85f3c18c3e3f8be1cea19d48e2979cd2aa2d3c4370fc65139ad2c0e5b2e318",
+    "renderManifest": "reviews/nx-town-woodyard-candidate-details/render-manifest.json"
+  },
+  {
+    "name": "bakery",
+    "view": "front",
+    "file": "reviews/parent-native/batch-B/bakery-front.png",
+    "sha256": "b443c8def1fc3baccb358652dc23ad5fc8e6955e94d1e5f04711fdaddb046c06",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/court-assembly-after.glb",
+    "renderModelSha256": "f0e8606398d39f700fb7259340bb43fa06006e4967aaf51d21ac6a766f24a1fb",
+    "renderManifest": "reviews/court-assembly-detail-after/render-manifest.json"
+  },
+  {
+    "name": "bakery",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-B/bakery-aerial.png",
+    "sha256": "a8457b8c496a11add415712d4fd97d13f9f38eb93f5ed5d2067a0bed21a41aec",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/court-assembly-after.glb",
+    "renderModelSha256": "f0e8606398d39f700fb7259340bb43fa06006e4967aaf51d21ac6a766f24a1fb",
+    "renderManifest": "reviews/court-assembly-detail-after/render-manifest.json"
+  },
+  {
+    "name": "bakery",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-B/bakery-interior.png",
+    "sha256": "874e230e3467b7d6250830d51666fa654ed9a43335f78cf174347acd327a3b63",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/court-assembly-after.glb",
+    "renderModelSha256": "f0e8606398d39f700fb7259340bb43fa06006e4967aaf51d21ac6a766f24a1fb",
+    "renderManifest": "reviews/court-assembly-detail-after/render-manifest.json"
+  },
+  {
+    "name": "forge",
+    "view": "front",
+    "file": "reviews/parent-native/batch-B/forge-front.png",
+    "sha256": "d420889b7378d5ce37725573a3db8fc2be6b2f06110349de6c4b1549efa1ac18",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge-assembly-after.glb",
+    "renderModelSha256": "afb5153803b22e6b2a933d7d1c22072f7242443da17c5cf0b84e436577f03f71",
+    "renderManifest": "reviews/forge-assembly-detail-after/render-manifest.json"
+  },
+  {
+    "name": "forge",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-B/forge-aerial.png",
+    "sha256": "832d93cdf780ad0d134d2b1dddef288d3d975b8026c4e4398b74fd880a4437da",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge-assembly-after.glb",
+    "renderModelSha256": "afb5153803b22e6b2a933d7d1c22072f7242443da17c5cf0b84e436577f03f71",
+    "renderManifest": "reviews/forge-assembly-detail-after/render-manifest.json"
+  },
+  {
+    "name": "forge",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-B/forge-interior.png",
+    "sha256": "30b9e91c20278826cc1e39a6296052e9d6ec229a5c71ed65838d7ae45df8b5c3",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge-assembly-after.glb",
+    "renderModelSha256": "afb5153803b22e6b2a933d7d1c22072f7242443da17c5cf0b84e436577f03f71",
+    "renderManifest": "reviews/forge-assembly-detail-after/render-manifest.json"
+  }
+]

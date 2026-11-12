@@ -1,0 +1,129 @@
+[physics] headless body engine: ammo
+[agent arthur-windmill-overhaul-walk] support seam on nx-dress-goats — uneven top (lie 0.28m) without a usable grid — abstaining, no box
+[agent arthur-windmill-overhaul-walk] support seam on nx-temple-labyrinth-0004 — uneven top (lie 0.48m) without a usable grid — abstaining, no box
+[agent arthur-windmill-overhaul-walk] support seam on nx-temple-labyrinth-0025 — uneven top (lie 0.48m) without a usable grid — abstaining, no box
+[agent arthur-windmill-overhaul-walk] support seam on nx-temple-labyrinth-0038 — uneven top (lie 0.48m) without a usable grid — abstaining, no box
+[agent arthur-windmill-overhaul-walk] support seam on nx-dress-nw-logpile-001 — uneven top (lie 0.56m) without a usable grid — abstaining, no box
+{
+  "status": "MCPL_ROUTE_ALL_PASS",
+  "id": "nx-town-windmill",
+  "lib": "store/a557d918b2c14f1a.glb",
+  "legs": 8,
+  "maxArrival": 0.38090623485865893,
+  "approachTerrainHeight": -0.03233607791889402,
+  "evidenceBoundary": "MCPL route only; moving-part entity support abstains. Static doorway separately triangle-tested, no browser-avatar claim.",
+  "results": [
+    {
+      "i": 0,
+      "local": [
+        0,
+        3.2
+      ],
+      "world": [
+        -36.8,
+        1.9594348786357652e-16
+      ],
+      "ok": true,
+      "arrival": 0.36999999999999034,
+      "actualY": -0.03344246356052335
+    },
+    {
+      "i": 1,
+      "local": [
+        0,
+        2.45
+      ],
+      "world": [
+        -37.55,
+        1.5001923289555077e-16
+      ],
+      "ok": true,
+      "arrival": 0.34499999999998465,
+      "actualY": -0.03370848326158746
+    },
+    {
+      "i": 2,
+      "local": [
+        0,
+        1.35
+      ],
+      "world": [
+        -38.65,
+        8.266365894244634e-17
+      ],
+      "ok": true,
+      "arrival": 0.3599999999999781,
+      "actualY": -0.033065237726149686
+    },
+    {
+      "i": 3,
+      "local": [
+        0,
+        -0.5
+      ],
+      "world": [
+        -40.5,
+        -3.061616997868383e-17
+      ],
+      "ok": true,
+      "arrival": 0.3499999999999659,
+      "actualY": -0.030779399079410723
+    },
+    {
+      "i": 4,
+      "local": [
+        0.65,
+        -0.5
+      ],
+      "world": [
+        -40.5,
+        -0.65
+      ],
+      "ok": true,
+      "arrival": 0.27324115301165264,
+      "actualY": -0.03110413632598739
+    },
+    {
+      "i": 5,
+      "local": [
+        0,
+        1.35
+      ],
+      "world": [
+        -38.65,
+        8.266365894244634e-17
+      ],
+      "ok": true,
+      "arrival": 0.3735005663369228,
+      "actualY": -0.03229878317013405
+    },
+    {
+      "i": 6,
+      "local": [
+        0,
+        2.45
+      ],
+      "world": [
+        -37.55,
+        1.5001923289555077e-16
+      ],
+      "ok": true,
+      "arrival": 0.38090623485865893,
+      "actualY": -0.03344398461471531
+    },
+    {
+      "i": 7,
+      "local": [
+        0,
+        4.5
+      ],
+      "world": [
+        -35.5,
+        2.755455298081545e-16
+      ],
+      "ok": true,
+      "arrival": 0.26034686659512607,
+      "actualY": -0.032734183833977845
+    }
+  ]
+}

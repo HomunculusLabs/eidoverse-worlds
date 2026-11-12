@@ -1,0 +1,19 @@
+{
+  "id": "nx-town-woodyard",
+  "status": "PASS",
+  "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "acceptedSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "bounds": {
+    "min": [
+      -2.0999999046325684,
+      -4.76837147544984e-9,
+      -1.090248942375183
+    ],
+    "max": [
+      2.875746011734009,
+      3.559999942779541,
+      1.5084253549575806
+    ]
+  },
+  "heightPolicy": "BRIEF: height may grow with review. No +1m rule in validatePlan; parent withdrew that invented constraint."
+}

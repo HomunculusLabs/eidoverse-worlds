@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "id": "nx-town-potter",
+  "builder": "build-potter.ts",
+  "sha256": [
+    "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+    "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed"
+  ],
+  "method": "parent actually executed same builder twice; fresh bytes equal reviewed source"
+}

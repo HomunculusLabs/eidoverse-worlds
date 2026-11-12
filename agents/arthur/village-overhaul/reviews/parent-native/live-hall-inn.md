@@ -1,0 +1,10 @@
+The four supplied live views show recognizable buildings and furnished interiors. Darkness limits confidence in several details.
+
+- **Hall exterior:** Clearly establishes the hall, its porch, and an open entrance with interior furniture visible beyond. The foundation and porch appear seated against the terrain; no obvious floating structure or major clipping. Foreground paving looks raised and disconnected, but the image cannot establish whether that is intentional. A narrow obstruction at the left edge does not compromise the building view.
+- **Hall interior:** Establishes coherent furnishing: a long table, benches, stools, shelves, and a window. Floor and wall junctions are readable, with no obvious major clipping. Dark timber obscures some furniture relationships. This view supports an inhabitable room visually, but does not establish the entrance-to-room connection.
+- **Inn exterior:** Clearly establishes the inn, exterior stair, porch, and surrounding structures. The foundation appears seated, and the entrance is visibly open, with barrels beyond. Porch furniture and a dark sign overlap in projection on the right; actual clipping is unresolved. Exposure is adequate for the overall architecture but weak beneath the porch.
+- **Inn interior:** Establishes furnishings and a continuous floor, but furniture merges into near-black silhouettes. The large luminous shape cropped at the top dominates the frame without visibly resolving room details. Neither the entrance nor circulation around the furniture is adequately shown.
+
+**Recapture:** Inn interior needs a brighter, wider view including the doorway and furniture clearances. A brighter inn porch detail would resolve the sign/furniture overlap. Hall views establish useful visual evidence; a doorway-facing interior view would strengthen the connection.
+
+These images do not certify physical walkability, hidden geometry, or Bill’s taste.

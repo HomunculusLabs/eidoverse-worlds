@@ -1,0 +1,491 @@
+{
+  "status": "PASS",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-belltower",
+  "bounds": {
+    "min": [
+      -1.7000000476837158,
+      -5.9604645663569045e-9,
+      -1.7000000476837158
+    ],
+    "max": [
+      1.7000000476837158,
+      8.489999771118164,
+      1.7000000476837158
+    ]
+  },
+  "triangles": 14349,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": false,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "upper-rear-gallery",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.7,
+        4.82,
+        -1.37
+      ],
+      "max": [
+        0.7,
+        7.0200000000000005,
+        -0.7
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "ladder-topout",
+      "to": "west-gallery",
+      "pass": true,
+      "steps": 9,
+      "maxPush": 0,
+      "maxRise": 1.716613766689079e-7,
+      "minY": 4.82,
+      "maxY": 4.820000171661377,
+      "expectedFloorRange": [
+        4.785,
+        4.855
+      ],
+      "arrivalXZ": 3.433175098891678e-16,
+      "floorError": 1.716613766689079e-7,
+      "geometryHits": 0,
+      "arrived": [
+        -0.8800000000000003,
+        4.820000171661377,
+        -0.1499999999999999
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "west-gallery",
+      "to": "rear-gallery",
+      "pass": true,
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 4.820000171661377,
+      "maxY": 4.820000171661377,
+      "expectedFloorRange": [
+        4.785,
+        4.855
+      ],
+      "arrivalXZ": 4.710277376051325e-16,
+      "floorError": 1.716613766689079e-7,
+      "geometryHits": 0,
+      "arrived": [
+        -0.8800000000000003,
+        4.820000171661377,
+        -0.9399999999999996
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "rear-gallery",
+      "to": "rear-lookout",
+      "pass": true,
+      "steps": 23,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 4.820000171661377,
+      "maxY": 4.820000171661377,
+      "expectedFloorRange": [
+        4.785,
+        4.855
+      ],
+      "arrivalXZ": 6.473657049138938e-16,
+      "floorError": 1.716613766689079e-7,
+      "geometryHits": 0,
+      "arrived": [
+        -5.551115123125783e-16,
+        4.820000171661377,
+        -0.9399999999999996
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "rear-lookout",
+      "to": "rear-gallery",
+      "pass": true,
+      "steps": 22,
+      "maxPush": 0,
+      "maxRise": 1.716613766689079e-7,
+      "minY": 4.82,
+      "maxY": 4.820000171661377,
+      "expectedFloorRange": [
+        4.785,
+        4.855
+      ],
+      "arrivalXZ": 2.220446049250313e-16,
+      "floorError": 1.716613766689079e-7,
+      "geometryHits": 0,
+      "arrived": [
+        -0.8800000000000002,
+        4.820000171661377,
+        -0.94
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "rear-gallery",
+      "to": "west-gallery",
+      "pass": true,
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 4.820000171661377,
+      "maxY": 4.820000171661377,
+      "expectedFloorRange": [
+        4.785,
+        4.855
+      ],
+      "arrivalXZ": 4.236704743275018e-16,
+      "floorError": 1.716613766689079e-7,
+      "geometryHits": 0,
+      "arrived": [
+        -0.8800000000000002,
+        4.820000171661377,
+        -0.15000000000000036
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "west-gallery",
+      "to": "ladder-topout",
+      "pass": true,
+      "steps": 9,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 4.820000171661377,
+      "maxY": 4.820000171661377,
+      "expectedFloorRange": [
+        4.785,
+        4.855
+      ],
+      "arrivalXZ": 1.1443916996305594e-16,
+      "floorError": 1.716613766689079e-7,
+      "geometryHits": 0,
+      "arrived": [
+        -0.7499999999999999,
+        4.820000171661377,
+        0.18000000000000002
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "min": [
+        0.4325435757637024,
+        0.650000021457673,
+        0.952499998509884
+      ],
+      "max": [
+        1.0774564445018768,
+        2.0699999570846557,
+        1.0920780503749847
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "nx-hearth",
+      "triangles": 1631,
+      "sha256": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/027f6f019f9981bf.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-roads",
+      "triangles": 3392,
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/3b76b621559fa1a1.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "triangles": 752,
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/e815a897c7d73373.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-dress-fountain",
+      "triangles": 608,
+      "sha256": "f4fcc0ac3b76b2f8bef6d7406be09efddad2d8982977a592c85ae117c9906777",
+      "sourceTuple": {
+        "pos": [
+          12.5,
+          0,
+          4
+        ],
+        "yaw": -0.7853981633974483,
+        "scale": 1,
+        "lib": "store/72f07c2a466feae3.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "triangles": 792,
+      "sha256": "6c81c3877cf2f4cb5678216cd41abcf333764bbe810dcba8fe9ed281fe6c4369",
+      "sourceTuple": {
+        "pos": [
+          5.269634200735408,
+          0.65,
+          6.330294372515229
+        ],
+        "yaw": -2.356194490192345,
+        "scale": 1,
+        "lib": "store/48aed5dabcb16a45.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b22-mapboard-eight-ways",
+      "triangles": 632,
+      "sha256": "61148de2bd3b97800e0ef702deb34330b6c56fb4828a46f6617f76cf76a7e6ff",
+      "sourceTuple": {
+        "pos": [
+          2.5058834840541455,
+          0,
+          9.529417420270727
+        ],
+        "yaw": -2.9441970937399127,
+        "scale": 1,
+        "lib": "store/09c800d062057db2.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-core-paths",
+      "triangles": 948,
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/c31b6e3f22641e14.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b26-wayband",
+      "triangles": 144,
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+      "sourceTuple": {
+        "pos": [
+          1.75,
+          1.5,
+          10
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/7594436a996e8ded.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b34-wayband-e",
+      "triangles": 144,
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+      "sourceTuple": {
+        "pos": [
+          10,
+          1.5,
+          1.75
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/7594436a996e8ded.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-mapboard",
+      "triangles": 1068,
+      "sha256": "c483ec49a7520349d41940efaae1b156c3a2e8b420596703040e5bff0c22134c",
+      "sourceTuple": {
+        "pos": [
+          2.5,
+          0,
+          9.5
+        ],
+        "yaw": -2.9441970937399127,
+        "scale": 1,
+        "lib": "store/95231f20a016b303.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-approach-lamp-e",
+      "triangles": 824,
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+      "sourceTuple": {
+        "pos": [
+          10,
+          0,
+          1.75
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/18b69a6bb2f5862f.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-approach-lamp-n",
+      "triangles": 824,
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+      "sourceTuple": {
+        "pos": [
+          1.75,
+          0,
+          10
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/18b69a6bb2f5862f.glb"
+      },
+      "colliderExact": false
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+  "modelFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-belltower.glb",
+  "proofFrame": "host-local",
+  "placementContract": {
+    "id": "nx-town-belltower",
+    "lib": "store/2419fbc53a1d65e1.glb",
+    "kind": "thing",
+    "pos": [
+      6.5,
+      0,
+      6.5
+    ],
+    "yaw": -2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "ladder": {
+        "min": [
+          -0.98,
+          0.3,
+          0.98
+        ],
+        "max": [
+          -0.52,
+          5.15,
+          1.22
+        ]
+      }
+    },
+    "bbox": {
+      "min": [
+        -1.7,
+        0,
+        -1.7
+      ],
+      "max": [
+        1.7,
+        7.6,
+        1.7
+      ],
+      "size": [
+        3.4,
+        7.6,
+        3.4
+      ],
+      "center": [
+        0,
+        3.8,
+        0
+      ]
+    },
+    "tris": 1034
+  },
+  "routeContractSha256": "f92d8326a1b1871d03bf3edea1669f602090c70a3ce1439f3bacf5bdbc060da6",
+  "verifierSha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+}

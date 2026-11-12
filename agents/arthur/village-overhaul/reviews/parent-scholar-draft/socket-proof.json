@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "socket": {
+    "pos": [
+      -1.35,
+      3,
+      -0.5
+    ],
+    "yaw": -1.5707963267948966
+  },
+  "browserSupportY": 3,
+  "push": 0,
+  "physicalSupport": {
+    "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+    "pass": true,
+    "samples": [
+      {
+        "name": "study-socket",
+        "pos": [
+          -1.35,
+          3,
+          -0.5
+        ],
+        "ground": 3,
+        "gap": 0,
+        "pass": true
+      }
+    ]
+  },
+  "ladderCompPresent": false,
+  "limitations": [
+    "Upper circulation/socket support only; no ground-to-upper walk, controller climb, or socket interaction was executed. Retained ladder geometry is not a ladder component."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "nx-town-bunkhouse": {
+    "lib": "store/c8636968968672af.glb",
+    "pos": [
+      -9,
+      0,
+      -26
+    ],
+    "yaw": 0.31322457341772525,
+    "scale": 1,
+    "actor": "arthur-improve13-bunk",
+    "ts": 1788721201355
+  },
+  "nx-town-garden-cottage": {
+    "lib": "store/cee52aca03429a62.glb",
+    "pos": [
+      -26,
+      0.0009494488404761625,
+      19
+    ],
+    "yaw": 2.2004415094410525,
+    "scale": 1,
+    "actor": "arthur-improve16-garden",
+    "ts": 1788728148197
+  },
+  "nx-town-longhouse": {
+    "lib": "store/c4aaa7833a1336ac.glb",
+    "pos": [
+      9,
+      0,
+      26
+    ],
+    "yaw": -2.828368080172068,
+    "scale": 1,
+    "actor": "arthur-improve34-longhouse",
+    "ts": 1788765284734
+  },
+  "nx-town-row-cottage": {
+    "lib": "store/add42aeacca2ecc8.glb",
+    "pos": [
+      -23,
+      0,
+      -17
+    ],
+    "yaw": 0.9411511441487406,
+    "scale": 1,
+    "actor": "arthur-improve15-row",
+    "ts": 1788725516329
+  },
+  "nx-town-tower-house": {
+    "lib": "store/11b31000ff639083.glb",
+    "pos": [
+      -9,
+      0,
+      26
+    ],
+    "yaw": 2.828368080172068,
+    "scale": 1,
+    "actor": "arthur-improve10-towerhouse",
+    "ts": 1788712420908
+  }
+}

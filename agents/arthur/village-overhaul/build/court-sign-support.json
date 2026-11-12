@@ -1,0 +1,561 @@
+{
+  "purpose": "Resolve forge-solo floating-sign false positive with the real court host",
+  "signs": [
+    {
+      "phase": "before",
+      "id": "nx-sign-bakery",
+      "courtSha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "signSha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+      "signBounds": {
+        "min": [
+          -6.829999988079072,
+          1.850000039788345,
+          1.2249872177839283
+        ],
+        "max": [
+          -6.100000000670553,
+          2.4500129382334745,
+          1.5749999970197681
+        ]
+      },
+      "points": [
+        {
+          "pos": [
+            -6.10001,
+            2.2,
+            1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.2,
+            1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.2,
+            1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.3,
+            1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.3,
+            1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.3,
+            1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.4,
+            1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.4,
+            1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.4,
+            1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "phase": "before",
+      "id": "nx-sign-smithy",
+      "courtSha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "signSha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "signBounds": {
+        "min": [
+          6.100000000670551,
+          1.850000023841858,
+          -1.5199999973177882
+        ],
+        "max": [
+          6.82999998807907,
+          2.450010061264038,
+          -1.2800055012106868
+        ]
+      },
+      "points": [
+        {
+          "pos": [
+            6.10001,
+            2.2,
+            -1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.2,
+            -1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.2,
+            -1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.3,
+            -1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.3,
+            -1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.3,
+            -1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.4,
+            -1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.4,
+            -1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.4,
+            -1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "ct3_1"
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "phase": "after",
+      "id": "nx-sign-bakery",
+      "courtSha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "signSha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+      "signBounds": {
+        "min": [
+          -6.829999988079072,
+          1.850000039788345,
+          1.2249872177839283
+        ],
+        "max": [
+          -6.100000000670553,
+          2.4500129382334745,
+          1.5749999970197681
+        ]
+      },
+      "points": [
+        {
+          "pos": [
+            -6.10001,
+            2.2,
+            1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.2,
+            1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.2,
+            1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.3,
+            1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.3,
+            1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.3,
+            1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.4,
+            1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.4,
+            1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            -6.10001,
+            2.4,
+            1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "phase": "after",
+      "id": "nx-sign-smithy",
+      "courtSha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "signSha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "signBounds": {
+        "min": [
+          6.100000000670551,
+          1.850000023841858,
+          -1.5199999973177882
+        ],
+        "max": [
+          6.82999998807907,
+          2.450010061264038,
+          -1.2800055012106868
+        ]
+      },
+      "points": [
+        {
+          "pos": [
+            6.10001,
+            2.2,
+            -1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.2,
+            -1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.2,
+            -1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.3,
+            -1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.3,
+            -1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.3,
+            -1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.4,
+            -1.49
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.4,
+            -1.4
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        },
+        {
+          "pos": [
+            6.10001,
+            2.4,
+            -1.3099999999999998
+          ],
+          "hit": {
+            "distance": 0.000010095367431794955,
+            "node": "village_court_1"
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "unfixableWithoutCompanionAmendment": [
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "sha256": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+      "actualHostLocalBounds": {
+        "min": [
+          -6.799999952316286,
+          0.3100000023841858,
+          -3.951000051498415
+        ],
+        "max": [
+          -5.200000047683718,
+          0.6499621272087097,
+          -3.8874777126312274
+        ]
+      },
+      "hostRearMinimum": -2.940000057220459,
+      "rearSeparation": 0.9474776554107684,
+      "explanation": "Entire rider is behind the existing host rear bound. Remains byte/tuple unchanged, exposed; backing cannot be added inside frozen host footprint."
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "actualHostLocalBounds": {
+        "min": [
+          5.600000095367431,
+          0.6800000071525574,
+          -3.7910000085830684
+        ],
+        "max": [
+          7.199999999999999,
+          0.9800182580947876,
+          -3.7274777889251705
+        ]
+      },
+      "hostRearMinimum": -2.940000057220459,
+      "rearSeparation": 0.7874777317047115,
+      "explanation": "Entire rider is behind the existing host rear bound. Remains byte/tuple unchanged, exposed; backing cannot be added inside frozen host footprint."
+    }
+  ]
+}

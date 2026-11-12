@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "id": "nx-town-stable",
+  "builder": "build-stable.ts",
+  "sha256": [
+    "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+    "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202"
+  ],
+  "method": "parent actually executed same builder twice; fresh bytes equal reviewed source"
+}

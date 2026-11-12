@@ -1,0 +1,28 @@
+{
+  "id": "nx-town-hall",
+  "modelSha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+  "status": "PASS",
+  "basis": "parent rerun actual public-runtime routes and protected volumes; source-bound independent native ensemble review",
+  "player": {
+    "file": "reviews/parent-hall-player.json",
+    "sha256": "46ed92374b815fc939b2140a461371560ae6fbef267c112e711a9700017d61bd"
+  },
+  "evidence": [
+    {
+      "file": "hall-notes.md",
+      "sha256": "8d552f4bb7c2448dce5ed096525af13fe3630296d2e97ae3fca8cc2f6c910eec"
+    },
+    {
+      "file": "build/hall-closure-support-report.json",
+      "sha256": "f8db2dd15b5bdde5642c62d4d189907f7c2f05d8d16984f2a4cc93e87d0ccbf5"
+    },
+    {
+      "file": "build/hall-preservation-report.json",
+      "sha256": "68d5892e4bdd18819f73598b15c3e8284639bd38c0264e591bb589d65bf5ae12"
+    }
+  ],
+  "limits": [
+    "Not a universal world-solid intersection certificate.",
+    "Live served-byte and post-placement checks remain required."
+  ]
+}

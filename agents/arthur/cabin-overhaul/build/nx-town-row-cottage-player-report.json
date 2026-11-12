@@ -1,0 +1,326 @@
+{
+  "status": "PASS",
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-row-cottage",
+  "bounds": {
+    "min": [
+      -2.8399999141693115,
+      -0.20000000298023224,
+      -2.640000104904175
+    ],
+    "max": [
+      2.8399999141693115,
+      5.374000072479248,
+      2.640000104904175
+    ]
+  },
+  "triangles": 4744,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": true,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "west-gabled-entry",
+      "requiredWidth": 1.45,
+      "requiredHeadroom": 2.35,
+      "min": [
+        -2.29,
+        0.2,
+        1.4
+      ],
+      "max": [
+        -0.84,
+        2.5500000000000003,
+        2.68
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "outside",
+      "to": "before-threshold",
+      "pass": true,
+      "steps": 8,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 4.440892098500626e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.565,
+        0,
+        2.8999999999999995
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "before-threshold",
+      "to": "threshold",
+      "pass": true,
+      "steps": 13,
+      "maxPush": 0,
+      "maxRise": 0.20000000298023224,
+      "minY": 0,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.3322676295501878e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -1.565,
+        0.20000000298023224,
+        2.4000000000000012
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "threshold",
+      "to": "inside",
+      "pass": true,
+      "steps": 21,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.5543122344752192e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -1.565,
+        0.20000000298023224,
+        1.6000000000000016
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "inside",
+      "to": "turn",
+      "pass": true,
+      "steps": 44,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 6.753223014464259e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        6.661338147750939e-16,
+        0.20000000298023224,
+        0.8499999999999999
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "turn",
+      "to": "weaver-room",
+      "pass": true,
+      "steps": 29,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.996003610813204e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        9.244463733058732e-32,
+        0.20000000298023224,
+        -0.3000000000000005
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "weaver-room",
+      "to": "turn",
+      "pass": true,
+      "steps": 29,
+      "maxPush": 0,
+      "maxRise": 2.980232227667301e-9,
+      "minY": 0.2,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 3.3306690738754696e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.20000000298023224,
+        0.8500000000000003
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "turn",
+      "to": "inside",
+      "pass": true,
+      "steps": 44,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.1065000811460206e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0.20000000298023224,
+        1.600000000000002
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "inside",
+      "to": "threshold",
+      "pass": true,
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.1102230246251565e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0.20000000298023224,
+        2.400000000000001
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "threshold",
+      "to": "before-threshold",
+      "pass": true,
+      "steps": 13,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.1102230246251565e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0,
+        2.899999999999999
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "before-threshold",
+      "to": "outside",
+      "pass": true,
+      "steps": 8,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 8.005932084973442e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0,
+        3.1999999999999997
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b18-row-warp-count",
+      "min": [
+        -0.81,
+        2.22,
+        2.25
+      ],
+      "max": [
+        0.81,
+        2.68,
+        2.37
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Single host only unless protected volumes are supplied; no live neighbors or terrain are loaded.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/build/nx-town-row-cottage.glb",
+  "modelSha256": "0558b5f41bda077772846350737047605f628d9b97a7c159d1f6b9d4574bccfc",
+  "contractSha256": "72cf9114d0dd35c0243ab7d03a19959cbc2926ae7e9370d33a753b4a7b2cfaa5",
+  "verifierSha256": "5a45cb63691f8b77d6baa068fcc5cc6bc5e15b0b6d89a962cf94d700df9c8616",
+  "meshes": 23
+}

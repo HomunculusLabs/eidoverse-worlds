@@ -1,0 +1,4216 @@
+{
+  "id": "nx-town-kiln",
+  "stage": "served",
+  "sourceSha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+  "modelSha256": "668692f76251e4603a302d09b1b938ecb3adc163c620f561df82c3a6567a6afb",
+  "contextSha256": "bcdd57a6bea8be535be75baa52c411d2b59b76eb174f02f44c7a5db47cb331dd",
+  "publicRuntime": [
+    {
+      "name": "colliders.js",
+      "url": "https://eidoverse.billding.dev/lib/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+    },
+    {
+      "name": "supportclass.js",
+      "url": "https://eidoverse.billding.dev/lib/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+    }
+  ],
+  "sourceEquivalence": {
+    "pass": true,
+    "forward": {
+      "samples": 138376,
+      "maxDistance": 0.00023433097774056095
+    },
+    "reverse": {
+      "samples": 137928,
+      "maxDistance": 0.0002405609005471697
+    },
+    "toleranceMetres": 0.003,
+    "sourceTriangles": 19768,
+    "servedTriangles": 19704,
+    "method": "bidirectional all-vertex/edge-midpoint/triangle-centroid nearest-surface probes",
+    "limitation": "Sampled surface equivalence, not a mathematical Hausdorff certificate; actual served-route proof separately required."
+  },
+  "actualBounds": {
+    "min": [
+      -2.194999933242798,
+      -7.1525572131747595e-9,
+      -1.260323405265808
+    ],
+    "max": [
+      2.6100282669067383,
+      3.110599994659424,
+      1.5303233861923218
+    ]
+  },
+  "routes": [
+    {
+      "file": "build/nx-town-kiln-approach-contract.json",
+      "sha256": "99f0fbb66f970c58d23f5cd392e820035a171a4b77d3f99726797dc41da6e7e8",
+      "mode": "workstation",
+      "report": {
+        "status": "PASS",
+        "id": "nx-town-kiln",
+        "kind": "workstation",
+        "runtime": {
+          "mode": "served-override",
+          "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+          "files": {
+            "colliders.js": {
+              "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+              "publicPath": "/lib/colliders.js"
+            },
+            "supportclass.js": {
+              "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+              "publicPath": "/lib/supportclass.js"
+            }
+          },
+          "threeRevision": "184",
+          "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+        },
+        "collider": {
+          "exact": false,
+          "pillar": true
+        },
+        "neighbors": [
+          "nx-approach-ne-lane-002",
+          "nx-artwalk-b12-kiln-heat-contours",
+          "nx-dress-charcoal",
+          "nx-gallery-mosaic-0036",
+          "nx-sign-kiln-001",
+          "nx-tower",
+          "nx-town-longhouse",
+          "nx-town-roads"
+        ],
+        "walks": [
+          {
+            "direction": "in",
+            "from": "public-approach",
+            "to": "furnace-view-and-stoking",
+            "steps": 36,
+            "maxPush": 0,
+            "maxRise": 0.02065,
+            "minY": 0,
+            "maxY": 0.02065,
+            "arrivalXZ": 1.7763568394002505e-15,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "furnace-view-and-stoking",
+            "to": "limestone-charge",
+            "steps": 45,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.02065,
+            "maxY": 0.02065,
+            "arrivalXZ": 1.9860273225978185e-15,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "limestone-charge",
+            "to": "furnace-return",
+            "steps": 46,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.02065,
+            "maxY": 0.02065,
+            "arrivalXZ": 2.004992162807495e-15,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "furnace-return",
+            "to": "slaking-front",
+            "steps": 49,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.02065,
+            "maxY": 0.02065,
+            "arrivalXZ": 2.673771110915334e-15,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "slaking-front",
+            "to": "furnace-return",
+            "steps": 49,
+            "maxPush": 0,
+            "maxRise": 0.02065,
+            "minY": 0,
+            "maxY": 0.02065,
+            "arrivalXZ": 1.429412144204889e-15,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "furnace-return",
+            "to": "limestone-charge",
+            "steps": 46,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.02065,
+            "maxY": 0.02065,
+            "arrivalXZ": 1.1102230246251565e-15,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "limestone-charge",
+            "to": "furnace-view-and-stoking",
+            "steps": 45,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.02065,
+            "maxY": 0.02065,
+            "arrivalXZ": 4.85722573273506e-16,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "furnace-view-and-stoking",
+            "to": "public-approach",
+            "steps": 36,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.02065,
+            "maxY": 0.02065,
+            "arrivalXZ": 1.7763568394002505e-15,
+            "floorError": 0.02065,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          }
+        ],
+        "physicalSupport": {
+          "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+          "pass": true,
+          "samples": [
+            {
+              "name": "in:start",
+              "pos": [
+                0,
+                0,
+                3.4
+              ],
+              "ground": 0.02065,
+              "gap": -0.02065,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:1",
+              "pos": [
+                0,
+                0.02065,
+                3.3605555555555555
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:2",
+              "pos": [
+                0,
+                0.02065,
+                3.321111111111111
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:3",
+              "pos": [
+                0,
+                0.02065,
+                3.2816666666666667
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:4",
+              "pos": [
+                0,
+                0.02065,
+                3.2422222222222223
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:5",
+              "pos": [
+                0,
+                0.02065,
+                3.202777777777778
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:6",
+              "pos": [
+                0,
+                0.02065,
+                3.1633333333333336
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:7",
+              "pos": [
+                0,
+                0.02065,
+                3.123888888888889
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:8",
+              "pos": [
+                0,
+                0.02065,
+                3.0844444444444448
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:9",
+              "pos": [
+                0,
+                0.02065,
+                3.0450000000000004
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:10",
+              "pos": [
+                0,
+                0.02065,
+                3.005555555555556
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:11",
+              "pos": [
+                0,
+                0.02065,
+                2.9661111111111116
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:12",
+              "pos": [
+                0,
+                0.02065,
+                2.926666666666667
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:13",
+              "pos": [
+                0,
+                0.02065,
+                2.887222222222223
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:14",
+              "pos": [
+                0,
+                0.02065,
+                2.8477777777777784
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:15",
+              "pos": [
+                0,
+                0.02065,
+                2.808333333333334
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:16",
+              "pos": [
+                0,
+                0.02065,
+                2.7688888888888896
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:17",
+              "pos": [
+                0,
+                0.02065,
+                2.7294444444444452
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:18",
+              "pos": [
+                0,
+                0.02065,
+                2.690000000000001
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:19",
+              "pos": [
+                0,
+                0.02065,
+                2.6505555555555564
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:20",
+              "pos": [
+                0,
+                0.02065,
+                2.611111111111112
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:21",
+              "pos": [
+                0,
+                0.02065,
+                2.5716666666666677
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:22",
+              "pos": [
+                0,
+                0.02065,
+                2.5322222222222233
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:23",
+              "pos": [
+                0,
+                0.02065,
+                2.492777777777779
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:24",
+              "pos": [
+                0,
+                0.02065,
+                2.4533333333333345
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:25",
+              "pos": [
+                0,
+                0.02065,
+                2.41388888888889
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:26",
+              "pos": [
+                0,
+                0.02065,
+                2.3744444444444457
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:27",
+              "pos": [
+                0,
+                0.02065,
+                2.3350000000000013
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:28",
+              "pos": [
+                0,
+                0.02065,
+                2.295555555555557
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:29",
+              "pos": [
+                0,
+                0.02065,
+                2.2561111111111125
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:30",
+              "pos": [
+                0,
+                0.02065,
+                2.216666666666668
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:31",
+              "pos": [
+                0,
+                0.02065,
+                2.1772222222222237
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:32",
+              "pos": [
+                0,
+                0.02065,
+                2.1377777777777793
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:33",
+              "pos": [
+                0,
+                0.02065,
+                2.098333333333335
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:34",
+              "pos": [
+                0,
+                0.02065,
+                2.0588888888888905
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:35",
+              "pos": [
+                0,
+                0.02065,
+                2.019444444444446
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:furnace-view-and-stoking:36",
+              "pos": [
+                0,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:1",
+              "pos": [
+                -0.04,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:2",
+              "pos": [
+                -0.08,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:3",
+              "pos": [
+                -0.12,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:4",
+              "pos": [
+                -0.16,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:5",
+              "pos": [
+                -0.2,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:6",
+              "pos": [
+                -0.24000000000000002,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:7",
+              "pos": [
+                -0.28,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:8",
+              "pos": [
+                -0.32,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:9",
+              "pos": [
+                -0.36,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:10",
+              "pos": [
+                -0.39999999999999997,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:11",
+              "pos": [
+                -0.43999999999999995,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:12",
+              "pos": [
+                -0.4799999999999999,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:13",
+              "pos": [
+                -0.5199999999999999,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:14",
+              "pos": [
+                -0.5599999999999999,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:15",
+              "pos": [
+                -0.6,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:16",
+              "pos": [
+                -0.64,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:17",
+              "pos": [
+                -0.68,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:18",
+              "pos": [
+                -0.7200000000000001,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:19",
+              "pos": [
+                -0.7600000000000001,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:20",
+              "pos": [
+                -0.8000000000000002,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:21",
+              "pos": [
+                -0.8400000000000002,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:22",
+              "pos": [
+                -0.8800000000000002,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:23",
+              "pos": [
+                -0.9200000000000003,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:24",
+              "pos": [
+                -0.9600000000000003,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:25",
+              "pos": [
+                -1.0000000000000002,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:26",
+              "pos": [
+                -1.0400000000000003,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:27",
+              "pos": [
+                -1.0800000000000003,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:28",
+              "pos": [
+                -1.1200000000000003,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:29",
+              "pos": [
+                -1.1600000000000004,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:30",
+              "pos": [
+                -1.2000000000000004,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:31",
+              "pos": [
+                -1.2400000000000004,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:32",
+              "pos": [
+                -1.2800000000000005,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:33",
+              "pos": [
+                -1.3200000000000005,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:34",
+              "pos": [
+                -1.3600000000000005,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:35",
+              "pos": [
+                -1.4000000000000006,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:36",
+              "pos": [
+                -1.4400000000000006,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:37",
+              "pos": [
+                -1.4800000000000006,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:38",
+              "pos": [
+                -1.5200000000000007,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:39",
+              "pos": [
+                -1.5600000000000007,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:40",
+              "pos": [
+                -1.6000000000000008,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:41",
+              "pos": [
+                -1.6400000000000008,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:42",
+              "pos": [
+                -1.6800000000000008,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:43",
+              "pos": [
+                -1.7200000000000009,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:44",
+              "pos": [
+                -1.760000000000001,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-view-and-stoking:limestone-charge:45",
+              "pos": [
+                -1.800000000000001,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:1",
+              "pos": [
+                -1.7608695652173922,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:2",
+              "pos": [
+                -1.7217391304347835,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:3",
+              "pos": [
+                -1.6826086956521749,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:4",
+              "pos": [
+                -1.6434782608695662,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:5",
+              "pos": [
+                -1.6043478260869575,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:6",
+              "pos": [
+                -1.5652173913043488,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:7",
+              "pos": [
+                -1.52608695652174,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:8",
+              "pos": [
+                -1.4869565217391314,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:9",
+              "pos": [
+                -1.4478260869565227,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:10",
+              "pos": [
+                -1.408695652173914,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:11",
+              "pos": [
+                -1.3695652173913053,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:12",
+              "pos": [
+                -1.3304347826086966,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:13",
+              "pos": [
+                -1.291304347826088,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:14",
+              "pos": [
+                -1.2521739130434792,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:15",
+              "pos": [
+                -1.2130434782608706,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:16",
+              "pos": [
+                -1.1739130434782619,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:17",
+              "pos": [
+                -1.1347826086956532,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:18",
+              "pos": [
+                -1.0956521739130445,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:19",
+              "pos": [
+                -1.0565217391304358,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:20",
+              "pos": [
+                -1.017391304347827,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:21",
+              "pos": [
+                -0.9782608695652184,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:22",
+              "pos": [
+                -0.9391304347826097,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:23",
+              "pos": [
+                -0.900000000000001,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:24",
+              "pos": [
+                -0.8608695652173923,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:25",
+              "pos": [
+                -0.8217391304347836,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:26",
+              "pos": [
+                -0.782608695652175,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:27",
+              "pos": [
+                -0.7434782608695663,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:28",
+              "pos": [
+                -0.7043478260869576,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:29",
+              "pos": [
+                -0.6652173913043489,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:30",
+              "pos": [
+                -0.6260869565217402,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:31",
+              "pos": [
+                -0.5869565217391315,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:32",
+              "pos": [
+                -0.5478260869565228,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:33",
+              "pos": [
+                -0.5086956521739141,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:34",
+              "pos": [
+                -0.4695652173913054,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:35",
+              "pos": [
+                -0.4304347826086967,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:36",
+              "pos": [
+                -0.39130434782608803,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:37",
+              "pos": [
+                -0.35217391304347934,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:38",
+              "pos": [
+                -0.31304347826087064,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:39",
+              "pos": [
+                -0.27391304347826195,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:40",
+              "pos": [
+                -0.23478260869565323,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:41",
+              "pos": [
+                -0.1956521739130445,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:42",
+              "pos": [
+                -0.1565217391304358,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:43",
+              "pos": [
+                -0.11739130434782707,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:44",
+              "pos": [
+                -0.07826086956521836,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:45",
+              "pos": [
+                -0.03913043478260964,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:limestone-charge:furnace-return:46",
+              "pos": [
+                -9.298117831235686e-16,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:1",
+              "pos": [
+                0.03979591836734603,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:2",
+              "pos": [
+                0.07959183673469299,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:3",
+              "pos": [
+                0.11938775510203994,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:4",
+              "pos": [
+                0.1591836734693869,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:5",
+              "pos": [
+                0.19897959183673386,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:6",
+              "pos": [
+                0.23877551020408083,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:7",
+              "pos": [
+                0.2785714285714278,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:8",
+              "pos": [
+                0.3183673469387748,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:9",
+              "pos": [
+                0.35816326530612175,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:10",
+              "pos": [
+                0.3979591836734687,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:11",
+              "pos": [
+                0.4377551020408157,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:12",
+              "pos": [
+                0.47755102040816266,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:13",
+              "pos": [
+                0.5173469387755096,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:14",
+              "pos": [
+                0.5571428571428566,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:15",
+              "pos": [
+                0.5969387755102036,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:16",
+              "pos": [
+                0.6367346938775506,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:17",
+              "pos": [
+                0.6765306122448975,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:18",
+              "pos": [
+                0.7163265306122445,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:19",
+              "pos": [
+                0.7561224489795915,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:20",
+              "pos": [
+                0.7959183673469384,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:21",
+              "pos": [
+                0.8357142857142854,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:22",
+              "pos": [
+                0.8755102040816324,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:23",
+              "pos": [
+                0.9153061224489794,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:24",
+              "pos": [
+                0.9551020408163263,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:25",
+              "pos": [
+                0.9948979591836733,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:26",
+              "pos": [
+                1.0346938775510202,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:27",
+              "pos": [
+                1.074489795918367,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:28",
+              "pos": [
+                1.1142857142857139,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:29",
+              "pos": [
+                1.1540816326530607,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:30",
+              "pos": [
+                1.1938775510204076,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:31",
+              "pos": [
+                1.2336734693877545,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:32",
+              "pos": [
+                1.2734693877551013,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:33",
+              "pos": [
+                1.3132653061224482,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:34",
+              "pos": [
+                1.353061224489795,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:35",
+              "pos": [
+                1.392857142857142,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:36",
+              "pos": [
+                1.4326530612244888,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:37",
+              "pos": [
+                1.4724489795918356,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:38",
+              "pos": [
+                1.5122448979591825,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:39",
+              "pos": [
+                1.5520408163265293,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:40",
+              "pos": [
+                1.5918367346938762,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:41",
+              "pos": [
+                1.631632653061223,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:42",
+              "pos": [
+                1.67142857142857,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:43",
+              "pos": [
+                1.7112244897959168,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:44",
+              "pos": [
+                1.7510204081632637,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:45",
+              "pos": [
+                1.7908163265306105,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:46",
+              "pos": [
+                1.8306122448979574,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:47",
+              "pos": [
+                1.8704081632653042,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:48",
+              "pos": [
+                1.910204081632651,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:furnace-return:slaking-front:49",
+              "pos": [
+                1.949999999999998,
+                0.02065,
+                1.9800000000000018
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:start",
+              "pos": [
+                1.95,
+                0,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": -0.02065,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:1",
+              "pos": [
+                1.910204081632653,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:2",
+              "pos": [
+                1.8704081632653062,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:3",
+              "pos": [
+                1.8306122448979594,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:4",
+              "pos": [
+                1.7908163265306125,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:5",
+              "pos": [
+                1.7510204081632657,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:6",
+              "pos": [
+                1.7112244897959188,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:7",
+              "pos": [
+                1.671428571428572,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:8",
+              "pos": [
+                1.631632653061225,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:9",
+              "pos": [
+                1.5918367346938782,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:10",
+              "pos": [
+                1.5520408163265313,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:11",
+              "pos": [
+                1.5122448979591845,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:12",
+              "pos": [
+                1.4724489795918376,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:13",
+              "pos": [
+                1.4326530612244908,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:14",
+              "pos": [
+                1.392857142857144,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:15",
+              "pos": [
+                1.353061224489797,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:16",
+              "pos": [
+                1.3132653061224502,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:17",
+              "pos": [
+                1.2734693877551033,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:18",
+              "pos": [
+                1.2336734693877565,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:19",
+              "pos": [
+                1.1938775510204096,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:20",
+              "pos": [
+                1.1540816326530627,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:21",
+              "pos": [
+                1.1142857142857159,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:22",
+              "pos": [
+                1.074489795918369,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:23",
+              "pos": [
+                1.0346938775510222,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:24",
+              "pos": [
+                0.9948979591836752,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:25",
+              "pos": [
+                0.9551020408163282,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:26",
+              "pos": [
+                0.9153061224489812,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:27",
+              "pos": [
+                0.8755102040816343,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:28",
+              "pos": [
+                0.8357142857142873,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:29",
+              "pos": [
+                0.7959183673469403,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:30",
+              "pos": [
+                0.7561224489795934,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:31",
+              "pos": [
+                0.7163265306122464,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:32",
+              "pos": [
+                0.6765306122448994,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:33",
+              "pos": [
+                0.6367346938775524,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:34",
+              "pos": [
+                0.5969387755102055,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:35",
+              "pos": [
+                0.5571428571428585,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:36",
+              "pos": [
+                0.5173469387755115,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:37",
+              "pos": [
+                0.4775510204081646,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:38",
+              "pos": [
+                0.4377551020408177,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:39",
+              "pos": [
+                0.3979591836734708,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:40",
+              "pos": [
+                0.35816326530612386,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:41",
+              "pos": [
+                0.31836734693877694,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:42",
+              "pos": [
+                0.27857142857143,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:43",
+              "pos": [
+                0.23877551020408308,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:44",
+              "pos": [
+                0.19897959183673614,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:45",
+              "pos": [
+                0.1591836734693892,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:46",
+              "pos": [
+                0.11938775510204225,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:47",
+              "pos": [
+                0.0795918367346953,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:48",
+              "pos": [
+                0.03979591836734837,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:slaking-front:furnace-return:49",
+              "pos": [
+                1.429412144204889e-15,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:1",
+              "pos": [
+                -0.0391304347826073,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:2",
+              "pos": [
+                -0.07826086956521602,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:3",
+              "pos": [
+                -0.11739130434782474,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:4",
+              "pos": [
+                -0.15652173913043346,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:5",
+              "pos": [
+                -0.19565217391304218,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:6",
+              "pos": [
+                -0.2347826086956509,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:7",
+              "pos": [
+                -0.2739130434782596,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:8",
+              "pos": [
+                -0.31304347826086837,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:9",
+              "pos": [
+                -0.3521739130434771,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:10",
+              "pos": [
+                -0.39130434782608586,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:11",
+              "pos": [
+                -0.4304347826086946,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:12",
+              "pos": [
+                -0.46956521739130336,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:13",
+              "pos": [
+                -0.5086956521739121,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:14",
+              "pos": [
+                -0.5478260869565208,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:15",
+              "pos": [
+                -0.5869565217391295,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:16",
+              "pos": [
+                -0.6260869565217382,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:17",
+              "pos": [
+                -0.6652173913043469,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:18",
+              "pos": [
+                -0.7043478260869556,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:19",
+              "pos": [
+                -0.7434782608695643,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:20",
+              "pos": [
+                -0.782608695652173,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:21",
+              "pos": [
+                -0.8217391304347816,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:22",
+              "pos": [
+                -0.8608695652173903,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:23",
+              "pos": [
+                -0.899999999999999,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:24",
+              "pos": [
+                -0.9391304347826077,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:25",
+              "pos": [
+                -0.9782608695652164,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:26",
+              "pos": [
+                -1.017391304347825,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:27",
+              "pos": [
+                -1.0565217391304338,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:28",
+              "pos": [
+                -1.0956521739130425,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:29",
+              "pos": [
+                -1.1347826086956512,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:30",
+              "pos": [
+                -1.1739130434782599,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:31",
+              "pos": [
+                -1.2130434782608686,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:32",
+              "pos": [
+                -1.2521739130434772,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:33",
+              "pos": [
+                -1.291304347826086,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:34",
+              "pos": [
+                -1.3304347826086946,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:35",
+              "pos": [
+                -1.3695652173913033,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:36",
+              "pos": [
+                -1.408695652173912,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:37",
+              "pos": [
+                -1.4478260869565207,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:38",
+              "pos": [
+                -1.4869565217391294,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:39",
+              "pos": [
+                -1.526086956521738,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:40",
+              "pos": [
+                -1.5652173913043468,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:41",
+              "pos": [
+                -1.6043478260869555,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:42",
+              "pos": [
+                -1.6434782608695642,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:43",
+              "pos": [
+                -1.6826086956521729,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:44",
+              "pos": [
+                -1.7217391304347816,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:45",
+              "pos": [
+                -1.7608695652173902,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-return:limestone-charge:46",
+              "pos": [
+                -1.799999999999999,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:1",
+              "pos": [
+                -1.759999999999999,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:2",
+              "pos": [
+                -1.7199999999999989,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:3",
+              "pos": [
+                -1.6799999999999988,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:4",
+              "pos": [
+                -1.6399999999999988,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:5",
+              "pos": [
+                -1.5999999999999988,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:6",
+              "pos": [
+                -1.5599999999999987,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:7",
+              "pos": [
+                -1.5199999999999987,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:8",
+              "pos": [
+                -1.4799999999999986,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:9",
+              "pos": [
+                -1.4399999999999986,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:10",
+              "pos": [
+                -1.3999999999999986,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:11",
+              "pos": [
+                -1.3599999999999985,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:12",
+              "pos": [
+                -1.3199999999999985,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:13",
+              "pos": [
+                -1.2799999999999985,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:14",
+              "pos": [
+                -1.2399999999999984,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:15",
+              "pos": [
+                -1.1999999999999984,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:16",
+              "pos": [
+                -1.1599999999999984,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:17",
+              "pos": [
+                -1.1199999999999983,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:18",
+              "pos": [
+                -1.0799999999999983,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:19",
+              "pos": [
+                -1.0399999999999983,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:20",
+              "pos": [
+                -0.9999999999999983,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:21",
+              "pos": [
+                -0.9599999999999984,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:22",
+              "pos": [
+                -0.9199999999999985,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:23",
+              "pos": [
+                -0.8799999999999986,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:24",
+              "pos": [
+                -0.8399999999999986,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:25",
+              "pos": [
+                -0.7999999999999987,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:26",
+              "pos": [
+                -0.7599999999999988,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:27",
+              "pos": [
+                -0.7199999999999989,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:28",
+              "pos": [
+                -0.6799999999999989,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:29",
+              "pos": [
+                -0.639999999999999,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:30",
+              "pos": [
+                -0.5999999999999991,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:31",
+              "pos": [
+                -0.5599999999999992,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:32",
+              "pos": [
+                -0.5199999999999992,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:33",
+              "pos": [
+                -0.47999999999999926,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:34",
+              "pos": [
+                -0.4399999999999993,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:35",
+              "pos": [
+                -0.3999999999999993,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:36",
+              "pos": [
+                -0.3599999999999993,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:37",
+              "pos": [
+                -0.31999999999999934,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:38",
+              "pos": [
+                -0.27999999999999936,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:39",
+              "pos": [
+                -0.23999999999999938,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:40",
+              "pos": [
+                -0.1999999999999994,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:41",
+              "pos": [
+                -0.15999999999999942,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:42",
+              "pos": [
+                -0.11999999999999944,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:43",
+              "pos": [
+                -0.07999999999999946,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:44",
+              "pos": [
+                -0.03999999999999949,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:limestone-charge:furnace-view-and-stoking:45",
+              "pos": [
+                4.85722573273506e-16,
+                0.02065,
+                1.98
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:1",
+              "pos": [
+                4.722302795714642e-16,
+                0.02065,
+                2.0194444444444444
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:2",
+              "pos": [
+                4.587379858694223e-16,
+                0.02065,
+                2.0588888888888888
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:3",
+              "pos": [
+                4.452456921673805e-16,
+                0.02065,
+                2.098333333333333
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:4",
+              "pos": [
+                4.317533984653387e-16,
+                0.02065,
+                2.1377777777777776
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:5",
+              "pos": [
+                4.182611047632969e-16,
+                0.02065,
+                2.177222222222222
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:6",
+              "pos": [
+                4.0476881106125505e-16,
+                0.02065,
+                2.2166666666666663
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:7",
+              "pos": [
+                3.9127651735921323e-16,
+                0.02065,
+                2.2561111111111107
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:8",
+              "pos": [
+                3.777842236571714e-16,
+                0.02065,
+                2.295555555555555
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:9",
+              "pos": [
+                3.642919299551296e-16,
+                0.02065,
+                2.3349999999999995
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:10",
+              "pos": [
+                3.5079963625308777e-16,
+                0.02065,
+                2.374444444444444
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:11",
+              "pos": [
+                3.3730734255104594e-16,
+                0.02065,
+                2.4138888888888883
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:12",
+              "pos": [
+                3.238150488490041e-16,
+                0.02065,
+                2.4533333333333327
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:13",
+              "pos": [
+                3.103227551469623e-16,
+                0.02065,
+                2.492777777777777
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:14",
+              "pos": [
+                2.968304614449205e-16,
+                0.02065,
+                2.5322222222222215
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:15",
+              "pos": [
+                2.8333816774287866e-16,
+                0.02065,
+                2.571666666666666
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:16",
+              "pos": [
+                2.6984587404083683e-16,
+                0.02065,
+                2.6111111111111103
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:17",
+              "pos": [
+                2.56353580338795e-16,
+                0.02065,
+                2.6505555555555547
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:18",
+              "pos": [
+                2.428612866367532e-16,
+                0.02065,
+                2.689999999999999
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:19",
+              "pos": [
+                2.2936899293471137e-16,
+                0.02065,
+                2.7294444444444435
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:20",
+              "pos": [
+                2.1587669923266955e-16,
+                0.02065,
+                2.768888888888888
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:21",
+              "pos": [
+                2.0238440553062772e-16,
+                0.02065,
+                2.8083333333333322
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:22",
+              "pos": [
+                1.888921118285859e-16,
+                0.02065,
+                2.8477777777777766
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:23",
+              "pos": [
+                1.7539981812654408e-16,
+                0.02065,
+                2.887222222222221
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:24",
+              "pos": [
+                1.6190752442450226e-16,
+                0.02065,
+                2.9266666666666654
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:25",
+              "pos": [
+                1.4841523072246044e-16,
+                0.02065,
+                2.96611111111111
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:26",
+              "pos": [
+                1.3492293702041861e-16,
+                0.02065,
+                3.005555555555554
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:27",
+              "pos": [
+                1.214306433183768e-16,
+                0.02065,
+                3.0449999999999986
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:28",
+              "pos": [
+                1.0793834961633496e-16,
+                0.02065,
+                3.084444444444443
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:29",
+              "pos": [
+                9.444605591429312e-17,
+                0.02065,
+                3.1238888888888874
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:30",
+              "pos": [
+                8.095376221225129e-17,
+                0.02065,
+                3.1633333333333318
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:31",
+              "pos": [
+                6.746146851020946e-17,
+                0.02065,
+                3.202777777777776
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:32",
+              "pos": [
+                5.396917480816762e-17,
+                0.02065,
+                3.2422222222222206
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:33",
+              "pos": [
+                4.0476881106125786e-17,
+                0.02065,
+                3.281666666666665
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:34",
+              "pos": [
+                2.6984587404083952e-17,
+                0.02065,
+                3.3211111111111093
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:35",
+              "pos": [
+                1.349229370204212e-17,
+                0.02065,
+                3.3605555555555537
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:furnace-view-and-stoking:public-approach:36",
+              "pos": [
+                2.865783757248207e-31,
+                0.02065,
+                3.399999999999998
+              ],
+              "ground": 0.02065,
+              "gap": 0,
+              "pass": true
+            }
+          ]
+        },
+        "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+        "limitations": [
+          "Not an enterable-room certification.",
+          "Only supplied neighbors and declared flat terrain checked."
+        ],
+        "proofFrameY": 0,
+        "terrainBinding": {
+          "declaredTerrainY": 0,
+          "effectiveHostLocalY": 0.02065,
+          "hostElevation": -0.02065,
+          "worldHeight": 0
+        }
+      }
+    }
+  ],
+  "geometryReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/kiln-geometry.json",
+        "sha256": "69c0a4e1da85137cca56dcf4d275469a15f3dbf3441b6b751985735a53668bb8"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/kiln-geometry.json",
+      "sha256": "69c0a4e1da85137cca56dcf4d275469a15f3dbf3441b6b751985735a53668bb8"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/final-kiln-belltower.md",
+        "sha256": "4db6e74ec4b1a2d75c9d14e40b74e82f20314b973d9acbdab5533b35119bf315"
+      },
+      {
+        "file": "reviews/nx-town-kiln-assembly-final/front.png",
+        "sha256": "fba3e85316aa68432b0c98ded9a9e8f798a5e26047ea04f275bc398e7a427877"
+      },
+      {
+        "file": "reviews/nx-town-kiln-assembly-final/aerial.png",
+        "sha256": "4346530345e01d05b3ffd9d729c479e37e9b8601ab5f4117738f6160e036352e"
+      },
+      {
+        "file": "reviews/nx-town-kiln-assembly-final/interior.png",
+        "sha256": "0e40d8a73c270698f5f965ea4f425748181b5cbb8db115976a47516527001e1f"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "neighbors": [
+    {
+      "id": "nx-approach-ne-lane-002",
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+      "lib": "store/dc52264c04cfe5bb.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "sha256": "29e932d59cc9f57bb3665b1dfb543b1f17c4ec5e570948d92043cbc5d9e48c57",
+      "lib": "store/1ad2a6139373b973.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "sha256": "c9ca1b859b0532ed7f34e960561e77827106b3bcb83090ef8499096499248826",
+      "lib": "store/1d9a1c2d95f785b6.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-gallery-mosaic-0036",
+      "sha256": "0b2ce427e13c211bf6e78021fc6539192954d7ef47ac623edc97ba3af04d9e64",
+      "lib": "store/1655ae806c3b8fe3.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "sha256": "9e44d6b26951681737d412dbeded2b11dd2f64bc44b719e4bd1db3a28f3ff3fc",
+      "lib": "store/ecbad90311fc9bff.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-tower",
+      "sha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+      "lib": "store/a989bdc3cad37b39.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-kiln-l",
+      "sha256": null,
+      "lib": null,
+      "decoded": false
+    },
+    {
+      "id": "nx-town-longhouse",
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+      "lib": "store/e38bb2a4c7933698.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "decoded": true
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "tower-local-repair-handoff-v2",
+  "status": "LOCAL_GEOMETRY_PASS_PARENT_ADAPTER_HOLD",
+  "id": "nx-tower",
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "baselineSha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+  "sources": [
+    {
+      "file": "build-tower.ts",
+      "sha256": "91943734811f405121ff657f12115209691339bbeca6f5e1f7072fdc52b36d34"
+    },
+    {
+      "file": "build-belltower.ts",
+      "sha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "build/nx-towers-repair.test.ts",
+      "sha256": "aeb3d864b5fe2d1e91653c4e84d51f9482c6cbeb33f17b291c2be31b22d9017e"
+    }
+  ],
+  "model": {
+    "file": "build/nx-tower.glb",
+    "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b"
+  },
+  "spawnContract": {
+    "file": "build/nx-tower.spawn-contract.json",
+    "sha256": "5ef3e508a8104a6af1503fa1a0c117c7c8e46abb8a126e822d59249c59fe5e31"
+  },
+  "decodedReport": {
+    "file": "build/nx-tower.decoded.json",
+    "sha256": "89155856a74b65d979109ff6708bbb030dffcb24a6363c2310c387176987171f"
+  },
+  "determinismReport": {
+    "file": "build/nx-tower.determinism.json",
+    "sha256": "1c5bf8d645bc1e12aa041c8748ba8c4623d2821575bb76a1c4203dd7da06d857"
+  },
+  "routes": [
+    {
+      "name": "route",
+      "contract": {
+        "file": "build/nx-tower.route.json",
+        "sha256": "6fbe952600b98319aa822318baea15fd33ae14624b0aa5794c0e4ef1c5f19e27"
+      },
+      "report": {
+        "file": "build/nx-tower.route.report.json",
+        "sha256": "54099a92edb9ddb029cb0d3e9d665798c10fbb1148edb88b457fed78e4f87601"
+      },
+      "status": "PASS",
+      "walkLegs": 12,
+      "passingLegs": 12,
+      "parentSupportReplay": {
+        "file": "build/nx-tower.route.parent-support.json",
+        "sha256": "04e7cce6578f01813cd2afab3923e6daa89f9e3885eec4916cf181fd971da29b"
+      },
+      "parentSupportStatus": "FAIL"
+    },
+    {
+      "name": "upper-route",
+      "contract": {
+        "file": "build/nx-tower.upper-route.json",
+        "sha256": "c7c84ca12bc4125a0f3cb48e3093751a75490789ee8852569c3c257906fb95ef"
+      },
+      "report": {
+        "file": "build/nx-tower.upper-route.report.json",
+        "sha256": "be9c80fac41d2a69fd204ce122743a2a072cc5f9413c297def42d96a6805f1f2"
+      },
+      "status": "PASS",
+      "walkLegs": 16,
+      "passingLegs": 16,
+      "parentSupportReplay": {
+        "file": "build/nx-tower.upper-route.parent-support.json",
+        "sha256": "dfb3aec23a063c62aa143c65ffa7af1d3ba87aa039a5ca644f27b7cc7592b41d"
+      },
+      "parentSupportStatus": "PASS"
+    }
+  ],
+  "neighborCount": 11,
+  "renders": [
+    {
+      "manifest": {
+        "file": "reviews/nx-tower-final/render-manifest.json",
+        "sha256": "20ac55be9442c47bb118c81ddbfb425c82536723f775b2bab978309d92194a6e"
+      },
+      "frames": 9,
+      "cameraSha256": "1612f43fbf2589a3d3554a1115df918101f897cf1d6b2cb58e7ce96e04e1421d",
+      "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b"
+    }
+  ],
+  "refreshedRenderFrames": 9,
+  "visualMode": "vision_analyze auxiliary textual image analyses, not native",
+  "nativeReview": {
+    "status": "PARENT_REPORTED_DESIGN_ACCEPTED",
+    "source": "Latest direct parent steering: native parent already accepts repaired belltower and scholar design.",
+    "limits": "Worker performed auxiliary analysis only; parent must bind final exact bytes to its native record."
+  },
+  "notes": {
+    "file": "towers-notes.md",
+    "sha256": "546316083bb3d630719ce0a9a836d8c705ff5ab320fa2f0765c2c0b09a946996"
+  },
+  "testRun": {
+    "file": "build/nx-towers-tdd-final.json",
+    "sha256": "92c0a88181b40c6e814031b0d89bb309e5c959e0a05b845f6335996debf18128"
+  },
+  "worldMutations": 0,
+  "limits": [
+    "No live controller climb, socket interaction, served-after-upload proof or live terrain survey.",
+    "No road, engine, approval or parent adapter edits.",
+    "Parent reports encoded proof-frame integration passed 10 tests. Current separate probeApproach replay still aliases yaw after cloning; preserve pure-Y scalar representation. Fresh live-context preflight is parent-owned."
+  ],
+  "proofFrameY": -1.5707963267948966,
+  "coordinateFrames": {
+    "doors": "proof-frame",
+    "waypoints": "host-local",
+    "protectedVolumes": "host-local",
+    "assembly": "world-tuples"
+  },
+  "physicalSupport": {
+    "file": "build/nx-tower.route.physical-support.json",
+    "sha256": "fcc78bd85caab27a57ba23253c69414a5d07ff5a2f6dd73dfaed2b7a13c9129f"
+  },
+  "parentCloneDiagnostic": {
+    "file": "build/nx-tower.parent-yaw-clone-diagnostic.json",
+    "sha256": "194e8439c9ab874918430597e784b416eebd63397969f02a63c3d0d2491696dc"
+  },
+  "socketReport": {
+    "file": "build/nx-tower.socket.report.json",
+    "sha256": "f113c275ff2a0670f5f7175c87677991d0e323cc8f571f053a9b114c71119efb"
+  }
+}

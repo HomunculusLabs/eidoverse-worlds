@@ -1,0 +1,24 @@
+{
+  "id": "nx-town-dyehouse",
+  "modelSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+  "status": "PASS",
+  "basis": "parent deterministic double rebuild + actual public-runtime routes/protection tests; independent native ensemble visual acceptance; preflight must rerun every route on actual supplied neighborhood",
+  "evidence": [
+    {
+      "file": "build/nx-town-dyehouse-approach.json",
+      "sha256": "cb0129453152c8e59528c550a435a62a848e292caeca25aa9d90f7c2236e4176"
+    },
+    {
+      "file": "dyehouse-market-notes.md",
+      "sha256": "710e6fcee7a6bd4d0ab81fdd15824b3e16607b30fdd262d33ca736bafa746ec7"
+    },
+    {
+      "file": "reviews/parent-dyehouse-collision-choice.json",
+      "sha256": "b09d6810f729f0df7045b5992fa725bd463afd5fd1ae4185618ac4451a0d45eb"
+    }
+  ],
+  "limits": [
+    "Constrained host envelope and measured supplied geometry, not a whole-world solid-intersection certificate."
+  ],
+  "collisionDecision": "Keep original automatic collision. Parent measured both automatic and exact service approaches PASS, including independent physical support; no preference amendment is necessary."
+}

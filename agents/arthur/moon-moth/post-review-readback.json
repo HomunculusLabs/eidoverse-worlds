@@ -1,0 +1,112 @@
+{
+  "verdict": "READ_ONLY_VERIFIED",
+  "at": "2026-09-08T01:50:05.736Z",
+  "target": "nx-moonmoth-001",
+  "plannedVerbs": 0,
+  "uploads": 0,
+  "verbs": 0,
+  "entity": {
+    "lib": "store/df959099a243ef27.glb",
+    "pos": [
+      -90,
+      0.0008015504140560737,
+      13
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "collide": "exact",
+    "actor": "arthur-moonmoth-builder",
+    "ts": 1788830285765,
+    "comp": {
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      },
+      "motion:moon_wing_left": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 3.141592653589793,
+        "damp": 0,
+        "t0": 0
+      },
+      "motion:moon_wing_right": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 0,
+        "damp": 0,
+        "t0": 0
+      },
+      "lock": true
+    }
+  },
+  "behavior": {
+    "src": "store/scripts/4adcd4929578e650.js",
+    "attach": "nx-moonmoth-001",
+    "caps": {
+      "verbs": [
+        "motion"
+      ],
+      "selfOnly": true
+    },
+    "knobs": {
+      "perch": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "groundY": 0.0008015504140560737,
+      "yaw": 1.5707963267948966
+    },
+    "author": "arthur-moonmoth-builder",
+    "ts": 1788830289570,
+    "state": {
+      "flight": {
+        "phase": "rest",
+        "startedAt": 1788830983879,
+        "outcome": "returned"
+      }
+    }
+  },
+  "debug": {
+    "type": "debug",
+    "reqId": "moon-debug-1",
+    "behavior": "nx-moonmoth-001-flight",
+    "status": "running",
+    "events": [
+      {
+        "ts": 1788830295504,
+        "kind": "script-log",
+        "line": "▶ loaded store/scripts/4adcd4929578e650.js on nx-moonmoth-001 (1 timer(s))"
+      }
+    ]
+  }
+}

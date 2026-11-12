@@ -1,0 +1,52 @@
+{
+  "id": "nx-tower",
+  "status": "PASS",
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "kind": "walk-in",
+  "basis": "Current parent applyProofFrame + verifyPlayerMesh and independently fresh applyProofFrame + parent probeApproach physical-support replay; unchanged saved route metadata and heights.",
+  "proofEngine": {
+    "file": "reviews/parent-scholar-draft/proof-engine-pins.json",
+    "sha256": "cc2a2cf151ea6ecce3d5c2368eee2a3f9fd0764706b72280c78f82f25848aadb"
+  },
+  "runtime": {
+    "file": "reviews/parent-scholar-draft/runtime-check.json",
+    "sha256": "2799e2b9c0de40fbce2476658a8312bb9ff59e0094ce921296a5c6489a6b58b0"
+  },
+  "neighbors": {
+    "file": "reviews/parent-scholar-draft/neighbors.json",
+    "sha256": "93a74a7a0e093aa7bfe8b7ca1c83940487944efd2b47eb807583d60616e70a9c"
+  },
+  "routes": [
+    {
+      "file": "build/nx-tower.route.json",
+      "sha256": "6fbe952600b98319aa822318baea15fd33ae14624b0aa5794c0e4ef1c5f19e27",
+      "mode": "room",
+      "proof": {
+        "file": "reviews/parent-scholar-draft/ground-route-proof.json",
+        "sha256": "d429e547a744d800a9872ab1a2c6d074806e030844675fb7771a6c652cd19edd"
+      },
+      "status": "PASS",
+      "physicalSupportStatus": "PASS"
+    },
+    {
+      "file": "build/nx-tower.upper-route.json",
+      "sha256": "c7c84ca12bc4125a0f3cb48e3093751a75490789ee8852569c3c257906fb95ef",
+      "mode": "room",
+      "proof": {
+        "file": "reviews/parent-scholar-draft/upper-route-proof.json",
+        "sha256": "325ca3600386363a1d2c3184afbc58b4b2a8632044f7c63cc1c1bf3abab94ba0"
+      },
+      "status": "PASS",
+      "physicalSupportStatus": "PASS"
+    }
+  ],
+  "socket": {
+    "file": "reviews/parent-scholar-draft/socket-proof.json",
+    "sha256": "24bc4c2b88a86dc6ab454c25fccc4e51efe89b19c697490e442021dfc089f2ec"
+  },
+  "limits": [
+    "Frozen supplied neighbor contract only; not current live/served-after-upload preflight.",
+    "Ground route certifies exterior-to-ground-room access. Upper route separately certifies upstairs circulation, lookout and socket support; no ladder comp exists, no controller climb or ground-to-upper access claim.",
+    "No raised terrain/waypoints, neighbor omissions, collision amendments, roads, or source edits."
+  ]
+}

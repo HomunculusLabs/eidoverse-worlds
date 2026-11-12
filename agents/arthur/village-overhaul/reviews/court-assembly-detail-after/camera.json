@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "coordinateFrame": "unchanged-model-local",
+  "width": 960,
+  "height": 720,
+  "near": 0.05,
+  "far": 200,
+  "groundY": -0.20000000298023224,
+  "referenceBounds": {
+    "min": [
+      -6.5,
+      -0.20000000298023224,
+      -2.940000057220459
+    ],
+    "max": [
+      6.5,
+      4.168531894683838,
+      3
+    ]
+  },
+  "lighting": {
+    "day": {
+      "background": 13358815,
+      "hemi": 2,
+      "ambient": 0.45,
+      "sun": 3.2
+    },
+    "night": {
+      "background": 1120295,
+      "hemi": 0.18,
+      "ambient": 0.04,
+      "sun": 0.15
+    },
+    "sunPosition": [
+      8,
+      12,
+      6
+    ]
+  },
+  "views": {
+    "front": {
+      "eye": [
+        -3.35,
+        1.8,
+        3.9
+      ],
+      "target": [
+        -3.8,
+        1.2,
+        -0.8
+      ],
+      "fov": 68,
+      "night": false
+    },
+    "right": {
+      "eye": [
+        3.4,
+        1.8,
+        3.9
+      ],
+      "target": [
+        4.2,
+        1.1,
+        -0.8
+      ],
+      "fov": 68,
+      "night": false
+    },
+    "back": {
+      "eye": [
+        0,
+        3.8,
+        -7.5
+      ],
+      "target": [
+        0,
+        2.8,
+        0
+      ],
+      "fov": 85,
+      "night": false
+    },
+    "left": {
+      "eye": [
+        -7,
+        3.3,
+        -3.7
+      ],
+      "target": [
+        -4.9,
+        2.5,
+        -0.8
+      ],
+      "fov": 55,
+      "night": false
+    },
+    "gameplay": {
+      "eye": [
+        0,
+        1.8,
+        3
+      ],
+      "target": [
+        0,
+        1.2,
+        -1.6
+      ],
+      "fov": 65,
+      "night": false
+    },
+    "aerial": {
+      "eye": [
+        1.2,
+        6.8,
+        5
+      ],
+      "target": [
+        -0.6,
+        3.1,
+        0
+      ],
+      "fov": 75,
+      "night": false
+    },
+    "top": {
+      "eye": [
+        -4.9,
+        6,
+        -0.799
+      ],
+      "target": [
+        -4.9,
+        2.8,
+        -0.8
+      ],
+      "fov": 50,
+      "night": false
+    },
+    "night": {
+      "eye": [
+        -3.35,
+        1.8,
+        3.9
+      ],
+      "target": [
+        -3.8,
+        1.2,
+        -0.8
+      ],
+      "fov": 68,
+      "night": true
+    },
+    "interior": {
+      "eye": [
+        3.4,
+        1.8,
+        0.6
+      ],
+      "target": [
+        4.9,
+        1.1,
+        -0.6
+      ],
+      "fov": 75,
+      "night": false
+    }
+  }
+}

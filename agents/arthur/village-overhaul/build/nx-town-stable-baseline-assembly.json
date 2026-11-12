@@ -1,0 +1,37 @@
+{
+  "id": "nx-town-stable",
+  "revision": "baseline",
+  "hostFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-town-stable.glb",
+  "hostSha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+  "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-stable-baseline-assembly.glb",
+  "sha256": "0d423317ac38f7f2dd9a610f07b7cdb244cb9d0bcfb4ae7c103bc3f6a30d1514",
+  "assembly": [
+    {
+      "id": "nx-artwalk-b8-stable-harmonic-rein",
+      "lib": "store/cba8d0efb0518938.glb",
+      "pos": [
+        45.16,
+        2.22,
+        -1.3226185430791415e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b8-stable-harmonic-rein.glb",
+      "sha256": "c4595b001a6145d78f552205d66918c3d8750884c25d6fa10596dfb6030fbc8f"
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "lib": "store/afee37dd9a5b5d67.glb",
+      "pos": [
+        40.9,
+        0,
+        1.285879139104721e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-stable-001.glb",
+      "sha256": "d470868b35865794630da8427221cb63776e2523aed56c6d934464843689bc56"
+    }
+  ],
+  "evidenceKind": "local-exact-source-byte-assembly-no-world-lights-not-upload-target"
+}

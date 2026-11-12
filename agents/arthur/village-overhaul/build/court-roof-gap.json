@@ -1,0 +1,9 @@
+{
+  "sha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+  "bakehouseMaxX": -0.834999999701977,
+  "workhallMinX": 0.3299999997019767,
+  "conservativeGapMetres": 1.1649999994039537,
+  "pass": true,
+  "method": "Positive separation of all premerge roof-part AABBs proves no wing-roof collision; does not certify a roof walking route.",
+  "lowOvenJunction": "Modeled sloped cheek closes bakehouse/low oven-roof junction."
+}

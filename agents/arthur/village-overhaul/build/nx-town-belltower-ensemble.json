@@ -1,0 +1,33 @@
+{
+  "purpose": "offline review-only composition; not deployment bytes",
+  "hostSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+  "sha256": "283c40d35a162c04b037a0e26db56f6472833f71a7b50625103f5baa8b4bbfb5",
+  "neighbors": [
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "lib": "store/48aed5dabcb16a45.glb",
+      "pos": [
+        5.269634200735408,
+        0.65,
+        6.330294372515229
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b5-belltower-rings.glb",
+      "sha256": "6c81c3877cf2f4cb5678216cd41abcf333764bbe810dcba8fe9ed281fe6c4369",
+      "hostLocalBounds": {
+        "min": [
+          0.43254357576370206,
+          0.650000021457673,
+          0.9524999985098835
+        ],
+        "max": [
+          1.0774564445018764,
+          2.0699999570846557,
+          1.0920780503749845
+        ]
+      },
+      "protected": true
+    }
+  ]
+}

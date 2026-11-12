@@ -1,0 +1,119 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-11fe39c9-3ab",
+    "view": "first",
+    "startedAt": "2026-09-08T02:08:18.900Z"
+  },
+  "completedAt": "2026-09-08T02:08:19.109Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "7edc6f54b5dc68d40fb7b38628bfebc0c20adb18c5d5a01509e365435f2a7e8b",
+  "bytes": 62920,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-kiln",
+  "view": "approach",
+  "bodyPose": {
+    "p": [
+      11.840314258971876,
+      -0.02065,
+      16.824750727675386
+    ],
+    "yaw": 0.9170192251095342,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    2,
+    0,
+    9
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-kiln",
+    "lib": "store/4d8ef8fc0b0955de.glb",
+    "kind": "thing",
+    "pos": [
+      19.158717425740413,
+      -0.02065,
+      22.431975985200914
+    ],
+    "yaw": -2.443242374354201,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.228,
+        -0.029,
+        -1.3
+      ],
+      "max": [
+        2.65,
+        3.006,
+        1.708
+      ],
+      "size": [
+        4.878,
+        3.034,
+        3.008
+      ],
+      "center": [
+        0.211,
+        1.488,
+        0.204
+      ]
+    },
+    "tris": 476
+  },
+  "targetAfter": {
+    "id": "nx-town-kiln",
+    "lib": "store/4d8ef8fc0b0955de.glb",
+    "kind": "thing",
+    "pos": [
+      19.158717425740413,
+      -0.02065,
+      22.431975985200914
+    ],
+    "yaw": -2.443242374354201,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.228,
+        -0.029,
+        -1.3
+      ],
+      "max": [
+        2.65,
+        3.006,
+        1.708
+      ],
+      "size": [
+        4.878,
+        3.034,
+        3.008
+      ],
+      "center": [
+        0.211,
+        1.488,
+        0.204
+      ]
+    },
+    "tris": 476
+  },
+  "beforeObservedAt": "2026-09-08T02:08:15.896Z",
+  "afterObservedAt": "2026-09-08T02:08:20.728Z",
+  "protectedBeforeSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "protectedAfterSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "file": "nx-town-kiln-approach.png"
+}

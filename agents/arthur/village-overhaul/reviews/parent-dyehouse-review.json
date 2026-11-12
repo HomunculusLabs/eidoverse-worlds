@@ -1,0 +1,114 @@
+{
+  "schema": "village-review-v1",
+  "id": "nx-town-dyehouse",
+  "modelSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+  "kind": "workstation",
+  "sources": [
+    {
+      "file": "build-dyehouse.ts",
+      "sha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "../cabin-overhaul/verify-player.ts",
+      "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+    },
+    {
+      "file": "../../../tools/core-stub.mjs",
+      "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.module.js",
+      "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.core.js",
+      "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+    },
+    {
+      "file": "verify-approach.ts",
+      "sha256": "abda1150a2bb52a5f0a1defd892fa1c36855fcb89e645f3a65785c68dcbfda79"
+    },
+    {
+      "file": "before/nx-town-dyehouse.glb",
+      "sha256": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-dyehouse-approach-contract.json",
+      "sha256": "b051f08e3658df5d9b85890563df3b7060b68f5dc374e8a4fa18ff0480869cb2",
+      "mode": "workstation"
+    }
+  ],
+  "visual": {
+    "verdict": "accepted",
+    "reviewer": "parent adjudication of independent native GPT-6-Astra source-bound ensemble review, not Bill approval",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-C/review.md",
+        "sha256": "089b1fc1b3a1b02a5ae4a047a0724fd896b61a8aae748aed04853d50f72c3e50"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-front.png",
+        "sha256": "5f1085b16f44c1bb4c393406c7de841e806e9dfb3523276c4293da3e337ff6e4"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-aerial.png",
+        "sha256": "8a04972b2230942ee0e15230a68d91a68f370c8691d040460ba4483d2acb9523"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-interior.png",
+        "sha256": "b88342ce4a3fed5e09024083cdff4e301c49362d8f464bca672c83fd3bf0ea1e"
+      },
+      {
+        "file": "reviews/nx-town-dyehouse-ensemble-after/render-manifest.json",
+        "sha256": "4249a23e081c3ecb698b3c96d1a03e8175787164321af71d7828c38ed263dd85"
+      },
+      {
+        "file": "reviews/nx-town-dyehouse-ensemble-after/render-manifest.json",
+        "sha256": "4249a23e081c3ecb698b3c96d1a03e8175787164321af71d7828c38ed263dd85"
+      },
+      {
+        "file": "reviews/nx-town-dyehouse-ensemble-after/render-manifest.json",
+        "sha256": "4249a23e081c3ecb698b3c96d1a03e8175787164321af71d7828c38ed263dd85"
+      }
+    ]
+  },
+  "geometry": {
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-dyehouse-geometry.json",
+      "sha256": "1dce23c42e8d5bf73b5cad0e79781817378d732eca32932543c7673104a4b111"
+    }
+  },
+  "functional": {
+    "verdict": "passed",
+    "kind": "workstation",
+    "evidence": {
+      "file": "reviews/parent-dyehouse-collision-choice.json",
+      "sha256": "b09d6810f729f0df7045b5992fa725bd463afd5fd1ae4185618ac4451a0d45eb"
+    }
+  },
+  "deterministic": {
+    "sha256": [
+      "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+      "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275"
+    ],
+    "evidence": {
+      "file": "build/nx-town-dyehouse-determinism.json",
+      "sha256": "46c2d680a256df649269d8252d178e82808d82cc92dce24180a3a12a4dcf011a"
+    }
+  }
+}

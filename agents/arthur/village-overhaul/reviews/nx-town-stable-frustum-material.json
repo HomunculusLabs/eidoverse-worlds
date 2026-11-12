@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "id": "nx-town-stable",
+  "sha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "cameraSha256": "cef1fabbdbc3a09c1a0aeb3444483b284df31ac1324790017448594febb7f5b9",
+  "coverage": [
+    {
+      "view": "front",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.6111088000942845,
+          -0.3925396504316676,
+          0.9899436213150333
+        ],
+        "max": [
+          0.6111088000942845,
+          0.9659917006189276,
+          0.9938713937540742
+        ]
+      }
+    },
+    {
+      "view": "right",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.5526097810441104,
+          -0.4225613414192123,
+          0.9896141704154245
+        ],
+        "max": [
+          0.5101013266034061,
+          0.805186599037918,
+          0.9939171107067943
+        ]
+      }
+    },
+    {
+      "view": "back",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.5986601415572939,
+          -0.3925459136084461,
+          0.9901612487399897
+        ],
+        "max": [
+          0.5986601415572939,
+          0.9500774207590357,
+          0.9938713817429501
+        ]
+      }
+    },
+    {
+      "view": "left",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.5101013266034061,
+          -0.4225613414192123,
+          0.9896141704154245
+        ],
+        "max": [
+          0.5526097810441104,
+          0.805186599037918,
+          0.9939171107067943
+        ]
+      }
+    },
+    {
+      "view": "gameplay",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.3812959006404601,
+          -0.23317124911619522,
+          0.9939803057700961
+        ],
+        "max": [
+          0.3812959006404601,
+          0.6238111071183126,
+          0.9956666394601168
+        ]
+      }
+    },
+    {
+      "view": "aerial",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.7113600739267656,
+          -0.8299447042228758,
+          0.9868963047890412
+        ],
+        "max": [
+          0.7254778869269466,
+          0.9480884291458459,
+          0.9940192790326496
+        ]
+      }
+    },
+    {
+      "view": "top",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.6206681699098928,
+          -0.8649403418031363,
+          0.9876760364495935
+        ],
+        "max": [
+          0.6206681699098928,
+          0.7983125376802708,
+          0.9927463634261687
+        ]
+      }
+    },
+    {
+      "view": "night",
+      "vertices": 13296,
+      "outside": 0,
+      "ranges": {
+        "min": [
+          -0.3812959006404601,
+          -0.23317124911619522,
+          0.9939803057700961
+        ],
+        "max": [
+          0.3812959006404601,
+          0.6238111071183126,
+          0.9956666394601168
+        ]
+      }
+    }
+  ],
+  "explicitMaterialPrimitives": 37,
+  "omittedMaterialPrimitives": 0,
+  "materialNames": [
+    "cabin-stone",
+    "cabin-cedar",
+    "cabin-timber",
+    "stable-saddle-leather",
+    "stable-dry-hay",
+    "cabin-iron",
+    "stable-trough-water",
+    "cabin-lime",
+    "cabin-amber",
+    "cabin-glass",
+    "cabin-slate",
+    "cabin-slate-alt"
+  ],
+  "limitations": [
+    "Model-local exact geometry and captured projection matrices only, no live-world camera claim.",
+    "Interior/detail cameras intentionally crop the shell and are explicitly excluded from full-exterior coverage."
+  ]
+}

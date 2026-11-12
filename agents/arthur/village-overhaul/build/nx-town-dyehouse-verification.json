@@ -1,0 +1,1065 @@
+{
+  "status": "PASS_NON_ROOM",
+  "existingPathBlocker": false,
+  "id": "nx-town-dyehouse",
+  "approach": {
+    "status": "PASS",
+    "walks": 10,
+    "neighborIds": [
+      "nx-gallery-mosaic-0059",
+      "nx-town-roads",
+      "nx-artwalk-b9-dyehouse-crossing-loom",
+      "nx-sign-dyer-001",
+      "nx-approach-sw-lane-003",
+      "nx-town-row-cottage"
+    ]
+  },
+  "fixedLight": {
+    "contract": {
+      "geom": {
+        "id": "nx-town-dyehouse-l",
+        "lib": null,
+        "kind": "light",
+        "pos": [
+          -23.625,
+          1.62,
+          -21.971
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "parent": null,
+        "comp": {}
+      },
+      "folded": {
+        "kind": "light",
+        "pos": [
+          -23.625,
+          1.62,
+          -21.971
+        ],
+        "color": 16756838,
+        "intensity": 1.35,
+        "range": 4.5,
+        "actor": "arthur-interior-17-place",
+        "ts": 1788200560597
+      }
+    },
+    "hostLocal": [
+      -1.199696369211924,
+      1.62,
+      0.10096841931874645
+    ],
+    "min": [
+      -1.234696369211924,
+      1.5850000000000002,
+      0.06596841931874645
+    ],
+    "max": [
+      -1.164696369211924,
+      1.655,
+      0.13596841931874645
+    ],
+    "triangles": 0,
+    "nodes": []
+  },
+  "modelSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+  "baselineSha256": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6",
+  "bytes": 278100,
+  "nodes": 23,
+  "meshes": 20,
+  "triangles": 5004,
+  "sourceSha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63",
+  "hostContract": {
+    "id": "nx-town-dyehouse",
+    "lib": "store/888be3597d2f772f.glb",
+    "kind": "thing",
+    "pos": [
+      -23,
+      0,
+      -23
+    ],
+    "yaw": 0.941,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.5,
+        0,
+        -1.046
+      ],
+      "max": [
+        1.775,
+        2.141,
+        1.146
+      ],
+      "size": [
+        3.275,
+        2.141,
+        2.191
+      ],
+      "center": [
+        0.138,
+        1.071,
+        0.05
+      ]
+    },
+    "tris": 788
+  },
+  "componentsPreserved": {},
+  "baselineCollider": {
+    "exact": false,
+    "pillar": false
+  },
+  "defaultCandidateCollider": {
+    "exact": false,
+    "pillar": true
+  },
+  "requiredPlacementOverride": {
+    "collide": "exact",
+    "previous": null,
+    "authority": "parent explicit scoped user-facing collision approval"
+  },
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": false,
+      "floorShaped": false,
+      "uneven": false
+    },
+    "bounds": {
+      "min": [
+        -1.5,
+        8.940696516468449e-10,
+        -1.0456808805465698
+      ],
+      "max": [
+        1.7750358581542969,
+        3.1105000972747803,
+        1.1456724405288696
+      ]
+    }
+  },
+  "baselineBounds": {
+    "min": [
+      -1.5,
+      -2.9802322831784522e-9,
+      -1.0456808805465698
+    ],
+    "max": [
+      1.7750358581542969,
+      2.1413772106170654,
+      1.1456724405288696
+    ]
+  },
+  "sameXZEnvelope": true,
+  "protected": [
+    {
+      "id": "nx-artwalk-b9-dyehouse-crossing-loom",
+      "sha256": "a8ff818d13b577994dd3aef0aaa2201ca3944b17ff217542dee741ca817e3b6b",
+      "pose": {
+        "id": "nx-artwalk-b9-dyehouse-crossing-loom",
+        "lib": "store/6c3c85dee69191cf.glb",
+        "kind": "thing",
+        "pos": [
+          -23.62227356310568,
+          0.48,
+          -23.4535147325719
+        ],
+        "yaw": 0.941,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -1.125,
+            0,
+            -0.035
+          ],
+          "max": [
+            1.125,
+            0.86,
+            0.102
+          ],
+          "size": [
+            2.25,
+            0.86,
+            0.137
+          ],
+          "center": [
+            0,
+            0.43,
+            0.034
+          ]
+        },
+        "tris": 204
+      },
+      "trianglesIntruding": 0,
+      "volumes": [
+        {
+          "part": "b9_0",
+          "min": [
+            -1.100000023841857,
+            0.47999999284744277,
+            -0.8050000001490116
+          ],
+          "max": [
+            1.1000000238418588,
+            1.3399646091461181,
+            -0.7350372304022312
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "b9_1",
+          "min": [
+            -1.1251161098480216,
+            0.5175000014901161,
+            -0.7324999985098839
+          ],
+          "max": [
+            1.1251161098480233,
+            1.3024647641181946,
+            -0.6925306659936905
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "b9_2",
+          "min": [
+            -1.1251161098480216,
+            0.5411822567880153,
+            -0.702499997317791
+          ],
+          "max": [
+            1.1251161098480233,
+            1.2787606525421142,
+            -0.6674753245711327
+          ],
+          "triangles": 0,
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "id": "nx-sign-dyer-001",
+      "sha256": "e436b0caa7668e374750db23ddce126a735475a03e51dac0a3ea45b34f3afaea",
+      "pose": {
+        "id": "nx-sign-dyer-001",
+        "lib": "store/8ce2081f7d2c6858.glb",
+        "kind": "thing",
+        "pos": [
+          -22.0867933424553,
+          2.05,
+          -22.334452405446434
+        ],
+        "yaw": 0.941,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.262,
+            -0.65,
+            -0.03
+          ],
+          "max": [
+            0.262,
+            0.025,
+            0.29
+          ],
+          "size": [
+            0.524,
+            0.675,
+            0.32
+          ],
+          "center": [
+            0,
+            -0.312,
+            0.13
+          ]
+        },
+        "tris": 1152
+      },
+      "trianglesIntruding": 0,
+      "volumes": [
+        {
+          "part": "sgdyr_0",
+          "min": [
+            -0.2619999945163719,
+            1.7670000076293944,
+            1.100000000670551
+          ],
+          "max": [
+            0.26199999451637346,
+            2.0750095427036284,
+            1.3620159971714008
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "sgdyr_1",
+          "min": [
+            -0.24999999999999922,
+            1.4000000238418577,
+            1.2950000065565097
+          ],
+          "max": [
+            0.2500000000000008,
+            1.7999878108501433,
+            1.3449908542633044
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "sgdyr_2",
+          "min": [
+            -0.2099999934434883,
+            1.439999985694885,
+            1.2549999999999988
+          ],
+          "max": [
+            0.20999999344348985,
+            1.7599926471710203,
+            1.3850018429756152
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "sgdyr_3",
+          "min": [
+            -0.17000000178813857,
+            1.7050000011920927,
+            1.2200000035762775
+          ],
+          "max": [
+            0.17000000178814012,
+            1.7250060915946959,
+            1.4199987697601306
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "sgdyr_4",
+          "min": [
+            -0.1474999934434883,
+            1.6625000119209288,
+            1.2200000035762775
+          ],
+          "max": [
+            0.14749999344348985,
+            1.7125039875507353,
+            1.419997875690459
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "sgdyr_5",
+          "min": [
+            -0.1474999934434883,
+            1.4625000238418577,
+            1.2200000035762775
+          ],
+          "max": [
+            -0.017499387264250932,
+            1.6625000119209288,
+            1.4199999916553485
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "sgdyr_6",
+          "min": [
+            0.017500001937151732,
+            1.4625000238418577,
+            1.2200000035762775
+          ],
+          "max": [
+            0.1475006043910988,
+            1.6625000119209288,
+            1.4199999916553485
+          ],
+          "triangles": 0,
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "id": "nx-town-row-cottage",
+      "sha256": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+      "pose": {
+        "id": "nx-town-row-cottage",
+        "lib": "store/0558b5f41bda0777.glb",
+        "kind": "thing",
+        "pos": [
+          -23,
+          0,
+          -17
+        ],
+        "yaw": 0.9411511441487406,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.84,
+            -0.2,
+            -2.64
+          ],
+          "max": [
+            2.84,
+            5.374,
+            2.64
+          ],
+          "size": [
+            5.68,
+            5.574,
+            5.28
+          ],
+          "center": [
+            0,
+            2.587,
+            0
+          ]
+        },
+        "tris": 4744
+      },
+      "trianglesIntruding": 0,
+      "volumes": [
+        {
+          "part": "cabin_nx-town-row-cottage_0",
+          "min": [
+            -7.349224953094664,
+            -0.20000000298023224,
+            1.283503198357499
+          ],
+          "max": [
+            -2.3485448477016453,
+            2.915119171142578,
+            5.784350420431409
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_1",
+          "min": [
+            -7.424224999921709,
+            0.20000000298023224,
+            1.2834918625391794
+          ],
+          "max": [
+            -2.2735448262436444,
+            4.699923515319824,
+            5.7841939095719574
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_2",
+          "min": [
+            -6.779229819342415,
+            1.3899999856948853,
+            1.2510855267000025
+          ],
+          "max": [
+            -2.8934276050602072,
+            3.9599194526672363,
+            5.816672743764702
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_3",
+          "min": [
+            -7.689283809614043,
+            0.20000004768371582,
+            0.89345170891061
+          ],
+          "max": [
+            -2.0084860190738003,
+            4.941133499145508,
+            6.174217373900181
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_4",
+          "min": [
+            -7.544254357208922,
+            -1.4901161415892261e-9,
+            1.0884737942432423
+          ],
+          "max": [
+            -2.153495827479059,
+            5.360060691833496,
+            6.109163930271487
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_5",
+          "min": [
+            -7.381597264524146,
+            1.3199999332427979,
+            2.1284983051267643
+          ],
+          "max": [
+            -2.316206572195225,
+            2.4298911094665527,
+            4.71416682250567
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_6",
+          "min": [
+            -7.649275171788842,
+            2.9996259212493896,
+            0.9508627489796746
+          ],
+          "max": [
+            -2.048494640178496,
+            4.809892654418945,
+            6.116916960050555
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_7",
+          "min": [
+            -7.669266941060881,
+            1.8899999856948853,
+            1.005188167098913
+          ],
+          "max": [
+            -2.0284859709434104,
+            5.373903751373291,
+            6.174405085881203
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_8",
+          "min": [
+            -7.649275675638224,
+            3.0863306522369385,
+            0.9475291804447536
+          ],
+          "max": [
+            -2.0484941624188684,
+            4.603317737579346,
+            6.1200779135361785
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_9",
+          "min": [
+            -5.524190222704288,
+            0.4399999976158142,
+            1.5137185952077896
+          ],
+          "max": [
+            -3.774063219422581,
+            0.5399816632270813,
+            2.354000168188187
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_10",
+          "min": [
+            -5.479164512030288,
+            0.5,
+            1.683556827059137
+          ],
+          "max": [
+            -2.703614555976612,
+            1.0799767971038818,
+            5.363976275852989
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_11",
+          "min": [
+            -4.689185674675957,
+            0.550000011920929,
+            1.5437389707224618
+          ],
+          "max": [
+            -3.9090678048631564,
+            0.6099890470504761,
+            2.323856825636353
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_12",
+          "min": [
+            -4.639165137518692,
+            0.6110000014305115,
+            1.6797465635715403
+          ],
+          "max": [
+            -3.959088372219135,
+            0.6290137767791748,
+            2.1878466101874396
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_13",
+          "min": [
+            -4.078647638883095,
+            0.20000000298023224,
+            5.103710155432889
+          ],
+          "max": [
+            -3.7185930975671924,
+            0.4000073969364166,
+            5.463764696748791
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_14",
+          "min": [
+            -3.966637777625236,
+            0.402880996465683,
+            5.169055323242167
+          ],
+          "max": [
+            -3.8306181926329375,
+            0.43711552023887634,
+            5.29841831416502
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_15",
+          "min": [
+            -3.9666241746468565,
+            0.402880996465683,
+            5.259055355592762
+          ],
+          "max": [
+            -3.8306045896545573,
+            0.43711552023887634,
+            5.388418346515616
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_16",
+          "min": [
+            -2.5620569738470924,
+            1.5299999713897705,
+            3.185940630660517
+          ],
+          "max": [
+            -2.415795906699867,
+            1.690000057220459,
+            3.3285398589017072
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_17",
+          "min": [
+            -2.562014653487678,
+            1.5299999713897705,
+            3.4659406137532116
+          ],
+          "max": [
+            -2.4157535863404527,
+            1.690000057220459,
+            3.6085398419944017
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_18",
+          "min": [
+            -2.5619723331260116,
+            1.5299999713897705,
+            3.7459406117470673
+          ],
+          "max": [
+            -2.415711265978786,
+            1.690000057220459,
+            3.888539839988257
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "cabin_nx-town-row-cottage_19",
+          "min": [
+            -6.318375500517451,
+            2.490000009536743,
+            2.1539914973020653
+          ],
+          "max": [
+            -5.579787252918464,
+            2.7900149822235107,
+            2.314096058385733
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "lamp",
+          "min": [
+            -4.269550789779798,
+            1.8489609956741333,
+            6.002739070204277
+          ],
+          "max": [
+            -4.1674572822819975,
+            1.9510390758514404,
+            6.104832458510807
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "fire",
+          "min": [
+            -7.06911637336067,
+            0.629869818687439,
+            2.8640350383757625
+          ],
+          "max": [
+            -6.728804562427484,
+            0.9701301455497742,
+            3.204346759915495
+          ],
+          "triangles": 0,
+          "nodes": []
+        },
+        {
+          "part": "flame",
+          "min": [
+            -3.1370490922074805,
+            1.1017206907272339,
+            4.295331453329762
+          ],
+          "max": [
+            -3.060478931763791,
+            1.1782792806625366,
+            4.371901613773452
+          ],
+          "triangles": 0,
+          "nodes": []
+        }
+      ]
+    }
+  ],
+  "hostFaceClearance": [
+    {
+      "id": "crossing-loom-exposed-field",
+      "min": [
+        -1.1,
+        0.5,
+        -0.666
+      ],
+      "max": [
+        1.1,
+        1.33,
+        1.145
+      ],
+      "triangles": 0,
+      "nodes": []
+    },
+    {
+      "id": "dyer-sign-face",
+      "min": [
+        -0.21,
+        1.44,
+        1.4201
+      ],
+      "max": [
+        0.21,
+        1.76,
+        2
+      ],
+      "triangles": 0,
+      "nodes": []
+    }
+  ],
+  "inheritedTallyOcclusion": [],
+  "service": {
+    "volume": {
+      "min": [
+        -1.1,
+        0,
+        1.5799999999999998
+      ],
+      "max": [
+        1.1,
+        2.2,
+        2.2199999999999998
+      ]
+    },
+    "triangles": 0,
+    "nodes": [],
+    "walks": [
+      {
+        "direction": 1,
+        "samples": 101,
+        "pass": true,
+        "maxPush": 0,
+        "maxFloor": 0,
+        "z": 1.9,
+        "assumption": "flat local terrain=0; outside frontage only"
+      },
+      {
+        "direction": -1,
+        "samples": 101,
+        "pass": true,
+        "maxPush": 0,
+        "maxFloor": 0,
+        "z": 1.9,
+        "assumption": "flat local terrain=0; outside frontage only"
+      }
+    ]
+  },
+  "backing": [
+    {
+      "id": "loom",
+      "at": [
+        -0.95,
+        0.58,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        -0.95,
+        0.91,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        -0.95,
+        1.25,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        0,
+        0.58,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        0,
+        0.91,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        0,
+        1.25,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        0.95,
+        0.58,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        0.95,
+        0.91,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "loom",
+      "at": [
+        0.95,
+        1.25,
+        -0.8051
+      ],
+      "pass": true,
+      "distance": 0.0018999814033507922
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        -0.06,
+        1.85,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        -0.06,
+        1.94,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        -0.06,
+        2.02,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        0,
+        1.85,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        0,
+        1.94,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        0,
+        2.02,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        0.06,
+        1.85,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        0.06,
+        1.94,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    },
+    {
+      "id": "dyer-sign-plate",
+      "at": [
+        0.06,
+        2.02,
+        1.0999
+      ],
+      "pass": true,
+      "distance": 0.0018999504089356467
+    }
+  ],
+  "retainedAnchorNames": [
+    "dh_strip_blue",
+    "dh_strip_bone",
+    "glow"
+  ],
+  "failures": [],
+  "limits": [
+    "Small non-room outdoor workstation. No internal doorway or walk-in PASS is asserted; verify-player.ts room CLI intentionally not applied.",
+    "Public-runtime colliders exercised on flat assumed local ground, not live terrain or placement.",
+    "Protected triangle-to-volume test uses decoded per-mesh boxes, no broad intrusion allowances.",
+    "Market tally is already obscured by the protected right lissa plaque; frozen companion transforms prevent repairing that inherited overlap."
+  ]
+}

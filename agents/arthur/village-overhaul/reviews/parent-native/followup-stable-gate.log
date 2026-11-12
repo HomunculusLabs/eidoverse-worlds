@@ -1,0 +1,34 @@
+OpenAI Codex v0.153.4
+--------
+workdir: /Users/t3rpz/projects/eidoverse-worlds
+model: gpt-6-astra
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 01a07ee4-05b2-71b0-b2d3-104f7fbc5474
+--------
+user
+Independent native visual follow-up. No tools, file edits or internet. Images: stable true exterior aerial+front, woodyard true exterior aerial, north gate front. Previous stable detail aerial was an intentionally repurposed interior upward camera, not evidence missing roof. Do these corrected exterior views establish coherent closed roof/supports and open entrances? North gate horizontal gold strip is the preserved nx-artwalk-b4-golden-threshold artwork, confirmed from exact source and decoded-road support rays: deliberately horizontal threshold, NOT displaced sign. Reassess that claimed blocker with correct function; upperpanel face stays fixed. No math/physics/Bill approval or live claims. 260words max. Confirm images visible.
+codex
+All four images are visible.
+
+The corrected exterior views establish visually coherent roofs, supports, and open entrances:
+
+- **Stable:** The aerial shows a continuous pitched roof with a joined ridge and overhanging eaves. The front view shows a coherent gable and framed entrance, with supporting posts reaching the stone base. The entrance is open, with a stall partition visible farther inside. The earlier interior upward camera does not support a missing-roof finding; that concern is withdrawn.
+- **Woodyard:** The exterior aerial shows a continuous roof, ridge, and supporting timber posts on footings. Its open sides and accessible work area fit the shelter’s function. No obvious roof gap or disconnected support is visible from this angle.
+- **North gate:** The front view shows a coherent roofed gateway, two substantial piers, and a clear central passage. Given the confirmed identity and intended function of **nx-artwalk-b4-golden-threshold**, the horizontal gold strip reads as threshold artwork. The displaced-sign blocker was a misclassification and is withdrawn. There is no visual basis here for rotating, raising, or relocating it; the upperpanel face stays fixed.
+
+These views support visual acceptance of the shown exterior assemblies. They establish visible coherence, without proving concealed connections or unshown surfaces. This assessment makes no math, physics, Bill approval, or live-world claims.
+tokens used
+13,484
+All four images are visible.
+
+The corrected exterior views establish visually coherent roofs, supports, and open entrances:
+
+- **Stable:** The aerial shows a continuous pitched roof with a joined ridge and overhanging eaves. The front view shows a coherent gable and framed entrance, with supporting posts reaching the stone base. The entrance is open, with a stall partition visible farther inside. The earlier interior upward camera does not support a missing-roof finding; that concern is withdrawn.
+- **Woodyard:** The exterior aerial shows a continuous roof, ridge, and supporting timber posts on footings. Its open sides and accessible work area fit the shelter’s function. No obvious roof gap or disconnected support is visible from this angle.
+- **North gate:** The front view shows a coherent roofed gateway, two substantial piers, and a clear central passage. Given the confirmed identity and intended function of **nx-artwalk-b4-golden-threshold**, the horizontal gold strip reads as threshold artwork. The displaced-sign blocker was a misclassification and is withdrawn. There is no visual basis here for rotating, raising, or relocating it; the upperpanel face stays fixed.
+
+These views support visual acceptance of the shown exterior assemblies. They establish visible coherence, without proving concealed connections or unshown surfaces. This assessment makes no math, physics, Bill approval, or live-world claims.

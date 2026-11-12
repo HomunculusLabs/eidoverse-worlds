@@ -1,0 +1,620 @@
+{
+  "status": "FAIL",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-woodyard",
+  "bounds": {
+    "min": [
+      -2.0999999046325684,
+      -4.76837147544984e-9,
+      -1.090248942375183
+    ],
+    "max": [
+      2.875746011734009,
+      3.559999942779541,
+      1.5084253549575806
+    ]
+  },
+  "triangles": 29672,
+  "collider": {
+    "exact": false,
+    "pillar": true,
+    "classification": {
+      "roomScale": false,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "left_of_fixed_hanging_sign",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -1.77,
+        0,
+        0.72
+      ],
+      "max": [
+        -0.3700000000000001,
+        2.2,
+        1.9
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "yard_approach",
+      "to": "sign_left_entry",
+      "pass": true,
+      "steps": 16,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 1.3322676295501878e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.07,
+        0,
+        1.6499999999999986
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "sign_left_entry",
+      "to": "fuel_selection_station",
+      "pass": true,
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 7.771561172376096e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.07,
+        0,
+        0.8600000000000008
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "fuel_selection_station",
+      "to": "joiners_bench_station",
+      "pass": true,
+      "steps": 45,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 8.08254562088053e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0.6999999999999997,
+        0,
+        0.8600000000000008
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "joiners_bench_station",
+      "to": "vise_station",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 9.155133597044475e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        1.3199999999999992,
+        0,
+        1.0200000000000002
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "vise_station",
+      "to": "outside_transfer",
+      "pass": true,
+      "steps": 24,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 1.9860273225978185e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        1.3199999999999992,
+        0,
+        1.9500000000000017
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "outside_transfer",
+      "to": "chopping_approach",
+      "pass": true,
+      "steps": 33,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 3.580361673049448e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        2.600000000000003,
+        0,
+        1.9500000000000017
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "chopping_approach",
+      "to": "axe_stump_station",
+      "pass": true,
+      "steps": 21,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 3.580361673049448e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        2.600000000000003,
+        0,
+        1.1200000000000019
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "axe_stump_station",
+      "to": "chopping_approach",
+      "pass": true,
+      "steps": 21,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 0,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        2.6,
+        0,
+        1.95
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "chopping_approach",
+      "to": "outside_transfer",
+      "pass": true,
+      "steps": 32,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 1.1102230246251565e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        1.319999999999999,
+        0,
+        1.95
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "outside_transfer",
+      "to": "vise_station",
+      "pass": true,
+      "steps": 24,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 1.9100999153570945e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        1.319999999999999,
+        0,
+        1.0199999999999985
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "vise_station",
+      "to": "joiners_bench_station",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 7.108895957933346e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0.7000000000000004,
+        0,
+        0.8600000000000005
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "joiners_bench_station",
+      "to": "fuel_selection_station",
+      "pass": true,
+      "steps": 45,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 5.978733960281817e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.0699999999999998,
+        0,
+        0.8600000000000005
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "fuel_selection_station",
+      "to": "sign_left_entry",
+      "pass": true,
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 1.5700924586837751e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.0699999999999998,
+        0,
+        1.6499999999999984
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "sign_left_entry",
+      "to": "yard_approach",
+      "pass": true,
+      "steps": 16,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 2.220446049250313e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.0699999999999998,
+        0,
+        2.25
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "min": [
+        -1.2999999523162857,
+        0.7500000238418583,
+        -0.8350000001490117
+      ],
+      "max": [
+        1.2999999523162826,
+        1.8159512281417847,
+        -0.686587992310524
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "min": [
+        -0.2619999945163728,
+        1.3299999713897703,
+        1.220000000670554
+      ],
+      "max": [
+        0.26199999451637257,
+        2.049989926815033,
+        1.5440058708190936
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "nx-gallery-mosaic-0048",
+      "triangles": 7896,
+      "sha256": "573ba060e9a9cc9d275a033ceb833b59a07d3ee57ebc1ef5c24108aaafcdcf4a",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0.0015747037783233253,
+          45
+        ],
+        "yaw": -2.35619449,
+        "scale": 1,
+        "lib": "store/b6491515b25ef439.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-dress-harvestcart",
+      "triangles": 1176,
+      "sha256": "2be1cb89ddf1dd6903b3a5018f8b72fd660e7aacd261db2894956eb5ad92ddf5",
+      "sourceTuple": {
+        "pos": [
+          12,
+          0,
+          36
+        ],
+        "yaw": -2.6,
+        "scale": 1,
+        "lib": "store/ee30d6709625bf2f.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-dress-churn",
+      "triangles": 608,
+      "sha256": "761baf15cf0d9ff1136337f5d0c6e4bdb4413f9e013a51de9f5c1200544f3120",
+      "sourceTuple": {
+        "pos": [
+          20,
+          0,
+          35
+        ],
+        "yaw": -2.2,
+        "scale": 1,
+        "lib": "store/a509c3d2c1f3026e.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "triangles": 2032,
+      "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e",
+      "sourceTuple": {
+        "pos": [
+          16.3635762733503,
+          0.75,
+          31.712609495766586
+        ],
+        "yaw": -2.669815142409043,
+        "scale": 1,
+        "lib": "store/aa5f2550365c1f7f.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b31-sheaf-tally",
+      "triangles": 84,
+      "sha256": "946dc2ed6fcd3d5afdf9d4aaa70f1e9add5c29eb7cd323e9f60438940a0cc643",
+      "sourceTuple": {
+        "pos": [
+          12,
+          0,
+          36
+        ],
+        "yaw": -2.6,
+        "scale": 1,
+        "lib": "store/9e6d3d13f1e8d380.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b32-morning-measure",
+      "triangles": 84,
+      "sha256": "32246cfbc476518dc340ef211938b890465e158cb9b82c1422af439cdb29ebd3",
+      "sourceTuple": {
+        "pos": [
+          20,
+          0,
+          35
+        ],
+        "yaw": -2.2,
+        "scale": 1,
+        "lib": "store/adb5459562eb21b2.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "triangles": 1224,
+      "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7",
+      "sourceTuple": {
+        "pos": [
+          15.431912072890157,
+          2.05,
+          29.886547662864707
+        ],
+        "yaw": -2.669815142409043,
+        "scale": 1,
+        "lib": "store/f46e12aeeea8af74.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "triangles": 3556,
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/dc52264c04cfe5bb.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "triangles": 578,
+      "sha256": "c9ca1b859b0532ed7f34e960561e77827106b3bcb83090ef8499096499248826",
+      "sourceTuple": {
+        "pos": [
+          22.724,
+          -0.04164,
+          27.274
+        ],
+        "yaw": -2.4784945651581642,
+        "scale": 1,
+        "lib": "store/1d9a1c2d95f785b6.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-longhouse",
+      "triangles": 7482,
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+      "sourceTuple": {
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "lib": "store/e38bb2a4c7933698.glb"
+      },
+      "colliderExact": true
+    }
+  ],
+  "failures": [
+    "host is not an exact browser collider"
+  ],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-woodyard.glb",
+  "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "contractSha256": "e9ddd55536df0c456082c26b366fcfaca938b6e0ff45fc0853dc7fcf6eb031d8",
+  "verifierSha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555",
+  "meshes": 17
+}
+

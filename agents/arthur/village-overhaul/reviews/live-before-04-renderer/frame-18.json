@@ -1,0 +1,119 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-b2f6bc6d-ccd",
+    "view": "first",
+    "startedAt": "2026-09-08T02:18:08.004Z"
+  },
+  "completedAt": "2026-09-08T02:18:08.503Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "03c121f3b0521a47003dbe1a95cb11e4415b60f9acf4f780e8fc3126f49d33dd",
+  "bytes": 573540,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-woodyard",
+  "view": "workstation",
+  "bodyPose": {
+    "p": [
+      13.47314490021542,
+      0,
+      28.247727610738234
+    ],
+    "yaw": 0.7427243615191705,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    1,
+    0,
+    3.6
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-woodyard",
+    "lib": "store/01b78fdd00f090a7.glb",
+    "kind": "thing",
+    "pos": [
+      16,
+      0,
+      31
+    ],
+    "yaw": -2.669815142409043,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.1,
+        0,
+        -1.09
+      ],
+      "max": [
+        2.876,
+        2.526,
+        1.508
+      ],
+      "size": [
+        4.976,
+        2.526,
+        2.599
+      ],
+      "center": [
+        0.388,
+        1.263,
+        0.209
+      ]
+    },
+    "tris": 2360
+  },
+  "targetAfter": {
+    "id": "nx-town-woodyard",
+    "lib": "store/01b78fdd00f090a7.glb",
+    "kind": "thing",
+    "pos": [
+      16,
+      0,
+      31
+    ],
+    "yaw": -2.669815142409043,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.1,
+        0,
+        -1.09
+      ],
+      "max": [
+        2.876,
+        2.526,
+        1.508
+      ],
+      "size": [
+        4.976,
+        2.526,
+        2.599
+      ],
+      "center": [
+        0.388,
+        1.263,
+        0.209
+      ]
+    },
+    "tris": 2360
+  },
+  "beforeObservedAt": "2026-09-08T02:18:05.002Z",
+  "afterObservedAt": "2026-09-08T02:18:10.434Z",
+  "protectedBeforeSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "protectedAfterSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "file": "nx-town-woodyard-workstation.png"
+}

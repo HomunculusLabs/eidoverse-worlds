@@ -1,0 +1,78 @@
+{
+  "id": "nx-town-market",
+  "readiness": "HOLD_EXISTING_COMPANION_COLLIDER",
+  "deployableByThisLane": false,
+  "hostGeometrySha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+  "hostBytes": 363960,
+  "triangles": 4268,
+  "meshes": 17,
+  "nodes": 20,
+  "backingWitnesses": 27,
+  "backingPass": 27,
+  "newHostFaceIntrusions": 0,
+  "approachLegs": 14,
+  "approachPass": 0,
+  "maxPush": 0,
+  "bodyGeometryHits": 0,
+  "diagnosticOnlyExactCorePathsLegs": {
+    "legs": 14,
+    "pass": 14
+  },
+  "candidateHostFunctionalTuple": {
+    "id": "nx-town-market",
+    "pos": [
+      -6.5,
+      0,
+      6.5
+    ],
+    "yaw": 2.356194490192345,
+    "scale": 1,
+    "comp": {}
+  },
+  "hostRequiredCollisionPreference": "exact",
+  "baselineCollider": {
+    "exact": false,
+    "pillar": false
+  },
+  "candidateDefaultCollider": {
+    "exact": false,
+    "pillar": true
+  },
+  "rigs": [
+    {
+      "kind": "solo",
+      "cameraSha256": "79b9de43e009557b1240676d55617e074fefe2a1d38f196583466a064258a0f8",
+      "afterModelSha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+      "viewsEach": 9
+    },
+    {
+      "kind": "-ensemble",
+      "cameraSha256": "8ce00ffb6fad130b6568da4f23e883d0a9a7c5d30f4caf7cb5e2832846b34e89",
+      "afterModelSha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+      "viewsEach": 9
+    },
+    {
+      "kind": "-detail",
+      "cameraSha256": "68fa985602d8957b3c101164a10a4fa3ad9b9714898a3dde1828f481da7d7ac9",
+      "afterModelSha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+      "viewsEach": 9
+    }
+  ],
+  "builderSha256": "ec0089546fe7066743f7760f8a31a23f13d234743f5e2bbb53b060f97761db51",
+  "notesSha256": "710e6fcee7a6bd4d0ab81fdd15824b3e16607b30fdd262d33ca736bafa746ec7",
+  "noWorldMutation": true,
+  "visionRoute": "auxiliary vision_analyze textual outputs; parent native review separate; one dyer paired-detail request timed out",
+  "files": {
+    "build/nx-town-market-ensemble-before.glb": "06ffa88b992d2a207be01f23df6610fea8f445d010e09053e1d29990c16af2a5",
+    "build/nx-town-market.glb": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+    "build/nx-town-market-approach-contract.json": "344757610c0dfcb545bc14767e98f49ed8d47ffceabb446a0b39a8d27fe0e4fe",
+    "build/nx-town-market-verification.json": "55632af9608da6649930d2e975c8a6a65d7a90b2129d1c7e1850de21a2c4ae79",
+    "build/nx-town-market-baseline-approach.json": "fbb46c987bf47c6aeb20986173107a2c72373887b4b71af895d4b7bab9c42eeb",
+    "build/nx-town-market-ensemble-after.glb": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+    "build/nx-town-market-approach.json": "474d89961cf2d3038aac14923f1035c2606b18d7aeed279f02f932a89af99f3e",
+    "build/nx-town-market-determinism.json": "f186fb8757bbe89eb3192bb9af6ffd81037cc707bf9ecbd9a4b6b7b8a19a3607",
+    "build/nx-town-market.json": "d1be1ab6a02d972a51968110b772c00080c8a579e29bc242f0f06a6a96100797",
+    "build/nx-town-market-ensemble-before.json": "622d66fbd80430765d7a9e1edbd1969c8d4062964ba4ac61c07f8134630cc2e6",
+    "build/nx-town-market-ensemble-after.json": "0f4484cbc18974fc4277fe05f773c421e74e4feb67db5316be924c4a257abbd7"
+  }
+}

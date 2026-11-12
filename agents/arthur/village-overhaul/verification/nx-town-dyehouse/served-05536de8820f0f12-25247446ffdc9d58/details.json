@@ -1,0 +1,2356 @@
+{
+  "id": "nx-town-dyehouse",
+  "stage": "served",
+  "sourceSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+  "modelSha256": "05536de8820f0f122ba7dc32be8ab8f1595c6334286d963331a1f489406de891",
+  "contextSha256": "25247446ffdc9d583d880410ce8685f17a857d34a8ded40eb75dbcc957712398",
+  "publicRuntime": [
+    {
+      "name": "colliders.js",
+      "url": "https://eidoverse.billding.dev/lib/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+    },
+    {
+      "name": "supportclass.js",
+      "url": "https://eidoverse.billding.dev/lib/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+    }
+  ],
+  "sourceEquivalence": {
+    "pass": true,
+    "forward": {
+      "samples": 35028,
+      "maxDistance": 0.0001553301985799429
+    },
+    "reverse": {
+      "samples": 35028,
+      "maxDistance": 0.00014603765705907114
+    },
+    "toleranceMetres": 0.003,
+    "sourceTriangles": 5004,
+    "servedTriangles": 5004,
+    "method": "bidirectional all-vertex/edge-midpoint/triangle-centroid nearest-surface probes",
+    "limitation": "Sampled surface equivalence, not a mathematical Hausdorff certificate; actual served-route proof separately required."
+  },
+  "actualBounds": {
+    "min": [
+      -1.5,
+      8.940696516468449e-10,
+      -1.0456808805465698
+    ],
+    "max": [
+      1.7750358581542969,
+      3.110534906387329,
+      1.1457620859146118
+    ]
+  },
+  "routes": [
+    {
+      "file": "build/nx-town-dyehouse-approach-contract.json",
+      "sha256": "b051f08e3658df5d9b85890563df3b7060b68f5dc374e8a4fa18ff0480869cb2",
+      "mode": "workstation",
+      "report": {
+        "status": "PASS",
+        "id": "nx-town-dyehouse",
+        "kind": "workstation",
+        "runtime": {
+          "mode": "served-override",
+          "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+          "files": {
+            "colliders.js": {
+              "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+              "publicPath": "/lib/colliders.js"
+            },
+            "supportclass.js": {
+              "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+              "publicPath": "/lib/supportclass.js"
+            }
+          },
+          "threeRevision": "184",
+          "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+        },
+        "collider": {
+          "exact": false,
+          "pillar": true
+        },
+        "neighbors": [
+          "nx-approach-sw-lane-003",
+          "nx-artwalk-b9-dyehouse-crossing-loom",
+          "nx-gallery-mosaic-0059",
+          "nx-sign-dyer-001",
+          "nx-town-roads",
+          "nx-town-row-cottage"
+        ],
+        "walks": [
+          {
+            "direction": "in",
+            "from": "plaza-left",
+            "to": "indigo-front",
+            "steps": 13,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 2.482534153247273e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "indigo-front",
+            "to": "front-clearance",
+            "steps": 11,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.1157603309187458e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "front-clearance",
+            "to": "right-clearance",
+            "steps": 43,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.2947314098277875e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "right-clearance",
+            "to": "weld-front",
+            "steps": 11,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 5.978733960281817e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "weld-front",
+            "to": "plaza-right",
+            "steps": 13,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 4.440892098500626e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "plaza-right",
+            "to": "weld-front",
+            "steps": 13,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 2.482534153247273e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "weld-front",
+            "to": "right-clearance",
+            "steps": 11,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.1157603309187458e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "right-clearance",
+            "to": "front-clearance",
+            "steps": 43,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.2947314098277875e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "front-clearance",
+            "to": "indigo-front",
+            "steps": 11,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 5.978733960281817e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "indigo-front",
+            "to": "plaza-left",
+            "steps": 13,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 4.440892098500626e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          }
+        ],
+        "physicalSupport": {
+          "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+          "pass": true,
+          "samples": [
+            {
+              "name": "in:start",
+              "pos": [
+                -1.1,
+                0,
+                1.9
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:1",
+              "pos": [
+                -1.080769230769231,
+                0,
+                1.8684615384615384
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:2",
+              "pos": [
+                -1.0615384615384618,
+                0,
+                1.8369230769230769
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:3",
+              "pos": [
+                -1.0423076923076926,
+                0,
+                1.8053846153846154
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:4",
+              "pos": [
+                -1.0230769230769234,
+                0,
+                1.7738461538461539
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:5",
+              "pos": [
+                -1.0038461538461543,
+                0,
+                1.7423076923076923
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:6",
+              "pos": [
+                -0.984615384615385,
+                0,
+                1.7107692307692308
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:7",
+              "pos": [
+                -0.9653846153846157,
+                0,
+                1.6792307692307693
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:8",
+              "pos": [
+                -0.9461538461538465,
+                0,
+                1.6476923076923078
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:9",
+              "pos": [
+                -0.9269230769230772,
+                0,
+                1.6161538461538463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:10",
+              "pos": [
+                -0.9076923076923079,
+                0,
+                1.5846153846153848
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:11",
+              "pos": [
+                -0.8884615384615386,
+                0,
+                1.5530769230769232
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:12",
+              "pos": [
+                -0.8692307692307694,
+                0,
+                1.5215384615384617
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:plaza-left:indigo-front:13",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.4900000000000002
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:1",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.5272727272727276
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:2",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.564545454545455
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:3",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.6018181818181823
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:4",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.6390909090909096
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:5",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.676363636363637
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:6",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.7136363636363643
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:7",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.7509090909090916
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:8",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.788181818181819
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:9",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.8254545454545463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:10",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.8627272727272737
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:indigo-front:front-clearance:11",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:1",
+              "pos": [
+                -0.8104651162790698,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:2",
+              "pos": [
+                -0.7709302325581395,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:3",
+              "pos": [
+                -0.7313953488372092,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:4",
+              "pos": [
+                -0.691860465116279,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:5",
+              "pos": [
+                -0.6523255813953487,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:6",
+              "pos": [
+                -0.6127906976744184,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:7",
+              "pos": [
+                -0.5732558139534881,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:8",
+              "pos": [
+                -0.5337209302325578,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:9",
+              "pos": [
+                -0.4941860465116276,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:10",
+              "pos": [
+                -0.4546511627906974,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:11",
+              "pos": [
+                -0.41511627906976717,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:12",
+              "pos": [
+                -0.37558139534883694,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:13",
+              "pos": [
+                -0.3360465116279067,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:14",
+              "pos": [
+                -0.2965116279069765,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:15",
+              "pos": [
+                -0.25697674418604627,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:16",
+              "pos": [
+                -0.21744186046511604,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:17",
+              "pos": [
+                -0.17790697674418582,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:18",
+              "pos": [
+                -0.1383720930232556,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:19",
+              "pos": [
+                -0.09883720930232535,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:20",
+              "pos": [
+                -0.059302325581395116,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:21",
+              "pos": [
+                -0.019767441860464877,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:22",
+              "pos": [
+                0.019767441860465362,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:23",
+              "pos": [
+                0.0593023255813956,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:24",
+              "pos": [
+                0.09883720930232584,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:25",
+              "pos": [
+                0.1383720930232561,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:26",
+              "pos": [
+                0.17790697674418632,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:27",
+              "pos": [
+                0.21744186046511654,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:28",
+              "pos": [
+                0.25697674418604677,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:29",
+              "pos": [
+                0.296511627906977,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:30",
+              "pos": [
+                0.3360465116279072,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:31",
+              "pos": [
+                0.37558139534883744,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:32",
+              "pos": [
+                0.41511627906976767,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:33",
+              "pos": [
+                0.4546511627906979,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:34",
+              "pos": [
+                0.4941860465116281,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:35",
+              "pos": [
+                0.5337209302325584,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:36",
+              "pos": [
+                0.5732558139534887,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:37",
+              "pos": [
+                0.612790697674419,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:38",
+              "pos": [
+                0.6523255813953492,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:39",
+              "pos": [
+                0.6918604651162795,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:40",
+              "pos": [
+                0.7313953488372098,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:41",
+              "pos": [
+                0.7709302325581401,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:42",
+              "pos": [
+                0.8104651162790704,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:front-clearance:right-clearance:43",
+              "pos": [
+                0.8500000000000006,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:1",
+              "pos": [
+                0.8500000000000005,
+                0,
+                1.8627272727272737
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:2",
+              "pos": [
+                0.8500000000000004,
+                0,
+                1.8254545454545463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:3",
+              "pos": [
+                0.8500000000000003,
+                0,
+                1.788181818181819
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:4",
+              "pos": [
+                0.8500000000000002,
+                0,
+                1.7509090909090916
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:5",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.7136363636363643
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:6",
+              "pos": [
+                0.85,
+                0,
+                1.676363636363637
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:7",
+              "pos": [
+                0.8499999999999999,
+                0,
+                1.6390909090909096
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:8",
+              "pos": [
+                0.8499999999999998,
+                0,
+                1.6018181818181823
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:9",
+              "pos": [
+                0.8499999999999996,
+                0,
+                1.564545454545455
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:10",
+              "pos": [
+                0.8499999999999995,
+                0,
+                1.5272727272727276
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:right-clearance:weld-front:11",
+              "pos": [
+                0.8499999999999994,
+                0,
+                1.4900000000000002
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:1",
+              "pos": [
+                0.8692307692307687,
+                0,
+                1.5215384615384617
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:2",
+              "pos": [
+                0.888461538461538,
+                0,
+                1.5530769230769232
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:3",
+              "pos": [
+                0.9076923076923072,
+                0,
+                1.5846153846153848
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:4",
+              "pos": [
+                0.9269230769230765,
+                0,
+                1.6161538461538463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:5",
+              "pos": [
+                0.9461538461538458,
+                0,
+                1.6476923076923078
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:6",
+              "pos": [
+                0.9653846153846151,
+                0,
+                1.6792307692307693
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:7",
+              "pos": [
+                0.9846153846153843,
+                0,
+                1.7107692307692308
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:8",
+              "pos": [
+                1.0038461538461536,
+                0,
+                1.7423076923076923
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:9",
+              "pos": [
+                1.023076923076923,
+                0,
+                1.7738461538461539
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:10",
+              "pos": [
+                1.0423076923076924,
+                0,
+                1.8053846153846154
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:11",
+              "pos": [
+                1.0615384615384618,
+                0,
+                1.8369230769230769
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:12",
+              "pos": [
+                1.0807692307692311,
+                0,
+                1.8684615384615384
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:weld-front:plaza-right:13",
+              "pos": [
+                1.1000000000000005,
+                0,
+                1.9
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:start",
+              "pos": [
+                1.1,
+                0,
+                1.9
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:1",
+              "pos": [
+                1.080769230769231,
+                0,
+                1.8684615384615384
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:2",
+              "pos": [
+                1.0615384615384618,
+                0,
+                1.8369230769230769
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:3",
+              "pos": [
+                1.0423076923076926,
+                0,
+                1.8053846153846154
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:4",
+              "pos": [
+                1.0230769230769234,
+                0,
+                1.7738461538461539
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:5",
+              "pos": [
+                1.0038461538461543,
+                0,
+                1.7423076923076923
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:6",
+              "pos": [
+                0.984615384615385,
+                0,
+                1.7107692307692308
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:7",
+              "pos": [
+                0.9653846153846157,
+                0,
+                1.6792307692307693
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:8",
+              "pos": [
+                0.9461538461538465,
+                0,
+                1.6476923076923078
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:9",
+              "pos": [
+                0.9269230769230772,
+                0,
+                1.6161538461538463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:10",
+              "pos": [
+                0.9076923076923079,
+                0,
+                1.5846153846153848
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:11",
+              "pos": [
+                0.8884615384615386,
+                0,
+                1.5530769230769232
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:12",
+              "pos": [
+                0.8692307692307694,
+                0,
+                1.5215384615384617
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:plaza-right:weld-front:13",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.4900000000000002
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:1",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.5272727272727276
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:2",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.564545454545455
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:3",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.6018181818181823
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:4",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.6390909090909096
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:5",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.676363636363637
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:6",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.7136363636363643
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:7",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.7509090909090916
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:8",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.788181818181819
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:9",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.8254545454545463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:10",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.8627272727272737
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:weld-front:right-clearance:11",
+              "pos": [
+                0.8500000000000001,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:1",
+              "pos": [
+                0.8104651162790698,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:2",
+              "pos": [
+                0.7709302325581395,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:3",
+              "pos": [
+                0.7313953488372092,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:4",
+              "pos": [
+                0.691860465116279,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:5",
+              "pos": [
+                0.6523255813953487,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:6",
+              "pos": [
+                0.6127906976744184,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:7",
+              "pos": [
+                0.5732558139534881,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:8",
+              "pos": [
+                0.5337209302325578,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:9",
+              "pos": [
+                0.4941860465116276,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:10",
+              "pos": [
+                0.4546511627906974,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:11",
+              "pos": [
+                0.41511627906976717,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:12",
+              "pos": [
+                0.37558139534883694,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:13",
+              "pos": [
+                0.3360465116279067,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:14",
+              "pos": [
+                0.2965116279069765,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:15",
+              "pos": [
+                0.25697674418604627,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:16",
+              "pos": [
+                0.21744186046511604,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:17",
+              "pos": [
+                0.17790697674418582,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:18",
+              "pos": [
+                0.1383720930232556,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:19",
+              "pos": [
+                0.09883720930232535,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:20",
+              "pos": [
+                0.059302325581395116,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:21",
+              "pos": [
+                0.019767441860464877,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:22",
+              "pos": [
+                -0.019767441860465362,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:23",
+              "pos": [
+                -0.0593023255813956,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:24",
+              "pos": [
+                -0.09883720930232584,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:25",
+              "pos": [
+                -0.1383720930232561,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:26",
+              "pos": [
+                -0.17790697674418632,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:27",
+              "pos": [
+                -0.21744186046511654,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:28",
+              "pos": [
+                -0.25697674418604677,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:29",
+              "pos": [
+                -0.296511627906977,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:30",
+              "pos": [
+                -0.3360465116279072,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:31",
+              "pos": [
+                -0.37558139534883744,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:32",
+              "pos": [
+                -0.41511627906976767,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:33",
+              "pos": [
+                -0.4546511627906979,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:34",
+              "pos": [
+                -0.4941860465116281,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:35",
+              "pos": [
+                -0.5337209302325584,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:36",
+              "pos": [
+                -0.5732558139534887,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:37",
+              "pos": [
+                -0.612790697674419,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:38",
+              "pos": [
+                -0.6523255813953492,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:39",
+              "pos": [
+                -0.6918604651162795,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:40",
+              "pos": [
+                -0.7313953488372098,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:41",
+              "pos": [
+                -0.7709302325581401,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:42",
+              "pos": [
+                -0.8104651162790704,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:right-clearance:front-clearance:43",
+              "pos": [
+                -0.8500000000000006,
+                0,
+                1.900000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:1",
+              "pos": [
+                -0.8500000000000005,
+                0,
+                1.8627272727272737
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:2",
+              "pos": [
+                -0.8500000000000004,
+                0,
+                1.8254545454545463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:3",
+              "pos": [
+                -0.8500000000000003,
+                0,
+                1.788181818181819
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:4",
+              "pos": [
+                -0.8500000000000002,
+                0,
+                1.7509090909090916
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:5",
+              "pos": [
+                -0.8500000000000001,
+                0,
+                1.7136363636363643
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:6",
+              "pos": [
+                -0.85,
+                0,
+                1.676363636363637
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:7",
+              "pos": [
+                -0.8499999999999999,
+                0,
+                1.6390909090909096
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:8",
+              "pos": [
+                -0.8499999999999998,
+                0,
+                1.6018181818181823
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:9",
+              "pos": [
+                -0.8499999999999996,
+                0,
+                1.564545454545455
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:10",
+              "pos": [
+                -0.8499999999999995,
+                0,
+                1.5272727272727276
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:front-clearance:indigo-front:11",
+              "pos": [
+                -0.8499999999999994,
+                0,
+                1.4900000000000002
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:1",
+              "pos": [
+                -0.8692307692307687,
+                0,
+                1.5215384615384617
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:2",
+              "pos": [
+                -0.888461538461538,
+                0,
+                1.5530769230769232
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:3",
+              "pos": [
+                -0.9076923076923072,
+                0,
+                1.5846153846153848
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:4",
+              "pos": [
+                -0.9269230769230765,
+                0,
+                1.6161538461538463
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:5",
+              "pos": [
+                -0.9461538461538458,
+                0,
+                1.6476923076923078
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:6",
+              "pos": [
+                -0.9653846153846151,
+                0,
+                1.6792307692307693
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:7",
+              "pos": [
+                -0.9846153846153843,
+                0,
+                1.7107692307692308
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:8",
+              "pos": [
+                -1.0038461538461536,
+                0,
+                1.7423076923076923
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:9",
+              "pos": [
+                -1.023076923076923,
+                0,
+                1.7738461538461539
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:10",
+              "pos": [
+                -1.0423076923076924,
+                0,
+                1.8053846153846154
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:11",
+              "pos": [
+                -1.0615384615384618,
+                0,
+                1.8369230769230769
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:12",
+              "pos": [
+                -1.0807692307692311,
+                0,
+                1.8684615384615384
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:indigo-front:plaza-left:13",
+              "pos": [
+                -1.1000000000000005,
+                0,
+                1.9
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            }
+          ]
+        },
+        "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+        "limitations": [
+          "Not an enterable-room certification.",
+          "Only supplied neighbors and declared flat terrain checked."
+        ],
+        "proofFrameY": 0
+      }
+    }
+  ],
+  "geometryReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/dyehouse-geometry.json",
+        "sha256": "596f6543098fd17e2b66d941e38e24febec6da73b70680d5a7eba85df90bda78"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/dyehouse-geometry.json",
+      "sha256": "596f6543098fd17e2b66d941e38e24febec6da73b70680d5a7eba85df90bda78"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-C/review.md",
+        "sha256": "089b1fc1b3a1b02a5ae4a047a0724fd896b61a8aae748aed04853d50f72c3e50"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-front.png",
+        "sha256": "5f1085b16f44c1bb4c393406c7de841e806e9dfb3523276c4293da3e337ff6e4"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-aerial.png",
+        "sha256": "8a04972b2230942ee0e15230a68d91a68f370c8691d040460ba4483d2acb9523"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-interior.png",
+        "sha256": "b88342ce4a3fed5e09024083cdff4e301c49362d8f464bca672c83fd3bf0ea1e"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "neighbors": [
+    {
+      "id": "nx-approach-sw-lane-003",
+      "sha256": "00904e9873f9180f8ab36025939ec6f0c2310b110aa32dd6d47875feda558a8d",
+      "lib": "store/fb04a144cc1fc458.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-artwalk-b9-dyehouse-crossing-loom",
+      "sha256": "a8ff818d13b577994dd3aef0aaa2201ca3944b17ff217542dee741ca817e3b6b",
+      "lib": "store/6c3c85dee69191cf.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-gallery-mosaic-0059",
+      "sha256": "e519b288ad2720fccafeea0c73ce7536a9c035e6b4af6e465a35ff6b7fcf96d6",
+      "lib": "store/505bec0b589f786f.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-sign-dyer-001",
+      "sha256": "e436b0caa7668e374750db23ddce126a735475a03e51dac0a3ea45b34f3afaea",
+      "lib": "store/8ce2081f7d2c6858.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-dyehouse-l",
+      "sha256": null,
+      "lib": null,
+      "decoded": false
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-row-cottage",
+      "sha256": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+      "lib": "store/0558b5f41bda0777.glb",
+      "decoded": true
+    }
+  ]
+}

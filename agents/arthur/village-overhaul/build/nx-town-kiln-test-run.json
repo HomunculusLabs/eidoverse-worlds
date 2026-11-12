@@ -1,0 +1,24 @@
+{
+  "sha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+  "status": "PASS",
+  "runs": [
+    {
+      "command": "--validate",
+      "exitCode": 0,
+      "stdout": "{\"id\":\"nx-town-kiln\",\"sha256\":\"3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03\",\"issues\":{\"numErrors\":0,\"numWarnings\":0,\"numInfos\":0,\"numHints\":0,\"messages\":[],\"truncated\":false}}\n",
+      "stderr": ""
+    },
+    {
+      "command": "--test",
+      "exitCode": 0,
+      "stdout": "{\"id\":\"nx-town-kiln\",\"status\":\"PASS\",\"collider\":{\"exact\":false,\"pillar\":true},\"walks\":[{\"from\":\"public-approach\",\"to\":\"furnace-view-and-stoking\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0},{\"from\":\"furnace-view-and-stoking\",\"to\":\"limestone-charge\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0},{\"from\":\"limestone-charge\",\"to\":\"furnace-return\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0},{\"from\":\"furnace-return\",\"to\":\"slaking-front\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0},{\"from\":\"slaking-front\",\"to\":\"furnace-return\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0},{\"from\":\"furnace-return\",\"to\":\"limestone-charge\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0},{\"from\":\"limestone-charge\",\"to\":\"furnace-view-and-stoking\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0},{\"from\":\"furnace-view-and-stoking\",\"to\":\"public-approach\",\"pass\":true,\"maxPush\":0,\"geometryHits\":0}],\"protected\":[{\"id\":\"nx-tower\",\"pass\":true,\"pairs\":0,\"allowed\":{},\"bad\":[]},{\"id\":\"nx-gallery-mosaic-0036\",\"pass\":true,\"pairs\":0,\"allowed\":{},\"bad\":[]},{\"id\":\"nx-town-roads\",\"pass\":true,\"pairs\":0,\"allowed\":{},\"bad\":[]},{\"id\":\"nx-approach-ne-lane-002\",\"pass\":true,\"pairs\":0,\"allowed\":{},\"bad\":[]},{\"id\":\"nx-dress-charcoal\",\"pass\":true,\"pairs\":0,\"allowed\":{},\"bad\":[]},{\"id\":\"nx-artwalk-b12-kiln-heat-contours\",\"pass\":true,\"pairs\":40,\"allowed\":{\"four-exact-mount-pad-volumes\":40},\"bad\":[]},{\"id\":\"nx-sign-kiln-001\",\"pass\":true,\"pairs\":148,\"allowed\":{\"two-sign-arm-socket-volumes\":148},\"bad\":[]},{\"id\":\"nx-town-longhouse\",\"pass\":true,\"pairs\":0,\"allowed\":{},\"bad\":[]}],\"rays\":[{\"name\":\"heat-ring-mount-backing\",\"origin\":[-0.72,0.22,1.22],\"direction\":[0,0,-1],\"nearest\":0.06399998188018796,\"pass\":true},{\"name\":\"heat-ring-mount-backing\",\"origin\":[-0.72,1.42,1.22],\"direction\":[0,0,-1],\"nearest\":0.06399998188018796,\"pass\":true},{\"name\":\"heat-ring-mount-backing\",\"origin\":[0.72,0.22,1.22],\"direction\":[0,0,-1],\"nearest\":0.06399998188018796,\"pass\":true},{\"name\":\"heat-ring-mount-backing\",\"origin\":[0.72,1.42,1.22],\"direction\":[0,0,-1],\"nearest\":0.06399998188018796,\"pass\":true},{\"name\":\"sign-arm-backing\",\"origin\":[-0.24,2.33,0.95],\"direction\":[0,0,-1],\"nearest\":0.09999997615814205,\"pass\":true},{\"name\":\"sign-arm-backing\",\"origin\":[0.24,2.33,0.95],\"direction\":[0,0,-1],\"nearest\":0.09999997615814205,\"pass\":true},{\"name\":\"open-furnace-not-a-flat-plaque\",\"origin\":[0,0.77,1.35],\"direction\":[0,0,-1],\"nearest\":2.009738564413867,\"pass\":true},{\"name\":\"throat-depth\",\"origin\":[0,3.25,0],\"direction\":[0,-1,0],\"nearest\":3.0999999940395355,\"pass\":true}]}\n{\"id\":\"nx-town-kiln\",\"sha256\":\"3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03\",\"status\":\"PASS\",\"checks\":[{\"name\":\"ladder-top-masonry-support\",\"x\":-0.6,\"z\":-0.44,\"hitY\":3.0999999046325684,\"pass\":true},{\"name\":\"ladder-top-masonry-support\",\"x\":-0.6,\"z\":0.04,\"hitY\":3.0999999046325684,\"pass\":true},{\"name\":\"named-fire-group-and-emissive-heat\",\"pass\":true},{\"name\":\"retained-warm-lantern-anchor\",\"pass\":true}]}\n",
+      "stderr": ""
+    },
+    {
+      "command": "--assembly",
+      "exitCode": 0,
+      "stdout": "{\"assembly\":\"/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-kiln-assembly-before.glb\",\"members\":[\"nx-artwalk-b12-kiln-heat-contours\",\"nx-sign-kiln-001\"]}\n{\"assembly\":\"/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-kiln-assembly-final.glb\",\"members\":[\"nx-artwalk-b12-kiln-heat-contours\",\"nx-sign-kiln-001\"]}\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "name": "belltower",
+    "view": "front",
+    "file": "reviews/parent-native/batch-D/belltower-front.png",
+    "sha256": "29590d5a4c23217366c8aba18c00e7095854b31158d455557d32fc7bf3e08cf9",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-belltower.glb",
+    "renderModelSha256": "9117a94a30cf9851bb5e7919c57fbabce2d1313966c5e367f454dbe5325bcdf4",
+    "renderManifest": "reviews/nx-town-belltower-supplement-final/render-manifest.json"
+  },
+  {
+    "name": "belltower",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-D/belltower-aerial.png",
+    "sha256": "98b318688b638795d578b255647e008f4a2338037de30b697482817a55769079",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-belltower.glb",
+    "renderModelSha256": "9117a94a30cf9851bb5e7919c57fbabce2d1313966c5e367f454dbe5325bcdf4",
+    "renderManifest": "reviews/nx-town-belltower-supplement-final/render-manifest.json"
+  },
+  {
+    "name": "belltower",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-D/belltower-interior.png",
+    "sha256": "b5cf1322fdee5a09c44627378e9641188bd20f3f8dc66879cb948c0043df229b",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-belltower.glb",
+    "renderModelSha256": "9117a94a30cf9851bb5e7919c57fbabce2d1313966c5e367f454dbe5325bcdf4",
+    "renderManifest": "reviews/nx-town-belltower-supplement-final/render-manifest.json"
+  },
+  {
+    "name": "tower",
+    "view": "front",
+    "file": "reviews/parent-native/batch-D/tower-front.png",
+    "sha256": "d426671b4d1f6888350652f028c14e94eab717a04d1608f56a8ac4acdfa2bafc",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-tower.glb",
+    "renderModelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+    "renderManifest": "reviews/nx-tower-supplement-final/render-manifest.json"
+  },
+  {
+    "name": "tower",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-D/tower-aerial.png",
+    "sha256": "7d552f89f9000a2568e0a6bf69d7de74a8f28adbe350c0b767d0130bbd77911a",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-tower.glb",
+    "renderModelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+    "renderManifest": "reviews/nx-tower-supplement-final/render-manifest.json"
+  },
+  {
+    "name": "tower",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-D/tower-interior.png",
+    "sha256": "1e50ca6773bd6453ca8ad6b3c22df069f7976afabb1e7b0e8ae5c866e3f7cb4a",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-tower.glb",
+    "renderModelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+    "renderManifest": "reviews/nx-tower-supplement-final/render-manifest.json"
+  },
+  {
+    "name": "shrine",
+    "view": "front",
+    "file": "reviews/parent-native/batch-D/shrine-front.png",
+    "sha256": "d32a3a2c43a163f9336a68e2cd389bfaffa7831df3b90e2f7abb7cfe5a908123",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-shrine-after-assembly.glb",
+    "renderModelSha256": "0074b32b0233505a4799fe4c08533289ad5e5d22b11ec3b34c6c70b393762d9a",
+    "renderManifest": "reviews/nx-town-shrine-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "shrine",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-D/shrine-aerial.png",
+    "sha256": "f6924b3d506711535cd1a34355e630b4aac706434ec8c7ca704936855c61db91",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-shrine-after-assembly.glb",
+    "renderModelSha256": "0074b32b0233505a4799fe4c08533289ad5e5d22b11ec3b34c6c70b393762d9a",
+    "renderManifest": "reviews/nx-town-shrine-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "shrine",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-D/shrine-interior.png",
+    "sha256": "429c9ae1fdd89012c7ba88f06f9ce2375a91b8a29f9ac58af8167d360805dadb",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-shrine-after-assembly.glb",
+    "renderModelSha256": "0074b32b0233505a4799fe4c08533289ad5e5d22b11ec3b34c6c70b393762d9a",
+    "renderManifest": "reviews/nx-town-shrine-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "northgate",
+    "view": "front",
+    "file": "reviews/parent-native/batch-D/northgate-front.png",
+    "sha256": "8519fda4dcb4eef39a42c5c42ff4fd1238defb5c7939d252a8c95505d656d969",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-n-after-assembly.glb",
+    "renderModelSha256": "df7edc81f04913f47be0f886840620524f9555dea02de95d48dbc22654e87dc6",
+    "renderManifest": "reviews/nx-town-gate-n-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "northgate",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-D/northgate-aerial.png",
+    "sha256": "ff0a7c04508d43e4f77ea585165a13bc25dbca09ea059808edb62a6bbf5746e7",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-n-after-assembly.glb",
+    "renderModelSha256": "df7edc81f04913f47be0f886840620524f9555dea02de95d48dbc22654e87dc6",
+    "renderManifest": "reviews/nx-town-gate-n-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "southgate",
+    "view": "front",
+    "file": "reviews/parent-native/batch-D/southgate-front.png",
+    "sha256": "cfd267c3b0b4636e756e9346ab09efae9f5a5a16d5b1ae429cd95b80e6221281",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-s-after-assembly.glb",
+    "renderModelSha256": "d0202681c6fa8e0146b2ae28fee5b4620b944958261d39c99894e20f2f65fec1",
+    "renderManifest": "reviews/nx-town-gate-s-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "southgate",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-D/southgate-aerial.png",
+    "sha256": "b6dc242534c0497d724dea19afd9d2639a608092edfa26febb0134c457dd948c",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-s-after-assembly.glb",
+    "renderModelSha256": "d0202681c6fa8e0146b2ae28fee5b4620b944958261d39c99894e20f2f65fec1",
+    "renderManifest": "reviews/nx-town-gate-s-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "eastgate",
+    "view": "front",
+    "file": "reviews/parent-native/batch-D/eastgate-front.png",
+    "sha256": "fb0eb43bb8317d49540d2622391a54c38c4477c6a71570bfec350af4204368a5",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-e-after-assembly.glb",
+    "renderModelSha256": "0adb8a87a0efc9bc927e8d8a42fcbb7f096a1caa603045ee07a9998c862cd584",
+    "renderManifest": "reviews/nx-town-gate-e-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "eastgate",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-D/eastgate-aerial.png",
+    "sha256": "e1ec87e44a10faac20fc493ba4856a36be4dc9b07c9dfc55635f392f73786291",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-e-after-assembly.glb",
+    "renderModelSha256": "0adb8a87a0efc9bc927e8d8a42fcbb7f096a1caa603045ee07a9998c862cd584",
+    "renderManifest": "reviews/nx-town-gate-e-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "westgate",
+    "view": "front",
+    "file": "reviews/parent-native/batch-D/westgate-front.png",
+    "sha256": "08e61ace0c53caf79cf9b64ee34593dc00b228d78c904a9f8761ea31925725f1",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-w-after-assembly.glb",
+    "renderModelSha256": "050e6f545d367b5371f7865633f4ffbe639925ab7829b8905b64ffbb94f79d5e",
+    "renderManifest": "reviews/nx-town-gate-w-after-assembly/render-manifest.json"
+  },
+  {
+    "name": "westgate",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-D/westgate-aerial.png",
+    "sha256": "338d1fc5b85c74403f0dd2faf6bdedba29f78a3c13ec7e075950b6b36588230b",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-gate-w-after-assembly.glb",
+    "renderModelSha256": "050e6f545d367b5371f7865633f4ffbe639925ab7829b8905b64ffbb94f79d5e",
+    "renderManifest": "reviews/nx-town-gate-w-after-assembly/render-manifest.json"
+  }
+]

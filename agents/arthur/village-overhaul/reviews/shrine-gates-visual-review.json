@@ -1,0 +1,300 @@
+{
+  "method": "functions.vision_analyze returned auxiliary text analysis, not native images; no native visual acceptance claimed",
+  "status": "AUXILIARY_REVIEW_ADVISORY_PASS_PARENT_INDEPENDENT_REVIEW_PENDING",
+  "allBeforeAndAfterAssemblyPanelsInspected": true,
+  "inspectedContactSheets": [
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-shrine-before-assembly/contact-sheet.jpg",
+      "sha256": "aeafb6976bcfea7192cbc13531cfcf000447397e206335b88cbdc799dbdfa6a5"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-shrine-after-assembly/contact-sheet.jpg",
+      "sha256": "4bfaf9afdd1514503ddc3163b4379c4ae1dcba5998c4c6a3a404504bdf80c2fa"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-n-before-assembly/contact-sheet.jpg",
+      "sha256": "4a9cf04a1907a36f89b054a410dc85578fc6a4882c21eb69e94b0515bacbde43"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-n-after-assembly/contact-sheet.jpg",
+      "sha256": "494ddd2e21d465b435528cffad07539e4b1892585d29a0ceeb201aa45e2f9356"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-s-before-assembly/contact-sheet.jpg",
+      "sha256": "11a2f7acb594b77f5c82d8b0e0ae449c05195b26d5266dcfc005508ba3f64911"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-s-after-assembly/contact-sheet.jpg",
+      "sha256": "968dc75ef6ead50ac3b5d2125226e721c462bee117ea6460a9b203bf960e2ece"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-e-before-assembly/contact-sheet.jpg",
+      "sha256": "7e82c754781c82942c8add4a358275331ba1844993d4dc7f4b26f87ffea44919"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-e-after-assembly/contact-sheet.jpg",
+      "sha256": "62669a98a3b710628c5b310fac1c7a7d52bba99e483f16c5341bcf4469e71359"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-w-before-assembly/contact-sheet.jpg",
+      "sha256": "b65f86987918e7b1d5ed701c5989bc05c35b3af912c4cd5a0f80e1fa7ca55d3e"
+    },
+    {
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-w-after-assembly/contact-sheet.jpg",
+      "sha256": "e620d9fffa1b29ba6f70003e3a3d07a0d04591b0b93f1b2272e752c8787ae7f5"
+    }
+  ],
+  "observations": {
+    "nx-town-shrine": "All nine final assembly panels reviewed by auxiliary image analysis: substantial quiet non-enterable memorial altar; bread/water/single tiny votive meaningful; old star artwork exposed, prominent inherited cantilever; no demonstrated float or clipping. Giant initial flame corrected and absent in final frames.",
+    "nx-town-gate-n": "All nine final assembly panels reviewed by auxiliary image analysis: grounded portal, exposed gold relief and historical ground strip, coherent shallow slate cap, no observed float/interpenetration. Interior framing crops structural edges; night limited.",
+    "nx-town-gate-s": "All nine final assembly panels reviewed by auxiliary image analysis: coherent stone/timber/slate, intact reverse-facing tidal reliefs, clean passage silhouette, no observed float/interpenetration.",
+    "nx-town-gate-e": "All nine final assembly panels reviewed by auxiliary image analysis: dawn fan seated/exposed on existing dark backing, coherent architecture and grounded plinths, no observed clipping.",
+    "nx-town-gate-w": "All nine final assembly panels reviewed by auxiliary image analysis: dusk arc exposed, clean passage silhouette, seated backing, no observed float/interpenetration."
+  },
+  "baselineSummary": "All nine panels of each before assembly inspected. Baseline shrine fragmented columns/altar/bench with obscured stars; gate weak beam bearing, repeated bands/finials, hanging dark plaque. Auxiliary suggestions that dark baseline backs imply missing materials are not accepted: lighting alone can create those appearances.",
+  "comparisons": [
+    {
+      "subject": "shrine",
+      "matchedCamera": true,
+      "stages": [
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/shrine-before",
+          "manifestSha256": "9ab2c209430dded0197c6ca04530b5092258178ff6ef56316c3d3b2ae7fee4b3",
+          "modelSha256": "bd05ebe9ec4333fa304123ad5050909822765408dfd77c5fc7331c08723dfa10",
+          "cameraSha256": "a7582bf39a86d55689fb443f803aadd3e2779a26716fbc3161a4719cc56fb323",
+          "frames": 9,
+          "triangles": 808,
+          "warnings": [
+            "[.WebGL-0x114004f7200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x114004f7200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x114004f7200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x114004f7200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        },
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/shrine-after",
+          "manifestSha256": "4e41f458a8116d46fc7a1ef781807fab35045a658f8e4215abaf87a26a3d6939",
+          "modelSha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+          "cameraSha256": "a7582bf39a86d55689fb443f803aadd3e2779a26716fbc3161a4719cc56fb323",
+          "frames": 9,
+          "triangles": 2324,
+          "warnings": [
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "gates",
+      "matchedCamera": true,
+      "stages": [
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/gates-before",
+          "manifestSha256": "a8602bf230cf64e8c5cf1fb099038918fef3a019885a5d9302f13371c7456fe5",
+          "modelSha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 308,
+          "warnings": [
+            "[.WebGL-0x11c004f6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        },
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/gates-after",
+          "manifestSha256": "0083a30ddfad02c8e90479fe6bd54b0caf2dc00844f203893f9efd09698b99dc",
+          "modelSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 484,
+          "warnings": [
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "nx-town-shrine-assembly",
+      "matchedCamera": true,
+      "stages": [
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-shrine-before-assembly",
+          "manifestSha256": "8b6e5c4410e40559ba615c4e68fc845ee7d48e1d15302b47f176a0f42dc92086",
+          "modelSha256": "5e048c94ad5184235a4d02ca92827599b18d7ca8659abb38f1fe086f2b19c828",
+          "cameraSha256": "a7582bf39a86d55689fb443f803aadd3e2779a26716fbc3161a4719cc56fb323",
+          "frames": 9,
+          "triangles": 1032,
+          "warnings": [
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        },
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-shrine-after-assembly",
+          "manifestSha256": "1c539e7c34584708e91c22dbc86c80ccfa63556843e43e537232ede2acf50665",
+          "modelSha256": "0074b32b0233505a4799fe4c08533289ad5e5d22b11ec3b34c6c70b393762d9a",
+          "cameraSha256": "a7582bf39a86d55689fb443f803aadd3e2779a26716fbc3161a4719cc56fb323",
+          "frames": 9,
+          "triangles": 2548,
+          "warnings": [
+            "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x10c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "nx-town-gate-n-assembly",
+      "matchedCamera": true,
+      "stages": [
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-n-before-assembly",
+          "manifestSha256": "831c9261036cab43316b6f299fab9802afa1bb2b1cffa78b77aef8f2b560c79e",
+          "modelSha256": "d77ad2279f4c2a7c8504a121ac53f90fa32fddcd994cd5db45d1476cbf567304",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 752,
+          "warnings": [
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        },
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-n-after-assembly",
+          "manifestSha256": "801babe82ddce6352dbeb31e55b653914206b8a3f4d46d28025f1127418e6797",
+          "modelSha256": "df7edc81f04913f47be0f886840620524f9555dea02de95d48dbc22654e87dc6",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 928,
+          "warnings": [
+            "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "nx-town-gate-s-assembly",
+      "matchedCamera": true,
+      "stages": [
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-s-before-assembly",
+          "manifestSha256": "af9c02cb2d3331342eda821db0efb2016517aa495bdc7bd55ac05daa6bac549d",
+          "modelSha256": "87a0abebd98d95667bfc91b34dc88b97fd2a47ca2518be59589363b9389ab271",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 524,
+          "warnings": [
+            "[.WebGL-0x11c004e1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004e1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004e1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x11c004e1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        },
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-s-after-assembly",
+          "manifestSha256": "ca1b46044bbdff63027bb853b7e3e010398cfdf55b3e65343e1548329b9ad50e",
+          "modelSha256": "d0202681c6fa8e0146b2ae28fee5b4620b944958261d39c99894e20f2f65fec1",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 700,
+          "warnings": [
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "nx-town-gate-e-assembly",
+      "matchedCamera": true,
+      "stages": [
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-e-before-assembly",
+          "manifestSha256": "11f1c6c190b4fa968bc964bb56b0b5d435d40741eea01a00ad43a0d1cd2f8952",
+          "modelSha256": "e607a64a803fdd7442ed5f78818d0b6f9167b271ff3d7b74ded181bc17a206dc",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 416,
+          "warnings": [
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        },
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-e-after-assembly",
+          "manifestSha256": "c4e62314f2eedcc21dc97827d500540267a6599afa599a0970d949a8af74078a",
+          "modelSha256": "0adb8a87a0efc9bc927e8d8a42fcbb7f096a1caa603045ee07a9998c862cd584",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 592,
+          "warnings": [
+            "[.WebGL-0x124004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x124004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x124004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x124004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "nx-town-gate-w-assembly",
+      "matchedCamera": true,
+      "stages": [
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-w-before-assembly",
+          "manifestSha256": "6ecbe764a9a2ba72fca2c331877439e3214a24df70a38a694baaa0b99148b2a1",
+          "modelSha256": "5102bc8e92fd6f6bd374c56f522527bd0d8cf9ff6e53e40924bfe8f9079d2292",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 620,
+          "warnings": [
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x104004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        },
+        {
+          "directory": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-gate-w-after-assembly",
+          "manifestSha256": "06d6e76094a428dc6db04b7ad18bbdadaec6a99008be1dc4db0c2672808937e8",
+          "modelSha256": "050e6f545d367b5371f7865633f4ffbe639925ab7829b8905b64ffbb94f79d5e",
+          "cameraSha256": "8479eb062c941c5581051eb736b257495a7c41dd53ec11ce354fed85ae41eceb",
+          "frames": 9,
+          "triangles": 796,
+          "warnings": [
+            "[.WebGL-0x12c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x12c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x12c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+            "[.WebGL-0x12c004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Local solo lighting and flat ground, not live snapshots.",
+    "Review composites include only attached artworks; collision tests include all parent-supplied broadphase neighbors.",
+    "Dark night view and cropped generic interior views limit visual inspection; all full-resolution PNGs remain available."
+  ]
+}

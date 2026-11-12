@@ -1,0 +1,248 @@
+{
+  "status": "PASS",
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "acceptance": "Existing parent-native/batch-D/review.md Tower Acceptable, revalidated against original exact source-model and three image pins.",
+  "bindings": [
+    {
+      "name": "tower",
+      "view": "front",
+      "file": "reviews/parent-native/batch-D/tower-front.png",
+      "sha256": "d426671b4d1f6888350652f028c14e94eab717a04d1608f56a8ac4acdfa2bafc",
+      "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-tower.glb",
+      "renderModelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "renderManifest": "reviews/nx-tower-supplement-final/render-manifest.json"
+    },
+    {
+      "name": "tower",
+      "view": "aerial",
+      "file": "reviews/parent-native/batch-D/tower-aerial.png",
+      "sha256": "7d552f89f9000a2568e0a6bf69d7de74a8f28adbe350c0b767d0130bbd77911a",
+      "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-tower.glb",
+      "renderModelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "renderManifest": "reviews/nx-tower-supplement-final/render-manifest.json"
+    },
+    {
+      "name": "tower",
+      "view": "interior",
+      "file": "reviews/parent-native/batch-D/tower-interior.png",
+      "sha256": "1e50ca6773bd6453ca8ad6b3c22df069f7976afabb1e7b0e8ae5c866e3f7cb4a",
+      "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-tower.glb",
+      "renderModelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "renderManifest": "reviews/nx-tower-supplement-final/render-manifest.json"
+    }
+  ],
+  "visualFiles": [
+    {
+      "file": "reviews/parent-native/batch-D/review.md",
+      "sha256": "d9e5d107c40a5a20ad802a9eb7da2f3b3ac450055492cce8317346b5c21ef76f"
+    },
+    {
+      "file": "reviews/parent-native/batch-D/pins.json",
+      "sha256": "b595d1a8456b17bf21c7f775fc1c4f81eff3482f399bc78e2316ca4da27f54a8"
+    },
+    {
+      "file": "reviews/parent-native/batch-D/tower-front.png",
+      "sha256": "d426671b4d1f6888350652f028c14e94eab717a04d1608f56a8ac4acdfa2bafc"
+    },
+    {
+      "file": "reviews/parent-native/batch-D/tower-aerial.png",
+      "sha256": "7d552f89f9000a2568e0a6bf69d7de74a8f28adbe350c0b767d0130bbd77911a"
+    },
+    {
+      "file": "reviews/parent-native/batch-D/tower-interior.png",
+      "sha256": "1e50ca6773bd6453ca8ad6b3c22df069f7976afabb1e7b0e8ae5c866e3f7cb4a"
+    }
+  ],
+  "manifests": [
+    {
+      "manifest": {
+        "file": "reviews/nx-tower-before/render-manifest.json",
+        "sha256": "963cdbd85353a99f5537653e2749627bbae78a3bd27c6bb23afb294aad93730b"
+      },
+      "modelSha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+      "cameraSha256": "1612f43fbf2589a3d3554a1115df918101f897cf1d6b2cb58e7ce96e04e1421d",
+      "frames": [
+        {
+          "file": "reviews/nx-tower-before/front.png",
+          "sha256": "f0313c1387cc4ce7429ffc330d80435e0b1de58ff5768ce8be17755f230c8715"
+        },
+        {
+          "file": "reviews/nx-tower-before/right.png",
+          "sha256": "2fed7cf695f456a7a18d902dd1e34b893935e238845feac3d3a1b0661d03797f"
+        },
+        {
+          "file": "reviews/nx-tower-before/back.png",
+          "sha256": "1a0ce042dcf166e96e4c0e469f794e56d335a9c2543d8d2d1e1482b577bdf418"
+        },
+        {
+          "file": "reviews/nx-tower-before/left.png",
+          "sha256": "4f0d2206882fcf4746804a3072bacdec8e17a3181cb9d4f0fc0905757c7e9b54"
+        },
+        {
+          "file": "reviews/nx-tower-before/gameplay.png",
+          "sha256": "60012a2754b6d8a475c224c3b2a531e1fc2c707166cf2cf85a0a742feed7d8ad"
+        },
+        {
+          "file": "reviews/nx-tower-before/aerial.png",
+          "sha256": "f99c88cf0bf28ce8df7cad38c34243a1f1f0397befa4dfd78383023a9b591e63"
+        },
+        {
+          "file": "reviews/nx-tower-before/top.png",
+          "sha256": "403a682fc15d58fd9123141786cf03ba8c7b588eedf540816f6a398387fe8c76"
+        },
+        {
+          "file": "reviews/nx-tower-before/night.png",
+          "sha256": "65c7adc77e513d9a5c7d67eaf2ee9920e3c0c7abff5199f2daceb1b9cc8dfeb0"
+        },
+        {
+          "file": "reviews/nx-tower-before/interior.png",
+          "sha256": "538d4a9996e613f9767b61707f77d44c3f32ecd51309af35f9583ab600894e2c"
+        }
+      ]
+    },
+    {
+      "manifest": {
+        "file": "reviews/nx-tower-final/render-manifest.json",
+        "sha256": "20ac55be9442c47bb118c81ddbfb425c82536723f775b2bab978309d92194a6e"
+      },
+      "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "cameraSha256": "1612f43fbf2589a3d3554a1115df918101f897cf1d6b2cb58e7ce96e04e1421d",
+      "frames": [
+        {
+          "file": "reviews/nx-tower-final/front.png",
+          "sha256": "b12173aa31bb5fa1b08659bd37725fdf885af81f2ed43f7f54991ded9fda820c"
+        },
+        {
+          "file": "reviews/nx-tower-final/right.png",
+          "sha256": "aaf79608b8df0ff26e544e41b5ededc56a96797e6e5ccb8d0df8a29b26c93cee"
+        },
+        {
+          "file": "reviews/nx-tower-final/back.png",
+          "sha256": "a82ad759adc84aaa18a61f7af1f39dd9a09e966bf4cd87306a8581907b484e39"
+        },
+        {
+          "file": "reviews/nx-tower-final/left.png",
+          "sha256": "f729ea2f5a07acb052de4b1719bca8503715ef94e862a40d398955704d680825"
+        },
+        {
+          "file": "reviews/nx-tower-final/gameplay.png",
+          "sha256": "cd2cbb61410b202010345699cc4aef4392f36783e57c760b36fe0d10975171d6"
+        },
+        {
+          "file": "reviews/nx-tower-final/aerial.png",
+          "sha256": "395330dd5b2cbd91d75edbcd3547b6ee3edbeb41e34f50fa7f3b5a593c4627e8"
+        },
+        {
+          "file": "reviews/nx-tower-final/top.png",
+          "sha256": "1472e6e57a44bf4448228d2703881ec0a057b6866d1ca01cb82fa472b6636369"
+        },
+        {
+          "file": "reviews/nx-tower-final/night.png",
+          "sha256": "4b31aa04db7246e0a5558f862d0f2ff2db02fcadf9f26ca5f6dea0c6b7ed2973"
+        },
+        {
+          "file": "reviews/nx-tower-final/interior.png",
+          "sha256": "10917571843c4055c6479c20d7bca22a3af0ff65e2c8546af9d32143f68696b2"
+        }
+      ]
+    },
+    {
+      "manifest": {
+        "file": "reviews/nx-tower-supplement-final/render-manifest.json",
+        "sha256": "040e11a7d55fa7decf2fd1faebab2a585fb8029083e61b5735314a5bee51fc60"
+      },
+      "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "cameraSha256": "3fa22d9040be393f046237890f8386c1f88784e5173c19b1c7302578ffbd8a50",
+      "frames": [
+        {
+          "file": "reviews/nx-tower-supplement-final/front.png",
+          "sha256": "d426671b4d1f6888350652f028c14e94eab717a04d1608f56a8ac4acdfa2bafc"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/right.png",
+          "sha256": "95f0b35637878c6e47b08fef66e9dc68df2c278b202842b8a0595c45b520d236"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/back.png",
+          "sha256": "be2816a622c6fad132395e6f7eecda3263abd6f169834a30c3830ca88c09daa4"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/left.png",
+          "sha256": "5f98c974e2b0d8a6c8abb56a31a36a4f0b83b168a01cfe6bb234e3ff2e28a63a"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/gameplay.png",
+          "sha256": "2fcabc3b44950251c8cd5fde955c695157eab69feb50fc90c050c438f2da74e9"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/aerial.png",
+          "sha256": "7d552f89f9000a2568e0a6bf69d7de74a8f28adbe350c0b767d0130bbd77911a"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/top.png",
+          "sha256": "0a050b35aac9dcb3f82c21b6c2edc3942916e5a39edd61ca617a0a8bb34f4b1a"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/night.png",
+          "sha256": "8dd48a7e0c80a7ca9861aec367c12b1d41a4f1af42f0dfb7aebbdcff232bde96"
+        },
+        {
+          "file": "reviews/nx-tower-supplement-final/interior.png",
+          "sha256": "1e50ca6773bd6453ca8ad6b3c22df069f7976afabb1e7b0e8ae5c866e3f7cb4a"
+        }
+      ]
+    },
+    {
+      "manifest": {
+        "file": "reviews/nx-tower-ensemble-final/render-manifest.json",
+        "sha256": "f88eb83ed8df31f6bc002cb0eb71133ea0cfb598a79d16867dad1e6470d9cc13"
+      },
+      "modelSha256": "0d6f3d207d5d8136970ebad3836a4dce5981c5411edea5fb721e9dda43a4ef5a",
+      "cameraSha256": "3fa22d9040be393f046237890f8386c1f88784e5173c19b1c7302578ffbd8a50",
+      "frames": [
+        {
+          "file": "reviews/nx-tower-ensemble-final/front.png",
+          "sha256": "834cf555942196f59ba4c246d2df8f1a939b65bfe83cc8908c96d837fd08ce13"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/right.png",
+          "sha256": "19774e79994854b640132c8d799f051eac3f332536600598a23616f1b9efa947"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/back.png",
+          "sha256": "8be2defab1e778f74f2717f3d904b9ad55d2d0c0920b2d264de65953fd0b40f2"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/left.png",
+          "sha256": "493b196f0d7a8c17bfb3010ee97a8bf600ee30124ca14d8aa97e10a8e0a4c1a0"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/gameplay.png",
+          "sha256": "08729c3b203e185beebd87e84bc98ea2b6bd1c26c846dd33847a69166887ef99"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/aerial.png",
+          "sha256": "fa00611ad11bab04cba8e96d7c2a843daa06863c49c6cf446b320ca419a67895"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/top.png",
+          "sha256": "bf38ce449d17f979ab0cfa1f254cc327246eb1c1c1c769f722981c0ddf21cb9f"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/night.png",
+          "sha256": "9cd2b3b00c0b64bdafb52b86d247ac3f845aa06b559bd6860f8ecf6ef67ec29c"
+        },
+        {
+          "file": "reviews/nx-tower-ensemble-final/interior.png",
+          "sha256": "251e364bfa5ec0ad9e82e91cf8ccbc5d3ec0eb15e07404183003faa31abaab0c"
+        }
+      ]
+    }
+  ],
+  "inspectionRoute": "This draft task reread the parent native review and used auxiliary vision_analyze textual reinspection of its front/aerial/interior images; no new native-review claim.",
+  "correction": "Batch-D prose calls all renders ensembles; tower pins and HUD explicitly identify solo source-model renders. Treat this acceptance as native source-model architectural acceptance, not a neighbor-complete live ensemble review.",
+  "limits": [
+    "Rendered evidence is local, not in-world; parent fresh context visuals/readback remain required.",
+    "A stair-like shape in an image does not establish climbability."
+  ]
+}

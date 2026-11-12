@@ -1,0 +1,84 @@
+{
+  "host": {
+    "id": "nx-forge",
+    "lib": "store/620120c4d6f0b4a0.glb",
+    "kind": "thing",
+    "pos": [
+      22.11785473473295,
+      0,
+      -7.957568494595163
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:fire_fg_coals": {
+        "type": "bob",
+        "axis": "y",
+        "amp": 0.014,
+        "period": 1.8
+      },
+      "particles": {
+        "preset": "embers",
+        "origin": [
+          0,
+          0.45,
+          0.42
+        ],
+        "count": 84
+      }
+    },
+    "bbox": {
+      "min": [
+        -0.873,
+        -0.005,
+        -0.777
+      ],
+      "max": [
+        1.46,
+        2.1,
+        0.61
+      ],
+      "size": [
+        2.333,
+        2.105,
+        1.387
+      ],
+      "center": [
+        0.294,
+        1.047,
+        -0.083
+      ]
+    },
+    "tris": 964
+  },
+  "kept": [
+    {
+      "name": "fire_fg_coals",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "children": [
+        "fire_fg_coals_0",
+        "fire_fg_coals_1"
+      ]
+    }
+  ],
+  "originalSha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+  "note": "Outdoor workstation; height increased but footprint remains below exact-room gate. Never authorize interior walking."
+}

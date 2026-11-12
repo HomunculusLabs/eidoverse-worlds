@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-09-08T04:17:43.536Z",
+  "publicChecks": [
+    {
+      "name": "colliders.js",
+      "url": "https://eidoverse.billding.dev/lib/colliders.js",
+      "httpStatus": 200,
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+      "bytes": 42422,
+      "copy": {
+        "file": "reviews/parent-scholar-draft/runtime/colliders.js",
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+      }
+    },
+    {
+      "name": "supportclass.js",
+      "url": "https://eidoverse.billding.dev/lib/supportclass.js",
+      "httpStatus": 200,
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+      "bytes": 5459,
+      "copy": {
+        "file": "reviews/parent-scholar-draft/runtime/supportclass.js",
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+      }
+    }
+  ],
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "parentManifest": {
+    "file": "../cabin-overhaul/runtime/manifest.json",
+    "sha256": "17cc1515735bf558a6c20b0a693c87e59a811c57f874ea0a80923617538f2a36"
+  },
+  "limitations": [
+    "CPU public collider/support-class modules with repository core-stub and local Three/BVH bindings; not a full public browser or live walking session."
+  ]
+}

@@ -1,0 +1,932 @@
+{
+  "status": "FAIL",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-tower",
+  "bounds": {
+    "min": [
+      -3.25,
+      -0.20000000298023224,
+      -3.25
+    ],
+    "max": [
+      3.50717830657959,
+      8.475000381469727,
+      3.5999999046325684
+    ]
+  },
+  "triangles": 21980,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": true,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "scholar-ground-entry",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.7,
+        0.2,
+        2.32
+      ],
+      "max": [
+        0.7,
+        2.4000000000000004,
+        3.1
+      ],
+      "hits": 32,
+      "examples": [
+        {
+          "node": "tw3_0",
+          "triangle": 176,
+          "intersectionMin": [
+            -0.699,
+            2.200106143951416,
+            2.5872016093662284
+          ],
+          "intersectionMax": [
+            -0.3151867389678955,
+            2.3990000000000005,
+            2.6899831295013428
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 180,
+          "intersectionMin": [
+            -0.699,
+            2.200106143951416,
+            2.8150837950828755
+          ],
+          "intersectionMax": [
+            -0.3722357749938965,
+            2.3990000000000005,
+            2.902588129043579
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 181,
+          "intersectionMin": [
+            -0.699,
+            2.200106143951416,
+            2.708680313127808
+          ],
+          "intersectionMax": [
+            -0.3722357749938965,
+            2.200106143951416,
+            2.902588129043579
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 182,
+          "intersectionMin": [
+            -0.699,
+            2.200106143951416,
+            2.5872016093662284
+          ],
+          "intersectionMax": [
+            -0.3151867389678955,
+            2.200106143951416,
+            2.902588129043579
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 183,
+          "intersectionMin": [
+            -0.3722357749938965,
+            2.200106143951416,
+            2.6899831295013428
+          ],
+          "intersectionMax": [
+            -0.3151867389678955,
+            2.3990000000000005,
+            2.902588129043579
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 184,
+          "intersectionMin": [
+            -0.36222884374381187,
+            2.200106143951416,
+            2.677385703799526
+          ],
+          "intersectionMax": [
+            -0.3151867389678955,
+            2.3990000000000005,
+            2.6899831295013428
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 187,
+          "intersectionMin": [
+            -0.3917245864868164,
+            2.200106143951416,
+            2.6800615787506104
+          ],
+          "intersectionMax": [
+            0.3917243480682373,
+            2.3990000000000005,
+            2.6800615787506104
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 188,
+          "intersectionMin": [
+            -0.3917245864868164,
+            2.200106143951416,
+            2.6800615787506104
+          ],
+          "intersectionMax": [
+            -0.3917245864868164,
+            2.3990000000000005,
+            2.693738145333565
+          ]
+        }
+      ]
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "exterior-terrain-before-stoop",
+      "to": "stoop",
+      "pass": false,
+      "steps": 18,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.6645352591003757e-15,
+      "floorError": 0.2,
+      "geometryHits": 0,
+      "arrived": [
+        0.4,
+        0,
+        3.2500000000000027
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "stoop",
+      "to": "entry",
+      "pass": false,
+      "steps": 28,
+      "maxPush": 0,
+      "maxRise": 0.20001189410686493,
+      "minY": 0,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 5.773159728050814e-15,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        0.4,
+        0.20001189410686493,
+        2.149999999999994
+      ],
+      "issues": [
+        {
+          "sample": 1,
+          "pos": [
+            0.4,
+            0,
+            3.210714285714288
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 2,
+          "pos": [
+            0.4,
+            0,
+            3.1714285714285735
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 3,
+          "pos": [
+            0.4,
+            0,
+            3.132142857142859
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 4,
+          "pos": [
+            0.4,
+            0,
+            3.0928571428571443
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 5,
+          "pos": [
+            0.4,
+            0,
+            3.0535714285714297
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 6,
+          "pos": [
+            0.4,
+            0,
+            3.014285714285715
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        }
+      ]
+    },
+    {
+      "direction": "in",
+      "from": "entry",
+      "to": "reading-room",
+      "pass": true,
+      "steps": 77,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20001189410686493,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.886579864025407e-15,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        0.4,
+        0.20001189410686493,
+        -0.8999999999999971
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "reading-room",
+      "to": "desk-approach",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20001189410686493,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.2887833992611187e-16,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        -0.24999999999999994,
+        0.20001189410686493,
+        -1.0500000000000003
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "desk-approach",
+      "to": "library-center",
+      "pass": true,
+      "steps": 23,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20001189410686493,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 9.453208419344607e-16,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        0.4000000000000001,
+        0.20001189410686493,
+        -0.45000000000000095
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "library-center",
+      "to": "ladder-staging",
+      "pass": true,
+      "steps": 48,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20001189410686493,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 6.661338147750939e-16,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        1.7000000000000006,
+        0.20001189410686493,
+        0.92
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "ladder-staging",
+      "to": "library-center",
+      "pass": true,
+      "steps": 48,
+      "maxPush": 0,
+      "maxRise": 0.000011894106864918097,
+      "minY": 0.2,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 9.550499576785472e-16,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        0.39999999999999925,
+        0.20001189410686493,
+        -0.45000000000000057
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "library-center",
+      "to": "desk-approach",
+      "pass": true,
+      "steps": 23,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20001189410686493,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.220446049250313e-16,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        -0.25,
+        0.20001189410686493,
+        -1.0499999999999998
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "desk-approach",
+      "to": "reading-room",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20001189410686493,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 3.3306690738754696e-16,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        0.4,
+        0.20001189410686493,
+        -0.9000000000000004
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "reading-room",
+      "to": "entry",
+      "pass": true,
+      "steps": 77,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20001189410686493,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 8.881784197001252e-16,
+      "floorError": 0.000011894106864918097,
+      "geometryHits": 0,
+      "arrived": [
+        0.4,
+        0.20001189410686493,
+        2.150000000000001
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "entry",
+      "to": "stoop",
+      "pass": false,
+      "steps": 28,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0.20001189410686493,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 3.1086244689504383e-15,
+      "floorError": 0.2,
+      "geometryHits": 0,
+      "arrived": [
+        0.4,
+        0,
+        3.249999999999997
+      ],
+      "issues": [
+        {
+          "sample": 14,
+          "pos": [
+            0.4,
+            0,
+            2.699999999999999
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 15,
+          "pos": [
+            0.4,
+            0,
+            2.739285714285713
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 16,
+          "pos": [
+            0.4,
+            0,
+            2.778571428571427
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 17,
+          "pos": [
+            0.4,
+            0,
+            2.8178571428571413
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 18,
+          "pos": [
+            0.4,
+            0,
+            2.8571428571428554
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        },
+        {
+          "sample": 19,
+          "pos": [
+            0.4,
+            0,
+            2.8964285714285696
+          ],
+          "push": 0,
+          "ground": 0,
+          "geometry": []
+        }
+      ]
+    },
+    {
+      "direction": "out",
+      "from": "stoop",
+      "to": "exterior-terrain-before-stoop",
+      "pass": true,
+      "steps": 18,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.220446049250313e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0.4,
+        0,
+        3.9500000000000024
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-shutters",
+      "min": [
+        -0.616428,
+        4,
+        2.749535
+      ],
+      "max": [
+        0.33,
+        4.5949903,
+        2.9279898
+      ],
+      "allowance": null,
+      "hits": 40,
+      "examples": [
+        {
+          "node": "tw3_0",
+          "triangle": 179,
+          "intersectionMin": [
+            -0.615428,
+            4.371948242390937,
+            2.8374635773176884
+          ],
+          "intersectionMax": [
+            -0.5629109140214664,
+            4.5939903,
+            2.8515271506174362
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 180,
+          "intersectionMin": [
+            -0.615428,
+            4.001,
+            2.8374635773176884
+          ],
+          "intersectionMax": [
+            -0.3722357749938965,
+            4.5939903,
+            2.902588129043579
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 183,
+          "intersectionMin": [
+            -0.3401303384656461,
+            4.001,
+            2.7505349999999997
+          ],
+          "intersectionMax": [
+            -0.3314348321404804,
+            4.488758012648205,
+            2.782940597834094
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 188,
+          "intersectionMin": [
+            -0.3917245864868164,
+            4.001,
+            2.7505349999999997
+          ],
+          "intersectionMax": [
+            -0.3917245864868164,
+            4.5939903,
+            2.8446725763074214
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 189,
+          "intersectionMin": [
+            -0.3917245864868164,
+            4.001,
+            2.803896699756388
+          ],
+          "intersectionMax": [
+            -0.3917245864868164,
+            4.5939903,
+            2.9001076221466064
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 190,
+          "intersectionMin": [
+            -0.3917245864868164,
+            4.001,
+            2.9001076221466064
+          ],
+          "intersectionMax": [
+            0.1943541662215127,
+            4.5939903,
+            2.9001076221466064
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 191,
+          "intersectionMin": [
+            0.04917629096217019,
+            4.001,
+            2.9001076221466064
+          ],
+          "intersectionMax": [
+            0.329,
+            4.5939903,
+            2.9001076221466064
+          ]
+        },
+        {
+          "node": "tw3_0",
+          "triangle": 271,
+          "intersectionMin": [
+            -0.3722357749938965,
+            4.001,
+            2.7505349999999997
+          ],
+          "intersectionMax": [
+            -0.3314348321404804,
+            4.5939903,
+            2.902588129043579
+          ]
+        }
+      ]
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "nx-shutters",
+      "triangles": 208,
+      "sha256": "1a5c45c57c27b8c0b812671143590ba08646325b340834d07b14f9daa5122091",
+      "sourceTuple": {
+        "pos": [
+          14.1,
+          0,
+          16.9
+        ],
+        "yaw": -2.44347,
+        "scale": 1,
+        "lib": "store/26259f89feb92736.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-roads",
+      "triangles": 3392,
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/3b76b621559fa1a1.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "triangles": 752,
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/e815a897c7d73373.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-artwalk-b19-longhouse-feast-count",
+      "triangles": 168,
+      "sha256": "baa1f2164bd76c20da5bb9c2e14abb86f1fe433299d630dd912da3cdeefcfce2",
+      "sourceTuple": {
+        "pos": [
+          7.668887408682888,
+          2.22,
+          21.89018987430842
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "lib": "store/98a4c17e73e4bac4.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "triangles": 3556,
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/dc52264c04cfe5bb.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-core-paths",
+      "triangles": 948,
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/c31b6e3f22641e14.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b3-ruled-porch",
+      "triangles": 616,
+      "sha256": "232210c072caebe89bd79a10ee3ba5faac92e7498ca3ad751941bbbf0b7fc72c",
+      "sourceTuple": {
+        "pos": [
+          22.947447673236418,
+          -0.00588,
+          9.081085820153778
+        ],
+        "yaw": -1.8975354116458194,
+        "scale": 1,
+        "lib": "store/e1b66075d8e911e7.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-town-kiln",
+      "triangles": 476,
+      "sha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545",
+      "sourceTuple": {
+        "pos": [
+          19.158717425740413,
+          -0.02065,
+          22.431975985200914
+        ],
+        "yaw": -2.443242374354201,
+        "scale": 1,
+        "lib": "store/4d8ef8fc0b0955de.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "triangles": 1596,
+      "sha256": "29e932d59cc9f57bb3665b1dfb543b1f17c4ec5e570948d92043cbc5d9e48c57",
+      "sourceTuple": {
+        "pos": [
+          18.419319135343407,
+          -0.02065,
+          21.55118647109554
+        ],
+        "yaw": -2.443242374354201,
+        "scale": 1,
+        "lib": "store/1ad2a6139373b973.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "triangles": 1532,
+      "sha256": "9e44d6b26951681737d412dbeded2b11dd2f64bc44b719e4bd1db3a28f3ff3fc",
+      "sourceTuple": {
+        "pos": [
+          18.605776095530477,
+          2.4293500000000003,
+          21.773298609435155
+        ],
+        "yaw": -2.443242374354201,
+        "scale": 1,
+        "lib": "store/ecbad90311fc9bff.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-longhouse",
+      "triangles": 7482,
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+      "sourceTuple": {
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "lib": "store/e38bb2a4c7933698.glb"
+      },
+      "colliderExact": true
+    }
+  ],
+  "failures": [
+    "door scholar-ground-entry: 32 triangles intrude into required 1.4m x 2.2m clearance",
+    "protected rider nx-shutters: 40 unauthorized host triangles",
+    "walk in exterior-terrain-before-stoop->stoop failed",
+    "walk in stoop->entry failed",
+    "walk out entry->stoop failed"
+  ],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelSha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+  "evidence": "actual frozen before GLB, unchanged automatic collision preference; final route as comparison probe"
+}

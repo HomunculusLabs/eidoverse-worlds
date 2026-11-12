@@ -1,0 +1,32 @@
+[
+  {
+    "id": "nx-town-inn",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0.198,
+      3.85
+    ],
+    "lookLocal": [
+      2.85,
+      0.198,
+      3.95
+    ],
+    "note": "SUPPLEMENTAL AFTER v2: camera inside clear central porch aisle facing sideways across settle, table and sign rather than standing in front of overlapping projections. Not a matched BEFORE view."
+  },
+  {
+    "id": "nx-town-inn",
+    "name": "interior",
+    "bodyLocal": [
+      3.2,
+      0.198,
+      -0.6
+    ],
+    "lookLocal": [
+      0,
+      0.198,
+      3
+    ],
+    "note": "SUPPLEMENTAL AFTER v2: east table aisle facing doorway, central authored bulb behind left frustum edge; no field of view, exposure, lamp or sky edits."
+  }
+]

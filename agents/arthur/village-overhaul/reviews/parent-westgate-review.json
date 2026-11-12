@@ -1,0 +1,102 @@
+{
+  "schema": "village-review-v1",
+  "id": "nx-town-gate-w",
+  "modelSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+  "kind": "portal",
+  "sources": [
+    {
+      "file": "build-gates.ts",
+      "sha256": "26e9db4c12ee34bd9ab9531b2e41f5a0f379e7fd3bd31f74d733bcc3091511d8"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "../cabin-overhaul/verify-player.ts",
+      "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+    },
+    {
+      "file": "../../../tools/core-stub.mjs",
+      "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.module.js",
+      "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.core.js",
+      "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+    },
+    {
+      "file": "before/nx-town-gate-w.glb",
+      "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-gate-w-route-contract.json",
+      "sha256": "b94f507bf02d8c8c5f2c714943f066d1f9bd41cfc330667677ba5a6034c9b938",
+      "mode": "room"
+    }
+  ],
+  "visual": {
+    "verdict": "accepted",
+    "reviewer": "parent adjudication of independent native GPT-6-Astra batch-D, not Bill approval",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-D/review.md",
+        "sha256": "d9e5d107c40a5a20ad802a9eb7da2f3b3ac450055492cce8317346b5c21ef76f"
+      },
+      {
+        "file": "reviews/parent-native/batch-D/westgate-front.png",
+        "sha256": "08e61ace0c53caf79cf9b64ee34593dc00b228d78c904a9f8761ea31925725f1"
+      },
+      {
+        "file": "reviews/parent-native/batch-D/westgate-aerial.png",
+        "sha256": "338d1fc5b85c74403f0dd2faf6bdedba29f78a3c13ec7e075950b6b36588230b"
+      },
+      {
+        "file": "reviews/nx-town-gate-w-after-assembly/render-manifest.json",
+        "sha256": "06d6e76094a428dc6db04b7ad18bbdadaec6a99008be1dc4db0c2672808937e8"
+      },
+      {
+        "file": "reviews/nx-town-gate-w-after-assembly/render-manifest.json",
+        "sha256": "06d6e76094a428dc6db04b7ad18bbdadaec6a99008be1dc4db0c2672808937e8"
+      }
+    ]
+  },
+  "geometry": {
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-westgate-geometry.json",
+      "sha256": "5eaef279f595f81eba1cffd56a16c6e4732320d4403a429ec59e9fd89d26e086"
+    }
+  },
+  "functional": {
+    "verdict": "passed",
+    "kind": "portal",
+    "evidence": {
+      "file": "build/nx-town-gate-w-player.json",
+      "sha256": "454e0d0b6427f1b0f8e3185be8690857e7e34de96f1ef69be3990fe59ed1d8a8"
+    }
+  },
+  "deterministic": {
+    "sha256": [
+      "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7"
+    ],
+    "evidence": {
+      "file": "build/shrine-gates-double-build.json",
+      "sha256": "052515f58d9a30daa4324ddca8a75697631235156fdc35bd5a92de7cbfbfd972"
+    }
+  }
+}

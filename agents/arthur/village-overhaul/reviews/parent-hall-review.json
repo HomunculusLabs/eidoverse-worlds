@@ -1,0 +1,82 @@
+{
+  "schema": "village-review-v1",
+  "id": "nx-town-hall",
+  "modelSha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+  "kind": "walk-in",
+  "sources": [
+    {
+      "file": "build-hall.ts",
+      "sha256": "8efca64f25ac85722102661506530d03ec319d1dbe983e468a881801a7deb0a0"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "before/nx-town-hall.glb",
+      "sha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-hall-route-contract.json",
+      "sha256": "25ef44983fe2adb8f7c972d97f93766752393eddac25c53a69e037a803811f44",
+      "mode": "room"
+    }
+  ],
+  "visual": {
+    "verdict": "accepted",
+    "reviewer": "parent adjudication of independent same-model native GPT-6-Astra batch-A image review, not Bill approval",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-A/review.md",
+        "sha256": "22adfcfde83c226fcdc4adcc4e75e4eae2f5eed1d2aec8a43bda760caa3dd354"
+      },
+      {
+        "file": "reviews/parent-native/batch-A/hall-front.png",
+        "sha256": "ebc81356986dbd7f99a1302d81a0191f73228ec23c4c8040ba595a3f3ab0255f"
+      },
+      {
+        "file": "reviews/parent-native/batch-A/hall-aerial.png",
+        "sha256": "64783b5af840d0e5be76a8d629fdb91805245e0e504999b7201765f82931e648"
+      },
+      {
+        "file": "reviews/parent-native/batch-A/hall-interior.png",
+        "sha256": "5f5b2f074be992b1e4bb480dbad70401a28787a6ee4af183f51498971a141666"
+      }
+    ]
+  },
+  "geometry": {
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-hall-geometry.json",
+      "sha256": "3bd915ebfd7873eb4d4915932aae3051c232654d9b2d14c461e4a5e3eecca582"
+    }
+  },
+  "functional": {
+    "verdict": "passed",
+    "kind": "walk-in",
+    "evidence": {
+      "file": "reviews/parent-hall-player.json",
+      "sha256": "46ed92374b815fc939b2140a461371560ae6fbef267c112e711a9700017d61bd"
+    }
+  },
+  "deterministic": {
+    "sha256": [
+      "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+      "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a"
+    ],
+    "evidence": {
+      "file": "build/hall-determinism.json",
+      "sha256": "a0a6bcd3dfc8e3d203e523c523fac3144611c4dcd71ee386dbc9fef331d6eb15"
+    }
+  }
+}

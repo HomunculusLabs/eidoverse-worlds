@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "modelSha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+  "sourceSha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16",
+  "checked": [
+    {
+      "name": "hl3_1",
+      "primitive": 0,
+      "sha256": "25b9b18b6e68eb78df1766c50acabb7330c615773a18d53783c02d5489fac391",
+      "pass": true
+    },
+    {
+      "name": "hl3_2",
+      "primitive": 0,
+      "sha256": "bfd4bc5a5e7ff9d7d201771b4b863297dfe4212bb3dedbae7c2d282dc2391566",
+      "pass": true
+    },
+    {
+      "name": "hl3_4",
+      "primitive": 0,
+      "sha256": "17ed228d96be1a58777fc0b5b3238c7c587d5f259991b646a15311cc5be99d69",
+      "pass": true
+    },
+    {
+      "name": "hl3_12",
+      "primitive": 0,
+      "sha256": "d260bbac1671856a77c8e2f830107ea6378075faa4f1a95f109a1cf729a440f0",
+      "pass": true
+    },
+    {
+      "name": "hl3_13",
+      "primitive": 0,
+      "sha256": "0118aad36133a67f06a609f3a33316864f7468b02c83765f05ad9a84558fa56c",
+      "pass": true
+    },
+    {
+      "name": "hl3_14",
+      "primitive": 0,
+      "sha256": "f7e1a8d674c737f7a07353556b9bd6592ecd21632b1ddfe18d4f34498988b8a4",
+      "pass": true
+    },
+    {
+      "name": "hl3_15",
+      "primitive": 0,
+      "sha256": "21043232fbc3adbdba3eeba8c242436d5fad726c6fcca02b68d99a7a8d1f6f89",
+      "pass": true
+    },
+    {
+      "name": "hl3_16",
+      "primitive": 0,
+      "sha256": "618edf7c684b676953d79d86bfdb655104cfc610ab52c40aebae7e4fdea8a973",
+      "pass": true
+    },
+    {
+      "name": "hl3_18",
+      "primitive": 0,
+      "sha256": "667ae3e74704f583147eda3cdeb400c9440c0a6c7a514a3a66e002e10c026bd0",
+      "pass": true
+    },
+    {
+      "name": "firebowl",
+      "primitive": 0,
+      "sha256": "51c926f69f18ec81439f0bc5b6250b02f2f69ec6f120c6e9bcb7be49e4462169",
+      "pass": true
+    },
+    {
+      "name": "fire",
+      "primitive": 0,
+      "sha256": "4db2c317f2e73c2563d8bd3d2c2db73eeca9c356d77d96a9e8ba24fa75134c25",
+      "pass": true
+    },
+    {
+      "name": "lamp",
+      "primitive": 0,
+      "sha256": "60462992d61657ac159b376ce17e84cd0d5fd6adff8fedc95b5b6130aa81b898",
+      "pass": true
+    },
+    {
+      "name": "lamp2",
+      "primitive": 0,
+      "sha256": "7708d711ea48cf3163a5bbbd03fdc37bb0859447b67eea98363cda5d1ccfb6d1",
+      "pass": true
+    },
+    {
+      "name": "lamp_nsconce_l",
+      "primitive": 0,
+      "sha256": "a424b9739410e8bcc760922b985ed17d996c2685d6d969c11ea1d173f3a814e1",
+      "pass": true
+    },
+    {
+      "name": "lamp_nsconce_r",
+      "primitive": 0,
+      "sha256": "819d1d0a803623d70445be7c75fb5fdcd8bd4a5acf0c43fb86a9cd86f06c4f0d",
+      "pass": true
+    },
+    {
+      "name": "lamp_porch",
+      "primitive": 0,
+      "sha256": "8cf0da75f7c733ec4b44bf7169eac95fd477536bf01752e1202e2657acbb8d50",
+      "pass": true
+    },
+    {
+      "name": "lamp_slant_l",
+      "primitive": 0,
+      "sha256": "3a3a4565826cfef854076eeda2c66fcf2c4e656e9a2e103922c66221684c1720",
+      "pass": true
+    },
+    {
+      "name": "lamp_slant_r",
+      "primitive": 0,
+      "sha256": "dab3818a891684cf875ec74aadff1853d34d52b1c86dc3e34f07df763d444375",
+      "pass": true
+    },
+    {
+      "name": "hall_rehoused_hl3_15",
+      "primitive": 0,
+      "sha256": "3e7adc84d85bab9a6c48eb0bcf73d6c26d07a5dce1f5cde5e2d15f566e0c93d8",
+      "pass": true
+    },
+    {
+      "name": "hall_rehoused_hl3_17",
+      "primitive": 0,
+      "sha256": "26d45310e74d2a8f44cb5a4b8b19c67fa1cc16aa923cf2b9244ab88354d0e4f1",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Founding banner is deliberately reoriented/raised as documented; source comparison for it uses that declared internal transform.",
+    "Architecture and thresholds are new; furniture selection consists of complete served-byte islands."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final-montage.png",
+  "sha256": "64a085d3d8e90a4fda76ec1e4bdbc4bdfd208ee7fa19ad309604ae58ed8c18ff",
+  "sources": [
+    {
+      "view": "front",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/front.png",
+      "sha256": "e471c3a983b135343d8b8e9750230d655d289cf7230a5d996fc652050d417a69"
+    },
+    {
+      "view": "right",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/right.png",
+      "sha256": "87fb3269adbf7f757410977b2b4694fc8df87f43cef27556452638339b49c319"
+    },
+    {
+      "view": "back",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/back.png",
+      "sha256": "fae8113aa356f933804042022bd18f6d7a2cfddda04b4d164f9c5d21e1af250b"
+    },
+    {
+      "view": "left",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/left.png",
+      "sha256": "5058592c2232b6d9098687d65b3898dad0e9d8a27b4e9b29e03227085d897794"
+    },
+    {
+      "view": "gameplay",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/gameplay.png",
+      "sha256": "9487550de2e3adda56e535321f98e531c9aa78bb901a87adf6da5be109f3ff19"
+    },
+    {
+      "view": "aerial",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/aerial.png",
+      "sha256": "aa9db48f8a6cf44bb0838041f66ce9d7d76ad0038e5f8a6c99ceda84c5167d7f"
+    },
+    {
+      "view": "top",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/top.png",
+      "sha256": "cabde1df445bf6a4f077721350ab91885bde55aed49e47077a5439cdb227f760"
+    },
+    {
+      "view": "night",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/night.png",
+      "sha256": "35a11e4d45048da01b488b760c3f06de6594fee14b5030a7bbcedc1ebc404e43"
+    },
+    {
+      "view": "interior",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-belltower-supplement-final/interior.png",
+      "sha256": "519d039412edad6a7569e88c17cb1099be84ff1e4fcac70876428a04fdb00e28"
+    }
+  ]
+}

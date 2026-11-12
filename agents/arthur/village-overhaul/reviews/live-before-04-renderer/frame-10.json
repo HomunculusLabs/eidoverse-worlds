@@ -1,0 +1,145 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-b2f6bc6d-ccd",
+    "view": "first",
+    "startedAt": "2026-09-08T02:17:10.233Z"
+  },
+  "completedAt": "2026-09-08T02:17:10.978Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "9a68770d40633e4bb376991f45cc56c83a5c147bc89d65e7d2aff1ee816123b7",
+  "bytes": 509892,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-belltower",
+  "view": "approach",
+  "bodyPose": {
+    "p": [
+      -0.5710678118654764,
+      0,
+      -9.056349186104045
+    ],
+    "yaw": 0.42662749312687615,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    -6,
+    0,
+    16
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-belltower",
+    "lib": "store/2419fbc53a1d65e1.glb",
+    "kind": "thing",
+    "pos": [
+      6.5,
+      0,
+      6.5
+    ],
+    "yaw": -2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "ladder": {
+        "min": [
+          -0.98,
+          0.3,
+          0.98
+        ],
+        "max": [
+          -0.52,
+          5.15,
+          1.22
+        ]
+      }
+    },
+    "bbox": {
+      "min": [
+        -1.7,
+        0,
+        -1.7
+      ],
+      "max": [
+        1.7,
+        7.6,
+        1.7
+      ],
+      "size": [
+        3.4,
+        7.6,
+        3.4
+      ],
+      "center": [
+        0,
+        3.8,
+        0
+      ]
+    },
+    "tris": 1034
+  },
+  "targetAfter": {
+    "id": "nx-town-belltower",
+    "lib": "store/2419fbc53a1d65e1.glb",
+    "kind": "thing",
+    "pos": [
+      6.5,
+      0,
+      6.5
+    ],
+    "yaw": -2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "ladder": {
+        "min": [
+          -0.98,
+          0.3,
+          0.98
+        ],
+        "max": [
+          -0.52,
+          5.15,
+          1.22
+        ]
+      }
+    },
+    "bbox": {
+      "min": [
+        -1.7,
+        0,
+        -1.7
+      ],
+      "max": [
+        1.7,
+        7.6,
+        1.7
+      ],
+      "size": [
+        3.4,
+        7.6,
+        3.4
+      ],
+      "center": [
+        0,
+        3.8,
+        0
+      ]
+    },
+    "tris": 1034
+  },
+  "beforeObservedAt": "2026-09-08T02:17:07.232Z",
+  "afterObservedAt": "2026-09-08T02:17:12.856Z",
+  "protectedBeforeSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "protectedAfterSha256": "33b90306f82347c40604780a5f1992c1026f14624755ddfb42aa889a87e7735b",
+  "file": "nx-town-belltower-approach.png"
+}

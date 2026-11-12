@@ -1,0 +1,341 @@
+{
+  "status": "PASS",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-row-cottage",
+  "bounds": {
+    "min": [
+      -2.8399999141693115,
+      -0.20000000298023224,
+      -2.640000104904175
+    ],
+    "max": [
+      2.8399999141693115,
+      5.373903751373291,
+      2.6400978565216064
+    ]
+  },
+  "triangles": 4744,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": true,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "west-gabled-entry",
+      "requiredWidth": 1.45,
+      "requiredHeadroom": 2.35,
+      "min": [
+        -2.29,
+        0.2,
+        1.4
+      ],
+      "max": [
+        -0.84,
+        2.5500000000000003,
+        2.68
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "outside",
+      "to": "before-threshold",
+      "pass": true,
+      "steps": 8,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 4.440892098500626e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.565,
+        0,
+        2.8999999999999995
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "before-threshold",
+      "to": "threshold",
+      "pass": true,
+      "steps": 13,
+      "maxPush": 0,
+      "maxRise": 0.20003174245357513,
+      "minY": 0,
+      "maxY": 0.20003174245357513,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.3322676295501878e-15,
+      "floorError": 0.000031742453575123175,
+      "geometryHits": 0,
+      "arrived": [
+        -1.565,
+        0.20003174245357513,
+        2.4000000000000012
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "threshold",
+      "to": "inside",
+      "pass": true,
+      "steps": 21,
+      "maxPush": 0,
+      "maxRise": 0.00007811188697814941,
+      "minY": 0.20003174245357513,
+      "maxY": 0.20010985434055328,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.5543122344752192e-15,
+      "floorError": 0.00010985434055327259,
+      "geometryHits": 0,
+      "arrived": [
+        -1.565,
+        0.20010985434055328,
+        1.6000000000000016
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "inside",
+      "to": "turn",
+      "pass": true,
+      "steps": 44,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20010985434055328,
+      "maxY": 0.20010985434055328,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 6.753223014464259e-16,
+      "floorError": 0.00010985434055327259,
+      "geometryHits": 0,
+      "arrived": [
+        6.661338147750939e-16,
+        0.20010985434055328,
+        0.8499999999999999
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "turn",
+      "to": "weaver-room",
+      "pass": true,
+      "steps": 29,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20010985434055328,
+      "maxY": 0.20010985434055328,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.996003610813204e-16,
+      "floorError": 0.00010985434055327259,
+      "geometryHits": 0,
+      "arrived": [
+        9.244463733058732e-32,
+        0.20010985434055328,
+        -0.3000000000000005
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "weaver-room",
+      "to": "turn",
+      "pass": true,
+      "steps": 29,
+      "maxPush": 0,
+      "maxRise": 0.00010985434055327259,
+      "minY": 0.2,
+      "maxY": 0.20010985434055328,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 3.3306690738754696e-16,
+      "floorError": 0.00010985434055327259,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.20010985434055328,
+        0.8500000000000003
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "turn",
+      "to": "inside",
+      "pass": true,
+      "steps": 44,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20010985434055328,
+      "maxY": 0.20010985434055328,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.1065000811460206e-15,
+      "floorError": 0.00010985434055327259,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0.20010985434055328,
+        1.600000000000002
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "inside",
+      "to": "threshold",
+      "pass": true,
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20003174245357513,
+      "maxY": 0.20010985434055328,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.1102230246251565e-15,
+      "floorError": 0.000031742453575123175,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0.20003174245357513,
+        2.400000000000001
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "threshold",
+      "to": "before-threshold",
+      "pass": true,
+      "steps": 13,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0.20003174245357513,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.1102230246251565e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0,
+        2.899999999999999
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "before-threshold",
+      "to": "outside",
+      "pass": true,
+      "steps": 8,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 8.005932084973442e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -1.5650000000000006,
+        0,
+        3.1999999999999997
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b18-row-warp-count",
+      "min": [
+        -0.81,
+        2.22,
+        2.25
+      ],
+      "max": [
+        0.81,
+        2.68,
+        2.37
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "neighbors": [],
+  "failures": [],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelSha256": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+  "authoredSha256": "0558b5f41bda077772846350737047605f628d9b97a7c159d1f6b9d4574bccfc"
+}

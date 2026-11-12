@@ -1,0 +1,51 @@
+{
+  "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final-montage.png",
+  "sha256": "1cab2428b489e14d7ed5258e8727c0084743cdf7f13b76d8043d30e952d66a83",
+  "sources": [
+    {
+      "view": "front",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/front.png",
+      "sha256": "b12173aa31bb5fa1b08659bd37725fdf885af81f2ed43f7f54991ded9fda820c"
+    },
+    {
+      "view": "right",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/right.png",
+      "sha256": "aaf79608b8df0ff26e544e41b5ededc56a96797e6e5ccb8d0df8a29b26c93cee"
+    },
+    {
+      "view": "back",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/back.png",
+      "sha256": "a82ad759adc84aaa18a61f7af1f39dd9a09e966bf4cd87306a8581907b484e39"
+    },
+    {
+      "view": "left",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/left.png",
+      "sha256": "f729ea2f5a07acb052de4b1719bca8503715ef94e862a40d398955704d680825"
+    },
+    {
+      "view": "gameplay",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/gameplay.png",
+      "sha256": "cd2cbb61410b202010345699cc4aef4392f36783e57c760b36fe0d10975171d6"
+    },
+    {
+      "view": "aerial",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/aerial.png",
+      "sha256": "395330dd5b2cbd91d75edbcd3547b6ee3edbeb41e34f50fa7f3b5a593c4627e8"
+    },
+    {
+      "view": "top",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/top.png",
+      "sha256": "1472e6e57a44bf4448228d2703881ec0a057b6866d1ca01cb82fa472b6636369"
+    },
+    {
+      "view": "night",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/night.png",
+      "sha256": "4b31aa04db7246e0a5558f862d0f2ff2db02fcadf9f26ca5f6dea0c6b7ed2973"
+    },
+    {
+      "view": "interior",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-tower-final/interior.png",
+      "sha256": "10917571843c4055c6479c20d7bca22a3af0ff65e2c8546af9d32143f68696b2"
+    }
+  ]
+}

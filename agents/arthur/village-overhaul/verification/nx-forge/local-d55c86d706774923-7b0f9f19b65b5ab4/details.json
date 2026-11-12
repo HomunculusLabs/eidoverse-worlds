@@ -1,0 +1,2518 @@
+{
+  "id": "nx-forge",
+  "stage": "local",
+  "sourceSha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+  "modelSha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+  "contextSha256": "7b0f9f19b65b5ab4bf05b6bb329b1db465b4db6b0d8e06e9a008f34255731612",
+  "publicRuntime": [
+    {
+      "name": "colliders.js",
+      "url": "https://eidoverse.billding.dev/lib/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+    },
+    {
+      "name": "supportclass.js",
+      "url": "https://eidoverse.billding.dev/lib/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+    }
+  ],
+  "sourceEquivalence": {
+    "pass": true,
+    "forward": {
+      "samples": 18984,
+      "maxDistance": 5.5965179799211526e-15
+    },
+    "reverse": {
+      "samples": 18984,
+      "maxDistance": 5.5965179799211526e-15
+    },
+    "toleranceMetres": 0.003,
+    "sourceTriangles": 2712,
+    "servedTriangles": 2712,
+    "method": "bidirectional all-vertex/edge-midpoint/triangle-centroid nearest-surface probes",
+    "limitation": "Sampled surface equivalence, not a mathematical Hausdorff certificate; actual served-route proof separately required."
+  },
+  "actualBounds": {
+    "min": [
+      -0.8726182579994202,
+      -0.004999999888241291,
+      -0.7770000100135803
+    ],
+    "max": [
+      1.4600000381469727,
+      2.9600000381469727,
+      0.6099370718002319
+    ]
+  },
+  "routes": [
+    {
+      "file": "build/forge-routes.json",
+      "sha256": "b036f50663a843ee28bfb25101efbb04fe2a745e0ed2e22716f7fe61c3f8ac49",
+      "mode": "workstation",
+      "report": {
+        "status": "PASS",
+        "id": "nx-forge",
+        "kind": "workstation",
+        "runtime": {
+          "mode": "served-override",
+          "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+          "files": {
+            "colliders.js": {
+              "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+              "publicPath": "/lib/colliders.js"
+            },
+            "supportclass.js": {
+              "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+              "publicPath": "/lib/supportclass.js"
+            }
+          },
+          "threeRevision": "184",
+          "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+        },
+        "collider": {
+          "exact": false,
+          "pillar": true
+        },
+        "neighbors": [
+          "nx-artwalk-b16-forge-seven-strikes",
+          "nx-artwalk-b29-strike-count",
+          "nx-court",
+          "nx-dress-ne-anvilpad-001",
+          "nx-sign-smithy",
+          "nx-town-roads"
+        ],
+        "walks": [
+          {
+            "direction": "in",
+            "from": "fire-and-art-view",
+            "to": "anvil-work-apron",
+            "steps": 32,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 0,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "anvil-work-apron",
+            "to": "east-corner",
+            "steps": 25,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 8.881784197001252e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "east-corner",
+            "to": "quench-service",
+            "steps": 44,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.047382306668854e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "quench-service",
+            "to": "east-corner",
+            "steps": 44,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 4.440892098500626e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "east-corner",
+            "to": "anvil-work-apron",
+            "steps": 25,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 9.930136612989092e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "anvil-work-apron",
+            "to": "fire-and-art-view",
+            "steps": 32,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 6.684427777288335e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          }
+        ],
+        "physicalSupport": {
+          "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+          "pass": true,
+          "samples": [
+            {
+              "name": "in:start",
+              "pos": [
+                -0.3,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:1",
+              "pos": [
+                -0.2609375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:2",
+              "pos": [
+                -0.221875,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:3",
+              "pos": [
+                -0.1828125,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:4",
+              "pos": [
+                -0.14375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:5",
+              "pos": [
+                -0.10468749999999999,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:6",
+              "pos": [
+                -0.06562499999999999,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:7",
+              "pos": [
+                -0.02656249999999999,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:8",
+              "pos": [
+                0.012500000000000011,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:9",
+              "pos": [
+                0.05156250000000001,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:10",
+              "pos": [
+                0.09062500000000001,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:11",
+              "pos": [
+                0.1296875,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:12",
+              "pos": [
+                0.16875,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:13",
+              "pos": [
+                0.2078125,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:14",
+              "pos": [
+                0.246875,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:15",
+              "pos": [
+                0.2859375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:16",
+              "pos": [
+                0.325,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:17",
+              "pos": [
+                0.3640625,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:18",
+              "pos": [
+                0.403125,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:19",
+              "pos": [
+                0.4421875,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:20",
+              "pos": [
+                0.48125,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:21",
+              "pos": [
+                0.5203125,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:22",
+              "pos": [
+                0.559375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:23",
+              "pos": [
+                0.5984375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:24",
+              "pos": [
+                0.6375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:25",
+              "pos": [
+                0.6765625,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:26",
+              "pos": [
+                0.715625,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:27",
+              "pos": [
+                0.7546875,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:28",
+              "pos": [
+                0.79375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:29",
+              "pos": [
+                0.8328125,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:30",
+              "pos": [
+                0.871875,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:31",
+              "pos": [
+                0.9109375,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fire-and-art-view:anvil-work-apron:32",
+              "pos": [
+                0.95,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:1",
+              "pos": [
+                0.99,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:2",
+              "pos": [
+                1.03,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:3",
+              "pos": [
+                1.07,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:4",
+              "pos": [
+                1.11,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:5",
+              "pos": [
+                1.1500000000000001,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:6",
+              "pos": [
+                1.1900000000000002,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:7",
+              "pos": [
+                1.2300000000000002,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:8",
+              "pos": [
+                1.2700000000000002,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:9",
+              "pos": [
+                1.3100000000000003,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:10",
+              "pos": [
+                1.3500000000000003,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:11",
+              "pos": [
+                1.3900000000000003,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:12",
+              "pos": [
+                1.4300000000000004,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:13",
+              "pos": [
+                1.4700000000000004,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:14",
+              "pos": [
+                1.5100000000000005,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:15",
+              "pos": [
+                1.5500000000000005,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:16",
+              "pos": [
+                1.5900000000000005,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:17",
+              "pos": [
+                1.6300000000000006,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:18",
+              "pos": [
+                1.6700000000000006,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:19",
+              "pos": [
+                1.7100000000000006,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:20",
+              "pos": [
+                1.7500000000000007,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:21",
+              "pos": [
+                1.7900000000000007,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:22",
+              "pos": [
+                1.8300000000000007,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:23",
+              "pos": [
+                1.8700000000000008,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:24",
+              "pos": [
+                1.9100000000000008,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:anvil-work-apron:east-corner:25",
+              "pos": [
+                1.9500000000000008,
+                0,
+                1.2
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:1",
+              "pos": [
+                1.9500000000000008,
+                0,
+                1.1602272727272727
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:2",
+              "pos": [
+                1.9500000000000008,
+                0,
+                1.1204545454545454
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:3",
+              "pos": [
+                1.9500000000000008,
+                0,
+                1.080681818181818
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:4",
+              "pos": [
+                1.9500000000000008,
+                0,
+                1.0409090909090908
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:5",
+              "pos": [
+                1.9500000000000008,
+                0,
+                1.0011363636363635
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:6",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.9613636363636362
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:7",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.9215909090909089
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:8",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.8818181818181816
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:9",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.8420454545454543
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:10",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.802272727272727
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:11",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.7624999999999997
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:12",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.7227272727272724
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:13",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.6829545454545451
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:14",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.6431818181818179
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:15",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.6034090909090906
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:16",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.5636363636363633
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:17",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.523863636363636
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:18",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.4840909090909087
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:19",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.4443181818181814
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:20",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.4045454545454541
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:21",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.3647727272727268
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:22",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.3249999999999995
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:23",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.2852272727272722
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:24",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.24545454545454495
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:25",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.2056818181818177
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:26",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.16590909090909042
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:27",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.12613636363636316
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:28",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.08636363636363589
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:29",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.04659090909090862
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:30",
+              "pos": [
+                1.9500000000000008,
+                0,
+                0.006818181818181349
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:31",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.032954545454545923
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:32",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.0727272727272732
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:33",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.11250000000000046
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:34",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.15227272727272773
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:35",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.192045454545455
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:36",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.23181818181818226
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:37",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.27159090909090955
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:38",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.31136363636363684
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:39",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.35113636363636413
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:40",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.39090909090909143
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:41",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.4306818181818187
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:42",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.470454545454546
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:43",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.5102272727272733
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:east-corner:quench-service:44",
+              "pos": [
+                1.9500000000000008,
+                0,
+                -0.5500000000000006
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:start",
+              "pos": [
+                1.95,
+                0,
+                -0.55
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:1",
+              "pos": [
+                1.95,
+                0,
+                -0.5102272727272728
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:2",
+              "pos": [
+                1.95,
+                0,
+                -0.47045454545454546
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:3",
+              "pos": [
+                1.95,
+                0,
+                -0.43068181818181817
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:4",
+              "pos": [
+                1.95,
+                0,
+                -0.3909090909090909
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:5",
+              "pos": [
+                1.95,
+                0,
+                -0.3511363636363636
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:6",
+              "pos": [
+                1.95,
+                0,
+                -0.3113636363636363
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:7",
+              "pos": [
+                1.95,
+                0,
+                -0.271590909090909
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:8",
+              "pos": [
+                1.95,
+                0,
+                -0.23181818181818173
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:9",
+              "pos": [
+                1.95,
+                0,
+                -0.19204545454545446
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:10",
+              "pos": [
+                1.95,
+                0,
+                -0.1522727272727272
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:11",
+              "pos": [
+                1.95,
+                0,
+                -0.11249999999999993
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:12",
+              "pos": [
+                1.95,
+                0,
+                -0.07272727272727267
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:13",
+              "pos": [
+                1.95,
+                0,
+                -0.032954545454545396
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:14",
+              "pos": [
+                1.95,
+                0,
+                0.006818181818181876
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:15",
+              "pos": [
+                1.95,
+                0,
+                0.04659090909090915
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:16",
+              "pos": [
+                1.95,
+                0,
+                0.08636363636363642
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:17",
+              "pos": [
+                1.95,
+                0,
+                0.12613636363636369
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:18",
+              "pos": [
+                1.95,
+                0,
+                0.16590909090909095
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:19",
+              "pos": [
+                1.95,
+                0,
+                0.20568181818181822
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:20",
+              "pos": [
+                1.95,
+                0,
+                0.24545454545454548
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:21",
+              "pos": [
+                1.95,
+                0,
+                0.2852272727272728
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:22",
+              "pos": [
+                1.95,
+                0,
+                0.32500000000000007
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:23",
+              "pos": [
+                1.95,
+                0,
+                0.36477272727272736
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:24",
+              "pos": [
+                1.95,
+                0,
+                0.40454545454545465
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:25",
+              "pos": [
+                1.95,
+                0,
+                0.44431818181818195
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:26",
+              "pos": [
+                1.95,
+                0,
+                0.48409090909090924
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:27",
+              "pos": [
+                1.95,
+                0,
+                0.5238636363636365
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:28",
+              "pos": [
+                1.95,
+                0,
+                0.5636363636363638
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:29",
+              "pos": [
+                1.95,
+                0,
+                0.6034090909090911
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:30",
+              "pos": [
+                1.95,
+                0,
+                0.6431818181818184
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:31",
+              "pos": [
+                1.95,
+                0,
+                0.6829545454545457
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:32",
+              "pos": [
+                1.95,
+                0,
+                0.722727272727273
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:33",
+              "pos": [
+                1.95,
+                0,
+                0.7625000000000003
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:34",
+              "pos": [
+                1.95,
+                0,
+                0.8022727272727276
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:35",
+              "pos": [
+                1.95,
+                0,
+                0.8420454545454549
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:36",
+              "pos": [
+                1.95,
+                0,
+                0.8818181818181822
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:37",
+              "pos": [
+                1.95,
+                0,
+                0.9215909090909095
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:38",
+              "pos": [
+                1.95,
+                0,
+                0.9613636363636368
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:39",
+              "pos": [
+                1.95,
+                0,
+                1.001136363636364
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:40",
+              "pos": [
+                1.95,
+                0,
+                1.0409090909090912
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:41",
+              "pos": [
+                1.95,
+                0,
+                1.0806818181818185
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:42",
+              "pos": [
+                1.95,
+                0,
+                1.1204545454545458
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:43",
+              "pos": [
+                1.95,
+                0,
+                1.160227272727273
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:quench-service:east-corner:44",
+              "pos": [
+                1.95,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:1",
+              "pos": [
+                1.91,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:2",
+              "pos": [
+                1.8699999999999999,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:3",
+              "pos": [
+                1.8299999999999998,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:4",
+              "pos": [
+                1.7899999999999998,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:5",
+              "pos": [
+                1.7499999999999998,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:6",
+              "pos": [
+                1.7099999999999997,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:7",
+              "pos": [
+                1.6699999999999997,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:8",
+              "pos": [
+                1.6299999999999997,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:9",
+              "pos": [
+                1.5899999999999996,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:10",
+              "pos": [
+                1.5499999999999996,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:11",
+              "pos": [
+                1.5099999999999996,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:12",
+              "pos": [
+                1.4699999999999995,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:13",
+              "pos": [
+                1.4299999999999995,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:14",
+              "pos": [
+                1.3899999999999995,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:15",
+              "pos": [
+                1.3499999999999994,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:16",
+              "pos": [
+                1.3099999999999994,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:17",
+              "pos": [
+                1.2699999999999994,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:18",
+              "pos": [
+                1.2299999999999993,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:19",
+              "pos": [
+                1.1899999999999993,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:20",
+              "pos": [
+                1.1499999999999992,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:21",
+              "pos": [
+                1.1099999999999992,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:22",
+              "pos": [
+                1.0699999999999992,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:23",
+              "pos": [
+                1.0299999999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:24",
+              "pos": [
+                0.9899999999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:east-corner:anvil-work-apron:25",
+              "pos": [
+                0.9499999999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:1",
+              "pos": [
+                0.9109374999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:2",
+              "pos": [
+                0.8718749999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:3",
+              "pos": [
+                0.8328124999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:4",
+              "pos": [
+                0.7937499999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:5",
+              "pos": [
+                0.7546874999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:6",
+              "pos": [
+                0.7156249999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:7",
+              "pos": [
+                0.6765624999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:8",
+              "pos": [
+                0.6374999999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:9",
+              "pos": [
+                0.5984374999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:10",
+              "pos": [
+                0.5593749999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:11",
+              "pos": [
+                0.5203124999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:12",
+              "pos": [
+                0.48124999999999907,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:13",
+              "pos": [
+                0.44218749999999907,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:14",
+              "pos": [
+                0.40312499999999907,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:15",
+              "pos": [
+                0.36406249999999907,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:16",
+              "pos": [
+                0.32499999999999907,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:17",
+              "pos": [
+                0.28593749999999907,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:18",
+              "pos": [
+                0.2468749999999991,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:19",
+              "pos": [
+                0.20781249999999912,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:20",
+              "pos": [
+                0.16874999999999915,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:21",
+              "pos": [
+                0.12968749999999918,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:22",
+              "pos": [
+                0.0906249999999992,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:23",
+              "pos": [
+                0.051562499999999234,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:24",
+              "pos": [
+                0.012499999999999262,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:25",
+              "pos": [
+                -0.02656250000000071,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:26",
+              "pos": [
+                -0.06562500000000068,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:27",
+              "pos": [
+                -0.10468750000000066,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:28",
+              "pos": [
+                -0.14375000000000063,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:29",
+              "pos": [
+                -0.1828125000000006,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:30",
+              "pos": [
+                -0.22187500000000057,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:31",
+              "pos": [
+                -0.26093750000000054,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:anvil-work-apron:fire-and-art-view:32",
+              "pos": [
+                -0.3000000000000005,
+                0,
+                1.2000000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            }
+          ]
+        },
+        "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+        "limitations": [
+          "Not an enterable-room certification.",
+          "Only supplied neighbors and declared flat terrain checked."
+        ],
+        "proofFrameY": 0,
+        "terrainBinding": {
+          "declaredTerrainY": 0,
+          "effectiveHostLocalY": 0,
+          "hostElevation": 0,
+          "worldHeight": 0
+        }
+      }
+    }
+  ],
+  "geometryReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/forge-geometry.json",
+        "sha256": "583a9d55ff2669a7c15ad0c1563d34f240a3f059d14ceb1844b262e2661ad27c"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/forge-geometry.json",
+      "sha256": "583a9d55ff2669a7c15ad0c1563d34f240a3f059d14ceb1844b262e2661ad27c"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/connected-court-forge.md",
+        "sha256": "380cc1d67437dfcad6279749063765359ae002769f6ab41c2efdd138bc4d5d73"
+      },
+      {
+        "file": "reviews/parent-forge-connected-final/front.png",
+        "sha256": "ddc00bf166d96ef68e8843bf840e967c6a43eb5e230f382f68f54fd80dfd4f42"
+      },
+      {
+        "file": "reviews/parent-forge-connected-final/back.png",
+        "sha256": "1667f29bad53b246359e4b216ece0e924df1e5957e44c818cf4c73fd8b9b6b1e"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "neighbors": [
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "lib": "store/54555b39274bc00c.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "lib": "store/a7df548e06d1412d.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-court",
+      "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "lib": "store/77cab2c3cc3a39c7.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "sha256": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+      "lib": "store/65d686b023348c9b.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-forge-l",
+      "sha256": null,
+      "lib": null,
+      "decoded": false
+    },
+    {
+      "id": "nx-sign-smithy",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "decoded": true
+    }
+  ]
+}

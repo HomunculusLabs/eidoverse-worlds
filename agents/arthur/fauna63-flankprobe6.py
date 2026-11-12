@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+"""fauna63 flank probe v6 — swan-white pixels EXCLUDING sky (sky is bluer:
+b > g > r heavily). Swan white is roughly r≈g≈b±20 with r>=180."""
+from PIL import Image
+
+img = Image.open("agents/arthur/reviews/fauna63-swan/v3-flank18.png").convert("RGB")
+w, h = img.size
+px = img.load()
+pts = []
+for y in range(0, h):
+    for x in range(0, w):
+        r, g, b = px[x, y]
+        if r >= 180 and g >= 180 and b >= 180 and abs(r - b) < 30 and abs(g - b) < 25:
+            pts.append((x, y))
+print(f"neutral-white px: {len(pts)}")
+cols = {}
+for (x, y) in pts:
+    cols.setdefault(x, []).append(y)
+if not cols:
+    print("none")
+else:
+    xs = sorted(cols)
+    groups = []
+    start = xs[0]
+    prev = xs[0]
+    for x in xs[1:]:
+        if x - prev > 40:
+            groups.append((start, prev))
+            start = x
+        prev = x
+    groups.append((start, prev))
+    for (a, b) in groups:
+        ys = [y for x in range(a, b + 1) if x in cols for y in cols[x]]
+        print(f"  group x {a}-{b}: y {min(ys)}-{max(ys)}, {len(ys)}px")

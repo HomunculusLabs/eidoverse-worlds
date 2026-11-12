@@ -1,0 +1,23 @@
+{
+  "id": "nx-town-stable",
+  "modelSha256": "7eff6d0292df63548fe8f58cb45649aee9d5a55cfcdcd3a704d2b344ab04535a",
+  "baselineSha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+  "originalTop": 3.4417715072631836,
+  "contractTop": 3.442,
+  "allowedTop": 4.441771507263184,
+  "actualTop": 4.429999828338623,
+  "overrun": -0.011771678924560547,
+  "bounds": {
+    "min": [
+      -3,
+      -0.20000000298023224,
+      -2.7750000953674316
+    ],
+    "max": [
+      3,
+      4.429999828338623,
+      2.574972629547119
+    ]
+  },
+  "pass": true
+}

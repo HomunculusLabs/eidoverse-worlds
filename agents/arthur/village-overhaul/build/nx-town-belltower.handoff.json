@@ -1,0 +1,174 @@
+{
+  "schema": "tower-local-repair-handoff-v2",
+  "status": "HOLD_EXTERNAL_PHYSICAL_SUPPORT",
+  "id": "nx-town-belltower",
+  "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+  "baselineSha256": "0fa6b6c117180e129deb81590bb02ff4471a3693ade35991b591240f517f5a36",
+  "sources": [
+    {
+      "file": "build-belltower.ts",
+      "sha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc"
+    },
+    {
+      "file": "build-belltower.ts",
+      "sha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "build/nx-towers-repair.test.ts",
+      "sha256": "aeb3d864b5fe2d1e91653c4e84d51f9482c6cbeb33f17b291c2be31b22d9017e"
+    }
+  ],
+  "model": {
+    "file": "build/nx-town-belltower.glb",
+    "sha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145"
+  },
+  "spawnContract": {
+    "file": "build/nx-town-belltower.spawn-contract.json",
+    "sha256": "d83d7fc3e019da81be37bc2e7aee421b3989696959745c9de3ebdf9fe8f5f228"
+  },
+  "decodedReport": {
+    "file": "build/nx-town-belltower.decoded.json",
+    "sha256": "1d44808f57a84ca941b838b7a1183df720dcbc4e1606fa0778a41a2c4395ef20"
+  },
+  "determinismReport": {
+    "file": "build/nx-town-belltower.determinism.json",
+    "sha256": "920fc031baa85885fd9038271103a820e1785b2cef974d24e44150887f2b7cd4"
+  },
+  "routes": [
+    {
+      "name": "route",
+      "contract": {
+        "file": "build/nx-town-belltower.route.json",
+        "sha256": "08a583bfcffb6e329b22ed49ffb54e074d895ca93b4cc55a4acbe2c08f51b06c"
+      },
+      "report": {
+        "file": "build/nx-town-belltower.route.report.json",
+        "sha256": "67443258f95eb0378f63323107aac91a24db4f5ad9a7c44df1446a89633e09a0"
+      },
+      "status": "FAIL",
+      "walkLegs": 4,
+      "passingLegs": 3,
+      "parentSupportReplay": {
+        "file": "build/nx-town-belltower.route.parent-support.json",
+        "sha256": "d14dc2bc04756c37e70726ce7366987a605337b30fae5719e2d06390e9b47fae"
+      },
+      "parentSupportStatus": "FAIL"
+    },
+    {
+      "name": "landing-route",
+      "contract": {
+        "file": "build/nx-town-belltower.landing-route.json",
+        "sha256": "f92d8326a1b1871d03bf3edea1669f602090c70a3ce1439f3bacf5bdbc060da6"
+      },
+      "report": {
+        "file": "build/nx-town-belltower.landing-route.report.json",
+        "sha256": "1f466378c7ed86b958e46b7fb66883a49ceb9eb08a2719c01f422689983ccb9c"
+      },
+      "status": "PASS",
+      "walkLegs": 6,
+      "passingLegs": 6,
+      "parentSupportReplay": {
+        "file": "build/nx-town-belltower.landing-route.parent-support.json",
+        "sha256": "281f0f784ea2dec460306a6f8f548c39025ea279c31479233a535655c36e8c15"
+      },
+      "parentSupportStatus": "PASS"
+    },
+    {
+      "name": "ladder-approach",
+      "contract": {
+        "file": "build/nx-town-belltower.ladder-approach.json",
+        "sha256": "0246c24b287511ace689303d1dde63c6ace3493fbbd1ee8d496bfea4bd858d67"
+      },
+      "report": {
+        "file": "build/nx-town-belltower.ladder-approach.report.json",
+        "sha256": "755c9e1b0b19cea09fcf2cefcfe69f7855d2270f8d3be2b1b3520006d3679c26"
+      },
+      "status": "FAIL",
+      "walkLegs": 2,
+      "passingLegs": 1,
+      "parentSupportReplay": {
+        "file": "build/nx-town-belltower.ladder-approach.parent-support.json",
+        "sha256": "561e6b058845767129640a8f531729b2d8b9252dada459a4bc53fd2987f6c9e9"
+      },
+      "parentSupportStatus": "FAIL"
+    }
+  ],
+  "neighborCount": 12,
+  "renders": [
+    {
+      "manifest": {
+        "file": "reviews/nx-town-belltower-final/render-manifest.json",
+        "sha256": "ab4be8d34ab4781a26a6d8bdbfa225b752f10503a1beb7bd061db6814f4171b5"
+      },
+      "frames": 9,
+      "cameraSha256": "9219755226ac1023525ab503596ceab70cb741a25b329365eee73d3cdfefbe56",
+      "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145"
+    },
+    {
+      "manifest": {
+        "file": "reviews/nx-town-belltower-supplement-final/render-manifest.json",
+        "sha256": "3b88154cb780cda895a313aa6541b77a8927b3be73b0c1eea586a3b64c806af7"
+      },
+      "frames": 9,
+      "cameraSha256": "446052d2e934b4d813458b5de6905ddde424045267079ecc1ea9b2d595c5a581",
+      "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145"
+    },
+    {
+      "manifest": {
+        "file": "reviews/nx-town-belltower-ensemble-final/render-manifest.json",
+        "sha256": "52b6475b4171563f3e6c2eb3beeeed754a41500b4b6183889c865846a0b70d43"
+      },
+      "frames": 9,
+      "cameraSha256": "446052d2e934b4d813458b5de6905ddde424045267079ecc1ea9b2d595c5a581",
+      "modelSha256": "283c40d35a162c04b037a0e26db56f6472833f71a7b50625103f5baa8b4bbfb5"
+    }
+  ],
+  "refreshedRenderFrames": 27,
+  "visualMode": "vision_analyze auxiliary textual image analyses, not native",
+  "nativeReview": {
+    "status": "PARENT_REPORTED_DESIGN_ACCEPTED",
+    "source": "Latest direct parent steering: native parent already accepts repaired belltower and scholar design.",
+    "limits": "Worker performed auxiliary analysis only; parent must bind final exact bytes to its native record."
+  },
+  "notes": {
+    "file": "towers-notes.md",
+    "sha256": "546316083bb3d630719ce0a9a836d8c705ff5ab320fa2f0765c2c0b09a946996"
+  },
+  "testRun": {
+    "file": "build/nx-towers-tdd-final.json",
+    "sha256": "92c0a88181b40c6e814031b0d89bb309e5c959e0a05b845f6335996debf18128"
+  },
+  "worldMutations": 0,
+  "limits": [
+    "No live controller climb, socket interaction, served-after-upload proof or live terrain survey.",
+    "No road, engine, approval or parent adapter edits.",
+    "Parent reports encoded proof-frame integration passed 10 tests. Current separate probeApproach replay still aliases yaw after cloning; preserve pure-Y scalar representation. Fresh live-context preflight is parent-owned."
+  ],
+  "approachHold": {
+    "file": "build/nx-town-belltower.approach-hold.json",
+    "sha256": "ff1123935500efb5a50cf599f7b7dfb49eb87402714afbc2edac97d59b24b624"
+  },
+  "structuralSupport": {
+    "file": "build/nx-town-belltower.structural-support.json",
+    "sha256": "4bbfed0f5f915917dd0908f04eb6457f4f995a93edaae45bfde23b91915b2b0e"
+  },
+  "ladderReport": {
+    "file": "build/nx-town-belltower.ladder.report.json",
+    "sha256": "66630f76cbfda6592777c4a7a738ff527cde99a394031ba744ac0fbf37a2819c"
+  },
+  "heightCorrection": "Final decoded top 8.489999771118164m. Only authored roof pitch and crown were lowered; no served bell/lamp/ladder movement. Parent withdrew height cap; bounded handoff retains this current geometry.",
+  "nativeFollowupImages": [
+    {
+      "file": "reviews/nx-town-belltower-supplement-final/aerial.png",
+      "sha256": "aa9db48f8a6cf44bb0838041f66ce9d7d76ad0038e5f8a6c99ceda84c5167d7f"
+    },
+    {
+      "file": "reviews/nx-town-belltower-ensemble-final/front.png",
+      "sha256": "1e2ae2379efdf575981dc0c8ada643eb58dfc5164b9de9988193b8a1d7e1f177"
+    }
+  ]
+}

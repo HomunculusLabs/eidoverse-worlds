@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "id": "nx-town-dyehouse",
+  "runs": [
+    {
+      "run": 1,
+      "tool": {
+        "output": "{\"id\":\"nx-town-dyehouse\",\"sha256\":\"8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275\",\"bytes\":278100,\"nodes\":23,\"meshes\":20,\"bounds\":{\"min\":[-1.5,8.940696724635266e-10,-1.0456808805465698],\"max\":[1.7750358581542969,3.110499998360872,1.1456724405288696]},\"parts\":140}",
+        "exit_code": 0,
+        "error": null
+      },
+      "sha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+      "bytes": 278100,
+      "mtimeBeforeNs": 1788832816795604874,
+      "mtimeAfterNs": 1788833769392977374,
+      "mtimeAdvanced": true
+    },
+    {
+      "run": 2,
+      "tool": {
+        "output": "{\"id\":\"nx-town-dyehouse\",\"sha256\":\"8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275\",\"bytes\":278100,\"nodes\":23,\"meshes\":20,\"bounds\":{\"min\":[-1.5,8.940696724635266e-10,-1.0456808805465698],\"max\":[1.7750358581542969,3.110499998360872,1.1456724405288696]},\"parts\":140}",
+        "exit_code": 0,
+        "error": null
+      },
+      "sha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+      "bytes": 278100,
+      "mtimeBeforeNs": 1788833769392977374,
+      "mtimeAfterNs": 1788833770009488916,
+      "mtimeAdvanced": true
+    }
+  ],
+  "builderSha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63"
+}

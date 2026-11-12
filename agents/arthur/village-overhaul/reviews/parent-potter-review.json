@@ -1,0 +1,118 @@
+{
+  "schema": "village-review-v1",
+  "id": "nx-town-potter",
+  "modelSha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+  "kind": "workstation",
+  "sources": [
+    {
+      "file": "build-potter.ts",
+      "sha256": "f69f83e38095d983fd1fa5319c2642b64c3d7655b000daa8bc119e9f4dfada94"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "../cabin-overhaul/verify-player.ts",
+      "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+    },
+    {
+      "file": "../../../tools/core-stub.mjs",
+      "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.module.js",
+      "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.core.js",
+      "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+    },
+    {
+      "file": "verify-approach.ts",
+      "sha256": "abda1150a2bb52a5f0a1defd892fa1c36855fcb89e645f3a65785c68dcbfda79"
+    },
+    {
+      "file": "../../../client/node_modules/three-mesh-bvh/build/index.module.js",
+      "sha256": "4a1f29ae93208d5f97a1652182c2d3133ce9cf51a6ffffc04f4d20255bf21afe"
+    },
+    {
+      "file": "before/nx-town-potter.glb",
+      "sha256": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-potter-approach-contract.json",
+      "sha256": "e989c534baa31428b20fc0fd6937c13044514b5007aa2a03ed0e68b31e4e100e",
+      "mode": "workstation"
+    }
+  ],
+  "visual": {
+    "verdict": "accepted",
+    "reviewer": "parent adjudication of independent native source-bound ensemble review; not Bill approval",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-C/review.md",
+        "sha256": "089b1fc1b3a1b02a5ae4a047a0724fd896b61a8aae748aed04853d50f72c3e50"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/potter-front.png",
+        "sha256": "3395e6b78d05c1b4247e934e08a416214723bb192e7a07839389d18f2f71d1dc"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/potter-aerial.png",
+        "sha256": "d90ddcd1522b05de835c3c9410a534618b2c71080fe166973925673efd7fcba6"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/potter-interior.png",
+        "sha256": "2b0fa0c21709c2039e7ea924a5bd3da5c5cb48fdf34aa161f580de60155c9795"
+      },
+      {
+        "file": "reviews/nx-town-potter-assembly-final/render-manifest.json",
+        "sha256": "1a586eb4f81cc472166e95d0088ecc48aaa91a5023e088344d932142df06aff5"
+      },
+      {
+        "file": "reviews/nx-town-potter-assembly-final/render-manifest.json",
+        "sha256": "1a586eb4f81cc472166e95d0088ecc48aaa91a5023e088344d932142df06aff5"
+      },
+      {
+        "file": "reviews/nx-town-potter-assembly-final/render-manifest.json",
+        "sha256": "1a586eb4f81cc472166e95d0088ecc48aaa91a5023e088344d932142df06aff5"
+      }
+    ]
+  },
+  "geometry": {
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-potter-geometry.json",
+      "sha256": "d9f5b859d5a1e38b4f0956891c933055a519df6220295356bb20f30af533b515"
+    }
+  },
+  "functional": {
+    "verdict": "passed",
+    "kind": "workstation",
+    "evidence": {
+      "file": "build/nx-town-potter-functionality.json",
+      "sha256": "0f522b41e2f2a70bad3a235e8abea3f076c27182929e0ac26e153b528d2d1f6f"
+    }
+  },
+  "deterministic": {
+    "sha256": [
+      "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+      "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed"
+    ],
+    "evidence": {
+      "file": "build/nx-town-potter-double-build.json",
+      "sha256": "e87725cf4c9f5e963544634e86f67d445910bdcad4c7269c0af05f8ec0a92953"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "village-review-v1",
+  "id": "nx-town-inn",
+  "modelSha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+  "kind": "walk-in",
+  "sources": [
+    {
+      "file": "build-inn.ts",
+      "sha256": "2d2d173571531f84b8bd079fdc188a90068e40ae99abe54ac48aa5e2c8683bec"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "before/nx-town-inn.glb",
+      "sha256": "0cac6fa0d663bf80ec8537f9e8734f5e4d5ba641206bd71fdf49e8303b2f6fec"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-inn-route-contract.json",
+      "sha256": "e619a3a37fff1a16fc0f3784b9b1f8d263c6e153fa13f5847be43ea9a9e04750",
+      "mode": "room"
+    },
+    {
+      "file": "build/inn-upper-route-contract.json",
+      "sha256": "7576e1b448c971d3eac2f514c4a8a37f7248738a014de04d33f0250692549e38",
+      "mode": "room"
+    }
+  ],
+  "visual": {
+    "verdict": "accepted",
+    "reviewer": "parent adjudication of independent same-model native GPT-6-Astra batch-A image review, not Bill approval",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-A/review.md",
+        "sha256": "22adfcfde83c226fcdc4adcc4e75e4eae2f5eed1d2aec8a43bda760caa3dd354"
+      },
+      {
+        "file": "reviews/parent-native/batch-A/inn-front.png",
+        "sha256": "62c4b870a4f670a9c61f4ba1dc965509934d2f6d9f4fc6953750ace32e0f62b7"
+      },
+      {
+        "file": "reviews/parent-native/batch-A/inn-aerial.png",
+        "sha256": "7d250c9d391e5248cd1c04d92255e4ffdf8127f7ee5633e5fbe4e4ebc57d54dd"
+      },
+      {
+        "file": "reviews/parent-native/batch-A/inn-interior.png",
+        "sha256": "458917339596e5423ead8f8d4b8813826b69a96fcf396b6683bcbaf5938ee959"
+      }
+    ]
+  },
+  "geometry": {
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-inn-geometry.json",
+      "sha256": "474373be8637e8a8fd95eaf794020f9565966d1832983627cca7e844df6ba592"
+    }
+  },
+  "functional": {
+    "verdict": "passed",
+    "kind": "walk-in",
+    "evidence": {
+      "file": "reviews/parent-inn-player.json",
+      "sha256": "8839205ef177962e92bfa69728991e287392c76cde2e5520598196a782f8dcb6"
+    }
+  },
+  "deterministic": {
+    "sha256": [
+      "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+      "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692"
+    ],
+    "evidence": {
+      "file": "build/inn-determinism.json",
+      "sha256": "fd180178495b9eaf09dcef1492d62b308f2b0bc83b891d0c0d9154f749a00d6d"
+    }
+  }
+}

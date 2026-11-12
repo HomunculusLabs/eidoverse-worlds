@@ -1,0 +1,162 @@
+[
+  {
+    "id": "nx-town-bunkhouse",
+    "name": "approach",
+    "bodyLocal": [
+      0,
+      0,
+      4.2
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0.8
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "601895e7562552f0aa583408526f446c586e9786ed39841ad797b4d2e9770400"
+  },
+  {
+    "id": "nx-town-bunkhouse",
+    "name": "interior",
+    "bodyLocal": [
+      0,
+      0.2598974406719208,
+      0.8
+    ],
+    "lookLocal": [
+      0.85,
+      0.2598974406719208,
+      0
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "601895e7562552f0aa583408526f446c586e9786ed39841ad797b4d2e9770400"
+  },
+  {
+    "id": "nx-town-garden-cottage",
+    "name": "approach",
+    "bodyLocal": [
+      0,
+      0,
+      4
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0.7
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "abd5776952913c4b0693af233595d913c190916e571edf61f528b467408d9f63"
+  },
+  {
+    "id": "nx-town-garden-cottage",
+    "name": "interior",
+    "bodyLocal": [
+      0,
+      0.12984496355056763,
+      0.7
+    ],
+    "lookLocal": [
+      1.05,
+      0.12984496355056763,
+      -0.45
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "abd5776952913c4b0693af233595d913c190916e571edf61f528b467408d9f63"
+  },
+  {
+    "id": "nx-town-longhouse",
+    "name": "approach",
+    "bodyLocal": [
+      0,
+      0,
+      4.7
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0.7
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "0dc726477b2615d870fd9eb1b3dd82014e6d61ddaf032029fed44af81e53c970"
+  },
+  {
+    "id": "nx-town-longhouse",
+    "name": "interior",
+    "bodyLocal": [
+      0,
+      0.19991452991962433,
+      0.7
+    ],
+    "lookLocal": [
+      -2.5,
+      0.19991452991962433,
+      0.7
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "0dc726477b2615d870fd9eb1b3dd82014e6d61ddaf032029fed44af81e53c970"
+  },
+  {
+    "id": "nx-town-row-cottage",
+    "name": "approach",
+    "bodyLocal": [
+      0,
+      0,
+      4
+    ],
+    "lookLocal": [
+      -0.8,
+      0,
+      0.9
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "44f475cd75bfc239105fd14034086c43bebc993cb0325ce00d8a57eb10241963"
+  },
+  {
+    "id": "nx-town-row-cottage",
+    "name": "interior",
+    "bodyLocal": [
+      -0.8,
+      0.2001037746667862,
+      0.9
+    ],
+    "lookLocal": [
+      -0.8,
+      0.2001037746667862,
+      -0.55
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "44f475cd75bfc239105fd14034086c43bebc993cb0325ce00d8a57eb10241963"
+  },
+  {
+    "id": "nx-town-tower-house",
+    "name": "approach",
+    "bodyLocal": [
+      0,
+      0,
+      4.3
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0.8
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "c129086ab28d76c8c73cba37c845064ceead9dedecc0a7604c57f37d67702525"
+  },
+  {
+    "id": "nx-town-tower-house",
+    "name": "interior",
+    "bodyLocal": [
+      0,
+      0.174945667386055,
+      0.8
+    ],
+    "lookLocal": [
+      -0.15,
+      0.174945667386055,
+      -0.45
+    ],
+    "basis": "archived interior-walk visitor XZ; saved served-host collider floor; outside ground nominal host-local zero; viewpoint only, not a live walk",
+    "baselineServedSha256": "c129086ab28d76c8c73cba37c845064ceead9dedecc0a7604c57f37d67702525"
+  }
+]

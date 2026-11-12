@@ -1,0 +1,97 @@
+{
+  "id": "nx-court",
+  "sourceSha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+  "kind": "walk-in",
+  "verdict": "accepted",
+  "visual": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/connected-court-forge.md",
+        "sha256": "380cc1d67437dfcad6279749063765359ae002769f6ab41c2efdd138bc4d5d73"
+      },
+      {
+        "file": "reviews/parent-court-connected-final/front.png",
+        "sha256": "7006336f77b091e62cdb058fe949f6fa5d7629145c80120bdb8a2a25f3e01f0f"
+      },
+      {
+        "file": "reviews/parent-court-connected-final/aerial.png",
+        "sha256": "42a729622d309b4fbd18fd5eabb83eb28e6c031d4f8cb53f992881f7eb01e78b"
+      },
+      {
+        "file": "reviews/parent-forge-connected-final/back.png",
+        "sha256": "1667f29bad53b246359e4b216ece0e924df1e5957e44c818cf4c73fd8b9b6b1e"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "geometry": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/court-geometry.json",
+        "sha256": "69770045d8460d66fb49faeeaf758f9ece184f654c531a4b9df1a4d471c56946"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/court-geometry.json",
+      "sha256": "69770045d8460d66fb49faeeaf758f9ece184f654c531a4b9df1a4d471c56946"
+    }
+  },
+  "functional": {
+    "status": "passed",
+    "evidence": {
+      "file": "build/court-player-report.json",
+      "sha256": "db8b972fbfbfd99355792975665c3bc8ebc16b4f7e8176ae610729c4ffd0d46d"
+    },
+    "kind": "walk-in",
+    "verdict": "passed"
+  },
+  "sources": [
+    {
+      "file": "build-court.ts",
+      "sha256": "5522b6de97665a94ee199db46dcf1b9599b23ffbf50e68b799e30581edb81fdc"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "build-forge.ts",
+      "sha256": "9b38d74f34e065592105790dd856e063cbaae59263aac4ff44e99dd0ed6c4935"
+    },
+    {
+      "file": "before/nx-court.glb",
+      "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/court-routes.json",
+      "sha256": "a25692e824b35269fc3ea5967e73fbda0e5ec9266dcdca546cfe065abd35fc66",
+      "mode": "room"
+    }
+  ],
+  "deterministic": {
+    "sha256": [
+      "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+      "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e"
+    ],
+    "evidence": {
+      "file": "reviews/parent-nx-court-determinism.json",
+      "sha256": "a83b543376decc4d5154b07c1e49359981e4f8672513232a0eff1be5a1839605"
+    }
+  },
+  "schema": "village-review-v1",
+  "modelSha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e"
+}

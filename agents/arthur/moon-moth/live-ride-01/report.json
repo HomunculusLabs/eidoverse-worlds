@@ -1,0 +1,1594 @@
+{
+  "version": 1,
+  "mode": "ride",
+  "startedAt": "2026-09-08T01:18:58.711Z",
+  "base": "https://eidoverse.billding.dev",
+  "world": "commons-next",
+  "target": "nx-moonmoth-001",
+  "probe": "moonmoth-probe-085043b2",
+  "isolation": {
+    "headless": true,
+    "freshContext": true,
+    "residentCredentials": false,
+    "sharedDoorKeyInNodeRelay": true,
+    "userBrowserAttached": false,
+    "httpWritesBlocked": true
+  },
+  "visualVerdict": "NOT_JUDGED",
+  "rideInvoked": true,
+  "frames": [
+    {
+      "label": "00-inspect",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/00-inspect.png",
+      "sha256": "6dbc9db4cb79d89a9af8905ec609f4f365c2e8b1787794dd6210c7b522bd0439",
+      "sampledAt": 1788830353259,
+      "screenshotFinishedAt": 1788830353368
+    },
+    {
+      "label": "01-mounted-close",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/01-mounted-close.png",
+      "sha256": "7216401a78daad4b7dcaa743870b89ce87338f5d47d9363f808abc4cb8150933",
+      "sampledAt": 1788830354969,
+      "screenshotFinishedAt": 1788830355076
+    },
+    {
+      "label": "02-mounted-opposite",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/02-mounted-opposite.png",
+      "sha256": "af2556722af5cb1022a9fc0fcb8b38bc3bce0997e7032bcb6922faacab9c14a3",
+      "sampledAt": 1788830355878,
+      "screenshotFinishedAt": 1788830356025
+    },
+    {
+      "label": "03-mounted-wide",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/03-mounted-wide.png",
+      "sha256": "4003ab50b8398adf5398b768e6d090c44c4b614b4e9f28e28708a9f35acc6844",
+      "sampledAt": 1788830356917,
+      "screenshotFinishedAt": 1788830357026
+    },
+    {
+      "label": "flight-2s",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/flight-2s.png",
+      "sha256": "b5b5e30cda7ff44cff0619a6fc53d9d79f1c330cb186ebebe072659ef631b6e9",
+      "sampledAt": 1788830359028,
+      "screenshotFinishedAt": 1788830359152
+    },
+    {
+      "label": "flight-12s",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/flight-12s.png",
+      "sha256": "42fa751c45e44f4b08c56042519eec72779449296c1ad6946dfdd7dcc892714c",
+      "sampledAt": 1788830369027,
+      "screenshotFinishedAt": 1788830369164
+    },
+    {
+      "label": "flight-28s",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/flight-28s.png",
+      "sha256": "e955a318476f868553b9ddf2d963207716148e5c4fe4dd0412c793b1013b333f",
+      "sampledAt": 1788830385029,
+      "screenshotFinishedAt": 1788830385145
+    },
+    {
+      "label": "flight-46s",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/flight-46s.png",
+      "sha256": "42bb135c8c7f269313bfba38fa4a39b588e965d0b0caefd4c4011be86ffd1aa2",
+      "sampledAt": 1788830403031,
+      "screenshotFinishedAt": 1788830403145
+    },
+    {
+      "label": "flight-62s",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/flight-62s.png",
+      "sha256": "aeec7bdcc924e0c6bfee41a2eb6b1a87fedc47399adcba3486738303fa6f15bf",
+      "sampledAt": 1788830419028,
+      "screenshotFinishedAt": 1788830419146
+    },
+    {
+      "label": "flight-80s",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/flight-80s.png",
+      "sha256": "747f142493b025b3a6a657a9a27c08cbd4dcf0377069bc0cfc268d451775b2df",
+      "sampledAt": 1788830437031,
+      "screenshotFinishedAt": 1788830437154
+    },
+    {
+      "label": "flight-95s",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/flight-95s.png",
+      "sha256": "3bae9fdae9d7f6550e5ebcdc0aeeac86f7cff92f77f25d25edf7a654367f213c",
+      "sampledAt": 1788830452030,
+      "screenshotFinishedAt": 1788830452160
+    },
+    {
+      "label": "99-dismounted",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/99-dismounted.png",
+      "sha256": "2367d55ccc62e793453888313136a3084bdd6068f8b56b679e6648976fa6df9e",
+      "sampledAt": 1788830453465,
+      "screenshotFinishedAt": 1788830453614
+    }
+  ],
+  "samples": [
+    {
+      "label": "00-inspect",
+      "at": 1788830353259,
+      "seq": 776,
+      "authoritativeMount": null,
+      "localMount": null,
+      "expectedRoot": null,
+      "mountInfo": null,
+      "socketWorld": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "riderRoot": [
+        -84,
+        -0.007139732056010448,
+        16
+      ],
+      "rootErrorM": null,
+      "stateErrorM": null,
+      "riderClip": "idle",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "hipsWorld": [
+        -83.95756838930099,
+        0.8180120255744147,
+        16.007670933705903
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        1.9708015504140561,
+        13
+      ],
+      "hipsAboveSeatM": -1.1527895248396414,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.22033965624745,
+          0.01368436050006796,
+          7.241151329417325
+        ],
+        "max": [
+          -86.95987770009293,
+          5.0114214824852406,
+          18.758848706963263
+        ]
+      },
+      "camera": {
+        "position": [
+          -80.01321124405372,
+          2.764039822531685,
+          15.379999999999997
+        ],
+        "quaternion": [
+          -0.11539368961473868,
+          0.7233309492131372,
+          0.12471465200434939,
+          0.6692704161121672
+        ],
+        "fov": 55
+      },
+      "seatHud": false,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "01-mounted-close",
+      "at": 1788830354969,
+      "seq": 777,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "riderRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "hipsWorld": [
+        -89.80814314898048,
+        2.571847670453017,
+        12.99933369224902
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        1.9708015504140561,
+        13
+      ],
+      "hipsAboveSeatM": 0.601046120038961,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.22064269587057,
+          0.01368436050006796,
+          7.072693063054092
+        ],
+        "max": [
+          -87.09267930167887,
+          4.512207769474773,
+          18.92730691847099
+        ]
+      },
+      "camera": {
+        "position": [
+          -85.83321124296442,
+          5.241981104537962,
+          12.380000000561502
+        ],
+        "quaternion": [
+          -0.11539368956279861,
+          0.723330949170774,
+          0.12471465192806011,
+          0.6692704161811236
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "02-mounted-opposite",
+      "at": 1788830355878,
+      "seq": 777,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "riderRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "hipsWorld": [
+        -89.8074776706997,
+        2.572534756453826,
+        13.00006780285589
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        1.9708015504140561,
+        13
+      ],
+      "hipsAboveSeatM": 0.6017332060397698,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.21967075406407,
+          0.01368436050006796,
+          7.4820683515040365
+        ],
+        "max": [
+          -86.82113407658915,
+          5.532971814850991,
+          18.517931600289753
+        ]
+      },
+      "camera": {
+        "position": [
+          -93.80667967024509,
+          5.2419811050017495,
+          13.619983035686403
+        ],
+        "quaternion": [
+          -0.12471767138421827,
+          -0.6692706798176666,
+          -0.11539672811303217,
+          0.7233296998753082
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "03-mounted-wide",
+      "at": 1788830356917,
+      "seq": 777,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "riderRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "hipsWorld": [
+        -89.81025034403389,
+        2.5709503867425294,
+        12.999818053763908
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        1.9708015504140561,
+        13
+      ],
+      "hipsAboveSeatM": 0.6001488363284733,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.2177767345023,
+          0.01368436050006796,
+          8.012771955805308
+        ],
+        "max": [
+          -86.60688797215683,
+          6.338343075546816,
+          17.987228030589108
+        ]
+      },
+      "camera": {
+        "position": [
+          -89.20001554173041,
+          8.63926315305842,
+          27.238408845288365
+        ],
+        "quaternion": [
+          -0.1623895676947316,
+          0.010739090045282262,
+          0.0017674825657504976,
+          0.986666699678416
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "flight-2s",
+      "at": 1788830359028,
+      "seq": 780,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -89.82,
+        4.191334035123985,
+        13
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -89.82,
+        4.191334035123985,
+        13
+      ],
+      "riderRoot": [
+        -89.82,
+        4.191334035123985,
+        13
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        1.7213340351239843,
+        13
+      ],
+      "hipsWorld": [
+        -89.81127836273471,
+        4.290761867259058,
+        13.000014753939578
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        3.691334035123984,
+        13
+      ],
+      "hipsAboveSeatM": 0.5994278321350741,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.2205589652261,
+          1.7342168452099962,
+          7.132963455813667
+        ],
+        "max": [
+          -87.03980072269088,
+          6.4315158068893865,
+          18.86703657040777
+        ]
+      },
+      "camera": {
+        "position": [
+          -89.20000000000002,
+          10.302226760743702,
+          27.238531271236603
+        ],
+        "quaternion": [
+          -0.16059647847539396,
+          0.010742729976389904,
+          0.001748038792281156,
+          0.9869601355750584
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "flight-12s",
+      "at": 1788830369027,
+      "seq": 780,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -89.82,
+        13.27292780137434,
+        13
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -89.82,
+        13.27292780137434,
+        13
+      ],
+      "riderRoot": [
+        -89.82,
+        13.27292780137434,
+        13
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        10.80292780137434,
+        13
+      ],
+      "hipsWorld": [
+        -89.80807542240959,
+        13.374052874789314,
+        12.999502977094938
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        12.77292780137434,
+        13
+      ],
+      "hipsAboveSeatM": 0.6011250734149733,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.21903159202388,
+          10.815810611460352,
+          7.674679614500911
+        ],
+        "max": [
+          -86.73289245941885,
+          16.666806605644858,
+          18.32532043401804
+        ]
+      },
+      "camera": {
+        "position": [
+          -89.2,
+          19.383834669045793,
+          27.238531271236607
+        ],
+        "quaternion": [
+          -0.16059691924064784,
+          0.010742729195734907,
+          0.0017480435898631595,
+          0.9869600638543831
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "flight-28s",
+      "at": 1788830385029,
+      "seq": 780,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -88.91702636949954,
+        24.470801550414055,
+        16.148352622460017
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -88.91702636949954,
+        24.470801550414055,
+        16.148352622460017
+      ],
+      "riderRoot": [
+        -88.91702636949954,
+        24.470801550414055,
+        16.148352622460017
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -89.09702636949955,
+        22.000801550414057,
+        16.148352622460017
+      ],
+      "hipsWorld": [
+        -88.90735380417578,
+        24.571226350195765,
+        16.14874487266198
+      ],
+      "authoredSeatPanWorld": [
+        -88.91702636949954,
+        23.970801550414055,
+        16.148352622460017
+      ],
+      "hipsAboveSeatM": 0.6004247997817096,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -93.31506625537475,
+          22.01368436050007,
+          11.093084571679878
+        ],
+        "max": [
+          -85.72696556428271,
+          28.251691361265465,
+          21.20362070274338
+        ]
+      },
+      "camera": {
+        "position": [
+          -88.32839600582984,
+          30.639299959655816,
+          30.33908395288035
+        ],
+        "quaternion": [
+          -0.1629021406292925,
+          0.009684785887043931,
+          0.001599110991177533,
+          0.986593401733842
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "flight-46s",
+      "at": 1788830403031,
+      "seq": 780,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -77.87956015492053,
+        24.470801550414055,
+        12.175471245346934
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -77.87956015492053,
+        24.470801550414055,
+        12.175471245346934
+      ],
+      "riderRoot": [
+        -77.87956015492053,
+        24.470801550414055,
+        12.175471245346934
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -78.05956015492053,
+        22.000801550414057,
+        12.175471245346934
+      ],
+      "hipsWorld": [
+        -77.86934438244185,
+        24.570414858538037,
+        12.175284973326484
+      ],
+      "authoredSeatPanWorld": [
+        -77.87956015492053,
+        23.970801550414055,
+        12.175471245346934
+      ],
+      "hipsAboveSeatM": 0.5996133081239812,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -82.28012768123499,
+          22.01368436050007,
+          6.3032248639427175
+        ],
+        "max": [
+          -75.10364419056718,
+          26.694881945847396,
+          18.047717652377884
+        ]
+      },
+      "camera": {
+        "position": [
+          -77.25221980818596,
+          30.639299959655816,
+          26.47122063017661
+        ],
+        "quaternion": [
+          -0.16178793050296245,
+          0.010950849321750281,
+          0.0017954817659245246,
+          0.9867631532885331
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "flight-62s",
+      "at": 1788830419028,
+      "seq": 780,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -88.81890394685736,
+        24.470801550414055,
+        9.704796794366997
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -88.81890394685736,
+        24.470801550414055,
+        9.704796794366997
+      ],
+      "riderRoot": [
+        -88.81890394685736,
+        24.470801550414055,
+        9.704796794366997
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -88.99890394685737,
+        22.000801550414057,
+        9.704796794366997
+      ],
+      "hipsWorld": [
+        -88.80667871858536,
+        24.57219981247814,
+        9.704868799934392
+      ],
+      "authoredSeatPanWorld": [
+        -88.81890394685736,
+        23.970801550414055,
+        9.704796794366997
+      ],
+      "hipsAboveSeatM": 0.6013982620640839,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -93.21893714960636,
+          22.01368436050007,
+          4.064763624106019
+        ],
+        "max": [
+          -85.8852632588009,
+          27.287784019414843,
+          15.344830008465976
+        ]
+      },
+      "camera": {
+        "position": [
+          -88.16701488881074,
+          30.639299959655816,
+          23.895621123226995
+        ],
+        "quaternion": [
+          -0.1628825635266936,
+          0.011882651001316797,
+          0.0019618200627091274,
+          0.9865719560002683
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "flight-80s",
+      "at": 1788830437031,
+      "seq": 780,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -89.82,
+        11.621497213594658,
+        13
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -89.82,
+        11.621497213594658,
+        13
+      ],
+      "riderRoot": [
+        -89.82,
+        11.621497213594658,
+        13
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        9.151497213594658,
+        13
+      ],
+      "hipsWorld": [
+        -89.81002790341549,
+        11.721177254742278,
+        12.999619680043212
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        11.121497213594658,
+        13
+      ],
+      "hipsAboveSeatM": 0.5996800411476197,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.22068198765392,
+          9.16438002368067,
+          7.007957601077363
+        ],
+        "max": [
+          -87.16048033269519,
+          13.408032979020879,
+          18.99204239396431
+        ]
+      },
+      "camera": {
+        "position": [
+          -89.19999999999996,
+          17.84754391653075,
+          27.238531271236603
+        ],
+        "quaternion": [
+          -0.16417565127461228,
+          0.010736318227824617,
+          0.0017869968874819947,
+          0.986371072995144
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "flight-95s",
+      "at": 1788830452030,
+      "seq": 782,
+      "authoritativeMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "localMount": {
+        "to": "nx-moonmoth-001",
+        "slot": "seat"
+      },
+      "expectedRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "mountInfo": {
+        "yaw": 1.5707963267948963,
+        "pose": "sitchair",
+        "to": "nx-moonmoth-001",
+        "seatState": "approximate",
+        "seatReason": "no rider context"
+      },
+      "socketWorld": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "riderRoot": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "rootErrorM": 0,
+      "stateErrorM": 0,
+      "riderClip": "sitchair",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "hipsWorld": [
+        -89.80978739818237,
+        2.570409366943004,
+        12.999814129661715
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        1.9708015504140561,
+        13
+      ],
+      "hipsAboveSeatM": 0.599607816528948,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.2200438724207,
+          0.01368436050006796,
+          7.3561405521646375
+        ],
+        "max": [
+          -86.88855284412702,
+          5.279538325591499,
+          18.643859491484452
+        ]
+      },
+      "camera": {
+        "position": [
+          -89.19999999999996,
+          8.639299959655826,
+          27.238531271236603
+        ],
+        "quaternion": [
+          -0.16238942022921324,
+          0.01073953623501119,
+          0.0017675543617866787,
+          0.9866667189637315
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    },
+    {
+      "label": "99-dismounted",
+      "at": 1788830453465,
+      "seq": 783,
+      "authoritativeMount": null,
+      "localMount": null,
+      "expectedRoot": null,
+      "mountInfo": null,
+      "socketWorld": [
+        -89.82,
+        2.4708015504140564,
+        13
+      ],
+      "riderRoot": [
+        -77.18365093801295,
+        -0.01325899086189942,
+        11.210740932515575
+      ],
+      "rootErrorM": null,
+      "stateErrorM": null,
+      "riderClip": "idle",
+      "riderVisible": true,
+      "carrierWorld": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "hipsWorld": [
+        -77.21411464515873,
+        0.8118461367666873,
+        11.180565916976175
+      ],
+      "authoredSeatPanWorld": [
+        -89.82,
+        1.9708015504140561,
+        13
+      ],
+      "hipsAboveSeatM": -1.158955413647369,
+      "carrierPlaceholder": null,
+      "carrierBounds": {
+        "min": [
+          -94.22068196600647,
+          0.01368436050006796,
+          7.00426618258335
+        ],
+        "max": [
+          -87.16483815496099,
+          4.2409558520027435,
+          18.995733814330226
+        ]
+      },
+      "camera": {
+        "position": [
+          -76.56365113712214,
+          6.155239457520792,
+          25.44927223262668
+        ],
+        "quaternion": [
+          -0.16238942120017558,
+          0.010739529316100803,
+          0.0017675532337620176,
+          0.9866667188812575
+        ],
+        "fov": 55
+      },
+      "seatHud": true,
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 401 ()"
+    },
+    {
+      "type": "warning",
+      "message": "VRMUtils.removeUnnecessaryJoints: removeUnnecessaryJoints is deprecated. Use combineSkeletons instead. combineSkeletons contributes more to the performance improvement. This function will be removed in the next major version."
+    },
+    {
+      "type": "warning",
+      "message": "createVRMAnimationClip: VRMLookAtQuaternionProxy is not found. Creating a new one automatically. To suppress this warning, create a VRMLookAtQuaternionProxy manually"
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "[jank] 183ms frame gap during: depth nx-town-streetlamps[queued] + depth nx-dress-banner[queued] + depth nx-dress-stringlights[queued] + depth nx-town-market[queued] + depth nx-hearth[queued] + depth nx-town-roads[queued] + depth nx-dress-fountain[queued] + compile 216c4bd4d12ff308.glb[queued] + depth nx-artwalk-b5-belltower-[queued] + depth nx-artwalk-b22-mapboard-[queued] + depth nx-artwalk-b6-market-lis[queued] + compile dc256065879371d8.glb[queued] + compile dc52264c04cfe5bb.glb[queued] + depth nx-artwalk-b24-well-dept[queued] + glb 241db6453224af9f.glb[parse] + glb 8e55e366b5a28987.glb[parse] + glb e8417696ee8ab62b.glb[queued]"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ],
+  "requestsFailed": [
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+      "message": "net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "url": "https://eidoverse.billding.dev/perflog",
+      "message": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "url": "https://eidoverse.billding.dev/thumb/claude.png",
+      "message": "net::ERR_ABORTED"
+    }
+  ],
+  "blockedHttp": [
+    {
+      "method": "POST",
+      "url": "https://eidoverse.billding.dev/perflog"
+    }
+  ],
+  "modules": {
+    "main.js": {
+      "status": 200,
+      "sha256": "ccd7571157097f96cfcad934a5b7623f66462c5e647db1b642fe3e5db5cba84f",
+      "matchesCheckout": false
+    },
+    "lib/core.js": {
+      "status": 200,
+      "sha256": "ce119cad66ea52ca78039599724037d1f7af1f5a96d578ef4dea636e95c35553",
+      "matchesCheckout": false
+    },
+    "lib/world.js": {
+      "status": 200,
+      "sha256": "31d0677c8422c88b1662431742728bdb703e62d4f2db67c09ef57967fa39998b",
+      "matchesCheckout": true
+    },
+    "lib/localbody.js": {
+      "status": 200,
+      "sha256": "e935e571af4d65ae0ce4fc5a70ad65a1cd211f61b1917377af5e52ddc77623f2",
+      "matchesCheckout": false
+    },
+    "lib/controller.js": {
+      "status": 200,
+      "sha256": "15a772e6c85a0273908bf2db0a3ed70dc5d302a149587b74337c2e00c596945f",
+      "matchesCheckout": false
+    },
+    "lib/net.js": {
+      "status": 200,
+      "sha256": "a57b8b3362e58415b8eed00ffa59a10f027abdfe8d85c74a31c039fb4ffb7e81",
+      "matchesCheckout": false
+    }
+  },
+  "client": {
+    "joined": true,
+    "myId": "moonmoth-probe-085043b2",
+    "name": "moonmoth-probe-085043b2",
+    "gpuAdapter": true,
+    "webgpuBackend": true,
+    "bodyLoaded": true,
+    "entityCount": 296,
+    "rendererFrames": 4
+  },
+  "wire": {
+    "sentTypes": {
+      "join": 1,
+      "pose": 1625,
+      "verb:mount": 1,
+      "verb:use": 1,
+      "verb:dismount": 1
+    },
+    "sentVerbs": [
+      {
+        "verb": "mount",
+        "args": {
+          "id": "moonmoth-probe-085043b2",
+          "to": "nx-moonmoth-001",
+          "slot": "seat"
+        },
+        "at": 1788830353372
+      },
+      {
+        "verb": "use",
+        "args": {
+          "id": "nx-moonmoth-001",
+          "action": "fly"
+        },
+        "at": 1788830357027
+      },
+      {
+        "verb": "dismount",
+        "args": {
+          "id": "moonmoth-probe-085043b2",
+          "pos": [
+            -89.11999999999999,
+            0,
+            13
+          ],
+          "yaw": 1.5707963267948963
+        },
+        "at": 1788830452177
+      }
+    ],
+    "blocked": [
+      {
+        "type": "relay-cred",
+        "at": 1788830342304
+      },
+      {
+        "type": "voice-consent",
+        "at": 1788830342304
+      }
+    ]
+  },
+  "browserVersion": "152.0.7977.77",
+  "relay": {
+    "sentTypes": {
+      "join": 1,
+      "pose": 1625,
+      "verb:mount": 1,
+      "verb:use": 1,
+      "verb:dismount": 1
+    },
+    "sentVerbs": [
+      {
+        "verb": "mount",
+        "args": {
+          "id": "moonmoth-probe-085043b2",
+          "to": "nx-moonmoth-001",
+          "slot": "seat"
+        },
+        "at": 1788830353373
+      },
+      {
+        "verb": "use",
+        "args": {
+          "id": "nx-moonmoth-001",
+          "action": "fly"
+        },
+        "at": 1788830357027
+      },
+      {
+        "verb": "dismount",
+        "args": {
+          "id": "moonmoth-probe-085043b2",
+          "pos": [
+            -89.11999999999999,
+            0,
+            13
+          ],
+          "yaw": 1.5707963267948963
+        },
+        "at": 1788830452177
+      }
+    ],
+    "blocked": [],
+    "errors": []
+  },
+  "modelContract": {
+    "name": "Moon Moth",
+    "entityId": "nx-moonmoth-001",
+    "sha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+    "bytes": 1272084,
+    "bounds": {
+      "min": [
+        -5.608555866290459,
+        0.012882810086011887,
+        -4.2199437067273085
+      ],
+      "max": [
+        5.608555866290459,
+        5.353411039601105,
+        3.1313121188222257
+      ]
+    },
+    "wingNames": [
+      "moon_wing_left",
+      "moon_wing_right"
+    ],
+    "seat": {
+      "top": 1.97,
+      "center": [
+        0,
+        1.97,
+        0.18
+      ],
+      "socket": [
+        0,
+        2.47,
+        0.18
+      ],
+      "pose": "sitchair"
+    },
+    "nodes": 18,
+    "meshes": 14
+  },
+  "modelContractFileSha256": "1e06ec82f816c32b37e75447468ebcd7e7857c15f9a6a2ac1e05306ab64142fc",
+  "targetState": {
+    "lib": "store/df959099a243ef27.glb",
+    "pos": [
+      -90,
+      0.0008015504140560737,
+      13
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "collide": "exact",
+    "actor": "arthur-moonmoth-builder",
+    "ts": 1788830285765,
+    "comp": {
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      },
+      "motion:moon_wing_left": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 3.141592653589793,
+        "damp": 0,
+        "t0": 0
+      },
+      "motion:moon_wing_right": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 0,
+        "damp": 0,
+        "t0": 0
+      },
+      "lock": true
+    }
+  },
+  "outcome": "RIDE_METRICS_CAPTURED",
+  "ridePreflight": {
+    "slot": {
+      "pos": [
+        0,
+        2.47,
+        0.18
+      ],
+      "pose": "sitchair",
+      "yaw": 0
+    },
+    "occupied": false
+  },
+  "useAt": 1788830357026,
+  "attachmentMetrics": {
+    "sampleCount": 8,
+    "attachment": true,
+    "movingAttachment": true,
+    "carrierTravelM": 25.045038457970296,
+    "carrierXZTravelM": 11.968874272930229,
+    "carrierYRangeM": 22,
+    "riderTravelM": 25.045038457970296,
+    "maxRootErrorM": 0,
+    "visualVerdict": "NOT_JUDGED"
+  },
+  "dismount": {
+    "verified": true,
+    "wasMounted": true,
+    "via": "native KeyW controller",
+    "at": 1788830452263
+  },
+  "pending": "Native visual review of seat occupancy/contact and flight frames is still required. Numeric evidence is AD-HOC only, not suite green.",
+  "video": {
+    "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/live-ride-01/a8d4b5480348f149537431a666057c75.webm",
+    "scope": "Unedited recording of the isolated public browser, includes loading and setup; no generated flight frames."
+  },
+  "finishedAt": "2026-09-08T01:20:53.849Z"
+}

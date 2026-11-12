@@ -1,0 +1,349 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-0cf48280-3db",
+    "view": "first",
+    "startedAt": "2026-09-08T03:09:12.365Z"
+  },
+  "completedAt": "2026-09-08T03:09:13.595Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "b8e31b45e271ff697e78068f98b8edefde6809f82cc9a80c9c010091e63679aa",
+  "bytes": 842532,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-hall",
+  "view": "interior",
+  "rendererModels": [
+    {
+      "id": "nx-town-hall",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b1-hall-charter",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b4-golden-hinges",
+      "loaded": true
+    },
+    {
+      "id": "nx-sign-bakery",
+      "loaded": true
+    },
+    {
+      "id": "nx-struct-waterstair",
+      "loaded": true
+    }
+  ],
+  "companionsBefore": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-hall-l",
+      "kind": "light",
+      "pos": [
+        9,
+        2.5,
+        -26
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "kind": "thing",
+      "pos": [
+        19.79898987322333,
+        -0.015837100520963706,
+        -24.041630560342615
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/3c48f921d262907a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b1-hall-charter",
+      "kind": "thing",
+      "pos": [
+        4.928243671768526,
+        1.1,
+        -27.318787474730843
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1,
+      "lib": "store/100eb5e9e89694a9.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b4-golden-hinges",
+      "kind": "thing",
+      "pos": [
+        1.5,
+        0.7,
+        -19.24
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/78a457a5bab6874d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-bakery",
+      "kind": "thing",
+      "pos": [
+        14.022735609615019,
+        0,
+        -18.768525175210893
+      ],
+      "yaw": 2.234032653589793,
+      "scale": 1,
+      "lib": "store/49342c523aee4d41.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-waterstair",
+      "kind": "thing",
+      "pos": [
+        0,
+        -0.03222645164101495,
+        -32
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/46c39401e07870f3.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "companionsAfter": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-hall-l",
+      "kind": "light",
+      "pos": [
+        9,
+        2.5,
+        -26
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "kind": "thing",
+      "pos": [
+        19.79898987322333,
+        -0.015837100520963706,
+        -24.041630560342615
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/3c48f921d262907a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b1-hall-charter",
+      "kind": "thing",
+      "pos": [
+        4.928243671768526,
+        1.1,
+        -27.318787474730843
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1,
+      "lib": "store/100eb5e9e89694a9.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b4-golden-hinges",
+      "kind": "thing",
+      "pos": [
+        1.5,
+        0.7,
+        -19.24
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/78a457a5bab6874d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-bakery",
+      "kind": "thing",
+      "pos": [
+        14.022735609615019,
+        0,
+        -18.768525175210893
+      ],
+      "yaw": 2.234032653589793,
+      "scale": 1,
+      "lib": "store/49342c523aee4d41.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-waterstair",
+      "kind": "thing",
+      "pos": [
+        0,
+        -0.03222645164101495,
+        -32
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/46c39401e07870f3.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "bodyPose": {
+    "p": [
+      8.442481054417964,
+      0.2,
+      -28.335417013151417
+    ],
+    "yaw": -0.045475519397051536,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    -1.25,
+    0.2,
+    -2.05
+  ],
+  "requestedLookLocal": [
+    0.3,
+    0.2,
+    3.6
+  ],
+  "targetBefore": {
+    "id": "nx-town-hall",
+    "lib": "store/dc871edb1b45ce0f.glb",
+    "kind": "thing",
+    "pos": [
+      9,
+      0,
+      -26
+    ],
+    "yaw": -0.31322457341772525,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -5,
+        -0.2,
+        -3.47
+      ],
+      "max": [
+        5,
+        7.165,
+        4.85
+      ],
+      "size": [
+        10,
+        7.365,
+        8.32
+      ],
+      "center": [
+        0,
+        3.482,
+        0.69
+      ]
+    },
+    "tris": 11584
+  },
+  "targetAfter": {
+    "id": "nx-town-hall",
+    "lib": "store/dc871edb1b45ce0f.glb",
+    "kind": "thing",
+    "pos": [
+      9,
+      0,
+      -26
+    ],
+    "yaw": -0.31322457341772525,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -5,
+        -0.2,
+        -3.47
+      ],
+      "max": [
+        5,
+        7.165,
+        4.85
+      ],
+      "size": [
+        10,
+        7.365,
+        8.32
+      ],
+      "center": [
+        0,
+        3.482,
+        0.69
+      ]
+    },
+    "tris": 11584
+  },
+  "beforeObservedAt": "2026-09-08T03:09:09.328Z",
+  "afterObservedAt": "2026-09-08T03:09:16.161Z",
+  "protectedBeforeSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "protectedAfterSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "file": "nx-town-hall-interior.png"
+}

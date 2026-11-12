@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "unchangedCandidate": true,
+  "sourceSha256": "ec0089546fe7066743f7760f8a31a23f13d234743f5e2bbb53b060f97761db51",
+  "runs": [
+    {
+      "run": 1,
+      "sha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+      "mtimeNs": "1788835038228551624",
+      "mtimeAdvanced": true,
+      "bytes": 363960,
+      "sourceSha256": "ec0089546fe7066743f7760f8a31a23f13d234743f5e2bbb53b060f97761db51"
+    },
+    {
+      "run": 2,
+      "sha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+      "mtimeNs": "1788835038613613416",
+      "mtimeAdvanced": true,
+      "bytes": 363960,
+      "sourceSha256": "ec0089546fe7066743f7760f8a31a23f13d234743f5e2bbb53b060f97761db51"
+    }
+  ]
+}

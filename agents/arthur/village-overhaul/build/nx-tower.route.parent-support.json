@@ -1,0 +1,4899 @@
+{
+  "status": "FAIL",
+  "id": "nx-tower",
+  "kind": "workstation",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "collider": {
+    "exact": true,
+    "pillar": false
+  },
+  "neighbors": [
+    "nx-shutters",
+    "nx-town-roads",
+    "nx-town-streetlamps",
+    "nx-artwalk-b19-longhouse-feast-count",
+    "nx-approach-ne-lane-002",
+    "nx-core-paths",
+    "nx-artwalk-b3-ruled-porch",
+    "nx-town-kiln",
+    "nx-artwalk-b12-kiln-heat-contours",
+    "nx-sign-kiln-001",
+    "nx-town-longhouse"
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "exterior-terrain-before-stoop",
+      "to": "stoop",
+      "steps": 18,
+      "maxPush": 0,
+      "maxRise": 0.14172381907701492,
+      "minY": 0,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 2.6645352591003757e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "in",
+      "from": "stoop",
+      "to": "entry",
+      "steps": 28,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 5.773159728050814e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "in",
+      "from": "entry",
+      "to": "reading-room",
+      "steps": 77,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 2.886579864025407e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "in",
+      "from": "reading-room",
+      "to": "desk-approach",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 2.2887833992611187e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "in",
+      "from": "desk-approach",
+      "to": "library-center",
+      "steps": 23,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 9.453208419344607e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "in",
+      "from": "library-center",
+      "to": "ladder-staging",
+      "steps": 48,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 6.661338147750939e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "ladder-staging",
+      "to": "library-center",
+      "steps": 48,
+      "maxPush": 0,
+      "maxRise": 2.980232227667301e-9,
+      "minY": 0.2,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 9.550499576785472e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "library-center",
+      "to": "desk-approach",
+      "steps": 23,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 2.220446049250313e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "desk-approach",
+      "to": "reading-room",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 3.3306690738754696e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "reading-room",
+      "to": "entry",
+      "steps": 77,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 8.881784197001252e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "entry",
+      "to": "stoop",
+      "steps": 28,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 3.1086244689504383e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "stoop",
+      "to": "exterior-terrain-before-stoop",
+      "steps": 18,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.20000000298023224,
+      "arrivalXZ": 2.220446049250313e-15,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    }
+  ],
+  "physicalSupport": {
+    "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+    "pass": false,
+    "samples": [
+      {
+        "name": "in:start",
+        "pos": [
+          0.4,
+          0,
+          3.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:1",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.9111111111111114
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:2",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.8722222222222227
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:3",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.833333333333334
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:4",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.794444444444445
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:5",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.7555555555555564
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:6",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.7166666666666677
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:7",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.677777777777779
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:8",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.63888888888889
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:9",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.6000000000000014
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:10",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.5611111111111127
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:11",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.522222222222224
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:12",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.483333333333335
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:13",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.4444444444444464
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:14",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.4055555555555577
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:15",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.366666666666669
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:16",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.32777777777778
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:17",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.2888888888888914
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:exterior-terrain-before-stoop:stoop:18",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.2500000000000027
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:1",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.210714285714288
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:2",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.1714285714285735
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:3",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.132142857142859
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:4",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.0928571428571443
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:5",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.0535714285714297
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:6",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.014285714285715
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:7",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.9750000000000005
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:8",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.935714285714286
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:9",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.8964285714285714
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:10",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.8571428571428568
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:11",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.817857142857142
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:12",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.7785714285714276
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:13",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.739285714285713
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:14",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.6999999999999984
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:15",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.660714285714284
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:16",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.621428571428569
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:17",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.5821428571428546
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:18",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.54285714285714
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:19",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.5035714285714255
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:20",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.464285714285711
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:21",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.4249999999999963
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:22",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.3857142857142817
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:23",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.346428571428567
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:24",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.3071428571428525
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:25",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.267857142857138
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:26",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.2285714285714233
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:27",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.1892857142857087
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:stoop:entry:28",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.149999999999994
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:1",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.1103896103896047
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:2",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.0707792207792153
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:3",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.031168831168826
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:4",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.9915584415584364
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:5",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.951948051948047
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:6",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.9123376623376576
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:7",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.8727272727272681
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:8",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.8331168831168787
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:9",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.7935064935064893
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:10",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.7538961038960998
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:11",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.7142857142857104
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:12",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.674675324675321
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:13",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.6350649350649316
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:14",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.5954545454545421
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:15",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.5558441558441527
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:16",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.5162337662337633
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:17",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.4766233766233738
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:18",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.4370129870129844
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:19",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.397402597402595
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:20",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.3577922077922056
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:21",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.3181818181818161
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:22",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.2785714285714267
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:23",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.2389610389610373
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:24",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.1993506493506478
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:25",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.1597402597402584
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:26",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.120129870129869
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:27",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.0805194805194795
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:28",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.0409090909090901
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:29",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.0012987012987007
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:30",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.9616883116883111
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:31",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.9220779220779216
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:32",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.8824675324675321
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:33",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.8428571428571425
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:34",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.803246753246753
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:35",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.7636363636363634
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:36",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.7240259740259739
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:37",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.6844155844155844
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:38",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.6448051948051948
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:39",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.6051948051948053
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:40",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.5655844155844157
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:41",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.5259740259740262
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:42",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.48636363636363666
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:43",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.4467532467532471
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:44",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.4071428571428576
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:45",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.36753246753246804
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:46",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.3279220779220785
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:47",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.28831168831168896
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:48",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.24870129870129942
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:49",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.20909090909090988
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:50",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.16948051948052034
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:51",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.1298701298701308
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:52",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.09025974025974126
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:53",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.05064935064935173
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:54",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.011038961038962194
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:55",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.02857142857142734
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:56",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.06818181818181687
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:57",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.10779220779220641
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:58",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.14740259740259595
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:59",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.1870129870129855
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:60",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.22662337662337503
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:61",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.26623376623376455
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:62",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.3058441558441541
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:63",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.3454545454545436
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:64",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.38506493506493317
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:65",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.4246753246753227
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:66",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.46428571428571225
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:67",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.5038961038961017
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:68",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.5435064935064913
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:69",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.5831168831168808
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:70",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.6227272727272704
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:71",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.6623376623376599
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:72",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.7019480519480494
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:73",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.741558441558439
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:74",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.7811688311688285
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:75",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.820779220779218
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:76",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.8603896103896076
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:entry:reading-room:77",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.8999999999999971
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:1",
+        "pos": [
+          0.361764705882353,
+          0.20000000298023224,
+          -0.908823529411762
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:2",
+        "pos": [
+          0.32352941176470595,
+          0.20000000298023224,
+          -0.9176470588235269
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:3",
+        "pos": [
+          0.2852941176470589,
+          0.20000000298023224,
+          -0.9264705882352918
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:4",
+        "pos": [
+          0.24705882352941186,
+          0.20000000298023224,
+          -0.9352941176470567
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:5",
+        "pos": [
+          0.2088235294117648,
+          0.20000000298023224,
+          -0.9441176470588216
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:6",
+        "pos": [
+          0.17058823529411773,
+          0.20000000298023224,
+          -0.9529411764705865
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:7",
+        "pos": [
+          0.13235294117647067,
+          0.20000000298023224,
+          -0.9617647058823514
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:8",
+        "pos": [
+          0.09411764705882361,
+          0.20000000298023224,
+          -0.9705882352941163
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:9",
+        "pos": [
+          0.05588235294117655,
+          0.20000000298023224,
+          -0.9794117647058812
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:10",
+        "pos": [
+          0.017647058823529488,
+          0.20000000298023224,
+          -0.9882352941176461
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:11",
+        "pos": [
+          -0.020588235294117574,
+          0.20000000298023224,
+          -0.997058823529411
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:12",
+        "pos": [
+          -0.058823529411764636,
+          0.20000000298023224,
+          -1.0058823529411758
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:13",
+        "pos": [
+          -0.0970588235294117,
+          0.20000000298023224,
+          -1.0147058823529407
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:14",
+        "pos": [
+          -0.13529411764705876,
+          0.20000000298023224,
+          -1.0235294117647056
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:15",
+        "pos": [
+          -0.17352941176470582,
+          0.20000000298023224,
+          -1.0323529411764705
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:16",
+        "pos": [
+          -0.21176470588235288,
+          0.20000000298023224,
+          -1.0411764705882354
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:reading-room:desk-approach:17",
+        "pos": [
+          -0.24999999999999994,
+          0.20000000298023224,
+          -1.0500000000000003
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:1",
+        "pos": [
+          -0.22173913043478255,
+          0.20000000298023224,
+          -1.023913043478261
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:2",
+        "pos": [
+          -0.19347826086956516,
+          0.20000000298023224,
+          -0.997826086956522
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:3",
+        "pos": [
+          -0.16521739130434776,
+          0.20000000298023224,
+          -0.9717391304347829
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:4",
+        "pos": [
+          -0.13695652173913037,
+          0.20000000298023224,
+          -0.9456521739130438
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:5",
+        "pos": [
+          -0.10869565217391297,
+          0.20000000298023224,
+          -0.9195652173913047
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:6",
+        "pos": [
+          -0.08043478260869558,
+          0.20000000298023224,
+          -0.8934782608695656
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:7",
+        "pos": [
+          -0.05217391304347819,
+          0.20000000298023224,
+          -0.8673913043478265
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:8",
+        "pos": [
+          -0.0239130434782608,
+          0.20000000298023224,
+          -0.8413043478260874
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:9",
+        "pos": [
+          0.004347826086956587,
+          0.20000000298023224,
+          -0.8152173913043483
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:10",
+        "pos": [
+          0.032608695652173975,
+          0.20000000298023224,
+          -0.7891304347826092
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:11",
+        "pos": [
+          0.06086956521739136,
+          0.20000000298023224,
+          -0.7630434782608702
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:12",
+        "pos": [
+          0.08913043478260875,
+          0.20000000298023224,
+          -0.7369565217391311
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:13",
+        "pos": [
+          0.11739130434782613,
+          0.20000000298023224,
+          -0.710869565217392
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:14",
+        "pos": [
+          0.14565217391304353,
+          0.20000000298023224,
+          -0.6847826086956529
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:15",
+        "pos": [
+          0.17391304347826092,
+          0.20000000298023224,
+          -0.6586956521739138
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:16",
+        "pos": [
+          0.20217391304347831,
+          0.20000000298023224,
+          -0.6326086956521747
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:17",
+        "pos": [
+          0.2304347826086957,
+          0.20000000298023224,
+          -0.6065217391304356
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:18",
+        "pos": [
+          0.2586956521739131,
+          0.20000000298023224,
+          -0.5804347826086965
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:19",
+        "pos": [
+          0.2869565217391305,
+          0.20000000298023224,
+          -0.5543478260869574
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:20",
+        "pos": [
+          0.3152173913043479,
+          0.20000000298023224,
+          -0.5282608695652183
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:21",
+        "pos": [
+          0.3434782608695653,
+          0.20000000298023224,
+          -0.5021739130434792
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:22",
+        "pos": [
+          0.3717391304347827,
+          0.20000000298023224,
+          -0.4760869565217401
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:desk-approach:library-center:23",
+        "pos": [
+          0.4000000000000001,
+          0.20000000298023224,
+          -0.45000000000000095
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:1",
+        "pos": [
+          0.4270833333333334,
+          0.20000000298023224,
+          -0.42145833333333427
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:2",
+        "pos": [
+          0.4541666666666668,
+          0.20000000298023224,
+          -0.3929166666666676
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:3",
+        "pos": [
+          0.4812500000000001,
+          0.20000000298023224,
+          -0.3643750000000009
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:4",
+        "pos": [
+          0.5083333333333334,
+          0.20000000298023224,
+          -0.3358333333333342
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:5",
+        "pos": [
+          0.5354166666666668,
+          0.20000000298023224,
+          -0.3072916666666675
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:6",
+        "pos": [
+          0.5625000000000001,
+          0.20000000298023224,
+          -0.27875000000000083
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:7",
+        "pos": [
+          0.5895833333333335,
+          0.20000000298023224,
+          -0.25020833333333414
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:8",
+        "pos": [
+          0.6166666666666668,
+          0.20000000298023224,
+          -0.22166666666666746
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:9",
+        "pos": [
+          0.6437500000000002,
+          0.20000000298023224,
+          -0.19312500000000077
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:10",
+        "pos": [
+          0.6708333333333335,
+          0.20000000298023224,
+          -0.16458333333333408
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:11",
+        "pos": [
+          0.6979166666666669,
+          0.20000000298023224,
+          -0.1360416666666674
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:12",
+        "pos": [
+          0.7250000000000002,
+          0.20000000298023224,
+          -0.1075000000000007
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:13",
+        "pos": [
+          0.7520833333333335,
+          0.20000000298023224,
+          -0.07895833333333402
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:14",
+        "pos": [
+          0.7791666666666669,
+          0.20000000298023224,
+          -0.05041666666666733
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:15",
+        "pos": [
+          0.8062500000000002,
+          0.20000000298023224,
+          -0.021875000000000644
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:16",
+        "pos": [
+          0.8333333333333336,
+          0.20000000298023224,
+          0.0066666666666660435
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:17",
+        "pos": [
+          0.8604166666666669,
+          0.20000000298023224,
+          0.03520833333333273
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:18",
+        "pos": [
+          0.8875000000000003,
+          0.20000000298023224,
+          0.06374999999999942
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:19",
+        "pos": [
+          0.9145833333333336,
+          0.20000000298023224,
+          0.0922916666666661
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:20",
+        "pos": [
+          0.941666666666667,
+          0.20000000298023224,
+          0.12083333333333279
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:21",
+        "pos": [
+          0.9687500000000003,
+          0.20000000298023224,
+          0.14937499999999948
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:22",
+        "pos": [
+          0.9958333333333337,
+          0.20000000298023224,
+          0.17791666666666617
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:23",
+        "pos": [
+          1.022916666666667,
+          0.20000000298023224,
+          0.20645833333333286
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:24",
+        "pos": [
+          1.0500000000000003,
+          0.20000000298023224,
+          0.23499999999999954
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:25",
+        "pos": [
+          1.0770833333333336,
+          0.20000000298023224,
+          0.26354166666666623
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:26",
+        "pos": [
+          1.104166666666667,
+          0.20000000298023224,
+          0.2920833333333329
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:27",
+        "pos": [
+          1.1312500000000003,
+          0.20000000298023224,
+          0.3206249999999996
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:28",
+        "pos": [
+          1.1583333333333337,
+          0.20000000298023224,
+          0.3491666666666663
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:29",
+        "pos": [
+          1.185416666666667,
+          0.20000000298023224,
+          0.377708333333333
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:30",
+        "pos": [
+          1.2125000000000004,
+          0.20000000298023224,
+          0.40624999999999967
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:31",
+        "pos": [
+          1.2395833333333337,
+          0.20000000298023224,
+          0.43479166666666635
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:32",
+        "pos": [
+          1.266666666666667,
+          0.20000000298023224,
+          0.46333333333333304
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:33",
+        "pos": [
+          1.2937500000000004,
+          0.20000000298023224,
+          0.49187499999999973
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:34",
+        "pos": [
+          1.3208333333333337,
+          0.20000000298023224,
+          0.5204166666666664
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:35",
+        "pos": [
+          1.347916666666667,
+          0.20000000298023224,
+          0.5489583333333331
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:36",
+        "pos": [
+          1.3750000000000004,
+          0.20000000298023224,
+          0.5774999999999998
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:37",
+        "pos": [
+          1.4020833333333338,
+          0.20000000298023224,
+          0.6060416666666665
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:38",
+        "pos": [
+          1.4291666666666671,
+          0.20000000298023224,
+          0.6345833333333332
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:39",
+        "pos": [
+          1.4562500000000005,
+          0.20000000298023224,
+          0.6631249999999999
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:40",
+        "pos": [
+          1.4833333333333338,
+          0.20000000298023224,
+          0.6916666666666665
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:41",
+        "pos": [
+          1.5104166666666672,
+          0.20000000298023224,
+          0.7202083333333332
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:42",
+        "pos": [
+          1.5375000000000005,
+          0.20000000298023224,
+          0.7487499999999999
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:43",
+        "pos": [
+          1.5645833333333339,
+          0.20000000298023224,
+          0.7772916666666666
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:44",
+        "pos": [
+          1.5916666666666672,
+          0.20000000298023224,
+          0.8058333333333333
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:45",
+        "pos": [
+          1.6187500000000006,
+          0.20000000298023224,
+          0.834375
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:46",
+        "pos": [
+          1.645833333333334,
+          0.20000000298023224,
+          0.8629166666666667
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:47",
+        "pos": [
+          1.6729166666666673,
+          0.20000000298023224,
+          0.8914583333333334
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:library-center:ladder-staging:48",
+        "pos": [
+          1.7000000000000006,
+          0.20000000298023224,
+          0.92
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:start",
+        "pos": [
+          1.7,
+          0.2,
+          0.92
+        ],
+        "ground": 0.20000000298023224,
+        "gap": -2.980232227667301e-9,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:1",
+        "pos": [
+          1.6729166666666666,
+          0.20000000298023224,
+          0.8914583333333334
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:2",
+        "pos": [
+          1.6458333333333333,
+          0.20000000298023224,
+          0.8629166666666667
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:3",
+        "pos": [
+          1.61875,
+          0.20000000298023224,
+          0.834375
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:4",
+        "pos": [
+          1.5916666666666666,
+          0.20000000298023224,
+          0.8058333333333333
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:5",
+        "pos": [
+          1.5645833333333332,
+          0.20000000298023224,
+          0.7772916666666666
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:6",
+        "pos": [
+          1.5374999999999999,
+          0.20000000298023224,
+          0.7487499999999999
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:7",
+        "pos": [
+          1.5104166666666665,
+          0.20000000298023224,
+          0.7202083333333332
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:8",
+        "pos": [
+          1.4833333333333332,
+          0.20000000298023224,
+          0.6916666666666665
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:9",
+        "pos": [
+          1.4562499999999998,
+          0.20000000298023224,
+          0.6631249999999999
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:10",
+        "pos": [
+          1.4291666666666665,
+          0.20000000298023224,
+          0.6345833333333332
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:11",
+        "pos": [
+          1.4020833333333331,
+          0.20000000298023224,
+          0.6060416666666665
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:12",
+        "pos": [
+          1.3749999999999998,
+          0.20000000298023224,
+          0.5774999999999998
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:13",
+        "pos": [
+          1.3479166666666664,
+          0.20000000298023224,
+          0.5489583333333331
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:14",
+        "pos": [
+          1.320833333333333,
+          0.20000000298023224,
+          0.5204166666666664
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:15",
+        "pos": [
+          1.2937499999999997,
+          0.20000000298023224,
+          0.49187499999999973
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:16",
+        "pos": [
+          1.2666666666666664,
+          0.20000000298023224,
+          0.46333333333333304
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:17",
+        "pos": [
+          1.239583333333333,
+          0.20000000298023224,
+          0.43479166666666635
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:18",
+        "pos": [
+          1.2124999999999997,
+          0.20000000298023224,
+          0.40624999999999967
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:19",
+        "pos": [
+          1.1854166666666663,
+          0.20000000298023224,
+          0.377708333333333
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:20",
+        "pos": [
+          1.158333333333333,
+          0.20000000298023224,
+          0.3491666666666663
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:21",
+        "pos": [
+          1.1312499999999996,
+          0.20000000298023224,
+          0.3206249999999996
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:22",
+        "pos": [
+          1.1041666666666663,
+          0.20000000298023224,
+          0.2920833333333329
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:23",
+        "pos": [
+          1.077083333333333,
+          0.20000000298023224,
+          0.26354166666666623
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:24",
+        "pos": [
+          1.0499999999999996,
+          0.20000000298023224,
+          0.23499999999999957
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:25",
+        "pos": [
+          1.0229166666666663,
+          0.20000000298023224,
+          0.2064583333333329
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:26",
+        "pos": [
+          0.9958333333333329,
+          0.20000000298023224,
+          0.17791666666666625
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:27",
+        "pos": [
+          0.9687499999999996,
+          0.20000000298023224,
+          0.1493749999999996
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:28",
+        "pos": [
+          0.9416666666666662,
+          0.20000000298023224,
+          0.12083333333333292
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:29",
+        "pos": [
+          0.9145833333333329,
+          0.20000000298023224,
+          0.09229166666666624
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:30",
+        "pos": [
+          0.8874999999999995,
+          0.20000000298023224,
+          0.06374999999999957
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:31",
+        "pos": [
+          0.8604166666666662,
+          0.20000000298023224,
+          0.0352083333333329
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:32",
+        "pos": [
+          0.8333333333333328,
+          0.20000000298023224,
+          0.006666666666666227
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:33",
+        "pos": [
+          0.8062499999999995,
+          0.20000000298023224,
+          -0.021875000000000443
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:34",
+        "pos": [
+          0.7791666666666661,
+          0.20000000298023224,
+          -0.05041666666666711
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:35",
+        "pos": [
+          0.7520833333333328,
+          0.20000000298023224,
+          -0.07895833333333378
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:36",
+        "pos": [
+          0.7249999999999994,
+          0.20000000298023224,
+          -0.10750000000000046
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:37",
+        "pos": [
+          0.6979166666666661,
+          0.20000000298023224,
+          -0.13604166666666712
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:38",
+        "pos": [
+          0.6708333333333327,
+          0.20000000298023224,
+          -0.16458333333333378
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:39",
+        "pos": [
+          0.6437499999999994,
+          0.20000000298023224,
+          -0.19312500000000044
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:40",
+        "pos": [
+          0.616666666666666,
+          0.20000000298023224,
+          -0.2216666666666671
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:41",
+        "pos": [
+          0.5895833333333327,
+          0.20000000298023224,
+          -0.25020833333333375
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:42",
+        "pos": [
+          0.5624999999999993,
+          0.20000000298023224,
+          -0.27875000000000044
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:43",
+        "pos": [
+          0.535416666666666,
+          0.20000000298023224,
+          -0.30729166666666713
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:44",
+        "pos": [
+          0.5083333333333326,
+          0.20000000298023224,
+          -0.3358333333333338
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:45",
+        "pos": [
+          0.4812499999999993,
+          0.20000000298023224,
+          -0.3643750000000005
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:46",
+        "pos": [
+          0.45416666666666594,
+          0.20000000298023224,
+          -0.3929166666666672
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:47",
+        "pos": [
+          0.4270833333333326,
+          0.20000000298023224,
+          -0.4214583333333339
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-staging:library-center:48",
+        "pos": [
+          0.39999999999999925,
+          0.20000000298023224,
+          -0.45000000000000057
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:1",
+        "pos": [
+          0.3717391304347819,
+          0.20000000298023224,
+          -0.47608695652173966
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:2",
+        "pos": [
+          0.34347826086956457,
+          0.20000000298023224,
+          -0.5021739130434788
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:3",
+        "pos": [
+          0.3152173913043472,
+          0.20000000298023224,
+          -0.5282608695652179
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:4",
+        "pos": [
+          0.2869565217391299,
+          0.20000000298023224,
+          -0.554347826086957
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:5",
+        "pos": [
+          0.25869565217391255,
+          0.20000000298023224,
+          -0.5804347826086961
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:6",
+        "pos": [
+          0.23043478260869518,
+          0.20000000298023224,
+          -0.6065217391304352
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:7",
+        "pos": [
+          0.20217391304347782,
+          0.20000000298023224,
+          -0.6326086956521743
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:8",
+        "pos": [
+          0.17391304347826045,
+          0.20000000298023224,
+          -0.6586956521739133
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:9",
+        "pos": [
+          0.14565217391304308,
+          0.20000000298023224,
+          -0.6847826086956524
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:10",
+        "pos": [
+          0.11739130434782571,
+          0.20000000298023224,
+          -0.7108695652173915
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:11",
+        "pos": [
+          0.08913043478260835,
+          0.20000000298023224,
+          -0.7369565217391306
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:12",
+        "pos": [
+          0.06086956521739099,
+          0.20000000298023224,
+          -0.7630434782608697
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:13",
+        "pos": [
+          0.03260869565217363,
+          0.20000000298023224,
+          -0.7891304347826088
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:14",
+        "pos": [
+          0.004347826086956268,
+          0.20000000298023224,
+          -0.8152173913043479
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:15",
+        "pos": [
+          -0.023913043478261092,
+          0.20000000298023224,
+          -0.841304347826087
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:16",
+        "pos": [
+          -0.05217391304347845,
+          0.20000000298023224,
+          -0.8673913043478261
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:17",
+        "pos": [
+          -0.08043478260869581,
+          0.20000000298023224,
+          -0.8934782608695652
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:18",
+        "pos": [
+          -0.10869565217391317,
+          0.20000000298023224,
+          -0.9195652173913043
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:19",
+        "pos": [
+          -0.13695652173913053,
+          0.20000000298023224,
+          -0.9456521739130433
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:20",
+        "pos": [
+          -0.1652173913043479,
+          0.20000000298023224,
+          -0.9717391304347824
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:21",
+        "pos": [
+          -0.19347826086956527,
+          0.20000000298023224,
+          -0.9978260869565215
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:22",
+        "pos": [
+          -0.22173913043478263,
+          0.20000000298023224,
+          -1.0239130434782606
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:library-center:desk-approach:23",
+        "pos": [
+          -0.25,
+          0.20000000298023224,
+          -1.0499999999999998
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:1",
+        "pos": [
+          -0.21176470588235294,
+          0.20000000298023224,
+          -1.0411764705882351
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:2",
+        "pos": [
+          -0.17352941176470588,
+          0.20000000298023224,
+          -1.0323529411764705
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:3",
+        "pos": [
+          -0.13529411764705881,
+          0.20000000298023224,
+          -1.0235294117647058
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:4",
+        "pos": [
+          -0.09705882352941175,
+          0.20000000298023224,
+          -1.0147058823529411
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:5",
+        "pos": [
+          -0.05882352941176469,
+          0.20000000298023224,
+          -1.0058823529411764
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:6",
+        "pos": [
+          -0.02058823529411763,
+          0.20000000298023224,
+          -0.9970588235294118
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:7",
+        "pos": [
+          0.017647058823529432,
+          0.20000000298023224,
+          -0.9882352941176471
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:8",
+        "pos": [
+          0.055882352941176494,
+          0.20000000298023224,
+          -0.9794117647058824
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:9",
+        "pos": [
+          0.09411764705882356,
+          0.20000000298023224,
+          -0.9705882352941178
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:10",
+        "pos": [
+          0.13235294117647062,
+          0.20000000298023224,
+          -0.9617647058823531
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:11",
+        "pos": [
+          0.17058823529411768,
+          0.20000000298023224,
+          -0.9529411764705884
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:12",
+        "pos": [
+          0.20882352941176474,
+          0.20000000298023224,
+          -0.9441176470588237
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:13",
+        "pos": [
+          0.2470588235294118,
+          0.20000000298023224,
+          -0.935294117647059
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:14",
+        "pos": [
+          0.28529411764705886,
+          0.20000000298023224,
+          -0.9264705882352944
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:15",
+        "pos": [
+          0.32352941176470595,
+          0.20000000298023224,
+          -0.9176470588235297
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:16",
+        "pos": [
+          0.361764705882353,
+          0.20000000298023224,
+          -0.908823529411765
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:desk-approach:reading-room:17",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.9000000000000004
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:1",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.8603896103896107
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:2",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.820779220779221
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:3",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.7811688311688314
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:4",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.7415584415584417
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:5",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.7019480519480521
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:6",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.6623376623376624
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:7",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.6227272727272728
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:8",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.5831168831168831
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:9",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.5435064935064935
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:10",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.5038961038961038
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:11",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.46428571428571425
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:12",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.42467532467532465
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:13",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.38506493506493505
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:14",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.34545454545454546
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:15",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.30584415584415586
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:16",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.26623376623376627
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:17",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.22662337662337664
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:18",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.18701298701298702
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:19",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.1474025974025974
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:20",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.10779220779220777
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:21",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.06818181818181815
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:22",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          -0.028571428571428532
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:23",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.011038961038961084
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:24",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.0506493506493507
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:25",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.09025974025974032
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:26",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.12987012987012994
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:27",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.16948051948051956
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:28",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.2090909090909092
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:29",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.2487012987012988
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:30",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.2883116883116884
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:31",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.327922077922078
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:32",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.3675324675324676
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:33",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.4071428571428572
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:34",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.4467532467532468
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:35",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.4863636363636364
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:36",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.525974025974026
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:37",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.5655844155844156
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:38",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.6051948051948053
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:39",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.6448051948051949
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:40",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.6844155844155846
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:41",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.7240259740259742
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:42",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.7636363636363639
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:43",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.8032467532467535
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:44",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.8428571428571432
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:45",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.8824675324675328
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:46",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.9220779220779225
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:47",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          0.9616883116883121
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:48",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.0012987012987018
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:49",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.0409090909090915
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:50",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.080519480519481
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:51",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.1201298701298708
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:52",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.1597402597402604
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:53",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.19935064935065
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:54",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.2389610389610397
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:55",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.2785714285714294
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:56",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.318181818181819
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:57",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.3577922077922087
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:58",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.3974025974025983
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:59",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.437012987012988
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:60",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.4766233766233776
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:61",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.5162337662337673
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:62",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.555844155844157
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:63",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.5954545454545466
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:64",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.6350649350649362
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:65",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.6746753246753259
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:66",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.7142857142857155
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:67",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.7538961038961052
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:68",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.7935064935064948
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:69",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.8331168831168845
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:70",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.8727272727272741
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:71",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.9123376623376638
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:72",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.9519480519480534
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:73",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          1.991558441558443
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:74",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.0311688311688325
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:75",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.070779220779222
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:76",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.1103896103896114
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:reading-room:entry:77",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.150000000000001
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:1",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.189285714285715
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:2",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.228571428571429
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:3",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.2678571428571432
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:4",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.3071428571428574
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:5",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.3464285714285715
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:6",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.3857142857142857
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:7",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.425
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:8",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.464285714285714
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:9",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.503571428571428
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:10",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.5428571428571423
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:11",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.5821428571428564
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:12",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.6214285714285706
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:13",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.6607142857142847
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:14",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.699999999999999
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:15",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.739285714285713
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:16",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.778571428571427
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:17",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.8178571428571413
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:18",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.8571428571428554
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:19",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.8964285714285696
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:20",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.9357142857142837
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:21",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          2.974999999999998
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:22",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.014285714285712
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:23",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.053571428571426
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:24",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.0928571428571403
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:25",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.1321428571428545
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:26",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.1714285714285686
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:27",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.2107142857142827
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:entry:stoop:28",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.249999999999997
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:1",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.288888888888886
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:2",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.3277777777777753
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:3",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.3666666666666645
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:4",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.4055555555555537
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:5",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.444444444444443
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:6",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.483333333333332
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:7",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.5222222222222213
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:8",
+        "pos": [
+          0.4,
+          0.20000000298023224,
+          3.5611111111111104
+        ],
+        "ground": 0.20000000298023224,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:9",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.5999999999999996
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:10",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.638888888888889
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:11",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.677777777777778
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:12",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.7166666666666672
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:13",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.7555555555555564
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:14",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.7944444444444456
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:15",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.833333333333335
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:16",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.872222222222224
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:17",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.911111111111113
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:stoop:exterior-terrain-before-stoop:18",
+        "pos": [
+          0.4,
+          0.058276183903217316,
+          3.9500000000000024
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      }
+    ]
+  },
+  "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+  "limitations": [
+    "Not an enterable-room certification.",
+    "Only supplied neighbors and declared flat terrain checked."
+  ],
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "routeSha256": "6fbe952600b98319aa822318baea15fd33ae14624b0aa5794c0e4ef1c5f19e27",
+  "adapterSha256": "abda1150a2bb52a5f0a1defd892fa1c36855fcb89e645f3a65785c68dcbfda79",
+  "proofFrame": "host-local"
+}

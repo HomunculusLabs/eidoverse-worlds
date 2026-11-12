@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "sourceHashes": {
+    "agents/arthur/village-overhaul/build-potter.ts": "f69f83e38095d983fd1fa5319c2642b64c3d7655b000daa8bc119e9f4dfada94",
+    "agents/arthur/village-overhaul/build-kiln.ts": "8d8b1162af481a7fb5a9208efb8cda13204b285fd3c75dbe691accea08c7176e",
+    "agents/arthur/village-overhaul/kit.ts": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51",
+    "agents/arthur/assets/glbwrite.ts": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121",
+    "agents/arthur/assets/mergekit.ts": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+  },
+  "builds": [
+    {
+      "run": 1,
+      "sha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+      "bytes": 633544,
+      "mtime_ns": 1788835578915319958,
+      "prior_mtime_ns": 1788835314848280249,
+      "stdout": "{\"id\":\"nx-town-potter\",\"sha256\":\"d0ab00edb11b477f8a3ffcaf6a16ea6a4e762ce4b4cf725736efa9e207f940e0\",\"bytes\":624368,\"nodes\":14,\"meshes\":13,\"bounds\":{\"min\":[-1.7050000047683715,-1.4901161207725444e-9,-0.9850000071525574],\"max\":[1.670000021457672,2.10999999165535,0.5849999970197677]},\"parts\":104}\n{\"id\":\"nx-town-potter\",\"stage\":\"FINAL_ALIGNED\",\"sha256\":\"412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed\",\"bytes\":633544}\n",
+      "stderr": ""
+    },
+    {
+      "run": 2,
+      "sha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+      "bytes": 633544,
+      "mtime_ns": 1788835579703273041,
+      "prior_mtime_ns": 1788835578915319958,
+      "stdout": "{\"id\":\"nx-town-potter\",\"sha256\":\"d0ab00edb11b477f8a3ffcaf6a16ea6a4e762ce4b4cf725736efa9e207f940e0\",\"bytes\":624368,\"nodes\":14,\"meshes\":13,\"bounds\":{\"min\":[-1.7050000047683715,-1.4901161207725444e-9,-0.9850000071525574],\"max\":[1.670000021457672,2.10999999165535,0.5849999970197677]},\"parts\":104}\n{\"id\":\"nx-town-potter\",\"stage\":\"FINAL_ALIGNED\",\"sha256\":\"412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed\",\"bytes\":633544}\n",
+      "stderr": ""
+    }
+  ]
+}

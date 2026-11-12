@@ -1,0 +1,168 @@
+{
+  "pairs": [
+    {
+      "pair": "court",
+      "beforeSha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "afterSha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "cameraSha256": "5486b8bb3f4e8f2c3b88314e6b1323182408f6f059e2e911cce471040cbafde4",
+      "pngHashesVerified": true,
+      "cameraPoseProjectionIdentical": true,
+      "frames": 18,
+      "sheets": [
+        {
+          "file": "reviews/court-before-sheet.jpg",
+          "sha256": "ea09946491460c269c38a711c65e3597f02622a2a54e4c4d734071f0c4897a7c"
+        },
+        {
+          "file": "reviews/court-after-sheet.jpg",
+          "sha256": "00764a594eafb0b373b398b2bffef3409540370da5252858439df12897bbc952"
+        }
+      ]
+    },
+    {
+      "pair": "forge",
+      "beforeSha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+      "afterSha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "cameraSha256": "04c186c86921d7966924deb327ecad07708e7cd348aa312af62d49d9009bb406",
+      "pngHashesVerified": true,
+      "cameraPoseProjectionIdentical": true,
+      "frames": 18,
+      "sheets": [
+        {
+          "file": "reviews/forge-before-sheet.jpg",
+          "sha256": "a242bbf51dee987260f39db04fa854cc68bca55dd58e2c109411bef7bda23483"
+        },
+        {
+          "file": "reviews/forge-after-sheet.jpg",
+          "sha256": "8b5a585b979baaf59af3f173151bfcd0925b339e7e259bb56705345c4bd832cb"
+        }
+      ]
+    },
+    {
+      "pair": "court-detail",
+      "beforeSha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "afterSha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "cameraSha256": "e0d5a88f41d9cd75bd54b47e6a7ba7c468a88c54f4bc29029937c32decd60bab",
+      "pngHashesVerified": true,
+      "cameraPoseProjectionIdentical": true,
+      "frames": 18,
+      "sheets": [
+        {
+          "file": "reviews/court-detail-before-sheet.jpg",
+          "sha256": "86b6a08c9f5466b47547d0729346875a6adbe1ff79737bc87b1ea959d1df0bd3"
+        },
+        {
+          "file": "reviews/court-detail-after-sheet.jpg",
+          "sha256": "4ab8873cfc99d7e96a3f76e6117723a15b3e82fcc419a170b6ad14b4a7d7b8a1"
+        }
+      ]
+    },
+    {
+      "pair": "court-assembly",
+      "beforeSha256": "afa3477ed6c2db98fc580a48deb3b112ad0155be1e9a9fa29d2b01d7adc945ae",
+      "afterSha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581",
+      "cameraSha256": "5486b8bb3f4e8f2c3b88314e6b1323182408f6f059e2e911cce471040cbafde4",
+      "pngHashesVerified": true,
+      "cameraPoseProjectionIdentical": true,
+      "frames": 18,
+      "sheets": [
+        {
+          "file": "reviews/court-assembly-before-sheet.jpg",
+          "sha256": "53382ff7858123269748239286731435d88d143001446d0d97b42d8a2e605683"
+        },
+        {
+          "file": "reviews/court-assembly-after-sheet.jpg",
+          "sha256": "5de47a61eaff541db0d25158dcec308f0c1faaa385ede18d6da5d0b0b105d652"
+        }
+      ]
+    },
+    {
+      "pair": "court-assembly-detail",
+      "beforeSha256": "afa3477ed6c2db98fc580a48deb3b112ad0155be1e9a9fa29d2b01d7adc945ae",
+      "afterSha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581",
+      "cameraSha256": "e0d5a88f41d9cd75bd54b47e6a7ba7c468a88c54f4bc29029937c32decd60bab",
+      "pngHashesVerified": true,
+      "cameraPoseProjectionIdentical": true,
+      "frames": 18,
+      "sheets": [
+        {
+          "file": "reviews/court-assembly-detail-before-sheet.jpg",
+          "sha256": "e303eb2c375d6a25d926d5ecd671fbcf7d0a32b03d92b3ffcc04abc415d4157b"
+        },
+        {
+          "file": "reviews/court-assembly-detail-after-sheet.jpg",
+          "sha256": "3a873e71bde81666d6593e585c60251134377e9c65f28193c36f954929b0678e"
+        }
+      ]
+    },
+    {
+      "pair": "forge-assembly-detail",
+      "beforeSha256": "88623eab0239c45ed2233f56b405262dd6ccd7dbba428407a346b461a6513783",
+      "afterSha256": "bdec1da2a5d9c632dc320a66fa2e934ab1dd4f8b9491404afb2222ffc8ab78ad",
+      "cameraSha256": "dcd4a09cb7fe5b4809d6c85d2ba4884838ca619435c7ccebb94875398135d97a",
+      "pngHashesVerified": true,
+      "cameraPoseProjectionIdentical": true,
+      "frames": 18,
+      "sheets": [
+        {
+          "file": "reviews/forge-assembly-detail-before-sheet.jpg",
+          "sha256": "26fec5d8b46713f72726bd36107de49fb756b37613b2ec37bb1c4ce9830c24c2"
+        },
+        {
+          "file": "reviews/forge-assembly-detail-after-sheet.jpg",
+          "sha256": "db9a7a1b7ca5b3771cda8cbd3cb0fb06cff3f5a0083f315ee2c81c5262420265"
+        }
+      ]
+    }
+  ],
+  "frames": 108,
+  "semanticAliases": {
+    "court-bakery-interior": {
+      "file": "reviews/court-bakery-interior.png",
+      "source": "court-assembly-detail-after/front.png",
+      "sha256": "23117e4dbc880a029bf2c399a26911bc2fa3eb0929b5c992638ceeeaf49cdf35",
+      "modelSha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581"
+    },
+    "court-repair-station": {
+      "file": "reviews/court-repair-station.png",
+      "source": "court-assembly-detail-after/interior.png",
+      "sha256": "36fdbfd00af77b2efd46c894de362da72ca6f760b3aea36883b0ff5d5e295e72",
+      "modelSha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581"
+    },
+    "court-open-courtyard": {
+      "file": "reviews/court-open-courtyard.png",
+      "source": "court-assembly-detail-after/gameplay.png",
+      "sha256": "bf00446dc5ed6f342f6cc0a8b6d2932db94936c9df99b49444181a1eb3c9dd21",
+      "modelSha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581"
+    },
+    "court-roof-separation": {
+      "file": "reviews/court-roof-separation.png",
+      "source": "court-assembly-detail-after/aerial.png",
+      "sha256": "7181a6d82a5b9dd0cd2874a455445212d001238fa71bcf94e8add714ea6862da",
+      "modelSha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581"
+    },
+    "forge-smithy-sign-mount": {
+      "file": "reviews/forge-smithy-sign-mount.png",
+      "source": "forge-assembly-detail-after/back.png",
+      "sha256": "3bf9d0ae4a92a8eae3e9242eecd3f05cc76450ff36a9fcc3b83a34af450e84ab",
+      "modelSha256": "bdec1da2a5d9c632dc320a66fa2e934ab1dd4f8b9491404afb2222ffc8ab78ad"
+    },
+    "forge-hearth-art": {
+      "file": "reviews/forge-hearth-art.png",
+      "source": "forge-assembly-detail-after/front.png",
+      "sha256": "d2c059dc6e9ee6939b2d2c2e9994672a2d3225cfe67347c3e9d506523c45b558",
+      "modelSha256": "bdec1da2a5d9c632dc320a66fa2e934ab1dd4f8b9491404afb2222ffc8ab78ad"
+    },
+    "forge-open-hearth-detail": {
+      "file": "reviews/forge-open-hearth-detail.png",
+      "source": "forge-assembly-detail-after/interior.png",
+      "sha256": "49a4ed3ee1a848de0f909779d86ff61c8b12951d21accb944eb9af03200a9506",
+      "modelSha256": "bdec1da2a5d9c632dc320a66fa2e934ab1dd4f8b9491404afb2222ffc8ab78ad"
+    }
+  },
+  "pass": true,
+  "limitations": [
+    "Hash checks establish provenance, not visual acceptance.",
+    "Local renders; no live component evaluation, terrain or authored world lights."
+  ]
+}

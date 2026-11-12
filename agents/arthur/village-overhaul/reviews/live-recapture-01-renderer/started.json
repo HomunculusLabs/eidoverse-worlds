@@ -1,0 +1,204 @@
+{
+  "status": "STARTED",
+  "world": "commons-next",
+  "phase": "after",
+  "evidenceKind": "actual-live-snap-api",
+  "startedAt": "2026-09-08T03:08:48.314Z",
+  "bodyId": "arthur-village-eye-0cf48280-3db",
+  "sourceSha256": "c4aa3404c09271380d5281bd71ece753c510236f340a21c9f9a93b798bcc29ab",
+  "contractsSha256": "fc7dbac72b31afe71203796a805310f00f1dda7595b47a81be9c19fffc626286",
+  "viewsSha256": "35852ffcd40c80dfc00f0ea7f723004be6c7fec70419de0a3809d8c0220896c1",
+  "protectedSha256": "4f6f56a1369cc2acbf2d80d2cea5f44492d0da139a8ec07dd57351984a65f00a",
+  "expected": [
+    {
+      "id": "nx-town-hall",
+      "lib": "store/dc871edb1b45ce0f.glb",
+      "kind": "thing",
+      "pos": [
+        9,
+        0,
+        -26
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -5,
+          -0.2,
+          -3.47
+        ],
+        "max": [
+          5,
+          7.165,
+          4.85
+        ],
+        "size": [
+          10,
+          7.365,
+          8.32
+        ],
+        "center": [
+          0,
+          3.482,
+          0.69
+        ]
+      },
+      "tris": 11584
+    },
+    {
+      "id": "nx-town-inn",
+      "lib": "store/861225bb15230d9b.glb",
+      "kind": "thing",
+      "pos": [
+        36,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -4.5,
+          -0.2,
+          -3.473
+        ],
+        "max": [
+          4.5,
+          7.194,
+          4.9
+        ],
+        "size": [
+          9,
+          7.394,
+          8.373
+        ],
+        "center": [
+          0,
+          3.497,
+          0.714
+        ]
+      },
+      "tris": 7468
+    }
+  ],
+  "views": [
+    {
+      "id": "nx-town-hall",
+      "name": "approach",
+      "bodyLocal": [
+        -1.8,
+        0.2,
+        6.1
+      ],
+      "lookLocal": [
+        0,
+        0.2,
+        0.8
+      ],
+      "note": "SUPPLEMENTAL AFTER ONLY: close oblique threshold/porch connection, not a matched BEFORE camera."
+    },
+    {
+      "id": "nx-town-hall",
+      "name": "interior",
+      "bodyLocal": [
+        -1.25,
+        0.2,
+        -2.05
+      ],
+      "lookLocal": [
+        0.3,
+        0.2,
+        3.6
+      ],
+      "note": "SUPPLEMENTAL AFTER ONLY: rear west aisle facing front doorway, furnishing/circulation to right; original comparison camera untouched."
+    },
+    {
+      "id": "nx-town-inn",
+      "name": "approach",
+      "bodyLocal": [
+        0.9,
+        0.198,
+        5.7
+      ],
+      "lookLocal": [
+        2.65,
+        0.198,
+        3.55
+      ],
+      "note": "SUPPLEMENTAL AFTER ONLY: oblique inhabited porch detail separates near sign from farther settle/table; not the matched exterior."
+    },
+    {
+      "id": "nx-town-inn",
+      "name": "interior",
+      "bodyLocal": [
+        3.2,
+        0.198,
+        -1.95
+      ],
+      "lookLocal": [
+        0.05,
+        0.198,
+        3.4
+      ],
+      "note": "SUPPLEMENTAL AFTER ONLY: far right tavern aisle facing front doorway; increased lamp distance and lateral angle, no exposure changes."
+    },
+    {
+      "id": "nx-town-inn",
+      "name": "detail",
+      "bodyLocal": [
+        -1.65,
+        0.198,
+        -1.65
+      ],
+      "lookLocal": [
+        0.6,
+        0.198,
+        3.2
+      ],
+      "note": "SUPPLEMENTAL AFTER ONLY: complementary rear west doorway-facing room detail; assigned diagnostic eye, not walked collision proof."
+    }
+  ],
+  "wireCounts": {
+    "join": 0,
+    "pose": 0,
+    "verb": 0
+  },
+  "uploads": 0,
+  "frames": [
+    {
+      "id": "nx-town-hall",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-hall",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "detail",
+      "status": "NOT_ATTEMPTED"
+    }
+  ],
+  "limitations": [
+    "Actual live /snap imagery, not a local GLB review rig.",
+    "Observer positions are assigned; this is not collision-tested walking.",
+    "First-person pitch/eye height are public-runtime and avatar controlled; lookLocal determines yaw only.",
+    "Weather and other participants are live and not frozen. Native image review is a separate gate."
+  ]
+}

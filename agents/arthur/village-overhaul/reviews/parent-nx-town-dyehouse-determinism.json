@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "id": "nx-town-dyehouse",
+  "builder": "build-dyehouse.ts",
+  "sha256": [
+    "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+    "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275"
+  ],
+  "method": "parent actually executed same builder twice; fresh bytes equal reviewed source"
+}

@@ -1,0 +1,174 @@
+{
+  "status": "PNG_BYTES_NOT_IDENTICAL",
+  "modelSha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+  "frames": [
+    {
+      "view": "aerial",
+      "currentSha256": "d2c7cab186d641061c860c9897eb42a11b99538e3dd5771b0fa46634a24e49a6",
+      "priorSha256": "e6f64710e3f433d1cef1c52fbeabda0546bdaf96027d391791afe47557a9086c",
+      "identical": false,
+      "differentPixels": 132,
+      "maxChannelDelta": 50,
+      "meanChannelAbsoluteDelta": [
+        0.002800925925925926,
+        0.0019270833333333334,
+        0.0007161458333333333
+      ],
+      "differenceBounds": [
+        378,
+        264,
+        649,
+        464
+      ]
+    },
+    {
+      "view": "back",
+      "currentSha256": "becb955eeb6c2b1604177a8ebfc12c2d53bb47ec1fa8525cbe0b799dedd34388",
+      "priorSha256": "fabad1abf24287d6a0b3b855399c161d73cb15aee72275f76de40ea6b9f5f4f7",
+      "identical": false,
+      "differentPixels": 1,
+      "maxChannelDelta": 5,
+      "meanChannelAbsoluteDelta": [
+        2.8935185185185184e-06,
+        0.0,
+        7.2337962962962966e-06
+      ],
+      "differenceBounds": [
+        287,
+        438,
+        288,
+        439
+      ]
+    },
+    {
+      "view": "front",
+      "currentSha256": "bfcb345974526b2d4f5d94210bdd05f63c65ec4840fb4f98857ab74113d74f50",
+      "priorSha256": "688f9a8456163544528fc4a2ca89cf88b12d17d2d11ef26c9f4a4dea2bdf45c4",
+      "identical": false,
+      "differentPixels": 610,
+      "maxChannelDelta": 50,
+      "meanChannelAbsoluteDelta": [
+        0.01623408564814815,
+        0.010513599537037037,
+        0.001127025462962963
+      ],
+      "differenceBounds": [
+        406,
+        275,
+        711,
+        277
+      ]
+    },
+    {
+      "view": "gameplay",
+      "currentSha256": "aae20b8667aee16bf8a5cd6922ad5cdd8e7b4adf929f1cb214ef6c37d5df8c87",
+      "priorSha256": "7d9207356df44cf4c7af8ff9d05b828f08f602dfc0700661c65ba9931154b625",
+      "identical": false,
+      "differentPixels": 431,
+      "maxChannelDelta": 29,
+      "meanChannelAbsoluteDelta": [
+        0.01579861111111111,
+        0.009075520833333333,
+        0.002298900462962963
+      ],
+      "differenceBounds": [
+        427,
+        296,
+        644,
+        298
+      ]
+    },
+    {
+      "view": "interior",
+      "currentSha256": "60c75bf278162ca60a54b7c03e2d71080cd97b64350e90ef2b8657b40a532ced",
+      "priorSha256": "60c75bf278162ca60a54b7c03e2d71080cd97b64350e90ef2b8657b40a532ced",
+      "identical": true,
+      "differentPixels": 0,
+      "maxChannelDelta": 0,
+      "meanChannelAbsoluteDelta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differenceBounds": null
+    },
+    {
+      "view": "left",
+      "currentSha256": "2e23e5575df0a1a698ad2765d68b47bded090f0924892663ad0cddef342a556b",
+      "priorSha256": "4b643e2da3abf2bba93ffa1e147e94304776f710ce2aea0172881a5fde6658a9",
+      "identical": false,
+      "differentPixels": 8,
+      "maxChannelDelta": 76,
+      "meanChannelAbsoluteDelta": [
+        0.00022135416666666666,
+        0.0002416087962962963,
+        0.0002517361111111111
+      ],
+      "differenceBounds": [
+        520,
+        247,
+        562,
+        277
+      ]
+    },
+    {
+      "view": "night",
+      "currentSha256": "957f2d4e2e5818b8a0d0335f183efe54e6cc0d6494a10d3d717888fd9d08b12b",
+      "priorSha256": "1ac39d93ebdabab10d70642882ee6112036c9c4f6e4e6a568259045789227427",
+      "identical": false,
+      "differentPixels": 431,
+      "maxChannelDelta": 8,
+      "meanChannelAbsoluteDelta": [
+        0.004325810185185185,
+        0.0019936342592592592,
+        0.0012398726851851852
+      ],
+      "differenceBounds": [
+        427,
+        296,
+        644,
+        298
+      ]
+    },
+    {
+      "view": "right",
+      "currentSha256": "97877c683bbc83fbc96bee887c8faa2dbdb357518cbe9a5a399bfae05700680f",
+      "priorSha256": "5ecfee51ca143e7a239d1b8737a8621e9fc810093aecfd927a7c13a74ad31886",
+      "identical": false,
+      "differentPixels": 18,
+      "maxChannelDelta": 55,
+      "meanChannelAbsoluteDelta": [
+        0.0005396412037037037,
+        0.00043836805555555556,
+        0.0002763310185185185
+      ],
+      "differenceBounds": [
+        381,
+        237,
+        434,
+        400
+      ]
+    },
+    {
+      "view": "top",
+      "currentSha256": "0f6d66d2647087b0b74d4f3a4beb28c6b900845960f366f1281be3a311c4e8f6",
+      "priorSha256": "f04b036cf181e825d733e9bcfba6514bf904f8f7cc2702ede017aba1a8899c36",
+      "identical": false,
+      "differentPixels": 567,
+      "maxChannelDelta": 4,
+      "meanChannelAbsoluteDelta": [
+        0.001517650462962963,
+        0.0013787615740740741,
+        0.0013642939814814815
+      ],
+      "differenceBounds": [
+        400,
+        377,
+        734,
+        424
+      ]
+    }
+  ],
+  "geometryRendererCameraHashesIdentical": true,
+  "interpretation": "Same model, renderer and camera hashes; current PNGs freshly rendered and independently reviewed. Pixel output differs from prior run; do not claim image determinism."
+}

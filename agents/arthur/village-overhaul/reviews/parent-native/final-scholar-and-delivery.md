@@ -1,0 +1,9 @@
+The tower visibly stands coherently in the approach capture. Its roof, upper walls, wraparound balcony, supporting posts, and stone base form a consistent structure. No definite new geometry defect is apparent in these images.
+
+The entrance is identifiable as the recessed ground-floor opening beneath the balcony, reached by the stepping-stone path and raised porch. The interior capture clearly shows an enclosed, furnished room: windows, a bed, a small table with book-like objects and a candle, and portions of other furnishings.
+
+Camera and lighting limit what can be assessed. A large foreground timber obscures much of the interior, preventing a clear reading of its full layout and clearances; that obstruction alone does not establish a geometry defect. Dark framing and shadows also conceal some exterior connections. The fixed-noon public-world lighting dims interior lights, so their subdued appearance should not be treated as evidence of missing fixtures or broken geometry. These stills establish no climb, motion, or interaction behavior. Upper circulation was separately tested; ground-to-upper climbing remains uncertified.
+
+The contact sheet is legible, with readable labels and six distinguishable views. “The hall,” “The inn,” “The woodyard,” “Dyehouse,” “Pottery workshop,” and “Lime kiln” are consistent with the visible subjects, although darkness makes the woodyard’s details harder to read. Its heading and subtitle explicitly identify the images as live captures from the public commons-next renderer with no local relighting.
+
+The sheet’s appearance is consistent with the stated labeling-and-resizing-only preparation: the dark lighting remains visible, with no apparent artificial brightening or replacement illumination. Pixels alone cannot independently certify editing provenance, but nothing shown contradicts that description. This is a visibility and defect assessment, not taste approval.

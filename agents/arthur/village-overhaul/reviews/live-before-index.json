@@ -1,0 +1,590 @@
+{
+  "status": "ACTUAL_BEFORE_CAPTURE_INDEX",
+  "world": "commons-next",
+  "hosts": 17,
+  "frames": 30,
+  "fullViewContractSha256": "dbd5c3b57b02d3998f2e8d48fc9687c00c503d9c860679993a8eaf9bd86529a6",
+  "records": [
+    {
+      "id": "nx-town-hall",
+      "view": "approach",
+      "png": "reviews/live-before-hall-inn-fresh-renderer/nx-town-hall-approach.png",
+      "pngSha256": "5f7a00a3544e01323b52931e31abcb952f1349fd9ffa18817d748a08179b7c16",
+      "manifest": "reviews/live-before-hall-inn-fresh-renderer/manifest.json",
+      "manifestSha256": "117b7284b6bb76e76ee7065b8f83618c576a80d7a1af961e50e64bae70e30982",
+      "bodyPose": {
+        "p": [
+          1.497085278108413,
+          0,
+          -15.816372420594785
+        ],
+        "yaw": 2.5066175257754257,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "approach",
+      "png": "reviews/live-before-hall-inn-fresh-renderer/nx-town-inn-approach.png",
+      "pngSha256": "8f20342303ef45e006066b86c9f4483e58a2361321a0741131ba2bb40e66d70b",
+      "manifest": "reviews/live-before-hall-inn-fresh-renderer/manifest.json",
+      "manifestSha256": "117b7284b6bb76e76ee7065b8f83618c576a80d7a1af961e50e64bae70e30982",
+      "bodyPose": {
+        "p": [
+          21,
+          0,
+          3.000000000000001
+        ],
+        "yaw": 1.7681918866447774,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-stable",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-stable-approach.png",
+      "pngSha256": "b08c5ce39cfc845bdfb9964d3e8980b5303cf76cf10b6b488e1fa353daada03f",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          51,
+          0,
+          1.9999999999999996
+        ],
+        "yaw": -1.8157749899217608,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-woodyard",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-woodyard-approach.png",
+      "pngSha256": "936cef194ad83997e499edc9a251b57ac8f46255af3edd55bdca0b5bcf4d6076",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          10.837216918425751,
+          0,
+          28.58221778222051
+        ],
+        "yaw": 1.1328206800314369,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-court",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-court-approach.png",
+      "pngSha256": "6910e68db3453398f4c55531d1f97598e44234a6fa43345f7fe19e7a02009958",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          5.503934526988974,
+          -1.5946487083102603e-08,
+          -4.333604735019705
+        ],
+        "yaw": 2.2340326535897934,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-forge",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-forge-approach.png",
+      "pngSha256": "d255850e3b73f60db6657de040ce9cc262b489a5fde1e2faf5b2eb299ef7544d",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          18.793505787669726,
+          0,
+          -4.091213094717958
+        ],
+        "yaw": 2.431428213439674,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-market",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-market-approach.png",
+      "pngSha256": "d4689d13731866c42d9cc3028bfe75270250425645974873b03d4848c40f0389",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -2.2573593128807143,
+          0,
+          0.8431457505076203
+        ],
+        "yaw": -0.6435011087932845,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-dyehouse-approach.png",
+      "pngSha256": "ffef8ffd819e5f0f3e02ff7ccbc442fe912d3109673db94d591ec19ec88a7274",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -16.45949734987324,
+          0,
+          -20.08936002163016
+        ],
+        "yaw": -1.9894993203670466,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-potter",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-potter-approach.png",
+      "pngSha256": "89f9a31fb1b2c908d56637ae5431e7ea178a07c86496aff3898802e46cf6b808",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          17.772892628724854,
+          -0.00402,
+          6.746780764827367
+        ],
+        "yaw": 1.4092059193586006,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-kiln",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-kiln-approach.png",
+      "pngSha256": "6a6990255bce485d6916da5341a6ea6f5cf51b1d2781163b6d7f3768fe7a6a7a",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          11.792945105992224,
+          -0.02065,
+          21.43427957164046
+        ],
+        "yaw": 1.4361653393560572,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-belltower",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-belltower-approach.png",
+      "pngSha256": "455b4c4bdf64a8cd6d3b04bc79c534ab4692c757681c87036f663784d2d1680a",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -0.5710678118654764,
+          0,
+          -9.056349186104045
+        ],
+        "yaw": 0.42662749312687615,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-tower",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-tower-approach.png",
+      "pngSha256": "749420311c6753053f2ef26b1adc85638508044e46e6de6859149f1568e3e915",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -0.2612813170016608,
+          0,
+          10.67476113438697
+        ],
+        "yaw": 1.1617702625905992,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-shrine",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-shrine-approach.png",
+      "pngSha256": "236ab3312bd3b578d9d7b66e0ecdfaf317ceeb57aa20ab87fbdaa2c8f5400c25",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -16.942575873299802,
+          -0.0012609260510534298,
+          -3.7208648311846364
+        ],
+        "yaw": -1.6054257041807587,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-hall",
+      "view": "interior",
+      "png": "reviews/live-before-hall-inn-fresh-renderer/nx-town-hall-interior.png",
+      "pngSha256": "09ebee4b75f125487b2bed56ef675a504daa2031d77557656d92eed966fede17",
+      "manifest": "reviews/live-before-hall-inn-fresh-renderer/manifest.json",
+      "manifestSha256": "117b7284b6bb76e76ee7065b8f83618c576a80d7a1af961e50e64bae70e30982",
+      "bodyPose": {
+        "p": [
+          9.585443037847803,
+          0.2,
+          -27.807555379355094
+        ],
+        "yaw": 0.4509002039556618,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "interior",
+      "png": "reviews/live-before-hall-inn-fresh-renderer/nx-town-inn-interior.png",
+      "pngSha256": "9b1bb3f8fdba9c2501333e5fa72894bb1e5690ea4199fdee0114bfe8972bcd81",
+      "manifest": "reviews/live-before-hall-inn-fresh-renderer/manifest.json",
+      "manifestSha256": "117b7284b6bb76e76ee7065b8f83618c576a80d7a1af961e50e64bae70e30982",
+      "bodyPose": {
+        "p": [
+          34.55,
+          0.2,
+          -1.15
+        ],
+        "yaw": 0.8505233267318348,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-stable",
+      "view": "interior",
+      "png": "reviews/live-before-05-renderer/nx-town-stable-interior.png",
+      "pngSha256": "ef7e76248b59b68b7406d74c8c96798ded8e753977f5ba3786afde34773c662d",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          42,
+          0.2,
+          -1.35
+        ],
+        "yaw": 0.7051113481144318,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-court",
+      "view": "interior",
+      "png": "reviews/live-before-05-renderer/nx-court-interior.png",
+      "pngSha256": "f4365cebb518948d7c52b8b332a665f593ec45735dc091ce5547da7e7d1c0384",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          15.792182908720086,
+          0.19999998405351294,
+          -16.178939058533214
+        ],
+        "yaw": 2.543735598132249,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-tower",
+      "view": "interior",
+      "png": "reviews/live-before-05-renderer/nx-tower-interior.png",
+      "pngSha256": "11929c7b55024a8b7986994149c6d2b724db691020d8419ee7f574c7fd25f141",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          13.145957377622484,
+          2.625,
+          16.85201380732929
+        ],
+        "yaw": 1.7576882681068997,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-woodyard",
+      "view": "workstation",
+      "png": "reviews/live-before-05-renderer/nx-town-woodyard-workstation.png",
+      "pngSha256": "58acc3ecd1059d1614814618fe93566b73f2ba28240d958d89dac6b07d3613ae",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          13.47314490021542,
+          0,
+          28.247727610738234
+        ],
+        "yaw": 0.7427243615191705,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-forge",
+      "view": "workstation",
+      "png": "reviews/live-before-05-renderer/nx-forge-workstation.png",
+      "pngSha256": "ab675b111527a6809f65f7a329a09bb903ff1c445fcee8c8d618175cf6d352d8",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          20.298079490930622,
+          0,
+          -5.901256732715615
+        ],
+        "yaw": 2.417143470852278,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-market",
+      "view": "workstation",
+      "png": "reviews/live-before-05-renderer/nx-town-market-workstation.png",
+      "pngSha256": "2676463c4dfedccb6e1a2c06f15057779db1ed23b857f8ae0d272c17d59dd9d6",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -4.025126265847083,
+          0,
+          4.025126265847084
+        ],
+        "yaw": -0.7853981633974485,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "view": "workstation",
+      "png": "reviews/live-before-05-renderer/nx-town-dyehouse-workstation.png",
+      "pngSha256": "e29d8f92730406ee56dca61b1156ec1f6a0f98528e3a792acf1b600152f8d371",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -20.17148380406509,
+          0,
+          -20.938569397400457
+        ],
+        "yaw": -2.200592653589793,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-potter",
+      "view": "workstation",
+      "png": "reviews/live-before-05-renderer/nx-town-potter-workstation.png",
+      "pngSha256": "ba6dd3422d14be4966b9d0533bca31fd7c57df1ff4fb8068ee9f5ccb7ec45751",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          20.617329605055026,
+          -0.35402,
+          7.077202143805279
+        ],
+        "yaw": 1.3684122364907352,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-kiln",
+      "view": "workstation",
+      "png": "reviews/live-before-05-renderer/nx-town-kiln-workstation.png",
+      "pngSha256": "62e93b208e1985396818182d2dbd93c49ce818dfadf9bc1dfb9528af035bd4e9",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          15.306629331817796,
+          -0.02065,
+          19.398592178845444
+        ],
+        "yaw": 0.9037456684253595,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-shrine",
+      "view": "workstation",
+      "png": "reviews/live-before-05-renderer/nx-town-shrine-workstation.png",
+      "pngSha256": "6765784546b8e66c349ffd5aa994c7b8919b3e52a1365251e348d5d5bd9eda92",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -20.55675137997634,
+          -0.0012609260510534298,
+          -3.2875803900384004
+        ],
+        "yaw": -1.7297806987275202,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-belltower",
+      "view": "detail",
+      "png": "reviews/live-before-05-renderer/nx-town-belltower-detail.png",
+      "pngSha256": "3697655fa9868cc252ccdbb2572bdc1371184e78e51417e925ba4e24e31f48d6",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -3.399494936611667,
+          1.5,
+          -0.5710678118654746
+        ],
+        "yaw": 0.9505468408120753,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-gate-n",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-gate-n-approach.png",
+      "pngSha256": "4bba08decf0a45c3aea6c875718068e709712acca4f8af974d387640a56d9523",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          1,
+          0,
+          -10.5
+        ],
+        "yaw": -3.0309354324158977,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-gate-s",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-gate-s-approach.png",
+      "pngSha256": "be40ee99885819f0c598231d721bbba81b85de6b31f1936599db72a9af9663f9",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -0.9999999999999989,
+          0,
+          10.5
+        ],
+        "yaw": 0.11065722117389552,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-gate-e",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-gate-e-approach.png",
+      "pngSha256": "e064733108028d972a0e786e5139b3d0c7d86384c68c9b2a54a06f793facccf7",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          28.5,
+          0,
+          -0.9999999999999994
+        ],
+        "yaw": -1.4601391056210011,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    },
+    {
+      "id": "nx-town-gate-w",
+      "view": "approach",
+      "png": "reviews/live-before-05-renderer/nx-town-gate-w-approach.png",
+      "pngSha256": "0dd15ed6b4ca392f0c3e0c60994f092555747cab7cb623cd6c563199ffa7e5d5",
+      "manifest": "reviews/live-before-05-renderer/manifest.json",
+      "manifestSha256": "99ca0ae778898175369762625646c3de26a4f1618db2450421b5b4235d2854a8",
+      "bodyPose": {
+        "p": [
+          -28.5,
+          0,
+          1.0000000000000004
+        ],
+        "yaw": 1.6814535479687922,
+        "speed": 0,
+        "clip": "idle"
+      },
+      "httpStatus": 200
+    }
+  ],
+  "limitations": {
+    "visuallyUnusableNightInteriors": [
+      "nx-town-hall/interior",
+      "nx-court/interior",
+      "nx-tower/interior"
+    ],
+    "reviewer": "independent native gpt-6-astra via Codex 0.153.4, not parent sight"
+  },
+  "worldVerbs": 0,
+  "uploads": 0,
+  "allOwnedRenderersClosed": true
+}

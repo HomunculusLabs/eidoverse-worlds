@@ -1,0 +1,9 @@
+All nine images are visible in the stated order. This review covers the local ensemble renders only; it does not establish live placement or walking clearance.
+
+- **Hall — acceptable for deployment visual gate.** The visible main roof and entrance canopy appear closed, with no clear floating structural supports. The doorway reads as open. The interior has usable-looking floor space around the central hearth, with a chimney hood above it. The wall panel is visible, but its black markings are unreadable; its intended content remains unverified. The front and aerial crops do not establish the entire roof perimeter.
+
+- **Inn — acceptable for deployment visual gate.** The aerial shows a coherent roof assembly and grounded porch supports. The entrance reads as open, with a visible route into the room. The table, benches, counter, and barrels communicate hospitality and appear plausibly usable. The sign above the entrance is exposed, but its lettering or symbols are unreadable at this resolution; the specific inn name remains unverified. No clear material architecture defect is visible.
+
+- **Stable — must fix the review coverage before passing the deployment visual gate.** The labeled aerial is an interior upward view, so it does not establish exterior roof closure. Dark surfaces behind the trusses could be roof undersides; these images do **not** justify declaring the roof missing. Supply an exterior elevated view showing both slopes and their edges. The visible entrance appears open, the stall partitions read coherently, and the hanging horseshoe sign makes the trade purpose legible. The dark objects inside the stalls remain unidentified; no furniture defect can be established from them.
+
+**Gate decision:** Hall and inn pass the visible architecture review. Stable remains unverified pending exterior roof coverage; no definite construction defect is demonstrated. This is not Bill approval.

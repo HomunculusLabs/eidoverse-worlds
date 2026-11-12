@@ -1,0 +1,3816 @@
+{
+  "evidenceKind": "read-only-live-runtime-observation",
+  "requests": [
+    {
+      "at": "2026-09-08T03:17:21.940Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:23.699Z",
+      "url": "https://eidoverse.billding.dev/snap?world=commons-next&follow=arthur-village-eye-e266c875-c6b&view=first",
+      "method": "GET",
+      "status": 503
+    },
+    {
+      "at": "2026-09-08T03:17:23.801Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:40.041Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:41.522Z",
+      "url": "https://eidoverse.billding.dev/snap?world=commons-next&follow=arthur-village-eye-ef3d2868-a93&view=first",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "at": "2026-09-08T03:17:41.917Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:49.774Z",
+      "url": "https://eidoverse.billding.dev/snap?world=commons-next&follow=arthur-village-eye-ef3d2868-a93&view=first",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:50.941Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:52.479Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:57.019Z",
+      "url": "https://eidoverse.billding.dev/snap?world=commons-next&follow=arthur-village-eye-ef3d2868-a93&view=first",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:17:58.741Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "at": "2026-09-08T03:18:00.254Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200
+    }
+  ],
+  "frames": [
+    {
+      "at": "2026-09-08T03:17:50.289Z",
+      "camera": {
+        "pos": [
+          32.15978958623372,
+          1.6176009265861768,
+          1.1740165449188327
+        ],
+        "quaternion": [
+          -0.001010277290774099,
+          0.9989353393704652,
+          0.037407544634305415,
+          0.026978560025353503
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "sky": {},
+      "rig": {
+        "slots": 8,
+        "cap": 8,
+        "dayness": 1,
+        "casters": 97,
+        "casterBudget": 12,
+        "casting": 0,
+        "requests": [
+          {
+            "key": "placed:nx-plaza-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-welcome-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h2-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-inn-l",
+            "slot": 0,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-hall-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h3-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-forge-l",
+            "slot": 4,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h4-l",
+            "slot": 5,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-longhouse-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h5-l-left",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h5-l-right",
+            "slot": 6,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-market-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h6-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-potter-l",
+            "slot": 1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h7-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-garden-cottage-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-tower-house-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-struct-beacon-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-struct-observatory-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-row-cottage-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-bunkhouse-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-struct-northneedle-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-stable-l",
+            "slot": 3,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-dyehouse-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-kiln-l",
+            "slot": 7,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-nw-lamp-001-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-nw-lamp-002-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-ne-lamp-001-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-ne-lamp-002-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-sw-lamp-001-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-sw-lamp-002-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-mile-nw-007-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-mile-ne-009-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-mile-sw-013-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-e-l",
+            "slot": 2,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-s-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-n-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-w-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-hearth:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-streetlamps:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-streetlamps:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-roads:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-nw-lane-001:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-nw-lane-001:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-ne-lane-002:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-ne-lane-002:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-sw-lane-003:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-sw-lane-003:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-belltower:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-mapboard:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-lamp-e:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-carousel:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-forge:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-forge:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-tower:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-tower:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-lamp-n:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-monument:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-dyehouse:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-dress-stablebench:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h5:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h5:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-stable:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-stable:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-inn:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-inn:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h2:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h3:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h4:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-lamp-s:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-welcome:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-court:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-court:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-dress-charcoal:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          }
+        ]
+      },
+      "pointLights": [
+        {
+          "name": "slot0",
+          "pos": [
+            36,
+            2.35,
+            0
+          ],
+          "intensity": 0,
+          "distance": 6,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot1",
+          "pos": [
+            24.360421448743175,
+            1.39598,
+            7.587823892241903
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot2",
+          "pos": [
+            9.9,
+            1.96,
+            1.75
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot3",
+          "pos": [
+            43,
+            1.9,
+            1.8
+          ],
+          "intensity": 0,
+          "distance": 5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot4",
+          "pos": [
+            21.60565223135312,
+            1.5,
+            -7.557382793287093
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot5",
+          "pos": [
+            35.510902551188416,
+            2.2981193947111507,
+            -23.886067068481577
+          ],
+          "intensity": 0,
+          "distance": 4.8,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot6",
+          "pos": [
+            21.20613236778456,
+            0.6041628994790363,
+            -22.125371183327072
+          ],
+          "intensity": 0,
+          "distance": 4.6,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot7",
+          "pos": [
+            18.70823868946895,
+            1.07935,
+            23.848662250734773
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        }
+      ],
+      "lightEntities": [
+        {
+          "id": "nx-plaza-l",
+          "pos": [
+            0,
+            1.2,
+            0
+          ],
+          "params": {
+            "color": 16748608,
+            "intensity": 2.5,
+            "range": 7,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-plaza-l",
+          "bounds": {
+            "min": [
+              -0.12999999523162842,
+              1.0700000047683715,
+              -0.12999999523162842
+            ],
+            "max": [
+              0.12999999523162842,
+              1.3299999952316284,
+              0.12999999523162842
+            ]
+          }
+        },
+        {
+          "id": "nx-welcome-l",
+          "pos": [
+            -3,
+            2.2,
+            -4.3
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 4,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-welcome-l",
+          "bounds": {
+            "min": [
+              -3.1299999952316284,
+              2.0700000047683718,
+              -4.429999995231628
+            ],
+            "max": [
+              -2.8700000047683716,
+              2.3299999952316286,
+              -4.170000004768371
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h2-l",
+          "pos": [
+            27,
+            1.1448386482945114,
+            -27
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.4,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h2-l",
+          "bounds": {
+            "min": [
+              26.87000000476837,
+              1.014838653062883,
+              -27.12999999523163
+            ],
+            "max": [
+              27.12999999523163,
+              1.2748386435261398,
+              -26.87000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-inn-l",
+          "pos": [
+            36,
+            2.35,
+            0
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.6,
+            "range": 6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-inn-l",
+          "bounds": {
+            "min": [
+              35.87000000476837,
+              2.2200000047683717,
+              -0.12999999523162842
+            ],
+            "max": [
+              36.12999999523163,
+              2.4799999952316285,
+              0.12999999523162842
+            ]
+          }
+        },
+        {
+          "id": "nx-town-hall-l",
+          "pos": [
+            9,
+            2.5,
+            -26
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.7,
+            "range": 6.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-hall-l",
+          "bounds": {
+            "min": [
+              8.870000004768372,
+              2.3700000047683716,
+              -26.12999999523163
+            ],
+            "max": [
+              9.129999995231628,
+              2.6299999952316284,
+              -25.87000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h3-l",
+          "pos": [
+            32.526911934581186,
+            2.4486087674231,
+            -32.526911934581186
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.5,
+            "range": 5.2,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h3-l",
+          "bounds": {
+            "min": [
+              32.39691193934956,
+              2.3186087721914714,
+              -32.656911929812814
+            ],
+            "max": [
+              32.656911929812814,
+              2.5786087626547283,
+              -32.39691193934956
+            ]
+          }
+        },
+        {
+          "id": "nx-forge-l",
+          "pos": [
+            21.60565223135312,
+            1.5,
+            -7.557382793287093
+          ],
+          "params": {
+            "color": 16753756,
+            "intensity": 1.45,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-forge-l",
+          "bounds": {
+            "min": [
+              21.47565223612149,
+              1.3700000047683716,
+              -7.687382788518722
+            ],
+            "max": [
+              21.735652226584747,
+              1.6299999952316284,
+              -7.427382798055465
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h4-l",
+          "pos": [
+            35.510902551188416,
+            2.2981193947111507,
+            -23.886067068481577
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.4,
+            "range": 4.8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h4-l",
+          "bounds": {
+            "min": [
+              35.38090255595679,
+              2.1681193994795223,
+              -24.016067063713205
+            ],
+            "max": [
+              35.640902546420044,
+              2.428119389942779,
+              -23.756067073249948
+            ]
+          }
+        },
+        {
+          "id": "nx-town-longhouse-l",
+          "pos": [
+            8.815123251205957,
+            2.2,
+            25.42919303809839
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.55,
+            "range": 6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-longhouse-l",
+          "bounds": {
+            "min": [
+              8.685123255974329,
+              2.0700000047683718,
+              25.29919304286676
+            ],
+            "max": [
+              8.945123246437586,
+              2.3299999952316286,
+              25.55919303333002
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h5-l-left",
+          "pos": [
+            17.882730496207788,
+            0.6041628994790363,
+            -25.448773054903842
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.35,
+            "range": 4.6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h5-l-left",
+          "bounds": {
+            "min": [
+              17.75273050097616,
+              0.4741629042474079,
+              -25.57877305013547
+            ],
+            "max": [
+              18.012730491439417,
+              0.7341628947106648,
+              -25.318773059672214
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h5-l-right",
+          "pos": [
+            21.20613236778456,
+            0.6041628994790363,
+            -22.125371183327072
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.35,
+            "range": 4.6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h5-l-right",
+          "bounds": {
+            "min": [
+              21.07613237255293,
+              0.4741629042474079,
+              -22.2553711785587
+            ],
+            "max": [
+              21.336132363016187,
+              0.7341628947106648,
+              -21.995371188095444
+            ]
+          }
+        },
+        {
+          "id": "nx-town-market-l",
+          "pos": [
+            -6.217157287525381,
+            1.75,
+            6.217157287525381
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-market-l",
+          "bounds": {
+            "min": [
+              -6.347157282757009,
+              1.6200000047683716,
+              6.087157292293752
+            ],
+            "max": [
+              -6.087157292293752,
+              1.8799999952316284,
+              6.347157282757009
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h6-l",
+          "pos": [
+            38.3605428793702,
+            2.4223109170127004,
+            -38.3605428793702
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.45,
+            "range": 5.2,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h6-l",
+          "bounds": {
+            "min": [
+              38.23054288413857,
+              2.292310921781072,
+              -38.49054287460183
+            ],
+            "max": [
+              38.49054287460183,
+              2.552310912244329,
+              -38.23054288413857
+            ]
+          }
+        },
+        {
+          "id": "nx-town-potter-l",
+          "pos": [
+            24.360421448743175,
+            1.39598,
+            7.587823892241903
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.3,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-potter-l",
+          "bounds": {
+            "min": [
+              24.230421453511546,
+              1.2659800047683716,
+              7.457823897010274
+            ],
+            "max": [
+              24.490421443974803,
+              1.5259799952316284,
+              7.717823887473531
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h7-l",
+          "pos": [
+            30.476302269140195,
+            2.2827071031230703,
+            -41.79001076812495
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.45,
+            "range": 5.4,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h7-l",
+          "bounds": {
+            "min": [
+              30.346302273908567,
+              2.152707107891442,
+              -41.92001076335658
+            ],
+            "max": [
+              30.606302264371823,
+              2.4127070983546988,
+              -41.66001077289332
+            ]
+          }
+        },
+        {
+          "id": "nx-town-garden-cottage-l",
+          "pos": [
+            -25.757529051131492,
+            2.100949448840476,
+            18.823342594395804
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.45,
+            "range": 5.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-garden-cottage-l",
+          "bounds": {
+            "min": [
+              -25.88752904636312,
+              1.9709494536088474,
+              18.693342599164176
+            ],
+            "max": [
+              -25.627529055899863,
+              2.2309494440721043,
+              18.953342589627432
+            ]
+          }
+        },
+        {
+          "id": "nx-town-tower-house-l",
+          "pos": [
+            -8.876748834137304,
+            2.1,
+            25.619462025398928
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.45,
+            "range": 5.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-tower-house-l",
+          "bounds": {
+            "min": [
+              -9.006748829368933,
+              1.9700000047683717,
+              25.4894620301673
+            ],
+            "max": [
+              -8.746748838905676,
+              2.2299999952316285,
+              25.749462020630556
+            ]
+          }
+        },
+        {
+          "id": "nx-struct-beacon-l",
+          "pos": [
+            60.91095257485114,
+            7.350806587039094,
+            -66.76448518055265
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.5,
+            "range": 9,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-struct-beacon-l",
+          "bounds": {
+            "min": [
+              60.78095257961951,
+              7.220806591807466,
+              -66.89448517578428
+            ],
+            "max": [
+              61.040952570082766,
+              7.480806582270723,
+              -66.63448518532103
+            ]
+          }
+        },
+        {
+          "id": "nx-struct-observatory-l",
+          "pos": [
+            -39.811,
+            1.5215702652599432,
+            -87.356
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.1,
+            "range": 7,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-struct-observatory-l",
+          "bounds": {
+            "min": [
+              -39.94099999523163,
+              1.3915702700283148,
+              -87.48599999523162
+            ],
+            "max": [
+              -39.68100000476837,
+              1.6515702604915716,
+              -87.22600000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-row-cottage-l",
+          "pos": [
+            -22.67670540150866,
+            2.1,
+            -16.764456792527735
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.4,
+            "range": 5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-row-cottage-l",
+          "bounds": {
+            "min": [
+              -22.806705396740288,
+              1.9700000047683717,
+              -16.894456787759363
+            ],
+            "max": [
+              -22.54670540627703,
+              2.2299999952316285,
+              -16.634456797296107
+            ]
+          }
+        },
+        {
+          "id": "nx-town-bunkhouse-l",
+          "pos": [
+            -8.876748834137304,
+            2.1,
+            -25.619462025398928
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.5,
+            "range": 6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-bunkhouse-l",
+          "bounds": {
+            "min": [
+              -9.006748829368933,
+              1.9700000047683717,
+              -25.749462020630556
+            ],
+            "max": [
+              -8.746748838905676,
+              2.2299999952316285,
+              -25.4894620301673
+            ]
+          }
+        },
+        {
+          "id": "nx-struct-northneedle-l",
+          "pos": [
+            47.959999999999994,
+            12.9,
+            -31.9
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-struct-northneedle-l",
+          "bounds": {
+            "min": [
+              47.830000004768365,
+              12.770000004768372,
+              -32.02999999523163
+            ],
+            "max": [
+              48.08999999523162,
+              13.029999995231629,
+              -31.77000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-stable-l",
+          "pos": [
+            43,
+            1.9,
+            1.8
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.4,
+            "range": 5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-stable-l",
+          "bounds": {
+            "min": [
+              42.87000000476837,
+              1.7700000047683715,
+              1.6700000047683716
+            ],
+            "max": [
+              43.12999999523163,
+              2.0299999952316283,
+              1.9299999952316285
+            ]
+          }
+        },
+        {
+          "id": "nx-town-dyehouse-l",
+          "pos": [
+            -23.625,
+            1.62,
+            -21.971
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-dyehouse-l",
+          "bounds": {
+            "min": [
+              -23.75499999523163,
+              1.4900000047683717,
+              -22.10099999523163
+            ],
+            "max": [
+              -23.49500000476837,
+              1.7499999952316285,
+              -21.84100000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-kiln-l",
+          "pos": [
+            18.70823868946895,
+            1.07935,
+            23.848662250734773
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.4,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-kiln-l",
+          "bounds": {
+            "min": [
+              18.57823869423732,
+              0.9493500047683716,
+              23.718662255503144
+            ],
+            "max": [
+              18.838238684700578,
+              1.2093499952316284,
+              23.9786622459664
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-nw-lamp-001-l",
+          "pos": [
+            -39.09,
+            1.96,
+            30.26
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-nw-lamp-001-l",
+          "bounds": {
+            "min": [
+              -39.21999999523163,
+              1.8300000047683715,
+              30.130000004768373
+            ],
+            "max": [
+              -38.960000004768375,
+              2.0899999952316284,
+              30.38999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-nw-lamp-002-l",
+          "pos": [
+            -47.96,
+            1.96,
+            46.71
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-nw-lamp-002-l",
+          "bounds": {
+            "min": [
+              -48.08999999523163,
+              1.8300000047683715,
+              46.58000000476837
+            ],
+            "max": [
+              -47.83000000476837,
+              2.0899999952316284,
+              46.83999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-ne-lamp-001-l",
+          "pos": [
+            39.71,
+            1.96,
+            27
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-ne-lamp-001-l",
+          "bounds": {
+            "min": [
+              39.58000000476837,
+              1.8300000047683715,
+              26.87000000476837
+            ],
+            "max": [
+              39.83999999523163,
+              2.0899999952316284,
+              27.12999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-ne-lamp-002-l",
+          "pos": [
+            32.89,
+            1.96,
+            50.15
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-ne-lamp-002-l",
+          "bounds": {
+            "min": [
+              32.76000000476837,
+              1.8300000047683715,
+              50.02000000476837
+            ],
+            "max": [
+              33.01999999523163,
+              2.0899999952316284,
+              50.27999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-sw-lamp-001-l",
+          "pos": [
+            -25.2,
+            1.96,
+            -30.67
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-sw-lamp-001-l",
+          "bounds": {
+            "min": [
+              -25.329999995231628,
+              1.8300000047683715,
+              -30.79999999523163
+            ],
+            "max": [
+              -25.07000000476837,
+              2.0899999952316284,
+              -30.540000004768373
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-sw-lamp-002-l",
+          "pos": [
+            -34.69,
+            1.96,
+            -43.14
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-sw-lamp-002-l",
+          "bounds": {
+            "min": [
+              -34.819999995231626,
+              1.8300000047683715,
+              -43.26999999523163
+            ],
+            "max": [
+              -34.56000000476837,
+              2.0899999952316284,
+              -43.01000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-mile-nw-007-l",
+          "pos": [
+            -47.680188962943845,
+            0.6782,
+            50.60761103705616
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-mile-nw-007-l",
+          "bounds": {
+            "min": [
+              -47.81018895817547,
+              0.5482000047683716,
+              50.47761104182453
+            ],
+            "max": [
+              -47.55018896771222,
+              0.8081999952316284,
+              50.73761103228779
+            ]
+          }
+        },
+        {
+          "id": "nx-mile-ne-009-l",
+          "pos": [
+            16.894079643411146,
+            0.6516000000000001,
+            68.42675037898914
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-mile-ne-009-l",
+          "bounds": {
+            "min": [
+              16.764079648179518,
+              0.5216000047683717,
+              68.29675038375751
+            ],
+            "max": [
+              17.024079638642775,
+              0.7815999952316285,
+              68.55675037422077
+            ]
+          }
+        },
+        {
+          "id": "nx-mile-sw-013-l",
+          "pos": [
+            -37.09109108949859,
+            0.608,
+            -52.19708671746459
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-mile-sw-013-l",
+          "bounds": {
+            "min": [
+              -37.22109108473022,
+              0.47800000476837157,
+              -52.32708671269622
+            ],
+            "max": [
+              -36.96109109426696,
+              0.7379999952316284,
+              -52.067086722232965
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-e-l",
+          "pos": [
+            9.9,
+            1.96,
+            1.75
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-e-l",
+          "bounds": {
+            "min": [
+              9.770000004768372,
+              1.8300000047683715,
+              1.6200000047683716
+            ],
+            "max": [
+              10.029999995231629,
+              2.0899999952316284,
+              1.8799999952316284
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-s-l",
+          "pos": [
+            -1.75,
+            1.96,
+            -9.9
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-s-l",
+          "bounds": {
+            "min": [
+              -1.8799999952316284,
+              1.8300000047683715,
+              -10.029999995231629
+            ],
+            "max": [
+              -1.6200000047683716,
+              2.0899999952316284,
+              -9.770000004768372
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-n-l",
+          "pos": [
+            1.75,
+            1.96,
+            9.9
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-n-l",
+          "bounds": {
+            "min": [
+              1.6200000047683716,
+              1.8300000047683715,
+              9.770000004768372
+            ],
+            "max": [
+              1.8799999952316284,
+              2.0899999952316284,
+              10.029999995231629
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-w-l",
+          "pos": [
+            -9.9,
+            1.96,
+            -1.75
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-w-l",
+          "bounds": {
+            "min": [
+              -10.029999995231629,
+              1.8300000047683715,
+              -1.8799999952316284
+            ],
+            "max": [
+              -9.770000004768372,
+              2.0899999952316284,
+              -1.6200000047683716
+            ]
+          }
+        }
+      ],
+      "exposure": 1
+    },
+    {
+      "at": "2026-09-08T03:17:58.099Z",
+      "camera": {
+        "pos": [
+          36.45697941019907,
+          1.6173950175776541,
+          3.1023833247732213
+        ],
+        "quaternion": [
+          -0.034137103514437654,
+          0.4093691211677106,
+          0.015329814722180292,
+          0.9116011066133061
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "sky": {},
+      "rig": {
+        "slots": 8,
+        "cap": 8,
+        "dayness": 1,
+        "casters": 164,
+        "casterBudget": 12,
+        "casting": 0,
+        "requests": [
+          {
+            "key": "placed:nx-plaza-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-welcome-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h2-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-inn-l",
+            "slot": 0,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-hall-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h3-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-forge-l",
+            "slot": 4,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h4-l",
+            "slot": 5,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-longhouse-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h5-l-left",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h5-l-right",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-market-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h6-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-potter-l",
+            "slot": 1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-artwalk-h7-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-garden-cottage-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-tower-house-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-struct-beacon-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-struct-observatory-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-row-cottage-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-bunkhouse-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-struct-northneedle-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-stable-l",
+            "slot": 3,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-dyehouse-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-town-kiln-l",
+            "slot": 7,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-nw-lamp-001-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-nw-lamp-002-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-ne-lamp-001-l",
+            "slot": 6,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-ne-lamp-002-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-sw-lamp-001-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-sw-lamp-002-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-mile-nw-007-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-mile-ne-009-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-mile-sw-013-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-e-l",
+            "slot": 2,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-s-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-n-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "placed:nx-approach-lamp-w-l",
+            "slot": -1,
+            "keep": false,
+            "authored": true,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-hearth:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-streetlamps:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-streetlamps:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-roads:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-nw-lane-001:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-nw-lane-001:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-ne-lane-002:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-ne-lane-002:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-sw-lane-003:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-sw-lane-003:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-belltower:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-mapboard:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-lamp-e:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-carousel:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-forge:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-forge:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-tower:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-tower:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-lamp-n:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-monument:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-dyehouse:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-dress-stablebench:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h5:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h5:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-stable:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-stable:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-inn:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-inn:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h2:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h3:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h4:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-approach-lamp-s:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-welcome:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-court:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-court:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-dress-charcoal:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-kiln:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-kiln:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-longhouse:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-longhouse:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:beb4c791:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:beb4c791:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-hall:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-town-hall:1",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-craft-cloister-0008:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-craft-cloister-0016:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-craft-cloister-0029:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-craft-cloister-0042:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-craft-cloister-0055:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-wild-wayside-0030:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-wild-wayside-0045:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-wild-wayside-0056:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-wild-wayside-0058:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-wild-wayside-0009:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h6:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          },
+          {
+            "key": "lamp:entity:nx-artwalk-h7:0",
+            "slot": -1,
+            "keep": false,
+            "authored": false,
+            "mirror": false,
+            "dayAware": true
+          }
+        ]
+      },
+      "pointLights": [
+        {
+          "name": "slot0",
+          "pos": [
+            36,
+            2.35,
+            0
+          ],
+          "intensity": 0,
+          "distance": 6,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot1",
+          "pos": [
+            24.360421448743175,
+            1.39598,
+            7.587823892241903
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot2",
+          "pos": [
+            9.9,
+            1.96,
+            1.75
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot3",
+          "pos": [
+            43,
+            1.9,
+            1.8
+          ],
+          "intensity": 0,
+          "distance": 5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot4",
+          "pos": [
+            21.60565223135312,
+            1.5,
+            -7.557382793287093
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot5",
+          "pos": [
+            35.510902551188416,
+            2.2981193947111507,
+            -23.886067068481577
+          ],
+          "intensity": 0,
+          "distance": 4.8,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot6",
+          "pos": [
+            39.71,
+            1.96,
+            27
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        },
+        {
+          "name": "slot7",
+          "pos": [
+            18.70823868946895,
+            1.07935,
+            23.848662250734773
+          ],
+          "intensity": 0,
+          "distance": 4.5,
+          "decay": 1.7,
+          "visible": true
+        }
+      ],
+      "lightEntities": [
+        {
+          "id": "nx-plaza-l",
+          "pos": [
+            0,
+            1.2,
+            0
+          ],
+          "params": {
+            "color": 16748608,
+            "intensity": 2.5,
+            "range": 7,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-plaza-l",
+          "bounds": {
+            "min": [
+              -0.12999999523162842,
+              1.0700000047683715,
+              -0.12999999523162842
+            ],
+            "max": [
+              0.12999999523162842,
+              1.3299999952316284,
+              0.12999999523162842
+            ]
+          }
+        },
+        {
+          "id": "nx-welcome-l",
+          "pos": [
+            -3,
+            2.2,
+            -4.3
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 4,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-welcome-l",
+          "bounds": {
+            "min": [
+              -3.1299999952316284,
+              2.0700000047683718,
+              -4.429999995231628
+            ],
+            "max": [
+              -2.8700000047683716,
+              2.3299999952316286,
+              -4.170000004768371
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h2-l",
+          "pos": [
+            27,
+            1.1448386482945114,
+            -27
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.4,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h2-l",
+          "bounds": {
+            "min": [
+              26.87000000476837,
+              1.014838653062883,
+              -27.12999999523163
+            ],
+            "max": [
+              27.12999999523163,
+              1.2748386435261398,
+              -26.87000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-inn-l",
+          "pos": [
+            36,
+            2.35,
+            0
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.6,
+            "range": 6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-inn-l",
+          "bounds": {
+            "min": [
+              35.87000000476837,
+              2.2200000047683717,
+              -0.12999999523162842
+            ],
+            "max": [
+              36.12999999523163,
+              2.4799999952316285,
+              0.12999999523162842
+            ]
+          }
+        },
+        {
+          "id": "nx-town-hall-l",
+          "pos": [
+            9,
+            2.5,
+            -26
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.7,
+            "range": 6.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-hall-l",
+          "bounds": {
+            "min": [
+              8.870000004768372,
+              2.3700000047683716,
+              -26.12999999523163
+            ],
+            "max": [
+              9.129999995231628,
+              2.6299999952316284,
+              -25.87000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h3-l",
+          "pos": [
+            32.526911934581186,
+            2.4486087674231,
+            -32.526911934581186
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.5,
+            "range": 5.2,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h3-l",
+          "bounds": {
+            "min": [
+              32.39691193934956,
+              2.3186087721914714,
+              -32.656911929812814
+            ],
+            "max": [
+              32.656911929812814,
+              2.5786087626547283,
+              -32.39691193934956
+            ]
+          }
+        },
+        {
+          "id": "nx-forge-l",
+          "pos": [
+            21.60565223135312,
+            1.5,
+            -7.557382793287093
+          ],
+          "params": {
+            "color": 16753756,
+            "intensity": 1.45,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-forge-l",
+          "bounds": {
+            "min": [
+              21.47565223612149,
+              1.3700000047683716,
+              -7.687382788518722
+            ],
+            "max": [
+              21.735652226584747,
+              1.6299999952316284,
+              -7.427382798055465
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h4-l",
+          "pos": [
+            35.510902551188416,
+            2.2981193947111507,
+            -23.886067068481577
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.4,
+            "range": 4.8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h4-l",
+          "bounds": {
+            "min": [
+              35.38090255595679,
+              2.1681193994795223,
+              -24.016067063713205
+            ],
+            "max": [
+              35.640902546420044,
+              2.428119389942779,
+              -23.756067073249948
+            ]
+          }
+        },
+        {
+          "id": "nx-town-longhouse-l",
+          "pos": [
+            8.815123251205957,
+            2.2,
+            25.42919303809839
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.55,
+            "range": 6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-longhouse-l",
+          "bounds": {
+            "min": [
+              8.685123255974329,
+              2.0700000047683718,
+              25.29919304286676
+            ],
+            "max": [
+              8.945123246437586,
+              2.3299999952316286,
+              25.55919303333002
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h5-l-left",
+          "pos": [
+            17.882730496207788,
+            0.6041628994790363,
+            -25.448773054903842
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.35,
+            "range": 4.6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h5-l-left",
+          "bounds": {
+            "min": [
+              17.75273050097616,
+              0.4741629042474079,
+              -25.57877305013547
+            ],
+            "max": [
+              18.012730491439417,
+              0.7341628947106648,
+              -25.318773059672214
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h5-l-right",
+          "pos": [
+            21.20613236778456,
+            0.6041628994790363,
+            -22.125371183327072
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.35,
+            "range": 4.6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h5-l-right",
+          "bounds": {
+            "min": [
+              21.07613237255293,
+              0.4741629042474079,
+              -22.2553711785587
+            ],
+            "max": [
+              21.336132363016187,
+              0.7341628947106648,
+              -21.995371188095444
+            ]
+          }
+        },
+        {
+          "id": "nx-town-market-l",
+          "pos": [
+            -6.217157287525381,
+            1.75,
+            6.217157287525381
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-market-l",
+          "bounds": {
+            "min": [
+              -6.347157282757009,
+              1.6200000047683716,
+              6.087157292293752
+            ],
+            "max": [
+              -6.087157292293752,
+              1.8799999952316284,
+              6.347157282757009
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h6-l",
+          "pos": [
+            38.3605428793702,
+            2.4223109170127004,
+            -38.3605428793702
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.45,
+            "range": 5.2,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h6-l",
+          "bounds": {
+            "min": [
+              38.23054288413857,
+              2.292310921781072,
+              -38.49054287460183
+            ],
+            "max": [
+              38.49054287460183,
+              2.552310912244329,
+              -38.23054288413857
+            ]
+          }
+        },
+        {
+          "id": "nx-town-potter-l",
+          "pos": [
+            24.360421448743175,
+            1.39598,
+            7.587823892241903
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.3,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-potter-l",
+          "bounds": {
+            "min": [
+              24.230421453511546,
+              1.2659800047683716,
+              7.457823897010274
+            ],
+            "max": [
+              24.490421443974803,
+              1.5259799952316284,
+              7.717823887473531
+            ]
+          }
+        },
+        {
+          "id": "nx-artwalk-h7-l",
+          "pos": [
+            30.476302269140195,
+            2.2827071031230703,
+            -41.79001076812495
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.45,
+            "range": 5.4,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-artwalk-h7-l",
+          "bounds": {
+            "min": [
+              30.346302273908567,
+              2.152707107891442,
+              -41.92001076335658
+            ],
+            "max": [
+              30.606302264371823,
+              2.4127070983546988,
+              -41.66001077289332
+            ]
+          }
+        },
+        {
+          "id": "nx-town-garden-cottage-l",
+          "pos": [
+            -25.757529051131492,
+            2.100949448840476,
+            18.823342594395804
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.45,
+            "range": 5.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-garden-cottage-l",
+          "bounds": {
+            "min": [
+              -25.88752904636312,
+              1.9709494536088474,
+              18.693342599164176
+            ],
+            "max": [
+              -25.627529055899863,
+              2.2309494440721043,
+              18.953342589627432
+            ]
+          }
+        },
+        {
+          "id": "nx-town-tower-house-l",
+          "pos": [
+            -8.876748834137304,
+            2.1,
+            25.619462025398928
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.45,
+            "range": 5.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-tower-house-l",
+          "bounds": {
+            "min": [
+              -9.006748829368933,
+              1.9700000047683717,
+              25.4894620301673
+            ],
+            "max": [
+              -8.746748838905676,
+              2.2299999952316285,
+              25.749462020630556
+            ]
+          }
+        },
+        {
+          "id": "nx-struct-beacon-l",
+          "pos": [
+            60.91095257485114,
+            7.350806587039094,
+            -66.76448518055265
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.5,
+            "range": 9,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-struct-beacon-l",
+          "bounds": {
+            "min": [
+              60.78095257961951,
+              7.220806591807466,
+              -66.89448517578428
+            ],
+            "max": [
+              61.040952570082766,
+              7.480806582270723,
+              -66.63448518532103
+            ]
+          }
+        },
+        {
+          "id": "nx-struct-observatory-l",
+          "pos": [
+            -39.811,
+            1.5215702652599432,
+            -87.356
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.1,
+            "range": 7,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-struct-observatory-l",
+          "bounds": {
+            "min": [
+              -39.94099999523163,
+              1.3915702700283148,
+              -87.48599999523162
+            ],
+            "max": [
+              -39.68100000476837,
+              1.6515702604915716,
+              -87.22600000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-row-cottage-l",
+          "pos": [
+            -22.67670540150866,
+            2.1,
+            -16.764456792527735
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.4,
+            "range": 5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-row-cottage-l",
+          "bounds": {
+            "min": [
+              -22.806705396740288,
+              1.9700000047683717,
+              -16.894456787759363
+            ],
+            "max": [
+              -22.54670540627703,
+              2.2299999952316285,
+              -16.634456797296107
+            ]
+          }
+        },
+        {
+          "id": "nx-town-bunkhouse-l",
+          "pos": [
+            -8.876748834137304,
+            2.1,
+            -25.619462025398928
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.5,
+            "range": 6,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-bunkhouse-l",
+          "bounds": {
+            "min": [
+              -9.006748829368933,
+              1.9700000047683717,
+              -25.749462020630556
+            ],
+            "max": [
+              -8.746748838905676,
+              2.2299999952316285,
+              -25.4894620301673
+            ]
+          }
+        },
+        {
+          "id": "nx-struct-northneedle-l",
+          "pos": [
+            47.959999999999994,
+            12.9,
+            -31.9
+          ],
+          "params": {
+            "color": 16763274,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-struct-northneedle-l",
+          "bounds": {
+            "min": [
+              47.830000004768365,
+              12.770000004768372,
+              -32.02999999523163
+            ],
+            "max": [
+              48.08999999523162,
+              13.029999995231629,
+              -31.77000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-stable-l",
+          "pos": [
+            43,
+            1.9,
+            1.8
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.4,
+            "range": 5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-stable-l",
+          "bounds": {
+            "min": [
+              42.87000000476837,
+              1.7700000047683715,
+              1.6700000047683716
+            ],
+            "max": [
+              43.12999999523163,
+              2.0299999952316283,
+              1.9299999952316285
+            ]
+          }
+        },
+        {
+          "id": "nx-town-dyehouse-l",
+          "pos": [
+            -23.625,
+            1.62,
+            -21.971
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-dyehouse-l",
+          "bounds": {
+            "min": [
+              -23.75499999523163,
+              1.4900000047683717,
+              -22.10099999523163
+            ],
+            "max": [
+              -23.49500000476837,
+              1.7499999952316285,
+              -21.84100000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-town-kiln-l",
+          "pos": [
+            18.70823868946895,
+            1.07935,
+            23.848662250734773
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.4,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-town-kiln-l",
+          "bounds": {
+            "min": [
+              18.57823869423732,
+              0.9493500047683716,
+              23.718662255503144
+            ],
+            "max": [
+              18.838238684700578,
+              1.2093499952316284,
+              23.9786622459664
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-nw-lamp-001-l",
+          "pos": [
+            -39.09,
+            1.96,
+            30.26
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-nw-lamp-001-l",
+          "bounds": {
+            "min": [
+              -39.21999999523163,
+              1.8300000047683715,
+              30.130000004768373
+            ],
+            "max": [
+              -38.960000004768375,
+              2.0899999952316284,
+              30.38999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-nw-lamp-002-l",
+          "pos": [
+            -47.96,
+            1.96,
+            46.71
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-nw-lamp-002-l",
+          "bounds": {
+            "min": [
+              -48.08999999523163,
+              1.8300000047683715,
+              46.58000000476837
+            ],
+            "max": [
+              -47.83000000476837,
+              2.0899999952316284,
+              46.83999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-ne-lamp-001-l",
+          "pos": [
+            39.71,
+            1.96,
+            27
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-ne-lamp-001-l",
+          "bounds": {
+            "min": [
+              39.58000000476837,
+              1.8300000047683715,
+              26.87000000476837
+            ],
+            "max": [
+              39.83999999523163,
+              2.0899999952316284,
+              27.12999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-ne-lamp-002-l",
+          "pos": [
+            32.89,
+            1.96,
+            50.15
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-ne-lamp-002-l",
+          "bounds": {
+            "min": [
+              32.76000000476837,
+              1.8300000047683715,
+              50.02000000476837
+            ],
+            "max": [
+              33.01999999523163,
+              2.0899999952316284,
+              50.27999999523163
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-sw-lamp-001-l",
+          "pos": [
+            -25.2,
+            1.96,
+            -30.67
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-sw-lamp-001-l",
+          "bounds": {
+            "min": [
+              -25.329999995231628,
+              1.8300000047683715,
+              -30.79999999523163
+            ],
+            "max": [
+              -25.07000000476837,
+              2.0899999952316284,
+              -30.540000004768373
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-sw-lamp-002-l",
+          "pos": [
+            -34.69,
+            1.96,
+            -43.14
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-sw-lamp-002-l",
+          "bounds": {
+            "min": [
+              -34.819999995231626,
+              1.8300000047683715,
+              -43.26999999523163
+            ],
+            "max": [
+              -34.56000000476837,
+              2.0899999952316284,
+              -43.01000000476837
+            ]
+          }
+        },
+        {
+          "id": "nx-mile-nw-007-l",
+          "pos": [
+            -47.680188962943845,
+            0.6782,
+            50.60761103705616
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-mile-nw-007-l",
+          "bounds": {
+            "min": [
+              -47.81018895817547,
+              0.5482000047683716,
+              50.47761104182453
+            ],
+            "max": [
+              -47.55018896771222,
+              0.8081999952316284,
+              50.73761103228779
+            ]
+          }
+        },
+        {
+          "id": "nx-mile-ne-009-l",
+          "pos": [
+            16.894079643411146,
+            0.6516000000000001,
+            68.42675037898914
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-mile-ne-009-l",
+          "bounds": {
+            "min": [
+              16.764079648179518,
+              0.5216000047683717,
+              68.29675038375751
+            ],
+            "max": [
+              17.024079638642775,
+              0.7815999952316285,
+              68.55675037422077
+            ]
+          }
+        },
+        {
+          "id": "nx-mile-sw-013-l",
+          "pos": [
+            -37.09109108949859,
+            0.608,
+            -52.19708671746459
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.2,
+            "range": 8,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-mile-sw-013-l",
+          "bounds": {
+            "min": [
+              -37.22109108473022,
+              0.47800000476837157,
+              -52.32708671269622
+            ],
+            "max": [
+              -36.96109109426696,
+              0.7379999952316284,
+              -52.067086722232965
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-e-l",
+          "pos": [
+            9.9,
+            1.96,
+            1.75
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-e-l",
+          "bounds": {
+            "min": [
+              9.770000004768372,
+              1.8300000047683715,
+              1.6200000047683716
+            ],
+            "max": [
+              10.029999995231629,
+              2.0899999952316284,
+              1.8799999952316284
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-s-l",
+          "pos": [
+            -1.75,
+            1.96,
+            -9.9
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-s-l",
+          "bounds": {
+            "min": [
+              -1.8799999952316284,
+              1.8300000047683715,
+              -10.029999995231629
+            ],
+            "max": [
+              -1.6200000047683716,
+              2.0899999952316284,
+              -9.770000004768372
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-n-l",
+          "pos": [
+            1.75,
+            1.96,
+            9.9
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-n-l",
+          "bounds": {
+            "min": [
+              1.6200000047683716,
+              1.8300000047683715,
+              9.770000004768372
+            ],
+            "max": [
+              1.8799999952316284,
+              2.0899999952316284,
+              10.029999995231629
+            ]
+          }
+        },
+        {
+          "id": "nx-approach-lamp-w-l",
+          "pos": [
+            -9.9,
+            1.96,
+            -1.75
+          ],
+          "params": {
+            "color": 16756838,
+            "intensity": 1.35,
+            "range": 4.5,
+            "keep": false,
+            "day": true
+          },
+          "rigKey": "placed:nx-approach-lamp-w-l",
+          "bounds": {
+            "min": [
+              -10.029999995231629,
+              1.8300000047683715,
+              -1.8799999952316284
+            ],
+            "max": [
+              -9.770000004768372,
+              2.0899999952316284,
+              -1.6200000047683716
+            ]
+          }
+        }
+      ],
+      "exposure": 1
+    }
+  ],
+  "exposureWrites": 0,
+  "lightWrites": 0,
+  "skyWrites": 0
+}

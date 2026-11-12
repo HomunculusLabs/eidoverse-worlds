@@ -1,0 +1,21 @@
+{
+  "status": "DOUBLE_BUILD_PASS",
+  "sourceSha256": "51895a6d3b0652c7c3b758c4d02249dc535d4dfc9c0a18f63aaa3c085548723c",
+  "kitSha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72",
+  "builds": [
+    {
+      "build": 1,
+      "sha256": "2b618274fa316c7846a1b8c0cf601b3465a5cbfd7227a5cdc0510568f87df59c",
+      "mtimeNs": 1788828875901184458,
+      "bytes": 529652,
+      "exitCode": 0
+    },
+    {
+      "build": 2,
+      "sha256": "2b618274fa316c7846a1b8c0cf601b3465a5cbfd7227a5cdc0510568f87df59c",
+      "mtimeNs": 1788828876355965041,
+      "bytes": 529652,
+      "exitCode": 0
+    }
+  ]
+}

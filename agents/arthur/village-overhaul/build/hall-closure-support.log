@@ -1,0 +1,2 @@
+{"status":"PASS","modelSha256":"dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a","evidence":"actual-default-scene-double-sided-triangle-rays","closedEndSamples":428,"porchRearClosureSamples":22,"thresholdSupportSamples":242,"failures":[],"limitations":["Dense sampled ray evidence, not a manifold/watertight certificate.","Porch front gable remains intentionally open; tested rear closure joins the existing aisle-roof slab.","Geometry support is supplemented by the actual-browser-collider route report."]}
+{"validatorErrors":0,"warnings":0}

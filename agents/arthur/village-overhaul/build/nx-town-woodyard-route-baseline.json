@@ -1,0 +1,175 @@
+{
+  "id": "nx-town-woodyard",
+  "lib": "store/01b78fdd00f090a7.glb",
+  "kind": "thing",
+  "pos": [
+    16,
+    0,
+    31
+  ],
+  "yaw": -2.669815142409043,
+  "scale": 1,
+  "parent": null,
+  "comp": {},
+  "bbox": {
+    "min": [
+      -2.1,
+      0,
+      -1.09
+    ],
+    "max": [
+      2.876,
+      2.526,
+      1.508
+    ],
+    "size": [
+      4.976,
+      2.526,
+      2.599
+    ],
+    "center": [
+      0.388,
+      1.263,
+      0.209
+    ]
+  },
+  "tris": 2360,
+  "terrainY": 0,
+  "sha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+  "assembly": [
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "lib": "store/aa5f2550365c1f7f.glb",
+      "pos": [
+        16.3635762733503,
+        0.75,
+        31.712609495766586
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b11-woodyard-heartwood-measure.glb",
+      "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e"
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "lib": "store/f46e12aeeea8af74.glb",
+      "pos": [
+        15.431912072890157,
+        2.05,
+        29.886547662864707
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-woodyard-001.glb",
+      "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7"
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "min": [
+        -1.2999999523162857,
+        0.7500000238418583,
+        -0.8350000001490117
+      ],
+      "max": [
+        1.2999999523162826,
+        1.8159512281417847,
+        -0.686587992310524
+      ]
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "min": [
+        -0.2619999945163728,
+        1.3299999713897703,
+        1.220000000670554
+      ],
+      "max": [
+        0.26199999451637257,
+        2.049989926815033,
+        1.5440058708190936
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "name": "left_of_fixed_hanging_sign",
+      "x": -1.07,
+      "z": [
+        0.72,
+        1.9
+      ],
+      "floorY": 0,
+      "width": 1.4,
+      "headroom": 2.2
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "yard_approach",
+      "pos": [
+        -1.07,
+        0,
+        2.25
+      ]
+    },
+    {
+      "name": "sign_left_entry",
+      "pos": [
+        -1.07,
+        0,
+        1.65
+      ]
+    },
+    {
+      "name": "fuel_selection_station",
+      "pos": [
+        -1.07,
+        0,
+        0.86
+      ]
+    },
+    {
+      "name": "joiners_bench_station",
+      "pos": [
+        0.7,
+        0,
+        0.86
+      ]
+    },
+    {
+      "name": "vise_station",
+      "pos": [
+        1.32,
+        0,
+        1.02
+      ]
+    },
+    {
+      "name": "outside_transfer",
+      "pos": [
+        1.32,
+        0,
+        1.95
+      ]
+    },
+    {
+      "name": "chopping_approach",
+      "pos": [
+        2.6,
+        0,
+        1.95
+      ]
+    },
+    {
+      "name": "axe_stump_station",
+      "pos": [
+        2.6,
+        0,
+        1.12
+      ]
+    }
+  ],
+  "purpose": "Open compact fuel/joinery workbay with actual grade-level work stations. The route reaches original fuel stock, the joiner bench, vise and unchanged axe/stump. This is not an interior room."
+}

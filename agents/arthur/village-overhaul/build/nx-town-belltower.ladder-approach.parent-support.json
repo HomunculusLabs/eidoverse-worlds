@@ -1,0 +1,482 @@
+{
+  "status": "FAIL",
+  "id": "nx-town-belltower",
+  "kind": "workstation",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "collider": {
+    "exact": true,
+    "pillar": false
+  },
+  "neighbors": [
+    "nx-hearth",
+    "nx-town-roads",
+    "nx-town-streetlamps",
+    "nx-dress-fountain",
+    "nx-artwalk-b5-belltower-rings",
+    "nx-artwalk-b22-mapboard-eight-ways",
+    "nx-core-paths",
+    "nx-artwalk-b26-wayband",
+    "nx-artwalk-b34-wayband-e",
+    "nx-town-mapboard",
+    "nx-approach-lamp-e",
+    "nx-approach-lamp-n"
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "front-approach",
+      "to": "ladder-grab-station",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0.24172382801771164,
+      "minY": 0,
+      "maxY": 0.30000001192092896,
+      "arrivalXZ": 2.220446049250313e-16,
+      "floorError": 1.1920928966180355e-8,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "ladder-grab-station",
+      "to": "front-approach",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 1.1920928966180355e-8,
+      "minY": 0.058276183903217316,
+      "maxY": 0.30000001192092896,
+      "arrivalXZ": 0,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    }
+  ],
+  "physicalSupport": {
+    "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+    "pass": false,
+    "samples": [
+      {
+        "name": "in:start",
+        "pos": [
+          -0.75,
+          0,
+          2.2
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:1",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.1617647058823533
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:2",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.1235294117647063
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:3",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.0852941176470594
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:4",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.0470588235294125
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:5",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.0088235294117656
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:6",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.9705882352941184
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:7",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.9323529411764713
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:8",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.8941176470588241
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:9",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.855882352941177
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:10",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.8176470588235298
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:11",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.7794117647058827
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:12",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.7411764705882355
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:13",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.7029411764705884
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:14",
+        "pos": [
+          -0.75,
+          0.30000001192092896,
+          1.6647058823529413
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:15",
+        "pos": [
+          -0.75,
+          0.30000001192092896,
+          1.6264705882352941
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:16",
+        "pos": [
+          -0.75,
+          0.30000001192092896,
+          1.588235294117647
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:front-approach:ladder-grab-station:17",
+        "pos": [
+          -0.75,
+          0.30000001192092896,
+          1.5499999999999998
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:start",
+        "pos": [
+          -0.75,
+          0.3,
+          1.55
+        ],
+        "ground": 0.30000001192092896,
+        "gap": -1.1920928966180355e-8,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:1",
+        "pos": [
+          -0.75,
+          0.30000001192092896,
+          1.5882352941176472
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:2",
+        "pos": [
+          -0.75,
+          0.30000001192092896,
+          1.6264705882352943
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:3",
+        "pos": [
+          -0.75,
+          0.30000001192092896,
+          1.6647058823529415
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:4",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.7029411764705886
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:5",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.7411764705882358
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:6",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.779411764705883
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:7",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.81764705882353
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:8",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.8558823529411772
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:9",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.8941176470588243
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:10",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.9323529411764715
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:11",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          1.9705882352941186
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:12",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.0088235294117656
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:13",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.0470588235294125
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:14",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.0852941176470594
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:15",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.1235294117647063
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:16",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.1617647058823533
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:ladder-grab-station:front-approach:17",
+        "pos": [
+          -0.75,
+          0.058276183903217316,
+          2.2
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      }
+    ]
+  },
+  "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+  "limitations": [
+    "Not an enterable-room certification.",
+    "Only supplied neighbors and declared flat terrain checked."
+  ],
+  "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+  "routeSha256": "0246c24b287511ace689303d1dde63c6ace3493fbbd1ee8d496bfea4bd858d67",
+  "adapterSha256": "abda1150a2bb52a5f0a1defd892fa1c36855fcb89e645f3a65785c68dcbfda79",
+  "proofFrame": "host-local"
+}

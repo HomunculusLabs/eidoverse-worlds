@@ -1,0 +1,14 @@
+{
+  "status": "ACCEPTED_HOST_PRESERVATION_AND_CONTEXT",
+  "id": "nx-town-stable",
+  "sourceSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "evidence": {
+    "file": "build/nx-town-stable-final-verification.json",
+    "sha256": "d8fbbbdd08a681bc9ae6c47162efebf276ca2a1ccc4a3111193131c428c08205"
+  },
+  "nativeReview": {
+    "file": "reviews/parent-native/final-stable-woodyard.md",
+    "sha256": "b09088fa0978b3f5098178ef60561c2fdc1543c6ac59b39f2f966529ccf101cf"
+  },
+  "scope": "New host geometry. Existing out-of-envelope B28/B29 artwork remains exactly unchanged, a separately held inherited placement defect. No universal all-world intersection certification. Fresh pipeline proves full neighbor body routes and independent triangle support before placement."
+}

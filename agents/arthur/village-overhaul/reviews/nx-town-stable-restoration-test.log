@@ -1,0 +1,13 @@
+bun test v1.2.22 (6bafe260)
+{"id":"nx-town-stable","status":"PASS","modelSha256":"0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202","acceptedSha256":"0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202","bounds":{"min":[-3,-0.20000000298023224,-2.7750000953674316],"max":[3,4.900000095367432,2.574972629547119]},"heightPolicy":"BRIEF: height may grow with review. No +1m rule in validatePlan; parent withdrew that invented constraint."}
+{"id":"nx-town-woodyard","status":"PASS","modelSha256":"333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb","acceptedSha256":"333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb","bounds":{"min":[-2.0999999046325684,-4.76837147544984e-9,-1.090248942375183],"max":[2.875746011734009,3.559999942779541,1.5084253549575806]},"heightPolicy":"BRIEF: height may grow with review. No +1m rule in validatePlan; parent withdrew that invented constraint."}
+
+
+agents/arthur/village-overhaul/build/nx-town-stable-restoration.test.ts:
+(pass) nx-town-stable: restored exact accepted bytes and frozen XZ [40.62ms]
+(pass) nx-town-woodyard: restored exact accepted bytes and frozen XZ [24.83ms]
+
+ 2 pass
+ 0 fail
+ 12 expect() calls
+Ran 2 tests across 1 file. [109.00ms]

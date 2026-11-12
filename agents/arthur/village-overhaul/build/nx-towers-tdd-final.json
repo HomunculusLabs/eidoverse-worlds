@@ -1,0 +1,10 @@
+{
+  "command": [
+    "bun",
+    "test",
+    "agents/arthur/village-overhaul/build/nx-towers-repair.test.ts"
+  ],
+  "exitCode": 0,
+  "stdout": "bun test v1.2.22 (6bafe260)\n",
+  "stderr": "\nagents/arthur/village-overhaul/build/nx-towers-repair.test.ts:\n(pass) belltower retains the repaired low crown without changing its XZ envelope [19.73ms]\n(pass) belltower exterior approaches honestly reject phantom support rather than declare bbox ground [731.18ms]\n(pass) belltower frozen exterior collar proves the host-only grounded-access HOLD [169.49ms]\n(pass) tower spawn contracts cannot retain a stale deployable model identity [16.03ms]\n(pass) belltower all four roof-post feet bear on upward-facing decoded deck triangles [10.28ms]\n(pass) rigid proof frame preserves scalar-yaw collider semantics for every actual neighbor [1826.39ms]\n(pass) scholar entry uses real supported exterior and remains a bidirectional full-neighbor room route [1927.38ms]\n(pass) scholar upper route independently consumes only its encoded proof frame, never filename knowledge [2023.11ms]\n\n 8 pass\n 0 fail\n 105 expect() calls\nRan 8 tests across 1 file. [6.92s]\n"
+}

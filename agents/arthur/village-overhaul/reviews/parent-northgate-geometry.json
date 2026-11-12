@@ -1,0 +1,16 @@
+{
+  "id": "nx-town-gate-n",
+  "status": "PASS",
+  "modelSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+  "evidence": [
+    {
+      "file": "build/nx-town-gate-n-player.json",
+      "sha256": "c0ba5700c908884329071512c797d25c9b65004d1a539130773a101aa3b022dc"
+    },
+    {
+      "file": "shrine-gates-notes.md",
+      "sha256": "152b4f1126709bdbf0cdf2d830e9c1a085a4f96285609a3979b8594f489e4df9"
+    }
+  ],
+  "basis": "Parent repeated deterministic gate rebuilds/public-runtime verification. True 1.4m x2.2m gate prisms and exposed upper panel checked; static threshold retained intentionally."
+}

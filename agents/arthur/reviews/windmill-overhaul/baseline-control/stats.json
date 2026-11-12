@@ -1,0 +1,5802 @@
+{
+  "status": "complete",
+  "startedAt": "2026-09-08T01:16:33.969Z",
+  "evidence": {
+    "kind": "LOCAL_EXACT_BYTE_RENDER_NOT_IN_WORLD",
+    "note": "Exact input bytes in a synthetic local rig; NOT in-world screenshots, a current census, placement proof, collision proof, or live component proof.",
+    "worldMutations": 0,
+    "liveReads": [],
+    "terrain": "synthetic plane at y=-0.21; original model transform preserved",
+    "lights": "synthetic day/night only; no fabricated live point lights; authored GLB emissive retained",
+    "interior": "fixed eye at [0,1.65,1.85], no cutaway, clipping, wall hiding, or added fill lights"
+  },
+  "comparison": {
+    "kind": "identical-byte-control",
+    "cameras": "fixed-host-local-origin; identical cameras, no recenter, resize, or bbox autofit"
+  },
+  "inputs": {
+    "before": {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/before/model.glb",
+      "sha256": "03cb6e8b0cfd867483a354d10931d335b1bde9e78f6c1d6d7583fdc9b858177b",
+      "byteLength": 67672,
+      "extensionsUsed": [
+        "EXT_texture_webp",
+        "KHR_draco_mesh_compression"
+      ],
+      "extensionsRequired": [
+        "EXT_texture_webp",
+        "KHR_draco_mesh_compression"
+      ],
+      "gltfNodes": 16,
+      "gltfMeshes": 15,
+      "gltfNodeNames": [
+        "wm3_0",
+        "wm3_1",
+        "wm3_2",
+        "wm3_3",
+        "wm3_4",
+        "wm3_5",
+        "wm3_6",
+        "wm3_7",
+        "wm3_8",
+        "wm3_9",
+        "wm3_10",
+        "sails",
+        "sails_0",
+        "sails_1",
+        "sails_2",
+        "lamp"
+      ],
+      "snapshot": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/input-before.glb",
+      "sourceUnchangedAtEnd": true
+    },
+    "candidate": {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/before/model.glb",
+      "sha256": "03cb6e8b0cfd867483a354d10931d335b1bde9e78f6c1d6d7583fdc9b858177b",
+      "byteLength": 67672,
+      "extensionsUsed": [
+        "EXT_texture_webp",
+        "KHR_draco_mesh_compression"
+      ],
+      "extensionsRequired": [
+        "EXT_texture_webp",
+        "KHR_draco_mesh_compression"
+      ],
+      "gltfNodes": 16,
+      "gltfMeshes": 15,
+      "gltfNodeNames": [
+        "wm3_0",
+        "wm3_1",
+        "wm3_2",
+        "wm3_3",
+        "wm3_4",
+        "wm3_5",
+        "wm3_6",
+        "wm3_7",
+        "wm3_8",
+        "wm3_9",
+        "wm3_10",
+        "sails",
+        "sails_0",
+        "sails_1",
+        "sails_2",
+        "lamp"
+      ],
+      "snapshot": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/input-candidate.glb",
+      "sourceUnchangedAtEnd": true
+    }
+  },
+  "rig": {
+    "width": 960,
+    "height": 720,
+    "labelHeight": 100,
+    "views": {
+      "front": {
+        "position": [
+          0,
+          5.8,
+          23
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      },
+      "right": {
+        "position": [
+          23,
+          5.8,
+          0
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      },
+      "left": {
+        "position": [
+          -23,
+          5.8,
+          0
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      },
+      "back": {
+        "position": [
+          0,
+          5.8,
+          -23
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      },
+      "gameplay": {
+        "position": [
+          0,
+          1.65,
+          18
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      },
+      "aerial": {
+        "position": [
+          15,
+          17,
+          16
+        ],
+        "target": [
+          0,
+          4.8,
+          0
+        ]
+      },
+      "top": {
+        "position": [
+          0,
+          25,
+          0.001
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ]
+      },
+      "night": {
+        "position": [
+          0,
+          1.65,
+          18
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      },
+      "interior": {
+        "position": [
+          0,
+          1.65,
+          1.85
+        ],
+        "target": [
+          0,
+          1.55,
+          -2.7
+        ]
+      },
+      "motion-a": {
+        "position": [
+          0,
+          5.8,
+          23
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      },
+      "motion-b": {
+        "position": [
+          0,
+          5.8,
+          23
+        ],
+        "target": [
+          0,
+          5.3,
+          0
+        ]
+      }
+    },
+    "scriptSha256": "019e1d3c02830fd6c3d10c33626acb6f65f85b6fef39001cc6d6638119c6ac8b"
+  },
+  "motion": {
+    "componentOrigin": "synthetic-review-contract-not-live-component-proof",
+    "key": "motion:sails",
+    "component": {
+      "type": "spin",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rpm": 1.25,
+      "phase": 0,
+      "t0": 1788827161000
+    },
+    "millstoneKey": "motion:well_millstone",
+    "millstoneComponent": {
+      "type": "spin",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rpm": 5,
+      "phase": 0,
+      "t0": 1788827161000
+    },
+    "note": "Supplied intended component payloads evaluated by the real engine at deterministic t0 and t0+6s. Missing baseline millstone is reported, never invented. Baked sail rest orientation is preserved.",
+    "phases": {
+      "a": {
+        "elapsedSeconds": 0,
+        "angleRadians": 0
+      },
+      "b": {
+        "elapsedSeconds": 6,
+        "angleRadians": 0.7853981633974483
+      }
+    },
+    "source": {
+      "mode": "actual-engine-tickMotion-with-local-harness",
+      "motion": {
+        "path": "client/lib/motion.js",
+        "sha256": "185da65ffd3aa4563c395f9d5166136b8abdf153ab686227a51af7c54eb7947b"
+      },
+      "motioneval": {
+        "path": "client/lib/motioneval.js",
+        "sha256": "8d08b13135b0df660a51a4aa7402bd655c28920708de2a4a1320732a0029ea08"
+      },
+      "findPart": {
+        "path": "client/lib/world.js",
+        "wholeFileSha256": "31d0677c8422c88b1662431742728bdb703e62d4f2db67c09ef57967fa39998b",
+        "extractedSha256": "8738e9b64f2f7f41f3c518fe20a8ac44c3775c544403323718b51ab7d4c453a4"
+      },
+      "harnessSha256": "dca64c93dbc74cf2996fcd27530caac6516707f514041ff613f2c4a835b0fee0",
+      "adaptations": [
+        "in-memory entity/component maps",
+        "deterministic serverNow",
+        "review camera",
+        "no-op collider reindex; no collision claim"
+      ]
+    }
+  },
+  "frames": {
+    "front": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            -0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            0.9997637888239163,
+            0,
+            0,
+            5.8,
+            23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.2720422432134259,
+            -0.6143458143885172,
+            0.9959034995532383
+          ],
+          "max": [
+            0.2720422432134259,
+            0.637763032687977,
+            0.9973758424240818
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/front.png",
+        "sha256": "e64075c0cf715dab6835ce7721f44879656fafe0d1e1aa0d22ebb4aaa29c89fb",
+        "pixelSha256": "280605d6a646a2ec35f7690a240ba33ada39b446bae28d365fb3e5498f80e63f"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            -0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            0.9997637888239163,
+            0,
+            0,
+            5.8,
+            23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.2720422432134259,
+            -0.6143458143885172,
+            0.9959034995532383
+          ],
+          "max": [
+            0.2720422432134259,
+            0.637763032687977,
+            0.9973758424240818
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/front.png",
+        "sha256": "b5f81965789f94e3f57350e029e8c40735c572f00e53a5e20039696fbfb5b33f",
+        "pixelSha256": "280605d6a646a2ec35f7690a240ba33ada39b446bae28d365fb3e5498f80e63f"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/front.png",
+        "sha256": "f83d97df04ca7a42181415c00bb231cb4463d36e73ca4725bf4816d3fbc72fea"
+      }
+    },
+    "right": {
+      "before": {
+        "camera": {
+          "position": [
+            23,
+            5.8,
+            0
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1.1102230246251565e-16,
+            0,
+            -0.9999999999999999,
+            0,
+            -0.021733995409215567,
+            0.9997637888239163,
+            0,
+            0,
+            0.999763788823916,
+            0.021733995409215567,
+            1.1102230246251565e-16,
+            0,
+            23,
+            5.8,
+            0,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.23215489230150524,
+            -0.6143458143885173,
+            0.9957161318008879
+          ],
+          "max": [
+            0.4250872549117739,
+            0.5900497362951689,
+            0.9970369028865734
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/right.png",
+        "sha256": "34a658916cf2b07a4a21e2158f4a4e44c2aecf755eee2b320c03ee8526eaad04",
+        "pixelSha256": "96410898504909f353a68a779ffbaa3392840014503414c63681cf4d336d3c27"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            23,
+            5.8,
+            0
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1.1102230246251565e-16,
+            0,
+            -0.9999999999999999,
+            0,
+            -0.021733995409215567,
+            0.9997637888239163,
+            0,
+            0,
+            0.999763788823916,
+            0.021733995409215567,
+            1.1102230246251565e-16,
+            0,
+            23,
+            5.8,
+            0,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.23215489230150524,
+            -0.6143458143885173,
+            0.9957161318008879
+          ],
+          "max": [
+            0.4250872549117739,
+            0.5900497362951689,
+            0.9970369028865734
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/right.png",
+        "sha256": "2d4a250071b45f0b3cae4d79177506696bfc9ad0215c25abe3709910bf6c7c48",
+        "pixelSha256": "96410898504909f353a68a779ffbaa3392840014503414c63681cf4d336d3c27"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/right.png",
+        "sha256": "3fc0ab7515ed6b05d38e3e304ed2532e9512e3cac421971c54f1f7f5fed547b6"
+      }
+    },
+    "left": {
+      "before": {
+        "camera": {
+          "position": [
+            -23,
+            5.8,
+            0
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1.1102230246251565e-16,
+            0,
+            0.9999999999999999,
+            0,
+            0.021733995409215567,
+            0.9997637888239163,
+            0,
+            0,
+            -0.999763788823916,
+            0.021733995409215567,
+            1.1102230246251565e-16,
+            0,
+            -23,
+            5.8,
+            0,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.4250931156774776,
+            -0.6143458143885173,
+            0.9957161318008879
+          ],
+          "max": [
+            0.23215489230150524,
+            0.5900497419459383,
+            0.9970369028865734
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/left.png",
+        "sha256": "2d4c837092b51848d4efb84b59df9480ca7342c72ff8a8a384fd67b23f186628",
+        "pixelSha256": "c1b113204a9ce479859377cc92947365e66d6e64618ed5b6c552c0ff858e41c6"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            -23,
+            5.8,
+            0
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1.1102230246251565e-16,
+            0,
+            0.9999999999999999,
+            0,
+            0.021733995409215567,
+            0.9997637888239163,
+            0,
+            0,
+            -0.999763788823916,
+            0.021733995409215567,
+            1.1102230246251565e-16,
+            0,
+            -23,
+            5.8,
+            0,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.4250931156774776,
+            -0.6143458143885173,
+            0.9957161318008879
+          ],
+          "max": [
+            0.23215489230150524,
+            0.5900497419459383,
+            0.9970369028865734
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/left.png",
+        "sha256": "8de96d0d36e5ffd7db56f57c9d89d783db1f6daeb6af04d7efb9fe93b4ceab47",
+        "pixelSha256": "c1b113204a9ce479859377cc92947365e66d6e64618ed5b6c552c0ff858e41c6"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/left.png",
+        "sha256": "592a6c790c44cca1c8638cabac1787ba1dd51878800b6b2e453a4d6c3911c10f"
+      }
+    },
+    "back": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            -23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            -0.9997637888239164,
+            0,
+            0,
+            5.8,
+            -23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.23215489230150457,
+            -0.6902388447880426,
+            0.9950491210154783
+          ],
+          "max": [
+            0.23215489230150457,
+            0.5494881297025956,
+            0.9969777663812212
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/back.png",
+        "sha256": "5180d93b01f1fab14d1e9d1fb63f09fae34ba4891255a891b84f8cfb8a881fee",
+        "pixelSha256": "24ec117fd846a5a674a00141c3e5b452ed191e54148eff0c1e28e7b09c2a5737"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            -23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            -0.9997637888239164,
+            0,
+            0,
+            5.8,
+            -23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.23215489230150457,
+            -0.6902388447880426,
+            0.9950491210154783
+          ],
+          "max": [
+            0.23215489230150457,
+            0.5494881297025956,
+            0.9969777663812212
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/back.png",
+        "sha256": "a956880f5abd20d14fd20ef81edc0027fdc61cc3dbf5718dfb9c4c1009a393a6",
+        "pixelSha256": "24ec117fd846a5a674a00141c3e5b452ed191e54148eff0c1e28e7b09c2a5737"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/back.png",
+        "sha256": "8912c66c159ae6ab7b103a6ff845bfee11f9942855af94b9e85e34f669e7231d"
+      }
+    },
+    "gameplay": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            1.65,
+            18
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9800536488186603,
+            0.1987331010104506,
+            0,
+            0,
+            -0.1987331010104506,
+            0.9800536488186603,
+            0,
+            0,
+            1.65,
+            18,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.33657235010301,
+            -0.7472550601574691,
+            0.9939481010072857
+          ],
+          "max": [
+            0.33657235010301,
+            0.7939061127414405,
+            0.9964999757594725
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/gameplay.png",
+        "sha256": "614102ad7cbb67b999706074c689e48a9452d06d7ae3345baab098643896b2f2",
+        "pixelSha256": "f4e847df7e84d37a03236faf0dfc69a56b52cc298f594ee96741b626796d55af"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            1.65,
+            18
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9800536488186603,
+            0.1987331010104506,
+            0,
+            0,
+            -0.1987331010104506,
+            0.9800536488186603,
+            0,
+            0,
+            1.65,
+            18,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.33657235010301,
+            -0.7472550601574691,
+            0.9939481010072857
+          ],
+          "max": [
+            0.33657235010301,
+            0.7939061127414405,
+            0.9964999757594725
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/gameplay.png",
+        "sha256": "1f62568dee234418fd408f137bfc162d94c9fdfd18af411d7873ceff3be3127d",
+        "pixelSha256": "f4e847df7e84d37a03236faf0dfc69a56b52cc298f594ee96741b626796d55af"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/gameplay.png",
+        "sha256": "747a9ef49f08f1d08416b5a949a2d81cd51c01a4f3eb488d82125a53d6af8839"
+      }
+    },
+    "aerial": {
+      "before": {
+        "camera": {
+          "position": [
+            15,
+            17,
+            16
+          ],
+          "target": [
+            0,
+            4.8,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            0.7295372041400853,
+            5.551115123125783e-17,
+            -0.6839411288813297,
+            0,
+            -0.33247839725799283,
+            0.8738913064540688,
+            -0.35464362374185915,
+            0,
+            0.5976902066557759,
+            0.4861213680800311,
+            0.6375362204328278,
+            0,
+            15,
+            17,
+            16,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.26081352017481496,
+            -0.5872884918003076,
+            0.9959121673366234
+          ],
+          "max": [
+            0.24292485041394346,
+            0.5455256446551587,
+            0.9976704653457159
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/aerial.png",
+        "sha256": "0444327af39113be4c3033ea9337a93a61aa70a087f3c98689bde42727b802c3",
+        "pixelSha256": "6a3f1162f20b81ad531bbe09accf7af4eb2eee74c58451eec2b7978a1cb85f21"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            15,
+            17,
+            16
+          ],
+          "target": [
+            0,
+            4.8,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            0.7295372041400853,
+            5.551115123125783e-17,
+            -0.6839411288813297,
+            0,
+            -0.33247839725799283,
+            0.8738913064540688,
+            -0.35464362374185915,
+            0,
+            0.5976902066557759,
+            0.4861213680800311,
+            0.6375362204328278,
+            0,
+            15,
+            17,
+            16,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.26081352017481496,
+            -0.5872884918003076,
+            0.9959121673366234
+          ],
+          "max": [
+            0.24292485041394346,
+            0.5455256446551587,
+            0.9976704653457159
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/aerial.png",
+        "sha256": "1e39cb8ce88c632221d9a0f44a8c9600101d1005ba9d84515eac2e3006da011f",
+        "pixelSha256": "6a3f1162f20b81ad531bbe09accf7af4eb2eee74c58451eec2b7978a1cb85f21"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/aerial.png",
+        "sha256": "bcf68d8b11f03adf6be0efb36ef437db9320f7cd7113ab178ba1b0fc4282c98a"
+      }
+    },
+    "top": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            25,
+            0.001
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.00003999999996862069,
+            -0.9999999991999998,
+            0,
+            0,
+            0.9999999991999998,
+            0.00003999999996862069,
+            0,
+            0,
+            25,
+            0.001,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.3358212217271635,
+            -0.3106133542841562,
+            0.993531327557381
+          ],
+          "max": [
+            0.3358212217271635,
+            0.5401854903576732,
+            0.9968637902512164
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/top.png",
+        "sha256": "5db360c6d6e7b64e26bb544e2e39fa5527da7e9e3f684b5c6c7503ff9ee35f9f",
+        "pixelSha256": "fe575c1ca3e1aa9ab1208d9a75884dff81e4427541c3e91bd92aaee659dd454e"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            25,
+            0.001
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.00003999999996862069,
+            -0.9999999991999998,
+            0,
+            0,
+            0.9999999991999998,
+            0.00003999999996862069,
+            0,
+            0,
+            25,
+            0.001,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.3358212217271635,
+            -0.3106133542841562,
+            0.993531327557381
+          ],
+          "max": [
+            0.3358212217271635,
+            0.5401854903576732,
+            0.9968637902512164
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/top.png",
+        "sha256": "5089da979c5f8eb1f1cd9234e27257c811649efac1902af615f14ad95da61923",
+        "pixelSha256": "fe575c1ca3e1aa9ab1208d9a75884dff81e4427541c3e91bd92aaee659dd454e"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/top.png",
+        "sha256": "2f8f8bc8195438e6bd2c7d091f5bdd40fdb59356c41c3ae828bbee64feb36d9a"
+      }
+    },
+    "night": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            1.65,
+            18
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9800536488186603,
+            0.1987331010104506,
+            0,
+            0,
+            -0.1987331010104506,
+            0.9800536488186603,
+            0,
+            0,
+            1.65,
+            18,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-night",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.33657235010301,
+            -0.7472550601574691,
+            0.9939481010072857
+          ],
+          "max": [
+            0.33657235010301,
+            0.7939061127414405,
+            0.9964999757594725
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/night.png",
+        "sha256": "5699a0f28521456a09e9699ef4cbd193f03f0ec52f47ce2017941db3c6495e5f",
+        "pixelSha256": "207f8035765fdd7485720976a9a77fe09644c88d1d1f4de16e2a3ce76cde64dc"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            1.65,
+            18
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9800536488186603,
+            0.1987331010104506,
+            0,
+            0,
+            -0.1987331010104506,
+            0.9800536488186603,
+            0,
+            0,
+            1.65,
+            18,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-night",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.33657235010301,
+            -0.7472550601574691,
+            0.9939481010072857
+          ],
+          "max": [
+            0.33657235010301,
+            0.7939061127414405,
+            0.9964999757594725
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/night.png",
+        "sha256": "b1228eb098ba5017ef3ed4d5c64fc183fc32f4b40627718ef4e931a029131635",
+        "pixelSha256": "207f8035765fdd7485720976a9a77fe09644c88d1d1f4de16e2a3ce76cde64dc"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/night.png",
+        "sha256": "c3bbf87837024ecdba1bb617cb4aa2c7412f9a6e1a8e0464ffe222c40660f50b"
+      }
+    },
+    "interior": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            1.65,
+            1.85
+          ],
+          "target": [
+            0,
+            1.55,
+            -2.7
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.999758570735255,
+            -0.021972715840335236,
+            0,
+            0,
+            0.021972715840335236,
+            0.999758570735255,
+            0,
+            0,
+            1.65,
+            1.85,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -2860.9622194372982,
+            -3290.946820890383,
+            -84.81183676500584
+          ],
+          "max": [
+            614.7438361687241,
+            422.40499793574367,
+            44.549959343070775
+          ],
+          "vertices": 3233,
+          "outsideVertices": 2979,
+          "allVerticesInside": false,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": true
+        },
+        "drawCalls": 7,
+        "trianglesDrawn": 1130,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/interior.png",
+        "sha256": "57af1aaba788a7dfa21ae652942290d89483a50ceb336560fa6630a0c531de31",
+        "pixelSha256": "a18241f4e733d22ee9234a022212dc1248e612f9af7cbb50ca88780f31bcc8f9"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            1.65,
+            1.85
+          ],
+          "target": [
+            0,
+            1.55,
+            -2.7
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.999758570735255,
+            -0.021972715840335236,
+            0,
+            0,
+            0.021972715840335236,
+            0.999758570735255,
+            0,
+            0,
+            1.65,
+            1.85,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -2860.9622194372982,
+            -3290.946820890383,
+            -84.81183676500584
+          ],
+          "max": [
+            614.7438361687241,
+            422.40499793574367,
+            44.549959343070775
+          ],
+          "vertices": 3233,
+          "outsideVertices": 2979,
+          "allVerticesInside": false,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": true
+        },
+        "drawCalls": 7,
+        "trianglesDrawn": 1130,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/interior.png",
+        "sha256": "bcf6e6376a60bb3e48da92815faeee34cee51a2c58bba18311fd08fcd4e69b4a",
+        "pixelSha256": "a18241f4e733d22ee9234a022212dc1248e612f9af7cbb50ca88780f31bcc8f9"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/interior.png",
+        "sha256": "91a2ae447864efa8c6f661cd1b17fedd8b9292800ddf6681c8837382532607d0"
+      }
+    },
+    "motion-a": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            -0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            0.9997637888239163,
+            0,
+            0,
+            5.8,
+            23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.2720422432134259,
+            -0.6143458143885172,
+            0.9959034995532383
+          ],
+          "max": [
+            0.2720422432134259,
+            0.637763032687977,
+            0.9973758424240818
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/motion-a.png",
+        "sha256": "236d6a60ca11c9164a3fc35e9fbc649a81302ceadca76dd5b3a91f334747266b",
+        "pixelSha256": "280605d6a646a2ec35f7690a240ba33ada39b446bae28d365fb3e5498f80e63f"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            -0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            0.9997637888239163,
+            0,
+            0,
+            5.8,
+            23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 0,
+          "nowMs": 1788827161000,
+          "angleRadians": 0,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -3.4000000953674316,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              3.4000000953674316,
+              11.300000095367432,
+              2.8250396251678467
+            ],
+            "size": [
+              6.800000190734863,
+              11.500000098347664,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.2720422432134259,
+            -0.6143458143885172,
+            0.9959034995532383
+          ],
+          "max": [
+            0.2720422432134259,
+            0.637763032687977,
+            0.9973758424240818
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/motion-a.png",
+        "sha256": "757a7acb3fb387cf4020a0099513649169eecc227eb85775324736f78f2d75bb",
+        "pixelSha256": "280605d6a646a2ec35f7690a240ba33ada39b446bae28d365fb3e5498f80e63f"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/motion-a.png",
+        "sha256": "70ba699b3bb32645cbab791c85112da064cea33aa4d5dfd7876c03888439043a"
+      }
+    },
+    "motion-b": {
+      "before": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            -0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            0.9997637888239163,
+            0,
+            0,
+            5.8,
+            23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 6,
+          "nowMs": 1788827167000,
+          "angleRadians": 0.7853981633974483,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0.3826834323650898,
+              0.9238795325112867
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              0.7071067811865475,
+              0.7071067811865476,
+              0,
+              0,
+              -0.7071067811865476,
+              0.7071067811865475,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -2.799999952316284,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              2.799999952316284,
+              10.572857374921082,
+              2.8250396251678467
+            ],
+            "size": [
+              5.599999904632568,
+              10.772857377901314,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.23215489230150457,
+            -0.6143458143885172,
+            0.9959034995532383
+          ],
+          "max": [
+            0.23215489230150457,
+            0.5591533218329906,
+            0.9973758424240818
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/before/motion-b.png",
+        "sha256": "78f16bbe9d137645fb849cd49bf7e4e5fbf76939f66d59cdb6c0741c78664b51",
+        "pixelSha256": "e60b953042a5a275c3436c70a5d2ade3076a7e8582988b2e02dc521c8a232ec7"
+      },
+      "candidate": {
+        "camera": {
+          "position": [
+            0,
+            5.8,
+            23
+          ],
+          "target": [
+            0,
+            5.3,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "near": 0.05,
+          "far": 120,
+          "aspect": 1.3333333333333333,
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.9997637888239163,
+            -0.02173399540921557,
+            0,
+            0,
+            0.02173399540921557,
+            0.9997637888239163,
+            0,
+            0,
+            5.8,
+            23,
+            1
+          ],
+          "projectionMatrix": [
+            1.6845275804281619,
+            0,
+            0,
+            0,
+            0,
+            2.2460367739042155,
+            0,
+            0,
+            0,
+            0,
+            -1.0008336807002918,
+            -1,
+            0,
+            0,
+            -0.10004168403501458,
+            0
+          ]
+        },
+        "lighting": "synthetic-day",
+        "motion": {
+          "elapsedSeconds": 6,
+          "nowMs": 1788827167000,
+          "angleRadians": 0.7853981633974483,
+          "sails": {
+            "position": [
+              0,
+              7.9,
+              1.85
+            ],
+            "quaternion": [
+              0,
+              0,
+              0.3826834323650898,
+              0.9238795325112867
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "matrixWorld": [
+              0.7071067811865475,
+              0.7071067811865476,
+              0,
+              0,
+              -0.7071067811865476,
+              0.7071067811865475,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              7.9,
+              1.85,
+              1
+            ]
+          },
+          "pivot": [
+            0,
+            7.9,
+            1.85
+          ],
+          "millstone": null,
+          "bounds": {
+            "min": [
+              -2.799999952316284,
+              -0.20000000298023224,
+              -5.820000171661377
+            ],
+            "max": [
+              2.799999952316284,
+              10.572857374921082,
+              2.8250396251678467
+            ],
+            "size": [
+              5.599999904632568,
+              10.772857377901314,
+              8.645039796829224
+            ]
+          }
+        },
+        "framing": {
+          "min": [
+            -0.23215489230150457,
+            -0.6143458143885172,
+            0.9959034995532383
+          ],
+          "max": [
+            0.23215489230150457,
+            0.5591533218329906,
+            0.9973758424240818
+          ],
+          "vertices": 3233,
+          "outsideVertices": 0,
+          "allVerticesInside": true,
+          "claim": "decoded-mesh-vertex-frustum-check-not-occlusion-or-walkability-proof",
+          "interiorExempt": false
+        },
+        "drawCalls": 16,
+        "trianglesDrawn": 2050,
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/candidate/motion-b.png",
+        "sha256": "378b0ba7fc70352ce427532c7bce0c3019842704c9a6ae998d278cbeb556f7eb",
+        "pixelSha256": "e60b953042a5a275c3436c70a5d2ade3076a7e8582988b2e02dc521c8a232ec7"
+      },
+      "pair": {
+        "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/motion-b.png",
+        "sha256": "0e5a56142d22a2eb46719ff6caf93a43eae0c60aa00a321ce61999ce9dfa87a3"
+      }
+    }
+  },
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x134004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "requests": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/three/build/three.module.js",
+      "status": 200
+    },
+    {
+      "path": "/three/build/three.core.js",
+      "status": 200
+    },
+    {
+      "path": "/three/examples/jsm/loaders/GLTFLoader.js",
+      "status": 200
+    },
+    {
+      "path": "/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "status": 200
+    },
+    {
+      "path": "/three/examples/jsm/utils/SkeletonUtils.js",
+      "status": 200
+    },
+    {
+      "path": "/three/examples/jsm/loaders/DRACOLoader.js",
+      "status": 200
+    },
+    {
+      "path": "/harness.js",
+      "status": 200
+    },
+    {
+      "path": "/engine/motion.js",
+      "status": 200
+    },
+    {
+      "path": "/engine/core.js",
+      "status": 200
+    },
+    {
+      "path": "/engine/world.js",
+      "status": 200
+    },
+    {
+      "path": "/engine/colliders.js",
+      "status": 200
+    },
+    {
+      "path": "/engine/remotes.js",
+      "status": 200
+    },
+    {
+      "path": "/engine/motioneval.js",
+      "status": 200
+    },
+    {
+      "path": "/three/examples/jsm/libs/draco/gltf/draco_wasm_wrapper.js",
+      "status": 200
+    },
+    {
+      "path": "/three/examples/jsm/libs/draco/gltf/draco_decoder.wasm",
+      "status": 200
+    },
+    {
+      "path": "/input-before.glb",
+      "status": 200
+    },
+    {
+      "path": "/input-candidate.glb",
+      "status": 200
+    }
+  ],
+  "dependencies": {
+    "three": "0.184.0",
+    "dracoWasmSha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
+    "chromium": "141.0.7390.37",
+    "served": [
+      {
+        "path": "/three/build/three.module.js",
+        "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+      },
+      {
+        "path": "/three/build/three.core.js",
+        "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+      },
+      {
+        "path": "/three/examples/jsm/loaders/GLTFLoader.js",
+        "sha256": "97642d720f16cc9a0c9844934198e4d0c023bea8e89576d0f7545d03b2d103d2"
+      },
+      {
+        "path": "/three/examples/jsm/utils/BufferGeometryUtils.js",
+        "sha256": "d700b4c4584b9ff53a04692624d2363019f6d1df2978a207389168c6ae647a65"
+      },
+      {
+        "path": "/three/examples/jsm/utils/SkeletonUtils.js",
+        "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+      },
+      {
+        "path": "/three/examples/jsm/loaders/DRACOLoader.js",
+        "sha256": "18ed04342c7bc7d282157b566f22992329623ab3230030c913d0353d0880b216"
+      },
+      {
+        "path": "/three/examples/jsm/libs/draco/gltf/draco_wasm_wrapper.js",
+        "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6"
+      },
+      {
+        "path": "/three/examples/jsm/libs/draco/gltf/draco_decoder.wasm",
+        "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac"
+      }
+    ]
+  },
+  "server": {
+    "address": "127.0.0.1",
+    "port": 64045,
+    "exposure": "loopback-only",
+    "methods": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "render": {
+    "models": {
+      "before": {
+        "browserInputSha256": "03cb6e8b0cfd867483a354d10931d335b1bde9e78f6c1d6d7583fdc9b858177b",
+        "bounds": {
+          "min": [
+            -3.4000000953674316,
+            -0.20000000298023224,
+            -5.820000171661377
+          ],
+          "max": [
+            3.4000000953674316,
+            11.300000095367432,
+            2.8250396251678467
+          ],
+          "size": [
+            6.800000190734863,
+            11.500000098347664,
+            8.645039796829224
+          ]
+        },
+        "rootTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "nodes": 17,
+        "nodeDetails": [
+          {
+            "name": null,
+            "type": "Group",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_0",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_1",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_2",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_3",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_4",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_5",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_6",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_7",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_8",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_9",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_10",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails",
+            "type": "Object3D",
+            "transform": {
+              "position": [
+                0,
+                7.9,
+                1.85
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails_0",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails_1",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails_2",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "lamp",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0.85,
+                1.7,
+                2.56
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0.85,
+                1.7,
+                2.56,
+                1
+              ]
+            }
+          }
+        ],
+        "namedNodes": [
+          "wm3_0",
+          "wm3_1",
+          "wm3_2",
+          "wm3_3",
+          "wm3_4",
+          "wm3_5",
+          "wm3_6",
+          "wm3_7",
+          "wm3_8",
+          "wm3_9",
+          "wm3_10",
+          "sails",
+          "sails_0",
+          "sails_1",
+          "sails_2",
+          "lamp"
+        ],
+        "drawMeshes": 15,
+        "triangles": 2048,
+        "materials": [
+          {
+            "name": null,
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 1,
+            "metalness": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": false,
+            "normalMap": false
+          },
+          {
+            "name": "timber",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.9,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "stone",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.95,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "glow2",
+            "type": "MeshStandardMaterial",
+            "color": "ffd9a0",
+            "roughness": 0.4,
+            "metalness": 0,
+            "emissive": "ecdc6f",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": false,
+            "normalMap": false
+          },
+          {
+            "name": "wm_cloth",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.85,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "wm_brass",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.85,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "glow5",
+            "type": "MeshStandardMaterial",
+            "color": "ffc98a",
+            "roughness": 0.4,
+            "metalness": 0,
+            "emissive": "f3c083",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": false,
+            "normalMap": false
+          }
+        ],
+        "sailsRest": {
+          "position": [
+            0,
+            7.9,
+            1.85
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            7.9,
+            1.85,
+            1
+          ]
+        },
+        "ensembleMembers": []
+      },
+      "candidate": {
+        "browserInputSha256": "03cb6e8b0cfd867483a354d10931d335b1bde9e78f6c1d6d7583fdc9b858177b",
+        "bounds": {
+          "min": [
+            -3.4000000953674316,
+            -0.20000000298023224,
+            -5.820000171661377
+          ],
+          "max": [
+            3.4000000953674316,
+            11.300000095367432,
+            2.8250396251678467
+          ],
+          "size": [
+            6.800000190734863,
+            11.500000098347664,
+            8.645039796829224
+          ]
+        },
+        "rootTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "nodes": 17,
+        "nodeDetails": [
+          {
+            "name": null,
+            "type": "Group",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_0",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_1",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_2",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_3",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_4",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_5",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_6",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_7",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_8",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_9",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "wm3_10",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails",
+            "type": "Object3D",
+            "transform": {
+              "position": [
+                0,
+                7.9,
+                1.85
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails_0",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails_1",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "sails_2",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            }
+          },
+          {
+            "name": "lamp",
+            "type": "Mesh",
+            "transform": {
+              "position": [
+                0.85,
+                1.7,
+                2.56
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0.85,
+                1.7,
+                2.56,
+                1
+              ]
+            }
+          }
+        ],
+        "namedNodes": [
+          "wm3_0",
+          "wm3_1",
+          "wm3_2",
+          "wm3_3",
+          "wm3_4",
+          "wm3_5",
+          "wm3_6",
+          "wm3_7",
+          "wm3_8",
+          "wm3_9",
+          "wm3_10",
+          "sails",
+          "sails_0",
+          "sails_1",
+          "sails_2",
+          "lamp"
+        ],
+        "drawMeshes": 15,
+        "triangles": 2048,
+        "materials": [
+          {
+            "name": null,
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 1,
+            "metalness": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": false,
+            "normalMap": false
+          },
+          {
+            "name": "timber",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.9,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "stone",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.95,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "glow2",
+            "type": "MeshStandardMaterial",
+            "color": "ffd9a0",
+            "roughness": 0.4,
+            "metalness": 0,
+            "emissive": "ecdc6f",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": false,
+            "normalMap": false
+          },
+          {
+            "name": "wm_cloth",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.85,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "wm_brass",
+            "type": "MeshStandardMaterial",
+            "color": "ffffff",
+            "roughness": 0.85,
+            "metalness": 0,
+            "emissive": "000000",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": true,
+            "normalMap": false
+          },
+          {
+            "name": "glow5",
+            "type": "MeshStandardMaterial",
+            "color": "ffc98a",
+            "roughness": 0.4,
+            "metalness": 0,
+            "emissive": "f3c083",
+            "emissiveIntensity": 1,
+            "opacity": 1,
+            "transparent": false,
+            "doubleSided": false,
+            "texture": false,
+            "normalMap": false
+          }
+        ],
+        "sailsRest": {
+          "position": [
+            0,
+            7.9,
+            1.85
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "matrixWorld": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            7.9,
+            1.85,
+            1
+          ]
+        },
+        "ensembleMembers": []
+      }
+    },
+    "motionChecks": {
+      "before": {
+        "rotationChanged": true,
+        "pivotFixed": true,
+        "staticMeshesUnchanged": true,
+        "ensembleUnchanged": true,
+        "staticMeshCount": 12,
+        "phases": {
+          "motion-a": {
+            "elapsedSeconds": 0,
+            "nowMs": 1788827161000,
+            "angleRadians": 0,
+            "sails": {
+              "position": [
+                0,
+                7.9,
+                1.85
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            },
+            "pivot": [
+              0,
+              7.9,
+              1.85
+            ],
+            "millstone": null,
+            "bounds": {
+              "min": [
+                -3.4000000953674316,
+                -0.20000000298023224,
+                -5.820000171661377
+              ],
+              "max": [
+                3.4000000953674316,
+                11.300000095367432,
+                2.8250396251678467
+              ],
+              "size": [
+                6.800000190734863,
+                11.500000098347664,
+                8.645039796829224
+              ]
+            }
+          },
+          "motion-b": {
+            "elapsedSeconds": 6,
+            "nowMs": 1788827167000,
+            "angleRadians": 0.7853981633974483,
+            "sails": {
+              "position": [
+                0,
+                7.9,
+                1.85
+              ],
+              "quaternion": [
+                0,
+                0,
+                0.3826834323650898,
+                0.9238795325112867
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                0.7071067811865475,
+                0.7071067811865476,
+                0,
+                0,
+                -0.7071067811865476,
+                0.7071067811865475,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            },
+            "pivot": [
+              0,
+              7.9,
+              1.85
+            ],
+            "millstone": null,
+            "bounds": {
+              "min": [
+                -2.799999952316284,
+                -0.20000000298023224,
+                -5.820000171661377
+              ],
+              "max": [
+                2.799999952316284,
+                10.572857374921082,
+                2.8250396251678467
+              ],
+              "size": [
+                5.599999904632568,
+                10.772857377901314,
+                8.645039796829224
+              ]
+            }
+          }
+        },
+        "millstone": {
+          "absent": true
+        }
+      },
+      "candidate": {
+        "rotationChanged": true,
+        "pivotFixed": true,
+        "staticMeshesUnchanged": true,
+        "ensembleUnchanged": true,
+        "staticMeshCount": 12,
+        "phases": {
+          "motion-a": {
+            "elapsedSeconds": 0,
+            "nowMs": 1788827161000,
+            "angleRadians": 0,
+            "sails": {
+              "position": [
+                0,
+                7.9,
+                1.85
+              ],
+              "quaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            },
+            "pivot": [
+              0,
+              7.9,
+              1.85
+            ],
+            "millstone": null,
+            "bounds": {
+              "min": [
+                -3.4000000953674316,
+                -0.20000000298023224,
+                -5.820000171661377
+              ],
+              "max": [
+                3.4000000953674316,
+                11.300000095367432,
+                2.8250396251678467
+              ],
+              "size": [
+                6.800000190734863,
+                11.500000098347664,
+                8.645039796829224
+              ]
+            }
+          },
+          "motion-b": {
+            "elapsedSeconds": 6,
+            "nowMs": 1788827167000,
+            "angleRadians": 0.7853981633974483,
+            "sails": {
+              "position": [
+                0,
+                7.9,
+                1.85
+              ],
+              "quaternion": [
+                0,
+                0,
+                0.3826834323650898,
+                0.9238795325112867
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "matrixWorld": [
+                0.7071067811865475,
+                0.7071067811865476,
+                0,
+                0,
+                -0.7071067811865476,
+                0.7071067811865475,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                7.9,
+                1.85,
+                1
+              ]
+            },
+            "pivot": [
+              0,
+              7.9,
+              1.85
+            ],
+            "millstone": null,
+            "bounds": {
+              "min": [
+                -2.799999952316284,
+                -0.20000000298023224,
+                -5.820000171661377
+              ],
+              "max": [
+                2.799999952316284,
+                10.572857374921082,
+                2.8250396251678467
+              ],
+              "size": [
+                5.599999904632568,
+                10.772857377901314,
+                8.645039796829224
+              ]
+            }
+          }
+        },
+        "millstone": {
+          "absent": true
+        }
+      }
+    },
+    "renderer": {
+      "threeRevision": "184",
+      "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "toneMapping": "ACESFilmicToneMapping",
+      "exposure": 1,
+      "pixelRatio": 1,
+      "shadowMap": "PCFShadowMap",
+      "opaqueSort": "stable-source-traversal"
+    }
+  },
+  "contactSheet": {
+    "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/baseline-control/contact-sheet.png",
+    "sha256": "9ae1493bedb010618f7a82ac565aa555dacc58739fca246a3ccd031fb8f5e6b9"
+  },
+  "finishedAt": "2026-09-08T01:16:37.878Z"
+}

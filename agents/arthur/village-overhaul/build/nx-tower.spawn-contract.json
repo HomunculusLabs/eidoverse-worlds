@@ -1,0 +1,26 @@
+{
+  "id": "nx-tower",
+  "lib": "store/648ca0c0148cf1cc.glb",
+  "kind": "thing",
+  "pos": [
+    14.1,
+    0,
+    16.9
+  ],
+  "yaw": -2.44347,
+  "scale": 1,
+  "parent": null,
+  "comp": {
+    "sockets": {
+      "study": {
+        "pos": [
+          -1.35,
+          3,
+          -0.5
+        ],
+        "yaw": -1.5707963267948966
+      }
+    }
+  },
+  "collide": null
+}

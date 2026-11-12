@@ -1,0 +1,197 @@
+[
+  {
+    "id": "nx-town-hall",
+    "name": "approach",
+    "bodyLocal": [
+      -4,
+      0,
+      12
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-town-inn",
+    "name": "approach",
+    "bodyLocal": [
+      3,
+      0,
+      15
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-stable",
+    "name": "approach",
+    "bodyLocal": [
+      2,
+      0,
+      -8
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Revised fixed BEFORE station following native independent framing review; reuse exactly AFTER."
+  },
+  {
+    "id": "nx-town-woodyard",
+    "name": "approach",
+    "bodyLocal": [
+      3.5,
+      0,
+      4.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-forge",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-dyehouse",
+    "name": "approach",
+    "bodyLocal": [
+      1.5,
+      0,
+      7
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-potter",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      6
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-kiln",
+    "name": "approach",
+    "bodyLocal": [
+      5,
+      0,
+      5.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-town-shrine",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      8
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-gate-n",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  },
+  {
+    "id": "nx-town-gate-s",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  },
+  {
+    "id": "nx-town-gate-e",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  },
+  {
+    "id": "nx-town-gate-w",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  }
+]

@@ -1,0 +1,475 @@
+{
+  "world": "commons-next",
+  "status": "reviewed",
+  "scope": [
+    "nx-town-hall",
+    "nx-town-inn",
+    "nx-town-stable",
+    "nx-town-woodyard",
+    "nx-court",
+    "nx-forge",
+    "nx-town-market",
+    "nx-town-dyehouse",
+    "nx-town-potter",
+    "nx-town-kiln",
+    "nx-town-belltower",
+    "nx-tower",
+    "nx-town-shrine",
+    "nx-town-gate-n",
+    "nx-town-gate-s",
+    "nx-town-gate-e",
+    "nx-town-gate-w"
+  ],
+  "migrations": [],
+  "capture": [
+    {
+      "file": "before/contracts.json",
+      "sha256": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f"
+    },
+    {
+      "file": "before/folded-hosts.json",
+      "sha256": "b96918a4086952fec4ce76d09ba5c2c5c5a51800e481ab83c9fb8babe4a53502"
+    },
+    {
+      "file": "before/protected.json",
+      "sha256": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db"
+    },
+    {
+      "file": "before/full-census.json",
+      "sha256": "33a8c85e265760b6a2ee5277665d6e7a93726a853dca077fe1ca129a0f10f84a"
+    },
+    {
+      "file": "before/downloads.json",
+      "sha256": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659"
+    },
+    {
+      "file": "before/capture-complete.json",
+      "sha256": "747ed11c2f15f92050a3a873bf198b96fd98e941e2dcae9cfd30e5ab43bb86b4"
+    }
+  ],
+  "engineSources": [
+    {
+      "file": "rollout.ts",
+      "sha256": "a0ccdbf9a9f61733c769e00123cc4d14fbe6b953d17f5567763d32c53b4702d0"
+    },
+    {
+      "file": "capture.ts",
+      "sha256": "178aa22a728d48f0a986738651558200e4a3d629998113ef1c6ef3e303f77414"
+    },
+    {
+      "file": "../cabin-overhaul/rollout.ts",
+      "sha256": "addc6fd0d39839028393ef4ce5ee664c7ce0e21064667e4ad0b32d887c57260a"
+    },
+    {
+      "file": "../../../shared/fold.js",
+      "sha256": "3875b6e2f362d33d9bee3ce15ab41e43c67b48f7119ad080a0b64c91ed79b4ab"
+    },
+    {
+      "file": "../../../shared/forecast.js",
+      "sha256": "456ee2f6340f81a8047a2d89eabf9e2e4520daff1902d04c325da8476e74443c"
+    },
+    {
+      "file": "../cabin-overhaul/contracts.ts",
+      "sha256": "dae068f3a7fde96363f95750c0c244c5b5a036f50fb7af5d035f3d62a9d7d0e2"
+    }
+  ],
+  "preflight": {
+    "file": "preflight.ts",
+    "sha256": "27a39c1bdfbe445f9a2b22e1b83051d2e5ed3a0b6ce78a7cd3fdbea6e122ef28",
+    "sources": [
+      {
+        "file": "preflight.ts",
+        "sha256": "27a39c1bdfbe445f9a2b22e1b83051d2e5ed3a0b6ce78a7cd3fdbea6e122ef28"
+      },
+      {
+        "file": "../cabin-overhaul/verify-player.ts",
+        "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+      },
+      {
+        "file": "../../../tools/core-stub.mjs",
+        "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+      },
+      {
+        "file": "../../../client/node_modules/three/build/three.module.js",
+        "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+      },
+      {
+        "file": "../../../client/node_modules/three/build/three.core.js",
+        "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+      },
+      {
+        "file": "verify-approach.ts",
+        "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+      },
+      {
+        "file": "../cabin-overhaul/contracts.ts",
+        "sha256": "dae068f3a7fde96363f95750c0c244c5b5a036f50fb7af5d035f3d62a9d7d0e2"
+      },
+      {
+        "file": "../cabin-overhaul/rollout.ts",
+        "sha256": "addc6fd0d39839028393ef4ce5ee664c7ce0e21064667e4ad0b32d887c57260a"
+      },
+      {
+        "file": "../../../shared/fold.js",
+        "sha256": "3875b6e2f362d33d9bee3ce15ab41e43c67b48f7119ad080a0b64c91ed79b4ab"
+      },
+      {
+        "file": "../../../shared/forecast.js",
+        "sha256": "456ee2f6340f81a8047a2d89eabf9e2e4520daff1902d04c325da8476e74443c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/index.js",
+        "sha256": "6ca769fd9657673f4a3e1a006af5e34450bd5764bc58c1d641ad227ff3630090"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/BVH.js",
+        "sha256": "2a0813bf437c245e14937bb929776b7106f48d94bc98cf96cc106f54356b8a34"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/Constants.js",
+        "sha256": "2844d2bd13dab0fcc219229eceebd5a592f411e93fb2dd8efe02663589a69e09"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ArrayBoxUtilities.js",
+        "sha256": "583898689314c583d53d1eeb627890a3559d879e922ada706424f585a6bff763"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/nodeBufferUtils.js",
+        "sha256": "8632a4444c086c1984a471bc75f0902964cbcd52013aba06c73df4403401b0b2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/buildTree.js",
+        "sha256": "14793377d68353617a7e76b560223b173a768846719cbb3a3b4aaf038fe7ef80"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/computeBoundsUtils.js",
+        "sha256": "b0596bd329f99f9dcc5f33c3af909ca853726c07d7d7ced42ca974319a46b3e4"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/splitUtils.js",
+        "sha256": "611c1b9f9fcf7e3f55997def32f0c47476269b8a1cc8b38d38ea8aff02baa4e0"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/BVHNode.js",
+        "sha256": "7cf8d828145b54d4ee2feec166c575b099cea71da07f807a8d5ef0f90b1fc7bc"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/sortUtils.js",
+        "sha256": "54923f99e4d5e779943b0c211b12a2c65b3a9f5579da6e1d589b1088128a3add"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/buildUtils.js",
+        "sha256": "a8b849fbfa2f4ae3808bd111ecf20f79213cc18c13ea4043d2d7fa8e81b3ea44"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/shapecast.js",
+        "sha256": "9fa4aed17f4e2895c2b1a34cb0f072c37acc8ded99868066d4f07fa0e2f570a2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/PrimitivePool.js",
+        "sha256": "91c2510b6414084634479cacb9af1dee2f56114025108d68ab0ae01814ba329a"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/BufferStack.js",
+        "sha256": "c94b20fde61b58d10596ff4c969667eb19ac19f09c7397f3f4fc06449abc0375"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/bvhcast.js",
+        "sha256": "be889ce017e3fb0d2758a40082969fbbc3db6d0a1bdb098a88e4f404e5e20ddd"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/BVHTraversalHelper.js",
+        "sha256": "68959d21d75001e2fdb345b4890821991c2044c9d9fd938132fc926b3035f2db"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/GeometryBVH.js",
+        "sha256": "1ce7464e1f77be01e69029ffbb3d76b182b38f6a10947763e46891696888bf7f"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/BufferUtils.js",
+        "sha256": "b83540dd60363892ce18082c5910a8e2cc87f37d6e811768830a0f34863b5658"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/geometryUtils.js",
+        "sha256": "ae71dfbadf9e6a3a8963b0784aaf4d3f1b12a7ee8a8f3bccc9b251c838360e3e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/MeshBVH.js",
+        "sha256": "1f917667d86e7d8e04060104bf760b7021432311ce691645f232beff2ebefff2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/OrientedBox.js",
+        "sha256": "5f24dec94ea76ee1c78da7b6593703b4d4c06eccc1e92cafca853477856dc89c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/SeparatingAxisBounds.js",
+        "sha256": "3e608a7bb5acc71d1f09af9a3b169518ea4de7cc436f11f7d868f5823ac09434"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/ExtendedTriangle.js",
+        "sha256": "85435041c00fbb0e2e69caecf1289339deef791cd2a8badc08bdca004700436f"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/MathUtilities.js",
+        "sha256": "9b1f8facd181b29506c32dda303097c3c2515b95c19ac1f5121e8d8a9946154b"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ExtendedTrianglePool.js",
+        "sha256": "b6bf7e421537d4cb7be66f6d7a60a87eb8a96b45b41e51e89e344f81f4295a37"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/closestPointToPoint.js",
+        "sha256": "296711939d33aab99c7b887fedd97dae5a53a35ff6bb2ad9f9ecb181a5badcd4"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/iterationUtils.generated.js",
+        "sha256": "900ed65be866c9f5e39adc523f68c0ecb1c7235d03cff965b7b72378bfd4f58e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ThreeRayIntersectUtilities.js",
+        "sha256": "157bed8831521365f325ed5c4c1827f6d7b7afa0a6cf2b0cbc2ec34df0043240"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/TriangleUtilities.js",
+        "sha256": "1b6118e427f613160570f22da94b1016420d1b692610aaade00d74a83736b8ce"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/refit.generated.js",
+        "sha256": "7dfe122498f14ac79cd4e74bd77872a4401ee6b6bf4a93ad97f80790f189af35"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycast.generated.js",
+        "sha256": "8185e10aa2f8c3c0249f2e0c770b66c4dcb7dd58ed8bfaf3efbc5838e0384f3d"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/intersectUtils.js",
+        "sha256": "b98f82110a9c6c45a3b29a9e79583a4f35f0f1f4bd7d126c8fc072112546540c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/iterationUtils_indirect.generated.js",
+        "sha256": "36ca2be43e2776b3de3d32f45a47f53ac7b1aa241396e8199556cdb64b5ade5c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycastFirst.generated.js",
+        "sha256": "4e89cfc9695bcff713d3457229fda35f8ec3eb8d16c43ffeb34a7c1ae79551a0"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/intersectsGeometry.generated.js",
+        "sha256": "c618a6af5c7e0649240b54bae66f57de0c33cda9f5eef9b35d775fc5891ba2ad"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/closestPointToGeometry.generated.js",
+        "sha256": "0f981858f3971a6e1a86f4597fe02c0028e9c826ec213cc3b0cb0ffe2c040913"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/refit_indirect.generated.js",
+        "sha256": "97fa130b81de7f568abfba9eb0e2186512f9b3d027fa88c6521aca909e981c5f"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycast_indirect.generated.js",
+        "sha256": "e579930a4012c6aa26ecf156268f7e155250f47dc6b73e250335d2469d2cb296"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycastFirst_indirect.generated.js",
+        "sha256": "294b7c7f89c1c985a0df7a3c4a2b55a2d8a6df8c452c5c22717c80c3ca030783"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/intersectsGeometry_indirect.generated.js",
+        "sha256": "cba4c920f9cadb170de37db74655a980c9e34b90ec14e0656969adfbfb79929e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/closestPointToGeometry_indirect.generated.js",
+        "sha256": "b233234d031601808be957a1f2eb37a8d4d7389f3522861b904d35ccfaa6d9d7"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/GeometryRayIntersectUtilities.js",
+        "sha256": "cbb52046616cc9e0c9c5d20e309b8ce5d0b1c7695937a5cf1db8baebdc5b5a34"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/LineBVH.js",
+        "sha256": "5e494eeab88a8f473081ef206c854d5c72a6139e50866e047ff06ab9fbdb67f3"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/PointsBVH.js",
+        "sha256": "8abcd7a85bbb9621b13837ef9ef2e431de21548f582b97a87dcbea7022e73d0e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/ObjectBVH.js",
+        "sha256": "01b3cac6e88d72bbea2c1dd04f9f10393a5364049d2d2496448752a488f3aea3"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/SkinnedMeshBVH.js",
+        "sha256": "8305377bc8fb72d597418b0e708754a2e452f00ddeec405356f0926542c837d0"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/objects/BVHHelper.js",
+        "sha256": "adfd391c0584e1cc645977fb697dbc83380a17098ca1a3c2c5c935c1bfaa1397"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/debug/Debug.js",
+        "sha256": "89e23aed54b12ad28e92b32aa3a6fad8388946d1eb621e1036b44352a0c789de"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ExtensionUtilities.js",
+        "sha256": "bfd3997c8350432e4388e799e93c4dff8b84fa26094558f2f083272ae1f9859b"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/MeshBVHUniformStruct.js",
+        "sha256": "44ecf9812b1cf6855863dcef9075edac426ea7697a5f1e723ccd8ba395c71970"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/VertexAttributeTexture.js",
+        "sha256": "92faf674385c53a00b53d04f07418caf74dcd7d9c355b68556e2b1d85472c68e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/StaticGeometryGenerator.js",
+        "sha256": "1449a338f92c7c0fe90a41917b991782091b469ccbd94ce052c9a3a157ab0fd2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/BVHShaderGLSL.js",
+        "sha256": "1680ce1b28a7eee5db9f339378c90b2eaffe64b3aa66badad3ab401e8fd4cf1c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/common_functions.glsl.js",
+        "sha256": "19ee249214138a0d9aba7712121cccd06780640e53a3f0edb7f80c61780e0bae"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/bvh_distance_functions.glsl.js",
+        "sha256": "e8b716d9cf0740a9c0a898d9f6498ba7bc33bc09add5e4fb7f0279092f86e855"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/bvh_ray_functions.glsl.js",
+        "sha256": "1da5da042843d879e1170086a7f479b70ba89b600603ae3eaceeeafd648475a5"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/bvh_struct_definitions.glsl.js",
+        "sha256": "e196322216da3954a5bace7c091cd19308b78c0988650ef71a790a5d8c88c97c"
+      }
+    ]
+  },
+  "slots": [
+    {
+      "id": "nx-tower",
+      "status": "READY",
+      "kind": "walk-in",
+      "pos": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "sockets": {
+          "study": {
+            "pos": [
+              -1.35,
+              3,
+              -0.5
+            ],
+            "yaw": -1.5707963267948966
+          }
+        }
+      },
+      "bounds": {
+        "min": [
+          -3.25,
+          -0.20000000298023224,
+          -3.25
+        ],
+        "max": [
+          3.506999969482422,
+          8.399999618530273,
+          3.5999999046325684
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          6.099451298618867,
+          -3.2000000029802322,
+          9.053181862260335
+        ],
+        "max": [
+          21.678700547257385,
+          11.475,
+          24.64389518178528
+        ]
+      },
+      "file": "build/nx-tower.glb",
+      "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "lib": "store/648ca0c0148cf1cc.glb",
+      "builder": "build-tower.ts",
+      "sources": [
+        {
+          "file": "build-tower.ts",
+          "sha256": "91943734811f405121ff657f12115209691339bbeca6f5e1f7072fdc52b36d34"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "build-belltower.ts",
+          "sha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "before/nx-tower.glb",
+          "sha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a"
+        },
+        {
+          "file": "before/contracts.json",
+          "sha256": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f"
+        },
+        {
+          "file": "before/downloads.json",
+          "sha256": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659"
+        },
+        {
+          "file": "neighbors/nx-tower.json",
+          "sha256": "e5c02c6ca4faa74f565425497aa72214cd55567c83d4ecacd185804d7d93e9de"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-tower.route.json",
+          "sha256": "6fbe952600b98319aa822318baea15fd33ae14624b0aa5794c0e4ef1c5f19e27",
+          "mode": "room"
+        },
+        {
+          "file": "build/nx-tower.upper-route.json",
+          "sha256": "c7c84ca12bc4125a0f3cb48e3093751a75490789ee8852569c3c257906fb95ef",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-scholar-draft/review.json",
+        "sha256": "22e73cfbd007de30b17b41c8366971350abc806315c329f0142a535139061325"
+      }
+    }
+  ]
+}

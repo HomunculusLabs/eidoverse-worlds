@@ -1,0 +1,11 @@
+All 12 images are visible in the specified order. This review covers the local ensemble renders only; they do not establish live placement or walking access.
+
+- **Market — must-fix:** The aerial shows the hanging fascia pieces extending beyond the roof into open space, with no visible continuous suspension or attachment. Preserve the pieces, but attach them visibly to a supported rail or cable, or position their suspension beneath the fascia. The roof appears closed; produce, scales, and counters communicate the trade clearly. The central post and lantern do not establish a blocked workstation.
+
+- **Dyehouse — acceptable for deployment visual gate.** Front and aerial views show a closed roof on supported framing, recognizable dye vats, cloth, and an accessible exterior working edge. The hanging trade panel is visible rather than buried. The interior camera is occluded by a pale surface, so that image cannot establish an architectural defect or usable interior—and a walk-in room is not required.
+
+- **Potter — acceptable for deployment visual gate.** Preserve the separate ruled-porch artwork canopy. Its open grid is consistent with that intended structure, not evidence of an unfinished enclosed roof. The posts visibly meet their bases; pottery shelves, wheel, and worktables make the trade legible. The sign remains visible, and the close view shows a working position between the tables without an obvious obstruction.
+
+- **Kiln — acceptable for deployment visual gate.** The open chimney is appropriate to the kiln; the adjacent workstation has a closed sloping roof and visible supports. The firing opening, chimney, tools, and material storage establish its purpose. The hanging panel is exposed. The interior camera intersects or closely faces geometry, making that view unusable for access assessment; it does not itself demonstrate a blocked exterior workstation.
+
+**Batch verdict:** Hold for the market’s unsupported hanging assembly. No other material architecture must-fix is established by these views.

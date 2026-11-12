@@ -3907,3 +3907,71 @@ next wake once the gateway answers.
 - Next ranked: (a) plaza-core re-survey on fresh evidence, or (b)
   least-recently-judged pinned subjects (well p318, fountain p326, hearth
   p334).
+
+### polish-345 — well open bucket (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-well` (same tuple as polish-313..318, empty comp
+  bag — census-fresh this tick). Build source `assets/mkvillage-civic.ts`
+  (well block) -> `village_well.glb` (live was 579e0a1f, polish-318's
+  coopered-bucket build; on-disk sha == live exact, before-bytes captured
+  FIRST). Queue head from polish-318's close (bucket open-top note) +
+  polish-344's close (least-recently-judged pinned subject).
+- Survey (NEW `p345-rig.ts`, p318 chassis, 10 views incl. a NEW
+  mouth-oblique vantage — polish-307 rig-law: the mouth interior was
+  never framed by the standing rigs; ZAI fallback disclosed, no native
+  vision loadable this cron session, polish-285..344 class, native
+  re-judge owed): the bucket top read as a CLOSED octagonal lid —
+  "flat, dark octagonal lid… no darker interior disc, no wall thickness,
+  no hollow… if an open bucket is intended, it fails that read
+  entirely". Root cause decoded from the judge's pixel map: TRIPLE
+  ENTOMBMENT — the closed-cylinder RIM cap (full disc r 0.185 at y 1.24,
+  2cm ABOVE the body top) lidded the whole opening, and both HOOP caps
+  (r 0.170/0.155) spanned the bore beneath. v1 (inner wall + floor +
+  bottom cap only) never had a pixel of visibility — caught by pixel
+  probe: top-zone samples byte-identical before/after v1 (polish-52
+  class, self-caught before judging from a stale build).
+- Change (ONE intervention, mkvillage-civic.ts): the bucket opens —
+  openEnded body + DoubleSide dark interior wall (r 0.166/0.138, y
+  0.94..1.185) + dark floor disc y 0.945 + C.MID exterior bottom cap;
+  rim + hoops become open iron BANDS (straps around staves — true barrel
+  iron); lug pads widened into mounting plates reaching through the rim
+  band inner face (v3: the opened top left them hovering over 27cm of
+  void — mouth judge "floating trapezoids" -> "riveted bail ear" PASS).
+  Arc feet, rope, knot positions untouched (p317 chain byte-stable).
+- Candidate `1ec50a257e6160961fc2321d635cddedb04dc0e946096a24432b1ab216230c3b`
+  deterministic x2 (mtime-verified); banner sibling byte-identical to its
+  live pin (edit confined). Nodes 38 -> 41 (+3: inner wall, floor,
+  bottom), materials 5 unchanged (interior shares the palette family via
+  a new COLOR_0 constant — no new material rows).
+- Falsification (ZAI fallback disclosed): mouth-oblique judge SHIP —
+  open-vessel PASS ("unambiguously bucket for drawing water"), plates
+  anchored PASS, rope->knot->handle->bucket chain PASS, zero new defects
+  (no see-through, no float, no z-fight); approach judge 85% well read
+  (residuals vantage-limited: water occluded behind the ring wall at
+  head-on — source-true polish-313; pulley/rope close-range by design).
+  Pixel diffs confined to the bucket zone all views (mouth 5090 px,
+  bucketnear 10883; aerial 0 px — occluded under the roof, expected).
+  v1 rejected (entombed by the rim cap), v2 intermediate (hollow visible,
+  lugs floating), v3 ACCEPTED.
+- Placed via NEW dedicated placer `next-place-polish345-well.ts` (p318
+  chassis, pins 579e0a1f -> 1ec50a25): PLACED_VERIFIED, 1 upload + 1
+  verb, comp bag {} preserved, idempotent rerun zero verbs, live census
+  pin `store/1ec50a257e616096.glb` @ [30,0,-4.5] yaw 0 exact.
+- Served-bytes proof (struct-104 law, NEW durable probe
+  `p345-verify-served.ts`, p341 chassis): P345_SERVED_PASS — the floor
+  disc (center verts), interior wall band (rMax 0.166, span 0.245), open
+  bands (body/rim/hoops zero center verts) and widened lugs all survive
+  the DRACO re-encode; regressions (lantern core, water r 0.62, rope)
+  intact; 0 non-finite. Negative control (polish-318 lib) fails the
+  open-bucket gates exactly — the probe discriminates.
+- Gate re-run after mutation: ALL PASS real exit 0 at absorbed sibling
+  HEAD ead12620 (sweep-404 — normal interlane life).
+- Evidence: `reviews/hero-assets/polish-345-well/` (before/ = live
+  579e0a1f baseline GLB + 10-view rig; after/ = entombed v1 record;
+  after-v2/ = bands-opened intermediate; after-v3/ = ACCEPTED + rig).
+  Probes durable: p345-rig.ts, p345-decode.ts, p345-verify-served.ts.
+- Excalibur checkpoint: appending to
+  `vessel/workings/eidoverse-hero-assets/CHECKPOINT.md` if reachable.
+- Next ranked: (a) plaza-core re-survey on fresh evidence, or (b)
+  least-recently-judged pinned subjects (fountain p326, hearth p334,
+  monument p328..330 pins).

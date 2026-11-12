@@ -10,10 +10,12 @@
 
 import { THREE, CONFIG, bus } from './core.js';
 import {
-  myState, updateFollowCamera, setPosture, keys, setSeatHook,
+  myState, updateFollowCamera, setPosture, keys, setSeatHook, inputBlocked,
 } from './controller.js';
-import { avatarMounts, mountTransform, comps, socketWorldPos } from './world.js';
-import { sendVerb, sendAnim } from './net.js';
+import { avatarMounts, mountTransform, comps, socketWorldPos, entities } from './world.js';
+import { sendVerb, sendAnim, sendLease, net } from './net.js';
+import { state } from './state.js';
+import { createPilotController } from './pilot.js';
 import { makeRagdoll } from './bodysim.js';
 import { jointPositions } from './ragdoll.js';
 import { initBodyDrag, beingDragged, revokeDragged } from './bodydrag.js';
@@ -22,6 +24,8 @@ import { posable, pushable } from './consent.js';
 import { getMe } from './mybody.js';
 
 let logChat = () => {};
+let pilot = null;
+export function tickPilot(dt, now) { pilot?.tick(dt, now); }
 
 // Ragdoll — owner-simulated, presence-streamed, captured to a held pose.
 //
@@ -107,8 +111,9 @@ export function updateMountedMe(dt) {
   // here too (the ragdoll path learned this the same way), or it freezes on
   // the frame you sat down and never rides the seat (#75). First person keeps
   // its own-mesh exclusion; both modes follow the socket, moving or not.
-  if (me) updateFollowCamera(dt, me);
-  if (['KeyW', 'KeyA', 'KeyS', 'KeyD'].some((k) => keys.has(k))) dismountMe();
+  const pilotSeat = pilot?.seat();
+  if (me) updateFollowCamera(dt, me, pilotSeat ? sw.yaw : undefined);
+  if (!pilotSeat && ['KeyW', 'KeyA', 'KeyS', 'KeyD'].some((k) => keys.has(k))) dismountMe();
 }
 
 /** Nearest declared seat: distance to the SOCKET's world point, not the
@@ -160,7 +165,8 @@ export function trySitOn(arg) {
   // remains authoritative and reconcile will replace/remove this exact record.
   avatarMounts.set(CONFIG.name, { to: best.id, slot: best.slot });
   sendVerb('mount', { id: CONFIG.name, to: best.id, slot: best.slot });
-  logChat('*', `you sit on ${best.id} (${best.slot}) — X or move to get off`);
+  const pilotSeat = comps.get(best.id)?.pilot?.slot === best.slot;
+  logChat('*', `you sit on ${best.id} (${best.slot}) — ${pilotSeat ? 'F pilot/takeoff · WASD steer · Space/C altitude · X return and land' : 'X or move to get off'}`);
   return true;
 }
 
@@ -174,7 +180,8 @@ export function updateSeatHint(dt) {
   _hintAcc = 0;
   if (CONFIG.renderer || CONFIG.spectate) return;
   let hint = null;
-  if (avatarMounts.has(CONFIG.name)) hint = '<kbd>X</kbd> get up · <kbd>WASD</kbd> hop off';
+  if (pilot?.seat()) hint = '<kbd>F</kbd> pilot/takeoff · <kbd>W/S</kbd> thrust/brake · <kbd>A/D</kbd> turn · <kbd>Space/C</kbd> altitude · <kbd>X</kbd> return/land';
+  else if (avatarMounts.has(CONFIG.name)) hint = '<kbd>X</kbd> get up · <kbd>WASD</kbd> hop off';
   else if (!downed && nearestSeat(null, 3.5)) hint = '<kbd>X</kbd> — sit';
   setAmbientHint(hint);
 }
@@ -340,13 +347,28 @@ function applyShove(lean, by) {
 
 // ---------------------------------------------------------------- wiring
 
-export function initLocalBody({ logChat: logChatFn }) {
+export function initLocalBody({ logChat: logChatFn, isEditing = () => false }) {
   logChat = logChatFn;
+  pilot = createPilotController({
+    world: () => state.st, identity: () => CONFIG.name,
+    spectator: () => CONFIG.spectate || CONFIG.renderer,
+    connected: () => net.joined && net.ws?.readyState === 1,
+    // Build owns F (lower selection); pause the sender, not global focus semantics.
+    blocked: () => inputBlocked() || isEditing(), keys, send: sendLease, notice: flashHint, landed: dismountMe,
+    apply: (id, s) => {
+      const obj = entities.get(id);
+      if (obj) { obj.position.fromArray(s.p); obj.rotation.set(0, s.yaw, 0); obj.updateWorldMatrix(true, false); }
+    },
+  });
+  bus.on('lease', m => pilot.handle(m, performance.now()));
+  bus.on('net', n => { if (!n.joined || n.status !== 'live') pilot.disconnect(); });
+  bus.on('key', e => { if (e.code === 'KeyF' && !e.repeat) pilot.start(performance.now()); });
 
   // X reaches the socket system through the controller's hook: mounted → get
   // up; a declared seat in reach → mount it; anything else falls through to
   // the controller's own layers (geometry seat pans, then the ground sit).
   setSeatHook(() => {
+    if (pilot.exit(performance.now())) return true;
     if (avatarMounts.has(CONFIG.name)) { dismountMe(); return true; }
     if (downed) return false;
     return trySitOn(null);

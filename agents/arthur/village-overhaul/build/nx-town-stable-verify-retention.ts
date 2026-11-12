@@ -1,0 +1,17 @@
+// Independent exact triangle preservation and falsification controls for the lane.
+import * as THREE from 'three';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {BASE,decode,components,retainComponent,sha} from '../build-stable.ts';
+import {clipTriangle} from '../../cabin-overhaul/verify-player.ts';
+function triangles(root:THREE.Group){const list:string[]=[];root.traverse((m:any)=>{if(!m.isMesh)return;const a=m.geometry.attributes.position;for(let t=0;t<a.count;t+=3){const v=[];for(let j=0;j<3;j++)v.push([a.getX(t+j),a.getY(t+j),a.getZ(t+j)].map((x:number)=>x.toFixed(4)).join(','));list.push(v.sort().join('|'));}});return list;}
+const crossing=[[-2,1,0],[2,1,0],[0,1,2]],lo=[-.2,.5,.5],hi=[.2,1.5,1.5];const allOutside=crossing.every(p=>p.some((x,a)=>x<lo[a]||x>hi[a]));const clipped=clipTriangle(crossing,lo,hi);if(!allOutside||clipped.length<3)throw Error('crossing-triangle negative control failed');const clear=clipTriangle([[3,1,3],[4,1,3],[3,1,4]],lo,hi);if(clear.length)throw Error('noncrossing control failed');
+for(const id of ['nx-town-stable','nx-town-woodyard']){
+ const ev=JSON.parse(readFileSync(`${BASE}/build/${id}-evidence.json`,'utf8')),before=await decode(`${BASE}/before/${id}.glb`),after=await decode(`${BASE}/build/${id}.glb`),parts=components(before.root),expected=new THREE.Group();
+ const srcMap=new Map(parts.map(c=>[c.mesh+'/'+c.indices.join(','),c]));
+ for(const r of ev.retained){const c=srcMap.get(r.sourceMesh+'/'+r.sourceTriangles.join(','));if(!c)throw Error('retention source mapping drift');retainComponent(expected,before.root,c,r.name,new THREE.MeshStandardMaterial(),r.delta,r.yaw,r.pivot);}
+ const have=new Map<string,number>();for(const t of triangles(after.root))have.set(t,(have.get(t)??0)+1);let found=0;for(const t of triangles(expected)){if(!have.get(t))throw Error('expected retained triangle missing');have.set(t,have.get(t)!-1);found++;}
+ const contract=JSON.parse(readFileSync(`${BASE}/build/${id}-route.json`,'utf8'));
+ const neighborPacket=JSON.parse(readFileSync(`${BASE}/neighbors/${id}.json`,'utf8'));const context={...contract,assembly:neighborPacket.neighbors.map(({hostLocalBounds,protected:p,...n}:any)=>n)};writeFileSync(`${BASE}/build/${id}-route-context.json`,JSON.stringify(context,null,2));
+ const baselineRoute={...contract,sha256:before.sha256};delete baselineRoute.collide;delete baselineRoute.collisionAmendment;writeFileSync(`${BASE}/build/${id}-route-baseline.json`,JSON.stringify(baselineRoute,null,2));
+ const report={status:'PASS',id,modelSha256:after.sha256,sourceSha256:before.sha256,retainedComponents:ev.retained.length,retainedTriangles:found,precision:'0.1mm vertex rounding; triangle multiplicity respected',triangleClearanceControls:{allVerticesOutsideCrossingVolume:allOutside,crossingTriangleClips:clipped.length>=3,clearTriangleDoesNotClip:clear.length===0},exactXZ:ev.exactXZEnvelope,sourceFiles:['agents/arthur/assets/mkv3-stable.ts','agents/arthur/assets/mkv3-woodyard27.ts'].map(file=>({file,sha256:sha(readFileSync(file))})),limitations:['Test proves geometry preservation with explicitly recorded rigid repositions, not original material-byte identity.','No clean static typecheck claimed: editor diagnostics reported incompatible Three Mesh/Object3D and Bun import.meta declarations. Actual Bun builds, retention tests and GLB/browser decoding were exercised.']};writeFileSync(`${BASE}/build/${id}-retention-verification.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+}

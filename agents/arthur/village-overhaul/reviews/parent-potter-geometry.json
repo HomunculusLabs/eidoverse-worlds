@@ -1,0 +1,28 @@
+{
+  "id": "nx-town-potter",
+  "modelSha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+  "status": "PASS",
+  "basis": "Parent double rebuilt, ran --test and --validate; actual public-runtime full-neighbor external approach includes independent triangle-support rays. Independent native ensemble review accepted. Height growth allowed by BRIEF; original horizontal envelope retained.",
+  "evidence": [
+    {
+      "file": "build/nx-town-potter-functionality.json",
+      "sha256": "0f522b41e2f2a70bad3a235e8abea3f076c27182929e0ac26e153b528d2d1f6f"
+    },
+    {
+      "file": "potter-kiln-notes.md",
+      "sha256": "c0536d6b04a5e690fd2634ecc8c1a5cbf1f3057a7c88fa0a1730bb8d170903f6"
+    },
+    {
+      "file": "reviews/parent-potter-proof.log",
+      "sha256": "9b88268df9a304e03b7777fc928d511bff2baef31c920e5b286d58424ec6cc16"
+    },
+    {
+      "file": "reviews/parent-potter-validation.log",
+      "sha256": "3c0b66f2200b30884a0aa85051d98afd8ae6eef0d8799524c5b78b00f7b92950"
+    }
+  ],
+  "limits": [
+    "External workstation, not a walk-in room.",
+    "Bounded exact geometry and supplied neighbors, not a universal whole-world certificate."
+  ]
+}

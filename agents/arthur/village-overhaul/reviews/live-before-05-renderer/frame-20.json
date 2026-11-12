@@ -1,0 +1,445 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-3d729595-098",
+    "view": "first",
+    "startedAt": "2026-09-08T02:28:12.930Z"
+  },
+  "completedAt": "2026-09-08T02:28:13.303Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "2676463c4dfedccb6e1a2c06f15057779db1ed23b857f8ae0d272c17d59dd9d6",
+  "bytes": 452093,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-market",
+  "view": "workstation",
+  "rendererModels": [
+    {
+      "id": "nx-town-market",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "loaded": true
+    },
+    {
+      "id": "nx-dress-banner",
+      "loaded": true
+    },
+    {
+      "id": "nx-dress-stringlights",
+      "loaded": true
+    },
+    {
+      "id": "nx-dress-giftshelf",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-left",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-right",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b30-market-tally",
+      "loaded": true
+    },
+    {
+      "id": "nx-core-paths",
+      "loaded": true
+    }
+  ],
+  "companionsBefore": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/e815a897c7d73373.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-banner",
+      "kind": "thing",
+      "pos": [
+        -4,
+        0,
+        9.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/d32e7bcb8b007d21.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-stringlights",
+      "kind": "thing",
+      "pos": [
+        -6,
+        2.6,
+        7.5
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "lib": "store/0c0dee37b07aa7df.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-giftshelf",
+      "kind": "thing",
+      "pos": [
+        -9,
+        0,
+        9
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/c623cfa6fbdeb48e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-market-l",
+      "kind": "light",
+      "pos": [
+        -6.217157287525381,
+        1.75,
+        6.217157287525381
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-left",
+      "kind": "thing",
+      "pos": [
+        -5.481766235091371,
+        0.38,
+        6.895979797464467
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-right",
+      "kind": "thing",
+      "pos": [
+        -6.8959797974644665,
+        0.38,
+        5.481766235091372
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b30-market-tally",
+      "kind": "thing",
+      "pos": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/a2326039fcb4e080.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-core-paths",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/c31b6e3f22641e14.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "companionsAfter": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/e815a897c7d73373.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-banner",
+      "kind": "thing",
+      "pos": [
+        -4,
+        0,
+        9.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/d32e7bcb8b007d21.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-stringlights",
+      "kind": "thing",
+      "pos": [
+        -6,
+        2.6,
+        7.5
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "lib": "store/0c0dee37b07aa7df.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-giftshelf",
+      "kind": "thing",
+      "pos": [
+        -9,
+        0,
+        9
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/c623cfa6fbdeb48e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-market-l",
+      "kind": "light",
+      "pos": [
+        -6.217157287525381,
+        1.75,
+        6.217157287525381
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-left",
+      "kind": "thing",
+      "pos": [
+        -5.481766235091371,
+        0.38,
+        6.895979797464467
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-right",
+      "kind": "thing",
+      "pos": [
+        -6.8959797974644665,
+        0.38,
+        5.481766235091372
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b30-market-tally",
+      "kind": "thing",
+      "pos": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/a2326039fcb4e080.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-core-paths",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/c31b6e3f22641e14.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "bodyPose": {
+    "p": [
+      -4.025126265847083,
+      0,
+      4.025126265847084
+    ],
+    "yaw": -0.7853981633974485,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    0,
+    0,
+    3.5
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-market",
+    "lib": "store/8c16ea9a756a95ad.glb",
+    "kind": "thing",
+    "pos": [
+      -6.5,
+      0,
+      6.5
+    ],
+    "yaw": 2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.95,
+        -0.001,
+        -0.502
+      ],
+      "max": [
+        1.95,
+        2.151,
+        0.57
+      ],
+      "size": [
+        3.9,
+        2.152,
+        1.072
+      ],
+      "center": [
+        0,
+        1.075,
+        0.034
+      ]
+    },
+    "tris": 1202
+  },
+  "targetAfter": {
+    "id": "nx-town-market",
+    "lib": "store/8c16ea9a756a95ad.glb",
+    "kind": "thing",
+    "pos": [
+      -6.5,
+      0,
+      6.5
+    ],
+    "yaw": 2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.95,
+        -0.001,
+        -0.502
+      ],
+      "max": [
+        1.95,
+        2.151,
+        0.57
+      ],
+      "size": [
+        3.9,
+        2.152,
+        1.072
+      ],
+      "center": [
+        0,
+        1.075,
+        0.034
+      ]
+    },
+    "tris": 1202
+  },
+  "beforeObservedAt": "2026-09-08T02:28:09.925Z",
+  "afterObservedAt": "2026-09-08T02:28:15.234Z",
+  "protectedBeforeSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "protectedAfterSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "file": "nx-town-market-workstation.png"
+}

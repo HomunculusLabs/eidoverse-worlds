@@ -1,0 +1,94 @@
+{
+  "status": "AUXILIARY_REVIEW_READY_FOR_PARENT_NATIVE_REVIEW",
+  "modelPath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-inn.glb",
+  "modelSha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+  "visionMode": "functions.vision_analyze returned auxiliary textual analyses, not native image pixels to this agent",
+  "renders": [
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-before/render-manifest.json",
+      "sha256": "51cf8a34074ae34dbba167dfcc4816aca19d5d599434f345cfe65ec44e559add",
+      "modelSha256": "0cac6fa0d663bf80ec8537f9e8734f5e4d5ba641206bd71fdf49e8303b2f6fec",
+      "cameraSha256": "7e39bf95328026aa2a4c6c3c8145fa78ca9a5614a4c0800f6d210d4abb03e646",
+      "views": 9,
+      "errors": []
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-final/render-manifest.json",
+      "sha256": "d398a6d760c54d1331ff64eb0ee2b16f1de08dcdbed133ce4dcd03bf7f9392ba",
+      "modelSha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+      "cameraSha256": "7e39bf95328026aa2a4c6c3c8145fa78ca9a5614a4c0800f6d210d4abb03e646",
+      "views": 9,
+      "errors": []
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-before-assembly/render-manifest.json",
+      "sha256": "769576dea08ed166a9293e2fb0c5c30547bc4df246a04840e5cee443193947b7",
+      "modelSha256": "2948be284959abdba43ead16f28d16d3cb08ca6de2f39a32a42363606576f02d",
+      "cameraSha256": "7e39bf95328026aa2a4c6c3c8145fa78ca9a5614a4c0800f6d210d4abb03e646",
+      "views": 9,
+      "errors": []
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-final-assembly/render-manifest.json",
+      "sha256": "df3559dfc5eb6a2cc6fc91357addebbde76bf607cc62c40410611609a9dbf53b",
+      "modelSha256": "96f0dd0d9f425897fe860559698615213512d91608e8c9b6a1210dbdcd24fe9d",
+      "cameraSha256": "7e39bf95328026aa2a4c6c3c8145fa78ca9a5614a4c0800f6d210d4abb03e646",
+      "views": 9,
+      "errors": []
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-detail-before/render-manifest.json",
+      "sha256": "fefa277e53b1fcd83c9ca869a919eacbbe2cf6ef281932901ea0c3e7f0652154",
+      "modelSha256": "2948be284959abdba43ead16f28d16d3cb08ca6de2f39a32a42363606576f02d",
+      "cameraSha256": "d88a9163f9f7f5500269a720d9e389f9b4d6155b9f97ff3fc80ef4e6e6546b2b",
+      "views": 9,
+      "errors": []
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-detail-final/render-manifest.json",
+      "sha256": "c477697cae9f648367a085df179b136f2dc8dc7cba50c1c898175c8ed69d09d3",
+      "modelSha256": "96f0dd0d9f425897fe860559698615213512d91608e8c9b6a1210dbdcd24fe9d",
+      "cameraSha256": "d88a9163f9f7f5500269a720d9e389f9b4d6155b9f97ff3fc80ef4e6e6546b2b",
+      "views": 9,
+      "errors": []
+    }
+  ],
+  "inspected": [
+    "inn-before-montage.jpg",
+    "inn-final-montage.jpg",
+    "inn-detail-before-montage.jpg",
+    "inn-detail-final-montage.jpg"
+  ],
+  "montages": [
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-before-montage.jpg",
+      "sha256": "a3de730f73da6a7b055883c0a172ea1a1bc36106278ad0971cfed9bba0c638a5"
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-final-montage.jpg",
+      "sha256": "80ba18d8254f291375cfdd77bb8bdb8b3f22fa3a13f25f88256022afc3417a1e"
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-detail-before-montage.jpg",
+      "sha256": "9da8b192cb27561ea351c58250b4398800e44723d96f924fa26c944d3a05d215"
+    },
+    {
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-detail-final-montage.jpg",
+      "sha256": "0486c192abb6a198d9fbb480605778ebc9640c10557934ca867033fb4741d6a5"
+    }
+  ],
+  "observations": {
+    "architecture": "Pale substantial timber-framed inn, steep closed cross-gable slate roof, seated chimney, layered raised stair-bay/porch roofs; distinct from baseline block roof.",
+    "front": "Central entry remains clear; external left stair and right porch settle/table form distinct inhabited zones.",
+    "roof": "Final nine-view review found no confirmed roof/wall holes; formerly exposed coplanar infill caps corrected below slate. Small pale stair-bay cheek is intentional local closure, not open sky.",
+    "tavern": "Exact retained two communal tables/benches, mugs/candles, barrels/cradles, bar/bottles/key cabinet, hearth/crane/tools remain visible and functionally reachable.",
+    "guests": "Three original beds with bedding/chests/bags, washstand and window seat remain; separate covered stair reaches guest gallery.",
+    "riders": "Lintel artwork and original tankard trade sign remain exposed; threshold inlay retained. Cellar annex is a separate unchanged right-hand neighbor; brown rear structure is the unchanged stable, not an inn canopy.",
+    "night": "Occupied warm windows/lamp points readable, but solo approach and dark retained props remain underlit without authored world lights."
+  },
+  "limits": [
+    "Auxiliary reviewer occasionally conflated tankard sign with geometric lintel and stable with a canopy; factual identity checked against decoded hierarchy and exact neighbor tuples.",
+    "No native acceptance claimed. Parent independent review required.",
+    "All local-only renders omit authored world light entities, terrain, and runtime component evaluation."
+  ]
+}

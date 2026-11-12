@@ -1,0 +1,33 @@
+{
+  "id": "nx-town-tower-house",
+  "sha256": "90723087ca8b5eb3d5e3e7d13828ee12e254266ad63504d07f7f4d14b4b29253",
+  "scale": 1,
+  "terrainY": 0,
+  "doors": [
+    {"name":"ground-entry","x":0,"z":[1.85,3.33],"floorY":0.02,"width":1.6,"headroom":2.2},
+    {"name":"upper-balcony-entry","x":0,"z":[2.48,2.73],"floorY":3.05,"width":1.4,"headroom":2.2}
+  ],
+  "waypoints": [
+    {"name":"outside","pos":[0,0,3.70]},
+    {"name":"door-threshold","pos":[0,0.02,2.15]},
+    {"name":"study-rug","pos":[0.35,0.0415,0.35]},
+    {"name":"study-desk-approach","pos":[0.40,0.0415,-0.6]}
+  ],
+  "protectedVolumes": [
+    {
+      "id":"nx-artwalk-b21-tower-ascension-count",
+      "min":[-0.81,2.22,2.788],
+      "max":[0.81,2.68,2.91],
+      "allowance":{
+        "min":[-0.81,2.22,2.788],
+        "max":[0.81,2.68,2.792],
+        "reason":"Only a 4mm deep backing-contact strip at the rider rear plane z=2.790 is permitted. Lintel contact is intentional; no host geometry may intrude into the relief face. Rider local origin remains [0,2.22,2.8225]."
+      }
+    }
+  ],
+  "notes":[
+    "Waypoints exercise real browser-collider ground entry and study circulation in both directions, not a live terrain walk.",
+    "Upper balcony aperture is triangle-checked separately. Internal/external ladders have geometry but no existing ladder comp, so no ground-to-upper climbing capability is claimed.",
+    "Source includes retained desk/book/quill/meridian/bookshelf/rug, upper bed/pillow/blanket/chest/candle stand, y=2.625 upper floor and y=3.05 balcony."
+  ]
+}

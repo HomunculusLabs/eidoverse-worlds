@@ -1,0 +1,119 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-11fe39c9-3ab",
+    "view": "first",
+    "startedAt": "2026-09-08T02:08:45.665Z"
+  },
+  "completedAt": "2026-09-08T02:08:45.900Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "5dbf0dc8318d6ce376d6fae3f3d0f3e98347990db46a41a602dc91263ca90ad1",
+  "bytes": 118868,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-hall",
+  "view": "interior",
+  "bodyPose": {
+    "p": [
+      8.383744170686523,
+      0.2,
+      -24.09731012699464
+    ],
+    "yaw": 2.828368080172068,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    0,
+    0.2,
+    2
+  ],
+  "requestedLookLocal": [
+    0,
+    0.2,
+    -2
+  ],
+  "targetBefore": {
+    "id": "nx-town-hall",
+    "lib": "store/c92c1f91ed4fd45f.glb",
+    "kind": "thing",
+    "pos": [
+      9,
+      0,
+      -26
+    ],
+    "yaw": -0.31322457341772525,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -5,
+        -0.2,
+        -3.473
+      ],
+      "max": [
+        5,
+        6.169,
+        4.854
+      ],
+      "size": [
+        10,
+        6.369,
+        8.326
+      ],
+      "center": [
+        0,
+        2.984,
+        0.691
+      ]
+    },
+    "tris": 2100
+  },
+  "targetAfter": {
+    "id": "nx-town-hall",
+    "lib": "store/c92c1f91ed4fd45f.glb",
+    "kind": "thing",
+    "pos": [
+      9,
+      0,
+      -26
+    ],
+    "yaw": -0.31322457341772525,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -5,
+        -0.2,
+        -3.473
+      ],
+      "max": [
+        5,
+        6.169,
+        4.854
+      ],
+      "size": [
+        10,
+        6.369,
+        8.326
+      ],
+      "center": [
+        0,
+        2.984,
+        0.691
+      ]
+    },
+    "tris": 2100
+  },
+  "beforeObservedAt": "2026-09-08T02:08:42.662Z",
+  "afterObservedAt": "2026-09-08T02:08:47.590Z",
+  "protectedBeforeSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "protectedAfterSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "file": "nx-town-hall-interior.png"
+}

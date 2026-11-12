@@ -1,0 +1,258 @@
+{
+  "status": "SOURCE_COMPLETE_DEPLOYMENT_HOLD",
+  "sourceRoot": "/Users/t3rpz/projects/eidoverse-worlds",
+  "id": "nx-town-market",
+  "geometryChanged": false,
+  "sourceChanged": false,
+  "hostFascia": "18/18 textile elements have positive-volume contact paths to foundation",
+  "unresolved": [
+    {
+      "gate": "visual",
+      "status": "HOLD_FROZEN_OUTBOARD_COMPANION",
+      "entity": "nx-dress-stringlights",
+      "reason": "Outboard interrupted wire segments and hooks cannot receive complete host-only support without exceeding frozen host X/Z envelope.",
+      "requiredAuthority": "Targeted scope amendment for companion support/cable/placement correction"
+    },
+    {
+      "gate": "functional",
+      "status": "HOLD_EXISTING_COMPANION_COLLIDER",
+      "entity": "nx-core-paths",
+      "reason": "Inherited unsupported box-top ground 0.058276183903217316 m; 14/14 floor failures baseline and candidate, zero body hits and push.",
+      "requiredAuthority": "Bill authorization for road collision correction; clarification timed out, no approval"
+    }
+  ],
+  "assets": [
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market.glb",
+      "sha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+      "bytes": 363960
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market-ensemble-after.glb",
+      "sha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+      "bytes": 488304
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "agents/arthur/village-overhaul/build-market.ts",
+      "sha256": "ec0089546fe7066743f7760f8a31a23f13d234743f5e2bbb53b060f97761db51",
+      "bytes": 5271
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build-dyehouse.ts",
+      "sha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63",
+      "bytes": 22688
+    },
+    {
+      "file": "agents/arthur/village-overhaul/kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51",
+      "bytes": 7085
+    },
+    {
+      "file": "agents/arthur/assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121",
+      "bytes": 17077
+    },
+    {
+      "file": "agents/arthur/assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c",
+      "bytes": 6116
+    },
+    {
+      "file": "agents/arthur/cabin-overhaul/verify-player.ts",
+      "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555",
+      "bytes": 16136
+    },
+    {
+      "file": "agents/arthur/village-overhaul/verify-approach.ts",
+      "sha256": "ff1a4cdb4cc40c2550f9baa116b7e6da9bfe7850757ff0a065c8f45925689aa4",
+      "bytes": 4865
+    },
+    {
+      "file": "agents/arthur/village-overhaul/preflight.ts",
+      "sha256": "4b9a11d33cfbda0dfce6930e45210b1470f24f43b362db363eb99d73641cc356",
+      "bytes": 9320
+    },
+    {
+      "file": "agents/arthur/cabin-overhaul/render.ts",
+      "sha256": "623d07cd956d2a1c8dfb26878b98de24c7cd076ed43d1dd57ef5ff8a783e496f",
+      "bytes": 11623
+    },
+    {
+      "file": "tools/core-stub.mjs",
+      "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866",
+      "bytes": 1228
+    },
+    {
+      "file": "agents/arthur/cabin-overhaul/runtime/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+      "bytes": 42422
+    },
+    {
+      "file": "agents/arthur/cabin-overhaul/runtime/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+      "bytes": 5459
+    },
+    {
+      "file": "agents/arthur/cabin-overhaul/runtime/manifest.json",
+      "sha256": "17cc1515735bf558a6c20b0a693c87e59a811c57f874ea0a80923617538f2a36",
+      "bytes": 527
+    },
+    {
+      "file": "node_modules/three/package.json",
+      "sha256": "8308e43d6d6dd4c636c2dfe2e724da07dcd9fe4349bba6afb56f2c5ba6625391",
+      "bytes": 3574
+    }
+  ],
+  "evidence": [
+    {
+      "file": "agents/arthur/village-overhaul/market-support-notes.md",
+      "sha256": "92e18e9205a8aa0766ff472768b5fd22c68ac3e809164ed4356612173b7f7902",
+      "bytes": 9287
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/market-support-proof.json",
+      "sha256": "bc8752baba4c0fe2db89bb288f24f04dd67097a4cd29804bf2d731f568ac55ee",
+      "bytes": 117779
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market-determinism.json",
+      "sha256": "2dba015705e0888d3f6ceade99d750311b0b3f8bb6cd7157dd82d6e5325c6974",
+      "bytes": 742
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market-verification.json",
+      "sha256": "55632af9608da6649930d2e975c8a6a65d7a90b2129d1c7e1850de21a2c4ae79",
+      "bytes": 39518
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market-approach.json",
+      "sha256": "474d89961cf2d3038aac14923f1035c2606b18d7aeed279f02f932a89af99f3e",
+      "bytes": 14337
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market-approach-contract.json",
+      "sha256": "344757610c0dfcb545bc14767e98f49ed8d47ffceabb446a0b39a8d27fe0e4fe",
+      "bytes": 8045
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market-baseline-approach.json",
+      "sha256": "813d5a45e2da0e4b50338f176304627c73fb12b6ddc243e92c0d9743728888f6",
+      "bytes": 6746
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build/nx-town-market-ensemble-after.json",
+      "sha256": "0f4484cbc18974fc4277fe05f773c421e74e4feb67db5316be924c4a257abbd7",
+      "bytes": 1918
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-native-review.md",
+      "sha256": "e92ee938b5552c5613af1561800908c9703eef9cbdf74e01e7fff9cd29872c1e",
+      "bytes": 1926
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-native.log",
+      "sha256": "006563cea5f272218c5a0834d887712c9b41e7496cda6e8314f4974ef378de13",
+      "bytes": 5759
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-proof-command.md",
+      "sha256": "7a5f453c9ef412de8394aa133db0d2a4ce38c6b54862bd20e2af78c808a1f094",
+      "bytes": 7913
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-render-control.json",
+      "sha256": "3abcdb533d13d0eaf4608b854d0b35a1c4dfe375cf5884f2a5c9021a06077d2d",
+      "bytes": 4964
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/render-manifest.json",
+      "sha256": "729ea697be3329cc1f82d6a8feb3d5d0743a1bc9252bb791963581cd88fb59b8",
+      "bytes": 11763
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/camera.json",
+      "sha256": "8ce00ffb6fad130b6568da4f23e883d0a9a7c5d30f4caf7cb5e2832846b34e89",
+      "bytes": 3153
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/aerial.png",
+      "sha256": "d2c7cab186d641061c860c9897eb42a11b99538e3dd5771b0fa46634a24e49a6",
+      "bytes": 115212
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/back.png",
+      "sha256": "becb955eeb6c2b1604177a8ebfc12c2d53bb47ec1fa8525cbe0b799dedd34388",
+      "bytes": 42315
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/front.png",
+      "sha256": "bfcb345974526b2d4f5d94210bdd05f63c65ec4840fb4f98857ab74113d74f50",
+      "bytes": 63406
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/gameplay.png",
+      "sha256": "aae20b8667aee16bf8a5cd6922ad5cdd8e7b4adf929f1cb214ef6c37d5df8c87",
+      "bytes": 40310
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/interior.png",
+      "sha256": "60c75bf278162ca60a54b7c03e2d71080cd97b64350e90ef2b8657b40a532ced",
+      "bytes": 211110
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/left.png",
+      "sha256": "2e23e5575df0a1a698ad2765d68b47bded090f0924892663ad0cddef342a556b",
+      "bytes": 36007
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/night.png",
+      "sha256": "957f2d4e2e5818b8a0d0335f183efe54e6cc0d6494a10d3d717888fd9d08b12b",
+      "bytes": 27618
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/right.png",
+      "sha256": "97877c683bbc83fbc96bee887c8faa2dbdb357518cbe9a5a399bfae05700680f",
+      "bytes": 41569
+    },
+    {
+      "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/top.png",
+      "sha256": "0f6d66d2647087b0b74d4f3a4beb28c6b900845960f366f1281be3a311c4e8f6",
+      "bytes": 51143
+    }
+  ],
+  "frozenScopeFilesChecked": 123,
+  "frozenScopeUnchanged": true,
+  "allTenNeighborBytePoseCompRecordsPreserved": true,
+  "nativeReview": {
+    "model": "gpt-6-astra",
+    "sandbox": "read-only",
+    "images": [
+      {
+        "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/aerial.png",
+        "sha256": "d2c7cab186d641061c860c9897eb42a11b99538e3dd5771b0fa46634a24e49a6",
+        "bytes": 115212
+      },
+      {
+        "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/front.png",
+        "sha256": "bfcb345974526b2d4f5d94210bdd05f63c65ec4840fb4f98857ab74113d74f50",
+        "bytes": 63406
+      },
+      {
+        "file": "agents/arthur/village-overhaul/reviews/market-support-ensemble-current/right.png",
+        "sha256": "97877c683bbc83fbc96bee887c8faa2dbdb357518cbe9a5a399bfae05700680f",
+        "bytes": 41569
+      }
+    ],
+    "billApproval": false,
+    "verdict": "HOST_FASCIA_NO_REPAIR__ENSEMBLE_HOLD"
+  },
+  "limits": [
+    "No live world state, upload, placement, road correction, GUI, or commits.",
+    "Public-runtime CPU collider against full supplied assembly on assumed flat local terrain, not live walking.",
+    "Model source and bytes are unchanged; task cannot be fully repaired under current scope, and no partial scaffold was added.",
+    "PNG determinism not asserted; current image pins are separately native-reviewed.",
+    "Parent preflight not run or bypassed; geometry and functional read-only helpers used directly."
+  ]
+}

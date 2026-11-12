@@ -245,7 +245,7 @@ export function kick(arg) {
 bus.on('punt', ({ actor, id, dir, power }) => {
   if (!enabled) return;                       // volunteering is the mod's act
   const obj = entities.get(id);
-  if (!obj || comps.get(id)?.motion) return;
+  if (!obj || comps.get(id)?.motion || comps.get(id)?.pilot != null) return;
   const p = Math.min(MAX_KICK, Math.max(0.5, Number(power) || 5));
   let d3 = Array.isArray(dir) && dir.length === 3 ? new THREE.Vector3(dir[0], dir[1], dir[2]) : null;
   if (!d3) {
@@ -264,6 +264,7 @@ bus.on('punt', ({ actor, id, dir, power }) => {
   const mine = actor === CONFIG.name;
   const delay = mine ? 0 : 120 + Math.random() * 200;
   setTimeout(() => {
+    if (comps.get(id)?.pilot != null) return; // opt-in may arrive during volunteer jitter
     if (!mine && Date.now() - (lastClaimed.get(id) ?? 0) < 1200) return;  // someone's on it
     if (sims.has(id) || pendingKicks.has(id)) return;
     pendingKicks.set(id, { launch, silent: !mine });
@@ -279,10 +280,35 @@ bus.on('punt', ({ actor, id, dir, power }) => {
 let companionClaimedFn = () => false;
 export function registerCompanionClaim(fn) { companionClaimedFn = fn; }
 
+// Join samples may precede GLB/placeholder creation. Keep only the latest
+// sample for a reserved model, through its placeholder, never in folded state.
+const awaitingModels = new Map();
+function receiveState(msg) {
+  const id = msg.id, obj = entities.get(id);
+  if (sims.has(id) || !Array.isArray(msg.p)) return;
+  if (entities.has(id) && (!obj || obj.userData.placeholder)) awaitingModels.set(id, msg);
+  else awaitingModels.delete(id);
+  if (!obj) return;
+  obj.position.set(msg.p[0], msg.p[1], msg.p[2]);
+  if (Array.isArray(msg.q) && msg.q.length === 4) obj.quaternion.set(msg.q[0], msg.q[1], msg.q[2], msg.q[3]);
+  else if (msg.yaw != null) {
+    if (msg.mode === 'pilot') obj.rotation.set(0, msg.yaw, 0); // upright, not inherited tumble
+    else obj.rotation.y = msg.yaw;
+  }
+}
+bus.on('entity', ({ id, kind }) => {
+  if (['remove', 'place', 'light'].includes(kind)) awaitingModels.delete(id);
+  else if (['placeholder', 'spawn'].includes(kind) && awaitingModels.has(id)) receiveState(awaitingModels.get(id));
+});
+bus.on('hydrated', () => awaitingModels.clear());
+bus.on('net', n => { if (!n.joined || n.status !== 'live') awaitingModels.clear(); });
+
 bus.on('lease', (msg) => {
   const { op, id } = msg;
+  if (op === 'released' || op === 'granted') awaitingModels.delete(id);
   if (op === 'claimed') lastClaimed.set(id, Date.now());
   if (op === 'granted') {
+    if (msg.mode === 'pilot') { pendingKicks.delete(id); sims.delete(id); return; }
     const pk = pendingKicks.get(id);
     pendingKicks.delete(id);
     if (pk) { startSim(id, pk.launch, msg.from ?? null); if (!pk.silent) flashHint(`you kick ${id}`); }
@@ -303,15 +329,9 @@ bus.on('lease', (msg) => {
     flashHint(`${msg.to} took ${id}`);
     return;
   }
-  if (op === 'state' && !sims.has(id)) {
-    // another holder's sim, rendered verbatim — this is the whole receiver,
-    // and it is CORE, not the mod: it runs whether or not physics is enabled
-    // (see the switch above — a receiver you can disable forks the world)
-    const obj = entities.get(id);
-    if (!obj || !Array.isArray(msg.p)) return;
-    obj.position.set(msg.p[0], msg.p[1], msg.p[2]);
-    if (Array.isArray(msg.q) && msg.q.length === 4) obj.quaternion.set(msg.q[0], msg.q[1], msg.q[2], msg.q[3]);
-    else if (msg.yaw != null) obj.rotation.y = msg.yaw;
+  if (op === 'state') {
+    // CORE receiver: disabling the physics sender must not fork the world.
+    receiveState(msg);
     return;
   }
   // 'claimed' / 'released': nothing to do — states carry the motion, and the

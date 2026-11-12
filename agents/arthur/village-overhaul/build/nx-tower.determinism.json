@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "id": "nx-tower",
+  "sources": {
+    "build-tower.ts": "91943734811f405121ff657f12115209691339bbeca6f5e1f7072fdc52b36d34",
+    "build-belltower.ts": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc",
+    "kit.ts": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+  },
+  "sourceSha256": "91943734811f405121ff657f12115209691339bbeca6f5e1f7072fdc52b36d34",
+  "sharedLaneHelperSha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc",
+  "beforeSha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+  "runs": [
+    {
+      "run": 1,
+      "startTimeNs": "1788837810582861000",
+      "mtimeNs": "1788837811014636999",
+      "mtimeChanged": true,
+      "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "bytes": 537072,
+      "command": [
+        "bun",
+        "agents/arthur/village-overhaul/build-tower.ts"
+      ],
+      "stdout": "{\"id\":\"nx-tower\",\"sha256\":\"ff9eae241fca8867586441f93a09c567aa47f43dd09ac2d406a5595f7ca5bd02\",\"bytes\":482116,\"nodes\":9,\"meshes\":9,\"bounds\":{\"min\":[-3.25,-0.20000000298023224,-3.25],\"max\":[3.506999969482422,8.39999998807907,3.5999999994039538]},\"parts\":384}\n{\"id\":\"nx-tower\",\"sha256\":\"648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b\",\"bytes\":537072,\"triangles\":5822,\"bounds\":{\"min\":[-3.25,-0.20000000298023224,-3.25],\"max\":[3.506999969482422,8.399999618530273,3.5999999046325684]},\"retained\":[\"tw3_4\",\"tw3_6\",\"tw3_7\",\"tw3_8\",\"tw3_9\",\"tw3_10\",\"tw3_11\",\"flame\",\"lamp\"]}\n",
+      "stderr": "",
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "startTimeNs": "1788837811026537000",
+      "mtimeNs": "1788837811480472208",
+      "mtimeChanged": true,
+      "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "bytes": 537072,
+      "command": [
+        "bun",
+        "agents/arthur/village-overhaul/build-tower.ts"
+      ],
+      "stdout": "{\"id\":\"nx-tower\",\"sha256\":\"ff9eae241fca8867586441f93a09c567aa47f43dd09ac2d406a5595f7ca5bd02\",\"bytes\":482116,\"nodes\":9,\"meshes\":9,\"bounds\":{\"min\":[-3.25,-0.20000000298023224,-3.25],\"max\":[3.506999969482422,8.39999998807907,3.5999999994039538]},\"parts\":384}\n{\"id\":\"nx-tower\",\"sha256\":\"648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b\",\"bytes\":537072,\"triangles\":5822,\"bounds\":{\"min\":[-3.25,-0.20000000298023224,-3.25],\"max\":[3.506999969482422,8.399999618530273,3.5999999046325684]},\"retained\":[\"tw3_4\",\"tw3_6\",\"tw3_7\",\"tw3_8\",\"tw3_9\",\"tw3_10\",\"tw3_11\",\"flame\",\"lamp\"]}\n",
+      "stderr": "",
+      "exitCode": 0
+    }
+  ]
+}

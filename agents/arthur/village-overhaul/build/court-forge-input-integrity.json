@@ -1,0 +1,160 @@
+{
+  "kind": "local-frozen-input-integrity-no-live-readback",
+  "sourcePins": {
+    "contracts.json": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f",
+    "folded-hosts.json": "b96918a4086952fec4ce76d09ba5c2c5c5a51800e481ab83c9fb8babe4a53502",
+    "protected.json": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db",
+    "downloads.json": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659"
+  },
+  "hosts": {
+    "nx-court": {
+      "lib": "store/77cab2c3cc3a39c7.glb",
+      "pos": [
+        18.9,
+        -1.5946487083102603e-08,
+        -14.8
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "comp": {
+        "particles:smoke": {
+          "preset": "smoke",
+          "origin": [
+            -4.9,
+            3.2,
+            -0.8
+          ],
+          "count": 50,
+          "size": 0.4,
+          "speed": 0.35
+        }
+      }
+    },
+    "nx-forge": {
+      "lib": "store/620120c4d6f0b4a0.glb",
+      "pos": [
+        22.11785473473295,
+        0,
+        -7.957568494595163
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "comp": {
+        "motion:fire_fg_coals": {
+          "type": "bob",
+          "axis": "y",
+          "amp": 0.014,
+          "period": 1.8
+        },
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            0,
+            0.45,
+            0.42
+          ],
+          "count": 84
+        }
+      }
+    }
+  },
+  "companions": [
+    {
+      "id": "nx-forge",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-forge.glb",
+      "sha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+      "pass": true
+    },
+    {
+      "id": "nx-town-roads",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-town-roads.glb",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "pass": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-town-streetlamps.glb",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "pass": true
+    },
+    {
+      "id": "nx-artwalk-h2",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/neighbors/nx-artwalk-h2.glb",
+      "sha256": "93ee3f01223c31f6d3693be28846301b2124e44351a42610cfdd7fc1d200640b",
+      "pass": true
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-artwalk-h5.glb",
+      "sha256": "22d786a4e7b64851f140ab36c8216cd62d3f83363210768e3b96e48ca2966e9b",
+      "pass": true
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "pass": true
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-artwalk-b23-cistern-rain-count.glb",
+      "sha256": "1cb32012817cb1d9afce50f4295e15afb6b3bb711a69d297d7d25bfd8b984d5f",
+      "pass": true
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-artwalk-b28-bake-count.glb",
+      "sha256": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+      "pass": true
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "pass": true
+    },
+    {
+      "id": "nx-town-hall",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-town-hall.glb",
+      "sha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16",
+      "pass": true
+    },
+    {
+      "id": "nx-sign-bakery",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-sign-bakery.glb",
+      "sha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+      "pass": true
+    },
+    {
+      "id": "nx-sign-smithy",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-sign-smithy.glb",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "pass": true
+    },
+    {
+      "id": "nx-core-paths",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-core-paths.glb",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "pass": true
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-dress-ne-anvilpad-001.glb",
+      "sha256": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+      "pass": true
+    },
+    {
+      "id": "nx-cistern",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-cistern.glb",
+      "sha256": "a73d5f60417acdc0ee66b4905254b345e6bcb983d07a84fb954c199147056647",
+      "pass": true
+    },
+    {
+      "id": "nx-court",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-court.glb",
+      "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

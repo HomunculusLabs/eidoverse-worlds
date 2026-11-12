@@ -1,0 +1,71 @@
+{
+  "schema": "scholar-approval-draft-verification-v1",
+  "id": "nx-tower",
+  "status": "READY",
+  "draftOnly": true,
+  "startedAt": "2026-09-08T04:17:43.258Z",
+  "finishedAt": "2026-09-08T04:17:48.338Z",
+  "model": {
+    "file": "build/nx-tower.glb",
+    "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b"
+  },
+  "slot": {
+    "file": "reviews/parent-scholar-draft/slot.json",
+    "sha256": "1faea89b45196bfb3924a64be5395bd422d85d5b6366f71b49560ba59d2ce19f"
+  },
+  "review": {
+    "file": "reviews/parent-scholar-draft/review.json",
+    "sha256": "22e73cfbd007de30b17b41c8366971350abc806315c329f0142a535139061325"
+  },
+  "approvalDraft": {
+    "file": "reviews/parent-scholar-draft/approval-draft.json",
+    "sha256": "f5e02ec787edf34d0de9620413abe542be8dfd5f8257b13988ee9d9091a4150d"
+  },
+  "gates": {
+    "validateCampaign": "PASS",
+    "sourceGate": "PASS",
+    "validatePlan": "PASS",
+    "boundsGate": "PASS"
+  },
+  "routes": [
+    {
+      "file": "build/nx-tower.route.json",
+      "status": "PASS",
+      "legs": 12,
+      "passingLegs": 12,
+      "doorHits": 0,
+      "protectedVolumeHits": 0,
+      "supportReplayStatus": "PASS",
+      "supportSamples": 424,
+      "unsupportedSamples": 0
+    },
+    {
+      "file": "build/nx-tower.upper-route.json",
+      "status": "PASS",
+      "legs": 16,
+      "passingLegs": 16,
+      "doorHits": 0,
+      "protectedVolumeHits": 0,
+      "supportReplayStatus": "PASS",
+      "supportSamples": 433,
+      "unsupportedSamples": 0
+    }
+  ],
+  "socketStatus": "PASS",
+  "neighbors": 11,
+  "sourcePins": 13,
+  "enginePins": 69,
+  "writeScope": "agents/arthur/village-overhaul/reviews/parent-scholar-draft",
+  "worldVerbs": 0,
+  "uploads": 0,
+  "buildersExecuted": 0,
+  "approvedReadOnlyObservation": {
+    "before": "0dc70e263620e618b8a9697260e5ecfb0dabcb25ebea51b9fd02ad95bccc986a",
+    "after": "0dc70e263620e618b8a9697260e5ecfb0dabcb25ebea51b9fd02ad95bccc986a",
+    "note": "Never written here; a separate parent rollout may continue."
+  },
+  "remaining": [
+    "Parent-only current-live-context preflight and served-byte verification before any deployment.",
+    "Approval DRAFT is not applied authority; approved.json unchanged by this task."
+  ]
+}

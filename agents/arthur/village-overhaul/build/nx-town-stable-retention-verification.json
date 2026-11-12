@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "id": "nx-town-stable",
+  "modelSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "sourceSha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+  "retainedComponents": 25,
+  "retainedTriangles": 452,
+  "precision": "0.1mm vertex rounding; triangle multiplicity respected",
+  "triangleClearanceControls": {
+    "allVerticesOutsideCrossingVolume": true,
+    "crossingTriangleClips": true,
+    "clearTriangleDoesNotClip": true
+  },
+  "exactXZ": true,
+  "sourceFiles": [
+    {
+      "file": "agents/arthur/assets/mkv3-stable.ts",
+      "sha256": "31c295567d0974f304957a8353806c64ad51c9b090c46c12b75a4833e76cdc05"
+    },
+    {
+      "file": "agents/arthur/assets/mkv3-woodyard27.ts",
+      "sha256": "92f55381391275b6ff3aae57cbfa6de91c9b4a959c86ab97b4a3d6382a71fad4"
+    }
+  ],
+  "limitations": [
+    "Test proves geometry preservation with explicitly recorded rigid repositions, not original material-byte identity.",
+    "No clean static typecheck claimed: editor diagnostics reported incompatible Three Mesh/Object3D and Bun import.meta declarations. Actual Bun builds, retention tests and GLB/browser decoding were exercised."
+  ]
+}

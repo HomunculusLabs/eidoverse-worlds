@@ -1,0 +1,21 @@
+{
+  "status": "DETERMINISTIC_DOUBLE_BUILD_PASS",
+  "runs": [
+    {
+      "sha256": "b5b3f1022785657167b43dffb04e501a83f1b76c53d06e0cf4998384177a265f",
+      "bytes": 779708,
+      "mtimeBefore": 1788828827385837291,
+      "mtimeAfter": 1788828943213249624,
+      "mtimeAdvanced": true
+    },
+    {
+      "sha256": "b5b3f1022785657167b43dffb04e501a83f1b76c53d06e0cf4998384177a265f",
+      "bytes": 779708,
+      "mtimeBefore": 1788828943213249624,
+      "mtimeAfter": 1788828943735343416,
+      "mtimeAdvanced": true
+    }
+  ],
+  "builderSha256": "34a01575f7062fd73cafafcca364875f3ae546c75c6846a2b9725e0fff85cebd",
+  "kitSha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72"
+}

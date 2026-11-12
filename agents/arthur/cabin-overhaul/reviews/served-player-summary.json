@@ -1,0 +1,37 @@
+[
+  {
+    "id": "nx-town-row-cottage",
+    "status": "PASS",
+    "sha256": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+    "legs": 10,
+    "failures": []
+  },
+  {
+    "id": "nx-town-garden-cottage",
+    "status": "PASS",
+    "sha256": "2f301cb171ea052a7a4f32501da9204ba892944528354f134cb6cbd68eafe3fa",
+    "legs": 10,
+    "failures": []
+  },
+  {
+    "id": "nx-town-longhouse",
+    "status": "PASS",
+    "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+    "legs": 16,
+    "failures": []
+  },
+  {
+    "id": "nx-town-bunkhouse",
+    "status": "PASS",
+    "sha256": "629c898898991499f91bd499bacbd11f22990e26416e1ef86ce197dec0d9f4a7",
+    "legs": 22,
+    "failures": []
+  },
+  {
+    "id": "nx-town-tower-house",
+    "status": "PASS",
+    "sha256": "4e9a9c7c538c8be6a2b36f574c0a69edb547aa28f5c62741f8ec161822928ad9",
+    "legs": 6,
+    "failures": []
+  }
+]

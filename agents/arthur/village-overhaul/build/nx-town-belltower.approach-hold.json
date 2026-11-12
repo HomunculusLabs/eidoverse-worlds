@@ -1,0 +1,231 @@
+{
+  "status": "HOLD",
+  "id": "nx-town-belltower",
+  "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+  "terrainY": 0,
+  "hostEnvelope": {
+    "min": [
+      -1.7,
+      0,
+      -1.7
+    ],
+    "max": [
+      1.7,
+      7.6,
+      1.7
+    ],
+    "size": [
+      3.4,
+      7.6,
+      3.4
+    ],
+    "center": [
+      0,
+      3.8,
+      0
+    ]
+  },
+  "collar": {
+    "inner": 1.71,
+    "outer": 1.75,
+    "strips": [
+      {
+        "min": [
+          -1.75,
+          0.023276183903217312,
+          -1.75
+        ],
+        "max": [
+          -1.71,
+          20,
+          1.75
+        ]
+      },
+      {
+        "min": [
+          1.71,
+          0.023276183903217312,
+          -1.75
+        ],
+        "max": [
+          1.75,
+          20,
+          1.75
+        ]
+      },
+      {
+        "min": [
+          -1.75,
+          0.023276183903217312,
+          -1.75
+        ],
+        "max": [
+          1.75,
+          20,
+          -1.71
+        ]
+      },
+      {
+        "min": [
+          -1.75,
+          0.023276183903217312,
+          1.71
+        ],
+        "max": [
+          1.75,
+          20,
+          1.75
+        ]
+      }
+    ]
+  },
+  "road": {
+    "id": "nx-core-paths",
+    "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+    "localBox": {
+      "min": [
+        -14.627634048461914,
+        -0.001480687060393393,
+        -15.20024299621582
+      ],
+      "max": [
+        17.97972297668457,
+        0.058276183903217316,
+        13.981254577636719
+      ]
+    },
+    "top": 0.058276183903217316,
+    "exact": false,
+    "pillar": false,
+    "corners": [
+      {
+        "host": [
+          -1.75,
+          0,
+          -1.75
+        ],
+        "roadLocal": [
+          8.974873734152917,
+          0,
+          6.5
+        ],
+        "inside": true
+      },
+      {
+        "host": [
+          -1.75,
+          0,
+          1.75
+        ],
+        "roadLocal": [
+          6.5,
+          0,
+          4.025126265847083
+        ],
+        "inside": true
+      },
+      {
+        "host": [
+          1.75,
+          0,
+          -1.75
+        ],
+        "roadLocal": [
+          6.5,
+          0,
+          8.974873734152917
+        ],
+        "inside": true
+      },
+      {
+        "host": [
+          1.75,
+          0,
+          1.75
+        ],
+        "roadLocal": [
+          4.025126265847083,
+          0,
+          6.5
+        ],
+        "inside": true
+      }
+    ]
+  },
+  "physicalFloorTolerance": 0.035,
+  "lowestCompatible": 0.023276183903217312,
+  "trianglesExamined": 14349,
+  "contacts": [],
+  "neighbors": [
+    {
+      "id": "nx-hearth",
+      "sha256": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1"
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448"
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d"
+    },
+    {
+      "id": "nx-dress-fountain",
+      "sha256": "f4fcc0ac3b76b2f8bef6d7406be09efddad2d8982977a592c85ae117c9906777"
+    },
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "sha256": "6c81c3877cf2f4cb5678216cd41abcf333764bbe810dcba8fe9ed281fe6c4369"
+    },
+    {
+      "id": "nx-artwalk-b22-mapboard-eight-ways",
+      "sha256": "61148de2bd3b97800e0ef702deb34330b6c56fb4828a46f6617f76cf76a7e6ff"
+    },
+    {
+      "id": "nx-core-paths",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999"
+    },
+    {
+      "id": "nx-artwalk-b26-wayband",
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368"
+    },
+    {
+      "id": "nx-artwalk-b34-wayband-e",
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368"
+    },
+    {
+      "id": "nx-town-mapboard",
+      "sha256": "c483ec49a7520349d41940efaae1b156c3a2e8b420596703040e5bff0c22134c"
+    },
+    {
+      "id": "nx-approach-lamp-e",
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a"
+    },
+    {
+      "id": "nx-approach-lamp-n",
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a"
+    }
+  ],
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "reason": "No decoded geometry intersects the complete exterior collar at any support-compatible height up to 20m. The unchanged road OBB covers its whole convex outer square and supplies phantom ground. No host-only geometry inside the preserved +/-1.7m envelope (even +1mm tolerance) can supply support in this exterior collar. Any continuous grounded exterior-to-foundation route crosses it.",
+  "limits": [
+    "Conditional on the frozen exact neighbor bytes and existing flat terrainY=0 contract; no live terrain/controller verification.",
+    "Not a claim about flying, teleportation or a route starting already on the host platform.",
+    "Repair requires scoped road/runtime support correction or changed external support/envelope authority; neither is authorized here."
+  ]
+}

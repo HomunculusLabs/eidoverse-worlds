@@ -1,0 +1,254 @@
+{
+  "status": "PASS",
+  "models": [
+    {
+      "model": "shrine",
+      "sourceSha256": "56d03e821f0f3a65ca8b87fc5e77a70cecc17e0fa18e02fcf83a62338a20400f",
+      "deterministic": true,
+      "runs": [
+        {
+          "iteration": 1,
+          "sha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+          "bytes": 128956,
+          "mtimeNs": 1788833594025665583,
+          "previousMtimeNs": 1788833291055677249,
+          "startNs": 1788833593774515000,
+          "endNs": 1788833594030101000,
+          "stdout": {
+            "id": "shrine",
+            "sha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+            "bytes": 128956,
+            "nodes": 10,
+            "meshes": 10,
+            "bounds": {
+              "min": [
+                -1.2500000017881394,
+                -0.01600000369548798,
+                -1.4000000476837158
+              ],
+              "max": [
+                1.2500000017881394,
+                2.1925000004470347,
+                2.5000000476837156
+              ]
+            },
+            "parts": 53
+          }
+        },
+        {
+          "iteration": 2,
+          "sha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+          "bytes": 128956,
+          "mtimeNs": 1788833594306021416,
+          "previousMtimeNs": 1788833594025665583,
+          "startNs": 1788833594030343000,
+          "endNs": 1788833594310204000,
+          "stdout": {
+            "id": "shrine",
+            "sha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+            "bytes": 128956,
+            "nodes": 10,
+            "meshes": 10,
+            "bounds": {
+              "min": [
+                -1.2500000017881394,
+                -0.01600000369548798,
+                -1.4000000476837158
+              ],
+              "max": [
+                1.2500000017881394,
+                2.1925000004470347,
+                2.5000000476837156
+              ]
+            },
+            "parts": 53
+          }
+        }
+      ]
+    },
+    {
+      "model": "gates",
+      "sourceSha256": "26e9db4c12ee34bd9ab9531b2e41f5a0f379e7fd3bd31f74d733bcc3091511d8",
+      "deterministic": true,
+      "runs": [
+        {
+          "iteration": 1,
+          "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+          "bytes": 55828,
+          "mtimeNs": 1788833594517628749,
+          "previousMtimeNs": 1788833291470269458,
+          "startNs": 1788833594310536000,
+          "endNs": 1788833594521226000,
+          "stdout": {
+            "id": "gates",
+            "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+            "bytes": 55828,
+            "nodes": 6,
+            "meshes": 6,
+            "bounds": {
+              "min": [
+                -1.800000011920929,
+                -2.98023217215615e-10,
+                -0.25000000660419464
+              ],
+              "max": [
+                1.800000011920929,
+                3.772500000447035,
+                0.25
+              ]
+            },
+            "parts": 37
+          }
+        },
+        {
+          "iteration": 2,
+          "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+          "bytes": 55828,
+          "mtimeNs": 1788833594723879499,
+          "previousMtimeNs": 1788833594517628749,
+          "startNs": 1788833594521397000,
+          "endNs": 1788833594727388000,
+          "stdout": {
+            "id": "gates",
+            "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+            "bytes": 55828,
+            "nodes": 6,
+            "meshes": 6,
+            "bounds": {
+              "min": [
+                -1.800000011920929,
+                -2.98023217215615e-10,
+                -0.25000000660419464
+              ],
+              "max": [
+                1.800000011920929,
+                3.772500000447035,
+                0.25
+              ]
+            },
+            "parts": 37
+          }
+        }
+      ]
+    }
+  ],
+  "readOnlyInputCurrentHashes": {
+    "agents/arthur/village-overhaul/kit.ts": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51",
+    "agents/arthur/village-overhaul/before/contracts.json": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f",
+    "agents/arthur/village-overhaul/before/protected.json": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db",
+    "agents/arthur/village-overhaul/before/folded-hosts.json": "b96918a4086952fec4ce76d09ba5c2c5c5a51800e481ab83c9fb8babe4a53502",
+    "agents/arthur/village-overhaul/before/downloads.json": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659"
+  },
+  "servedBaselineFilesHashChecked": [
+    "nx-town-hall",
+    "nx-town-inn",
+    "nx-town-stable",
+    "nx-town-woodyard",
+    "nx-court",
+    "nx-forge",
+    "nx-town-market",
+    "nx-town-dyehouse",
+    "nx-town-potter",
+    "nx-town-kiln",
+    "nx-town-belltower",
+    "nx-tower",
+    "nx-town-shrine",
+    "nx-town-gate-n",
+    "nx-town-gate-s",
+    "nx-town-gate-e",
+    "nx-town-gate-w",
+    "nx-hearth",
+    "nx-shutters",
+    "nx-town-roads",
+    "nx-town-streetlamps",
+    "nx-dress-banner",
+    "nx-dress-stringlights",
+    "nx-dress-giftshelf",
+    "nx-dress-fountain",
+    "nx-dress-goats",
+    "nx-dress-hens",
+    "nx-dress-hutch",
+    "nx-dress-harvestcart",
+    "nx-dress-churn",
+    "nx-dress-milkstand",
+    "nx-dress-coop",
+    "nx-dress-stablebench",
+    "nx-dress-well",
+    "nx-dress-chess",
+    "nx-artwalk-h5",
+    "nx-artwalk-b1-hall-charter",
+    "nx-struct-orrery",
+    "nx-artwalk-b2-inn-lintel",
+    "nx-artwalk-b2-inn-threshold",
+    "nx-artwalk-b4-golden-top",
+    "nx-artwalk-b4-golden-threshold",
+    "nx-artwalk-b4-golden-hinges",
+    "nx-artwalk-b5-belltower-rings",
+    "nx-artwalk-b6-market-lissa-left",
+    "nx-artwalk-b6-market-lissa-right",
+    "nx-artwalk-b8-stable-harmonic-rein",
+    "nx-artwalk-b9-dyehouse-crossing-loom",
+    "nx-artwalk-b11-woodyard-heartwood-measure",
+    "nx-artwalk-b13-south-tide-west",
+    "nx-artwalk-b13-south-tide-east",
+    "nx-artwalk-b14-east-gate-dawn-fan",
+    "nx-artwalk-b15-west-gate-dusk-arcs",
+    "nx-artwalk-b16-forge-seven-strikes",
+    "nx-artwalk-b18-row-warp-count",
+    "nx-artwalk-b19-longhouse-feast-count",
+    "nx-artwalk-b20-bunkhouse-four-rooms",
+    "nx-artwalk-b21-tower-ascension-count",
+    "nx-struct-orreryring",
+    "nx-artwalk-b22-mapboard-eight-ways",
+    "nx-artwalk-b23-cistern-rain-count",
+    "nx-artwalk-b24-well-depth",
+    "nx-artwalk-b25-welcome-village-mark",
+    "nx-artwalk-b27-waterline",
+    "nx-artwalk-b28-bake-count",
+    "nx-artwalk-b29-strike-count",
+    "nx-artwalk-b30-market-tally",
+    "nx-artwalk-b31-sheaf-tally",
+    "nx-artwalk-b32-morning-measure",
+    "nx-artwalk-b33-milking-order",
+    "nx-struct-waystone-n",
+    "nx-struct-waystone-e",
+    "nx-struct-waystone-s",
+    "nx-struct-waystone-w",
+    "nx-struct-halt",
+    "nx-sign-stable-001",
+    "nx-sign-dyer-001",
+    "nx-struct-crossing",
+    "nx-sign-woodyard-001",
+    "nx-artwalk-b7-shrine-stars",
+    "nx-approach-nw-lane-001",
+    "nx-approach-ne-lane-002",
+    "nx-sign-bakery",
+    "nx-struct-hypar",
+    "nx-sign-smithy",
+    "nx-approach-sw-lane-003",
+    "nx-core-paths",
+    "nx-artwalk-b26-wayband",
+    "nx-artwalk-b34-wayband-e",
+    "nx-artwalk-b34-wayband-s",
+    "nx-artwalk-b34-wayband-w",
+    "nx-town-mapboard",
+    "nx-approach-lamp-e",
+    "nx-approach-lamp-s",
+    "nx-approach-lamp-n",
+    "nx-approach-lamp-w",
+    "nx-dress-ne-anvilpad-001",
+    "nx-cistern",
+    "nx-welcome",
+    "nx-struct-cellardoor",
+    "nx-struct-waterstair",
+    "nx-dress-charcoal",
+    "nx-artwalk-b3-ruled-porch",
+    "nx-sign-potter-001",
+    "nx-artwalk-b12-kiln-heat-contours",
+    "nx-sign-kiln-001",
+    "nx-town-bunkhouse",
+    "nx-town-longhouse",
+    "nx-town-row-cottage",
+    "nx-town-tower-house"
+  ]
+}

@@ -386,7 +386,7 @@ export class WorldSession {
    *  right now, and the last transform they streamed — the server's memory,
    *  so a crashed or preempted simulator never loses an object. Presence
    *  plane: never persisted; outcomes commit as `place` verbs. */
-  leases = new Map<string, { holder: Client; lastState: { p: number[]; yaw?: number; q?: number[] } | null; lastAt: number }>();
+  leases = new Map<string, { holder: Client; lastState: { p: number[]; yaw?: number; q?: number[] } | null; lastAt: number; mode?: "pilot"; budget?: number[]; pilot?: { config: any; signature: string } }>();
   frameSeq = 0;
   recPath: string | null = null; // frames archive, created lazily on first recorded frame
   lastRoster = "";               // last written roster line — deltas only
@@ -477,7 +477,32 @@ export class World {
   set lastRoster(v: string) { this.session.lastRoster = v; }
 
   append(actor: string, verb: string, args: Record<string, unknown>): LogEntry {
-    return this.log.append(actor, verb, args);
+    const entry = this.log.append(actor, verb, args);
+    // Authored root authority outranks a pilot stream. Invalidate only AFTER
+    // the append succeeds, and WITHOUT committing the older leased pose over
+    // this newer intent. This seam covers WS, behaviors and other verb callers.
+    const rootEdit = ["place", "spawn", "light", "remove", "motion", "mount", "dismount"].includes(verb)
+      || (verb === "comp" && args.type === "motion");
+    const id = String(verb === "behavior" ? args.attach ?? "" : rootEdit ? args.id ?? "" : "");
+    const L = this.leases.get(id);
+    if (L?.mode === "pilot") {
+      L.holder.ws.send(JSON.stringify({ type: "lease", op: "lost", mode: "pilot", id, why: "new authored root authority" }));
+      if (verb === "behavior") {
+        // A binding supplies no replacement transform: preserve the accepted
+        // pose. Let the caller broadcast this entry first so the derived place
+        // follows it in sequence order. No socket callback can interleave;
+        // a same-stack authored root edit must still win over this settlement.
+        queueMicrotask(() => {
+          if (this.leases.get(id) !== L) return;
+          try { this.settleLease(id); }
+          catch (err) { console.error(`[world:${this.name}] pilot settle after behavior ${id}`, err); }
+        });
+      } else {
+        this.leases.delete(id);
+        this.broadcast({ type: "lease", op: "released", id });
+      }
+    }
+    return entry;
   }
   broadcast(msg: unknown, except?: Client) { this.session.broadcast(msg, except); }
   settleLease(id: string, final?: { p?: number[] | null; yaw?: number | null }) {

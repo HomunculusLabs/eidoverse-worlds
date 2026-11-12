@@ -1,0 +1,68 @@
+{
+ "nx-town-hall": {
+  "lib": "dc871edb1b45ce0f",
+  "http": "200",
+  "sha16": "8a4f16dd7a86361f",
+  "pos": [
+   9,
+   0,
+   -26
+  ],
+  "yaw": -0.3132
+ },
+ "nx-town-inn": {
+  "lib": "861225bb15230d9b",
+  "http": "200",
+  "sha16": "858604174a71249b",
+  "pos": [
+   36,
+   0,
+   0
+  ],
+  "yaw": -1.5708
+ },
+ "nx-town-kiln": {
+  "lib": "3e96c8b074852ddc",
+  "http": "200",
+  "sha16": "668692f76251e460",
+  "pos": [
+   19.159,
+   -0.021,
+   22.432
+  ],
+  "yaw": -2.4432
+ },
+ "nx-town-tower-house": {
+  "lib": "90723087ca8b5eb3",
+  "http": "200",
+  "sha16": "4e9a9c7c538c8be6",
+  "pos": [
+   -9,
+   0,
+   26
+  ],
+  "yaw": 2.8284
+ },
+ "nx-struct-ellipsecourt": {
+  "lib": "2aa37e9d29ba43f2",
+  "http": "200",
+  "sha16": "fbf80b5c2cdfcbba",
+  "pos": [
+   -3.75,
+   -0.04,
+   -50.75
+  ],
+  "yaw": 1.5708
+ },
+ "nx-dress-stringlights": {
+  "lib": "0c0dee37b07aa7df",
+  "http": "200",
+  "sha16": "3ce2cdb28d368551",
+  "pos": [
+   -6,
+   2.6,
+   7.5
+  ],
+  "yaw": 0.7854
+ }
+}

@@ -1,0 +1,1330 @@
+{
+  "status": "PASS",
+  "id": "nx-town-stable",
+  "modelSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "preRoofSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "triangleCount": 4432,
+  "unchangedTriangles": 4432,
+  "changedTriangles": 0,
+  "allGeometryBelowYUnchanged": 3.04,
+  "nonRoofPartsIdentical": true,
+  "materialTextureBytesIdentical": true,
+  "backing": [
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -1.715000033378601,
+        2.282988470107317,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          -1.715000033378601,
+          2.282988470107317,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -1.715000033378601,
+        2.4299615517258646,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          -1.715000033378601,
+          2.4299615517258646,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -1.715000033378601,
+        2.576934633344412,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          -1.715000033378601,
+          2.576934633344412,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        0,
+        2.282988470107317,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          0,
+          2.282988470107317,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        0,
+        2.4299615517258646,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          0,
+          2.4299615517258646,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        0,
+        2.576934633344412,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          0,
+          2.576934633344412,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        1.715000033378601,
+        2.282988470107317,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          1.715000033378601,
+          2.282988470107317,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        1.715000033378601,
+        2.4299615517258646,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          1.715000033378601,
+          2.4299615517258646,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        1.715000033378601,
+        2.576934633344412,
+        -2.2015000004470315
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010001044571432693,
+        "point": [
+          1.715000033378601,
+          2.576934633344412,
+          -2.202500104904175
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        -0.15,
+        2.12,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          -0.15,
+          2.12,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        -0.15,
+        2.35,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          -0.15,
+          2.35,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        -0.15,
+        2.6,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          -0.15,
+          2.6,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        0,
+        2.12,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          0,
+          2.12,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        0,
+        2.35,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          0,
+          2.35,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        0,
+        2.6,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          0,
+          2.6,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        0.15,
+        2.12,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          0.15,
+          2.12,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        0.15,
+        2.35,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          0.15,
+          2.35,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign backing",
+      "at": [
+        0.15,
+        2.6,
+        2.101
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0010000953674316193,
+        "point": [
+          0.15,
+          2.6,
+          2.0999999046325684
+        ],
+        "mesh": "village_nx-town-stable_7"
+      },
+      "pass": true
+    }
+  ],
+  "roofSkin": [
+    {
+      "at": [
+        -2.4,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_11",
+      "material": "cabin-slate-alt",
+      "point": [
+        -2.4,
+        3.570000003541863,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.8,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -1.8,
+        3.883999901903581,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.2,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -1.2,
+        4.202000099972806,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -0.6,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_11",
+      "material": "cabin-slate-alt",
+      "point": [
+        -0.6,
+        4.51600001765909,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.6,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_11",
+      "material": "cabin-slate-alt",
+      "point": [
+        0.6,
+        4.51600001765909,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        1.2,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        1.2,
+        4.202000099972806,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        1.8,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        1.8,
+        3.883999901903581,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.4,
+        6,
+        -1.9
+      ],
+      "first": "village_nx-town-stable_11",
+      "material": "cabin-slate-alt",
+      "point": [
+        2.4,
+        3.5700000035418626,
+        -1.9
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -2.4,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -2.4,
+        3.570000003541863,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.8,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -1.8,
+        3.883999901903581,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.2,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -1.2,
+        4.202000099972807,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -0.6,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -0.6,
+        4.51600001765909,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.6,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        0.6,
+        4.51600001765909,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        1.2,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        1.2,
+        4.202000099972806,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        1.8,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        1.8,
+        3.883999901903581,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.4,
+        6,
+        0.3
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        2.4,
+        3.570000003541863,
+        0.3
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -2.4,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -2.4,
+        3.570000003541863,
+        2.03
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.8,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -1.8,
+        3.883999901903581,
+        2.03
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.2,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_11",
+      "material": "cabin-slate-alt",
+      "point": [
+        -1.2,
+        4.202000099972806,
+        2.03
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -0.6,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        -0.6,
+        4.51600001765909,
+        2.03
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.6,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        0.6,
+        4.51600001765909,
+        2.03
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        1.2,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_11",
+      "material": "cabin-slate-alt",
+      "point": [
+        1.2,
+        4.202000099972806,
+        2.03
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        1.8,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        1.8,
+        3.883999901903581,
+        2.03
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.4,
+        6,
+        2.03
+      ],
+      "first": "village_nx-town-stable_10",
+      "material": "cabin-slate",
+      "point": [
+        2.4,
+        3.5700000035418626,
+        2.03
+      ],
+      "pass": true
+    }
+  ],
+  "main": {
+    "geometryStatus": "PASS",
+    "geometryFailures": [],
+    "accessStatus": "PASS",
+    "collider": {
+      "exact": true,
+      "pillar": false,
+      "classification": {
+        "roomScale": true,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "routeCount": 20,
+    "routesPassed": 20,
+    "physicalSupport": true,
+    "supportSamples": 608,
+    "neighbors": [
+      "nx-artwalk-b8-stable-harmonic-rein",
+      "nx-sign-stable-001"
+    ],
+    "doors": [
+      {
+        "name": "road_entry_fixed_sign_left",
+        "requiredWidth": 1.65,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -2.175,
+          0.22,
+          1.6
+        ],
+        "max": [
+          -0.5250000000000001,
+          2.4200000000000004,
+          2.575
+        ],
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "name": "central_aisle",
+        "requiredWidth": 1.65,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -0.825,
+          0.2,
+          -0.95
+        ],
+        "max": [
+          0.825,
+          2.4000000000000004,
+          1.15
+        ],
+        "hits": 0,
+        "examples": []
+      }
+    ],
+    "protectedVolumes": [
+      {
+        "id": "nx-artwalk-b8-stable-harmonic-rein",
+        "min": [
+          -2.450000047683716,
+          2.220000006556511,
+          -2.2025000004470314
+        ],
+        "max": [
+          2.450000047683716,
+          2.639923096895218,
+          -2.049837674796578
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "id": "nx-sign-stable-001",
+        "min": [
+          -0.25,
+          2.0199999809265137,
+          2.100000000670554
+        ],
+        "max": [
+          0.25,
+          2.700000047683716,
+          2.423776185512544
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      }
+    ]
+  },
+  "context": {
+    "geometryStatus": "PASS",
+    "geometryFailures": [],
+    "accessStatus": "PASS",
+    "collider": {
+      "exact": true,
+      "pillar": false,
+      "classification": {
+        "roomScale": true,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "routeCount": 20,
+    "routesPassed": 20,
+    "physicalSupport": true,
+    "supportSamples": 608,
+    "neighbors": [
+      "nx-dress-coop",
+      "nx-dress-stablebench",
+      "nx-artwalk-b8-stable-harmonic-rein",
+      "nx-sign-stable-001",
+      "nx-town-inn"
+    ],
+    "doors": [
+      {
+        "name": "road_entry_fixed_sign_left",
+        "requiredWidth": 1.65,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -2.175,
+          0.22,
+          1.6
+        ],
+        "max": [
+          -0.5250000000000001,
+          2.4200000000000004,
+          2.575
+        ],
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "name": "central_aisle",
+        "requiredWidth": 1.65,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -0.825,
+          0.2,
+          -0.95
+        ],
+        "max": [
+          0.825,
+          2.4000000000000004,
+          1.15
+        ],
+        "hits": 0,
+        "examples": []
+      }
+    ],
+    "protectedVolumes": [
+      {
+        "id": "nx-artwalk-b8-stable-harmonic-rein",
+        "min": [
+          -2.450000047683716,
+          2.220000006556511,
+          -2.2025000004470314
+        ],
+        "max": [
+          2.450000047683716,
+          2.639923096895218,
+          -2.049837674796578
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "id": "nx-sign-stable-001",
+        "min": [
+          -0.25,
+          2.0199999809265137,
+          2.100000000670554
+        ],
+        "max": [
+          0.25,
+          2.700000047683716,
+          2.423776185512544
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      }
+    ]
+  },
+  "baseline": {
+    "geometryStatus": "FAIL",
+    "geometryFailures": [
+      "door road_entry_fixed_sign_left: 50 triangles intrude into required 1.65m x 2.2m clearance",
+      "door central_aisle: 88 triangles intrude into required 1.65m x 2.2m clearance",
+      "walk in aisle_return->feed_aisle failed",
+      "walk in feed_aisle->left_stall_care failed",
+      "walk in left_stall_care->cross_aisle failed",
+      "walk in cross_aisle->right_stall_care failed",
+      "walk out right_stall_care->cross_aisle failed",
+      "walk out cross_aisle->left_stall_care failed",
+      "walk out left_stall_care->feed_aisle failed",
+      "walk out feed_aisle->aisle_return failed",
+      "walk out aisle_return->saddle_station failed",
+      "walk out saddle_station->central_grooming_aisle failed",
+      "walk out central_grooming_aisle->vestibule failed",
+      "walk out vestibule->threshold failed",
+      "walk out threshold->stoop failed",
+      "walk out stoop->road_approach failed"
+    ],
+    "accessStatus": "FAIL",
+    "collider": {
+      "exact": true,
+      "pillar": false,
+      "classification": {
+        "roomScale": true,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "routeCount": 20,
+    "routesPassed": 6,
+    "physicalSupport": true,
+    "supportSamples": 936,
+    "neighbors": [
+      "nx-artwalk-b8-stable-harmonic-rein",
+      "nx-sign-stable-001"
+    ],
+    "doors": [
+      {
+        "name": "road_entry_fixed_sign_left",
+        "requiredWidth": 1.65,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -2.175,
+          0.22,
+          1.6
+        ],
+        "max": [
+          -0.5250000000000001,
+          2.4200000000000004,
+          2.575
+        ],
+        "hits": 50,
+        "examples": [
+          {
+            "node": "st3_1",
+            "triangle": 155,
+            "intersectionMin": [
+              -2.050009250640869,
+              0.9719822113729168,
+              1.601
+            ],
+            "intersectionMax": [
+              -2.050009250640869,
+              2.249917507171631,
+              2.0000596046447754
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 156,
+            "intersectionMin": [
+              -2.050009250640869,
+              0.221,
+              1.601
+            ],
+            "intersectionMax": [
+              -2.050009250640869,
+              2.249917507171631,
+              2.0000596046447754
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 157,
+            "intersectionMin": [
+              -2.050009250640869,
+              0.221,
+              2.0000596046447754
+            ],
+            "intersectionMax": [
+              -1.999908447265625,
+              2.249917507171631,
+              2.0000596046447754
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 158,
+            "intersectionMin": [
+              -2.0494977740392777,
+              0.221,
+              2.0000596046447754
+            ],
+            "intersectionMax": [
+              -1.999908447265625,
+              2.249917507171631,
+              2.0000596046447754
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 161,
+            "intersectionMin": [
+              -1.999908447265625,
+              0.22100000000000003,
+              1.601
+            ],
+            "intersectionMax": [
+              -1.999908447265625,
+              1.4780085379862138,
+              1.9935248264548249
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 163,
+            "intersectionMin": [
+              -2.050009250640869,
+              2.249917507171631,
+              1.601
+            ],
+            "intersectionMax": [
+              -2.0187748851455023,
+              2.249917507171631,
+              2.0000596046447754
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 164,
+            "intersectionMin": [
+              -2.050009250640869,
+              2.249917507171631,
+              1.601
+            ],
+            "intersectionMax": [
+              -1.999908447265625,
+              2.249917507171631,
+              2.0000596046447754
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 165,
+            "intersectionMin": [
+              -0.650155782699585,
+              0.221,
+              1.8299808502197266
+            ],
+            "intersectionMax": [
+              -0.5260000000000001,
+              2.000073194503784,
+              1.8299808502197266
+            ]
+          }
+        ]
+      },
+      {
+        "name": "central_aisle",
+        "requiredWidth": 1.65,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -0.825,
+          0.2,
+          -0.95
+        ],
+        "max": [
+          0.825,
+          2.4000000000000004,
+          1.15
+        ],
+        "hits": 88,
+        "examples": [
+          {
+            "node": "st3_1",
+            "triangle": 0,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1800036430358887,
+              0.17995309829711914
+            ],
+            "intersectionMax": [
+              0.824,
+              1.2198864221572876,
+              0.17995309829711914
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 1,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1800036430358887,
+              0.17995309829711914
+            ],
+            "intersectionMax": [
+              0.630049467086792,
+              1.2198864221572876,
+              0.38002634048461914
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 2,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1800036430358887,
+              0.17995309829711914
+            ],
+            "intersectionMax": [
+              0.630049467086792,
+              1.2198864221572876,
+              0.38002634048461914
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 3,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1800036430358887,
+              0.38002634048461914
+            ],
+            "intersectionMax": [
+              0.824,
+              1.2198864221572876,
+              0.38002634048461914
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 4,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1800036430358887,
+              0.38002634048461914
+            ],
+            "intersectionMax": [
+              0.824,
+              1.2027660150724666,
+              0.38002634048461914
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 5,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1800036430358887,
+              0.17995309829711914
+            ],
+            "intersectionMax": [
+              0.824,
+              1.1800036430358887,
+              0.38002634048461914
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 6,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1800036430358887,
+              0.17995309829711914
+            ],
+            "intersectionMax": [
+              0.824,
+              1.1800036430358887,
+              0.2941412685691529
+            ]
+          },
+          {
+            "node": "st3_1",
+            "triangle": 8,
+            "intersectionMin": [
+              0.630049467086792,
+              1.1971240501207097,
+              0.17995309829711914
+            ],
+            "intersectionMax": [
+              0.824,
+              1.2198864221572876,
+              0.17995309829711914
+            ]
+          }
+        ]
+      }
+    ],
+    "protectedVolumes": [
+      {
+        "id": "nx-artwalk-b8-stable-harmonic-rein",
+        "min": [
+          -2.450000047683716,
+          2.220000006556511,
+          -2.2025000004470314
+        ],
+        "max": [
+          2.450000047683716,
+          2.639923096895218,
+          -2.049837674796578
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "id": "nx-sign-stable-001",
+        "min": [
+          -0.25,
+          2.0199999809265137,
+          2.100000000670554
+        ],
+        "max": [
+          0.25,
+          2.700000047683716,
+          2.423776185512544
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      }
+    ]
+  }
+}

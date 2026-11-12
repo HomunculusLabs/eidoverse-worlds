@@ -1,0 +1,840 @@
+{
+  "kind": "forensic-default-scene-triangles-not-a-repair",
+  "decision": "HOLD",
+  "sourceHashes": {
+    "court": "7f54b48320c6d2346fbed1ef70b3a0b4b4e91adfdc25f222f161952d864c8a0b",
+    "forge": "9b38d74f34e065592105790dd856e063cbaae59263aac4ff44e99dd0ed6c4935",
+    "kit": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51",
+    "self": "a4c6dce165a050a06822486c1b25a72cdf54044bb6cb43b58907d0e3957d8c87"
+  },
+  "hostHashes": {
+    "court": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+    "forge": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+    "baselineCourt": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245"
+  },
+  "frozenPins": [
+    {
+      "file": "before/contracts.json",
+      "sha256": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f",
+      "pass": true
+    },
+    {
+      "file": "before/folded-hosts.json",
+      "sha256": "b96918a4086952fec4ce76d09ba5c2c5c5a51800e481ab83c9fb8babe4a53502",
+      "pass": true
+    },
+    {
+      "file": "before/protected.json",
+      "sha256": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db",
+      "pass": true
+    },
+    {
+      "file": "before/downloads.json",
+      "sha256": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659",
+      "pass": true
+    }
+  ],
+  "assemblySelection": [
+    {
+      "id": "nx-forge",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge.glb",
+      "sha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "manifestShaMatches": true,
+      "pos": [
+        22.11785473473295,
+        0,
+        -7.957568494595163
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "selection": "candidate-host"
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "manifestShaMatches": true,
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "selection": "frozen-companion"
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "manifestShaMatches": true,
+      "pos": [
+        22.347652212343093,
+        -1.5946487083102603e-8,
+        -13.43276950636487
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "selection": "frozen-companion"
+    },
+    {
+      "id": "nx-sign-smithy",
+      "file": "agents/arthur/village-overhaul/before/nx-sign-smithy.glb",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "manifestShaMatches": true,
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "selection": "frozen-companion"
+    },
+    {
+      "id": "nx-court",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/court.glb",
+      "sha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "manifestShaMatches": true,
+      "pos": [
+        18.9,
+        -1.5946487083102603e-8,
+        -14.8
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "selection": "candidate-host"
+    }
+  ],
+  "upper": {
+    "imagePixel": [
+      628,
+      281
+    ],
+    "owner": "nx-court",
+    "origin": "new-host-part-not-baseline-or-sign",
+    "sourceFile": "build-court.ts",
+    "sourceLine": 117,
+    "partIndex": 576,
+    "partName": "outer_verge_cap",
+    "sourcePart": {
+      "name": "outer_verge_cap",
+      "min": [
+        6.399999999254942,
+        2.4999999997019766,
+        -2.4150000020861624
+      ],
+      "max": [
+        6.500000000745058,
+        2.640000000298023,
+        -2.1849999979138373
+      ]
+    },
+    "decodedBoundsCourtLocal": {
+      "min": [
+        6.400000095367432,
+        2.5,
+        -2.4149999618530273
+      ],
+      "max": [
+        6.5,
+        2.640000104904175,
+        -2.184999942779541
+      ]
+    },
+    "triangles": [
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4188,
+        "v": [
+          [
+            6.5,
+            2.640000104904175,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.5,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.640000104904175,
+            -2.4149999618530273
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4189,
+        "v": [
+          [
+            6.5,
+            2.5,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.5,
+            2.640000104904175,
+            -2.4149999618530273
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4190,
+        "v": [
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.4149999618530273
+          ],
+          [
+            6.400000095367432,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.184999942779541
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4191,
+        "v": [
+          [
+            6.400000095367432,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.400000095367432,
+            2.5,
+            -2.184999942779541
+          ],
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.184999942779541
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4192,
+        "v": [
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.4149999618530273
+          ],
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.640000104904175,
+            -2.4149999618530273
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4193,
+        "v": [
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.640000104904175,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.640000104904175,
+            -2.4149999618530273
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4194,
+        "v": [
+          [
+            6.400000095367432,
+            2.5,
+            -2.184999942779541
+          ],
+          [
+            6.400000095367432,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.5,
+            2.5,
+            -2.184999942779541
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4195,
+        "v": [
+          [
+            6.400000095367432,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.5,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.5,
+            2.5,
+            -2.184999942779541
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4196,
+        "v": [
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.184999942779541
+          ],
+          [
+            6.400000095367432,
+            2.5,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.640000104904175,
+            -2.184999942779541
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4197,
+        "v": [
+          [
+            6.400000095367432,
+            2.5,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.5,
+            -2.184999942779541
+          ],
+          [
+            6.5,
+            2.640000104904175,
+            -2.184999942779541
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4198,
+        "v": [
+          [
+            6.5,
+            2.640000104904175,
+            -2.4149999618530273
+          ],
+          [
+            6.5,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.4149999618530273
+          ]
+        ]
+      },
+      {
+        "node": "village_court_5",
+        "primitive": 0,
+        "triangleIndex": 4199,
+        "v": [
+          [
+            6.5,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.400000095367432,
+            2.5,
+            -2.4149999618530273
+          ],
+          [
+            6.400000095367432,
+            2.640000104904175,
+            -2.4149999618530273
+          ]
+        ]
+      }
+    ],
+    "assemblyBoundsForgeLocal": {
+      "min": [
+        -0.9729999046325677,
+        2.4999999840535128,
+        -4.091999961853029
+      ],
+      "max": [
+        -0.8729999999999993,
+        2.6400000889576876,
+        -3.8619999427795424
+      ]
+    },
+    "nearestOtherCourtTriangle": {
+      "gap": 0.30696110808963617,
+      "node": "village_court_1",
+      "triangleIndex": 181,
+      "from": [
+        6.400000095367432,
+        2.640000104904175,
+        -2.184999942779541
+      ],
+      "to": [
+        6.099999904632568,
+        2.640000104904175,
+        -2.119999885559082
+      ]
+    },
+    "remainingCourtBoundsIfCapRemoved": {
+      "min": [
+        -6.5,
+        -0.20000000298023224,
+        -2.940000057220459
+      ],
+      "max": [
+        6.46999979019165,
+        4.775000095367432,
+        3.000267505645752
+      ]
+    },
+    "baselineTrianglesEntirelyInCapBox": 0,
+    "connected": false,
+    "authority": "OUTSIDE FORGE-ONLY OWNERSHIP. Parent must repair court, not forge."
+  },
+  "lower": {
+    "imagePixel": [
+      740,
+      544
+    ],
+    "owner": "nx-artwalk-b29-strike-count",
+    "node": "b29_0",
+    "struckFaceTriangleIndex": 4,
+    "origin": "unchanged-frozen-artwork-not-sign-or-host",
+    "originalPart": {
+      "name": "back",
+      "file": "../assets/mkv3-artwalk-b29.ts",
+      "line": 26,
+      "sourceSha256": "96ea5bff41670866ce71fda494f40cf4289a346ef4ebb40a0f8ec85275a0454f",
+      "rawDecodedBounds": {
+        "min": [
+          2.4000000953674316,
+          0.6800000071525574,
+          -1.8975000381469727
+        ],
+        "max": [
+          4,
+          0.9800182580947876,
+          -1.852477788925171
+        ]
+      },
+      "rawTriangles": [
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 0,
+          "v": [
+            [
+              4,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.8975000381469727
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 1,
+          "v": [
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.8975000381469727
+            ],
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.852477788925171
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 2,
+          "v": [
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.852477788925171
+            ],
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.852477788925171
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 3,
+          "v": [
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.852477788925171
+            ],
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.852477788925171
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.852477788925171
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 4,
+          "v": [
+            [
+              4,
+              0.9800182580947876,
+              -1.852477788925171
+            ],
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.852477788925171
+            ],
+            [
+              4,
+              0.6800000071525574,
+              -1.852477788925171
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 5,
+          "v": [
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.852477788925171
+            ],
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              4,
+              0.6800000071525574,
+              -1.852477788925171
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 6,
+          "v": [
+            [
+              2.4000000953674316,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              4,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              4,
+              0.6800000071525574,
+              -1.852477788925171
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 7,
+          "v": [
+            [
+              4,
+              0.6800000071525574,
+              -1.852477788925171
+            ],
+            [
+              4,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.8975000381469727
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 8,
+          "v": [
+            [
+              4,
+              0.6800000071525574,
+              -1.8975000381469727
+            ],
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.8975000381469727
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.8975000381469727
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 9,
+          "v": [
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.8975000381469727
+            ],
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.852477788925171
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.8975000381469727
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 10,
+          "v": [
+            [
+              2.4000000953674316,
+              0.9800182580947876,
+              -1.852477788925171
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.852477788925171
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.8975000381469727
+            ]
+          ]
+        },
+        {
+          "node": "b29_0",
+          "owner": "b29_0",
+          "primitive": 0,
+          "triangleIndex": 11,
+          "v": [
+            [
+              4,
+              0.6800000071525574,
+              -1.852477788925171
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.8975000381469727
+            ],
+            [
+              4,
+              0.9800182580947876,
+              -1.852477788925171
+            ]
+          ]
+        }
+      ],
+      "interpretation": "12-triangle forged backing box; source used only to recover semantic name, never rebuilt"
+    },
+    "relativePlacementInCourt": [
+      3.199999999999999,
+      0,
+      -1.8749999999999996
+    ],
+    "tupleMatchesCapturedFolded": true,
+    "capturedComponentBag": {},
+    "assemblyMatchesExactFrozenTuple": true,
+    "file": "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb",
+    "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+    "downloadPinMatches": true,
+    "tuple": {
+      "lib": "store/a7df548e06d1412d.glb",
+      "pos": [
+        22.347652212343093,
+        -1.5946487083102603e-8,
+        -13.43276950636487
+      ],
+      "yaw": -0.90756,
+      "scale": 1
+    },
+    "sourceDefaultSceneNodes": [
+      "b29_0",
+      "b29_1",
+      "b29_2"
+    ],
+    "sourceTriangles": 108,
+    "assemblyBeforeTriangles": 108,
+    "assemblyAfterTriangles": 108,
+    "beforeTriangleHash": "a6eb853188e8307734b1e928fcaeeff956558789690775062f846495ed7c70d0",
+    "afterTriangleHash": "a6eb853188e8307734b1e928fcaeeff956558789690775062f846495ed7c70d0",
+    "geometryUnchanged": true,
+    "courtLocalBounds": {
+      "min": [
+        5.600000095367431,
+        0.6800000071525574,
+        -3.7910000085830684
+      ],
+      "max": [
+        7.199999999999999,
+        0.9800182580947876,
+        -3.7274777889251705
+      ]
+    },
+    "courtBaselineBounds": {
+      "min": [
+        -6.5,
+        -0.20000000298023224,
+        -2.940000057220459
+      ],
+      "max": [
+        6.5,
+        4.168248653411865,
+        3.000267505645752
+      ]
+    },
+    "gapBeyondCourtRear": 0.7874777317047115,
+    "forgeLocalBounds": {
+      "min": [
+        -1.7729999046325684,
+        0.6799999912060702,
+        -5.46800000858307
+      ],
+      "max": [
+        -0.17300000000000004,
+        0.9800182421483005,
+        -5.404477788925172
+      ]
+    },
+    "signSeparate": {
+      "id": "nx-sign-smithy",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286"
+    },
+    "authority": "FROZEN COMPANION; no relocation/rebuild/removal or out-of-envelope backing authorized."
+  },
+  "limits": [
+    "Triangle-hash comparison rounds transformed coordinates to 1e-6 m, preserves multiplicity, ignores winding. Full frozen source SHA checks are exact.",
+    "Nearest separation uses default-scene actual triangles and ExtendedTriangle.distanceToTriangle in decoded court local metres.",
+    "Default static assembly, not live component evaluation. No world connection, upload, credentials, or commits."
+  ]
+}

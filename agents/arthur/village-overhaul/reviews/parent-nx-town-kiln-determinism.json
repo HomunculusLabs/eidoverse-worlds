@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "id": "nx-town-kiln",
+  "builder": "build-kiln.ts",
+  "sha256": [
+    "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+    "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03"
+  ],
+  "method": "parent actually executed same builder twice; fresh bytes equal reviewed source"
+}

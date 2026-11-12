@@ -1,0 +1,119 @@
+{
+  "id": "nx-town-longhouse",
+  "scale": 1,
+  "terrainY": 0,
+  "doors": [
+    {
+      "name": "grade-porch-under-feast-plaque",
+      "x": 0,
+      "z": [
+        2.7,
+        4.65
+      ],
+      "floorY": 0,
+      "width": 1.6,
+      "headroom": 2.2
+    },
+    {
+      "name": "inner-door",
+      "x": 0,
+      "z": [
+        1.3,
+        2.7
+      ],
+      "floorY": 0.2,
+      "width": 1.68,
+      "headroom": 2.4
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "outside",
+      "pos": [
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "name": "porch",
+      "pos": [
+        0,
+        0,
+        3.5
+      ]
+    },
+    {
+      "name": "before-room-step",
+      "pos": [
+        0,
+        0,
+        3.05
+      ]
+    },
+    {
+      "name": "threshold",
+      "pos": [
+        0,
+        0.2,
+        2.55
+      ]
+    },
+    {
+      "name": "inside",
+      "pos": [
+        0,
+        0.2,
+        1.2
+      ]
+    },
+    {
+      "name": "hall",
+      "pos": [
+        0,
+        0.2,
+        0
+      ]
+    },
+    {
+      "name": "hearth",
+      "pos": [
+        -2.6,
+        0.2,
+        0
+      ]
+    },
+    {
+      "name": "hall-return",
+      "pos": [
+        0,
+        0.2,
+        0
+      ]
+    },
+    {
+      "name": "high-seat",
+      "pos": [
+        2.4,
+        0.2,
+        0
+      ]
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b19-longhouse-feast-count",
+      "min": [
+        -1.6,
+        2.22,
+        4.2875
+      ],
+      "max": [
+        1.6,
+        2.54,
+        4.405
+      ]
+    }
+  ],
+  "sha256": "e38bb2a4c79336980d0a6b7479959498dc0347ab69d611b089741af7cf63b29f"
+}

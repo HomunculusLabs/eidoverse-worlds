@@ -1,0 +1,62 @@
+[
+  {
+    "id": "nx-town-kiln",
+    "name": "approach",
+    "bodyLocal": [
+      5,
+      0,
+      5.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-tower",
+    "name": "approach",
+    "bodyLocal": [
+      7,
+      0,
+      14
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-tower",
+    "name": "interior",
+    "bodyLocal": [
+      0.7,
+      2.625,
+      0.65
+    ],
+    "lookLocal": [
+      -1.35,
+      2.625,
+      -0.5
+    ],
+    "note": "Revised matched BEFORE station following native independent framing review; nx-tower is the real upper study, not a ground-room view."
+  },
+  {
+    "id": "nx-town-kiln",
+    "name": "workstation",
+    "bodyLocal": [
+      1,
+      0,
+      4.8
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  }
+]

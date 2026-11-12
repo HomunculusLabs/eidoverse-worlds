@@ -1,0 +1,97 @@
+{
+  "id": "nx-town-woodyard",
+  "sourceSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "kind": "workstation",
+  "verdict": "accepted",
+  "visual": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/final-stable-woodyard.md",
+        "sha256": "b09088fa0978b3f5098178ef60561c2fdc1543c6ac59b39f2f966529ccf101cf"
+      },
+      {
+        "file": "reviews/parent-woodyard-final/aerial.png",
+        "sha256": "cd92181c1ced5398849343d00ea4f6710f2091c8ca3c3c800f145c698a4cf76f"
+      },
+      {
+        "file": "reviews/parent-woodyard-detail-final/front.png",
+        "sha256": "cc52abd6d438fd03f24bc87ce91b8e020a02f9fa1b5ecad31246ffbbee870c5b"
+      },
+      {
+        "file": "reviews/parent-woodyard-detail-final/interior.png",
+        "sha256": "afa6d7f4316c8973a5eb5fef2493013874ba9eee5158f8d2cb6438aca860ccd2"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "geometry": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/woodyard-geometry.json",
+        "sha256": "3a295db9b261513440ad3cf2cd09518519301db696fae8e5762575346028b6e1"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/woodyard-geometry.json",
+      "sha256": "3a295db9b261513440ad3cf2cd09518519301db696fae8e5762575346028b6e1"
+    }
+  },
+  "functional": {
+    "status": "passed",
+    "evidence": {
+      "file": "build/nx-town-woodyard-final-verification.json",
+      "sha256": "9cf7950bec1133ecea42bdf0b4328944b43bc0493a5a93bdde4b798511acccfd"
+    },
+    "kind": "workstation",
+    "verdict": "passed"
+  },
+  "sources": [
+    {
+      "file": "build-woodyard.ts",
+      "sha256": "f6fee33be5ae5630e1189c495616ddcbff2c2d8bd6126b1b77aa3a11223afed0"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "build-stable.ts",
+      "sha256": "27d18fbdb1e0b9e5cdd73169546eb79c4bb35cbc46670accfd2635f5712b95a0"
+    },
+    {
+      "file": "before/nx-town-woodyard.glb",
+      "sha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-woodyard-route-context.json",
+      "sha256": "e9ddd55536df0c456082c26b366fcfaca938b6e0ff45fc0853dc7fcf6eb031d8",
+      "mode": "workstation"
+    }
+  ],
+  "deterministic": {
+    "sha256": [
+      "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+      "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb"
+    ],
+    "evidence": {
+      "file": "reviews/parent-nx-town-woodyard-determinism.json",
+      "sha256": "e724f55ca394b1ab5ef1db9cf85a2fa1936218158b959b9e7e055e5ff57ad276"
+    }
+  },
+  "schema": "village-review-v1",
+  "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb"
+}

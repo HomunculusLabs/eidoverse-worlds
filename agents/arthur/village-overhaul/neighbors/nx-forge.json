@@ -1,0 +1,215 @@
+{
+  "host": {
+    "id": "nx-forge",
+    "lib": "store/620120c4d6f0b4a0.glb",
+    "kind": "thing",
+    "pos": [
+      22.11785473473295,
+      0,
+      -7.957568494595163
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:fire_fg_coals": {
+        "type": "bob",
+        "axis": "y",
+        "amp": 0.014,
+        "period": 1.8
+      },
+      "particles": {
+        "preset": "embers",
+        "origin": [
+          0,
+          0.45,
+          0.42
+        ],
+        "count": 84
+      }
+    },
+    "bbox": {
+      "min": [
+        -0.873,
+        -0.005,
+        -0.777
+      ],
+      "max": [
+        1.46,
+        2.1,
+        0.61
+      ],
+      "size": [
+        2.333,
+        2.105,
+        1.387
+      ],
+      "center": [
+        0.294,
+        1.047,
+        -0.083
+      ]
+    },
+    "tris": 964
+  },
+  "margin": 3,
+  "kind": "conservative-broadphase-not-a-collision-verdict",
+  "neighbors": [
+    {
+      "id": "nx-town-roads",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-roads.glb",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "hostLocalBounds": {
+        "min": [
+          -36.304508618008896,
+          -0.05000000074505806,
+          -6.629603390410011
+        ],
+        "max": [
+          21.611084911236617,
+          2.8900413513183594,
+          51.2859901388355
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "lib": "store/54555b39274bc00c.glb",
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "hostLocalBounds": {
+        "min": [
+          -0.37000000476837147,
+          1.0199999928474428,
+          0.35750000119209313
+        ],
+        "max": [
+          0.3700000047683717,
+          1.8800000143051148,
+          0.47748443424701714
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "lib": "store/a7df548e06d1412d.glb",
+      "pos": [
+        22.347652212343093,
+        -1.5946487083102603e-8,
+        -13.43276950636487
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "hostLocalBounds": {
+        "min": [
+          -1.7729999046325684,
+          0.6799999912060702,
+          -5.46800000858307
+        ],
+        "max": [
+          -0.17300000000000004,
+          0.9800182421483005,
+          -5.404477788925172
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-sign-smithy",
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-smithy.glb",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "hostLocalBounds": {
+        "min": [
+          -1.2729999993294479,
+          1.850000007895371,
+          -3.19699999731779
+        ],
+        "max": [
+          -0.5430000119209291,
+          2.450010045317551,
+          -2.9570055012106886
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "lib": "store/65d686b023348c9b.glb",
+      "pos": [
+        24.765,
+        0,
+        -4.57
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-ne-anvilpad-001.glb",
+      "sha256": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+      "hostLocalBounds": {
+        "min": [
+          2.87918580868077,
+          8.940696516468449e-10,
+          -0.8003353318304165
+        ],
+        "max": [
+          5.499185813449142,
+          1.18999445438385,
+          0.7996646920114414
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-court",
+      "lib": "store/77cab2c3cc3a39c7.glb",
+      "pos": [
+        18.9,
+        -1.5946487083102603e-8,
+        -14.8
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-court.glb",
+      "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "hostLocalBounds": {
+        "min": [
+          -13.873,
+          -0.20000001892671931,
+          -4.61700005722046
+        ],
+        "max": [
+          -0.8729999999999993,
+          4.168248637465378,
+          1.3232675056457506
+        ]
+      },
+      "protected": false
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "status": "VERIFIED_SUPPLEMENTAL_LIVE_WITH_LIMITATIONS",
+  "verifiedAt": "2026-09-08T03:22:38.671Z",
+  "checks": [
+    {
+      "check": "all pre-existing live evidence files and original live-views.json byte-unchanged",
+      "pass": true,
+      "files": 203
+    },
+    {
+      "check": "both exact deployed tuples in fresh final census",
+      "pass": true
+    }
+  ],
+  "liveFrames": [
+    {
+      "path": "reviews/live-recapture-01-renderer/nx-town-hall-approach.png",
+      "sha256": "725d7dd9a3dad36ccaf26203a500a32ad44f3f68b2ffd6cfa76e60aa1a1c39e1",
+      "status": "CAPTURED",
+      "id": "nx-town-hall",
+      "view": "approach",
+      "bodyLocal": [
+        -1.8,
+        0.2,
+        6.1
+      ],
+      "lookLocal": [
+        0,
+        0.2,
+        0.8
+      ],
+      "cameraLocal": [
+        -1.7615118942972878,
+        1.619359887086359,
+        5.930327223331021
+      ],
+      "camera": {
+        "pos": [
+          5.496895218213955,
+          1.619359887086359,
+          -20.900984210912895
+        ],
+        "quaternion": [
+          -0.035517834746813026,
+          -0.31464254367913497,
+          -0.011782549413004202,
+          0.9484723109565993
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "assignedBodyToAuthoredLightDistance": 6.763135367564366,
+      "cameraToAuthoredLightDistance": 6.248778451665925,
+      "authoredLightCenterNDC": [
+        -0.056495826070340885,
+        0.422242685449221,
+        0.9537390927509991
+      ],
+      "authoredLightBoundsNDC": null,
+      "authoredLightBearingFromCameraAxisDegrees": -2.245597703526384,
+      "horizontalHalfFovDegrees": 34.7641050397395,
+      "runtimeDayness": 1,
+      "runtimeExposure": 1,
+      "pointLightIntensities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "reviews/live-recapture-01-renderer/nx-town-hall-interior.png",
+      "sha256": "b8e31b45e271ff697e78068f98b8edefde6809f82cc9a80c9c010091e63679aa",
+      "status": "CAPTURED",
+      "id": "nx-town-hall",
+      "view": "interior",
+      "bodyLocal": [
+        -1.25,
+        0.2,
+        -2.05
+      ],
+      "lookLocal": [
+        0.3,
+        0.2,
+        3.6
+      ],
+      "cameraLocal": [
+        -1.1795641566823734,
+        1.6192184951178392,
+        -1.899494633793933
+      ],
+      "camera": {
+        "pos": [
+          8.46311493267276,
+          1.6192184951178392,
+          -28.170531245576246
+        ],
+        "quaternion": [
+          -0.0008508005868528543,
+          0.9990412715108024,
+          0.0374115115189592,
+          0.0227198759307242
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "assignedBodyToAuthoredLightDistance": 3.3249060137092585,
+      "cameraToAuthoredLightDistance": 2.4031703066749617,
+      "authoredLightCenterNDC": [
+        -0.4415393415533001,
+        0.9629517317354953,
+        0.8579995373865069
+      ],
+      "authoredLightBoundsNDC": null,
+      "authoredLightBearingFromCameraAxisDegrees": -17.03861441645234,
+      "horizontalHalfFovDegrees": 34.7641050397395,
+      "runtimeDayness": 1,
+      "runtimeExposure": 1,
+      "pointLightIntensities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "reviews/live-recapture-01-renderer/nx-town-inn-approach.png",
+      "sha256": "8ac2a0acb692efbca6fbcf1a2ba9244017e1f93ad10e375643caf7b8551c5374",
+      "status": "CAPTURED",
+      "id": "nx-town-inn",
+      "view": "approach",
+      "bodyLocal": [
+        0.9,
+        0.198,
+        5.7
+      ],
+      "lookLocal": [
+        2.65,
+        0.198,
+        3.55
+      ],
+      "cameraLocal": [
+        0.9961481339866642,
+        1.6173743864495136,
+        5.554919865761079
+      ],
+      "camera": {
+        "pos": [
+          30.44508013423892,
+          1.6173743864495136,
+          0.9961481339866651
+        ],
+        "quaternion": [
+          0.01606778258215516,
+          0.9024929516434591,
+          0.03379602666977876,
+          -0.429075899087918
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "assignedBodyToAuthoredLightDistance": 6.158823264228322,
+      "cameraToAuthoredLightDistance": 5.690886232345751,
+      "authoredLightCenterNDC": [
+        -1.7058193593980266,
+        0.534559776034799,
+        0.9198749758270041
+      ],
+      "authoredLightBoundsNDC": null,
+      "authoredLightBearingFromCameraAxisDegrees": -49.81553310971296,
+      "horizontalHalfFovDegrees": 34.7641050397395,
+      "runtimeDayness": 1,
+      "runtimeExposure": 1,
+      "pointLightIntensities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "reviews/live-recapture-01-renderer/nx-town-inn-interior.png",
+      "sha256": "82f2973482d2b95a53065b383193460792fb4bc93cd6d42a62fdce0f7ea464a8",
+      "status": "CAPTURED",
+      "id": "nx-town-inn",
+      "view": "interior",
+      "bodyLocal": [
+        3.2,
+        0.198,
+        -1.95
+      ],
+      "lookLocal": [
+        0.05,
+        0.198,
+        3.4
+      ],
+      "cameraLocal": [
+        3.13090729010648,
+        1.6175262114943443,
+        -1.7916835277072916
+      ],
+      "camera": {
+        "pos": [
+          37.79168352770729,
+          1.6175262114943443,
+          3.1309072901064803
+        ],
+        "quaternion": [
+          -0.03248723580382852,
+          0.4959526756985388,
+          0.01857214488416047,
+          0.8675428510521472
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "assignedBodyToAuthoredLightDistance": 4.321296564689817,
+      "cameraToAuthoredLightDistance": 3.6809276240571993,
+      "authoredLightCenterNDC": [
+        0.8398348246145776,
+        0.6038509840194793,
+        0.9051034699347392
+      ],
+      "authoredLightBoundsNDC": null,
+      "authoredLightBearingFromCameraAxisDegrees": 30.2387835724173,
+      "horizontalHalfFovDegrees": 34.7641050397395,
+      "runtimeDayness": 1,
+      "runtimeExposure": 1,
+      "pointLightIntensities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "reviews/live-recapture-01-renderer/nx-town-inn-detail.png",
+      "sha256": "42b28f6fc2da4a93e65ff0612c6fd81a0ba572825ab153bfe41fa3a4c825ac35",
+      "status": "CAPTURED",
+      "id": "nx-town-inn",
+      "view": "detail",
+      "bodyLocal": [
+        -1.65,
+        0.198,
+        -1.65
+      ],
+      "lookLocal": [
+        0.6,
+        0.198,
+        3.2
+      ],
+      "cameraLocal": [
+        -1.5574923125501028,
+        1.6173022594994058,
+        -1.5070794826579503
+      ],
+      "camera": {
+        "pos": [
+          37.50707948265795,
+          1.6173022594994058,
+          -1.557492312550103
+        ],
+        "quaternion": [
+          -0.020137387079945168,
+          0.8422727758304062,
+          0.03154093684981888,
+          0.5377510818577406
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "assignedBodyToAuthoredLightDistance": 3.174287951651519,
+      "cameraToAuthoredLightDistance": 2.287775524310875,
+      "authoredLightCenterNDC": [
+        -0.5717264547303109,
+        0.8634267291409091,
+        0.8498784568237701
+      ],
+      "authoredLightBoundsNDC": null,
+      "authoredLightBearingFromCameraAxisDegrees": -21.644626982183407,
+      "horizontalHalfFovDegrees": 34.7641050397395,
+      "runtimeDayness": 1,
+      "runtimeExposure": 1,
+      "pointLightIntensities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "reviews/live-recapture-02-renderer/nx-town-inn-approach.png",
+      "sha256": "fc79bb039cf2f236e82d40db32275062f1880f4483d1f0b7cb4e2cf59ad3fe04",
+      "status": "CAPTURED",
+      "id": "nx-town-inn",
+      "view": "approach",
+      "bodyLocal": [
+        1,
+        0.198,
+        3.85
+      ],
+      "lookLocal": [
+        2.85,
+        0.198,
+        3.95
+      ],
+      "cameraLocal": [
+        1.1740165449188318,
+        1.6176009265861768,
+        3.840210413766278
+      ],
+      "camera": {
+        "pos": [
+          32.15978958623372,
+          1.6176009265861768,
+          1.1740165449188327
+        ],
+        "quaternion": [
+          -0.001010277290774099,
+          0.9989353393704652,
+          0.037407544634305415,
+          0.026978560025353503
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "assignedBodyToAuthoredLightDistance": 4.522566085752646,
+      "cameraToAuthoredLightDistance": 4.081903878397868,
+      "authoredLightCenterNDC": [
+        3.7982478973374816,
+        -0.8422130010631773,
+        1.213037346285486
+      ],
+      "authoredLightBoundsNDC": {
+        "minX": 3.3508357045379515,
+        "maxX": 4.336755544643677,
+        "minY": -1.130156378584196,
+        "maxY": -0.6011335122745964
+      },
+      "authoredLightBearingFromCameraAxisDegrees": -110.7725431638162,
+      "horizontalHalfFovDegrees": 34.7641050397395,
+      "runtimeDayness": 1,
+      "runtimeExposure": 1,
+      "pointLightIntensities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "reviews/live-recapture-02-renderer/nx-town-inn-interior.png",
+      "sha256": "243b6bc82536ccfea468eec25912084be96732173085e4ebd44181ff13fdb5cc",
+      "status": "CAPTURED",
+      "id": "nx-town-inn",
+      "view": "interior",
+      "bodyLocal": [
+        3.2,
+        0.198,
+        -0.6
+      ],
+      "lookLocal": [
+        0,
+        0.198,
+        3
+      ],
+      "cameraLocal": [
+        3.1023833247732213,
+        1.6173950175776541,
+        -0.4569794101990676
+      ],
+      "camera": {
+        "pos": [
+          36.45697941019907,
+          1.6173950175776541,
+          3.1023833247732213
+        ],
+        "quaternion": [
+          -0.034137103514437654,
+          0.4093691211677106,
+          0.015329814722180292,
+          0.9116011066133061
+        ],
+        "fov": 55,
+        "aspect": 1.3333333333333333,
+        "near": 0.15
+      },
+      "assignedBodyToAuthoredLightDistance": 3.9027047031513935,
+      "cameraToAuthoredLightDistance": 3.220298516511611,
+      "authoredLightCenterNDC": [
+        1.240121521361981,
+        0.7468880127454367,
+        0.8746693790428691
+      ],
+      "authoredLightBoundsNDC": {
+        "minX": 1.117398142588417,
+        "maxX": 1.365011878017414,
+        "minY": 0.6022028228605838,
+        "maxY": 0.9175334309173209
+      },
+      "authoredLightBearingFromCameraAxisDegrees": 40.72039527703031,
+      "horizontalHalfFovDegrees": 34.7641050397395,
+      "runtimeDayness": 1,
+      "runtimeExposure": 1,
+      "pointLightIntensities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "localFrames": [
+    {
+      "path": "reviews/live-recapture-local-daylight/nx-town-hall-interior-LOCAL-DAYLIGHT.png",
+      "sha256": "a7afa75541a9526c3d11232cf0b5a62ad59fa3e6d63aaebd00fcb4a1dbc58f41",
+      "evidenceKind": "LOCAL_EXACT_SERVED_BYTE_DAYLIGHT_FILL_NOT_LIVE",
+      "sourceLib": "store/dc871edb1b45ce0f.glb",
+      "sourceServedSha256": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+      "sourceLiveFile": "live-recapture-01-renderer/nx-town-hall-interior.png",
+      "identicalRawPixelControl": true
+    },
+    {
+      "path": "reviews/live-recapture-local-daylight/nx-town-inn-detail-LOCAL-DAYLIGHT.png",
+      "sha256": "948fc564fb79e8502fa6bfbc52b7d40778922ac81f7bc9bf9a529ed65be086a4",
+      "evidenceKind": "LOCAL_EXACT_SERVED_BYTE_DAYLIGHT_FILL_NOT_LIVE",
+      "sourceLib": "store/861225bb15230d9b.glb",
+      "sourceServedSha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "sourceLiveFile": "live-recapture-01-renderer/nx-town-inn-detail.png",
+      "identicalRawPixelControl": true
+    },
+    {
+      "path": "reviews/live-recapture-local-daylight/nx-town-inn-approach-LOCAL-DAYLIGHT.png",
+      "sha256": "0c38a54ce7fd9e907ff032734c7401257f25783cfd43aa6e52aa6262bbcd3294",
+      "evidenceKind": "LOCAL_EXACT_SERVED_BYTE_DAYLIGHT_FILL_NOT_LIVE",
+      "sourceLib": "store/861225bb15230d9b.glb",
+      "sourceServedSha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "sourceLiveFile": "live-recapture-02-renderer/nx-town-inn-approach.png",
+      "identicalRawPixelControl": true
+    },
+    {
+      "path": "reviews/live-recapture-local-daylight/nx-town-inn-interior-LOCAL-DAYLIGHT.png",
+      "sha256": "e4f3c9c5da9fcd1af72ff3dcfbb4efd16d86b7724c82d984183e5d6dec59450d",
+      "evidenceKind": "LOCAL_EXACT_SERVED_BYTE_DAYLIGHT_FILL_NOT_LIVE",
+      "sourceLib": "store/861225bb15230d9b.glb",
+      "sourceServedSha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "sourceLiveFile": "live-recapture-02-renderer/nx-town-inn-interior.png",
+      "identicalRawPixelControl": true
+    }
+  ],
+  "manifests": [
+    {
+      "path": "reviews/live-recapture-01-renderer/manifest.json",
+      "sha256": "8ccc622d20ceb28ba75c50c099a64972a2f5b0869c1d17e9acbea98c82d54b3b",
+      "status": "CAPTURED",
+      "captured": 5,
+      "bodyClosed": true,
+      "rendererClosed": true,
+      "protectedChangesDuringCapture": []
+    },
+    {
+      "path": "reviews/live-recapture-02-renderer/manifest.json",
+      "sha256": "e89644640f3b6d8445031ce53cc5900382640830543b98fb279a664409a12dec",
+      "status": "CAPTURED",
+      "captured": 2,
+      "bodyClosed": true,
+      "rendererClosed": true,
+      "protectedChangesDuringCapture": []
+    }
+  ],
+  "diagnosticHTTP": [
+    {
+      "at": "2026-09-08T03:22:37.001Z",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "method": "GET",
+      "status": 200,
+      "sha256": "88c58cc75a70aa3b79730e3687ae15eb1ce53fa5809d374a6625daab37fb98ea"
+    }
+  ],
+  "counts": {
+    "body": {
+      "join": 3,
+      "pose": 610,
+      "verb": 0
+    },
+    "renderer": {
+      "join": 2,
+      "snapResult": 7,
+      "unknownRefused": 4,
+      "browserRead": 689,
+      "httpWriteRefused": 1
+    },
+    "directHTTPRead": 38,
+    "uploads": 0,
+    "allCaptureHTTPReadIncludingBrowser": 727,
+    "note": "Direct read count includes one failed urllib GET (403), both 503 /snap availability attempts, and both 404 pre-body probes. Browser read count includes all renderer asset origins. CLI package install and native model review API traffic are not world capture traffic."
+  },
+  "limitations": [
+    "Physical walking/clearance is not proved by assigned camera poses.",
+    "Capture darkness is not established as nighttime: live rig dayness=1, sky null / effectiveClock fixed noon.",
+    "No world light/sky/exposure correction was made.",
+    "Native review notes partial projected occlusions and inn window-bottom slivers needing separate interface inspection."
+  ],
+  "sky": {
+    "sky": null,
+    "effectiveClock": {
+      "mode": "fixed",
+      "hour": 12
+    },
+    "wireCounts": {
+      "join": 1,
+      "pose": 0,
+      "verb": 0
+    },
+    "bodyClosed": true
+  },
+  "local": {
+    "manifest": "reviews/live-recapture-local-daylight/manifest.json",
+    "worldRequests": 0,
+    "localReads": 11,
+    "browserClosed": true,
+    "serverClosed": true
+  },
+  "nativeReviews": [
+    {
+      "path": "reviews/live-recapture-native-review/review-v2.md",
+      "sha256": "4baf846f50b93ffb85d37e75bc16c7d75b5bf48cc205848301963d5ace7784d6",
+      "reviewer": "independent native gpt-6-astra / Codex CLI 0.153.4, ephemeral read-only; not coordinator native sight"
+    },
+    {
+      "path": "reviews/live-recapture-native-review/final-review.md",
+      "sha256": "7e37ec2e87505ea1ab713680858f93105f70883bf58de4cc5a582866a5927920",
+      "reviewer": "independent native gpt-6-astra / Codex CLI 0.153.4, ephemeral read-only; not coordinator native sight"
+    }
+  ],
+  "preferred": {
+    "hallDoorwayInterior": "reviews/live-recapture-01-renderer/nx-town-hall-interior.png",
+    "innPorch": "reviews/live-recapture-02-renderer/nx-town-inn-approach.png",
+    "innInterior": "reviews/live-recapture-02-renderer/nx-town-inn-interior.png",
+    "innDoorwayFill": "reviews/live-recapture-local-daylight/nx-town-inn-detail-LOCAL-DAYLIGHT.png"
+  }
+}

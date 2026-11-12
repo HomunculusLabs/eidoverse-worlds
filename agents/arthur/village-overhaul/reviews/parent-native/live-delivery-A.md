@@ -1,0 +1,15 @@
+Visual inspection of the seven supplied public-renderer snapshots verifies visible geometry and presentation only; it does not establish walking, collision, or interaction behavior. With fixed-noon telemetry, the darkness here is daytime underlighting, including in the stable interior.
+
+- **Hall exterior:** Two-storey façade, roof, timber framing, glazed windows, entrance canopy, stone plinths, and steps are visibly assembled. The doorway reveals interior furniture. Camera cropping cuts off part of the upper roof; the porch structure partially occludes the entrance. The foreground slabs have conspicuous dark gaps and raised rear strips, but the image alone does not establish a traversal defect.
+
+- **Inn exterior:** Roof silhouette, upper window, covered porch, exterior staircase, entrance opening, barrels, and seating are visible. Warm window surfaces remain legible. Dark porch timber and the hanging sign lose substantial detail against surrounding shadows. The well at left and structures at right are neighboring scene elements, not evidence of an inn defect.
+
+- **Stable exterior:** The visible gable wall, corner timbers, stone base, roof edge, and water trough appear assembled. This angle faces a largely blank wall and does **not** verify the entrance or stall access. Roof cropping is a camera limitation. The large insect artwork at right is inherited neighboring art, not a stable defect.
+
+- **Woodyard exterior:** Covered work area, braced posts, stacked logs, workbench, wall-mounted display, axe, and chopping block are visible. A specific presentation defect is poor daytime contrast: the display and sheltered work surfaces are so dark that their detail is difficult to read. The foreground post also occludes the bench/display; that obstruction is specific to this viewpoint.
+
+- **Shrine exterior:** Stepped stone platform, altar, shallow bowl, candle, rear panel, and small canopy are visible. Stone surfaces remain readable. The approach slabs are separated from the shrine by a visible stretch of dark ground; continuity of a finished approach is not demonstrated. The windmill and large framing element at left belong to the surrounding scene and compete with the shrine visually without establishing a shrine construction defect.
+
+- **Forge exterior:** Hearth arch, bright fire geometry, sparks, hood/chimney, anvil, and stump supports are visible. The sheltered façade at left is nearly black under the reported noon conditions. A conspicuous flat amber disc appears inside the hood above the hearth; its source cannot be determined from the snapshot. The insect sculpture behind it is neighboring art.
+
+- **Stable interior:** Stall partitions, timber framing, hay, feeding fixtures, window, hanging lanterns, and patterned floor are visible. Dark wood loses definition despite the noon state. A large amber disc visibly floats below the right lantern, separate from its housing—a specific lighting/visual-placement issue worth checking. Foreground partitions occlude portions of the stalls; this image cannot verify their full layout or accessibility.

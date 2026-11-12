@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "id": "nx-forge",
+  "builder": "build-forge.ts",
+  "sha256": [
+    "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+    "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58"
+  ],
+  "method": "parent actually executed same builder twice; fresh bytes equal reviewed source"
+}

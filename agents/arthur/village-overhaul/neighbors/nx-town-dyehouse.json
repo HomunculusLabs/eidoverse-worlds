@@ -1,0 +1,199 @@
+{
+  "host": {
+    "id": "nx-town-dyehouse",
+    "lib": "store/888be3597d2f772f.glb",
+    "kind": "thing",
+    "pos": [
+      -23,
+      0,
+      -23
+    ],
+    "yaw": 0.941,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.5,
+        0,
+        -1.046
+      ],
+      "max": [
+        1.775,
+        2.141,
+        1.146
+      ],
+      "size": [
+        3.275,
+        2.141,
+        2.191
+      ],
+      "center": [
+        0.138,
+        1.071,
+        0.05
+      ]
+    },
+    "tris": 788
+  },
+  "margin": 3,
+  "kind": "conservative-broadphase-not-a-collision-verdict",
+  "neighbors": [
+    {
+      "id": "nx-gallery-mosaic-0059",
+      "lib": "store/505bec0b589f786f.glb",
+      "pos": [
+        -38.971143,
+        -0.04073522899392348,
+        -22.5
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/neighbors/nx-gallery-mosaic-0059.glb",
+      "sha256": "e519b288ad2720fccafeea0c73ce7536a9c035e6b4af6e465a35ff6b7fcf96d6",
+      "hostLocalBounds": {
+        "min": [
+          -21.810087566515445,
+          -0.04073522936645251,
+          -24.61066128064154
+        ],
+        "max": [
+          2.192088612346774,
+          0.009545107296674439,
+          -0.6080257566042633
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-roads",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-roads.glb",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "hostLocalBounds": {
+        "min": [
+          -33.86359057047784,
+          -0.05000000074505806,
+          3.3111937189523744
+        ],
+        "max": [
+          23.78189420092734,
+          2.8900413513183594,
+          60.956678490357554
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b9-dyehouse-crossing-loom",
+      "lib": "store/6c3c85dee69191cf.glb",
+      "pos": [
+        -23.62227356310568,
+        0.48,
+        -23.4535147325719
+      ],
+      "yaw": 0.941,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b9-dyehouse-crossing-loom.glb",
+      "sha256": "a8ff818d13b577994dd3aef0aaa2201ca3944b17ff217542dee741ca817e3b6b",
+      "hostLocalBounds": {
+        "min": [
+          -1.1251161098480216,
+          0.47999999284744277,
+          -0.8050000001490116
+        ],
+        "max": [
+          1.1251161098480233,
+          1.3399646091461181,
+          -0.6674753245711327
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-sign-dyer-001",
+      "lib": "store/8ce2081f7d2c6858.glb",
+      "pos": [
+        -22.0867933424553,
+        2.05,
+        -22.334452405446434
+      ],
+      "yaw": 0.941,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-dyer-001.glb",
+      "sha256": "e436b0caa7668e374750db23ddce126a735475a03e51dac0a3ea45b34f3afaea",
+      "hostLocalBounds": {
+        "min": [
+          -0.2619999945163719,
+          1.4000000238418577,
+          1.100000000670551
+        ],
+        "max": [
+          0.26199999451637346,
+          2.0750095427036284,
+          1.4199999916553485
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-approach-sw-lane-003",
+      "lib": "store/fb04a144cc1fc458.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-approach-sw-lane-003.glb",
+      "sha256": "00904e9873f9180f8ab36025939ec6f0c2310b110aa32dd6d47875feda558a8d",
+      "hostLocalBounds": {
+        "min": [
+          -14.615678934357856,
+          -0.09615114331245422,
+          -36.73449663160257
+        ],
+        "max": [
+          32.36072227842505,
+          2.559999942779541,
+          9.879013816626106
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-row-cottage",
+      "lib": "store/0558b5f41bda0777.glb",
+      "pos": [
+        -23,
+        0,
+        -17
+      ],
+      "yaw": 0.9411511441487406,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-row-cottage.glb",
+      "sha256": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+      "hostLocalBounds": {
+        "min": [
+          -7.689283809614043,
+          -0.20000000298023224,
+          0.89345170891061
+        ],
+        "max": [
+          -2.0084860190738003,
+          5.373903751373291,
+          6.174405085881203
+        ]
+      },
+      "protected": true
+    }
+  ]
+}

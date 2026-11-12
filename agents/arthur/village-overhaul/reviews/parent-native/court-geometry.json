@@ -1,0 +1,14 @@
+{
+  "status": "ACCEPTED_HOST_PRESERVATION_AND_CONTEXT",
+  "id": "nx-court",
+  "sourceSha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+  "evidence": {
+    "file": "build/court-player-report.json",
+    "sha256": "db8b972fbfbfd99355792975665c3bc8ebc16b4f7e8176ae610729c4ffd0d46d"
+  },
+  "nativeReview": {
+    "file": "reviews/parent-native/connected-court-forge.md",
+    "sha256": "380cc1d67437dfcad6279749063765359ae002769f6ab41c2efdd138bc4d5d73"
+  },
+  "scope": "New host geometry. Existing out-of-envelope B28/B29 artwork remains exactly unchanged, a separately held inherited placement defect. No universal all-world intersection certification. Fresh pipeline proves full neighbor body routes and independent triangle support before placement."
+}

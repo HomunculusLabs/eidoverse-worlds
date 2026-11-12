@@ -1,0 +1,119 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-11fe39c9-3ab",
+    "view": "first",
+    "startedAt": "2026-09-08T02:07:57.289Z"
+  },
+  "completedAt": "2026-09-08T02:07:57.971Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "5ad1d4282124237a226e0a364b028274fca3ee3e27e9ef61d8f086f98ae5ab8e",
+  "bytes": 501530,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-market",
+  "view": "approach",
+  "bodyPose": {
+    "p": [
+      -2.2573593128807143,
+      0,
+      0.8431457505076203
+    ],
+    "yaw": -0.6435011087932845,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    1,
+    0,
+    7
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-market",
+    "lib": "store/8c16ea9a756a95ad.glb",
+    "kind": "thing",
+    "pos": [
+      -6.5,
+      0,
+      6.5
+    ],
+    "yaw": 2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.95,
+        -0.001,
+        -0.502
+      ],
+      "max": [
+        1.95,
+        2.151,
+        0.57
+      ],
+      "size": [
+        3.9,
+        2.152,
+        1.072
+      ],
+      "center": [
+        0,
+        1.075,
+        0.034
+      ]
+    },
+    "tris": 1202
+  },
+  "targetAfter": {
+    "id": "nx-town-market",
+    "lib": "store/8c16ea9a756a95ad.glb",
+    "kind": "thing",
+    "pos": [
+      -6.5,
+      0,
+      6.5
+    ],
+    "yaw": 2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.95,
+        -0.001,
+        -0.502
+      ],
+      "max": [
+        1.95,
+        2.151,
+        0.57
+      ],
+      "size": [
+        3.9,
+        2.152,
+        1.072
+      ],
+      "center": [
+        0,
+        1.075,
+        0.034
+      ]
+    },
+    "tris": 1202
+  },
+  "beforeObservedAt": "2026-09-08T02:07:54.285Z",
+  "afterObservedAt": "2026-09-08T02:08:00.058Z",
+  "protectedBeforeSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "protectedAfterSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "file": "nx-town-market-approach.png"
+}

@@ -1,0 +1,278 @@
+{
+  "nx-town-hall": {
+    "lib": "store/c92c1f91ed4fd45f.glb",
+    "pos": [
+      9,
+      0,
+      -26
+    ],
+    "yaw": -0.31322457341772525,
+    "scale": 1,
+    "actor": "arthur-improve5-hall",
+    "ts": 1788698557371
+  },
+  "nx-town-inn": {
+    "lib": "store/6e6ff2d08df9b3fb.glb",
+    "pos": [
+      36,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "actor": "arthur-improve7-inn",
+    "ts": 1788704159682
+  },
+  "nx-town-stable": {
+    "lib": "store/98f2d5b6e1b6c429.glb",
+    "pos": [
+      43,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "actor": "arthur-improve12-stable",
+    "ts": 1788717358305
+  },
+  "nx-town-woodyard": {
+    "lib": "store/01b78fdd00f090a7.glb",
+    "pos": [
+      16,
+      0,
+      31
+    ],
+    "yaw": -2.669815142409043,
+    "scale": 1,
+    "actor": "arthur-improve32-woodyard",
+    "ts": 1788758949836
+  },
+  "nx-court": {
+    "lib": "store/77cab2c3cc3a39c7.glb",
+    "pos": [
+      18.9,
+      -1.5946487083102603e-8,
+      -14.8
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "actor": "anon-835",
+    "ts": 1788755027724,
+    "comp": {
+      "particles:smoke": {
+        "preset": "smoke",
+        "origin": [
+          -4.9,
+          3.2,
+          -0.8
+        ],
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35
+      }
+    }
+  },
+  "nx-forge": {
+    "lib": "store/620120c4d6f0b4a0.glb",
+    "pos": [
+      22.11785473473295,
+      0,
+      -7.957568494595163
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "actor": "arthur-interior2-place",
+    "ts": 1788198080358,
+    "comp": {
+      "motion:fire_fg_coals": {
+        "type": "bob",
+        "axis": "y",
+        "amp": 0.014,
+        "period": 1.8
+      },
+      "particles": {
+        "preset": "embers",
+        "origin": [
+          0,
+          0.45,
+          0.42
+        ],
+        "count": 84
+      }
+    }
+  },
+  "nx-town-market": {
+    "lib": "store/8c16ea9a756a95ad.glb",
+    "pos": [
+      -6.5,
+      0,
+      6.5
+    ],
+    "yaw": 2.356194490192345,
+    "scale": 1,
+    "actor": "arthur-interior4-place",
+    "ts": 1788199036843
+  },
+  "nx-town-dyehouse": {
+    "lib": "store/888be3597d2f772f.glb",
+    "pos": [
+      -23,
+      0,
+      -23
+    ],
+    "yaw": 0.941,
+    "scale": 1,
+    "actor": "arthur-interior-17-place",
+    "ts": 1788200559952
+  },
+  "nx-town-potter": {
+    "lib": "store/2062c4468996b2bb.glb",
+    "pos": [
+      23.776412907378838,
+      -0.00402,
+      7.7254248593736845
+    ],
+    "yaw": -1.8975354116458194,
+    "scale": 1,
+    "actor": "arthur-city13-relocate",
+    "ts": 1788801607010,
+    "comp": {
+      "motion:pwheel": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "degPerSec": 9
+      }
+    }
+  },
+  "nx-town-kiln": {
+    "lib": "store/4d8ef8fc0b0955de.glb",
+    "pos": [
+      19.158717425740413,
+      -0.02065,
+      22.431975985200914
+    ],
+    "yaw": -2.443242374354201,
+    "scale": 1,
+    "actor": "arthur-city14-relocate",
+    "ts": 1788802989553
+  },
+  "nx-town-belltower": {
+    "lib": "store/2419fbc53a1d65e1.glb",
+    "pos": [
+      6.5,
+      0,
+      6.5
+    ],
+    "yaw": -2.356194490192345,
+    "scale": 1,
+    "actor": "arthur-improve17-belltower",
+    "ts": 1788731610149,
+    "comp": {
+      "ladder": {
+        "min": [
+          -0.98,
+          0.3,
+          0.98
+        ],
+        "max": [
+          -0.52,
+          5.15,
+          1.22
+        ]
+      }
+    }
+  },
+  "nx-tower": {
+    "lib": "store/a989bdc3cad37b39.glb",
+    "pos": [
+      14.1,
+      0,
+      16.9
+    ],
+    "yaw": -2.44347,
+    "scale": 1,
+    "actor": "arthur-polish-tower",
+    "ts": 1788096904876,
+    "comp": {
+      "sockets": {
+        "study": {
+          "pos": [
+            -1.35,
+            3,
+            -0.5
+          ],
+          "yaw": -1.5707963267948966
+        }
+      }
+    }
+  },
+  "nx-town-shrine": {
+    "lib": "store/948d5c494252078b.glb",
+    "pos": [
+      -25,
+      -0.0012609260510534298,
+      -4
+    ],
+    "yaw": 1.4118119548622732,
+    "scale": 1,
+    "actor": "arthur-improve14-shrine",
+    "ts": 1788723282490
+  },
+  "nx-town-gate-n": {
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "pos": [
+      0,
+      0,
+      -19.5
+    ],
+    "yaw": 0,
+    "scale": 1,
+    "actor": "arthur-polish-gates",
+    "ts": 1788197095864
+  },
+  "nx-town-gate-s": {
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "pos": [
+      0,
+      0,
+      19.5
+    ],
+    "yaw": 3.141592653589793,
+    "scale": 1,
+    "actor": "arthur-polish-gates",
+    "ts": 1788197096567
+  },
+  "nx-town-gate-e": {
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "pos": [
+      19.5,
+      0,
+      0
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "actor": "arthur-polish-gates",
+    "ts": 1788197097275
+  },
+  "nx-town-gate-w": {
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "pos": [
+      -19.5,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "actor": "arthur-polish-gates",
+    "ts": 1788197097971
+  }
+}

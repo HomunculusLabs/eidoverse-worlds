@@ -1,0 +1,357 @@
+{
+  "version": 1,
+  "mode": "inspect",
+  "startedAt": "2026-09-08T01:00:33.500Z",
+  "base": "https://eidoverse.billding.dev",
+  "world": "commons-next",
+  "target": "nx-moonmoth-001",
+  "probe": "moonmoth-probe-2a00b5d7",
+  "isolation": {
+    "headless": true,
+    "freshContext": true,
+    "residentCredentials": false,
+    "sharedDoorKeyInNodeRelay": true,
+    "userBrowserAttached": false,
+    "httpWritesBlocked": true
+  },
+  "visualVerdict": "NOT_JUDGED",
+  "rideInvoked": false,
+  "frames": [
+    {
+      "label": "00-inspect",
+      "png": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/preplace-inspect/00-inspect.png",
+      "sha256": "b83d050681f36f3fc919b764817016d7e5742089dfc15761c9d0d22125dbf6ae",
+      "sampledAt": 1788829247605,
+      "screenshotFinishedAt": 1788829247723
+    }
+  ],
+  "samples": [
+    {
+      "label": "00-inspect",
+      "at": 1788829247605,
+      "seq": 758,
+      "authoritativeMount": null,
+      "localMount": null,
+      "expectedRoot": null,
+      "mountInfo": null,
+      "socketWorld": null,
+      "riderRoot": [
+        -7.248417376792197e-7,
+        0.5201147794723511,
+        -0.5751952298298658
+      ],
+      "rootErrorM": null,
+      "stateErrorM": null,
+      "riderClip": "idle",
+      "riderVisible": true,
+      "carrierWorld": null,
+      "hipsWorld": [
+        0.04232354279469823,
+        1.3452378978004396,
+        -0.5678556224331922
+      ],
+      "authoredSeatPanWorld": null,
+      "hipsAboveSeatM": null,
+      "carrierPlaceholder": null,
+      "carrierBounds": null,
+      "camera": {
+        "position": [
+          3.986788031104513,
+          3.291294334060045,
+          -1.1951952298298651
+        ],
+        "quaternion": [
+          -0.11539368961473932,
+          0.723330949213137,
+          0.12471465200435009,
+          0.6692704161121672
+        ],
+        "fov": 55
+      },
+      "seatHud": false,
+      "sockets": null
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 401 ()"
+    },
+    {
+      "type": "warning",
+      "message": "VRMUtils.removeUnnecessaryJoints: removeUnnecessaryJoints is deprecated. Use combineSkeletons instead. combineSkeletons contributes more to the performance improvement. This function will be removed in the next major version."
+    },
+    {
+      "type": "warning",
+      "message": "VRMUtils.removeUnnecessaryJoints: removeUnnecessaryJoints is deprecated. Use combineSkeletons instead. combineSkeletons contributes more to the performance improvement. This function will be removed in the next major version."
+    },
+    {
+      "type": "warning",
+      "message": "createVRMAnimationClip: VRMLookAtQuaternionProxy is not found. Creating a new one automatically. To suppress this warning, create a VRMLookAtQuaternionProxy manually"
+    },
+    {
+      "type": "warning",
+      "message": "createVRMAnimationClip: VRMLookAtQuaternionProxy is not found. Creating a new one automatically. To suppress this warning, create a VRMLookAtQuaternionProxy manually"
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.TSL: \"transformedNormalView\" is deprecated. Use \"normalView\" instead. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces."
+    }
+  ],
+  "requestsFailed": [
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+      "message": "net::ERR_CONNECTION_REFUSED"
+    }
+  ],
+  "blockedHttp": [],
+  "modules": {
+    "main.js": {
+      "status": 200,
+      "sha256": "ccd7571157097f96cfcad934a5b7623f66462c5e647db1b642fe3e5db5cba84f",
+      "matchesCheckout": false
+    },
+    "lib/core.js": {
+      "status": 200,
+      "sha256": "ce119cad66ea52ca78039599724037d1f7af1f5a96d578ef4dea636e95c35553",
+      "matchesCheckout": false
+    },
+    "lib/world.js": {
+      "status": 200,
+      "sha256": "31d0677c8422c88b1662431742728bdb703e62d4f2db67c09ef57967fa39998b",
+      "matchesCheckout": true
+    },
+    "lib/localbody.js": {
+      "status": 200,
+      "sha256": "e935e571af4d65ae0ce4fc5a70ad65a1cd211f61b1917377af5e52ddc77623f2",
+      "matchesCheckout": false
+    },
+    "lib/controller.js": {
+      "status": 200,
+      "sha256": "15a772e6c85a0273908bf2db0a3ed70dc5d302a149587b74337c2e00c596945f",
+      "matchesCheckout": false
+    },
+    "lib/net.js": {
+      "status": 200,
+      "sha256": "a57b8b3362e58415b8eed00ffa59a10f027abdfe8d85c74a31c039fb4ffb7e81",
+      "matchesCheckout": false
+    }
+  },
+  "client": {
+    "joined": true,
+    "myId": "moonmoth-probe-2a00b5d7",
+    "name": "moonmoth-probe-2a00b5d7",
+    "gpuAdapter": true,
+    "webgpuBackend": true,
+    "bodyLoaded": true,
+    "entityCount": 295,
+    "rendererFrames": 4
+  },
+  "wire": {
+    "sentTypes": {
+      "join": 1,
+      "pose": 123
+    },
+    "sentVerbs": [],
+    "blocked": [
+      {
+        "type": "relay-cred",
+        "at": 1788829236454
+      },
+      {
+        "type": "voice-consent",
+        "at": 1788829236454
+      }
+    ]
+  },
+  "browserVersion": "152.0.7977.77",
+  "relay": {
+    "sentTypes": {
+      "join": 1,
+      "pose": 123
+    },
+    "sentVerbs": [],
+    "blocked": [],
+    "errors": []
+  },
+  "modelContract": {
+    "name": "Moon Moth",
+    "entityId": "nx-moonmoth-001",
+    "sha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+    "bytes": 1272084,
+    "bounds": {
+      "min": [
+        -5.608555866290459,
+        0.012882810086011887,
+        -4.2199437067273085
+      ],
+      "max": [
+        5.608555866290459,
+        5.353411039601105,
+        3.1313121188222257
+      ]
+    },
+    "wingNames": [
+      "moon_wing_left",
+      "moon_wing_right"
+    ],
+    "seat": {
+      "top": 1.97,
+      "center": [
+        0,
+        1.97,
+        0.18
+      ],
+      "socket": [
+        0,
+        2.47,
+        0.18
+      ],
+      "pose": "sitchair"
+    },
+    "nodes": 18,
+    "meshes": 14
+  },
+  "modelContractFileSha256": "1e06ec82f816c32b37e75447468ebcd7e7857c15f9a6a2ac1e05306ab64142fc",
+  "targetState": null,
+  "outcome": "INSPECTION_CAPTURED",
+  "pending": "Target absent; no seat or flight validation was possible. Run --ride only after parent authorizes and places it.",
+  "finishedAt": "2026-09-08T01:00:47.901Z"
+}

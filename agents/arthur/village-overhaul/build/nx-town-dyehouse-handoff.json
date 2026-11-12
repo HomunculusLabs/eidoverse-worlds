@@ -1,0 +1,74 @@
+{
+  "id": "nx-town-dyehouse",
+  "readiness": "PASS_NON_ROOM",
+  "deployableByThisLane": false,
+  "hostGeometrySha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+  "hostBytes": 278100,
+  "triangles": 5004,
+  "meshes": 20,
+  "nodes": 23,
+  "backingWitnesses": 18,
+  "backingPass": 18,
+  "newHostFaceIntrusions": 0,
+  "approachLegs": 10,
+  "approachPass": 10,
+  "maxPush": 0,
+  "bodyGeometryHits": 0,
+  "diagnosticOnlyExactCorePathsLegs": null,
+  "candidateHostFunctionalTuple": {
+    "id": "nx-town-dyehouse",
+    "pos": [
+      -23,
+      0,
+      -23
+    ],
+    "yaw": 0.941,
+    "scale": 1,
+    "comp": {}
+  },
+  "hostRequiredCollisionPreference": "exact",
+  "baselineCollider": {
+    "exact": false,
+    "pillar": false
+  },
+  "candidateDefaultCollider": {
+    "exact": false,
+    "pillar": true
+  },
+  "rigs": [
+    {
+      "kind": "solo",
+      "cameraSha256": "a80f72d5d93a561fdd7a4e8cd507242e8401d16da23d75c27c6e33c05c3e4a92",
+      "afterModelSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+      "viewsEach": 9
+    },
+    {
+      "kind": "-ensemble",
+      "cameraSha256": "b8814aabdc2bb3a31e981a667243f7edac4c3a159d318c8c2e638e07f48bad8a",
+      "afterModelSha256": "94dff28b04eb9726ad73d5b5c6fefba46828f193ae64c2446b544c3462892a6c",
+      "viewsEach": 9
+    },
+    {
+      "kind": "-detail",
+      "cameraSha256": "4044fd92ad69d56745145220047fec933f10c7b3e61431702187373b31867ca8",
+      "afterModelSha256": "94dff28b04eb9726ad73d5b5c6fefba46828f193ae64c2446b544c3462892a6c",
+      "viewsEach": 9
+    }
+  ],
+  "builderSha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63",
+  "notesSha256": "710e6fcee7a6bd4d0ab81fdd15824b3e16607b30fdd262d33ca736bafa746ec7",
+  "noWorldMutation": true,
+  "visionRoute": "auxiliary vision_analyze textual outputs; parent native review separate; one dyer paired-detail request timed out",
+  "files": {
+    "build/nx-town-dyehouse-approach-contract.json": "b051f08e3658df5d9b85890563df3b7060b68f5dc374e8a4fa18ff0480869cb2",
+    "build/nx-town-dyehouse-ensemble-after.json": "1bf0ef7dedb8128601da12e04e125c923520bf32770a3aaa79625ee8e7ae69f8",
+    "build/nx-town-dyehouse.glb": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+    "build/nx-town-dyehouse-ensemble-before.json": "e9ecaa161684c7ff5e96e46e3e342a70c911476b0a7b969b2d7c39c02f17fcab",
+    "build/nx-town-dyehouse-determinism.json": "46c2d680a256df649269d8252d178e82808d82cc92dce24180a3a12a4dcf011a",
+    "build/nx-town-dyehouse-verification.json": "ea7138d9813b6b53ed4cae75f6ce7c000536eed4204e8c8c00e3150ff9eb6ef5",
+    "build/nx-town-dyehouse.json": "b9975abb7d8051f0980a951e9d6cace48126ab2c482925d1d25d4955f223f229",
+    "build/nx-town-dyehouse-approach.json": "ccbcff6d7179895ef23aae65bbd9a58091f713a845d2fc9dbf676c7c1d7ad756",
+    "build/nx-town-dyehouse-ensemble-before.glb": "0c30427aa4c5c462c1c648a94b0e6c30153f543a628ec4128bf0af00f7b69cf7",
+    "build/nx-town-dyehouse-ensemble-after.glb": "94dff28b04eb9726ad73d5b5c6fefba46828f193ae64c2446b544c3462892a6c"
+  }
+}

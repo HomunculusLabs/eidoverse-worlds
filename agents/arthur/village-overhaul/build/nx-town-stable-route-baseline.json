@@ -1,0 +1,210 @@
+{
+  "id": "nx-town-stable",
+  "lib": "store/98f2d5b6e1b6c429.glb",
+  "kind": "thing",
+  "pos": [
+    43,
+    0,
+    0
+  ],
+  "yaw": -1.5707963267948966,
+  "scale": 1,
+  "parent": null,
+  "comp": {},
+  "bbox": {
+    "min": [
+      -3,
+      -0.2,
+      -2.775
+    ],
+    "max": [
+      3,
+      3.442,
+      2.575
+    ],
+    "size": [
+      6,
+      3.642,
+      5.35
+    ],
+    "center": [
+      0,
+      1.621,
+      -0.1
+    ]
+  },
+  "tris": 776,
+  "terrainY": 0,
+  "sha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+  "assembly": [
+    {
+      "id": "nx-artwalk-b8-stable-harmonic-rein",
+      "lib": "store/cba8d0efb0518938.glb",
+      "pos": [
+        45.16,
+        2.22,
+        -1.3226185430791415e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b8-stable-harmonic-rein.glb",
+      "sha256": "c4595b001a6145d78f552205d66918c3d8750884c25d6fa10596dfb6030fbc8f"
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "lib": "store/afee37dd9a5b5d67.glb",
+      "pos": [
+        40.9,
+        0,
+        1.285879139104721e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-stable-001.glb",
+      "sha256": "d470868b35865794630da8427221cb63776e2523aed56c6d934464843689bc56"
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b8-stable-harmonic-rein",
+      "min": [
+        -2.450000047683716,
+        2.220000006556511,
+        -2.2025000004470314
+      ],
+      "max": [
+        2.450000047683716,
+        2.639923096895218,
+        -2.049837674796578
+      ]
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "min": [
+        -0.25,
+        2.0199999809265137,
+        2.100000000670554
+      ],
+      "max": [
+        0.25,
+        2.700000047683716,
+        2.423776185512544
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "name": "road_entry_fixed_sign_left",
+      "x": -1.35,
+      "z": [
+        1.6,
+        2.575
+      ],
+      "floorY": 0.22,
+      "width": 1.65,
+      "headroom": 2.2
+    },
+    {
+      "name": "central_aisle",
+      "x": 0,
+      "z": [
+        -0.95,
+        1.15
+      ],
+      "floorY": 0.2,
+      "width": 1.65,
+      "headroom": 2.2
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "road_approach",
+      "pos": [
+        -1.35,
+        0,
+        3.05
+      ]
+    },
+    {
+      "name": "stoop",
+      "pos": [
+        -1.35,
+        0.21,
+        2.5
+      ]
+    },
+    {
+      "name": "threshold",
+      "pos": [
+        -1.35,
+        0.22,
+        2
+      ]
+    },
+    {
+      "name": "vestibule",
+      "pos": [
+        -1.35,
+        0.2,
+        0.95
+      ]
+    },
+    {
+      "name": "central_grooming_aisle",
+      "pos": [
+        0,
+        0.2,
+        0.95
+      ]
+    },
+    {
+      "name": "saddle_station",
+      "pos": [
+        1.3,
+        0.2,
+        0.95
+      ]
+    },
+    {
+      "name": "aisle_return",
+      "pos": [
+        0,
+        0.2,
+        0.95
+      ]
+    },
+    {
+      "name": "feed_aisle",
+      "pos": [
+        0,
+        0.2,
+        -0.63
+      ]
+    },
+    {
+      "name": "left_stall_care",
+      "pos": [
+        -1.42,
+        0.2,
+        -0.63
+      ]
+    },
+    {
+      "name": "cross_aisle",
+      "pos": [
+        0,
+        0.2,
+        -0.63
+      ]
+    },
+    {
+      "name": "right_stall_care",
+      "pos": [
+        1.44,
+        0.2,
+        -0.48
+      ]
+    }
+  ],
+  "purpose": "Two compact care stalls, central feed aisle and preserved grooming furniture; road entry offset solely to preserve the exact fixed sign. Rear art wall is not an advertised doorway."
+}

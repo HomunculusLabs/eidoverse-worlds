@@ -1,0 +1,174 @@
+{
+  "status": "LOCAL-GATES-PASS-PARENT-ACCEPTANCE-PENDING",
+  "modelSha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+  "model": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-hall.glb",
+  "stats": {
+    "bytes": 961972,
+    "nodes": 28,
+    "meshes": 25,
+    "triangles": 11584,
+    "bounds": {
+      "min": [
+        -5,
+        -0.20000000298023224,
+        -3.4700000286102295
+      ],
+      "max": [
+        5,
+        7.164999961853027,
+        4.849999904632568
+      ]
+    },
+    "retainedTriangles": 780
+  },
+  "deterministicDoubleBuild": true,
+  "playerLegs": {
+    "passed": 42,
+    "total": 42,
+    "neighbors": 13,
+    "maxPush": 0,
+    "maxRise": 0.2499590963125229,
+    "maxFloorError": 0.010000002384185802
+  },
+  "doorChecks": [
+    {
+      "name": "plaza-front",
+      "requiredWidth": 1.8,
+      "requiredHeadroom": 2.4,
+      "min": [
+        -0.9,
+        0.2,
+        2.65
+      ],
+      "max": [
+        0.9,
+        2.6,
+        3.16
+      ],
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "name": "rear-egress",
+      "requiredWidth": 1.8,
+      "requiredHeadroom": 2.4,
+      "min": [
+        -0.9,
+        0.2,
+        -3.16
+      ],
+      "max": [
+        0.9,
+        2.6,
+        -2.65
+      ],
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "name": "porch-approach",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.7,
+        0.2,
+        3.2
+      ],
+      "max": [
+        0.7,
+        2.4000000000000004,
+        4.8
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "protectedVolumeChecks": [
+    {
+      "id": "nx-artwalk-b1-hall-charter",
+      "min": [
+        -4.321,
+        1.114,
+        -1.401
+      ],
+      "max": [
+        -4.124,
+        2.886,
+        1.401
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "charter-inward-view-face",
+      "min": [
+        -4.124,
+        1.115,
+        -1.401
+      ],
+      "max": [
+        -3.95,
+        2.886,
+        1.401
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "hall-light-origin",
+      "min": [
+        -0.07,
+        2.43,
+        -0.07
+      ],
+      "max": [
+        0.07,
+        2.57,
+        0.07
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "preservedPrimitives": 20,
+  "roofEndRays": 428,
+  "porchRearRays": 22,
+  "floorSupportRays": 242,
+  "validator": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "renderPairs": [
+    {
+      "before": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/hall-before/render-manifest.json",
+      "after": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/hall-after/render-manifest.json",
+      "cameraSha256": "9cddb6be3abbfb05df8ac8d6e5ee8d65fb1cfd881f158635e3bf7257a3c0a98e",
+      "framesPerSide": 9,
+      "actualImageHashesVerified": true
+    },
+    {
+      "before": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/hall-detail-before/render-manifest.json",
+      "after": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/hall-detail-after/render-manifest.json",
+      "cameraSha256": "0a06a96d6c23e8a4a11c9bf820cccc7a486ce110580da13f52d6ad6c8d0d81d6",
+      "framesPerSide": 9,
+      "actualImageHashesVerified": true
+    }
+  ],
+  "visualReview": {
+    "route": "functions.vision_analyze returned auxiliary textual analysis, not native vision in this subagent",
+    "judgment": "Final nine-view host inspection reports no obvious roof, silhouette, entrance-blockage or displaced-part defect. Assembly detail inspection visibly confirms council furniture, shelves/books, framed charter, raised founding banner, hearth/platform and exposed roof framing.",
+    "limitations": [
+      "Exact material fidelity is proven by indexed-attribute/material/texture fingerprint report, not by image interpretation.",
+      "Historic abstract marks are not readable lettering; source materials preserved.",
+      "Night omits authored world lights; diagnostic detail day has higher ambient, shared before/after.",
+      "No live terrain simulation, uploads, verbs, commits or GUI. Parent final native visual acceptance and served geometry/live checks remain pending."
+    ]
+  }
+}

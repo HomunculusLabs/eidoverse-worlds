@@ -1,0 +1,462 @@
+{
+  "status": "PASS",
+  "basis": "Exact frozen neighbors/nx-tower.json; all supplied companions preserved, no collision override or exclusion",
+  "contract": {
+    "file": "neighbors/nx-tower.json",
+    "sha256": "e5c02c6ca4faa74f565425497aa72214cd55567c83d4ecacd185804d7d93e9de"
+  },
+  "count": 11,
+  "selectedForAffectedBounds": [
+    "nx-approach-ne-lane-002",
+    "nx-artwalk-b12-kiln-heat-contours",
+    "nx-artwalk-b19-longhouse-feast-count",
+    "nx-artwalk-b3-ruled-porch",
+    "nx-core-paths",
+    "nx-shutters",
+    "nx-sign-kiln-001",
+    "nx-town-kiln",
+    "nx-town-kiln-l",
+    "nx-town-longhouse",
+    "nx-town-roads",
+    "nx-town-streetlamps"
+  ],
+  "pointLights": [
+    {
+      "id": "nx-town-kiln-l",
+      "lib": null,
+      "kind": "light",
+      "pos": [
+        18.70823868946895,
+        1.07935,
+        23.848662250734773
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "tested": [
+    {
+      "id": "nx-shutters",
+      "lib": "store/26259f89feb92736.glb",
+      "pos": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1,
+      "file": "before/nx-shutters.glb",
+      "sha256": "1a5c45c57c27b8c0b812671143590ba08646325b340834d07b14f9daa5122091",
+      "hostLocalBounds": {
+        "min": [
+          -0.6164279580116272,
+          4,
+          2.749535083770752
+        ],
+        "max": [
+          0.33000001311302185,
+          4.594990253448486,
+          2.9279897212982178
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/26259f89feb92736.glb",
+        "pos": [
+          14.1,
+          0,
+          16.9
+        ],
+        "yaw": -2.44347,
+        "scale": 1,
+        "actor": "arthur-nvp19-tower",
+        "ts": 1787505812848
+      }
+    },
+    {
+      "id": "nx-town-roads",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "before/nx-town-roads.glb",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "hostLocalBounds": {
+        "min": [
+          -29.125865892308163,
+          -0.05000000074505806,
+          -7.054724116447119
+        ],
+        "max": [
+          29.002496229120446,
+          2.8900413513183594,
+          51.07363800498149
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/3b76b621559fa1a1.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "actor": "arthur-nvp131-place",
+        "ts": 1788022276792
+      }
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "lib": "store/e815a897c7d73373.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "before/nx-town-streetlamps.glb",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "hostLocalBounds": {
+        "min": [
+          -9.712231527402187,
+          2.3841858265427618e-8,
+          12.358910248458859
+        ],
+        "max": [
+          9.588861864214467,
+          2.559999942779541,
+          31.660003640075512
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/e815a897c7d73373.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "actor": "arthur-nvp132-place",
+        "ts": 1788022279914
+      }
+    },
+    {
+      "id": "nx-artwalk-b19-longhouse-feast-count",
+      "lib": "store/98a4c17e73e4bac4.glb",
+      "pos": [
+        7.668887408682888,
+        2.22,
+        21.89018987430842
+      ],
+      "yaw": -2.828368080172068,
+      "scale": 1,
+      "file": "before/nx-artwalk-b19-longhouse-feast-count.glb",
+      "sha256": "baa1f2164bd76c20da5bb9c2e14abb86f1fe433299d630dd912da3cdeefcfce2",
+      "hostLocalBounds": {
+        "min": [
+          6.638995590170166,
+          2.2200000035762786,
+          -0.3198070062953702
+        ],
+        "max": [
+          9.62929445064528,
+          2.5399414014816286,
+          0.9419642433259775
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/98a4c17e73e4bac4.glb",
+        "pos": [
+          7.668887408682888,
+          2.22,
+          21.89018987430842
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "actor": "arthur-artwalk-b19-builder",
+        "ts": 1788118871746
+      }
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "lib": "store/dc52264c04cfe5bb.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "before/nx-approach-ne-lane-002.glb",
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+      "hostLocalBounds": {
+        "min": [
+          -22.50888067072251,
+          -0.09615114331245422,
+          -58.89191829855079
+        ],
+        "max": [
+          31.37485090076423,
+          2.559999942779541,
+          -0.41670777962475114
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/dc52264c04cfe5bb.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "actor": "arthur-approach7-place",
+        "ts": 1788720418779
+      }
+    },
+    {
+      "id": "nx-core-paths",
+      "lib": "store/c31b6e3f22641e14.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "before/nx-core-paths.glb",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "hostLocalBounds": {
+        "min": [
+          -23.60547878156028,
+          -0.001480687060393393,
+          0.4049296492202714
+        ],
+        "max": [
+          19.574523995574225,
+          0.058276183903217316,
+          43.05596756834795
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/c31b6e3f22641e14.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "actor": "arthur-town-paths-straight",
+        "ts": 1788729524293
+      }
+    },
+    {
+      "id": "nx-artwalk-b3-ruled-porch",
+      "lib": "store/e1b66075d8e911e7.glb",
+      "pos": [
+        22.947447673236418,
+        -0.00588,
+        9.081085820153778
+      ],
+      "yaw": -1.8975354116458194,
+      "scale": 1,
+      "file": "before/nx-artwalk-b3-ruled-porch.glb",
+      "sha256": "232210c072caebe89bd79a10ee3ba5faac92e7498ca3ad751941bbbf0b7fc72c",
+      "hostLocalBounds": {
+        "min": [
+          -14.825123523576458,
+          -0.005879999403953565,
+          -2.651889088003255
+        ],
+        "max": [
+          -8.781711683686972,
+          3.079087613220215,
+          3.257377049660123
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/e1b66075d8e911e7.glb",
+        "pos": [
+          22.947447673236418,
+          -0.00588,
+          9.081085820153778
+        ],
+        "yaw": -1.8975354116458194,
+        "scale": 1,
+        "actor": "arthur-city13-relocate",
+        "ts": 1788801608468
+      }
+    },
+    {
+      "id": "nx-town-kiln",
+      "lib": "store/4d8ef8fc0b0955de.glb",
+      "pos": [
+        19.158717425740413,
+        -0.02065,
+        22.431975985200914
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "file": "before/nx-town-kiln.glb",
+      "sha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545",
+      "hostLocalBounds": {
+        "min": [
+          -2.547504853440027,
+          -0.049299266809225084,
+          -8.790020582485964
+        ],
+        "max": [
+          2.3309114128825117,
+          2.9849261337280275,
+          -5.780971613963821
+        ]
+      },
+      "protected": false,
+      "folded": {
+        "lib": "store/4d8ef8fc0b0955de.glb",
+        "pos": [
+          19.158717425740413,
+          -0.02065,
+          22.431975985200914
+        ],
+        "yaw": -2.443242374354201,
+        "scale": 1,
+        "actor": "arthur-city14-relocate",
+        "ts": 1788802989553
+      }
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "lib": "store/1ad2a6139373b973.glb",
+      "pos": [
+        18.419319135343407,
+        -0.02065,
+        21.55118647109554
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "file": "before/nx-artwalk-b12-kiln-heat-contours.glb",
+      "sha256": "29e932d59cc9f57bb3665b1dfb543b1f17c4ec5e570948d92043cbc5d9e48c57",
+      "hostLocalBounds": {
+        "min": [
+          -1.0941158690779498,
+          0.005549985295534132,
+          -6.344592756697729
+        ],
+        "max": [
+          0.4559054887698556,
+          1.593150048828125,
+          -6.219216017833265
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/1ad2a6139373b973.glb",
+        "pos": [
+          18.419319135343407,
+          -0.02065,
+          21.55118647109554
+        ],
+        "yaw": -2.443242374354201,
+        "scale": 1,
+        "actor": "arthur-city14-relocate",
+        "ts": 1788802990860
+      }
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "lib": "store/ecbad90311fc9bff.glb",
+      "pos": [
+        18.605776095530477,
+        2.4293500000000003,
+        21.773298609435155
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "file": "before/nx-sign-kiln-001.glb",
+      "sha256": "9e44d6b26951681737d412dbeded2b11dd2f64bc44b719e4bd1db3a28f3ff3fc",
+      "hostLocalBounds": {
+        "min": [
+          -1.2075866312735948,
+          1.5793499761581424,
+          -8.377619595534528
+        ],
+        "max": [
+          0.568975164483528,
+          2.556048136329651,
+          -5.964374676121592
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/ecbad90311fc9bff.glb",
+        "pos": [
+          18.605776095530477,
+          2.4293500000000003,
+          21.773298609435155
+        ],
+        "yaw": -2.443242374354201,
+        "scale": 1,
+        "actor": "arthur-city14-relocate",
+        "ts": 1788802992157
+      }
+    },
+    {
+      "id": "nx-town-longhouse",
+      "lib": "store/e38bb2a4c7933698.glb",
+      "pos": [
+        9,
+        0,
+        26
+      ],
+      "yaw": -2.828368080172068,
+      "scale": 1,
+      "file": "before/nx-town-longhouse.glb",
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+      "hostLocalBounds": {
+        "min": [
+          3.874530896371767,
+          -0.20000000298023224,
+          -8.120862984535975
+        ],
+        "max": [
+          15.121480069426813,
+          5.873971939086914,
+          2.0096254774924107
+        ]
+      },
+      "protected": true,
+      "folded": {
+        "lib": "store/e38bb2a4c7933698.glb",
+        "pos": [
+          9,
+          0,
+          26
+        ],
+        "yaw": -2.828368080172068,
+        "scale": 1,
+        "actor": "arthur-cabin-overhaul",
+        "ts": 1788829979322
+      }
+    }
+  ],
+  "limitations": [
+    "Frozen capture, not current live census. A campaign neighbor may have changed during parent rollout; parent must replay fresh live assembly."
+  ]
+}

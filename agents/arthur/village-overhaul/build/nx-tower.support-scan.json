@@ -1,0 +1,212 @@
+{
+  "id": "nx-tower",
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "neighbors": [
+    {
+      "id": "nx-shutters",
+      "sha256": "1a5c45c57c27b8c0b812671143590ba08646325b340834d07b14f9daa5122091"
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448"
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d"
+    },
+    {
+      "id": "nx-artwalk-b19-longhouse-feast-count",
+      "sha256": "baa1f2164bd76c20da5bb9c2e14abb86f1fe433299d630dd912da3cdeefcfce2"
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e"
+    },
+    {
+      "id": "nx-core-paths",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999"
+    },
+    {
+      "id": "nx-artwalk-b3-ruled-porch",
+      "sha256": "232210c072caebe89bd79a10ee3ba5faac92e7498ca3ad751941bbbf0b7fc72c"
+    },
+    {
+      "id": "nx-town-kiln",
+      "sha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545"
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "sha256": "29e932d59cc9f57bb3665b1dfb543b1f17c4ec5e570948d92043cbc5d9e48c57"
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "sha256": "9e44d6b26951681737d412dbeded2b11dd2f64bc44b719e4bd1db3a28f3ff3fc"
+    },
+    {
+      "id": "nx-town-longhouse",
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2"
+    }
+  ],
+  "cells": [
+    {
+      "pos": [
+        0.4,
+        0,
+        3.65
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        3.6999999999999997
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        3.7499999999999996
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        3.7999999999999994
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        3.849999999999999
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        3.899999999999999
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        3.949999999999999
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        3.9999999999999987
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        4.049999999999999
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        4.099999999999999
+      ],
+      "physical": 0,
+      "browser": 0,
+      "error": 0,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        4.149999999999999
+      ],
+      "physical": 0,
+      "browser": 0.058276183903217316,
+      "error": 0.058276183903217316,
+      "push": 0,
+      "surface": "terrain"
+    },
+    {
+      "pos": [
+        0.4,
+        0,
+        4.199999999999998
+      ],
+      "physical": 0,
+      "browser": 0.058276183903217316,
+      "error": 0.058276183903217316,
+      "push": 0,
+      "surface": "terrain"
+    }
+  ]
+}

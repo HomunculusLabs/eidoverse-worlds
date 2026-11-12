@@ -1,0 +1,28 @@
+{
+  "id": "nx-town-inn",
+  "modelSha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+  "status": "PASS",
+  "basis": "parent rerun actual public-runtime routes and protected volumes; source-bound independent native ensemble review",
+  "player": {
+    "file": "reviews/parent-inn-player.json",
+    "sha256": "8839205ef177962e92bfa69728991e287392c76cde2e5520598196a782f8dcb6"
+  },
+  "evidence": [
+    {
+      "file": "inn-notes.md",
+      "sha256": "6a8fa4f38d23d215cac26dcec7fd1b4cc39df46bd6ee2498bf6f7d2ab02fe96a"
+    },
+    {
+      "file": "reviews/parent-inn-upper-player.json",
+      "sha256": "b373a71cc424867537ea2b7c63e2509363baa039765db01d10f44c54c643a8f3"
+    },
+    {
+      "file": "build/inn-preservation.json",
+      "sha256": "eb0ecf4cbf01ab14523018079822a0fb11bf4d4465124bc7cbd8cae069bb5124"
+    }
+  ],
+  "limits": [
+    "Not a universal world-solid intersection certificate.",
+    "Live served-byte and post-placement checks remain required."
+  ]
+}

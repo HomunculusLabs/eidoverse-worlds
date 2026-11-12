@@ -1,0 +1,7 @@
+The images clear the main roof concern, but the forge view still has a visible defect.
+
+- **Roof/court:** The aerial view reads as two separately roofed wings with an intentional uncovered passage/work court between them. The ground-level court and bakery interior are consistent with that arrangement. I see no definite accidental roof opening over the bakery room. The reported coverage samples support this, though these images cannot independently verify those measurements.
+- **Trade sign:** The new wall-mounted bracket gives the sign a credible visible support. The sign itself no longer reads as floating. However, image 4 shows **two apparently disconnected dark pieces** beyond it: a small block above/right and a long horizontal bar below/right. Neither has a visible connection to the building or sign assembly. These remain a specific visual defect requiring cleanup or a clearly visible attachment.
+- **Hearth:** The opening reads clearly as an open hearth. The orange fire is visibly faceted, but that alone is not a construction defect.
+
+**Verdict:** Accept the intended roof separation and the sign’s added support; retain a targeted repair request for the two disconnected dark pieces in the forge sign view.

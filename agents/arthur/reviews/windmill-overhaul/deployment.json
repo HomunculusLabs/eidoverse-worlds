@@ -1,0 +1,57 @@
+{
+  "status": "PLACED_VERIFIED",
+  "sourceSha256": "a557d918b2c14f1ab5f0e0e066f2720d4f16b3364c9ce854971a68310fa6f296",
+  "tuple": {
+    "id": "nx-town-windmill",
+    "lib": "store/a557d918b2c14f1a.glb",
+    "pos": [
+      -40,
+      0,
+      0
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:sails": {
+        "type": "spin",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rpm": 1.25,
+        "phase": 0,
+        "t0": 1788827161000
+      },
+      "motion:well_millstone": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rpm": 5,
+        "phase": 0,
+        "t0": 1788827161000
+      }
+    }
+  },
+  "uploads": 1,
+  "verbs": 4,
+  "ridersUnchanged": [
+    "nx-artwalk-b10-windmill-four-wind-crown",
+    "nx-sign-mill-001"
+  ],
+  "foreignChangesDuringRun": []
+}

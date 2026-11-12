@@ -1,0 +1,37 @@
+{
+  "id": "nx-town-woodyard",
+  "revision": "baseline",
+  "hostFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-town-woodyard.glb",
+  "hostSha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+  "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-woodyard-baseline-assembly.glb",
+  "sha256": "536f2c2b6e72805428698853c5224d53f7901f4870b39f40d759f95cd1372d52",
+  "assembly": [
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "lib": "store/aa5f2550365c1f7f.glb",
+      "pos": [
+        16.3635762733503,
+        0.75,
+        31.712609495766586
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b11-woodyard-heartwood-measure.glb",
+      "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e"
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "lib": "store/f46e12aeeea8af74.glb",
+      "pos": [
+        15.431912072890157,
+        2.05,
+        29.886547662864707
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-woodyard-001.glb",
+      "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7"
+    }
+  ],
+  "evidenceKind": "local-exact-source-byte-assembly-no-world-lights-not-upload-target"
+}

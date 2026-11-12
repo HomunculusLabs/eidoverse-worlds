@@ -1,0 +1,119 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-11fe39c9-3ab",
+    "view": "first",
+    "startedAt": "2026-09-08T02:07:21.180Z"
+  },
+  "completedAt": "2026-09-08T02:07:21.784Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "2f6dd882340278f7d02d165150917e908884962aaf1d6539e9669f8fa7638692",
+  "bytes": 293124,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-inn",
+  "view": "approach",
+  "bodyPose": {
+    "p": [
+      21,
+      0,
+      3.000000000000001
+    ],
+    "yaw": 1.7681918866447774,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    3,
+    0,
+    15
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-inn",
+    "lib": "store/6e6ff2d08df9b3fb.glb",
+    "kind": "thing",
+    "pos": [
+      36,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -4.5,
+        -0.2,
+        -3.473
+      ],
+      "max": [
+        4.5,
+        6.269,
+        4.9
+      ],
+      "size": [
+        9,
+        6.469,
+        8.373
+      ],
+      "center": [
+        0,
+        3.034,
+        0.714
+      ]
+    },
+    "tris": 4248
+  },
+  "targetAfter": {
+    "id": "nx-town-inn",
+    "lib": "store/6e6ff2d08df9b3fb.glb",
+    "kind": "thing",
+    "pos": [
+      36,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -4.5,
+        -0.2,
+        -3.473
+      ],
+      "max": [
+        4.5,
+        6.269,
+        4.9
+      ],
+      "size": [
+        9,
+        6.469,
+        8.373
+      ],
+      "center": [
+        0,
+        3.034,
+        0.714
+      ]
+    },
+    "tris": 4248
+  },
+  "beforeObservedAt": "2026-09-08T02:07:18.176Z",
+  "afterObservedAt": "2026-09-08T02:07:23.675Z",
+  "protectedBeforeSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "protectedAfterSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "file": "nx-town-inn-approach.png"
+}

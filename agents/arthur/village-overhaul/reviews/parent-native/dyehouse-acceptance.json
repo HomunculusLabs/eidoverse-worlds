@@ -1,0 +1,113 @@
+{
+  "id": "nx-town-dyehouse",
+  "sourceSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+  "kind": "workstation",
+  "verdict": "accepted",
+  "visual": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-C/review.md",
+        "sha256": "089b1fc1b3a1b02a5ae4a047a0724fd896b61a8aae748aed04853d50f72c3e50"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-front.png",
+        "sha256": "5f1085b16f44c1bb4c393406c7de841e806e9dfb3523276c4293da3e337ff6e4"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-aerial.png",
+        "sha256": "8a04972b2230942ee0e15230a68d91a68f370c8691d040460ba4483d2acb9523"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/dyehouse-interior.png",
+        "sha256": "b88342ce4a3fed5e09024083cdff4e301c49362d8f464bca672c83fd3bf0ea1e"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "geometry": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/dyehouse-geometry.json",
+        "sha256": "596f6543098fd17e2b66d941e38e24febec6da73b70680d5a7eba85df90bda78"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/dyehouse-geometry.json",
+      "sha256": "596f6543098fd17e2b66d941e38e24febec6da73b70680d5a7eba85df90bda78"
+    }
+  },
+  "functional": {
+    "status": "passed",
+    "evidence": {
+      "file": "build/nx-town-dyehouse-verification.json",
+      "sha256": "ea7138d9813b6b53ed4cae75f6ce7c000536eed4204e8c8c00e3150ff9eb6ef5"
+    },
+    "kind": "workstation",
+    "verdict": "passed"
+  },
+  "sources": [
+    {
+      "file": "build-dyehouse.ts",
+      "sha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "../cabin-overhaul/verify-player.ts",
+      "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+    },
+    {
+      "file": "../../../tools/core-stub.mjs",
+      "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.module.js",
+      "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.core.js",
+      "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+    },
+    {
+      "file": "verify-approach.ts",
+      "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+    },
+    {
+      "file": "before/nx-town-dyehouse.glb",
+      "sha256": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-dyehouse-approach-contract.json",
+      "sha256": "b051f08e3658df5d9b85890563df3b7060b68f5dc374e8a4fa18ff0480869cb2",
+      "mode": "workstation"
+    }
+  ],
+  "deterministic": {
+    "sha256": [
+      "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+      "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275"
+    ],
+    "evidence": {
+      "file": "reviews/parent-nx-town-dyehouse-determinism.json",
+      "sha256": "181b1e5e1dbcaec93f7bc255b09888ed273637f536fa4f3856465e90072e750b"
+    }
+  },
+  "schema": "village-review-v1",
+  "modelSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275"
+}

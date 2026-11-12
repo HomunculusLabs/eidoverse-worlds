@@ -1,0 +1,1326 @@
+{
+  "status": "STARTED",
+  "world": "commons-next",
+  "phase": "before",
+  "evidenceKind": "actual-live-snap-api",
+  "startedAt": "2026-09-08T02:03:47.820Z",
+  "bodyId": "arthur-village-eye-8798a255-759",
+  "sourceSha256": "001d9631f53e37cd3b34fd855278baf678ef65e9648856fb06536ada3c41bfc4",
+  "contractsSha256": "9e2f06b143109b7b98ddad1900846fcf2594f36fa3dd4fd15fb88e3ab42d4e77",
+  "viewsSha256": "0efaf32e858f3233aebca929c4c4c8ffb58de8ab6f2724c22435d19369288e8a",
+  "protectedSha256": "dff3f5aa7592a63f6a8f5df5099f13abb99ab4154d223570bc05409db2a4f03e",
+  "expected": [
+    {
+      "id": "nx-town-hall",
+      "lib": "store/c92c1f91ed4fd45f.glb",
+      "kind": "thing",
+      "pos": [
+        9,
+        0,
+        -26
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -5,
+          -0.2,
+          -3.473
+        ],
+        "max": [
+          5,
+          6.169,
+          4.854
+        ],
+        "size": [
+          10,
+          6.369,
+          8.326
+        ],
+        "center": [
+          0,
+          2.984,
+          0.691
+        ]
+      },
+      "tris": 2100
+    },
+    {
+      "id": "nx-town-inn",
+      "lib": "store/6e6ff2d08df9b3fb.glb",
+      "kind": "thing",
+      "pos": [
+        36,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -4.5,
+          -0.2,
+          -3.473
+        ],
+        "max": [
+          4.5,
+          6.269,
+          4.9
+        ],
+        "size": [
+          9,
+          6.469,
+          8.373
+        ],
+        "center": [
+          0,
+          3.034,
+          0.714
+        ]
+      },
+      "tris": 4248
+    },
+    {
+      "id": "nx-town-stable",
+      "lib": "store/98f2d5b6e1b6c429.glb",
+      "kind": "thing",
+      "pos": [
+        43,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -3,
+          -0.2,
+          -2.775
+        ],
+        "max": [
+          3,
+          3.442,
+          2.575
+        ],
+        "size": [
+          6,
+          3.642,
+          5.35
+        ],
+        "center": [
+          0,
+          1.621,
+          -0.1
+        ]
+      },
+      "tris": 776
+    },
+    {
+      "id": "nx-town-woodyard",
+      "lib": "store/01b78fdd00f090a7.glb",
+      "kind": "thing",
+      "pos": [
+        16,
+        0,
+        31
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -2.1,
+          0,
+          -1.09
+        ],
+        "max": [
+          2.876,
+          2.526,
+          1.508
+        ],
+        "size": [
+          4.976,
+          2.526,
+          2.599
+        ],
+        "center": [
+          0.388,
+          1.263,
+          0.209
+        ]
+      },
+      "tris": 2360
+    },
+    {
+      "id": "nx-court",
+      "lib": "store/77cab2c3cc3a39c7.glb",
+      "kind": "thing",
+      "pos": [
+        18.9,
+        -1.5946487083102603e-8,
+        -14.8
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "particles:smoke": {
+          "preset": "smoke",
+          "origin": [
+            -4.9,
+            3.2,
+            -0.8
+          ],
+          "count": 50,
+          "size": 0.4,
+          "speed": 0.35
+        }
+      },
+      "bbox": {
+        "min": [
+          -6.5,
+          -0.2,
+          -2.94
+        ],
+        "max": [
+          6.5,
+          4.169,
+          3
+        ],
+        "size": [
+          13,
+          4.369,
+          5.94
+        ],
+        "center": [
+          0,
+          1.984,
+          0.03
+        ]
+      },
+      "tris": 3426
+    },
+    {
+      "id": "nx-forge",
+      "lib": "store/620120c4d6f0b4a0.glb",
+      "kind": "thing",
+      "pos": [
+        22.11785473473295,
+        0,
+        -7.957568494595163
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "motion:fire_fg_coals": {
+          "type": "bob",
+          "axis": "y",
+          "amp": 0.014,
+          "period": 1.8
+        },
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            0,
+            0.45,
+            0.42
+          ],
+          "count": 84
+        }
+      },
+      "bbox": {
+        "min": [
+          -0.873,
+          -0.005,
+          -0.777
+        ],
+        "max": [
+          1.46,
+          2.1,
+          0.61
+        ],
+        "size": [
+          2.333,
+          2.105,
+          1.387
+        ],
+        "center": [
+          0.294,
+          1.047,
+          -0.083
+        ]
+      },
+      "tris": 964
+    },
+    {
+      "id": "nx-town-market",
+      "lib": "store/8c16ea9a756a95ad.glb",
+      "kind": "thing",
+      "pos": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -1.95,
+          -0.001,
+          -0.502
+        ],
+        "max": [
+          1.95,
+          2.151,
+          0.57
+        ],
+        "size": [
+          3.9,
+          2.152,
+          1.072
+        ],
+        "center": [
+          0,
+          1.075,
+          0.034
+        ]
+      },
+      "tris": 1202
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "lib": "store/888be3597d2f772f.glb",
+      "kind": "thing",
+      "pos": [
+        -23,
+        0,
+        -23
+      ],
+      "yaw": 0.941,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -1.5,
+          0,
+          -1.046
+        ],
+        "max": [
+          1.775,
+          2.141,
+          1.146
+        ],
+        "size": [
+          3.275,
+          2.141,
+          2.191
+        ],
+        "center": [
+          0.138,
+          1.071,
+          0.05
+        ]
+      },
+      "tris": 788
+    },
+    {
+      "id": "nx-town-potter",
+      "lib": "store/2062c4468996b2bb.glb",
+      "kind": "thing",
+      "pos": [
+        23.776412907378838,
+        -0.00402,
+        7.7254248593736845
+      ],
+      "yaw": -1.8975354116458194,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "motion:pwheel": {
+          "type": "spin",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "degPerSec": 9
+        }
+      },
+      "bbox": {
+        "min": [
+          -1.725,
+          -0.002,
+          -1
+        ],
+        "max": [
+          1.71,
+          1.015,
+          0.706
+        ],
+        "size": [
+          3.435,
+          1.017,
+          1.706
+        ],
+        "center": [
+          -0.007,
+          0.506,
+          -0.147
+        ]
+      },
+      "tris": 1268
+    },
+    {
+      "id": "nx-town-kiln",
+      "lib": "store/4d8ef8fc0b0955de.glb",
+      "kind": "thing",
+      "pos": [
+        19.158717425740413,
+        -0.02065,
+        22.431975985200914
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -2.228,
+          -0.029,
+          -1.3
+        ],
+        "max": [
+          2.65,
+          3.006,
+          1.708
+        ],
+        "size": [
+          4.878,
+          3.034,
+          3.008
+        ],
+        "center": [
+          0.211,
+          1.488,
+          0.204
+        ]
+      },
+      "tris": 476
+    },
+    {
+      "id": "nx-town-belltower",
+      "lib": "store/2419fbc53a1d65e1.glb",
+      "kind": "thing",
+      "pos": [
+        6.5,
+        0,
+        6.5
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "ladder": {
+          "min": [
+            -0.98,
+            0.3,
+            0.98
+          ],
+          "max": [
+            -0.52,
+            5.15,
+            1.22
+          ]
+        }
+      },
+      "bbox": {
+        "min": [
+          -1.7,
+          0,
+          -1.7
+        ],
+        "max": [
+          1.7,
+          7.6,
+          1.7
+        ],
+        "size": [
+          3.4,
+          7.6,
+          3.4
+        ],
+        "center": [
+          0,
+          3.8,
+          0
+        ]
+      },
+      "tris": 1034
+    },
+    {
+      "id": "nx-tower",
+      "lib": "store/a989bdc3cad37b39.glb",
+      "kind": "thing",
+      "pos": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "sockets": {
+          "study": {
+            "pos": [
+              -1.35,
+              3,
+              -0.5
+            ],
+            "yaw": -1.5707963267948966
+          }
+        }
+      },
+      "bbox": {
+        "min": [
+          -3.25,
+          -0.2,
+          -3.25
+        ],
+        "max": [
+          3.507,
+          8.475,
+          3.6
+        ],
+        "size": [
+          6.757,
+          8.675,
+          6.85
+        ],
+        "center": [
+          0.129,
+          4.138,
+          0.175
+        ]
+      },
+      "tris": 1254
+    },
+    {
+      "id": "nx-town-shrine",
+      "lib": "store/948d5c494252078b.glb",
+      "kind": "thing",
+      "pos": [
+        -25,
+        -0.0012609260510534298,
+        -4
+      ],
+      "yaw": 1.4118119548622732,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -1.25,
+          -0.016,
+          -1.4
+        ],
+        "max": [
+          1.25,
+          1.798,
+          2.5
+        ],
+        "size": [
+          2.5,
+          1.814,
+          3.9
+        ],
+        "center": [
+          0,
+          0.891,
+          0.55
+        ]
+      },
+      "tris": 808
+    },
+    {
+      "id": "nx-town-gate-n",
+      "lib": "store/d1b90d6fc66b2db8.glb",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        -19.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -1.8,
+          0,
+          -0.25
+        ],
+        "max": [
+          1.8,
+          3.64,
+          0.25
+        ],
+        "size": [
+          3.6,
+          3.64,
+          0.5
+        ],
+        "center": [
+          0,
+          1.82,
+          0
+        ]
+      },
+      "tris": 308
+    },
+    {
+      "id": "nx-town-gate-s",
+      "lib": "store/d1b90d6fc66b2db8.glb",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        19.5
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -1.8,
+          0,
+          -0.25
+        ],
+        "max": [
+          1.8,
+          3.64,
+          0.25
+        ],
+        "size": [
+          3.6,
+          3.64,
+          0.5
+        ],
+        "center": [
+          0,
+          1.82,
+          0
+        ]
+      },
+      "tris": 308
+    },
+    {
+      "id": "nx-town-gate-e",
+      "lib": "store/d1b90d6fc66b2db8.glb",
+      "kind": "thing",
+      "pos": [
+        19.5,
+        0,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -1.8,
+          0,
+          -0.25
+        ],
+        "max": [
+          1.8,
+          3.64,
+          0.25
+        ],
+        "size": [
+          3.6,
+          3.64,
+          0.5
+        ],
+        "center": [
+          0,
+          1.82,
+          0
+        ]
+      },
+      "tris": 308
+    },
+    {
+      "id": "nx-town-gate-w",
+      "lib": "store/d1b90d6fc66b2db8.glb",
+      "kind": "thing",
+      "pos": [
+        -19.5,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -1.8,
+          0,
+          -0.25
+        ],
+        "max": [
+          1.8,
+          3.64,
+          0.25
+        ],
+        "size": [
+          3.6,
+          3.64,
+          0.5
+        ],
+        "center": [
+          0,
+          1.82,
+          0
+        ]
+      },
+      "tris": 308
+    }
+  ],
+  "views": [
+    {
+      "id": "nx-town-hall",
+      "name": "approach",
+      "bodyLocal": [
+        3,
+        0,
+        16
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-inn",
+      "name": "approach",
+      "bodyLocal": [
+        3,
+        0,
+        15
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-stable",
+      "name": "approach",
+      "bodyLocal": [
+        -2,
+        0,
+        9
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-woodyard",
+      "name": "approach",
+      "bodyLocal": [
+        2,
+        0,
+        8
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-court",
+      "name": "approach",
+      "bodyLocal": [
+        0,
+        0,
+        17
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-forge",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        5
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-market",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        7
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "name": "approach",
+      "bodyLocal": [
+        1.5,
+        0,
+        7
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-potter",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        6
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-kiln",
+      "name": "approach",
+      "bodyLocal": [
+        2,
+        0,
+        9
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-belltower",
+      "name": "approach",
+      "bodyLocal": [
+        4,
+        0,
+        20
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-tower",
+      "name": "approach",
+      "bodyLocal": [
+        3,
+        0,
+        22
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-shrine",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        8
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed baseline approach, reuse unchanged after deployment."
+    },
+    {
+      "id": "nx-town-hall",
+      "name": "interior",
+      "bodyLocal": [
+        0,
+        0.2,
+        2
+      ],
+      "lookLocal": [
+        0,
+        0.2,
+        -2
+      ],
+      "note": "Real room station; assigned viewpoint is not a walked collision route."
+    },
+    {
+      "id": "nx-town-inn",
+      "name": "interior",
+      "bodyLocal": [
+        -1.15,
+        0.2,
+        1.45
+      ],
+      "lookLocal": [
+        1,
+        0.2,
+        -1
+      ],
+      "note": "Real room station; assigned viewpoint is not a walked collision route."
+    },
+    {
+      "id": "nx-town-stable",
+      "name": "interior",
+      "bodyLocal": [
+        -1.35,
+        0.2,
+        1
+      ],
+      "lookLocal": [
+        1,
+        0.2,
+        -1
+      ],
+      "note": "Real room station; assigned viewpoint is not a walked collision route."
+    },
+    {
+      "id": "nx-court",
+      "name": "interior",
+      "bodyLocal": [
+        -3.4,
+        0.2,
+        1
+      ],
+      "lookLocal": [
+        -4.9,
+        0.2,
+        -1
+      ],
+      "note": "Real room station; assigned viewpoint is not a walked collision route."
+    },
+    {
+      "id": "nx-tower",
+      "name": "interior",
+      "bodyLocal": [
+        0,
+        0.2,
+        1.3
+      ],
+      "lookLocal": [
+        1.3,
+        0.2,
+        -0.8
+      ],
+      "note": "Real room station; assigned viewpoint is not a walked collision route."
+    },
+    {
+      "id": "nx-town-woodyard",
+      "name": "workstation",
+      "bodyLocal": [
+        1,
+        0,
+        3.6
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    },
+    {
+      "id": "nx-forge",
+      "name": "workstation",
+      "bodyLocal": [
+        0.5,
+        0,
+        2.7
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    },
+    {
+      "id": "nx-town-market",
+      "name": "workstation",
+      "bodyLocal": [
+        0,
+        0,
+        3.5
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "name": "workstation",
+      "bodyLocal": [
+        0,
+        0,
+        3.5
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    },
+    {
+      "id": "nx-town-potter",
+      "name": "workstation",
+      "bodyLocal": [
+        0.4,
+        -0.35,
+        3.2
+      ],
+      "lookLocal": [
+        0,
+        -0.35,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    },
+    {
+      "id": "nx-town-kiln",
+      "name": "workstation",
+      "bodyLocal": [
+        1,
+        0,
+        4.8
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    },
+    {
+      "id": "nx-town-shrine",
+      "name": "workstation",
+      "bodyLocal": [
+        0,
+        0,
+        4.5
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    },
+    {
+      "id": "nx-town-belltower",
+      "name": "detail",
+      "bodyLocal": [
+        2,
+        1.5,
+        12
+      ],
+      "lookLocal": [
+        0,
+        1.5,
+        0
+      ],
+      "note": "Open belfry landmark detail, elevated diagnostic presence; not a room."
+    },
+    {
+      "id": "nx-town-gate-n",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        9
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed inner-side gate approach; gate is an open passage, no interior."
+    },
+    {
+      "id": "nx-town-gate-s",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        9
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed inner-side gate approach; gate is an open passage, no interior."
+    },
+    {
+      "id": "nx-town-gate-e",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        9
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed inner-side gate approach; gate is an open passage, no interior."
+    },
+    {
+      "id": "nx-town-gate-w",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0,
+        9
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed inner-side gate approach; gate is an open passage, no interior."
+    }
+  ],
+  "wireCounts": {
+    "join": 0,
+    "pose": 0,
+    "verb": 0
+  },
+  "uploads": 0,
+  "frames": [
+    {
+      "id": "nx-town-hall",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-stable",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-woodyard",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-court",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-forge",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-market",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-potter",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-kiln",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-belltower",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-tower",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-shrine",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-hall",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-stable",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-court",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-tower",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-woodyard",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-forge",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-market",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-potter",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-kiln",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-shrine",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-belltower",
+      "view": "detail",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-gate-n",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-gate-s",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-gate-e",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-gate-w",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    }
+  ],
+  "limitations": [
+    "Actual live /snap imagery, not a local GLB review rig.",
+    "Observer positions are assigned; this is not collision-tested walking.",
+    "First-person pitch/eye height are public-runtime and avatar controlled; lookLocal determines yaw only.",
+    "Weather and other participants are live and not frozen. Native image review is a separate gate."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-11fe39c9-3ab",
+    "view": "first",
+    "startedAt": "2026-09-08T02:08:31.903Z"
+  },
+  "completedAt": "2026-09-08T02:08:32.337Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "eeb0c566b5ac326e4fac201b4ddca22bc5ce43d39524bdc0891a5d50432348cb",
+  "bytes": 485593,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-tower",
+  "view": "approach",
+  "bodyPose": {
+    "p": [
+      -2.339325715693418,
+      0,
+      1.9752363498331693
+    ],
+    "yaw": 0.8336503675752939,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    3,
+    0,
+    22
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-tower",
+    "lib": "store/a989bdc3cad37b39.glb",
+    "kind": "thing",
+    "pos": [
+      14.1,
+      0,
+      16.9
+    ],
+    "yaw": -2.44347,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "sockets": {
+        "study": {
+          "pos": [
+            -1.35,
+            3,
+            -0.5
+          ],
+          "yaw": -1.5707963267948966
+        }
+      }
+    },
+    "bbox": {
+      "min": [
+        -3.25,
+        -0.2,
+        -3.25
+      ],
+      "max": [
+        3.507,
+        8.475,
+        3.6
+      ],
+      "size": [
+        6.757,
+        8.675,
+        6.85
+      ],
+      "center": [
+        0.129,
+        4.138,
+        0.175
+      ]
+    },
+    "tris": 1254
+  },
+  "targetAfter": {
+    "id": "nx-tower",
+    "lib": "store/a989bdc3cad37b39.glb",
+    "kind": "thing",
+    "pos": [
+      14.1,
+      0,
+      16.9
+    ],
+    "yaw": -2.44347,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "sockets": {
+        "study": {
+          "pos": [
+            -1.35,
+            3,
+            -0.5
+          ],
+          "yaw": -1.5707963267948966
+        }
+      }
+    },
+    "bbox": {
+      "min": [
+        -3.25,
+        -0.2,
+        -3.25
+      ],
+      "max": [
+        3.507,
+        8.475,
+        3.6
+      ],
+      "size": [
+        6.757,
+        8.675,
+        6.85
+      ],
+      "center": [
+        0.129,
+        4.138,
+        0.175
+      ]
+    },
+    "tris": 1254
+  },
+  "beforeObservedAt": "2026-09-08T02:08:28.900Z",
+  "afterObservedAt": "2026-09-08T02:08:34.071Z",
+  "protectedBeforeSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "protectedAfterSha256": "faac4d15d816d324d8da9a20d098efeb92091d63eab22ef94c42ec5ad061001d",
+  "file": "nx-tower-approach.png"
+}

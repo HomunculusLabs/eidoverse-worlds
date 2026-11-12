@@ -1,0 +1,9 @@
+I can see all six images directly, including the labels on 3–6.
+
+- **Live porch (1):** Settle left, table right, and sign beyond the right post read as distinct objects. This is useful separation, although the post still partly obscures the sign and overlaps the table in projection. The aisle is discernible; deep exterior darkness limits assessment of its continuation.
+- **Live interior (2):** Lamp dominance is restrained: small candle/sconce shapes remain, with no large central bulb visible. The doorway and right-hand stair establish the room’s layout. The foreground table overlaps the lower doorway in projection, so the full circulation route remains unproven. Outside and the ceiling remain very dark; that appearance does **not** establish nighttime.
+- **Local supplements (3–6):** Clearly labeled and substantially more legible for geometry and materials. Hall framing and threshold read cleanly in 3; 4 gives the clearest inn doorway/furniture relationship. Matched views 5/6 clarify surfaces lost in live shadow. I see no definite floating part or solid obstruction across a doorway. The small porch tabletop piece appears to rest on the table, though its purpose is unclear. Thin background-colored slivers along some inn window bottoms in 4/6 warrant an interface check; these views cannot establish their cause or hidden collisions.
+
+**Best evidence:** live porch **1 — `nx-town-inn-approach.png`**; live interior **2 — `nx-town-inn-interior.png`**; doorway detail **4 — `nx-town-inn-detail-LOCAL-DAYLIGHT.png`**; hall threshold **3 — `nx-town-hall-interior-LOCAL-DAYLIGHT.png`**.
+
+The corrected views support composition and legibility; they leave darkness, some projected overlaps, and physical clearance unresolved.

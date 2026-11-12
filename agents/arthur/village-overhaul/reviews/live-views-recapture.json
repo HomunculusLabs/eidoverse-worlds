@@ -1,0 +1,77 @@
+[
+  {
+    "id": "nx-town-hall",
+    "name": "approach",
+    "bodyLocal": [
+      -1.8,
+      0.2,
+      6.1
+    ],
+    "lookLocal": [
+      0,
+      0.2,
+      0.8
+    ],
+    "note": "SUPPLEMENTAL AFTER ONLY: close oblique threshold/porch connection, not a matched BEFORE camera."
+  },
+  {
+    "id": "nx-town-hall",
+    "name": "interior",
+    "bodyLocal": [
+      -1.25,
+      0.2,
+      -2.05
+    ],
+    "lookLocal": [
+      0.3,
+      0.2,
+      3.6
+    ],
+    "note": "SUPPLEMENTAL AFTER ONLY: rear west aisle facing front doorway, furnishing/circulation to right; original comparison camera untouched."
+  },
+  {
+    "id": "nx-town-inn",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0.198,
+      3.85
+    ],
+    "lookLocal": [
+      2.85,
+      0.198,
+      3.95
+    ],
+    "note": "SUPPLEMENTAL AFTER v2: camera inside clear central porch aisle facing sideways across settle, table and sign rather than standing in front of overlapping projections. Not a matched BEFORE view."
+  },
+  {
+    "id": "nx-town-inn",
+    "name": "interior",
+    "bodyLocal": [
+      3.2,
+      0.198,
+      -0.6
+    ],
+    "lookLocal": [
+      0,
+      0.198,
+      3
+    ],
+    "note": "SUPPLEMENTAL AFTER v2: east table aisle facing doorway; observed central authored bulb bounding box lies wholly beyond RIGHT image edge (NDC x 1.117..1.365). No FOV, exposure, lamp or sky edits. Captured in live-recapture-02-renderer."
+  },
+  {
+    "id": "nx-town-inn",
+    "name": "detail",
+    "bodyLocal": [
+      -1.65,
+      0.198,
+      -1.65
+    ],
+    "lookLocal": [
+      0.6,
+      0.198,
+      3.2
+    ],
+    "note": "SUPPLEMENTAL AFTER ONLY: complementary rear west doorway-facing room detail; assigned diagnostic eye, not walked collision proof."
+  }
+]

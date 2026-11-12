@@ -1,0 +1,28 @@
+{
+  "id": "nx-town-belltower",
+  "lib": "store/5568ac44953b9d22.glb",
+  "kind": "thing",
+  "pos": [
+    6.5,
+    0,
+    6.5
+  ],
+  "yaw": -2.356194490192345,
+  "scale": 1,
+  "parent": null,
+  "comp": {
+    "ladder": {
+      "min": [
+        -0.98,
+        0.3,
+        0.98
+      ],
+      "max": [
+        -0.52,
+        5.15,
+        1.22
+      ]
+    }
+  },
+  "collide": "exact"
+}

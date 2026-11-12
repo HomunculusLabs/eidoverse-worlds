@@ -1,0 +1,4303 @@
+{
+  "id": "nx-town-woodyard",
+  "stage": "local",
+  "sourceSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "contextSha256": "95d0bfc5331b10050747535ca624bb30e2e273e90ec2c17663412b229a3eb33c",
+  "publicRuntime": [
+    {
+      "name": "colliders.js",
+      "url": "https://eidoverse.billding.dev/lib/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+    },
+    {
+      "name": "supportclass.js",
+      "url": "https://eidoverse.billding.dev/lib/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+    }
+  ],
+  "sourceEquivalence": {
+    "pass": true,
+    "forward": {
+      "samples": 34664,
+      "maxDistance": 3.1537369739151786e-14
+    },
+    "reverse": {
+      "samples": 34664,
+      "maxDistance": 3.1537369739151786e-14
+    },
+    "toleranceMetres": 0.003,
+    "sourceTriangles": 4952,
+    "servedTriangles": 4952,
+    "method": "bidirectional all-vertex/edge-midpoint/triangle-centroid nearest-surface probes",
+    "limitation": "Sampled surface equivalence, not a mathematical Hausdorff certificate; actual served-route proof separately required."
+  },
+  "actualBounds": {
+    "min": [
+      -2.0999999046325684,
+      -4.76837147544984e-9,
+      -1.090248942375183
+    ],
+    "max": [
+      2.875746011734009,
+      3.559999942779541,
+      1.5084253549575806
+    ]
+  },
+  "routes": [
+    {
+      "file": "build/nx-town-woodyard-route-context.json",
+      "sha256": "e9ddd55536df0c456082c26b366fcfaca938b6e0ff45fc0853dc7fcf6eb031d8",
+      "mode": "workstation",
+      "report": {
+        "status": "PASS",
+        "id": "nx-town-woodyard",
+        "kind": "workstation",
+        "runtime": {
+          "mode": "served-override",
+          "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+          "files": {
+            "colliders.js": {
+              "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+              "publicPath": "/lib/colliders.js"
+            },
+            "supportclass.js": {
+              "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+              "publicPath": "/lib/supportclass.js"
+            }
+          },
+          "threeRevision": "184",
+          "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+        },
+        "collider": {
+          "exact": false,
+          "pillar": true
+        },
+        "neighbors": [
+          "nx-approach-ne-lane-002",
+          "nx-artwalk-b11-woodyard-heartwood-measure",
+          "nx-artwalk-b31-sheaf-tally",
+          "nx-artwalk-b32-morning-measure",
+          "nx-dress-charcoal",
+          "nx-dress-churn",
+          "nx-dress-harvestcart",
+          "nx-gallery-mosaic-0048",
+          "nx-sign-woodyard-001",
+          "nx-town-longhouse"
+        ],
+        "walks": [
+          {
+            "direction": "in",
+            "from": "yard_approach",
+            "to": "sign_left_entry",
+            "steps": 16,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.3322676295501878e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "sign_left_entry",
+            "to": "fuel_selection_station",
+            "steps": 20,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 7.771561172376096e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "fuel_selection_station",
+            "to": "joiners_bench_station",
+            "steps": 45,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 8.08254562088053e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "joiners_bench_station",
+            "to": "vise_station",
+            "steps": 17,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 9.155133597044475e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "vise_station",
+            "to": "outside_transfer",
+            "steps": 24,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.9860273225978185e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "outside_transfer",
+            "to": "chopping_approach",
+            "steps": 33,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 3.580361673049448e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "chopping_approach",
+            "to": "axe_stump_station",
+            "steps": 21,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 3.580361673049448e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "axe_stump_station",
+            "to": "chopping_approach",
+            "steps": 21,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 0,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "chopping_approach",
+            "to": "outside_transfer",
+            "steps": 32,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.1102230246251565e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "outside_transfer",
+            "to": "vise_station",
+            "steps": 24,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.9100999153570945e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "vise_station",
+            "to": "joiners_bench_station",
+            "steps": 17,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 7.108895957933346e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "joiners_bench_station",
+            "to": "fuel_selection_station",
+            "steps": 45,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 5.978733960281817e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "fuel_selection_station",
+            "to": "sign_left_entry",
+            "steps": 20,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 1.5700924586837751e-15,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "sign_left_entry",
+            "to": "yard_approach",
+            "steps": 16,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0,
+            "maxY": 0,
+            "arrivalXZ": 2.220446049250313e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          }
+        ],
+        "physicalSupport": {
+          "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+          "pass": true,
+          "samples": [
+            {
+              "name": "in:start",
+              "pos": [
+                -1.07,
+                0,
+                2.25
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:1",
+              "pos": [
+                -1.07,
+                0,
+                2.2125
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:2",
+              "pos": [
+                -1.07,
+                0,
+                2.175
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:3",
+              "pos": [
+                -1.07,
+                0,
+                2.1374999999999997
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:4",
+              "pos": [
+                -1.07,
+                0,
+                2.0999999999999996
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:5",
+              "pos": [
+                -1.07,
+                0,
+                2.0624999999999996
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:6",
+              "pos": [
+                -1.07,
+                0,
+                2.0249999999999995
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:7",
+              "pos": [
+                -1.07,
+                0,
+                1.9874999999999994
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:8",
+              "pos": [
+                -1.07,
+                0,
+                1.9499999999999993
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:9",
+              "pos": [
+                -1.07,
+                0,
+                1.9124999999999992
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:10",
+              "pos": [
+                -1.07,
+                0,
+                1.8749999999999991
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:11",
+              "pos": [
+                -1.07,
+                0,
+                1.837499999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:12",
+              "pos": [
+                -1.07,
+                0,
+                1.799999999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:13",
+              "pos": [
+                -1.07,
+                0,
+                1.7624999999999988
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:14",
+              "pos": [
+                -1.07,
+                0,
+                1.7249999999999988
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:15",
+              "pos": [
+                -1.07,
+                0,
+                1.6874999999999987
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:yard_approach:sign_left_entry:16",
+              "pos": [
+                -1.07,
+                0,
+                1.6499999999999986
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:1",
+              "pos": [
+                -1.07,
+                0,
+                1.6104999999999987
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:2",
+              "pos": [
+                -1.07,
+                0,
+                1.5709999999999988
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:3",
+              "pos": [
+                -1.07,
+                0,
+                1.531499999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:4",
+              "pos": [
+                -1.07,
+                0,
+                1.491999999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:5",
+              "pos": [
+                -1.07,
+                0,
+                1.4524999999999992
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:6",
+              "pos": [
+                -1.07,
+                0,
+                1.4129999999999994
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:7",
+              "pos": [
+                -1.07,
+                0,
+                1.3734999999999995
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:8",
+              "pos": [
+                -1.07,
+                0,
+                1.3339999999999996
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:9",
+              "pos": [
+                -1.07,
+                0,
+                1.2944999999999998
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:10",
+              "pos": [
+                -1.07,
+                0,
+                1.255
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:11",
+              "pos": [
+                -1.07,
+                0,
+                1.2155
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:12",
+              "pos": [
+                -1.07,
+                0,
+                1.1760000000000002
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:13",
+              "pos": [
+                -1.07,
+                0,
+                1.1365000000000003
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:14",
+              "pos": [
+                -1.07,
+                0,
+                1.0970000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:15",
+              "pos": [
+                -1.07,
+                0,
+                1.0575000000000006
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:16",
+              "pos": [
+                -1.07,
+                0,
+                1.0180000000000007
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:17",
+              "pos": [
+                -1.07,
+                0,
+                0.9785000000000007
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:18",
+              "pos": [
+                -1.07,
+                0,
+                0.9390000000000007
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:19",
+              "pos": [
+                -1.07,
+                0,
+                0.8995000000000007
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:sign_left_entry:fuel_selection_station:20",
+              "pos": [
+                -1.07,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:1",
+              "pos": [
+                -1.0306666666666668,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:2",
+              "pos": [
+                -0.9913333333333335,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:3",
+              "pos": [
+                -0.9520000000000002,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:4",
+              "pos": [
+                -0.9126666666666668,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:5",
+              "pos": [
+                -0.8733333333333335,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:6",
+              "pos": [
+                -0.8340000000000002,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:7",
+              "pos": [
+                -0.7946666666666669,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:8",
+              "pos": [
+                -0.7553333333333335,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:9",
+              "pos": [
+                -0.7160000000000002,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:10",
+              "pos": [
+                -0.6766666666666669,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:11",
+              "pos": [
+                -0.6373333333333335,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:12",
+              "pos": [
+                -0.5980000000000002,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:13",
+              "pos": [
+                -0.5586666666666669,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:14",
+              "pos": [
+                -0.5193333333333335,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:15",
+              "pos": [
+                -0.4800000000000002,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:16",
+              "pos": [
+                -0.4406666666666669,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:17",
+              "pos": [
+                -0.40133333333333354,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:18",
+              "pos": [
+                -0.3620000000000002,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:19",
+              "pos": [
+                -0.3226666666666669,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:20",
+              "pos": [
+                -0.28333333333333355,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:21",
+              "pos": [
+                -0.24400000000000022,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:22",
+              "pos": [
+                -0.20466666666666689,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:23",
+              "pos": [
+                -0.16533333333333355,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:24",
+              "pos": [
+                -0.12600000000000022,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:25",
+              "pos": [
+                -0.08666666666666689,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:26",
+              "pos": [
+                -0.04733333333333356,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:27",
+              "pos": [
+                -0.00800000000000023,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:28",
+              "pos": [
+                0.0313333333333331,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:29",
+              "pos": [
+                0.07066666666666643,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:30",
+              "pos": [
+                0.10999999999999976,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:31",
+              "pos": [
+                0.1493333333333331,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:32",
+              "pos": [
+                0.18866666666666643,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:33",
+              "pos": [
+                0.22799999999999976,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:34",
+              "pos": [
+                0.2673333333333331,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:35",
+              "pos": [
+                0.3066666666666664,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:36",
+              "pos": [
+                0.34599999999999975,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:37",
+              "pos": [
+                0.3853333333333331,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:38",
+              "pos": [
+                0.4246666666666664,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:39",
+              "pos": [
+                0.46399999999999975,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:40",
+              "pos": [
+                0.5033333333333331,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:41",
+              "pos": [
+                0.5426666666666664,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:42",
+              "pos": [
+                0.5819999999999997,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:43",
+              "pos": [
+                0.6213333333333331,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:44",
+              "pos": [
+                0.6606666666666664,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:fuel_selection_station:joiners_bench_station:45",
+              "pos": [
+                0.6999999999999997,
+                0,
+                0.8600000000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:1",
+              "pos": [
+                0.7364705882352939,
+                0,
+                0.8694117647058831
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:2",
+              "pos": [
+                0.772941176470588,
+                0,
+                0.8788235294117654
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:3",
+              "pos": [
+                0.8094117647058822,
+                0,
+                0.8882352941176478
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:4",
+              "pos": [
+                0.8458823529411763,
+                0,
+                0.8976470588235301
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:5",
+              "pos": [
+                0.8823529411764705,
+                0,
+                0.9070588235294125
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:6",
+              "pos": [
+                0.9188235294117646,
+                0,
+                0.9164705882352948
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:7",
+              "pos": [
+                0.9552941176470587,
+                0,
+                0.9258823529411772
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:8",
+              "pos": [
+                0.9917647058823529,
+                0,
+                0.9352941176470595
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:9",
+              "pos": [
+                1.028235294117647,
+                0,
+                0.9447058823529418
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:10",
+              "pos": [
+                1.064705882352941,
+                0,
+                0.9541176470588242
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:11",
+              "pos": [
+                1.101176470588235,
+                0,
+                0.9635294117647065
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:12",
+              "pos": [
+                1.137647058823529,
+                0,
+                0.9729411764705889
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:13",
+              "pos": [
+                1.174117647058823,
+                0,
+                0.9823529411764712
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:14",
+              "pos": [
+                1.210588235294117,
+                0,
+                0.9917647058823535
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:15",
+              "pos": [
+                1.247058823529411,
+                0,
+                1.0011764705882358
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:16",
+              "pos": [
+                1.2835294117647051,
+                0,
+                1.010588235294118
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:joiners_bench_station:vise_station:17",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.0200000000000002
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:1",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.0587500000000003
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:2",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.0975000000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:3",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.1362500000000004
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:4",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.1750000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:5",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.2137500000000006
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:6",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.2525000000000006
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:7",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.2912500000000007
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:8",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.3300000000000007
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:9",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.3687500000000008
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:10",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.4075000000000009
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:11",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.446250000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:12",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.485000000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:13",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.523750000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:14",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.562500000000001
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:15",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.6012500000000012
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:16",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.6400000000000012
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:17",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.6787500000000013
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:18",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.7175000000000014
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:19",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.7562500000000014
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:20",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.7950000000000015
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:21",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.8337500000000015
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:22",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.8725000000000016
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:23",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.9112500000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:vise_station:outside_transfer:24",
+              "pos": [
+                1.3199999999999992,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:1",
+              "pos": [
+                1.358787878787878,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:2",
+              "pos": [
+                1.3975757575757568,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:3",
+              "pos": [
+                1.4363636363636356,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:4",
+              "pos": [
+                1.4751515151515144,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:5",
+              "pos": [
+                1.5139393939393933,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:6",
+              "pos": [
+                1.552727272727272,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:7",
+              "pos": [
+                1.5915151515151509,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:8",
+              "pos": [
+                1.6303030303030297,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:9",
+              "pos": [
+                1.6690909090909085,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:10",
+              "pos": [
+                1.7078787878787873,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:11",
+              "pos": [
+                1.7466666666666661,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:12",
+              "pos": [
+                1.785454545454545,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:13",
+              "pos": [
+                1.8242424242424238,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:14",
+              "pos": [
+                1.8630303030303026,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:15",
+              "pos": [
+                1.9018181818181814,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:16",
+              "pos": [
+                1.9406060606060602,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:17",
+              "pos": [
+                1.979393939393939,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:18",
+              "pos": [
+                2.0181818181818176,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:19",
+              "pos": [
+                2.0569696969696967,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:20",
+              "pos": [
+                2.0957575757575757,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:21",
+              "pos": [
+                2.1345454545454547,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:22",
+              "pos": [
+                2.173333333333334,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:23",
+              "pos": [
+                2.212121212121213,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:24",
+              "pos": [
+                2.250909090909092,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:25",
+              "pos": [
+                2.289696969696971,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:26",
+              "pos": [
+                2.32848484848485,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:27",
+              "pos": [
+                2.367272727272729,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:28",
+              "pos": [
+                2.406060606060608,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:29",
+              "pos": [
+                2.444848484848487,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:30",
+              "pos": [
+                2.483636363636366,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:31",
+              "pos": [
+                2.522424242424245,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:32",
+              "pos": [
+                2.561212121212124,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside_transfer:chopping_approach:33",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.9500000000000017
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:1",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.9104761904761922
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:2",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.8709523809523827
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:3",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.8314285714285732
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:4",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.7919047619047637
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:5",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.7523809523809541
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:6",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.7128571428571446
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:7",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.6733333333333351
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:8",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.6338095238095256
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:9",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.594285714285716
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:10",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.5547619047619066
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:11",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.515238095238097
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:12",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.4757142857142875
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:13",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.436190476190478
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:14",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.3966666666666685
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:15",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.357142857142859
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:16",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.3176190476190495
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:17",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.27809523809524
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:18",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.2385714285714304
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:19",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.199047619047621
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:20",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.1595238095238114
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:chopping_approach:axe_stump_station:21",
+              "pos": [
+                2.600000000000003,
+                0,
+                1.1200000000000019
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:start",
+              "pos": [
+                2.6,
+                0,
+                1.12
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:1",
+              "pos": [
+                2.6,
+                0,
+                1.1595238095238096
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:2",
+              "pos": [
+                2.6,
+                0,
+                1.1990476190476191
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:3",
+              "pos": [
+                2.6,
+                0,
+                1.2385714285714287
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:4",
+              "pos": [
+                2.6,
+                0,
+                1.2780952380952382
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:5",
+              "pos": [
+                2.6,
+                0,
+                1.3176190476190477
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:6",
+              "pos": [
+                2.6,
+                0,
+                1.3571428571428572
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:7",
+              "pos": [
+                2.6,
+                0,
+                1.3966666666666667
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:8",
+              "pos": [
+                2.6,
+                0,
+                1.4361904761904762
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:9",
+              "pos": [
+                2.6,
+                0,
+                1.4757142857142858
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:10",
+              "pos": [
+                2.6,
+                0,
+                1.5152380952380953
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:11",
+              "pos": [
+                2.6,
+                0,
+                1.5547619047619048
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:12",
+              "pos": [
+                2.6,
+                0,
+                1.5942857142857143
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:13",
+              "pos": [
+                2.6,
+                0,
+                1.6338095238095238
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:14",
+              "pos": [
+                2.6,
+                0,
+                1.6733333333333333
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:15",
+              "pos": [
+                2.6,
+                0,
+                1.7128571428571429
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:16",
+              "pos": [
+                2.6,
+                0,
+                1.7523809523809524
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:17",
+              "pos": [
+                2.6,
+                0,
+                1.791904761904762
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:18",
+              "pos": [
+                2.6,
+                0,
+                1.8314285714285714
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:19",
+              "pos": [
+                2.6,
+                0,
+                1.870952380952381
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:20",
+              "pos": [
+                2.6,
+                0,
+                1.9104761904761904
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:axe_stump_station:chopping_approach:21",
+              "pos": [
+                2.6,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:1",
+              "pos": [
+                2.56,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:2",
+              "pos": [
+                2.52,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:3",
+              "pos": [
+                2.48,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:4",
+              "pos": [
+                2.44,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:5",
+              "pos": [
+                2.4,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:6",
+              "pos": [
+                2.36,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:7",
+              "pos": [
+                2.32,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:8",
+              "pos": [
+                2.28,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:9",
+              "pos": [
+                2.2399999999999998,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:10",
+              "pos": [
+                2.1999999999999997,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:11",
+              "pos": [
+                2.1599999999999997,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:12",
+              "pos": [
+                2.1199999999999997,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:13",
+              "pos": [
+                2.0799999999999996,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:14",
+              "pos": [
+                2.0399999999999996,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:15",
+              "pos": [
+                1.9999999999999996,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:16",
+              "pos": [
+                1.9599999999999995,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:17",
+              "pos": [
+                1.9199999999999995,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:18",
+              "pos": [
+                1.8799999999999994,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:19",
+              "pos": [
+                1.8399999999999994,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:20",
+              "pos": [
+                1.7999999999999994,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:21",
+              "pos": [
+                1.7599999999999993,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:22",
+              "pos": [
+                1.7199999999999993,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:23",
+              "pos": [
+                1.6799999999999993,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:24",
+              "pos": [
+                1.6399999999999992,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:25",
+              "pos": [
+                1.5999999999999992,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:26",
+              "pos": [
+                1.5599999999999992,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:27",
+              "pos": [
+                1.5199999999999991,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:28",
+              "pos": [
+                1.479999999999999,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:29",
+              "pos": [
+                1.439999999999999,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:30",
+              "pos": [
+                1.399999999999999,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:31",
+              "pos": [
+                1.359999999999999,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:chopping_approach:outside_transfer:32",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.95
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:1",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.91125
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:2",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.8724999999999998
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:3",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.8337499999999998
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:4",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.7949999999999997
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:5",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.7562499999999996
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:6",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.7174999999999996
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:7",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.6787499999999995
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:8",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.6399999999999995
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:9",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.6012499999999994
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:10",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.5624999999999993
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:11",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.5237499999999993
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:12",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.4849999999999992
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:13",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.4462499999999991
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:14",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.407499999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:15",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.368749999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:16",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.329999999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:17",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.291249999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:18",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.2524999999999988
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:19",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.2137499999999988
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:20",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.1749999999999987
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:21",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.1362499999999986
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:22",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.0974999999999986
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:23",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.0587499999999985
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:outside_transfer:vise_station:24",
+              "pos": [
+                1.319999999999999,
+                0,
+                1.0199999999999985
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:1",
+              "pos": [
+                1.283529411764705,
+                0,
+                1.0105882352941162
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:2",
+              "pos": [
+                1.2470588235294109,
+                0,
+                1.001176470588234
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:3",
+              "pos": [
+                1.2105882352941169,
+                0,
+                0.9917647058823518
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:4",
+              "pos": [
+                1.1741176470588228,
+                0,
+                0.9823529411764695
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:5",
+              "pos": [
+                1.1376470588235288,
+                0,
+                0.9729411764705873
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:6",
+              "pos": [
+                1.1011764705882348,
+                0,
+                0.9635294117647051
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:7",
+              "pos": [
+                1.0647058823529407,
+                0,
+                0.9541176470588228
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:8",
+              "pos": [
+                1.0282352941176467,
+                0,
+                0.9447058823529406
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:9",
+              "pos": [
+                0.9917647058823527,
+                0,
+                0.9352941176470584
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:10",
+              "pos": [
+                0.9552941176470586,
+                0,
+                0.9258823529411762
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:11",
+              "pos": [
+                0.9188235294117646,
+                0,
+                0.9164705882352939
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:12",
+              "pos": [
+                0.8823529411764706,
+                0,
+                0.9070588235294117
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:13",
+              "pos": [
+                0.8458823529411765,
+                0,
+                0.8976470588235295
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:14",
+              "pos": [
+                0.8094117647058825,
+                0,
+                0.8882352941176472
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:15",
+              "pos": [
+                0.7729411764705885,
+                0,
+                0.878823529411765
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:16",
+              "pos": [
+                0.7364705882352944,
+                0,
+                0.8694117647058828
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:vise_station:joiners_bench_station:17",
+              "pos": [
+                0.7000000000000004,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:1",
+              "pos": [
+                0.6606666666666671,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:2",
+              "pos": [
+                0.6213333333333337,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:3",
+              "pos": [
+                0.5820000000000004,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:4",
+              "pos": [
+                0.5426666666666671,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:5",
+              "pos": [
+                0.5033333333333337,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:6",
+              "pos": [
+                0.4640000000000004,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:7",
+              "pos": [
+                0.4246666666666671,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:8",
+              "pos": [
+                0.38533333333333375,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:9",
+              "pos": [
+                0.3460000000000004,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:10",
+              "pos": [
+                0.3066666666666671,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:11",
+              "pos": [
+                0.26733333333333376,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:12",
+              "pos": [
+                0.22800000000000042,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:13",
+              "pos": [
+                0.1886666666666671,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:14",
+              "pos": [
+                0.14933333333333376,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:15",
+              "pos": [
+                0.11000000000000042,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:16",
+              "pos": [
+                0.07066666666666707,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:17",
+              "pos": [
+                0.03133333333333373,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:18",
+              "pos": [
+                -0.007999999999999619,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:19",
+              "pos": [
+                -0.047333333333332964,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:20",
+              "pos": [
+                -0.08666666666666631,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:21",
+              "pos": [
+                -0.12599999999999967,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:22",
+              "pos": [
+                -0.165333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:23",
+              "pos": [
+                -0.20466666666666633,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:24",
+              "pos": [
+                -0.24399999999999966,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:25",
+              "pos": [
+                -0.283333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:26",
+              "pos": [
+                -0.3226666666666663,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:27",
+              "pos": [
+                -0.36199999999999966,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:28",
+              "pos": [
+                -0.401333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:29",
+              "pos": [
+                -0.4406666666666663,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:30",
+              "pos": [
+                -0.47999999999999965,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:31",
+              "pos": [
+                -0.519333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:32",
+              "pos": [
+                -0.5586666666666663,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:33",
+              "pos": [
+                -0.5979999999999996,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:34",
+              "pos": [
+                -0.637333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:35",
+              "pos": [
+                -0.6766666666666663,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:36",
+              "pos": [
+                -0.7159999999999996,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:37",
+              "pos": [
+                -0.755333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:38",
+              "pos": [
+                -0.7946666666666663,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:39",
+              "pos": [
+                -0.8339999999999996,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:40",
+              "pos": [
+                -0.873333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:41",
+              "pos": [
+                -0.9126666666666663,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:42",
+              "pos": [
+                -0.9519999999999996,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:43",
+              "pos": [
+                -0.991333333333333,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:44",
+              "pos": [
+                -1.0306666666666664,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:joiners_bench_station:fuel_selection_station:45",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                0.8600000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:1",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                0.8995000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:2",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                0.9390000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:3",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                0.9785000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:4",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.0180000000000005
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:5",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.0575000000000003
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:6",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.0970000000000002
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:7",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.1365
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:8",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.176
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:9",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.2154999999999998
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:10",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.2549999999999997
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:11",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.2944999999999995
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:12",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.3339999999999994
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:13",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.3734999999999993
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:14",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.4129999999999991
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:15",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.452499999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:16",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.4919999999999989
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:17",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.5314999999999988
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:18",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.5709999999999986
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:19",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.6104999999999985
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:fuel_selection_station:sign_left_entry:20",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.6499999999999984
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:1",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.6874999999999984
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:2",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.7249999999999985
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:3",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.7624999999999986
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:4",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.7999999999999987
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:5",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.8374999999999988
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:6",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.874999999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:7",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.912499999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:8",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.949999999999999
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:9",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                1.9874999999999992
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:10",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                2.0249999999999995
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:11",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                2.0624999999999996
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:12",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                2.0999999999999996
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:13",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                2.1374999999999997
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:14",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                2.175
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:15",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                2.2125
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:sign_left_entry:yard_approach:16",
+              "pos": [
+                -1.0699999999999998,
+                0,
+                2.25
+              ],
+              "ground": 0,
+              "gap": 0,
+              "pass": true
+            }
+          ]
+        },
+        "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+        "limitations": [
+          "Not an enterable-room certification.",
+          "Only supplied neighbors and declared flat terrain checked."
+        ],
+        "proofFrameY": 0,
+        "terrainBinding": {
+          "declaredTerrainY": 0,
+          "effectiveHostLocalY": 0,
+          "hostElevation": 0,
+          "worldHeight": 0
+        }
+      }
+    }
+  ],
+  "geometryReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/woodyard-geometry.json",
+        "sha256": "3a295db9b261513440ad3cf2cd09518519301db696fae8e5762575346028b6e1"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/woodyard-geometry.json",
+      "sha256": "3a295db9b261513440ad3cf2cd09518519301db696fae8e5762575346028b6e1"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/final-stable-woodyard.md",
+        "sha256": "b09088fa0978b3f5098178ef60561c2fdc1543c6ac59b39f2f966529ccf101cf"
+      },
+      {
+        "file": "reviews/parent-woodyard-final/aerial.png",
+        "sha256": "cd92181c1ced5398849343d00ea4f6710f2091c8ca3c3c800f145c698a4cf76f"
+      },
+      {
+        "file": "reviews/parent-woodyard-detail-final/front.png",
+        "sha256": "cc52abd6d438fd03f24bc87ce91b8e020a02f9fa1b5ecad31246ffbbee870c5b"
+      },
+      {
+        "file": "reviews/parent-woodyard-detail-final/interior.png",
+        "sha256": "afa6d7f4316c8973a5eb5fef2493013874ba9eee5158f8d2cb6438aca860ccd2"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "neighbors": [
+    {
+      "id": "nx-approach-ne-lane-002",
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+      "lib": "store/dc52264c04cfe5bb.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e",
+      "lib": "store/aa5f2550365c1f7f.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-artwalk-b31-sheaf-tally",
+      "sha256": "946dc2ed6fcd3d5afdf9d4aaa70f1e9add5c29eb7cd323e9f60438940a0cc643",
+      "lib": "store/9e6d3d13f1e8d380.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-artwalk-b32-morning-measure",
+      "sha256": "32246cfbc476518dc340ef211938b890465e158cb9b82c1422af439cdb29ebd3",
+      "lib": "store/adb5459562eb21b2.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "sha256": "c9ca1b859b0532ed7f34e960561e77827106b3bcb83090ef8499096499248826",
+      "lib": "store/1d9a1c2d95f785b6.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-dress-churn",
+      "sha256": "761baf15cf0d9ff1136337f5d0c6e4bdb4413f9e013a51de9f5c1200544f3120",
+      "lib": "store/a509c3d2c1f3026e.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-dress-harvestcart",
+      "sha256": "2be1cb89ddf1dd6903b3a5018f8b72fd660e7aacd261db2894956eb5ad92ddf5",
+      "lib": "store/ee30d6709625bf2f.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-gallery-mosaic-0048",
+      "sha256": "573ba060e9a9cc9d275a033ceb833b59a07d3ee57ebc1ef5c24108aaafcdcf4a",
+      "lib": "store/b6491515b25ef439.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7",
+      "lib": "store/f46e12aeeea8af74.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-longhouse",
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+      "lib": "store/e38bb2a4c7933698.glb",
+      "decoded": true
+    }
+  ]
+}

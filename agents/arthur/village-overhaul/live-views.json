@@ -1,0 +1,452 @@
+[
+  {
+    "id": "nx-town-hall",
+    "name": "approach",
+    "bodyLocal": [
+      -4,
+      0,
+      12
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-town-inn",
+    "name": "approach",
+    "bodyLocal": [
+      3,
+      0,
+      15
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-stable",
+    "name": "approach",
+    "bodyLocal": [
+      2,
+      0,
+      -8
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Revised fixed BEFORE station following native independent framing review; reuse exactly AFTER."
+  },
+  {
+    "id": "nx-town-woodyard",
+    "name": "approach",
+    "bodyLocal": [
+      3.5,
+      0,
+      4.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-court",
+    "name": "approach",
+    "bodyLocal": [
+      0,
+      0,
+      17
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-forge",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-market",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      7
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-dyehouse",
+    "name": "approach",
+    "bodyLocal": [
+      1.5,
+      0,
+      7
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-potter",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      6
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-kiln",
+    "name": "approach",
+    "bodyLocal": [
+      5,
+      0,
+      5.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-town-belltower",
+    "name": "approach",
+    "bodyLocal": [
+      -6,
+      0,
+      16
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-tower",
+    "name": "approach",
+    "bodyLocal": [
+      7,
+      0,
+      14
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+  },
+  {
+    "id": "nx-town-shrine",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      8
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed baseline approach, reuse unchanged after deployment."
+  },
+  {
+    "id": "nx-town-hall",
+    "name": "interior",
+    "bodyLocal": [
+      0,
+      0.2,
+      -1.9
+    ],
+    "lookLocal": [
+      2.3,
+      0.2,
+      0.5
+    ],
+    "note": "Revised fixed BEFORE station following native independent framing review; reuse exactly AFTER."
+  },
+  {
+    "id": "nx-town-inn",
+    "name": "interior",
+    "bodyLocal": [
+      -1.15,
+      0.2,
+      1.45
+    ],
+    "lookLocal": [
+      1,
+      0.2,
+      -1
+    ],
+    "note": "Real room station; assigned viewpoint is not a walked collision route."
+  },
+  {
+    "id": "nx-town-stable",
+    "name": "interior",
+    "bodyLocal": [
+      -1.35,
+      0.2,
+      1
+    ],
+    "lookLocal": [
+      1,
+      0.2,
+      -1
+    ],
+    "note": "Real room station; assigned viewpoint is not a walked collision route."
+  },
+  {
+    "id": "nx-court",
+    "name": "interior",
+    "bodyLocal": [
+      -3,
+      0.2,
+      1.6
+    ],
+    "lookLocal": [
+      -3.8,
+      0.2,
+      -0.9
+    ],
+    "note": "Revised fixed BEFORE station following native independent framing review; reuse exactly AFTER."
+  },
+  {
+    "id": "nx-tower",
+    "name": "interior",
+    "bodyLocal": [
+      0.7,
+      2.625,
+      0.65
+    ],
+    "lookLocal": [
+      -1.35,
+      2.625,
+      -0.5
+    ],
+    "note": "Revised matched BEFORE station following native independent framing review; nx-tower is the real upper study, not a ground-room view."
+  },
+  {
+    "id": "nx-town-woodyard",
+    "name": "workstation",
+    "bodyLocal": [
+      1,
+      0,
+      3.6
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  },
+  {
+    "id": "nx-forge",
+    "name": "workstation",
+    "bodyLocal": [
+      0.5,
+      0,
+      2.7
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  },
+  {
+    "id": "nx-town-market",
+    "name": "workstation",
+    "bodyLocal": [
+      0,
+      0,
+      3.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  },
+  {
+    "id": "nx-town-dyehouse",
+    "name": "workstation",
+    "bodyLocal": [
+      0,
+      0,
+      3.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  },
+  {
+    "id": "nx-town-potter",
+    "name": "workstation",
+    "bodyLocal": [
+      0.4,
+      -0.35,
+      3.2
+    ],
+    "lookLocal": [
+      0,
+      -0.35,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  },
+  {
+    "id": "nx-town-kiln",
+    "name": "workstation",
+    "bodyLocal": [
+      1,
+      0,
+      4.8
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  },
+  {
+    "id": "nx-town-shrine",
+    "name": "workstation",
+    "bodyLocal": [
+      0,
+      0,
+      4.5
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+  },
+  {
+    "id": "nx-town-belltower",
+    "name": "detail",
+    "bodyLocal": [
+      2,
+      1.5,
+      12
+    ],
+    "lookLocal": [
+      0,
+      1.5,
+      0
+    ],
+    "note": "Open belfry landmark detail, elevated diagnostic presence; not a room."
+  },
+  {
+    "id": "nx-town-gate-n",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  },
+  {
+    "id": "nx-town-gate-s",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  },
+  {
+    "id": "nx-town-gate-e",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  },
+  {
+    "id": "nx-town-gate-w",
+    "name": "approach",
+    "bodyLocal": [
+      1,
+      0,
+      9
+    ],
+    "lookLocal": [
+      0,
+      0,
+      0
+    ],
+    "note": "Fixed host-local gate approach; open passage, no interior."
+  }
+]

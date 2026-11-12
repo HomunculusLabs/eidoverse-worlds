@@ -1,0 +1,33 @@
+{
+  "purpose": "offline review-only composition; not deployment bytes",
+  "hostSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "sha256": "0d6f3d207d5d8136970ebad3836a4dce5981c5411edea5fb721e9dda43a4ef5a",
+  "neighbors": [
+    {
+      "id": "nx-shutters",
+      "lib": "store/26259f89feb92736.glb",
+      "pos": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-shutters.glb",
+      "sha256": "1a5c45c57c27b8c0b812671143590ba08646325b340834d07b14f9daa5122091",
+      "hostLocalBounds": {
+        "min": [
+          -0.6164279580116272,
+          4,
+          2.749535083770752
+        ],
+        "max": [
+          0.33000001311302185,
+          4.594990253448486,
+          2.9279897212982178
+        ]
+      },
+      "protected": true
+    }
+  ]
+}

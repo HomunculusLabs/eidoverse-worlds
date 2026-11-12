@@ -1,0 +1,185 @@
+{
+  "status": "PASS",
+  "evidenceKind": "local-candidate-not-world-mutation",
+  "models": [
+    {
+      "id": "nx-town-potter",
+      "sha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+      "bytes": 633544,
+      "bounds": {
+        "min": [
+          -1.7050000429153442,
+          -1.4901161415892261e-09,
+          -0.9850000143051147
+        ],
+        "max": [
+          1.6700000762939453,
+          2.109999895095825,
+          0.5849999785423279
+        ]
+      },
+      "baselineBounds": {
+        "min": [
+          -1.725000023841858,
+          -0.0019999993965029716,
+          -1
+        ],
+        "max": [
+          1.7100000381469727,
+          1.0149935483932495,
+          0.7063624858856201
+        ]
+      },
+      "triangleCount": 17284,
+      "baselineSha256": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709",
+      "collider": {
+        "exact": false,
+        "pillar": false
+      },
+      "validation": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "functionality": "PASS",
+      "doubleBuild": "PASS",
+      "renderSets": [
+        {
+          "directory": "reviews/nx-town-potter-assembly-before",
+          "modelSha256": "0c47b19e08bcc516b17556f1453f2d8c162467836eb432f6e448829879620e44",
+          "cameraSha256": "c636c5c0199f71005e409d0c47f9a24a80bbb93b12766fea4bdad21d8cd60896",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-potter-assembly-final",
+          "modelSha256": "6f19c48f2a5531fe0ea99c1cc3bee1b52d61f8883c5d58673219e818568c20eb",
+          "cameraSha256": "c636c5c0199f71005e409d0c47f9a24a80bbb93b12766fea4bdad21d8cd60896",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-potter-before",
+          "modelSha256": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709",
+          "cameraSha256": "c93e4f274ce3e5a7ad637f35ab1355ec0f2d8bcedc6febb2197055469fbb8c11",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-potter-final",
+          "modelSha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+          "cameraSha256": "c93e4f274ce3e5a7ad637f35ab1355ec0f2d8bcedc6febb2197055469fbb8c11",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-potter-wheel-pose",
+          "modelSha256": "7671179d0518bba6df72ec68da93c0a2c41112004084aa5ec49a9a910d798e5c",
+          "cameraSha256": "c93e4f274ce3e5a7ad637f35ab1355ec0f2d8bcedc6febb2197055469fbb8c11",
+          "frames": 9,
+          "browserErrors": []
+        }
+      ],
+      "realBrowserMotion": "PASS"
+    },
+    {
+      "id": "nx-town-kiln",
+      "sha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+      "bytes": 2198868,
+      "bounds": {
+        "min": [
+          -2.194999933242798,
+          -7.1525572131747595e-09,
+          -1.260323405265808
+        ],
+        "max": [
+          2.609999895095825,
+          3.1105334758758545,
+          1.5303233861923218
+        ]
+      },
+      "baselineBounds": {
+        "min": [
+          -2.228286027908325,
+          -0.028649266809225082,
+          -1.2999999523162842
+        ],
+        "max": [
+          2.6500000953674316,
+          3.0055761337280273,
+          1.7079386711120605
+        ]
+      },
+      "triangleCount": 19768,
+      "baselineSha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545",
+      "collider": {
+        "exact": false,
+        "pillar": true
+      },
+      "validation": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "functionality": "PASS",
+      "doubleBuild": "PASS",
+      "renderSets": [
+        {
+          "directory": "reviews/nx-town-kiln-assembly-before",
+          "modelSha256": "67f452d507a28c9509db0875da5ca117323bbdb13f295c466e25fcdd62f3f8a8",
+          "cameraSha256": "5df3cd954147b2cad3f98c51c5276d99f8397bc13fbb92c7e0a1ea8d22c59f98",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-kiln-assembly-final",
+          "modelSha256": "2e7102547da967eeb73d97bade961314948a1871b5de7fa4b57cc3be900eb886",
+          "cameraSha256": "5df3cd954147b2cad3f98c51c5276d99f8397bc13fbb92c7e0a1ea8d22c59f98",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-kiln-before",
+          "modelSha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545",
+          "cameraSha256": "c8efbaa2dd568a063577be32215992e1894f04ad306abac38d66e1e09ecb8901",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-kiln-detail-before",
+          "modelSha256": "67f452d507a28c9509db0875da5ca117323bbdb13f295c466e25fcdd62f3f8a8",
+          "cameraSha256": "0a6438d1d1092b3cf1fbce74e8caf0d6def0c217f2f2e0d13f20d9273597ae80",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-kiln-detail-final",
+          "modelSha256": "2e7102547da967eeb73d97bade961314948a1871b5de7fa4b57cc3be900eb886",
+          "cameraSha256": "0a6438d1d1092b3cf1fbce74e8caf0d6def0c217f2f2e0d13f20d9273597ae80",
+          "frames": 9,
+          "browserErrors": []
+        },
+        {
+          "directory": "reviews/nx-town-kiln-final",
+          "modelSha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+          "cameraSha256": "c8efbaa2dd568a063577be32215992e1894f04ad306abac38d66e1e09ecb8901",
+          "frames": 9,
+          "browserErrors": []
+        }
+      ],
+      "supportAndHeat": "PASS"
+    }
+  ],
+  "visionRoute": "functions.vision_analyze auxiliary image interpretation; not native-model/in-world visual approval",
+  "limitations": [
+    "External workstations only: no walk-in claim.",
+    "Collider/supportclass pinned to archived served client; browser motion exercises unmodified local repo engine, not public served motion parity.",
+    "No live placement, uploads, verbs, commits or credentials."
+  ]
+}

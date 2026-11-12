@@ -1,0 +1,303 @@
+{
+  "host": {
+    "id": "nx-town-woodyard",
+    "lib": "store/01b78fdd00f090a7.glb",
+    "kind": "thing",
+    "pos": [
+      16,
+      0,
+      31
+    ],
+    "yaw": -2.669815142409043,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.1,
+        0,
+        -1.09
+      ],
+      "max": [
+        2.876,
+        2.526,
+        1.508
+      ],
+      "size": [
+        4.976,
+        2.526,
+        2.599
+      ],
+      "center": [
+        0.388,
+        1.263,
+        0.209
+      ]
+    },
+    "tris": 2360
+  },
+  "margin": 3,
+  "kind": "conservative-broadphase-not-a-collision-verdict",
+  "neighbors": [
+    {
+      "id": "nx-gallery-mosaic-0048",
+      "lib": "store/b6491515b25ef439.glb",
+      "pos": [
+        0,
+        0.0015747037783233253,
+        45
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/neighbors/nx-gallery-mosaic-0048.glb",
+      "sha256": "573ba060e9a9cc9d275a033ceb833b59a07d3ee57ebc1ef5c24108aaafcdcf4a",
+      "hostLocalBounds": {
+        "min": [
+          7.401221471712553,
+          0.0015747034057942899,
+          -18.390518194658625
+        ],
+        "max": [
+          33.787532350663206,
+          0.05161913606077114,
+          8.011419072620898
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-harvestcart",
+      "lib": "store/ee30d6709625bf2f.glb",
+      "pos": [
+        12,
+        0,
+        36
+      ],
+      "yaw": -2.6,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-harvestcart.glb",
+      "sha256": "2be1cb89ddf1dd6903b3a5018f8b72fd660e7aacd261db2894956eb5ad92ddf5",
+      "hostLocalBounds": {
+        "min": [
+          3.806793616345437,
+          -0.03500000014901161,
+          -3.1884239365736544
+        ],
+        "max": [
+          6.666587479099554,
+          1.8290945291519165,
+          -2.0225164105386173
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-churn",
+      "lib": "store/a509c3d2c1f3026e.glb",
+      "pos": [
+        20,
+        0,
+        35
+      ],
+      "yaw": -2.2,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-churn.glb",
+      "sha256": "761baf15cf0d9ff1136337f5d0c6e4bdb4413f9e013a51de9f5c1200544f3120",
+      "hostLocalBounds": {
+        "min": [
+          -2.054651552794218,
+          5.9604645663569045e-9,
+          -5.809981567049959
+        ],
+        "max": [
+          -1.1268963123735034,
+          0.7900000214576721,
+          -5.066102884450409
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "lib": "store/aa5f2550365c1f7f.glb",
+      "pos": [
+        16.3635762733503,
+        0.75,
+        31.712609495766586
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b11-woodyard-heartwood-measure.glb",
+      "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e",
+      "hostLocalBounds": {
+        "min": [
+          -1.2999999523162857,
+          0.7500000238418583,
+          -0.8350000001490117
+        ],
+        "max": [
+          1.2999999523162826,
+          1.8159512281417847,
+          -0.686587992310524
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b31-sheaf-tally",
+      "lib": "store/9e6d3d13f1e8d380.glb",
+      "pos": [
+        12,
+        0,
+        36
+      ],
+      "yaw": -2.6,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b31-sheaf-tally.glb",
+      "sha256": "946dc2ed6fcd3d5afdf9d4aaa70f1e9add5c29eb7cd323e9f60438940a0cc643",
+      "hostLocalBounds": {
+        "min": [
+          5.91855215256902,
+          0.5099999904632568,
+          -2.2193846740879444
+        ],
+        "max": [
+          6.719393140904673,
+          0.7299841046333313,
+          -2.1126131334828875
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b32-morning-measure",
+      "lib": "store/adb5459562eb21b2.glb",
+      "pos": [
+        20,
+        0,
+        35
+      ],
+      "yaw": -2.2,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b32-morning-measure.glb",
+      "sha256": "32246cfbc476518dc340ef211938b890465e158cb9b82c1422af439cdb29ebd3",
+      "hostLocalBounds": {
+        "min": [
+          -1.7631883810249214,
+          0.23999999463558197,
+          -5.263136070917481
+        ],
+        "max": [
+          -1.5384428143826434,
+          0.4600052833557129,
+          -5.127067829862106
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "lib": "store/f46e12aeeea8af74.glb",
+      "pos": [
+        15.431912072890157,
+        2.05,
+        29.886547662864707
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-woodyard-001.glb",
+      "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7",
+      "hostLocalBounds": {
+        "min": [
+          -0.2619999945163728,
+          1.3299999713897703,
+          1.220000000670554
+        ],
+        "max": [
+          0.26199999451637257,
+          2.049989926815033,
+          1.5440058708190936
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "lib": "store/dc52264c04cfe5bb.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-approach-ne-lane-002.glb",
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+      "hostLocalBounds": {
+        "min": [
+          -30.189896138288326,
+          -0.09615114331245422,
+          -47.03480566780404
+        ],
+        "max": [
+          15.976125994904233,
+          2.559999942779541,
+          14.27625669476599
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "lib": "store/1d9a1c2d95f785b6.glb",
+      "pos": [
+        22.724,
+        -0.04164,
+        27.274
+      ],
+      "yaw": -2.4784945651581642,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-charcoal.glb",
+      "sha256": "c9ca1b859b0532ed7f34e960561e77827106b3bcb83090ef8499096499248826",
+      "hostLocalBounds": {
+        "min": [
+          -9.375124998081805,
+          -0.04163999999999998,
+          -1.158561537213888
+        ],
+        "max": [
+          -4.744358084371631,
+          1.468359990463257,
+          1.935009731430645
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-longhouse",
+      "lib": "store/e38bb2a4c7933698.glb",
+      "pos": [
+        9,
+        0,
+        26
+      ],
+      "yaw": -2.828368080172068,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-longhouse.glb",
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+      "hostLocalBounds": {
+        "min": [
+          -1.2657703086351022,
+          -0.20000000298023224,
+          4.033731951644513
+        ],
+        "max": [
+          8.974615672268044,
+          5.873971939086914,
+          12.594345864933533
+        ]
+      },
+      "protected": true
+    }
+  ]
+}

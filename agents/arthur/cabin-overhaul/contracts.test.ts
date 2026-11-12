@@ -1,0 +1,18 @@
+import { test, expect } from 'bun:test';
+import { validatePlan, chooseOperation, protectUnchanged, buildVerbs } from './contracts.ts';
+const before={id:'nx-town-row-cottage',kind:'thing',lib:'store/1111111111111111.glb',pos:[-23,0,-17],yaw:.9411511441487406,scale:1,comp:{},bbox:{min:[-2.95,-.2,-2.673],max:[2.95,4.495,2.72]}};
+const planned={...before,lib:'store/2222222222222222.glb',sha256:'2'.repeat(64),bounds:{min:[-2.9,-.2,-2.65],max:[2.9,5.2,2.7]}};
+test('explicit same-pose bounded replacement is admitted',()=>{expect(validatePlan(before,planned)).toBe(true);expect(chooseOperation(before,before,planned)).toBe('replace');});
+test('already exact live state emits no replacement',()=>expect(chooseOperation({...before,lib:planned.lib},before,planned)).toBe('noop'));
+test('unknown lib drift fails closed',()=>expect(()=>chooseOperation({...before,lib:'store/3333333333333333.glb'},before,planned)).toThrow('lib drift'));
+test('pose drift fails closed even if lib is known',()=>expect(()=>chooseOperation({...before,pos:[-22,0,-17]},before,planned)).toThrow('pose drift'));
+test('component value drift fails closed',()=>expect(()=>chooseOperation({...before,comp:{lock:true}},before,planned)).toThrow('component drift'));
+test('array/object ordering semantics preserve structural bags',()=>{const b={...before,comp:{sockets:{a:{pos:[1,2,3],yaw:0}}}};expect(chooseOperation({...b,comp:{sockets:{a:{yaw:0,pos:[1,2,3]}}}},b,{...planned,comp:b.comp})).toBe('replace');expect(()=>chooseOperation({...b,comp:{sockets:{a:{pos:[3,2,1],yaw:0}}}},b,{...planned,comp:b.comp})).toThrow();});
+test('larger footprint is not silently allowed',()=>expect(()=>validatePlan(before,{...planned,bounds:{...planned.bounds,max:[3.2,5.2,2.7]}})).toThrow('footprint'));
+test('source/lib identity must match',()=>expect(()=>validatePlan(before,{...planned,sha256:'3'.repeat(64)})).toThrow('hash'));
+test('nonhex SHA cannot authorize bytes',()=>expect(()=>validatePlan(before,{...planned,sha256:'z'.repeat(64),lib:'store/'+ 'z'.repeat(16)+'.glb'})).toThrow('hash'));
+test('NaN yaw cannot pass equality',()=>expect(()=>validatePlan(before,{...planned,yaw:NaN})).toThrow());
+test('missing target is not an idempotent noop',()=>expect(()=>chooseOperation(undefined,before,planned)).toThrow('missing'));
+test('replacement restores full component values after destructive spawn',()=>{const live={...before,comp:{particles:{preset:'smoke',origin:[1,2,3]}}};expect(buildVerbs(live,planned).map(v=>v[0])).toEqual(['remove','spawn','comp']);expect(buildVerbs(live,planned)[2]).toEqual(['comp',{id:before.id,type:'particles',data:live.comp.particles}]);expect(buildVerbs(live,planned)[1][1]).toEqual({id:before.id,lib:planned.lib,pos:before.pos,yaw:before.yaw,scale:1});});
+test('locked model is never silently unlocked',()=>expect(()=>buildVerbs({...before,comp:{lock:true}},planned)).toThrow('locked'));
+test('rider exact contract protected, extra comp forbidden',()=>{expect(protectUnchanged(before,before)).toBe(true);expect(()=>protectUnchanged(before,{...before,comp:{new:{a:1}}})).toThrow();});

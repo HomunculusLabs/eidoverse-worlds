@@ -1,0 +1,13 @@
+All 17 images are visible, in the stated order. This review covers the supplied local ensemble renders only; it does not establish live placement, walking access, or physics.
+
+| Target | Visual deployment gate | Finding |
+|---|---|---|
+| **Belltower** | **Must fix** | In the aerial view, the upper post at image left ends in a dark foot suspended outside the wooden deck. The ladder-side deck cutout leaves that roof support visibly unsupported. Extend a supporting beam/deck beneath the foot or align the post with supported structure while preserving the ladder opening. The roof appears closed, and the ladder visibly reaches the elevated landing. |
+| **Tower** | **Acceptable** | Roof and exterior enclosure appear closed. Balcony supports meet the base, and the upper doorway opens onto a continuous railed landing. The exterior views show a stair-like wooden ascent through the open bay. The interior’s central post crowds the view but does not establish a blocked route. Actual stair clearance and floor-opening traversal remain separate physics checks. |
+| **Shrine** | **Acceptable** | Reads coherently as an external offering station. Bowl, bread, candle niche, and emblem remain exposed and identifiable. The raised offering slab needs no enterable passage. No visible roof gap or unsupported architectural member warrants a fix. |
+| **Northgate** | **Must fix** | The narrow gold-and-dark element lying flat at ground level between the posts reads as an edge-on panel or displaced fitting; its face is not readable in the front view. Resolve its placement: if it is existing sign/panel art, mount it upright where its face remains visible and the passage stays open. If it is an intentional threshold, that purpose needs confirmation before treating it as a defect-free assembly. The three post-mounted symbols remain visible, and the opening above is clear. |
+| **Southgate** | **Acceptable** | Roof appears closed, both piers meet their bases, and the passage is visibly open. No visible displaced panel or buried art. |
+| **Eastgate** | **Acceptable** | The overhead panel and radiating motif remain visible in both views. They sit above the passage without visibly obstructing it. Roof and supports appear coherent. |
+| **Westgate** | **Acceptable** | The overhead curved motif remains readable as a distinct design in both views. Panel placement preserves the open passage; roof and supports appear coherent. |
+
+The definite architectural blocker is the **belltower’s floating post foot**. The **northgate’s ground-level element** needs its intended placement resolved; the images establish its orientation, but not its intended function.

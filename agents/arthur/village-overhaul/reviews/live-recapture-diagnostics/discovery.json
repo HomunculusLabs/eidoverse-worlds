@@ -1,0 +1,210 @@
+{
+  "observedAt": "2026-09-08T03:04:27.322392+00:00",
+  "censusKeys": [
+    "world",
+    "entities",
+    "mounts"
+  ],
+  "hosts": [
+    {
+      "tuple": {
+        "id": "nx-town-hall",
+        "kind": "thing",
+        "pos": [
+          9,
+          0,
+          -26
+        ],
+        "yaw": -0.31322457341772525,
+        "scale": 1,
+        "lib": "store/dc871edb1b45ce0f.glb",
+        "parent": null,
+        "comp": {}
+      },
+      "servedFile": "nx-town-hall-served.glb",
+      "servedSha256": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+      "nearLights": [
+        {
+          "entity": {
+            "id": "nx-town-hall-l",
+            "lib": null,
+            "kind": "light",
+            "pos": [
+              9,
+              2.5,
+              -26
+            ],
+            "yaw": 0,
+            "scale": 1,
+            "parent": null,
+            "comp": {}
+          },
+          "hostLocal": [
+            0.0,
+            2.5,
+            0.0
+          ],
+          "distanceXZ": 0.0
+        },
+        {
+          "entity": {
+            "id": "nx-artwalk-h5-l-left",
+            "lib": null,
+            "kind": "light",
+            "pos": [
+              17.882730496207788,
+              0.6041628994790363,
+              -25.448773054903842
+            ],
+            "yaw": 0,
+            "scale": 1,
+            "parent": null,
+            "comp": {}
+          },
+          "hostLocal": [
+            8.620389088980307,
+            0.6041628994790363,
+            -2.212610261173253
+          ],
+          "distanceXZ": 8.899817538200427
+        },
+        {
+          "entity": {
+            "id": "nx-artwalk-h5-l-right",
+            "lib": null,
+            "kind": "light",
+            "pos": [
+              21.20613236778456,
+              0.6041628994790363,
+              -22.125371183327072
+            ],
+            "yaw": 0,
+            "scale": 1,
+            "parent": null,
+            "comp": {}
+          },
+          "hostLocal": [
+            12.806123519723652,
+            0.6041628994790363,
+            -0.07494160694041341
+          ],
+          "distanceXZ": 12.8063427974918
+        }
+      ]
+    },
+    {
+      "tuple": {
+        "id": "nx-town-inn",
+        "kind": "thing",
+        "pos": [
+          36,
+          0,
+          0
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/861225bb15230d9b.glb",
+        "parent": null,
+        "comp": {}
+      },
+      "servedFile": "nx-town-inn-served.glb",
+      "servedSha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "nearLights": [
+        {
+          "entity": {
+            "id": "nx-town-inn-l",
+            "lib": null,
+            "kind": "light",
+            "pos": [
+              36,
+              2.35,
+              0
+            ],
+            "yaw": 0,
+            "scale": 1,
+            "parent": null,
+            "comp": {}
+          },
+          "hostLocal": [
+            0.0,
+            2.35,
+            0.0
+          ],
+          "distanceXZ": 0.0
+        },
+        {
+          "entity": {
+            "id": "nx-town-potter-l",
+            "lib": null,
+            "kind": "light",
+            "pos": [
+              24.360421448743175,
+              1.39598,
+              7.587823892241903
+            ],
+            "yaw": 0,
+            "scale": 1,
+            "parent": null,
+            "comp": {}
+          },
+          "hostLocal": [
+            7.587823892241902,
+            1.39598,
+            11.639578551256825
+          ],
+          "distanceXZ": 13.89441831350111
+        },
+        {
+          "entity": {
+            "id": "nx-town-stable-l",
+            "lib": null,
+            "kind": "light",
+            "pos": [
+              43,
+              1.9,
+              1.8
+            ],
+            "yaw": 0,
+            "scale": 1,
+            "parent": null,
+            "comp": {}
+          },
+          "hostLocal": [
+            1.8000000000000005,
+            1.9,
+            -7.0
+          ],
+          "distanceXZ": 7.22772439983706
+        }
+      ]
+    }
+  ],
+  "traffic": [
+    {
+      "method": "GET",
+      "url": "https://eidoverse.billding.dev/geom?world=commons-next",
+      "status": 200,
+      "bytes": 88288,
+      "sha256": "62148adcbd14d8d717ab69537b79865afa19dd3030cc0eb2cfc823367e17cebc",
+      "at": "2026-09-08T03:04:27.321232+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://eidoverse.billding.dev/library/store/dc871edb1b45ce0f.glb",
+      "status": 200,
+      "bytes": 89440,
+      "sha256": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+      "at": "2026-09-08T03:04:27.703038+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://eidoverse.billding.dev/library/store/861225bb15230d9b.glb",
+      "status": 200,
+      "bytes": 76864,
+      "sha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "at": "2026-09-08T03:04:28.033908+00:00"
+    }
+  ],
+  "authoredVerbs": 0,
+  "uploads": 0
+}

@@ -1,0 +1,1112 @@
+{
+  "id": "nx-town-gate-e",
+  "stage": "local",
+  "sourceSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+  "modelSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+  "contextSha256": "09f32a416f6f404d99d8d0c3e86cc6f0f44be3b5505444d8a5136fcfda570dce",
+  "publicRuntime": [
+    {
+      "name": "colliders.js",
+      "url": "https://eidoverse.billding.dev/lib/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+    },
+    {
+      "name": "supportclass.js",
+      "url": "https://eidoverse.billding.dev/lib/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+    }
+  ],
+  "sourceEquivalence": {
+    "pass": true,
+    "forward": {
+      "samples": 3388,
+      "maxDistance": 1.5004449566015086e-14
+    },
+    "reverse": {
+      "samples": 3388,
+      "maxDistance": 1.5004449566015086e-14
+    },
+    "toleranceMetres": 0.003,
+    "sourceTriangles": 484,
+    "servedTriangles": 484,
+    "method": "bidirectional all-vertex/edge-midpoint/triangle-centroid nearest-surface probes",
+    "limitation": "Sampled surface equivalence, not a mathematical Hausdorff certificate; actual served-route proof separately required."
+  },
+  "actualBounds": {
+    "min": [
+      -1.7999999523162842,
+      -2.98023217215615e-10,
+      -0.25
+    ],
+    "max": [
+      1.7999999523162842,
+      3.7725000381469727,
+      0.25
+    ]
+  },
+  "routes": [
+    {
+      "file": "build/nx-town-gate-e-route-contract.json",
+      "sha256": "0ee536fae4fd7be5a5687f06c67521f402a97c52beb74a6d89eae35398e5a8ef",
+      "mode": "room",
+      "report": {
+        "status": "PASS",
+        "runtime": {
+          "mode": "served-override",
+          "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+          "files": {
+            "colliders.js": {
+              "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+              "publicPath": "/lib/colliders.js"
+            },
+            "supportclass.js": {
+              "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+              "publicPath": "/lib/supportclass.js"
+            }
+          },
+          "threeRevision": "184",
+          "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+        },
+        "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+        "id": "nx-town-gate-e",
+        "bounds": {
+          "min": [
+            -1.7999999523162842,
+            -2.98023217215615e-10,
+            -0.25
+          ],
+          "max": [
+            1.7999999523162842,
+            3.7725000381469727,
+            0.25
+          ]
+        },
+        "triangles": 5024,
+        "collider": {
+          "exact": true,
+          "pillar": false,
+          "classification": {
+            "roomScale": false,
+            "floorShaped": false,
+            "uneven": false
+          }
+        },
+        "constants": {
+          "requiredWidth": 1.4,
+          "requiredHeadroom": 2.2,
+          "bodyRadius": 0.32,
+          "bodyHeight": 1.9,
+          "sampleStep": 0.04,
+          "boundaryTolerance": 0.001,
+          "floorTolerance": 0.035
+        },
+        "doors": [
+          {
+            "name": "central-traversal",
+            "requiredWidth": 1.4,
+            "requiredHeadroom": 2.2,
+            "min": [
+              -0.7,
+              0.10110785067081451,
+              -0.4
+            ],
+            "max": [
+              0.7,
+              2.3011078506708147,
+              0.4
+            ],
+            "hits": 0,
+            "examples": []
+          }
+        ],
+        "walks": [
+          {
+            "direction": "in",
+            "from": "outside",
+            "to": "threshold",
+            "pass": true,
+            "steps": 16,
+            "maxPush": 0,
+            "maxRise": 0.03100048005580902,
+            "minY": 0.0701073706150055,
+            "maxY": 0.10110785067081451,
+            "expectedFloorRange": [
+              0.03510737061500549,
+              0.13610785067081452
+            ],
+            "arrivalXZ": 6.938893903907228e-17,
+            "floorError": 0,
+            "geometryHits": 0,
+            "arrived": [
+              0,
+              0.10110785067081451,
+              -6.938893903907228e-17
+            ],
+            "issues": []
+          },
+          {
+            "direction": "in",
+            "from": "threshold",
+            "to": "inside",
+            "pass": true,
+            "steps": 16,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.10110785067081451,
+            "maxY": 0.10110785067081451,
+            "expectedFloorRange": [
+              0.06610785067081451,
+              0.13610785067081452
+            ],
+            "arrivalXZ": 1.1102230246251565e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "arrived": [
+              0,
+              0.10110785067081451,
+              -0.6299999999999999
+            ],
+            "issues": []
+          },
+          {
+            "direction": "out",
+            "from": "inside",
+            "to": "threshold",
+            "pass": true,
+            "steps": 16,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.10110785067081451,
+            "maxY": 0.10110785067081451,
+            "expectedFloorRange": [
+              0.06610785067081451,
+              0.13610785067081452
+            ],
+            "arrivalXZ": 6.938893903907228e-17,
+            "floorError": 0,
+            "geometryHits": 0,
+            "arrived": [
+              0,
+              0.10110785067081451,
+              6.938893903907228e-17
+            ],
+            "issues": []
+          },
+          {
+            "direction": "out",
+            "from": "threshold",
+            "to": "outside",
+            "pass": true,
+            "steps": 16,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.0701073706150055,
+            "maxY": 0.10110785067081451,
+            "expectedFloorRange": [
+              0.03510737061500549,
+              0.13610785067081452
+            ],
+            "arrivalXZ": 1.1102230246251565e-16,
+            "floorError": 0,
+            "geometryHits": 0,
+            "arrived": [
+              0,
+              0.0701073706150055,
+              0.6299999999999999
+            ],
+            "issues": []
+          }
+        ],
+        "protectedVolumes": [
+          {
+            "id": "nx-artwalk-b14-east-gate-dawn-fan",
+            "min": [
+              -1.149999976158142,
+              2.719999998211861,
+              0.2000000011920946
+            ],
+            "max": [
+              1.149999976158142,
+              3.086950958967209,
+              0.3150466960668581
+            ],
+            "allowance": null,
+            "hits": 0,
+            "examples": []
+          }
+        ],
+        "neighbors": [
+          {
+            "id": "nx-artwalk-b14-east-gate-dawn-fan",
+            "triangles": 108,
+            "sha256": "c4fa5e7c1cc04d8c6afc033c3d7f4de4c498d587c3efcd1232fb58acb8de6ce1",
+            "sourceTuple": {
+              "pos": [
+                19.7325,
+                2.72,
+                1.423651904008798e-17
+              ],
+              "yaw": 1.5707963267948966,
+              "scale": 1,
+              "lib": "store/c67c0402bbfb7fd8.glb"
+            },
+            "colliderExact": false
+          },
+          {
+            "id": "nx-core-paths",
+            "triangles": 948,
+            "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+            "sourceTuple": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "yaw": 0,
+              "scale": 1,
+              "lib": "store/c31b6e3f22641e14.glb"
+            },
+            "colliderExact": false
+          },
+          {
+            "id": "nx-struct-waystone-e",
+            "triangles": 92,
+            "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+            "sourceTuple": {
+              "pos": [
+                22.1,
+                0,
+                0
+              ],
+              "yaw": 3.141592653589793,
+              "scale": 1,
+              "lib": "store/2f006e218ffbe97e.glb"
+            },
+            "colliderExact": false
+          },
+          {
+            "id": "nx-town-roads",
+            "triangles": 3392,
+            "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+            "sourceTuple": {
+              "pos": [
+                0,
+                0,
+                0
+              ],
+              "yaw": 3.141592653589793,
+              "scale": 1,
+              "lib": "store/3b76b621559fa1a1.glb"
+            },
+            "colliderExact": true
+          }
+        ],
+        "failures": [],
+        "limitations": [
+          "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+          "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+          "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+          "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+        ],
+        "proofFrameY": 0,
+        "terrainBinding": {
+          "declaredTerrainY": 0,
+          "effectiveHostLocalY": 0,
+          "hostElevation": 0,
+          "worldHeight": 0
+        },
+        "physicalSupport": {
+          "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+          "pass": true,
+          "samples": [
+            {
+              "name": "in:start",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.63
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:1",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.590625
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:2",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.5512499999999999
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:3",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.5118749999999999
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:4",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.47249999999999986
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:5",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.43312499999999987
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:6",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.3937499999999999
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:7",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.3543749999999999
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:8",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.3149999999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:9",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.2756249999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:10",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.2362499999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:11",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.1968749999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:12",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.15749999999999992
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:13",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.11812499999999992
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:14",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.07874999999999993
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:15",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.03937499999999993
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:outside:threshold:16",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -6.938893903907228e-17
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:1",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.03937500000000006
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:2",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.07875000000000006
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:3",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.11812500000000005
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:4",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.15750000000000003
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:5",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.19687500000000002
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:6",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.23625000000000002
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:7",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.275625
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:8",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.315
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:9",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.354375
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:10",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.39375
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:11",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.433125
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:12",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.4725
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:13",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.511875
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:14",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.55125
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:15",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.590625
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:threshold:inside:16",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.6299999999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:start",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.63
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:1",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.590625
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:2",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.5512499999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:3",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.5118749999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:4",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.47249999999999986
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:5",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.43312499999999987
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:6",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.3937499999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:7",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.3543749999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:8",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.3149999999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:9",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.2756249999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:10",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.2362499999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:11",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.1968749999999999
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:12",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.15749999999999992
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:13",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.11812499999999992
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:14",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.07874999999999993
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:15",
+              "pos": [
+                0,
+                0.10110785067081451,
+                -0.03937499999999993
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:inside:threshold:16",
+              "pos": [
+                0,
+                0.10110785067081451,
+                6.938893903907228e-17
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:1",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.03937500000000006
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:2",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.07875000000000006
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:3",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.11812500000000005
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:4",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.15750000000000003
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:5",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.19687500000000002
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:6",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.23625000000000002
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:7",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.275625
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:8",
+              "pos": [
+                0,
+                0.10110785067081451,
+                0.315
+              ],
+              "ground": 0.10110785067081451,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:9",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.354375
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:10",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.39375
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:11",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.433125
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:12",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.4725
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:13",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.511875
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:14",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.55125
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:15",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.590625
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:threshold:outside:16",
+              "pos": [
+                0,
+                0.0701073706150055,
+                0.6299999999999999
+              ],
+              "ground": 0.0701073706150055,
+              "gap": 0,
+              "pass": true
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "geometryReview": {
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-eastgate-geometry.json",
+      "sha256": "3c45dff84063ddb5111660801703d2a45489baf43eaa90eafc7777059886f266"
+    }
+  },
+  "visualReview": {
+    "verdict": "accepted",
+    "reviewer": "parent adjudication of independent native GPT-6-Astra batch-D, not Bill approval",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-D/review.md",
+        "sha256": "d9e5d107c40a5a20ad802a9eb7da2f3b3ac450055492cce8317346b5c21ef76f"
+      },
+      {
+        "file": "reviews/parent-native/batch-D/eastgate-front.png",
+        "sha256": "fb0eb43bb8317d49540d2622391a54c38c4477c6a71570bfec350af4204368a5"
+      },
+      {
+        "file": "reviews/parent-native/batch-D/eastgate-aerial.png",
+        "sha256": "e1ec87e44a10faac20fc493ba4856a36be4dc9b07c9dfc55635f392f73786291"
+      },
+      {
+        "file": "reviews/nx-town-gate-e-after-assembly/render-manifest.json",
+        "sha256": "c4e62314f2eedcc21dc97827d500540267a6599afa599a0970d949a8af74078a"
+      },
+      {
+        "file": "reviews/nx-town-gate-e-after-assembly/render-manifest.json",
+        "sha256": "c4e62314f2eedcc21dc97827d500540267a6599afa599a0970d949a8af74078a"
+      }
+    ]
+  },
+  "neighbors": [
+    {
+      "id": "nx-artwalk-b14-east-gate-dawn-fan",
+      "sha256": "c4fa5e7c1cc04d8c6afc033c3d7f4de4c498d587c3efcd1232fb58acb8de6ce1",
+      "lib": "store/c67c0402bbfb7fd8.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-core-paths",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "lib": "store/c31b6e3f22641e14.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-struct-waystone-e",
+      "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+      "lib": "store/2f006e218ffbe97e.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "decoded": true
+    }
+  ]
+}

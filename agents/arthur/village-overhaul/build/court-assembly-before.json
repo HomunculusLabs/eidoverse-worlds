@@ -1,0 +1,56 @@
+{
+  "id": "court",
+  "phase": "before",
+  "sha256": "afa3477ed6c2db98fc580a48deb3b112ad0155be1e9a9fa29d2b01d7adc945ae",
+  "inputs": [
+    {
+      "id": "nx-court",
+      "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/before/nx-court.glb"
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb"
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "sha256": "1cb32012817cb1d9afce50f4295e15afb6b3bb711a69d297d7d25bfd8b984d5f",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b23-cistern-rain-count.glb"
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "sha256": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b28-bake-count.glb"
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb"
+    },
+    {
+      "id": "nx-sign-bakery",
+      "sha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+      "file": "agents/arthur/village-overhaul/before/nx-sign-bakery.glb"
+    },
+    {
+      "id": "nx-sign-smithy",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "file": "agents/arthur/village-overhaul/before/nx-sign-smithy.glb"
+    },
+    {
+      "id": "nx-cistern",
+      "sha256": "a73d5f60417acdc0ee66b4905254b345e6bcb983d07a84fb954c199147056647",
+      "file": "agents/arthur/village-overhaul/before/nx-cistern.glb"
+    },
+    {
+      "id": "nx-forge",
+      "sha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+      "file": "agents/arthur/village-overhaul/before/nx-forge.glb"
+    }
+  ],
+  "limitations": [
+    "Assembly model bytes are new containers of exact input decoded geometry. Not a host deployment asset.",
+    "No terrain/network/light entities in visual assembly; route assembly includes all frozen neighbors."
+  ]
+}

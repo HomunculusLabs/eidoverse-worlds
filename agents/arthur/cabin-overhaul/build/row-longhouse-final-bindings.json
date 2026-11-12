@@ -1,0 +1,26 @@
+[
+  {
+    "id": "nx-town-row-cottage",
+    "sha256": "0558b5f41bda077772846350737047605f628d9b97a7c159d1f6b9d4574bccfc",
+    "retainedNamedRoomParts": 27,
+    "allRequiredRoomPartsPresent": true,
+    "sameCamera": true,
+    "views": 9,
+    "playerWalkLegs": 10,
+    "playerStatus": "PASS",
+    "bytes": 395820,
+    "nodes": 23
+  },
+  {
+    "id": "nx-town-longhouse",
+    "sha256": "e38bb2a4c79336980d0a6b7479959498dc0347ab69d611b089741af7cf63b29f",
+    "retainedNamedRoomParts": 32,
+    "allRequiredRoomPartsPresent": true,
+    "sameCamera": true,
+    "views": 9,
+    "playerWalkLegs": 16,
+    "playerStatus": "PASS",
+    "bytes": 610648,
+    "nodes": 22
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "sourceSha256": "40e8d298de8dd78d63c3dd67159c3eded42fdb82dc3fbc3b680efdb32079ab8f",
+  "kitSha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72",
+  "runs": [
+    {
+      "sha256": "90723087ca8b5eb3d5e3e7d13828ee12e254266ad63504d07f7f4d14b4b29253",
+      "bytes": 2079972,
+      "mtime_ns": 1788828821664409083,
+      "mtimeChanged": true,
+      "stdout": "SHELL PASS: exact-envelope and triangle-box entry clearance\nROOF PASS: 310 solid slates across 11 overlapping courses; 60 crown/rafter occlusion rays\nINTERIOR PASS: study/bedchamber identity, original upper floor level, real ladder hatch\n{\"id\":\"nx-town-tower-house\",\"sha256\":\"90723087ca8b5eb3d5e3e7d13828ee12e254266ad63504d07f7f4d14b4b29253\",\"bytes\":2079972,\"nodes\":11,\"meshes\":11,\"bounds\":{\"min\":[-3.0941314697265625,2.2351741811588166e-10,-3.0999975204467773],\"max\":[3.259999997615814,8.284999996423721,3.30500000089407]},\"parts\":1599}\n"
+    },
+    {
+      "sha256": "90723087ca8b5eb3d5e3e7d13828ee12e254266ad63504d07f7f4d14b4b29253",
+      "bytes": 2079972,
+      "mtime_ns": 1788828822545998333,
+      "mtimeChanged": true,
+      "stdout": "SHELL PASS: exact-envelope and triangle-box entry clearance\nROOF PASS: 310 solid slates across 11 overlapping courses; 60 crown/rafter occlusion rays\nINTERIOR PASS: study/bedchamber identity, original upper floor level, real ladder hatch\n{\"id\":\"nx-town-tower-house\",\"sha256\":\"90723087ca8b5eb3d5e3e7d13828ee12e254266ad63504d07f7f4d14b4b29253\",\"bytes\":2079972,\"nodes\":11,\"meshes\":11,\"bounds\":{\"min\":[-3.0941314697265625,2.2351741811588166e-10,-3.0999975204467773],\"max\":[3.259999997615814,8.284999996423721,3.30500000089407]},\"parts\":1599}\n"
+    }
+  ]
+}

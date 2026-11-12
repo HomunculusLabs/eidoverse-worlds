@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "evidenceKind": "local-pinned-runtime-not-live",
+  "modelPath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-inn.glb",
+  "modelSha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+  "sourceSha256": "2d2d173571531f84b8bd079fdc188a90068e40ae99abe54ac48aa5e2c8683bec",
+  "checks": [
+    {
+      "name": "ground-floor",
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-player.json",
+      "sha256": "8839205ef177962e92bfa69728991e287392c76cde2e5520598196a782f8dcb6",
+      "status": "PASS",
+      "walkLegs": 34,
+      "doorChecks": 2,
+      "protectedVolumes": 9,
+      "neighbors": 10,
+      "maxPush": 0,
+      "maxFloorError": 1.0728836152829047e-09
+    },
+    {
+      "name": "guest-floor",
+      "path": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/inn-upper-player.json",
+      "sha256": "b373a71cc424867537ea2b7c63e2509363baa039765db01d10f44c54c643a8f3",
+      "status": "PASS",
+      "walkLegs": 22,
+      "doorChecks": 2,
+      "protectedVolumes": 9,
+      "neighbors": 10,
+      "maxPush": 0,
+      "maxFloorError": 1.0490417468034252e-07
+    }
+  ],
+  "preservationReport": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/inn-preservation.json",
+  "determinismReport": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/inn-determinism.json",
+  "limits": [
+    "Flat contracted terrainY=0, not actual live terrain.",
+    "Public runtime colliders/supportclass are pinned; repo core-stub/THREE binding, not deployed full renderer.",
+    "Guest stair uses broad 0.65m treads and 0.44m game-scale rises, not real-world accessible construction.",
+    "Protected exact original guest and bar props are visually dark in solo lighting.",
+    "Parent owns deployment, world lights/component restoration, and served geometry retests."
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "modelSha256": "87245e97b1f848df57b4c128107586d533a7c3add98b37e39c391cb757f86de8",
+      "ensemble": false,
+      "version": "before",
+      "views": [
+        {
+          "name": "front",
+          "outside": 0,
+          "total": 3606
+        },
+        {
+          "name": "right",
+          "outside": 0,
+          "total": 3606
+        },
+        {
+          "name": "back",
+          "outside": 0,
+          "total": 3606
+        },
+        {
+          "name": "left",
+          "outside": 0,
+          "total": 3606
+        },
+        {
+          "name": "gameplay",
+          "outside": 0,
+          "total": 3606
+        },
+        {
+          "name": "aerial",
+          "outside": 0,
+          "total": 3606
+        },
+        {
+          "name": "top",
+          "outside": 0,
+          "total": 3606
+        },
+        {
+          "name": "night",
+          "outside": 0,
+          "total": 3606
+        }
+      ]
+    },
+    {
+      "modelSha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+      "ensemble": false,
+      "version": "after",
+      "views": [
+        {
+          "name": "front",
+          "outside": 0,
+          "total": 12804
+        },
+        {
+          "name": "right",
+          "outside": 0,
+          "total": 12804
+        },
+        {
+          "name": "back",
+          "outside": 0,
+          "total": 12804
+        },
+        {
+          "name": "left",
+          "outside": 0,
+          "total": 12804
+        },
+        {
+          "name": "gameplay",
+          "outside": 0,
+          "total": 12804
+        },
+        {
+          "name": "aerial",
+          "outside": 0,
+          "total": 12804
+        },
+        {
+          "name": "top",
+          "outside": 0,
+          "total": 12804
+        },
+        {
+          "name": "night",
+          "outside": 0,
+          "total": 12804
+        }
+      ]
+    },
+    {
+      "modelSha256": "06ffa88b992d2a207be01f23df6610fea8f445d010e09053e1d29990c16af2a5",
+      "ensemble": true,
+      "version": "before",
+      "views": [
+        {
+          "name": "front",
+          "outside": 0,
+          "total": 9660
+        },
+        {
+          "name": "right",
+          "outside": 0,
+          "total": 9660
+        },
+        {
+          "name": "back",
+          "outside": 0,
+          "total": 9660
+        },
+        {
+          "name": "left",
+          "outside": 0,
+          "total": 9660
+        },
+        {
+          "name": "gameplay",
+          "outside": 0,
+          "total": 9660
+        },
+        {
+          "name": "aerial",
+          "outside": 0,
+          "total": 9660
+        },
+        {
+          "name": "top",
+          "outside": 0,
+          "total": 9660
+        },
+        {
+          "name": "night",
+          "outside": 0,
+          "total": 9660
+        }
+      ]
+    },
+    {
+      "modelSha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+      "ensemble": true,
+      "version": "after",
+      "views": [
+        {
+          "name": "front",
+          "outside": 0,
+          "total": 18858
+        },
+        {
+          "name": "right",
+          "outside": 0,
+          "total": 18858
+        },
+        {
+          "name": "back",
+          "outside": 0,
+          "total": 18858
+        },
+        {
+          "name": "left",
+          "outside": 0,
+          "total": 18858
+        },
+        {
+          "name": "gameplay",
+          "outside": 0,
+          "total": 18858
+        },
+        {
+          "name": "aerial",
+          "outside": 0,
+          "total": 18858
+        },
+        {
+          "name": "top",
+          "outside": 0,
+          "total": 18858
+        },
+        {
+          "name": "night",
+          "outside": 0,
+          "total": 18858
+        }
+      ]
+    }
+  ],
+  "identicalByteControls": [
+    {
+      "view": "front",
+      "identicalPNG": true
+    },
+    {
+      "view": "right",
+      "identicalPNG": true
+    },
+    {
+      "view": "back",
+      "identicalPNG": true
+    },
+    {
+      "view": "left",
+      "identicalPNG": true
+    },
+    {
+      "view": "gameplay",
+      "identicalPNG": true
+    },
+    {
+      "view": "aerial",
+      "identicalPNG": true
+    },
+    {
+      "view": "top",
+      "identicalPNG": true
+    },
+    {
+      "view": "night",
+      "identicalPNG": true
+    },
+    {
+      "view": "interior",
+      "identicalPNG": true
+    }
+  ],
+  "interiorExemption": "Deliberate fixed close-up, exterior frustum containment not applicable"
+}

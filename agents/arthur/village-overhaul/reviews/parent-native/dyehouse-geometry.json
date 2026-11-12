@@ -1,0 +1,14 @@
+{
+  "status": "ACCEPTED_HOST_PRESERVATION_AND_CONTEXT",
+  "id": "nx-town-dyehouse",
+  "sourceSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+  "evidence": {
+    "file": "build/nx-town-dyehouse-verification.json",
+    "sha256": "ea7138d9813b6b53ed4cae75f6ce7c000536eed4204e8c8c00e3150ff9eb6ef5"
+  },
+  "nativeReview": {
+    "file": "reviews/parent-native/batch-C/review.md",
+    "sha256": "089b1fc1b3a1b02a5ae4a047a0724fd896b61a8aae748aed04853d50f72c3e50"
+  },
+  "scope": "New host geometry; frozen exterior companions unchanged. Fresh pipeline independently proves neighbor body routes and physical triangle support. Not universal all-world intersection certification."
+}

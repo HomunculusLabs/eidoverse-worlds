@@ -1,0 +1,3 @@
+BEGIN nx-town-potter
+{"time":"2026-09-08T04:04:08.506Z","status":"OUTSIDE_SCOPE_DRIFT_OBSERVED","id":"nx-carousel","currentSha256":"a800be385dceaa77dba5c06ba66bae6e368038565a5b5005335e203b769680fa","action":"preserved-unrelated-live-state"}
+PARENT_DIAGNOSTIC: route terrain must match the captured zero-height village terrain, not a declared upper floor

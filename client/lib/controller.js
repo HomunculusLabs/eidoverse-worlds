@@ -55,12 +55,13 @@ export function setPointerClaim(fn) { pointerClaimed = fn; }
 
 // ---------------------------------------------------------------- keyboard
 
-const typing = () => document.activeElement?.tagName === 'INPUT'
-  || document.activeElement?.tagName === 'TEXTAREA';
+const typing = () => ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)
+  || !!document.activeElement?.isContentEditable;
+export const inputBlocked = () => typing() || isOverlayOpen() || document.hidden || !document.hasFocus();
 
 addEventListener('keydown', (e) => {
-  if (typing() || isOverlayOpen()) return;
-  if (e.key === 'Enter') { chat.open(); e.preventDefault(); return; }
+  if (typing() || isOverlayOpen()) { keys.clear(); return; }
+  if (e.key === 'Enter') { keys.clear(); chat.open(); e.preventDefault(); return; }
   if (e.code === 'Space') e.preventDefault();      // space scrolls the page otherwise
   keys.add(e.code);
   bus.emit('key', e);
@@ -68,6 +69,8 @@ addEventListener('keydown', (e) => {
 addEventListener('keyup', (e) => { keys.delete(e.code); if (e.code === 'Space') spaceLatch = false; });
 // A held key with the window unfocused stays "down" forever — clear on blur.
 addEventListener('blur', () => keys.clear());
+addEventListener('focusin', () => { if (typing()) keys.clear(); });
+bus.on('net', (n) => { if (!n.joined || n.status !== 'live') keys.clear(); });
 
 bus.on('key', (e) => {
   if (e.code === 'KeyX') toggleSit();
@@ -430,7 +433,10 @@ export function updateMe(dt, me) {
 
 // ---------------------------------------------------------------- camera
 
-export function updateFollowCamera(dt, me) {
+let followRideYaw;
+export function updateFollowCamera(dt, me, rideYaw) {
+  if (Number.isFinite(rideYaw) && Number.isFinite(followRideYaw)) camYaw += angleDelta(followRideYaw, rideYaw);
+  followRideYaw = rideYaw; // ordinary walking/seats reset without changing camera controls
   const headY = 1.45;
   const focus = _eye.set(myState.pos.x, myState.pos.y + headY, myState.pos.z);
 

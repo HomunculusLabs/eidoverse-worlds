@@ -1,0 +1,1033 @@
+{
+  "status": "PASS",
+  "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+  "comp": {
+    "min": [
+      -0.98,
+      0.3,
+      0.98
+    ],
+    "max": [
+      -0.52,
+      5.15,
+      1.22
+    ]
+  },
+  "clearedStandingColumn": {
+    "min": [
+      -1.07,
+      0.3,
+      0.78
+    ],
+    "max": [
+      -0.43,
+      7.05,
+      1.42
+    ]
+  },
+  "unexpectedTriangles": 0,
+  "examples": [],
+  "intentionalHardwareTriangles": [
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 72,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 73,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 74,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 75,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 76,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 77,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 78,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 79,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 80,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 81,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 84,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 85,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 86,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 87,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 88,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 89,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 90,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 91,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 92,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "village_nx-town-belltower_4",
+      "triangle": 93,
+      "reason": "narrow new standoff continuation to relocated loadbearing pier"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 0,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 1,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 2,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 3,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 4,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 5,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 6,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 7,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 8,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 9,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 10,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 11,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 12,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 13,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 14,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 15,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 16,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 17,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 18,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 19,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 20,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 21,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 22,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 23,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 24,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 25,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 26,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 27,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 28,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 29,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 30,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 31,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 32,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 33,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 34,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 35,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 36,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 37,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 38,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 39,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 40,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 41,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 42,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 43,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 44,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 45,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 46,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 47,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 48,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 49,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 50,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 51,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 52,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 53,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 54,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 55,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 56,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 57,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 58,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 59,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 60,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 61,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 62,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 63,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 64,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 65,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 66,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 67,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 68,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 69,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 70,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 71,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 72,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 73,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 74,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 75,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 76,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 77,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 78,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 79,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 80,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 81,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 82,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 83,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 84,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 85,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 86,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 87,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 88,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 89,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 90,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 91,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 92,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 93,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 94,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 95,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 96,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 97,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 98,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 99,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 100,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 101,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 102,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 103,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 104,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 105,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 106,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 107,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 108,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 109,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 110,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 111,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 112,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 113,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 114,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 115,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 116,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 117,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 118,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 119,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 120,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 121,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 122,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 123,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 124,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 125,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 126,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 127,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 128,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 129,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 130,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 131,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 132,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 133,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 134,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 135,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 136,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 137,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 138,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 139,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 140,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 141,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 142,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 143,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 144,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 145,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 146,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 147,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 150,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 151,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 152,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 153,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 154,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 155,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 156,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 157,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 158,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 161,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 162,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 163,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 164,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 165,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 166,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 167,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 168,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 169,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 170,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 171,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 172,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 173,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 174,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 175,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 176,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 177,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 178,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    },
+    {
+      "node": "bt3_1_retained_hardware",
+      "triangle": 179,
+      "reason": "exact served ladder rail/rung/standoff triangles"
+    }
+  ],
+  "topout": {
+    "localClimbCenter": [
+      -0.75,
+      5.15,
+      1.1
+    ],
+    "facingLocalYaw": 3.141592653589793,
+    "controllerSource": "client/lib/controller.js lines 324-330 (repo source, not claimed served controller parity)",
+    "forwardDistance": 0.55,
+    "resultXZ": [
+      -0.75,
+      5.15,
+      0.55
+    ],
+    "actualBrowserSupportY": 4.820000171661377,
+    "deckY": 4.82
+  },
+  "limits": [
+    "Tests static full standing column and real browser downward support after source-defined top-out displacement. Not a full live input-controller climb.",
+    "Named hardware contacts only; no whole-model, material or broad ladder-space exemption."
+  ]
+}

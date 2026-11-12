@@ -1,0 +1,30 @@
+OpenAI Codex v0.153.4
+--------
+workdir: /Users/t3rpz/projects/eidoverse-worlds
+model: gpt-6-astra
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 01a07f17-3dac-7292-b8c9-a39937d0f84c
+--------
+user
+Independent native image review, English <=300 words, no tools. Three current source-pinned images per building: stable exterior aerial plus assembled front/interior; then woodyard same. Parent removed an erroneously invented heightcap and restored original reviewed crafted roof silhouettes. Inspect current actual pixels for coherent supported roof/gables, usable working interior, no new floating parts or intersecting furniture. Existing fixed artwork can overlap from camera projection; distinguish that from actual defects. Accept visible host geometry or flag definite must-fix; disclose hidden details. These are LOCAL static renders, not live play, not user taste approval. These current source images supersede previous byte-unbound reviews.
+codex
+**Stable: accept visible host geometry.** The pitched roof, ridge, overhangs, and timbered gable form a coherent exterior. Interior beams and braces appear connected to the wall framing. The doorway opens onto a clear central aisle, with stall partitions on either side. The visible hay, fittings, and lanterns show no definite furniture intersection or unsupported floating part. The rear dark fitting and its repeated holes read as mounted detailing.
+
+**Woodyard: accept visible host geometry.** The restored roof silhouette is coherent, with visible posts, beams, and diagonal braces supporting the shelter. The log stack and workbench occupy plausible working positions; the bench surface and front approach remain accessible. Logs beneath the bench read as storage, with no definite collision requiring correction. The hanging trade sign has visible suspension hardware. Its overlap with the rear circular artwork changes with the camera angle and is consistent with projection, not evidence of intersecting geometry.
+
+**No definite must-fix defect is visible in these six current images.** Neither building shows an obvious detached roof section, unsupported gable, floating furnishing, or blocked principal approach.
+
+Hidden roof joints, rear faces, concealed furniture contacts, and exact passage clearances cannot be verified from these views. Acceptance is limited to the visible geometry in these current source-pinned local static renders, which supersede the earlier byte-unbound reviews. This does not establish live collision behavior, play usability, or user taste approval.
+tokens used
+15,215
+**Stable: accept visible host geometry.** The pitched roof, ridge, overhangs, and timbered gable form a coherent exterior. Interior beams and braces appear connected to the wall framing. The doorway opens onto a clear central aisle, with stall partitions on either side. The visible hay, fittings, and lanterns show no definite furniture intersection or unsupported floating part. The rear dark fitting and its repeated holes read as mounted detailing.
+
+**Woodyard: accept visible host geometry.** The restored roof silhouette is coherent, with visible posts, beams, and diagonal braces supporting the shelter. The log stack and workbench occupy plausible working positions; the bench surface and front approach remain accessible. Logs beneath the bench read as storage, with no definite collision requiring correction. The hanging trade sign has visible suspension hardware. Its overlap with the rear circular artwork changes with the camera angle and is consistent with projection, not evidence of intersecting geometry.
+
+**No definite must-fix defect is visible in these six current images.** Neither building shows an obvious detached roof section, unsupported gable, floating furnishing, or blocked principal approach.
+
+Hidden roof joints, rear faces, concealed furniture contacts, and exact passage clearances cannot be verified from these views. Acceptance is limited to the visible geometry in these current source-pinned local static renders, which supersede the earlier byte-unbound reviews. This does not establish live collision behavior, play usability, or user taste approval.

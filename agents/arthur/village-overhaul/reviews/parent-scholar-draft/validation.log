@@ -1,0 +1,17 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/reviews/parent-scholar-draft/validate.test.ts:
+(pass) complete current campaign wrapper includes engine and preflight dependency pins [22.98ms]
+(pass) saved nx-tower-only READY draft passes actual validateCampaign and sourceGate [21.20ms]
+(pass) actual sourceGate rejects an omitted scanImports dependency [6.38ms]
+(pass) actual campaign schema rejects HOLD instead of laundering it into approval [4.31ms]
+(pass) actual sourceGate rejects wrong model SHA/lib before accepting the review [0.57ms]
+(pass) exact preserved placement, comp and collision preference remain unchanged
+(pass) fresh reports use actual saved routes and full independent support samples [1.32ms]
+(pass) nonzero proof frame requires explicit metadata and keeps doors preframed [0.14ms]
+(pass) all recursively referenced file+SHA pins in final draft evidence still match [22.45ms]
+
+ 9 pass
+ 0 fail
+ 1193 expect() calls
+Ran 9 tests across 1 file. [156.00ms]

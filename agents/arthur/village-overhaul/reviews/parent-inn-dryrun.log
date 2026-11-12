@@ -1,0 +1,4 @@
+{"time":"2026-09-08T02:39:25.153Z","status":"OUTSIDE_SCOPE_DRIFT_OBSERVED","id":"nx-carousel","currentSha256":"a800be385dceaa77dba5c06ba66bae6e368038565a5b5005335e203b769680fa","action":"preserved-unrelated-live-state"}
+{"time":"2026-09-08T02:39:30.951Z","status":"PARENT_PREFLIGHT_VERIFIED","id":"nx-town-inn","stage":"local","modelSha256":"861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692","contextSha256":"6d9886851c9b24997b3c480b9f5ad8fbe6519fa8cb03675eecffbaf4579580cc","evidence":[{"file":"verification/nx-town-inn/local-861225bb15230d9b-6d9886851c9b2499/details.json","sha256":"c521ea585785632fc336bc246e76b6e7bdfb20be1f5264b2c38a800ae0258db2"}]}
+{"time":"2026-09-08T02:39:32.831Z","status":"PREFLIGHT_PASS","id":"nx-town-inn","mode":"dry-run","plannedVerbs":2,"protectedCaptured":279,"protectedRelevant":10}
+{"time":"2026-09-08T02:39:32.831Z","status":"DRY_RUN_VERIFIED","uploads":0,"verbs":0,"selected":["nx-town-inn"]}

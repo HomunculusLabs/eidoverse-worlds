@@ -1,0 +1,15 @@
+{
+  "phase": "RED",
+  "command": [
+    "bun",
+    "test",
+    "agents/arthur/village-overhaul/build/nx-towers-repair.test.ts",
+    "--test-name-pattern",
+    "crown obeys"
+  ],
+  "exitCode": 1,
+  "stdout": "bun test v1.2.22 (6bafe260)\n",
+  "stderr": "\nagents/arthur/village-overhaul/build/nx-towers-repair.test.ts:\n 6 | const C=await import(`${runtimeEvidence.root}/colliders.js`);\n 7 | test('belltower crown obeys the active strict roof budget without changing its XZ envelope',async()=>{\n 8 |  const m=await loadPlayerMesh(`${BASE}/build/nx-town-belltower.glb`),b=new T.Box3().setFromObject(m.root),h=json(`${BASE}/before/contracts.json`).find((h:any)=>h.id==='nx-town-belltower');\n 9 |  // Active repair request: at most +1m; keep below its stricter old7.6+.9 brief too.\n10 |  // Actual decoded maximum, not a declaration, rounded value, or relaxed tolerance.\n11 |  expect(b.max.y).toBeLessThanOrEqual(h.bbox.max[1]+.9);\n                      ^\nerror: expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 8.5\nReceived: 9.329999923706055\n\n      at <anonymous> (/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-towers-repair.test.ts:11:18)\n(fail) belltower crown obeys the active strict roof budget without changing its XZ envelope [18.35ms]\n\n 0 pass\n 7 filtered out\n 1 fail\n 1 expect() calls\nRan 1 test across 1 file. [206.00ms]\n",
+  "testSha256": "5fb1944838fe72a417ede235d69654ea59a5b1f5840cddc2d26a2f738fcbaf42",
+  "builderSha256": "8b76eb51695d5ad0a834d6b7615ba87cf39cb1a9bf4aae2ce22e007240ec7ec9"
+}

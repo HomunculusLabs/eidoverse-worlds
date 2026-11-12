@@ -1,0 +1,110 @@
+[
+  {
+    "name": "market",
+    "view": "front",
+    "file": "reviews/parent-native/batch-C/market-front.png",
+    "sha256": "688f9a8456163544528fc4a2ca89cf88b12d17d2d11ef26c9f4a4dea2bdf45c4",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-market-ensemble-after.glb",
+    "renderModelSha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+    "renderManifest": "reviews/nx-town-market-ensemble-after/render-manifest.json"
+  },
+  {
+    "name": "market",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-C/market-aerial.png",
+    "sha256": "e6f64710e3f433d1cef1c52fbeabda0546bdaf96027d391791afe47557a9086c",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-market-ensemble-after.glb",
+    "renderModelSha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+    "renderManifest": "reviews/nx-town-market-ensemble-after/render-manifest.json"
+  },
+  {
+    "name": "market",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-C/market-interior.png",
+    "sha256": "60c75bf278162ca60a54b7c03e2d71080cd97b64350e90ef2b8657b40a532ced",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-market-ensemble-after.glb",
+    "renderModelSha256": "d29452c367b4e7fd4debd759ea66bd98ed3fcef2994016d8e532110ed717af98",
+    "renderManifest": "reviews/nx-town-market-ensemble-after/render-manifest.json"
+  },
+  {
+    "name": "dyehouse",
+    "view": "front",
+    "file": "reviews/parent-native/batch-C/dyehouse-front.png",
+    "sha256": "5f1085b16f44c1bb4c393406c7de841e806e9dfb3523276c4293da3e337ff6e4",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-dyehouse-ensemble-after.glb",
+    "renderModelSha256": "94dff28b04eb9726ad73d5b5c6fefba46828f193ae64c2446b544c3462892a6c",
+    "renderManifest": "reviews/nx-town-dyehouse-ensemble-after/render-manifest.json"
+  },
+  {
+    "name": "dyehouse",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-C/dyehouse-aerial.png",
+    "sha256": "8a04972b2230942ee0e15230a68d91a68f370c8691d040460ba4483d2acb9523",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-dyehouse-ensemble-after.glb",
+    "renderModelSha256": "94dff28b04eb9726ad73d5b5c6fefba46828f193ae64c2446b544c3462892a6c",
+    "renderManifest": "reviews/nx-town-dyehouse-ensemble-after/render-manifest.json"
+  },
+  {
+    "name": "dyehouse",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-C/dyehouse-interior.png",
+    "sha256": "b88342ce4a3fed5e09024083cdff4e301c49362d8f464bca672c83fd3bf0ea1e",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-dyehouse-ensemble-after.glb",
+    "renderModelSha256": "94dff28b04eb9726ad73d5b5c6fefba46828f193ae64c2446b544c3462892a6c",
+    "renderManifest": "reviews/nx-town-dyehouse-ensemble-after/render-manifest.json"
+  },
+  {
+    "name": "potter",
+    "view": "front",
+    "file": "reviews/parent-native/batch-C/potter-front.png",
+    "sha256": "3395e6b78d05c1b4247e934e08a416214723bb192e7a07839389d18f2f71d1dc",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-potter-assembly-final.glb",
+    "renderModelSha256": "6f19c48f2a5531fe0ea99c1cc3bee1b52d61f8883c5d58673219e818568c20eb",
+    "renderManifest": "reviews/nx-town-potter-assembly-final/render-manifest.json"
+  },
+  {
+    "name": "potter",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-C/potter-aerial.png",
+    "sha256": "d90ddcd1522b05de835c3c9410a534618b2c71080fe166973925673efd7fcba6",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-potter-assembly-final.glb",
+    "renderModelSha256": "6f19c48f2a5531fe0ea99c1cc3bee1b52d61f8883c5d58673219e818568c20eb",
+    "renderManifest": "reviews/nx-town-potter-assembly-final/render-manifest.json"
+  },
+  {
+    "name": "potter",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-C/potter-interior.png",
+    "sha256": "2b0fa0c21709c2039e7ea924a5bd3da5c5cb48fdf34aa161f580de60155c9795",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-potter-assembly-final.glb",
+    "renderModelSha256": "6f19c48f2a5531fe0ea99c1cc3bee1b52d61f8883c5d58673219e818568c20eb",
+    "renderManifest": "reviews/nx-town-potter-assembly-final/render-manifest.json"
+  },
+  {
+    "name": "kiln",
+    "view": "front",
+    "file": "reviews/parent-native/batch-C/kiln-front.png",
+    "sha256": "41a9876df6004926dd53207eb62c1f428c987495979d4503fede42986e5fe816",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-kiln-assembly-final.glb",
+    "renderModelSha256": "e57aaa60dd44aea7efc3cd29876956fcc11d0026ae866e97e88537ac698592c1",
+    "renderManifest": "reviews/nx-town-kiln-assembly-final/render-manifest.json"
+  },
+  {
+    "name": "kiln",
+    "view": "aerial",
+    "file": "reviews/parent-native/batch-C/kiln-aerial.png",
+    "sha256": "53507cfb8febf8b9b2229e9d8bbd1cc811252d0d85827ae2be5167c6549fe8ec",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-kiln-assembly-final.glb",
+    "renderModelSha256": "e57aaa60dd44aea7efc3cd29876956fcc11d0026ae866e97e88537ac698592c1",
+    "renderManifest": "reviews/nx-town-kiln-assembly-final/render-manifest.json"
+  },
+  {
+    "name": "kiln",
+    "view": "interior",
+    "file": "reviews/parent-native/batch-C/kiln-interior.png",
+    "sha256": "0e40d8a73c270698f5f965ea4f425748181b5cbb8db115976a47516527001e1f",
+    "renderModel": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-kiln-assembly-final.glb",
+    "renderModelSha256": "e57aaa60dd44aea7efc3cd29876956fcc11d0026ae866e97e88537ac698592c1",
+    "renderManifest": "reviews/nx-town-kiln-assembly-final/render-manifest.json"
+  }
+]

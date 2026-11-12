@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "id": "nx-court",
+  "builder": "build-court.ts",
+  "sha256": [
+    "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+    "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e"
+  ],
+  "method": "parent actually executed same builder twice; fresh bytes equal reviewed source"
+}

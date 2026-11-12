@@ -1,0 +1,152 @@
+{
+  "status": "OFFICIAL_PIXEL_VARIANCE__ORDERED_CONTROL_IDENTICAL",
+  "modelSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "cameraSha256": "cef1fabbdbc3a09c1a0aeb3444483b284df31ac1324790017448594febb7f5b9",
+  "identicalByteControls": [
+    {
+      "view": "front",
+      "changedPixels": 50,
+      "maxChannelDifference": 30,
+      "bbox": [
+        226,
+        73,
+        735,
+        186
+      ]
+    },
+    {
+      "view": "right",
+      "changedPixels": 97,
+      "maxChannelDifference": 15,
+      "bbox": [
+        255,
+        88,
+        647,
+        157
+      ]
+    },
+    {
+      "view": "back",
+      "changedPixels": 8,
+      "maxChannelDifference": 31,
+      "bbox": [
+        255,
+        65,
+        620,
+        173
+      ]
+    },
+    {
+      "view": "left",
+      "changedPixels": 98,
+      "maxChannelDifference": 16,
+      "bbox": [
+        312,
+        88,
+        588,
+        92
+      ]
+    },
+    {
+      "view": "gameplay",
+      "changedPixels": 28,
+      "maxChannelDifference": 31,
+      "bbox": [
+        322,
+        167,
+        638,
+        228
+      ]
+    },
+    {
+      "view": "aerial",
+      "changedPixels": 26,
+      "maxChannelDifference": 8,
+      "bbox": [
+        225,
+        63,
+        778,
+        304
+      ]
+    },
+    {
+      "view": "top",
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "bbox": null
+    },
+    {
+      "view": "night",
+      "changedPixels": 16,
+      "maxChannelDifference": 11,
+      "bbox": [
+        322,
+        167,
+        638,
+        228
+      ]
+    },
+    {
+      "view": "interior",
+      "changedPixels": 1,
+      "maxChannelDifference": 31,
+      "bbox": [
+        421,
+        92,
+        422,
+        93
+      ]
+    }
+  ],
+  "officialRenderer": "../cabin-overhaul/render.ts (unchanged; official before/after evidence)",
+  "supplementalRenderer": "build/nx-town-stable-render.ts",
+  "supplementalChange": "Opaque traversal renderOrder only plus required package path for deeper copy. Original geometry, texture bytes, cameras, lights and shared renderer unchanged.",
+  "orderedControls": [
+    {
+      "view": "front",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "right",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "back",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "left",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "gameplay",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "aerial",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "top",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "night",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    },
+    {
+      "view": "interior",
+      "changedPixels": 0,
+      "maxChannelDifference": 0
+    }
+  ],
+  "explanation": "Independent identical-byte official loads have sparse pixel-order variance. Explicit stable opaque ordering removes this in the tested nine views; this is supplemental evidence, not replacement of official renders or proof of absence of coplanar surfaces."
+}

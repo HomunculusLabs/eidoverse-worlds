@@ -1,0 +1,83 @@
+{
+  "status": "LOCAL_COMPOSITE_NOT_WORLD",
+  "sha256": "06ffa88b992d2a207be01f23df6610fea8f445d010e09053e1d29990c16af2a5",
+  "inputs": [
+    {
+      "id": "nx-town-market",
+      "sha256": "87245e97b1f848df57b4c128107586d533a7c3add98b37e39c391cb757f86de8",
+      "pos": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1
+    },
+    {
+      "id": "nx-dress-banner",
+      "sha256": "e3abeb89b04de03c7108271712688290c8ed41ed42d59b8799b8e733b1377750",
+      "pos": [
+        -4,
+        0,
+        9.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1
+    },
+    {
+      "id": "nx-dress-stringlights",
+      "sha256": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+      "pos": [
+        -6,
+        2.6,
+        7.5
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1
+    },
+    {
+      "id": "nx-dress-giftshelf",
+      "sha256": "20c7645421409c41afdf200bca8e6d7bc59b126c6d5f13aa99ad725db02cb22f",
+      "pos": [
+        -9,
+        0,
+        9
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-left",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "pos": [
+        -5.481766235091371,
+        0.38,
+        6.895979797464467
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-right",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "pos": [
+        -6.8959797974644665,
+        0.38,
+        5.481766235091372
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1
+    },
+    {
+      "id": "nx-artwalk-b30-market-tally",
+      "sha256": "6cf924356bbfe0f2cb3e00ef310ff6a26c61b053318960e7c5c460058482fc83",
+      "pos": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1
+    }
+  ]
+}

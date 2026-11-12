@@ -1,0 +1,993 @@
+{
+  "status": "PASS",
+  "id": "nx-town-woodyard",
+  "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "preRoofSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+  "triangleCount": 4952,
+  "unchangedTriangles": 4952,
+  "changedTriangles": 0,
+  "allGeometryBelowYUnchanged": 2.4,
+  "nonRoofPartsIdentical": true,
+  "materialTextureBytesIdentical": true,
+  "backing": [
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -0.9099999666214005,
+        0.9098927044868472,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          -0.9099999666214005,
+          0.9098927044868472,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -0.9099999666214005,
+        1.2829756259918215,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          -0.9099999666214005,
+          1.2829756259918215,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -0.9099999666214005,
+        1.6560585474967957,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          -0.9099999666214005,
+          1.6560585474967957,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -1.5543122344752192e-15,
+        0.9098927044868472,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          -1.5543122344752192e-15,
+          0.9098927044868472,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -1.5543122344752192e-15,
+        1.2829756259918215,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          -1.5543122344752192e-15,
+          1.2829756259918215,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        -1.5543122344752192e-15,
+        1.6560585474967957,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          -1.5543122344752192e-15,
+          1.6560585474967957,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        0.9099999666213974,
+        0.9098927044868472,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          0.9099999666213974,
+          0.9098927044868472,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        0.9099999666213974,
+        1.2829756259918215,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          0.9099999666213974,
+          1.2829756259918215,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed artwork backing",
+      "at": [
+        0.9099999666213974,
+        1.6560585474967957,
+        -0.8340000001490117
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 0.025,
+      "hit": {
+        "distance": 0.0009999783933162254,
+        "point": [
+          0.9099999666213974,
+          1.6560585474967957,
+          -0.8349999785423279
+        ],
+        "mesh": "village_nx-town-woodyard_4"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign top to visible hanger",
+      "at": [
+        -0.09,
+        2.049,
+        1.215
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "maxDistance": 0.015,
+      "hit": {
+        "distance": 0.0009999523162842472,
+        "point": [
+          -0.09,
+          2.049999952316284,
+          1.215
+        ],
+        "mesh": "village_nx-town-woodyard_0"
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed sign top to visible hanger",
+      "at": [
+        0.09,
+        2.049,
+        1.215
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "maxDistance": 0.015,
+      "hit": {
+        "distance": 0.0009999523162842472,
+        "point": [
+          0.09,
+          2.049999952316284,
+          1.215
+        ],
+        "mesh": "village_nx-town-woodyard_0"
+      },
+      "pass": true
+    }
+  ],
+  "roofSkin": [
+    {
+      "at": [
+        -1.94,
+        6,
+        -0.85
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        2.883128873393033,
+        -0.85
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.94,
+        6,
+        -0.55
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        3.0573673832528776,
+        -0.55
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.94,
+        6,
+        -0.25
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        3.227606058966991,
+        -0.25
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.94,
+        6,
+        0.05
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        3.401844620762868,
+        0.05
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.94,
+        6,
+        0.4
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        3.384210251050867,
+        0.4
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.94,
+        6,
+        0.7
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        3.2099717134105332,
+        0.7
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.94,
+        6,
+        1
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        3.0357331582222207,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        -1.94,
+        6,
+        1.15
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        -1.94,
+        2.952613798700372,
+        1.15
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        -0.85
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        0.35,
+        2.883128873393033,
+        -0.85
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        -0.55
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        0.35,
+        3.0573673832528776,
+        -0.55
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        -0.25
+      ],
+      "first": "village_nx-town-woodyard_6",
+      "material": "cabin-slate-alt",
+      "point": [
+        0.35,
+        3.227606058966991,
+        -0.25
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        0.05
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        0.35,
+        3.4018446207628674,
+        0.05
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        0.4
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        0.35,
+        3.3842102510508676,
+        0.4
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        0.7
+      ],
+      "first": "village_nx-town-woodyard_6",
+      "material": "cabin-slate-alt",
+      "point": [
+        0.35,
+        3.2099717134105332,
+        0.7
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        1
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        0.35,
+        3.0357331582222207,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        0.35,
+        6,
+        1.15
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        0.35,
+        2.952613798700372,
+        1.15
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        -0.85
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        2.64,
+        2.883128873393033,
+        -0.85
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        -0.55
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        2.64,
+        3.0573673832528776,
+        -0.55
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        -0.25
+      ],
+      "first": "village_nx-town-woodyard_6",
+      "material": "cabin-slate-alt",
+      "point": [
+        2.64,
+        3.227606058966991,
+        -0.25
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        0.05
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        2.64,
+        3.401844620762868,
+        0.05
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        0.4
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        2.64,
+        3.384210251050867,
+        0.4
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        0.7
+      ],
+      "first": "village_nx-town-woodyard_6",
+      "material": "cabin-slate-alt",
+      "point": [
+        2.64,
+        3.2099717134105332,
+        0.7
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        1
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        2.64,
+        3.0357331582222207,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "at": [
+        2.64,
+        6,
+        1.15
+      ],
+      "first": "village_nx-town-woodyard_5",
+      "material": "cabin-slate",
+      "point": [
+        2.64,
+        2.952613798700372,
+        1.15
+      ],
+      "pass": true
+    }
+  ],
+  "main": {
+    "geometryStatus": "FAIL",
+    "geometryFailures": [
+      "host is not an exact browser collider"
+    ],
+    "accessStatus": "PASS",
+    "collider": {
+      "exact": false,
+      "pillar": true,
+      "classification": {
+        "roomScale": false,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "routeCount": 14,
+    "routesPassed": 14,
+    "physicalSupport": true,
+    "supportSamples": 353,
+    "neighbors": [
+      "nx-artwalk-b11-woodyard-heartwood-measure",
+      "nx-sign-woodyard-001"
+    ],
+    "doors": [
+      {
+        "name": "left_of_fixed_hanging_sign",
+        "requiredWidth": 1.4,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -1.77,
+          0,
+          0.72
+        ],
+        "max": [
+          -0.3700000000000001,
+          2.2,
+          1.9
+        ],
+        "hits": 0,
+        "examples": []
+      }
+    ],
+    "protectedVolumes": [
+      {
+        "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+        "min": [
+          -1.2999999523162857,
+          0.7500000238418583,
+          -0.8350000001490117
+        ],
+        "max": [
+          1.2999999523162826,
+          1.8159512281417847,
+          -0.686587992310524
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "id": "nx-sign-woodyard-001",
+        "min": [
+          -0.2619999945163728,
+          1.3299999713897703,
+          1.220000000670554
+        ],
+        "max": [
+          0.26199999451637257,
+          2.049989926815033,
+          1.5440058708190936
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      }
+    ]
+  },
+  "context": {
+    "geometryStatus": "FAIL",
+    "geometryFailures": [
+      "host is not an exact browser collider"
+    ],
+    "accessStatus": "PASS",
+    "collider": {
+      "exact": false,
+      "pillar": true,
+      "classification": {
+        "roomScale": false,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "routeCount": 14,
+    "routesPassed": 14,
+    "physicalSupport": true,
+    "supportSamples": 353,
+    "neighbors": [
+      "nx-gallery-mosaic-0048",
+      "nx-dress-harvestcart",
+      "nx-dress-churn",
+      "nx-artwalk-b11-woodyard-heartwood-measure",
+      "nx-artwalk-b31-sheaf-tally",
+      "nx-artwalk-b32-morning-measure",
+      "nx-sign-woodyard-001",
+      "nx-approach-ne-lane-002",
+      "nx-dress-charcoal",
+      "nx-town-longhouse"
+    ],
+    "doors": [
+      {
+        "name": "left_of_fixed_hanging_sign",
+        "requiredWidth": 1.4,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -1.77,
+          0,
+          0.72
+        ],
+        "max": [
+          -0.3700000000000001,
+          2.2,
+          1.9
+        ],
+        "hits": 0,
+        "examples": []
+      }
+    ],
+    "protectedVolumes": [
+      {
+        "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+        "min": [
+          -1.2999999523162857,
+          0.7500000238418583,
+          -0.8350000001490117
+        ],
+        "max": [
+          1.2999999523162826,
+          1.8159512281417847,
+          -0.686587992310524
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "id": "nx-sign-woodyard-001",
+        "min": [
+          -0.2619999945163728,
+          1.3299999713897703,
+          1.220000000670554
+        ],
+        "max": [
+          0.26199999451637257,
+          2.049989926815033,
+          1.5440058708190936
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      }
+    ]
+  },
+  "baseline": {
+    "geometryStatus": "FAIL",
+    "geometryFailures": [
+      "host is not an exact browser collider",
+      "door left_of_fixed_hanging_sign: 11 triangles intrude into required 1.4m x 2.2m clearance"
+    ],
+    "accessStatus": "PASS",
+    "collider": {
+      "exact": false,
+      "pillar": true,
+      "classification": {
+        "roomScale": false,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "routeCount": 14,
+    "routesPassed": 14,
+    "physicalSupport": true,
+    "supportSamples": 353,
+    "neighbors": [
+      "nx-artwalk-b11-woodyard-heartwood-measure",
+      "nx-sign-woodyard-001"
+    ],
+    "doors": [
+      {
+        "name": "left_of_fixed_hanging_sign",
+        "requiredWidth": 1.4,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -1.77,
+          0,
+          0.72
+        ],
+        "max": [
+          -0.3700000000000001,
+          2.2,
+          1.9
+        ],
+        "hits": 11,
+        "examples": [
+          {
+            "node": "wy3_0",
+            "triangle": 33,
+            "intersectionMin": [
+              -1.7690000000000001,
+              0.0009999999999998899,
+              0.9600586295127869
+            ],
+            "intersectionMax": [
+              -1.740109920501709,
+              2.1990000000000003,
+              0.9600586295127869
+            ]
+          },
+          {
+            "node": "wy3_0",
+            "triangle": 34,
+            "intersectionMin": [
+              -1.7690000000000001,
+              1.6698852873494536,
+              0.9600586295127869
+            ],
+            "intersectionMax": [
+              -1.740166015954775,
+              2.1990000000000003,
+              0.9600586295127869
+            ]
+          },
+          {
+            "node": "wy3_0",
+            "triangle": 36,
+            "intersectionMin": [
+              -1.740109920501709,
+              0.0009999999999998899,
+              0.8399976437208684
+            ],
+            "intersectionMax": [
+              -1.740109920501709,
+              2.1990000000000003,
+              0.9600586295127869
+            ]
+          },
+          {
+            "node": "wy3_0",
+            "triangle": 37,
+            "intersectionMin": [
+              -1.740109920501709,
+              0.0009999999999998899,
+              0.8399414420127869
+            ],
+            "intersectionMax": [
+              -1.740109920501709,
+              2.1990000000000003,
+              0.9600040302190319
+            ]
+          },
+          {
+            "node": "wy3_0",
+            "triangle": 43,
+            "intersectionMin": [
+              -1.7690000000000001,
+              0.0009999999999998899,
+              0.8399414420127869
+            ],
+            "intersectionMax": [
+              -1.740109920501709,
+              2.1990000000000003,
+              0.8399414420127869
+            ]
+          },
+          {
+            "node": "wy3_0",
+            "triangle": 800,
+            "intersectionMin": [
+              -1.7690000000000001,
+              0.001,
+              0.8399414420127869
+            ],
+            "intersectionMax": [
+              -1.7401644165699748,
+              0.5301440619776334,
+              0.8399414420127869
+            ]
+          },
+          {
+            "node": "wy3_1",
+            "triangle": 0,
+            "intersectionMin": [
+              -1.7690000000000001,
+              2.074265241622925,
+              1.2790607213974
+            ],
+            "intersectionMax": [
+              -0.371,
+              2.1027600500191155,
+              1.2837043459757667
+            ]
+          },
+          {
+            "node": "wy3_1",
+            "triangle": 1,
+            "intersectionMin": [
+              -1.7690000000000001,
+              2.0797202904267977,
+              1.27994969732416
+            ],
+            "intersectionMax": [
+              -0.371,
+              2.1434834003448486,
+              1.290340781211853
+            ]
+          }
+        ]
+      }
+    ],
+    "protectedVolumes": [
+      {
+        "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+        "min": [
+          -1.2999999523162857,
+          0.7500000238418583,
+          -0.8350000001490117
+        ],
+        "max": [
+          1.2999999523162826,
+          1.8159512281417847,
+          -0.686587992310524
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "id": "nx-sign-woodyard-001",
+        "min": [
+          -0.2619999945163728,
+          1.3299999713897703,
+          1.220000000670554
+        ],
+        "max": [
+          0.26199999451637257,
+          2.049989926815033,
+          1.5440058708190936
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      }
+    ]
+  }
+}

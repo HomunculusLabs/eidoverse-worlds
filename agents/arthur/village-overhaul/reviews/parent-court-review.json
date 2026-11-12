@@ -1,0 +1,90 @@
+{
+  "schema": "village-review-v1",
+  "id": "nx-court",
+  "modelSha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+  "kind": "walk-in",
+  "sources": [
+    {
+      "file": "build-court.ts",
+      "sha256": "7f54b48320c6d2346fbed1ef70b3a0b4b4e91adfdc25f222f161952d864c8a0b"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "build-forge.ts",
+      "sha256": "9b38d74f34e065592105790dd856e063cbaae59263aac4ff44e99dd0ed6c4935"
+    },
+    {
+      "file": "before/nx-court.glb",
+      "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/court-routes.json",
+      "sha256": "9a19136328683a70ea9d3fd780b9c1fa52bf6b6b8febe2fc0707337647bc4844",
+      "mode": "room"
+    }
+  ],
+  "visual": {
+    "verdict": "accepted",
+    "reviewer": "parent adjudication of independent native GPT-6-Astra source-bound ensemble review, not Bill approval",
+    "files": [
+      {
+        "file": "reviews/parent-native/followup-court-forge.md",
+        "sha256": "eb4a7e1181f915e4eb5170d3a65271d5ba490920300d00ad5560ce8828563937"
+      },
+      {
+        "file": "reviews/court-open-courtyard.png",
+        "sha256": "bf00446dc5ed6f342f6cc0a8b6d2932db94936c9df99b49444181a1eb3c9dd21"
+      },
+      {
+        "file": "reviews/court-roof-separation.png",
+        "sha256": "7181a6d82a5b9dd0cd2874a455445212d001238fa71bcf94e8add714ea6862da"
+      },
+      {
+        "file": "reviews/court-bakery-interior.png",
+        "sha256": "23117e4dbc880a029bf2c399a26911bc2fa3eb0929b5c992638ceeeaf49cdf35"
+      },
+      {
+        "file": "reviews/court-assembly-detail-after/render-manifest.json",
+        "sha256": "a6cd98501f96d2cca9b2bfd88ff27e3fc9b43fc839f31c8054304c215e3cb819"
+      }
+    ]
+  },
+  "geometry": {
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-court-geometry.json",
+      "sha256": "eccbce8a69c7aa77f5c31bb62cad987c1d6a8614a1ecad23116c4b4fe72612dc"
+    }
+  },
+  "functional": {
+    "verdict": "passed",
+    "kind": "walk-in",
+    "evidence": {
+      "file": "build/court-player-report.json",
+      "sha256": "9a87d455877463a67bac7d6e78a85c2d1c419de5fd1502a454ceb53665daad83"
+    }
+  },
+  "deterministic": {
+    "sha256": [
+      "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21"
+    ],
+    "evidence": {
+      "file": "build/court-forge-determinism.json",
+      "sha256": "2e765a7ad15f5015ad7bd4b0856bec0e8e4ff1567cefd0796600f52d95d3cfc7"
+    }
+  }
+}

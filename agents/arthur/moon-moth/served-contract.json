@@ -1,0 +1,19 @@
+{
+  "sourceSha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+  "servedSha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+  "lib": "store/df959099a243ef27.glb",
+  "servedFile": "agents/arthur/moon-moth/served.glb",
+  "sourceBytes": 1272084,
+  "servedBytes": 128416,
+  "review": {
+    "scope": "Actual optimized served bytes; static front/aerial/night plus actual client engine part-motion in an isolated local scene",
+    "visualJudge": "configured image tool auxiliary analysis, not native image attachment",
+    "visualFinding": "Recognizable, attached wing roots, clear membranes, no observed corruption or ground intersection; passenger backrest intentionally partly hidden in frontal approach",
+    "motionStats": "agents/arthur/moon-moth/motion-review/727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c/stats.json",
+    "spatialReceipt": "agents/arthur/moon-moth/served-spatial-review.json",
+    "minimumWingPlaneClearanceM": 1.6552419810497911,
+    "staticMaxMatrixDelta": 0,
+    "rootMaxMatrixDelta": 0,
+    "liveRideVerified": false
+  }
+}

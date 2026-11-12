@@ -1,0 +1,135 @@
+{
+  "verdict": "PLACED_VERIFIED",
+  "at": "2026-09-08T01:18:43.948Z",
+  "world": "commons-next",
+  "target": "nx-moonmoth-001",
+  "counts": {
+    "uploads": 0,
+    "uploadAttempts": 0,
+    "lastUpload": 0,
+    "verbs": 0
+  },
+  "spatial": null,
+  "servedContract": {
+    "sourceSha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+    "servedSha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+    "lib": "store/df959099a243ef27.glb",
+    "servedFile": "agents/arthur/moon-moth/served.glb",
+    "sourceBytes": 1272084,
+    "servedBytes": 128416,
+    "review": {
+      "scope": "Actual optimized served bytes; static front/aerial/night plus actual client engine part-motion in an isolated local scene",
+      "visualJudge": "configured image tool auxiliary analysis, not native image attachment",
+      "visualFinding": "Recognizable, attached wing roots, clear membranes, no observed corruption or ground intersection; passenger backrest intentionally partly hidden in frontal approach",
+      "motionStats": "agents/arthur/moon-moth/motion-review/727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c/stats.json",
+      "spatialReceipt": "agents/arthur/moon-moth/served-spatial-review.json",
+      "minimumWingPlaneClearanceM": 1.6552419810497911,
+      "staticMaxMatrixDelta": 0,
+      "rootMaxMatrixDelta": 0,
+      "liveRideVerified": false
+    }
+  },
+  "entity": {
+    "lib": "store/df959099a243ef27.glb",
+    "pos": [
+      -90,
+      0.0008015504140560737,
+      13
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "collide": "exact",
+    "actor": "arthur-moonmoth-builder",
+    "ts": 1788830285765,
+    "comp": {
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      },
+      "motion:moon_wing_left": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 3.141592653589793,
+        "damp": 0,
+        "t0": 0
+      },
+      "motion:moon_wing_right": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 0,
+        "damp": 0,
+        "t0": 0
+      },
+      "lock": true
+    }
+  },
+  "behavior": {
+    "src": "store/scripts/4adcd4929578e650.js",
+    "attach": "nx-moonmoth-001",
+    "caps": {
+      "verbs": [
+        "motion"
+      ],
+      "selfOnly": true
+    },
+    "knobs": {
+      "perch": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "groundY": 0.0008015504140560737,
+      "yaw": 1.5707963267948966
+    },
+    "author": "arthur-moonmoth-builder",
+    "ts": 1788830289570,
+    "state": {
+      "flight": {
+        "phase": "rest"
+      }
+    }
+  },
+  "debug": {
+    "type": "debug",
+    "reqId": "moon-debug-1",
+    "behavior": "nx-moonmoth-001-flight",
+    "status": "running",
+    "events": [
+      {
+        "ts": 1788830295504,
+        "kind": "script-log",
+        "line": "▶ loaded store/scripts/4adcd4929578e650.js on nx-moonmoth-001 (1 timer(s))"
+      }
+    ]
+  },
+  "scope": "exact target and scoped behavior; no seating/visual PASS implied"
+}

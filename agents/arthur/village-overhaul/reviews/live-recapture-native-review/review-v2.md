@@ -1,0 +1,15 @@
+I can see all six attached images and review them directly. Darkness here is a visibility observation, not evidence of night or a lighting diagnosis. These camera poses do not establish physical walkability.
+
+1. **Original inn interior:** The cropped overhead lamp strongly attracts attention, while the table, benches, bottles, and ceiling are nearly black. Furniture silhouettes are visible, but material and construction detail are weak. No doorway is visible, so this frame provides little entrance or circulation evidence.
+
+2. **Hall close doorway approach:** The doorway, threshold, illuminated floorboards, and interior benches are readable. The broad foreground post consumes much of the left side; furniture overlaps the lower opening in projection. Small doorway lamps have less visual dominance than the original overhead lamp. Useful entrance evidence, though dark overhead structure and furniture limit detail.
+
+3. **Hall rear-aisle interior:** The complete doorway and floor leading toward its threshold are substantially clearer. The foreground bench obscures part of the left floor, while the large cropped overhead lamp remains conspicuous. This improves doorway and room-orientation evidence; the exterior and upper beams remain difficult to inspect.
+
+4. **Inn oblique porch detail:** The settle’s seat, back, and armrest are identifiable, along with portions of the table and sign. However, the dark sign and supporting post overlap the table and settle in projection, leaving their relationships ambiguous. **This does not resolve the requested porch overlap.** It shows the ambiguity, without proving physical clipping.
+
+5. **Inn rear-right-aisle interior:** The doorway, staircase, and visible floor beside the table establish more of the room arrangement. The table and bench obscure the lower-left doorway area. Moving the overhead lamp to the upper-right reduces its central dominance relative to the original, although bright windows still draw attention. Furniture remains mostly silhouette.
+
+6. **Inn rear-left room detail:** The doorway and threshold are most legible among the inn views, with furniture largely displaced to the left. More foreground floor is visible, making this useful circulation-layout evidence. The large overhead lamp again dominates, and the table, benches, ceiling, and dark threshold patches remain poorly resolved.
+
+The supplements improve doorway visibility, especially **3 and 6**, but reduce luminous foreground dominance only inconsistently; **4 leaves the porch question unresolved**. A **clearly labeled supplemental offline neutral daylight/fill render is warranted** to expose dark furniture and structural detail. It should accompany these unchanged live captures; another porch angle is also needed because fill alone cannot remove projected occlusion.

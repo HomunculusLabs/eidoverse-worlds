@@ -1,0 +1,16 @@
+{
+  "world": "moon-moth-manual",
+  "id": "nx-moonmoth-001",
+  "lib": "store/df959099a243ef27.glb",
+  "servedSha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+  "pos": [0, 0, 0],
+  "yaw": 1.5707963267948966,
+  "scale": 1,
+  "collide": "exact",
+  "comp": {
+    "sockets": {"seat": {"pos": [0, 2.47, 0.18], "pose": "sitchair", "yaw": 0}},
+    "motion:moon_wing_left": {"type": "pendulum", "axis": [0, 0, 1], "pivot": [0, 0, 0], "amp": 0.22, "period": 5.5, "phase": 3.141592653589793, "damp": 0, "t0": 0},
+    "motion:moon_wing_right": {"type": "pendulum", "axis": [0, 0, 1], "pivot": [0, 0, 0], "amp": 0.22, "period": 5.5, "phase": 0, "damp": 0, "t0": 0},
+    "pilot": {"v": 1, "slot": "seat", "home": [0, 0, 0], "homeYaw": 1.5707963267948966, "radius": 30, "cruiseY": 22, "ceilingY": 35, "maxSpeed": 4, "maxClimb": 3, "maxTurn": 1.2}
+  }
+}

@@ -1,0 +1,120 @@
+[
+  {
+    "id": "nx-town-stable",
+    "label": "stable",
+    "builder": "build-stable.ts",
+    "model": "build/nx-town-stable.glb",
+    "kind": "walk-in",
+    "proof": "build/nx-town-stable-final-verification.json",
+    "routes": [
+      "build/nx-town-stable-route-context.json"
+    ],
+    "review": "reviews/parent-native/final-stable-woodyard.md",
+    "images": [
+      "reviews/parent-stable-final/aerial.png",
+      "reviews/parent-stable-detail-final/front.png",
+      "reviews/parent-stable-detail-final/interior.png"
+    ]
+  },
+  {
+    "id": "nx-town-woodyard",
+    "label": "woodyard",
+    "builder": "build-woodyard.ts",
+    "model": "build/nx-town-woodyard.glb",
+    "kind": "workstation",
+    "proof": "build/nx-town-woodyard-final-verification.json",
+    "routes": [
+      "build/nx-town-woodyard-route-context.json"
+    ],
+    "review": "reviews/parent-native/final-stable-woodyard.md",
+    "images": [
+      "reviews/parent-woodyard-final/aerial.png",
+      "reviews/parent-woodyard-detail-final/front.png",
+      "reviews/parent-woodyard-detail-final/interior.png"
+    ]
+  },
+  {
+    "id": "nx-court",
+    "label": "court",
+    "builder": "build-court.ts",
+    "model": "build/court.glb",
+    "kind": "walk-in",
+    "proof": "build/court-player-report.json",
+    "routes": [
+      "build/court-routes.json"
+    ],
+    "review": "reviews/parent-native/connected-court-forge.md",
+    "images": [
+      "reviews/parent-court-connected-final/front.png",
+      "reviews/parent-court-connected-final/aerial.png",
+      "reviews/parent-forge-connected-final/back.png"
+    ]
+  },
+  {
+    "id": "nx-forge",
+    "label": "forge",
+    "builder": "build-forge.ts",
+    "model": "build/forge.glb",
+    "kind": "workstation",
+    "proof": "build/forge-player-report.json",
+    "routes": [
+      "build/forge-routes.json"
+    ],
+    "review": "reviews/parent-native/connected-court-forge.md",
+    "images": [
+      "reviews/parent-forge-connected-final/front.png",
+      "reviews/parent-forge-connected-final/back.png"
+    ]
+  },
+  {
+    "id": "nx-town-dyehouse",
+    "label": "dyehouse",
+    "builder": "build-dyehouse.ts",
+    "model": "build/nx-town-dyehouse.glb",
+    "kind": "workstation",
+    "proof": "build/nx-town-dyehouse-verification.json",
+    "routes": [
+      "build/nx-town-dyehouse-approach-contract.json"
+    ],
+    "review": "reviews/parent-native/batch-C/review.md",
+    "images": [
+      "reviews/parent-native/batch-C/dyehouse-front.png",
+      "reviews/parent-native/batch-C/dyehouse-aerial.png",
+      "reviews/parent-native/batch-C/dyehouse-interior.png"
+    ]
+  },
+  {
+    "id": "nx-town-potter",
+    "label": "potter",
+    "builder": "build-potter.ts",
+    "model": "build/nx-town-potter.glb",
+    "kind": "workstation",
+    "proof": "build/nx-town-potter-functionality.json",
+    "routes": [
+      "build/nx-town-potter-approach-contract.json"
+    ],
+    "review": "reviews/parent-native/batch-C/review.md",
+    "images": [
+      "reviews/parent-native/batch-C/potter-front.png",
+      "reviews/parent-native/batch-C/potter-aerial.png",
+      "reviews/parent-native/batch-C/potter-interior.png"
+    ]
+  },
+  {
+    "id": "nx-town-kiln",
+    "label": "kiln",
+    "builder": "build-kiln.ts",
+    "model": "build/nx-town-kiln.glb",
+    "kind": "workstation",
+    "proof": "build/nx-town-kiln-functionality.json",
+    "routes": [
+      "build/nx-town-kiln-approach-contract.json"
+    ],
+    "review": "reviews/parent-native/final-kiln-belltower.md",
+    "images": [
+      "reviews/nx-town-kiln-assembly-final/front.png",
+      "reviews/nx-town-kiln-assembly-final/aerial.png",
+      "reviews/nx-town-kiln-assembly-final/interior.png"
+    ]
+  }
+]

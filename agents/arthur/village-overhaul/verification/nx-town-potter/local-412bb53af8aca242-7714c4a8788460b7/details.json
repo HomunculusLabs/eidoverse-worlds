@@ -1,0 +1,3558 @@
+{
+  "id": "nx-town-potter",
+  "stage": "local",
+  "sourceSha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+  "modelSha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+  "contextSha256": "7714c4a8788460b7a4a2591aeb6fa155c8c867e488eea42aa6a46b4c7f64dc78",
+  "publicRuntime": [
+    {
+      "name": "colliders.js",
+      "url": "https://eidoverse.billding.dev/lib/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+    },
+    {
+      "name": "supportclass.js",
+      "url": "https://eidoverse.billding.dev/lib/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+    }
+  ],
+  "sourceEquivalence": {
+    "pass": true,
+    "forward": {
+      "samples": 120988,
+      "maxDistance": 1.185245107649851e-13
+    },
+    "reverse": {
+      "samples": 120988,
+      "maxDistance": 1.185245107649851e-13
+    },
+    "toleranceMetres": 0.003,
+    "sourceTriangles": 17284,
+    "servedTriangles": 17284,
+    "method": "bidirectional all-vertex/edge-midpoint/triangle-centroid nearest-surface probes",
+    "limitation": "Sampled surface equivalence, not a mathematical Hausdorff certificate; actual served-route proof separately required."
+  },
+  "actualBounds": {
+    "min": [
+      -1.7050000429153442,
+      -1.4901161415892261e-9,
+      -0.9850000143051147
+    ],
+    "max": [
+      1.6700000762939453,
+      2.109999895095825,
+      0.5849999785423279
+    ]
+  },
+  "routes": [
+    {
+      "file": "build/nx-town-potter-approach-contract.json",
+      "sha256": "e989c534baa31428b20fc0fd6937c13044514b5007aa2a03ed0e68b31e4e100e",
+      "mode": "workstation",
+      "report": {
+        "status": "PASS",
+        "id": "nx-town-potter",
+        "kind": "workstation",
+        "runtime": {
+          "mode": "served-override",
+          "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+          "files": {
+            "colliders.js": {
+              "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+              "publicPath": "/lib/colliders.js"
+            },
+            "supportclass.js": {
+              "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+              "publicPath": "/lib/supportclass.js"
+            }
+          },
+          "threeRevision": "184",
+          "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+        },
+        "collider": {
+          "exact": false,
+          "pillar": false
+        },
+        "neighbors": [
+          "nx-artwalk-b3-ruled-porch",
+          "nx-gallery-mosaic-0036",
+          "nx-sign-potter-001",
+          "nx-town-roads"
+        ],
+        "walks": [
+          {
+            "direction": "in",
+            "from": "public-approach",
+            "to": "clear-of-porch-foot",
+            "steps": 40,
+            "maxPush": 0,
+            "maxRise": 0.00402,
+            "minY": 0,
+            "maxY": 0.00402,
+            "arrivalXZ": 1.5543122344752192e-15,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "clear-of-porch-foot",
+            "to": "wheel-operator",
+            "steps": 15,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 6.684427777288335e-16,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "wheel-operator",
+            "to": "wedging-counter",
+            "steps": 31,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 9.930136612989092e-16,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "wedging-counter",
+            "to": "wheel-return",
+            "steps": 31,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 6.667118051786499e-16,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "in",
+            "from": "wheel-return",
+            "to": "glaze-counter",
+            "steps": 29,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 1.5700924586837751e-15,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "glaze-counter",
+            "to": "wheel-return",
+            "steps": 29,
+            "maxPush": 0,
+            "maxRise": 0.00402,
+            "minY": 0,
+            "maxY": 0.00402,
+            "arrivalXZ": 2.23445312947698e-15,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "wheel-return",
+            "to": "wedging-counter",
+            "steps": 31,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 2.531698018113677e-15,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "wedging-counter",
+            "to": "wheel-operator",
+            "steps": 31,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 2.2225700696173387e-15,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "wheel-operator",
+            "to": "clear-of-porch-foot",
+            "steps": 15,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 2.220446049250313e-16,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          },
+          {
+            "direction": "out",
+            "from": "clear-of-porch-foot",
+            "to": "public-approach",
+            "steps": 40,
+            "maxPush": 0,
+            "maxRise": 0,
+            "minY": 0.00402,
+            "maxY": 0.00402,
+            "arrivalXZ": 1.7763568394002505e-15,
+            "floorError": 0.00402,
+            "geometryHits": 0,
+            "examples": [],
+            "pass": true
+          }
+        ],
+        "physicalSupport": {
+          "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+          "pass": true,
+          "samples": [
+            {
+              "name": "in:start",
+              "pos": [
+                0.55,
+                0,
+                2.8
+              ],
+              "ground": 0.00402,
+              "gap": -0.00402,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:1",
+              "pos": [
+                0.55,
+                0.00402,
+                2.76
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:2",
+              "pos": [
+                0.55,
+                0.00402,
+                2.7199999999999998
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:3",
+              "pos": [
+                0.55,
+                0.00402,
+                2.6799999999999997
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:4",
+              "pos": [
+                0.55,
+                0.00402,
+                2.6399999999999997
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:5",
+              "pos": [
+                0.55,
+                0.00402,
+                2.5999999999999996
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:6",
+              "pos": [
+                0.55,
+                0.00402,
+                2.5599999999999996
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:7",
+              "pos": [
+                0.55,
+                0.00402,
+                2.5199999999999996
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:8",
+              "pos": [
+                0.55,
+                0.00402,
+                2.4799999999999995
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:9",
+              "pos": [
+                0.55,
+                0.00402,
+                2.4399999999999995
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:10",
+              "pos": [
+                0.55,
+                0.00402,
+                2.3999999999999995
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:11",
+              "pos": [
+                0.55,
+                0.00402,
+                2.3599999999999994
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:12",
+              "pos": [
+                0.55,
+                0.00402,
+                2.3199999999999994
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:13",
+              "pos": [
+                0.55,
+                0.00402,
+                2.2799999999999994
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:14",
+              "pos": [
+                0.55,
+                0.00402,
+                2.2399999999999993
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:15",
+              "pos": [
+                0.55,
+                0.00402,
+                2.1999999999999993
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:16",
+              "pos": [
+                0.55,
+                0.00402,
+                2.1599999999999993
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:17",
+              "pos": [
+                0.55,
+                0.00402,
+                2.119999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:18",
+              "pos": [
+                0.55,
+                0.00402,
+                2.079999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:19",
+              "pos": [
+                0.55,
+                0.00402,
+                2.039999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:20",
+              "pos": [
+                0.55,
+                0.00402,
+                1.9999999999999991
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:21",
+              "pos": [
+                0.55,
+                0.00402,
+                1.959999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:22",
+              "pos": [
+                0.55,
+                0.00402,
+                1.919999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:23",
+              "pos": [
+                0.55,
+                0.00402,
+                1.879999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:24",
+              "pos": [
+                0.55,
+                0.00402,
+                1.839999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:25",
+              "pos": [
+                0.55,
+                0.00402,
+                1.799999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:26",
+              "pos": [
+                0.55,
+                0.00402,
+                1.759999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:27",
+              "pos": [
+                0.55,
+                0.00402,
+                1.7199999999999989
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:28",
+              "pos": [
+                0.55,
+                0.00402,
+                1.6799999999999988
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:29",
+              "pos": [
+                0.55,
+                0.00402,
+                1.6399999999999988
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:30",
+              "pos": [
+                0.55,
+                0.00402,
+                1.5999999999999988
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:31",
+              "pos": [
+                0.55,
+                0.00402,
+                1.5599999999999987
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:32",
+              "pos": [
+                0.55,
+                0.00402,
+                1.5199999999999987
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:33",
+              "pos": [
+                0.55,
+                0.00402,
+                1.4799999999999986
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:34",
+              "pos": [
+                0.55,
+                0.00402,
+                1.4399999999999986
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:35",
+              "pos": [
+                0.55,
+                0.00402,
+                1.3999999999999986
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:36",
+              "pos": [
+                0.55,
+                0.00402,
+                1.3599999999999985
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:37",
+              "pos": [
+                0.55,
+                0.00402,
+                1.3199999999999985
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:38",
+              "pos": [
+                0.55,
+                0.00402,
+                1.2799999999999985
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:39",
+              "pos": [
+                0.55,
+                0.00402,
+                1.2399999999999984
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:public-approach:clear-of-porch-foot:40",
+              "pos": [
+                0.55,
+                0.00402,
+                1.1999999999999984
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:1",
+              "pos": [
+                0.5133333333333334,
+                0.00402,
+                1.1913333333333318
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:2",
+              "pos": [
+                0.47666666666666674,
+                0.00402,
+                1.1826666666666652
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:3",
+              "pos": [
+                0.44000000000000006,
+                0.00402,
+                1.1739999999999986
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:4",
+              "pos": [
+                0.4033333333333334,
+                0.00402,
+                1.165333333333332
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:5",
+              "pos": [
+                0.3666666666666667,
+                0.00402,
+                1.1566666666666654
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:6",
+              "pos": [
+                0.33,
+                0.00402,
+                1.1479999999999988
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:7",
+              "pos": [
+                0.29333333333333333,
+                0.00402,
+                1.1393333333333322
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:8",
+              "pos": [
+                0.25666666666666665,
+                0.00402,
+                1.1306666666666656
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:9",
+              "pos": [
+                0.21999999999999997,
+                0.00402,
+                1.121999999999999
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:10",
+              "pos": [
+                0.1833333333333333,
+                0.00402,
+                1.1133333333333324
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:11",
+              "pos": [
+                0.1466666666666666,
+                0.00402,
+                1.1046666666666658
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:12",
+              "pos": [
+                0.10999999999999995,
+                0.00402,
+                1.0959999999999992
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:13",
+              "pos": [
+                0.07333333333333328,
+                0.00402,
+                1.0873333333333326
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:14",
+              "pos": [
+                0.03666666666666661,
+                0.00402,
+                1.078666666666666
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:clear-of-porch-foot:wheel-operator:15",
+              "pos": [
+                -5.551115123125783e-17,
+                0.00402,
+                1.0699999999999994
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:1",
+              "pos": [
+                -0.038709677419354896,
+                0.00402,
+                1.0690322580645155
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:2",
+              "pos": [
+                -0.07741935483870974,
+                0.00402,
+                1.0680645161290316
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:3",
+              "pos": [
+                -0.11612903225806458,
+                0.00402,
+                1.0670967741935478
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:4",
+              "pos": [
+                -0.15483870967741942,
+                0.00402,
+                1.0661290322580639
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:5",
+              "pos": [
+                -0.19354838709677424,
+                0.00402,
+                1.06516129032258
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:6",
+              "pos": [
+                -0.23225806451612907,
+                0.00402,
+                1.0641935483870961
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:7",
+              "pos": [
+                -0.2709677419354839,
+                0.00402,
+                1.0632258064516122
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:8",
+              "pos": [
+                -0.3096774193548387,
+                0.00402,
+                1.0622580645161284
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:9",
+              "pos": [
+                -0.34838709677419355,
+                0.00402,
+                1.0612903225806445
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:10",
+              "pos": [
+                -0.3870967741935484,
+                0.00402,
+                1.0603225806451606
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:11",
+              "pos": [
+                -0.4258064516129032,
+                0.00402,
+                1.0593548387096767
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:12",
+              "pos": [
+                -0.46451612903225803,
+                0.00402,
+                1.0583870967741928
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:13",
+              "pos": [
+                -0.5032258064516129,
+                0.00402,
+                1.057419354838709
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:14",
+              "pos": [
+                -0.5419354838709677,
+                0.00402,
+                1.056451612903225
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:15",
+              "pos": [
+                -0.5806451612903225,
+                0.00402,
+                1.0554838709677412
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:16",
+              "pos": [
+                -0.6193548387096773,
+                0.00402,
+                1.0545161290322573
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:17",
+              "pos": [
+                -0.6580645161290322,
+                0.00402,
+                1.0535483870967735
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:18",
+              "pos": [
+                -0.696774193548387,
+                0.00402,
+                1.0525806451612896
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:19",
+              "pos": [
+                -0.7354838709677418,
+                0.00402,
+                1.0516129032258057
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:20",
+              "pos": [
+                -0.7741935483870966,
+                0.00402,
+                1.0506451612903218
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:21",
+              "pos": [
+                -0.8129032258064515,
+                0.00402,
+                1.049677419354838
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:22",
+              "pos": [
+                -0.8516129032258063,
+                0.00402,
+                1.048709677419354
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:23",
+              "pos": [
+                -0.8903225806451611,
+                0.00402,
+                1.0477419354838702
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:24",
+              "pos": [
+                -0.929032258064516,
+                0.00402,
+                1.0467741935483863
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:25",
+              "pos": [
+                -0.9677419354838708,
+                0.00402,
+                1.0458064516129024
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:26",
+              "pos": [
+                -1.0064516129032257,
+                0.00402,
+                1.0448387096774185
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:27",
+              "pos": [
+                -1.0451612903225806,
+                0.00402,
+                1.0438709677419347
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:28",
+              "pos": [
+                -1.0838709677419356,
+                0.00402,
+                1.0429032258064508
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:29",
+              "pos": [
+                -1.1225806451612905,
+                0.00402,
+                1.041935483870967
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:30",
+              "pos": [
+                -1.1612903225806455,
+                0.00402,
+                1.040967741935483
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-operator:wedging-counter:31",
+              "pos": [
+                -1.2000000000000004,
+                0.00402,
+                1.0399999999999991
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:1",
+              "pos": [
+                -1.1612903225806455,
+                0.00402,
+                1.040967741935483
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:2",
+              "pos": [
+                -1.1225806451612905,
+                0.00402,
+                1.041935483870967
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:3",
+              "pos": [
+                -1.0838709677419356,
+                0.00402,
+                1.0429032258064508
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:4",
+              "pos": [
+                -1.0451612903225806,
+                0.00402,
+                1.0438709677419347
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:5",
+              "pos": [
+                -1.0064516129032257,
+                0.00402,
+                1.0448387096774185
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:6",
+              "pos": [
+                -0.9677419354838709,
+                0.00402,
+                1.0458064516129024
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:7",
+              "pos": [
+                -0.9290322580645161,
+                0.00402,
+                1.0467741935483863
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:8",
+              "pos": [
+                -0.8903225806451612,
+                0.00402,
+                1.0477419354838702
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:9",
+              "pos": [
+                -0.8516129032258064,
+                0.00402,
+                1.048709677419354
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:10",
+              "pos": [
+                -0.8129032258064516,
+                0.00402,
+                1.049677419354838
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:11",
+              "pos": [
+                -0.7741935483870968,
+                0.00402,
+                1.0506451612903218
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:12",
+              "pos": [
+                -0.7354838709677419,
+                0.00402,
+                1.0516129032258057
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:13",
+              "pos": [
+                -0.6967741935483871,
+                0.00402,
+                1.0525806451612896
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:14",
+              "pos": [
+                -0.6580645161290323,
+                0.00402,
+                1.0535483870967735
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:15",
+              "pos": [
+                -0.6193548387096774,
+                0.00402,
+                1.0545161290322573
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:16",
+              "pos": [
+                -0.5806451612903226,
+                0.00402,
+                1.0554838709677412
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:17",
+              "pos": [
+                -0.5419354838709678,
+                0.00402,
+                1.056451612903225
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:18",
+              "pos": [
+                -0.503225806451613,
+                0.00402,
+                1.057419354838709
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:19",
+              "pos": [
+                -0.46451612903225814,
+                0.00402,
+                1.0583870967741928
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:20",
+              "pos": [
+                -0.4258064516129033,
+                0.00402,
+                1.0593548387096767
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:21",
+              "pos": [
+                -0.3870967741935485,
+                0.00402,
+                1.0603225806451606
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:22",
+              "pos": [
+                -0.34838709677419366,
+                0.00402,
+                1.0612903225806445
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:23",
+              "pos": [
+                -0.30967741935483883,
+                0.00402,
+                1.0622580645161284
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:24",
+              "pos": [
+                -0.270967741935484,
+                0.00402,
+                1.0632258064516122
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:25",
+              "pos": [
+                -0.23225806451612915,
+                0.00402,
+                1.0641935483870961
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:26",
+              "pos": [
+                -0.1935483870967743,
+                0.00402,
+                1.06516129032258
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:27",
+              "pos": [
+                -0.15483870967741944,
+                0.00402,
+                1.0661290322580639
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:28",
+              "pos": [
+                -0.11612903225806459,
+                0.00402,
+                1.0670967741935478
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:29",
+              "pos": [
+                -0.07741935483870974,
+                0.00402,
+                1.0680645161290316
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:30",
+              "pos": [
+                -0.03870967741935488,
+                0.00402,
+                1.0690322580645155
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wedging-counter:wheel-return:31",
+              "pos": [
+                -2.7755575615628914e-17,
+                0.00402,
+                1.0699999999999994
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:1",
+              "pos": [
+                0.03965517241379307,
+                0.00402,
+                1.0689655172413788
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:2",
+              "pos": [
+                0.07931034482758617,
+                0.00402,
+                1.0679310344827582
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:3",
+              "pos": [
+                0.11896551724137927,
+                0.00402,
+                1.0668965517241376
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:4",
+              "pos": [
+                0.15862068965517237,
+                0.00402,
+                1.065862068965517
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:5",
+              "pos": [
+                0.19827586206896547,
+                0.00402,
+                1.0648275862068963
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:6",
+              "pos": [
+                0.23793103448275857,
+                0.00402,
+                1.0637931034482757
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:7",
+              "pos": [
+                0.27758620689655167,
+                0.00402,
+                1.062758620689655
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:8",
+              "pos": [
+                0.3172413793103448,
+                0.00402,
+                1.0617241379310345
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:9",
+              "pos": [
+                0.3568965517241379,
+                0.00402,
+                1.0606896551724139
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:10",
+              "pos": [
+                0.39655172413793105,
+                0.00402,
+                1.0596551724137933
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:11",
+              "pos": [
+                0.4362068965517242,
+                0.00402,
+                1.0586206896551726
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:12",
+              "pos": [
+                0.4758620689655173,
+                0.00402,
+                1.057586206896552
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:13",
+              "pos": [
+                0.5155172413793104,
+                0.00402,
+                1.0565517241379314
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:14",
+              "pos": [
+                0.5551724137931036,
+                0.00402,
+                1.0555172413793108
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:15",
+              "pos": [
+                0.5948275862068967,
+                0.00402,
+                1.0544827586206902
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:16",
+              "pos": [
+                0.6344827586206898,
+                0.00402,
+                1.0534482758620696
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:17",
+              "pos": [
+                0.6741379310344829,
+                0.00402,
+                1.052413793103449
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:18",
+              "pos": [
+                0.7137931034482761,
+                0.00402,
+                1.0513793103448283
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:19",
+              "pos": [
+                0.7534482758620692,
+                0.00402,
+                1.0503448275862077
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:20",
+              "pos": [
+                0.7931034482758623,
+                0.00402,
+                1.0493103448275871
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:21",
+              "pos": [
+                0.8327586206896554,
+                0.00402,
+                1.0482758620689665
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:22",
+              "pos": [
+                0.8724137931034486,
+                0.00402,
+                1.0472413793103459
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:23",
+              "pos": [
+                0.9120689655172417,
+                0.00402,
+                1.0462068965517253
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:24",
+              "pos": [
+                0.9517241379310348,
+                0.00402,
+                1.0451724137931047
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:25",
+              "pos": [
+                0.991379310344828,
+                0.00402,
+                1.044137931034484
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:26",
+              "pos": [
+                1.031034482758621,
+                0.00402,
+                1.0431034482758634
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:27",
+              "pos": [
+                1.070689655172414,
+                0.00402,
+                1.0420689655172428
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:28",
+              "pos": [
+                1.1103448275862071,
+                0.00402,
+                1.0410344827586222
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "in:wheel-return:glaze-counter:29",
+              "pos": [
+                1.1500000000000001,
+                0.00402,
+                1.0400000000000016
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:start",
+              "pos": [
+                1.15,
+                0,
+                1.04
+              ],
+              "ground": 0.00402,
+              "gap": -0.00402,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:1",
+              "pos": [
+                1.110344827586207,
+                0.00402,
+                1.0410344827586206
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:2",
+              "pos": [
+                1.0706896551724139,
+                0.00402,
+                1.0420689655172413
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:3",
+              "pos": [
+                1.0310344827586209,
+                0.00402,
+                1.0431034482758619
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:4",
+              "pos": [
+                0.9913793103448277,
+                0.00402,
+                1.0441379310344825
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:5",
+              "pos": [
+                0.9517241379310346,
+                0.00402,
+                1.045172413793103
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:6",
+              "pos": [
+                0.9120689655172415,
+                0.00402,
+                1.0462068965517237
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:7",
+              "pos": [
+                0.8724137931034484,
+                0.00402,
+                1.0472413793103443
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:8",
+              "pos": [
+                0.8327586206896552,
+                0.00402,
+                1.048275862068965
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:9",
+              "pos": [
+                0.7931034482758621,
+                0.00402,
+                1.0493103448275856
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:10",
+              "pos": [
+                0.753448275862069,
+                0.00402,
+                1.0503448275862062
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:11",
+              "pos": [
+                0.7137931034482758,
+                0.00402,
+                1.0513793103448268
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:12",
+              "pos": [
+                0.6741379310344827,
+                0.00402,
+                1.0524137931034474
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:13",
+              "pos": [
+                0.6344827586206896,
+                0.00402,
+                1.053448275862068
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:14",
+              "pos": [
+                0.5948275862068965,
+                0.00402,
+                1.0544827586206886
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:15",
+              "pos": [
+                0.5551724137931033,
+                0.00402,
+                1.0555172413793092
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:16",
+              "pos": [
+                0.5155172413793102,
+                0.00402,
+                1.0565517241379299
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:17",
+              "pos": [
+                0.4758620689655171,
+                0.00402,
+                1.0575862068965505
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:18",
+              "pos": [
+                0.43620689655172395,
+                0.00402,
+                1.058620689655171
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:19",
+              "pos": [
+                0.3965517241379308,
+                0.00402,
+                1.0596551724137917
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:20",
+              "pos": [
+                0.3568965517241377,
+                0.00402,
+                1.0606896551724123
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:21",
+              "pos": [
+                0.3172413793103446,
+                0.00402,
+                1.061724137931033
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:22",
+              "pos": [
+                0.27758620689655145,
+                0.00402,
+                1.0627586206896535
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:23",
+              "pos": [
+                0.23793103448275835,
+                0.00402,
+                1.0637931034482742
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:24",
+              "pos": [
+                0.19827586206896525,
+                0.00402,
+                1.0648275862068948
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:25",
+              "pos": [
+                0.15862068965517215,
+                0.00402,
+                1.0658620689655154
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:26",
+              "pos": [
+                0.11896551724137905,
+                0.00402,
+                1.066896551724136
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:27",
+              "pos": [
+                0.07931034482758595,
+                0.00402,
+                1.0679310344827566
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:28",
+              "pos": [
+                0.03965517241379285,
+                0.00402,
+                1.0689655172413772
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:glaze-counter:wheel-return:29",
+              "pos": [
+                -2.498001805406602e-16,
+                0.00402,
+                1.0699999999999978
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:1",
+              "pos": [
+                -0.03870967741935508,
+                0.00402,
+                1.069032258064514
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:2",
+              "pos": [
+                -0.07741935483870992,
+                0.00402,
+                1.06806451612903
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:3",
+              "pos": [
+                -0.11612903225806476,
+                0.00402,
+                1.0670967741935462
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:4",
+              "pos": [
+                -0.15483870967741958,
+                0.00402,
+                1.0661290322580623
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:5",
+              "pos": [
+                -0.1935483870967744,
+                0.00402,
+                1.0651612903225784
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:6",
+              "pos": [
+                -0.23225806451612924,
+                0.00402,
+                1.0641935483870946
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:7",
+              "pos": [
+                -0.27096774193548406,
+                0.00402,
+                1.0632258064516107
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:8",
+              "pos": [
+                -0.3096774193548389,
+                0.00402,
+                1.0622580645161268
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:9",
+              "pos": [
+                -0.3483870967741937,
+                0.00402,
+                1.061290322580643
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:10",
+              "pos": [
+                -0.38709677419354854,
+                0.00402,
+                1.060322580645159
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:11",
+              "pos": [
+                -0.42580645161290337,
+                0.00402,
+                1.0593548387096752
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:12",
+              "pos": [
+                -0.4645161290322582,
+                0.00402,
+                1.0583870967741913
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:13",
+              "pos": [
+                -0.5032258064516131,
+                0.00402,
+                1.0574193548387074
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:14",
+              "pos": [
+                -0.5419354838709679,
+                0.00402,
+                1.0564516129032235
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:15",
+              "pos": [
+                -0.5806451612903227,
+                0.00402,
+                1.0554838709677397
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:16",
+              "pos": [
+                -0.6193548387096776,
+                0.00402,
+                1.0545161290322558
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:17",
+              "pos": [
+                -0.6580645161290324,
+                0.00402,
+                1.053548387096772
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:18",
+              "pos": [
+                -0.6967741935483872,
+                0.00402,
+                1.052580645161288
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:19",
+              "pos": [
+                -0.735483870967742,
+                0.00402,
+                1.0516129032258041
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:20",
+              "pos": [
+                -0.7741935483870969,
+                0.00402,
+                1.0506451612903203
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:21",
+              "pos": [
+                -0.8129032258064517,
+                0.00402,
+                1.0496774193548364
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:22",
+              "pos": [
+                -0.8516129032258065,
+                0.00402,
+                1.0487096774193525
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:23",
+              "pos": [
+                -0.8903225806451613,
+                0.00402,
+                1.0477419354838686
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:24",
+              "pos": [
+                -0.9290322580645162,
+                0.00402,
+                1.0467741935483847
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:25",
+              "pos": [
+                -0.967741935483871,
+                0.00402,
+                1.0458064516129009
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:26",
+              "pos": [
+                -1.006451612903226,
+                0.00402,
+                1.044838709677417
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:27",
+              "pos": [
+                -1.0451612903225809,
+                0.00402,
+                1.043870967741933
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:28",
+              "pos": [
+                -1.0838709677419358,
+                0.00402,
+                1.0429032258064492
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:29",
+              "pos": [
+                -1.1225806451612907,
+                0.00402,
+                1.0419354838709654
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:30",
+              "pos": [
+                -1.1612903225806457,
+                0.00402,
+                1.0409677419354815
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-return:wedging-counter:31",
+              "pos": [
+                -1.2000000000000006,
+                0.00402,
+                1.0399999999999976
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:1",
+              "pos": [
+                -1.1612903225806457,
+                0.00402,
+                1.0409677419354815
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:2",
+              "pos": [
+                -1.1225806451612907,
+                0.00402,
+                1.0419354838709654
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:3",
+              "pos": [
+                -1.0838709677419358,
+                0.00402,
+                1.0429032258064492
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:4",
+              "pos": [
+                -1.0451612903225809,
+                0.00402,
+                1.043870967741933
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:5",
+              "pos": [
+                -1.006451612903226,
+                0.00402,
+                1.044838709677417
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:6",
+              "pos": [
+                -0.9677419354838711,
+                0.00402,
+                1.0458064516129009
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:7",
+              "pos": [
+                -0.9290322580645163,
+                0.00402,
+                1.0467741935483847
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:8",
+              "pos": [
+                -0.8903225806451615,
+                0.00402,
+                1.0477419354838686
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:9",
+              "pos": [
+                -0.8516129032258066,
+                0.00402,
+                1.0487096774193525
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:10",
+              "pos": [
+                -0.8129032258064518,
+                0.00402,
+                1.0496774193548364
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:11",
+              "pos": [
+                -0.774193548387097,
+                0.00402,
+                1.0506451612903203
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:12",
+              "pos": [
+                -0.7354838709677421,
+                0.00402,
+                1.0516129032258041
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:13",
+              "pos": [
+                -0.6967741935483873,
+                0.00402,
+                1.052580645161288
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:14",
+              "pos": [
+                -0.6580645161290325,
+                0.00402,
+                1.053548387096772
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:15",
+              "pos": [
+                -0.6193548387096777,
+                0.00402,
+                1.0545161290322558
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:16",
+              "pos": [
+                -0.5806451612903228,
+                0.00402,
+                1.0554838709677397
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:17",
+              "pos": [
+                -0.541935483870968,
+                0.00402,
+                1.0564516129032235
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:18",
+              "pos": [
+                -0.5032258064516132,
+                0.00402,
+                1.0574193548387074
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:19",
+              "pos": [
+                -0.4645161290322583,
+                0.00402,
+                1.0583870967741913
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:20",
+              "pos": [
+                -0.4258064516129034,
+                0.00402,
+                1.0593548387096752
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:21",
+              "pos": [
+                -0.38709677419354854,
+                0.00402,
+                1.060322580645159
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:22",
+              "pos": [
+                -0.34838709677419366,
+                0.00402,
+                1.061290322580643
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:23",
+              "pos": [
+                -0.3096774193548388,
+                0.00402,
+                1.0622580645161268
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:24",
+              "pos": [
+                -0.2709677419354839,
+                0.00402,
+                1.0632258064516107
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:25",
+              "pos": [
+                -0.23225806451612904,
+                0.00402,
+                1.0641935483870946
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:26",
+              "pos": [
+                -0.1935483870967742,
+                0.00402,
+                1.0651612903225784
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:27",
+              "pos": [
+                -0.15483870967741933,
+                0.00402,
+                1.0661290322580623
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:28",
+              "pos": [
+                -0.11612903225806448,
+                0.00402,
+                1.0670967741935462
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:29",
+              "pos": [
+                -0.07741935483870963,
+                0.00402,
+                1.06806451612903
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:30",
+              "pos": [
+                -0.038709677419354764,
+                0.00402,
+                1.069032258064514
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wedging-counter:wheel-operator:31",
+              "pos": [
+                9.71445146547012e-17,
+                0.00402,
+                1.0699999999999978
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:1",
+              "pos": [
+                0.03666666666666676,
+                0.00402,
+                1.0786666666666647
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:2",
+              "pos": [
+                0.07333333333333342,
+                0.00402,
+                1.0873333333333315
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:3",
+              "pos": [
+                0.11000000000000007,
+                0.00402,
+                1.0959999999999983
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:4",
+              "pos": [
+                0.14666666666666672,
+                0.00402,
+                1.1046666666666651
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:5",
+              "pos": [
+                0.18333333333333338,
+                0.00402,
+                1.113333333333332
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:6",
+              "pos": [
+                0.22000000000000003,
+                0.00402,
+                1.1219999999999988
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:7",
+              "pos": [
+                0.2566666666666667,
+                0.00402,
+                1.1306666666666656
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:8",
+              "pos": [
+                0.2933333333333334,
+                0.00402,
+                1.1393333333333324
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:9",
+              "pos": [
+                0.33000000000000007,
+                0.00402,
+                1.1479999999999992
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:10",
+              "pos": [
+                0.36666666666666675,
+                0.00402,
+                1.156666666666666
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:11",
+              "pos": [
+                0.40333333333333343,
+                0.00402,
+                1.1653333333333329
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:12",
+              "pos": [
+                0.4400000000000001,
+                0.00402,
+                1.1739999999999997
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:13",
+              "pos": [
+                0.4766666666666668,
+                0.00402,
+                1.1826666666666665
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:14",
+              "pos": [
+                0.5133333333333334,
+                0.00402,
+                1.1913333333333334
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:wheel-operator:clear-of-porch-foot:15",
+              "pos": [
+                0.55,
+                0.00402,
+                1.2000000000000002
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:1",
+              "pos": [
+                0.55,
+                0.00402,
+                1.2400000000000002
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:2",
+              "pos": [
+                0.55,
+                0.00402,
+                1.2800000000000002
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:3",
+              "pos": [
+                0.55,
+                0.00402,
+                1.3200000000000003
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:4",
+              "pos": [
+                0.55,
+                0.00402,
+                1.3600000000000003
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:5",
+              "pos": [
+                0.55,
+                0.00402,
+                1.4000000000000004
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:6",
+              "pos": [
+                0.55,
+                0.00402,
+                1.4400000000000004
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:7",
+              "pos": [
+                0.55,
+                0.00402,
+                1.4800000000000004
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:8",
+              "pos": [
+                0.55,
+                0.00402,
+                1.5200000000000005
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:9",
+              "pos": [
+                0.55,
+                0.00402,
+                1.5600000000000005
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:10",
+              "pos": [
+                0.55,
+                0.00402,
+                1.6000000000000005
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:11",
+              "pos": [
+                0.55,
+                0.00402,
+                1.6400000000000006
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:12",
+              "pos": [
+                0.55,
+                0.00402,
+                1.6800000000000006
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:13",
+              "pos": [
+                0.55,
+                0.00402,
+                1.7200000000000006
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:14",
+              "pos": [
+                0.55,
+                0.00402,
+                1.7600000000000007
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:15",
+              "pos": [
+                0.55,
+                0.00402,
+                1.8000000000000007
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:16",
+              "pos": [
+                0.55,
+                0.00402,
+                1.8400000000000007
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:17",
+              "pos": [
+                0.55,
+                0.00402,
+                1.8800000000000008
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:18",
+              "pos": [
+                0.55,
+                0.00402,
+                1.9200000000000008
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:19",
+              "pos": [
+                0.55,
+                0.00402,
+                1.9600000000000009
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:20",
+              "pos": [
+                0.55,
+                0.00402,
+                2.000000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:21",
+              "pos": [
+                0.55,
+                0.00402,
+                2.040000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:22",
+              "pos": [
+                0.55,
+                0.00402,
+                2.080000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:23",
+              "pos": [
+                0.55,
+                0.00402,
+                2.120000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:24",
+              "pos": [
+                0.55,
+                0.00402,
+                2.160000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:25",
+              "pos": [
+                0.55,
+                0.00402,
+                2.200000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:26",
+              "pos": [
+                0.55,
+                0.00402,
+                2.240000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:27",
+              "pos": [
+                0.55,
+                0.00402,
+                2.280000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:28",
+              "pos": [
+                0.55,
+                0.00402,
+                2.320000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:29",
+              "pos": [
+                0.55,
+                0.00402,
+                2.360000000000001
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:30",
+              "pos": [
+                0.55,
+                0.00402,
+                2.4000000000000012
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:31",
+              "pos": [
+                0.55,
+                0.00402,
+                2.4400000000000013
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:32",
+              "pos": [
+                0.55,
+                0.00402,
+                2.4800000000000013
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:33",
+              "pos": [
+                0.55,
+                0.00402,
+                2.5200000000000014
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:34",
+              "pos": [
+                0.55,
+                0.00402,
+                2.5600000000000014
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:35",
+              "pos": [
+                0.55,
+                0.00402,
+                2.6000000000000014
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:36",
+              "pos": [
+                0.55,
+                0.00402,
+                2.6400000000000015
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:37",
+              "pos": [
+                0.55,
+                0.00402,
+                2.6800000000000015
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:38",
+              "pos": [
+                0.55,
+                0.00402,
+                2.7200000000000015
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:39",
+              "pos": [
+                0.55,
+                0.00402,
+                2.7600000000000016
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            },
+            {
+              "name": "out:clear-of-porch-foot:public-approach:40",
+              "pos": [
+                0.55,
+                0.00402,
+                2.8000000000000016
+              ],
+              "ground": 0.00402,
+              "gap": 0,
+              "pass": true
+            }
+          ]
+        },
+        "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+        "limitations": [
+          "Not an enterable-room certification.",
+          "Only supplied neighbors and declared flat terrain checked."
+        ],
+        "proofFrameY": 0,
+        "terrainBinding": {
+          "declaredTerrainY": 0,
+          "effectiveHostLocalY": 0.00402,
+          "hostElevation": -0.00402,
+          "worldHeight": 0
+        }
+      }
+    }
+  ],
+  "geometryReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/potter-geometry.json",
+        "sha256": "0e1030c3cbd80c67a27dd6cf61883755b5fd23aea1485a995fa9f56b90e5fee7"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/potter-geometry.json",
+      "sha256": "0e1030c3cbd80c67a27dd6cf61883755b5fd23aea1485a995fa9f56b90e5fee7"
+    }
+  },
+  "visualReview": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/batch-C/review.md",
+        "sha256": "089b1fc1b3a1b02a5ae4a047a0724fd896b61a8aae748aed04853d50f72c3e50"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/potter-front.png",
+        "sha256": "3395e6b78d05c1b4247e934e08a416214723bb192e7a07839389d18f2f71d1dc"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/potter-aerial.png",
+        "sha256": "d90ddcd1522b05de835c3c9410a534618b2c71080fe166973925673efd7fcba6"
+      },
+      {
+        "file": "reviews/parent-native/batch-C/potter-interior.png",
+        "sha256": "2b0fa0c21709c2039e7ea924a5bd3da5c5cb48fdf34aa161f580de60155c9795"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "neighbors": [
+    {
+      "id": "nx-artwalk-b3-ruled-porch",
+      "sha256": "232210c072caebe89bd79a10ee3ba5faac92e7498ca3ad751941bbbf0b7fc72c",
+      "lib": "store/e1b66075d8e911e7.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-gallery-mosaic-0036",
+      "sha256": "0b2ce427e13c211bf6e78021fc6539192954d7ef47ac623edc97ba3af04d9e64",
+      "lib": "store/1655ae806c3b8fe3.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-sign-potter-001",
+      "sha256": "6ea32c8a0151693738095b1835b43555927f71cee29cdbf38731c0df0334800b",
+      "lib": "store/3a6c8fe79dc41406.glb",
+      "decoded": true
+    },
+    {
+      "id": "nx-town-potter-l",
+      "sha256": null,
+      "lib": null,
+      "decoded": false
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "decoded": true
+    }
+  ]
+}

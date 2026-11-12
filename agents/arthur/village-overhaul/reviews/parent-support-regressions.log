@@ -1,0 +1,18 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/verify-approach.test.ts:
+(pass) external workstation approach executes real box collider without pretending it is a room [6.31ms]
+(pass) external access rejects a high neighbor beam missed by the hip collider [7.72ms]
+(pass) vacuous one-point routes are refused, not reported as passing access [0.21ms]
+(pass) declared floating approach elevations do not become physical ground [0.69ms]
+
+agents/arthur/village-overhaul/preflight.test.ts:
+(pass) preflight refuses content/source/route binding drift before decoding [3.29ms]
+(pass) bidirectional surface proof rejects hidden displacement despite equal outer bounds [4.66ms]
+(pass) full inspection refuses unbound source before any runtime network or file operation [0.63ms]
+(pass) live neighbor adapter keeps loaded wrapper and composes neighbor into host, never reversed [0.23ms]
+
+ 8 pass
+ 0 fail
+ 31 expect() calls
+Ran 8 tests across 2 files. [99.00ms]

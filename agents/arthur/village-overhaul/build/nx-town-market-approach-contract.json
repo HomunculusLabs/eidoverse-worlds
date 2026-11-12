@@ -1,0 +1,368 @@
+{
+  "id": "nx-town-market",
+  "lib": "store/8c16ea9a756a95ad.glb",
+  "kind": "thing",
+  "pos": [
+    -6.5,
+    0,
+    6.5
+  ],
+  "yaw": 2.356194490192345,
+  "scale": 1,
+  "parent": null,
+  "comp": {},
+  "bbox": {
+    "min": [
+      -1.95,
+      -0.001,
+      -0.502
+    ],
+    "max": [
+      1.95,
+      2.151,
+      0.57
+    ],
+    "size": [
+      3.9,
+      2.152,
+      1.072
+    ],
+    "center": [
+      0,
+      1.075,
+      0.034
+    ]
+  },
+  "tris": 1202,
+  "terrainY": 0,
+  "collide": "exact",
+  "sha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+  "waypoints": [
+    {
+      "name": "plaza-left",
+      "pos": [
+        -1.65,
+        0,
+        1.68
+      ]
+    },
+    {
+      "name": "bread-approach",
+      "pos": [
+        -1,
+        0,
+        1.68
+      ]
+    },
+    {
+      "name": "bread-counter",
+      "pos": [
+        -1,
+        0,
+        0.92
+      ]
+    },
+    {
+      "name": "bread-exit",
+      "pos": [
+        -1,
+        0,
+        1.68
+      ]
+    },
+    {
+      "name": "produce-approach",
+      "pos": [
+        1,
+        0,
+        1.68
+      ]
+    },
+    {
+      "name": "produce-counter",
+      "pos": [
+        1,
+        0,
+        0.92
+      ]
+    },
+    {
+      "name": "produce-exit",
+      "pos": [
+        1,
+        0,
+        1.68
+      ]
+    },
+    {
+      "name": "plaza-right",
+      "pos": [
+        1.65,
+        0,
+        1.68
+      ]
+    }
+  ],
+  "assembly": [
+    {
+      "id": "nx-hearth",
+      "lib": "store/027f6f019f9981bf.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-hearth.glb",
+      "sha256": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1",
+      "hostLocalBounds": {
+        "min": [
+          -5.011859110368943,
+          -0.04756924510002136,
+          4.802689021656409
+        ],
+        "max": [
+          4.271113412099306,
+          1.7600128650665283,
+          14.085661544124658
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-roads",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-roads.glb",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "hostLocalBounds": {
+        "min": [
+          -29.175224604901697,
+          -0.05000000074505806,
+          -19.98283644947658
+        ],
+        "max": [
+          29.175224604901697,
+          2.8900413513183594,
+          38.367612760326814
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "lib": "store/e815a897c7d73373.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-streetlamps.glb",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "hostLocalBounds": {
+        "min": [
+          -9.317636282319729,
+          2.3841858265427618e-8,
+          -0.1252481268946113
+        ],
+        "max": [
+          9.317636282319729,
+          2.559999942779541,
+          18.510024437744846
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-banner",
+      "lib": "store/d32e7bcb8b007d21.glb",
+      "pos": [
+        -4,
+        0,
+        9.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-banner.glb",
+      "sha256": "e3abeb89b04de03c7108271712688290c8ed41ed42d59b8799b8e733b1377750",
+      "hostLocalBounds": {
+        "min": [
+          -3.9690872947378724,
+          -4.7683716530855236e-8,
+          -0.43355338880513417
+        ],
+        "max": [
+          -3.1490872869892685,
+          3.7799999713897705,
+          -0.27355339238141285
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-stringlights",
+      "lib": "store/0c0dee37b07aa7df.glb",
+      "pos": [
+        -6,
+        2.6,
+        7.5
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-stringlights.glb",
+      "sha256": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+      "hostLocalBounds": {
+        "min": [
+          -1.1940638455478656,
+          2.035000002384186,
+          -3.4185534478137325
+        ],
+        "max": [
+          -0.9272564980117772,
+          2.625000000372529,
+          2.7114466666271855
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-giftshelf",
+      "lib": "store/c623cfa6fbdeb48e.glb",
+      "pos": [
+        -9,
+        0,
+        9
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-giftshelf.glb",
+      "sha256": "20c7645421409c41afdf200bca8e6d7bc59b126c6d5f13aa99ad725db02cb22f",
+      "hostLocalBounds": {
+        "min": [
+          -0.5000000000000002,
+          2.3841858265427618e-8,
+          -3.695533902356459
+        ],
+        "max": [
+          0.49997556209564187,
+          1.348279356956482,
+          -3.375513137290312
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-left",
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "pos": [
+        -5.481766235091371,
+        0.38,
+        6.895979797464467
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b6-market-lissa-left.glb",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "hostLocalBounds": {
+        "min": [
+          -1.725000023841859,
+          0.38,
+          0.402499998509884
+        ],
+        "max": [
+          -0.2749999761581432,
+          0.8799725222587585,
+          0.5155106806755068
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-right",
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "pos": [
+        -6.8959797974644665,
+        0.38,
+        5.481766235091372
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b6-market-lissa-right.glb",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "hostLocalBounds": {
+        "min": [
+          0.274999976158142,
+          0.38,
+          0.40249999850988377
+        ],
+        "max": [
+          1.725000023841858,
+          0.8799725222587585,
+          0.5155106806755065
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b30-market-tally",
+      "lib": "store/a2326039fcb4e080.glb",
+      "pos": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b30-market-tally.glb",
+      "sha256": "6cf924356bbfe0f2cb3e00ef310ff6a26c61b053318960e7c5c460058482fc83",
+      "hostLocalBounds": {
+        "min": [
+          0.2900000214576721,
+          0.49000000953674316,
+          0.3799999952316284
+        ],
+        "max": [
+          1.7100000381469727,
+          0.7500256299972534,
+          0.4380367398262024
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-core-paths",
+      "lib": "store/c31b6e3f22641e14.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-core-paths.glb",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "hostLocalBounds": {
+        "min": [
+          -21.98799063764613,
+          -0.001480687060393393,
+          -10.42531766993443
+        ],
+        "max": [
+          21.091494126690186,
+          0.058276183903217316,
+          32.654167094401885
+        ]
+      },
+      "protected": true
+    }
+  ]
+}

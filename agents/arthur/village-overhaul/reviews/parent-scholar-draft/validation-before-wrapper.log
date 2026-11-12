@@ -1,0 +1,30 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/reviews/parent-scholar-draft/validate.test.ts:
+14 | const get=(f:string)=>JSON.parse(readFileSync(resolve(OUT,f),'utf8'));
+15 | const sha=(b:any)=>createHash('sha256').update(b).digest('hex');
+16 | const slot=get('slot.json'),review=get('review.json'),approval=get('approval-draft.json'),campaign=R.loadFrozen(ROOT);
+17 | function check(p:any){expect(p.sha256).toMatch(/^[a-f0-9]{64}$/);const file=resolve(p.file.startsWith('agents/')?REPO:ROOT,p.file);expect(sha(readFileSync(file))).toBe(p.sha256);return realpathSync(file);}
+18 | function checkClosure(pins:any[],required:string){const paths=new Set(pins.map(check));expect(paths.has(realpathSync(resolve(ROOT,required)))).toBe(true);for(const p of paths){if(!/\.[cm]?[jt]sx?$/.test(p))continue;for(const imp of new Transpiler({loader:/\.[cm]?jsx?$/.test(p)?'jsx':'tsx'}).scanImports(readFileSync(p,'utf8'))){if(!imp.path.startsWith('.'))continue;const b=resolve(dirname(p),imp.path),d=[b,`${b}.ts`,`${b}.js`,resolve(b,'index.ts'),resolve(b,'index.js')].find(existsSync);expect(d).toBeDefined();expect(paths.has(realpathSync(d!))).toBe(true);}}}
+19 | test('complete current campaign wrapper includes engine and preflight dependency pins',()=>{expect(Array.isArray(approval.engineSources)).toBe(true);expect(approval.preflight?.file).toBe('preflight.ts');checkClosure(approval.engineSources,'rollout.ts');check(approval.preflight);checkClosure(approval.preflight.sources,'preflight.ts');approval.capture.forEach(check);});
+                                                                                                                                               ^
+error: expect(received).toBe(expected)
+
+Expected: true
+Received: false
+
+      at <anonymous> (/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/parent-scholar-draft/validate.test.ts:19:139)
+(fail) complete current campaign wrapper includes engine and preflight dependency pins [0.55ms]
+(pass) saved nx-tower-only READY draft passes actual validateCampaign and sourceGate [20.70ms]
+(pass) actual sourceGate rejects an omitted scanImports dependency [6.62ms]
+(pass) actual campaign schema rejects HOLD instead of laundering it into approval [4.90ms]
+(pass) actual sourceGate rejects wrong model SHA/lib before accepting the review [0.21ms]
+(pass) exact preserved placement, comp and collision preference remain unchanged [0.07ms]
+(pass) fresh reports use actual saved routes and full independent support samples [1.19ms]
+(pass) nonzero proof frame requires explicit metadata and keeps doors preframed [0.05ms]
+(pass) all recursively referenced file+SHA pins in final draft evidence still match [19.10ms]
+
+ 8 pass
+ 1 fail
+ 530 expect() calls
+Ran 9 tests across 1 file. [137.00ms]

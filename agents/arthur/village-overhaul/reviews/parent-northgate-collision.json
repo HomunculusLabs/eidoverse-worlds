@@ -1,0 +1,23 @@
+{
+  "schema": "village-collision-v1",
+  "id": "nx-town-gate-n",
+  "modelSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+  "from": null,
+  "to": "exact",
+  "verdict": "passed",
+  "checks": {
+    "publicRuntime": "passed",
+    "exactCollider": "passed",
+    "bidirectionalRoutes": "passed"
+  },
+  "evidence": [
+    {
+      "file": "build/nx-town-gate-n-player.json",
+      "sha256": "c0ba5700c908884329071512c797d25c9b65004d1a539130773a101aa3b022dc"
+    },
+    {
+      "file": "build/nx-town-gate-n-automatic-player.json",
+      "sha256": "efb0992902bde913254207aec500fca3f979e9236d10a33fdd3e7254b84bde77"
+    }
+  ]
+}

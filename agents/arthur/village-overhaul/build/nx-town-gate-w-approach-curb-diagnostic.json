@@ -1,0 +1,421 @@
+{
+  "status": "FAIL",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-gate-w",
+  "bounds": {
+    "min": [
+      -1.7999999523162842,
+      -2.98023217215615e-10,
+      -0.25
+    ],
+    "max": [
+      1.7999999523162842,
+      3.7725000381469727,
+      0.25
+    ]
+  },
+  "triangles": 5088,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": false,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "central-traversal",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.7,
+        0.10110785067081451,
+        -0.4
+      ],
+      "max": [
+        0.7,
+        2.3011078506708147,
+        0.4
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "outside",
+      "to": "threshold",
+      "pass": false,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0.03100048005580902,
+      "minY": 0.0701073706150055,
+      "maxY": 0.10110785067081451,
+      "expectedFloorRange": [
+        0.03510737061500549,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 2.498001805406602e-16,
+      "floorError": 0,
+      "geometryHits": 3,
+      "arrived": [
+        0,
+        0.10110785067081451,
+        2.498001805406602e-16
+      ],
+      "issues": [
+        {
+          "sample": 1,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.611764705882353
+          ],
+          "push": 0,
+          "ground": 0.0701073706150055,
+          "geometry": [
+            {
+              "node": "nx-town-roads/rd_0",
+              "triangle": 649,
+              "intersectionMin": [
+                -0.319,
+                0.10210785067081452,
+                0.9688167572021484
+              ],
+              "intersectionMax": [
+                -0.19418525698089784,
+                0.12946020034297062,
+                0.9688167572021484
+              ]
+            },
+            {
+              "node": "nx-town-roads/rd_0",
+              "triangle": 657,
+              "intersectionMin": [
+                -0.319,
+                0.10210785067081452,
+                0.9688167572021484
+              ],
+              "intersectionMax": [
+                0.319,
+                0.1691063791513443,
+                0.9688167572021484
+              ]
+            },
+            {
+              "node": "nx-town-roads/rd_0",
+              "triangle": 658,
+              "intersectionMin": [
+                -0.31899999999999995,
+                0.1691063791513443,
+                0.9688167572021484
+              ],
+              "intersectionMax": [
+                0.319,
+                0.1691063791513443,
+                0.969
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "direction": "in",
+      "from": "threshold",
+      "to": "inside",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.10110785067081451,
+      "maxY": 0.10110785067081451,
+      "expectedFloorRange": [
+        0.06610785067081451,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 0,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.10110785067081451,
+        -0.65
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "inside",
+      "to": "threshold",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.10110785067081451,
+      "maxY": 0.10110785067081451,
+      "expectedFloorRange": [
+        0.06610785067081451,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 2.498001805406602e-16,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.10110785067081451,
+        -2.498001805406602e-16
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "threshold",
+      "to": "outside",
+      "pass": false,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.0701073706150055,
+      "maxY": 0.10110785067081451,
+      "expectedFloorRange": [
+        0.03510737061500549,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 0,
+      "floorError": 0,
+      "geometryHits": 3,
+      "arrived": [
+        0,
+        0.0701073706150055,
+        0.65
+      ],
+      "issues": [
+        {
+          "sample": 17,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.65
+          ],
+          "push": 0,
+          "ground": 0.0701073706150055,
+          "geometry": [
+            {
+              "node": "nx-town-roads/rd_0",
+              "triangle": 649,
+              "intersectionMin": [
+                -0.319,
+                0.10210785067081452,
+                0.9688167572021484
+              ],
+              "intersectionMax": [
+                -0.19418525698089784,
+                0.12946020034297062,
+                0.9688167572021484
+              ]
+            },
+            {
+              "node": "nx-town-roads/rd_0",
+              "triangle": 657,
+              "intersectionMin": [
+                -0.319,
+                0.10210785067081452,
+                0.9688167572021484
+              ],
+              "intersectionMax": [
+                0.319,
+                0.1691063791513443,
+                0.9688167572021484
+              ]
+            },
+            {
+              "node": "nx-town-roads/rd_0",
+              "triangle": 658,
+              "intersectionMin": [
+                -0.31899999999999995,
+                0.1691063791513443,
+                0.9688167572021484
+              ],
+              "intersectionMax": [
+                0.319,
+                0.1691063791513443,
+                0.969
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b15-west-gate-dusk-arcs",
+      "min": [
+        -1.149999976158142,
+        2.719999992847443,
+        0.2000000011920946
+      ],
+      "max": [
+        1.149999976158142,
+        3.079958499670029,
+        0.3275581133365648
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "nx-town-roads",
+      "triangles": 3392,
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/3b76b621559fa1a1.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-artwalk-b15-west-gate-dusk-arcs",
+      "triangles": 312,
+      "sha256": "1e2a09c85e2c2103c7a3cf559c5edb0a115252402016694ec2361bbe56125a5f",
+      "sourceTuple": {
+        "pos": [
+          -19.7325,
+          2.72,
+          1.423651904008798e-17
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/f1efad77be904a59.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-struct-waystone-w",
+      "triangles": 92,
+      "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+      "sourceTuple": {
+        "pos": [
+          -20,
+          0,
+          4.3
+        ],
+        "yaw": 0.7853981633974483,
+        "scale": 1,
+        "lib": "store/2f006e218ffbe97e.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-shrine",
+      "triangles": 808,
+      "sha256": "bd05ebe9ec4333fa304123ad5050909822765408dfd77c5fc7331c08723dfa10",
+      "sourceTuple": {
+        "pos": [
+          -25,
+          -0.0012609260510534298,
+          -4
+        ],
+        "yaw": 1.4118119548622732,
+        "scale": 1,
+        "lib": "store/948d5c494252078b.glb"
+      },
+      "colliderExact": false
+    }
+  ],
+  "failures": [
+    "walk in outside->threshold failed",
+    "walk out threshold->outside failed"
+  ],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "approvedSpawnDelta": {
+    "collide": {
+      "before": null,
+      "after": "exact"
+    },
+    "authority": "Parent mid-turn direction: user-facing bounded per-object gate4 correction authorized; no engine/comp delta"
+  },
+  "modelSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+  "sourceSha256": "e65f9a63d223c09110facd84fcc7d47ac594f844275b9845cc9d21b9eefa0d40",
+  "neighborContractSha256": "0a021f4389cb6ed89408de76569d02686771c8cf077b47cb8b09d55d1bfcc68f",
+  "hostTuple": {
+    "id": "nx-town-gate-w",
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "kind": "thing",
+    "pos": [
+      -19.5,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -1.8,
+        0,
+        -0.25
+      ],
+      "max": [
+        1.8,
+        3.64,
+        0.25
+      ],
+      "size": [
+        3.6,
+        3.64,
+        0.5
+      ],
+      "center": [
+        0,
+        1.82,
+        0
+      ]
+    },
+    "tris": 308
+  },
+  "contractSha256": "9a0f5af6d389e7aacf5edab1115eff1c16a4778dd083b3e231838a2e1162a3cb"
+}

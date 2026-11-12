@@ -1,0 +1,438 @@
+SELF_TEST PASS triangle-vs-box crossing/no-corner and separation
+SELF_TEST PASS OBB SAT separated/touching/overlap and scaled offset center
+{"stage":"LOCAL_GLB_DECODE_PASS","sha256":"a557d918b2c14f1ab5f0e0e066f2720d4f16b3364c9ce854971a68310fa6f296","nodes":20,"meshes":18,"triangles":9408,"rotorRadius":3.736295118550046,"certifiedRotorClearance":0.18620472886206274}
+{
+  "status": "WINDMILL_OVERHAUL_PASS",
+  "mode": "FRESH_LIVE_GET",
+  "world": "commons-next",
+  "sourceSha256": "a557d918b2c14f1ab5f0e0e066f2720d4f16b3364c9ce854971a68310fa6f296",
+  "reviewPath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/village_windmill_overhaul.review.json",
+  "baselinePath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/reviews/windmill-overhaul/before/census.json",
+  "baselineSha256": "3470cf0e6b87befb4b88bc39f67053ecbf1b750860953c6a4b9f02e414940164",
+  "liveState": "OVERHAUL_POST_PLACEMENT",
+  "tuple": {
+    "id": "nx-town-windmill",
+    "lib": "store/a557d918b2c14f1a.glb",
+    "kind": "thing",
+    "pos": [
+      -40,
+      0,
+      0
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "motion:sails": {
+        "type": "spin",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rpm": 1.25,
+        "phase": 0,
+        "t0": 1788827161000
+      },
+      "motion:well_millstone": {
+        "type": "spin",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "rpm": 5,
+        "phase": 0,
+        "t0": 1788827161000
+      }
+    }
+  },
+  "censusEntities": 295,
+  "local": {
+    "nodes": 20,
+    "meshes": 18,
+    "primitives": 18,
+    "triangles": 9408,
+    "materialCoverage": [
+      {
+        "name": "mill_limestone",
+        "triangles": 960
+      },
+      {
+        "name": "mill_weathered_boards",
+        "triangles": 1212
+      },
+      {
+        "name": "mill_limewash",
+        "triangles": 380
+      },
+      {
+        "name": "mill_oak",
+        "triangles": 2284
+      },
+      {
+        "name": "mill_iron",
+        "triangles": 2084
+      },
+      {
+        "name": "mill_window",
+        "triangles": 132
+      },
+      {
+        "name": "mill_slate",
+        "triangles": 336
+      },
+      {
+        "name": "mill_bronze",
+        "triangles": 60
+      },
+      {
+        "name": "mill_grain",
+        "triangles": 12
+      },
+      {
+        "name": "mill_flax_canvas",
+        "triangles": 1924
+      },
+      {
+        "name": "mill_lantern",
+        "triangles": 24
+      }
+    ],
+    "bounds": {
+      "min": [
+        -3.256964921951294,
+        -0.17999999225139618,
+        -5.489999771118164
+      ],
+      "max": [
+        3.256964921951294,
+        11.456964921951293,
+        3.2099999916553497
+      ]
+    }
+  },
+  "rotor": {
+    "pivot": [
+      0,
+      8.2,
+      2.92
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ],
+    "radius": 3.736295118550046,
+    "restBounds": {
+      "min": [
+        -3.256964921951294,
+        4.943035078048705,
+        2.7399999928474426
+      ],
+      "max": [
+        3.256964921951294,
+        11.456964921951293,
+        3.2099999916553497
+      ]
+    },
+    "fullTurnEnvelope": {
+      "min": [
+        -3.736295118550046,
+        4.463704881449953,
+        2.7399999928474426
+      ],
+      "max": [
+        3.736295118550046,
+        11.936295118550046,
+        3.2099999916553497
+      ]
+    },
+    "rotatingTriangles": 1824,
+    "staticTriangles": 7584,
+    "clearanceTriangles": 7548,
+    "mechanicalInterface": {
+      "description": "concentric iron windshaft inside hub ONLY",
+      "triangles": 36,
+      "bounds": {
+        "min": [
+          -0.11999999731779099,
+          8.079999923706055,
+          0.9200000762939453
+        ],
+        "max": [
+          0.11999999731779099,
+          8.319999694824219,
+          3.0199999809265137
+        ]
+      }
+    },
+    "certifiedBuildingClearanceLowerBound": 0.18620472886206274,
+    "nearestStaticTriangle": {
+      "node": "mill4_3",
+      "material": "mill_oak",
+      "vertices": [
+        [
+          -1.1671844720840454,
+          4.202499866485596,
+          2.7753326892852783
+        ],
+        [
+          -1.1671844720840454,
+          4.277500152587891,
+          2.7753326892852783
+        ],
+        [
+          1.1671844720840454,
+          4.277500152587891,
+          2.7753326892852783
+        ]
+      ]
+    },
+    "galleryContractGap": 0.1537048814499533
+  },
+  "room": {
+    "avatarHeight": 2.1,
+    "floorY": 0.08,
+    "checks": [
+      {
+        "name": "full_1.8m_structural_door",
+        "box": {
+          "min": [
+            -0.8999900000000001,
+            0.0801,
+            2.3
+          ],
+          "max": [
+            0.8999900000000001,
+            2.2998999999999996,
+            3.25
+          ]
+        },
+        "trianglesTested": 9408,
+        "blockingTriangles": 0
+      },
+      {
+        "name": "central_1.8m_aisle_2.1m_avatar",
+        "box": {
+          "min": [
+            -0.8999900000000001,
+            0.0801,
+            -2.3
+          ],
+          "max": [
+            0.8999900000000001,
+            2.18,
+            3.25
+          ]
+        },
+        "trianglesTested": 9408,
+        "blockingTriangles": 0
+      }
+    ],
+    "floorSamples": 30,
+    "effectiveHeadroom": 2.14,
+    "riderBounds": [
+      {
+        "id": "nx-artwalk-b10-windmill-four-wind-crown",
+        "hostLocalBounds": {
+          "min": [
+            -1.125,
+            2.22,
+            2.585000000000001
+          ],
+          "max": [
+            1.125,
+            2.87,
+            2.7549999999999955
+          ]
+        }
+      },
+      {
+        "id": "nx-sign-mill-001",
+        "hostLocalBounds": {
+          "min": [
+            -1.872,
+            2.13,
+            2.469999999999999
+          ],
+          "max": [
+            -1.328,
+            2.8049999999999997,
+            2.7920000000000016
+          ]
+        }
+      }
+    ],
+    "runnerSweepRadius": 0.6000000238418579,
+    "runnerToAisleGap": 0.12999997615814196
+  },
+  "site": {
+    "targetFullTurnLocalBounds": {
+      "min": [
+        -3.736295118550046,
+        -0.17999999225139618,
+        -5.489999771118164
+      ],
+      "max": [
+        3.736295118550046,
+        11.936295118550046,
+        3.2099999916553497
+      ]
+    },
+    "targetOBB": {
+      "center": [
+        -41.139999889731406,
+        -6.980486079939518e-17
+      ],
+      "axes": [
+        [
+          6.123233995736766e-17,
+          -1
+        ],
+        [
+          1,
+          6.123233995736766e-17
+        ]
+      ],
+      "half": [
+        3.736295118550046,
+        4.349999881386757
+      ],
+      "y": [
+        -0.17999999225139618,
+        11.936295118550046
+      ]
+    },
+    "censusBboxEntities": 257,
+    "otherBboxesTested": 254,
+    "attachedRidersTested": 2,
+    "groundOrNetworkSkipped": 0,
+    "censusPadding": 0.002,
+    "nearest": [
+      {
+        "id": "nx-gallery-mosaic-0052",
+        "horizontalGap": 3.8996132341282177,
+        "verticalGap": -0.24480361246674098,
+        "separation": 3.8996132341282177,
+        "solid": false
+      },
+      {
+        "id": "nx-gallery-mosaic-0059",
+        "horizontalGap": 3.900320340907637,
+        "verticalGap": -0.19126476325747271,
+        "separation": 3.900320340907637,
+        "solid": false
+      },
+      {
+        "id": "nx-struct-hypar",
+        "horizontalGap": 4.418000008344649,
+        "verticalGap": -6.208747973610286,
+        "separation": 4.418000008344649,
+        "solid": true
+      },
+      {
+        "id": "nx-struct-stillwind",
+        "horizontalGap": 4.696000228881839,
+        "verticalGap": -3.089999992251396,
+        "separation": 4.696000228881839,
+        "solid": true
+      },
+      {
+        "id": "nx-dress-chess",
+        "horizontalGap": 8.924980099339468,
+        "verticalGap": -1.0369999922513962,
+        "separation": 8.924980099339468,
+        "solid": true
+      },
+      {
+        "id": "nx-town-shrine",
+        "horizontalGap": 10.207470249023515,
+        "verticalGap": -1.9787390662003428,
+        "separation": 10.207470249023515,
+        "solid": true
+      },
+      {
+        "id": "nx-artwalk-b7-shrine-stars",
+        "horizontalGap": 10.362390267716043,
+        "verticalGap": -1.6307390662003427,
+        "separation": 10.362390267716043,
+        "solid": true
+      },
+      {
+        "id": "nx-struct-lemniscateseat",
+        "horizontalGap": 12.858000228881837,
+        "verticalGap": -0.7782999922513962,
+        "separation": 12.858000228881837,
+        "solid": true
+      }
+    ],
+    "knownNeighbors": [
+      {
+        "id": "nx-struct-hypar",
+        "horizontalGap": 4.418000008344649,
+        "verticalGap": -6.208747973610286,
+        "separation": 4.418000008344649,
+        "solid": true
+      },
+      {
+        "id": "nx-struct-stillwind",
+        "horizontalGap": 4.696000228881839,
+        "verticalGap": -3.089999992251396,
+        "separation": 4.696000228881839,
+        "solid": true
+      },
+      {
+        "id": "nx-town-roads",
+        "horizontalGap": 16.15800000834465,
+        "verticalGap": -3.071999992251396,
+        "separation": 16.15800000834465,
+        "solid": true
+      },
+      {
+        "id": "nx-core-paths",
+        "horizontalGap": 22.16000000834465,
+        "verticalGap": -0.23899999225139618,
+        "separation": 22.16000000834465,
+        "solid": false
+      }
+    ],
+    "attached": [
+      {
+        "id": "nx-artwalk-b10-windmill-four-wind-crown",
+        "hostFootprintGap": -0.6269999916553559,
+        "rotorSeparation": 1.5917048814499526,
+        "reason": "exact full baseline record unchanged; intentional facade attachment; room bbox cleared"
+      },
+      {
+        "id": "nx-sign-mill-001",
+        "hostFootprintGap": -0.7419999916553504,
+        "rotorSeparation": 1.656704881449953,
+        "reason": "exact full baseline record unchanged; intentional facade attachment; room bbox cleared"
+      }
+    ]
+  },
+  "preservedFullRecords": [
+    "nx-artwalk-b10-windmill-four-wind-crown",
+    "nx-sign-mill-001"
+  ],
+  "mutations": 0,
+  "uploads": 0,
+  "websocketConnections": 0,
+  "fileWrites": 0,
+  "limitations": [
+    "Geometry/tuple gate, not a visual judgment or avatar locomotion simulation.",
+    "Neighbor SAT uses census base poses and conservatively padded local bboxes.",
+    "Post-placement lib pins source bytes; live optimized bbox may differ by at most 2cm."
+  ]
+}

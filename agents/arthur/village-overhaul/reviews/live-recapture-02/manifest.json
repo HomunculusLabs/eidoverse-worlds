@@ -1,0 +1,6171 @@
+{
+  "status": "RENDERER_UNAVAILABLE",
+  "world": "commons-next",
+  "phase": "after",
+  "evidenceKind": "actual-live-snap-api",
+  "startedAt": "2026-09-08T03:17:21.939Z",
+  "bodyId": "arthur-village-eye-e266c875-c6b",
+  "sourceSha256": "c4aa3404c09271380d5281bd71ece753c510236f340a21c9f9a93b798bcc29ab",
+  "contractsSha256": "17e3d74968453e349009af8c22c22af1fcf44c519823a3ae44be8064bee8aee5",
+  "viewsSha256": "3302444e414bba45576d643acf0277f3bb029fb1eafcdb8830b5502e3af04d90",
+  "protectedSha256": "4f6f56a1369cc2acbf2d80d2cea5f44492d0da139a8ec07dd57351984a65f00a",
+  "expected": [
+    {
+      "id": "nx-town-inn",
+      "lib": "store/861225bb15230d9b.glb",
+      "kind": "thing",
+      "pos": [
+        36,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -4.5,
+          -0.2,
+          -3.473
+        ],
+        "max": [
+          4.5,
+          7.194,
+          4.9
+        ],
+        "size": [
+          9,
+          7.394,
+          8.373
+        ],
+        "center": [
+          0,
+          3.497,
+          0.714
+        ]
+      },
+      "tris": 7468
+    }
+  ],
+  "views": [
+    {
+      "id": "nx-town-inn",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0.198,
+        3.85
+      ],
+      "lookLocal": [
+        2.85,
+        0.198,
+        3.95
+      ],
+      "note": "SUPPLEMENTAL AFTER v2: camera inside clear central porch aisle facing sideways across settle, table and sign rather than standing in front of overlapping projections. Not a matched BEFORE view."
+    },
+    {
+      "id": "nx-town-inn",
+      "name": "interior",
+      "bodyLocal": [
+        3.2,
+        0.198,
+        -0.6
+      ],
+      "lookLocal": [
+        0,
+        0.198,
+        3
+      ],
+      "note": "SUPPLEMENTAL AFTER v2: east table aisle facing doorway, central authored bulb behind left frustum edge; no field of view, exposure, lamp or sky edits."
+    }
+  ],
+  "wireCounts": {
+    "join": 0,
+    "pose": 0,
+    "verb": 0
+  },
+  "uploads": 0,
+  "frames": [
+    {
+      "id": "nx-town-inn",
+      "view": "approach",
+      "status": "NOT_CAPTURED_RENDERER_UNAVAILABLE"
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "interior",
+      "status": "NOT_CAPTURED_RENDERER_UNAVAILABLE"
+    }
+  ],
+  "limitations": [
+    "Actual live /snap imagery, not a local GLB review rig.",
+    "Observer positions are assigned; this is not collision-tested walking.",
+    "First-person pitch/eye height are public-runtime and avatar controlled; lookLocal determines yaw only.",
+    "Weather and other participants are live and not frozen. Native image review is a separate gate."
+  ],
+  "nearbyCompanionSelection": {
+    "method": "baseline host world-XZ envelope plus 1.5m; bounding-box intersection, point fallback for lights",
+    "byHost": {
+      "nx-town-inn": [
+        "nx-dress-hens",
+        "nx-dress-coop",
+        "nx-dress-well",
+        "nx-town-inn-l",
+        "nx-artwalk-b2-inn-lintel",
+        "nx-artwalk-b2-inn-threshold",
+        "nx-artwalk-b27-waterline",
+        "nx-sign-stable-001",
+        "nx-struct-cellardoor"
+      ]
+    }
+  },
+  "protectedChangesDuringCapture": [],
+  "observedProtectedEvents": [],
+  "preExistingProtectedDrift": [
+    {
+      "id": "nx-carousel",
+      "before": {
+        "id": "nx-carousel",
+        "kind": "thing",
+        "pos": [
+          -18,
+          0.00014950061063032772,
+          18
+        ],
+        "yaw": 2.35619,
+        "scale": 1,
+        "lib": "store/ce3633992d07055e.glb",
+        "parent": null,
+        "comp": {
+          "motion:carousel": {
+            "type": "spin",
+            "axis": [
+              0,
+              1,
+              0
+            ],
+            "pivot": [
+              0,
+              0,
+              0
+            ],
+            "degPerSec": 6
+          },
+          "motion:horse_0": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 0
+          },
+          "motion:horse_2": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 1.57
+          },
+          "motion:horse_4": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 3.14
+          },
+          "motion:horse_6": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 4.71
+          },
+          "particles:smoke": {
+            "preset": "smoke",
+            "count": 50,
+            "size": 0.4,
+            "speed": 0.35,
+            "origin": [
+              0,
+              6.3,
+              0
+            ]
+          },
+          "sockets": {
+            "horse_0": {
+              "pos": [
+                2,
+                1.97,
+                0
+              ],
+              "yaw": 3.141592653589793,
+              "part": "horse_0"
+            },
+            "horse_2": {
+              "pos": [
+                0,
+                1.97,
+                2
+              ],
+              "yaw": 1.5707963267948966,
+              "part": "horse_2"
+            },
+            "horse_4": {
+              "pos": [
+                -2,
+                1.97,
+                0
+              ],
+              "yaw": 0,
+              "part": "horse_4"
+            },
+            "horse_6": {
+              "pos": [
+                0,
+                1.97,
+                -2
+              ],
+              "yaw": -1.5707963267948966,
+              "part": "horse_6"
+            }
+          }
+        }
+      },
+      "observed": {
+        "id": "nx-carousel",
+        "kind": "thing",
+        "pos": [
+          -18,
+          0.00014950061063032772,
+          18
+        ],
+        "yaw": 2.35619,
+        "scale": 1,
+        "lib": "store/1c0128b61b510a5d.glb",
+        "parent": null,
+        "comp": {
+          "motion:carousel": {
+            "type": "spin",
+            "axis": [
+              0,
+              1,
+              0
+            ],
+            "pivot": [
+              0,
+              0,
+              0
+            ],
+            "degPerSec": 6
+          },
+          "motion:horse_0": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 0
+          },
+          "motion:horse_2": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 1.57
+          },
+          "motion:horse_4": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 3.14
+          },
+          "motion:horse_6": {
+            "type": "bob",
+            "amp": 0.18,
+            "period": 2.4,
+            "phase": 4.71
+          },
+          "particles:smoke": {
+            "preset": "smoke",
+            "count": 50,
+            "size": 0.4,
+            "speed": 0.35,
+            "origin": [
+              0,
+              6.3,
+              0
+            ]
+          },
+          "sockets": {
+            "horse_0": {
+              "pos": [
+                2,
+                3.035,
+                0
+              ],
+              "yaw": 0,
+              "part": "horse_0"
+            },
+            "horse_2": {
+              "pos": [
+                0,
+                3.035,
+                2
+              ],
+              "yaw": 0,
+              "part": "horse_2"
+            },
+            "horse_4": {
+              "pos": [
+                -2,
+                3.035,
+                0
+              ],
+              "yaw": 0,
+              "part": "horse_4"
+            },
+            "horse_6": {
+              "pos": [
+                0,
+                3.035,
+                -2
+              ],
+              "yaw": 0,
+              "part": "horse_6"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "captureStartProtected": [
+    {
+      "id": "nx-hearth",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/027f6f019f9981bf.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            0,
+            0.7,
+            0
+          ],
+          "count": 30,
+          "size": 0.22,
+          "speed": 0.32
+        },
+        "motion:well_": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 3,
+          "period": 9,
+          "damp": 0.99,
+          "t0": null
+        },
+        "sockets": {
+          "log_0": {
+            "pos": [
+              1.344,
+              0.32,
+              1.344
+            ],
+            "yaw": -2.356
+          },
+          "log_1": {
+            "pos": [
+              -1.344,
+              0.32,
+              1.344
+            ],
+            "yaw": 2.356
+          },
+          "log_2": {
+            "pos": [
+              -1.344,
+              0.32,
+              -1.344
+            ],
+            "yaw": 0.785
+          },
+          "log_3": {
+            "pos": [
+              1.344,
+              0.32,
+              -1.344
+            ],
+            "yaw": -0.785
+          },
+          "tale_seat": {
+            "pos": [
+              0.8,
+              0.55,
+              2.9
+            ],
+            "yaw": -2.872
+          }
+        },
+        "motion:pz_kettle": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            1.55,
+            0
+          ],
+          "amp": 2.5,
+          "period": 11
+        }
+      }
+    },
+    {
+      "id": "nx-carousel",
+      "kind": "thing",
+      "pos": [
+        -18,
+        0.00014950061063032772,
+        18
+      ],
+      "yaw": 2.35619,
+      "scale": 1,
+      "lib": "store/1c0128b61b510a5d.glb",
+      "parent": null,
+      "comp": {
+        "motion:carousel": {
+          "type": "spin",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "degPerSec": 6
+        },
+        "motion:horse_0": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 0
+        },
+        "motion:horse_2": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 1.57
+        },
+        "motion:horse_4": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 3.14
+        },
+        "motion:horse_6": {
+          "type": "bob",
+          "amp": 0.18,
+          "period": 2.4,
+          "phase": 4.71
+        },
+        "particles:smoke": {
+          "preset": "smoke",
+          "count": 50,
+          "size": 0.4,
+          "speed": 0.35,
+          "origin": [
+            0,
+            6.3,
+            0
+          ]
+        },
+        "sockets": {
+          "horse_0": {
+            "pos": [
+              2,
+              3.035,
+              0
+            ],
+            "yaw": 0,
+            "part": "horse_0"
+          },
+          "horse_2": {
+            "pos": [
+              0,
+              3.035,
+              2
+            ],
+            "yaw": 0,
+            "part": "horse_2"
+          },
+          "horse_4": {
+            "pos": [
+              -2,
+              3.035,
+              0
+            ],
+            "yaw": 0,
+            "part": "horse_4"
+          },
+          "horse_6": {
+            "pos": [
+              0,
+              3.035,
+              -2
+            ],
+            "yaw": 0,
+            "part": "horse_6"
+          }
+        }
+      }
+    },
+    {
+      "id": "nx-plaza-l",
+      "kind": "light",
+      "pos": [
+        0,
+        1.2,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-welcome-l",
+      "kind": "light",
+      "pos": [
+        -3,
+        2.2,
+        -4.3
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-shutters",
+      "kind": "thing",
+      "pos": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1,
+      "lib": "store/26259f89feb92736.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-statuary-0026",
+      "kind": "thing",
+      "pos": [
+        62.061622,
+        -0.033680292362306775,
+        40.303289
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/ba69e7158262698a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-statuary-0005",
+      "kind": "thing",
+      "pos": [
+        70.378182,
+        -0.026565256802728945,
+        22.867258
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/dd0985508d0157c2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-statuary-0039",
+      "kind": "thing",
+      "pos": [
+        49.515665,
+        -0.0301676564610222,
+        54.992717
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/61d7a70c8b530b83.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-statuary-0052",
+      "kind": "thing",
+      "pos": [
+        33.595297,
+        -0.024298703471806356,
+        65.934483
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/8c560202486fa0cd.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-cloister-0008",
+      "kind": "thing",
+      "pos": [
+        94.154595,
+        -0.028291539908999647,
+        30.592682
+      ],
+      "yaw": -0.785398163,
+      "scale": 1,
+      "lib": "store/c6014616c233ac01.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-cloister-0016",
+      "kind": "thing",
+      "pos": [
+        82.07472,
+        -0.022380333179918957,
+        55.360097
+      ],
+      "yaw": -0.785398163,
+      "scale": 1,
+      "lib": "store/4efdd4602c62966b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-cloister-0029",
+      "kind": "thing",
+      "pos": [
+        63.635973,
+        -0.007895964088230319,
+        75.8384
+      ],
+      "yaw": -0.785398163,
+      "scale": 1,
+      "lib": "store/afa06673d4f1831f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-cloister-0042",
+      "kind": "thing",
+      "pos": [
+        40.266928,
+        -0.02953691882990521,
+        90.441
+      ],
+      "yaw": -0.785398163,
+      "scale": 1,
+      "lib": "store/255739e0c2a5d391.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-cloister-0055",
+      "kind": "thing",
+      "pos": [
+        13.778137,
+        -0.01502744933152366,
+        98.036539
+      ],
+      "yaw": -0.785398163,
+      "scale": 1,
+      "lib": "store/2cc686bfee6a1c17.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-forest-0010",
+      "kind": "thing",
+      "pos": [
+        10.577156,
+        -0.05003665249372835,
+        -75.260373
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/e7d130f7747d9e9a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-forest-0018",
+      "kind": "thing",
+      "pos": [
+        30.911985,
+        -0.05120935668377804,
+        -69.429455
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/546718f819b5f702.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-forest-0044",
+      "kind": "thing",
+      "pos": [
+        48.851858,
+        -0.020292638346832616,
+        -58.219378
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/43e4c8c3a843881d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-forest-0057",
+      "kind": "thing",
+      "pos": [
+        63.006856,
+        -0.019491742981888435,
+        -42.498661
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/18ea1385cf64d504.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-forest-0031",
+      "kind": "thing",
+      "pos": [
+        72.280295,
+        -0.05215550130320002,
+        -23.485292
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/f61645b4aba14fc6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-wayside-0009",
+      "kind": "thing",
+      "pos": [
+        17.538466,
+        -0.06309466104089798,
+        -99.465583
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/b46c543afae781a0.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-wayside-0030",
+      "kind": "thing",
+      "pos": [
+        44.275486,
+        -0.05134727600764112,
+        -90.778199
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/d2a2b028b1ce9077.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-wayside-0045",
+      "kind": "thing",
+      "pos": [
+        67.582191,
+        0.0104828796429387,
+        -75.057627
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/b693c67eaedeb71b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-wayside-0056",
+      "kind": "thing",
+      "pos": [
+        85.652858,
+        -0.009906056426071697,
+        -53.521846
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/21dd4ad5c0ad0b53.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-wayside-0058",
+      "kind": "thing",
+      "pos": [
+        97.087431,
+        -0.017884173579467824,
+        -27.839373
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/91f2a1bf9b997abe.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-terrace-0035",
+      "kind": "thing",
+      "pos": [
+        -75.710797,
+        -0.00464027797587903,
+        -6.623836
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/e8417696ee8ab62b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-terrace-0037",
+      "kind": "thing",
+      "pos": [
+        -69.958369,
+        0.0018601911619803956,
+        -29.695566
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/e8417696ee8ab62b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-terrace-0040",
+      "kind": "thing",
+      "pos": [
+        -57.357928,
+        -0.02292796769374645,
+        -49.860486
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/e8417696ee8ab62b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-terrace-0049",
+      "kind": "thing",
+      "pos": [
+        -39.142894,
+        -0.036608129304793915,
+        -65.144715
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/e8417696ee8ab62b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-terrace-0039",
+      "kind": "thing",
+      "pos": [
+        -17.09628,
+        -0.03480033700286841,
+        -74.052125
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/e8417696ee8ab62b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-labyrinth-0004",
+      "kind": "thing",
+      "pos": [
+        -95.088981,
+        0.0025339289569975775,
+        -23.708346
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/6ecff24946390a7d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-labyrinth-0025",
+      "kind": "thing",
+      "pos": [
+        -79.283665,
+        -0.016928827472115132,
+        -57.602955
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/3273205286ab16bb.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-labyrinth-0038",
+      "kind": "thing",
+      "pos": [
+        -51.932088,
+        -0.019688843285594615,
+        -83.108713
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/2d3d2032d3e806f8.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-labyrinth-0051",
+      "kind": "thing",
+      "pos": [
+        -17.017521,
+        -0.01475532431470361,
+        -96.51116
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/d93deb842f9998da.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-gallery-mosaic-0036",
+      "kind": "thing",
+      "pos": [
+        38.971143,
+        -0.023302546381834918,
+        22.5
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/1655ae806c3b8fe3.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-gallery-mosaic-0048",
+      "kind": "thing",
+      "pos": [
+        0,
+        0.0015747037783233253,
+        45
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/b6491515b25ef439.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-gallery-mosaic-0052",
+      "kind": "thing",
+      "pos": [
+        -38.971143,
+        0.012803620215344794,
+        22.5
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/83c4817f73507493.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-gallery-mosaic-0059",
+      "kind": "thing",
+      "pos": [
+        -38.971143,
+        -0.04073522899392348,
+        -22.5
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/505bec0b589f786f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-monument",
+      "kind": "thing",
+      "pos": [
+        -7,
+        0,
+        -7
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "lib": "store/d7d3b15c6391aa7e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/e815a897c7d73373.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-banner",
+      "kind": "thing",
+      "pos": [
+        -4,
+        0,
+        9.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/d32e7bcb8b007d21.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-stringlights",
+      "kind": "thing",
+      "pos": [
+        -6,
+        2.6,
+        7.5
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "lib": "store/0c0dee37b07aa7df.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-giftshelf",
+      "kind": "thing",
+      "pos": [
+        -9,
+        0,
+        9
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/c623cfa6fbdeb48e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-fountain",
+      "kind": "thing",
+      "pos": [
+        12.5,
+        0,
+        4
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/72f07c2a466feae3.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-bench-plaza",
+      "kind": "thing",
+      "pos": [
+        -9.5,
+        0,
+        -9.5
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "lib": "store/09f4d1741fdb24a6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-goats",
+      "kind": "thing",
+      "pos": [
+        34,
+        0,
+        13
+      ],
+      "yaw": -1.2,
+      "scale": 1,
+      "lib": "store/c47861e473e6f088.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-hens",
+      "kind": "thing",
+      "pos": [
+        33.5,
+        0,
+        -6
+      ],
+      "yaw": -1.8,
+      "scale": 1,
+      "lib": "store/edc1a4c7ca62d56f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-hutch",
+      "kind": "thing",
+      "pos": [
+        38.5,
+        0,
+        -9.5
+      ],
+      "yaw": -1.9,
+      "scale": 1,
+      "lib": "store/f5f47791dadb5abe.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-harvestcart",
+      "kind": "thing",
+      "pos": [
+        12,
+        0,
+        36
+      ],
+      "yaw": -2.6,
+      "scale": 1,
+      "lib": "store/ee30d6709625bf2f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-churn",
+      "kind": "thing",
+      "pos": [
+        20,
+        0,
+        35
+      ],
+      "yaw": -2.2,
+      "scale": 1,
+      "lib": "store/a509c3d2c1f3026e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-milkstand",
+      "kind": "thing",
+      "pos": [
+        22.5,
+        0,
+        33
+      ],
+      "yaw": -2.4,
+      "scale": 1,
+      "lib": "store/bd2e613a10b9762e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-coop",
+      "kind": "thing",
+      "pos": [
+        37.5,
+        0,
+        -6.5
+      ],
+      "yaw": -1.8,
+      "scale": 1,
+      "lib": "store/f5d4039489c1ce4b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-stablebench",
+      "kind": "thing",
+      "pos": [
+        42,
+        0,
+        6
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/c24b7628da5f74ae.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-well",
+      "kind": "thing",
+      "pos": [
+        30,
+        0,
+        -4.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/35f17cf4f6a6db9f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-chess",
+      "kind": "thing",
+      "pos": [
+        -27.5,
+        0,
+        -9
+      ],
+      "yaw": 1.2,
+      "scale": 1,
+      "lib": "store/cb215e8c13c8ac79.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h2",
+      "kind": "thing",
+      "pos": [
+        27,
+        -0.03516135170548859,
+        -27
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/f14d70564a107879.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h2-l",
+      "kind": "light",
+      "pos": [
+        27,
+        1.1448386482945114,
+        -27
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-inn-l",
+      "kind": "light",
+      "pos": [
+        36,
+        2.35,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-hall-l",
+      "kind": "light",
+      "pos": [
+        9,
+        2.5,
+        -26
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h3",
+      "kind": "thing",
+      "pos": [
+        32.526911934581186,
+        -0.0313912325769002,
+        -32.526911934581186
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/f33e9839b5d95241.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h3-l",
+      "kind": "light",
+      "pos": [
+        32.526911934581186,
+        2.4486087674231,
+        -32.526911934581186
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-forge-l",
+      "kind": "light",
+      "pos": [
+        21.60565223135312,
+        1.5,
+        -7.557382793287093
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h4",
+      "kind": "thing",
+      "pos": [
+        35.70889244992065,
+        -0.041880605288849126,
+        -23.68807716974934
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/0b29c15ad1b8d04f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h4-l",
+      "kind": "light",
+      "pos": [
+        35.510902551188416,
+        2.2981193947111507,
+        -23.886067068481577
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-longhouse-l",
+      "kind": "light",
+      "pos": [
+        8.815123251205957,
+        2.2,
+        25.42919303809839
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "kind": "thing",
+      "pos": [
+        19.79898987322333,
+        -0.015837100520963706,
+        -24.041630560342615
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/3c48f921d262907a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5-l-left",
+      "kind": "light",
+      "pos": [
+        17.882730496207788,
+        0.6041628994790363,
+        -25.448773054903842
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5-l-right",
+      "kind": "light",
+      "pos": [
+        21.20613236778456,
+        0.6041628994790363,
+        -22.125371183327072
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-market-l",
+      "kind": "light",
+      "pos": [
+        -6.217157287525381,
+        1.75,
+        6.217157287525381
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h6",
+      "kind": "thing",
+      "pos": [
+        38.53731957466684,
+        -0.02768908298729972,
+        -38.53731957466684
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/a61457df15380006.glb",
+      "parent": null,
+      "comp": {
+        "motion:chime": {
+          "type": "spin",
+          "axis": "y",
+          "degPerSec": 2
+        }
+      }
+    },
+    {
+      "id": "nx-artwalk-h6-l",
+      "kind": "light",
+      "pos": [
+        38.3605428793702,
+        2.4223109170127004,
+        -38.3605428793702
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-potter-l",
+      "kind": "light",
+      "pos": [
+        24.360421448743175,
+        1.39598,
+        7.587823892241903
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h7",
+      "kind": "thing",
+      "pos": [
+        31.819805153394636,
+        -0.037292896876929355,
+        -43.13351365237939
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/7baac8fd9b45bc92.glb",
+      "parent": null,
+      "comp": {
+        "motion:scope": {
+          "type": "spin",
+          "axis": "y",
+          "degPerSec": -0.8
+        }
+      }
+    },
+    {
+      "id": "nx-artwalk-h7-l",
+      "kind": "light",
+      "pos": [
+        30.476302269140195,
+        2.2827071031230703,
+        -41.79001076812495
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-garden-cottage-l",
+      "kind": "light",
+      "pos": [
+        -25.757529051131492,
+        2.100949448840476,
+        18.823342594395804
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-shelltower",
+      "kind": "thing",
+      "pos": [
+        -2.65,
+        -0.05202600128766878,
+        -37.91
+      ],
+      "yaw": 0.06978887730267769,
+      "scale": 1,
+      "lib": "store/bfdb1792374586e6.glb",
+      "parent": null,
+      "comp": {
+        "sockets": {
+          "crown": {
+            "pos": [
+              0,
+              7.45,
+              0
+            ],
+            "yaw": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "nx-struct-mobius",
+      "kind": "thing",
+      "pos": [
+        -4.18,
+        0.0020370004991614723,
+        39.78
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/5617f376b39535f8.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-tower-house-l",
+      "kind": "light",
+      "pos": [
+        -8.876748834137304,
+        2.1,
+        25.619462025398928
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b1-hall-charter",
+      "kind": "thing",
+      "pos": [
+        4.928243671768526,
+        1.1,
+        -27.318787474730843
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1,
+      "lib": "store/100eb5e9e89694a9.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-orrery",
+      "kind": "thing",
+      "pos": [
+        9.19,
+        -0.052098429044230066,
+        -36.87
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/d680b1cdb64ed9e9.glb",
+      "parent": null,
+      "comp": {
+        "motion:orb": {
+          "type": "spin",
+          "axis": "y",
+          "degPerSec": -0.5
+        }
+      }
+    },
+    {
+      "id": "nx-artwalk-b2-inn-lintel",
+      "kind": "thing",
+      "pos": [
+        32.97,
+        2.78,
+        1.85533990070824e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/875942618767052c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b2-inn-threshold",
+      "kind": "thing",
+      "pos": [
+        33.05,
+        0.198,
+        1.806354028742346e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/cc80fa377494a76c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-amphi",
+      "kind": "thing",
+      "pos": [
+        -23.32,
+        0.03982105168676789,
+        37.31
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/95a98c748df77020.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-beacon-l",
+      "kind": "light",
+      "pos": [
+        60.91095257485114,
+        7.350806587039094,
+        -66.76448518055265
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-observatory-l",
+      "kind": "light",
+      "pos": [
+        -39.811,
+        1.5215702652599432,
+        -87.356
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-row-cottage-l",
+      "kind": "light",
+      "pos": [
+        -22.67670540150866,
+        2.1,
+        -16.764456792527735
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b4-golden-top",
+      "kind": "thing",
+      "pos": [
+        0,
+        2.524133022449836,
+        -19.24
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/98fabb814c668f29.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b4-golden-threshold",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        -19.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/db99bae44aa6ebcc.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b4-golden-hinges",
+      "kind": "thing",
+      "pos": [
+        1.5,
+        0.7,
+        -19.24
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/78a457a5bab6874d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-bunkhouse-l",
+      "kind": "light",
+      "pos": [
+        -8.876748834137304,
+        2.1,
+        -25.619462025398928
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "kind": "thing",
+      "pos": [
+        5.269634200735408,
+        0.65,
+        6.330294372515229
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/48aed5dabcb16a45.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-left",
+      "kind": "thing",
+      "pos": [
+        -5.481766235091371,
+        0.38,
+        6.895979797464467
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-right",
+      "kind": "thing",
+      "pos": [
+        -6.8959797974644665,
+        0.38,
+        5.481766235091372
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/5fcdd1ef922f7794.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b8-stable-harmonic-rein",
+      "kind": "thing",
+      "pos": [
+        45.16,
+        2.22,
+        -1.3226185430791415e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/cba8d0efb0518938.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b9-dyehouse-crossing-loom",
+      "kind": "thing",
+      "pos": [
+        -23.62227356310568,
+        0.48,
+        -23.4535147325719
+      ],
+      "yaw": 0.941,
+      "scale": 1,
+      "lib": "store/6c3c85dee69191cf.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b10-windmill-four-wind-crown",
+      "kind": "thing",
+      "pos": [
+        -37.38,
+        2.22,
+        1.6042873068830328e-16
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/8e55e366b5a28987.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "kind": "thing",
+      "pos": [
+        16.3635762733503,
+        0.75,
+        31.712609495766586
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "lib": "store/aa5f2550365c1f7f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b13-south-tide-west",
+      "kind": "thing",
+      "pos": [
+        1.5,
+        0.5,
+        19.68
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/8a6b49f61bcf138e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b13-south-tide-east",
+      "kind": "thing",
+      "pos": [
+        -1.5,
+        0.5,
+        19.68
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/8a6b49f61bcf138e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b14-east-gate-dawn-fan",
+      "kind": "thing",
+      "pos": [
+        19.7325,
+        2.72,
+        1.423651904008798e-17
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/c67c0402bbfb7fd8.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b15-west-gate-dusk-arcs",
+      "kind": "thing",
+      "pos": [
+        -19.7325,
+        2.72,
+        1.423651904008798e-17
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/f1efad77be904a59.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "kind": "thing",
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/54555b39274bc00c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b17-garden-seed-lattice",
+      "kind": "thing",
+      "pos": [
+        -24.51890662066154,
+        2.6209494488404763,
+        17.920917680767694
+      ],
+      "yaw": 2.2004415094410525,
+      "scale": 1,
+      "lib": "store/241db6453224af9f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b18-row-warp-count",
+      "kind": "thing",
+      "pos": [
+        -21.155200197358777,
+        2.22,
+        -15.655931572361396
+      ],
+      "yaw": 0.9411511441487406,
+      "scale": 1,
+      "lib": "store/d6d10de199f6fb03.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b19-longhouse-feast-count",
+      "kind": "thing",
+      "pos": [
+        7.668887408682888,
+        2.22,
+        21.89018987430842
+      ],
+      "yaw": -2.828368080172068,
+      "scale": 1,
+      "lib": "store/98a4c17e73e4bac4.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b20-bunkhouse-four-rooms",
+      "kind": "thing",
+      "pos": [
+        -10.466688873766076,
+        1.05,
+        -23.388510004313474
+      ],
+      "yaw": 0.31322457341772525,
+      "scale": 1,
+      "lib": "store/152684b8dd6ba535.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b21-tower-ascension-count",
+      "kind": "thing",
+      "pos": [
+        -8.130308960881354,
+        2.22,
+        23.314828916721183
+      ],
+      "yaw": 2.828368080172068,
+      "scale": 1,
+      "lib": "store/ba8f63884184b13e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-orreryring",
+      "kind": "thing",
+      "pos": [
+        9.19,
+        -0.052098429044230066,
+        -36.87
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/f095519b61b3bf17.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b22-mapboard-eight-ways",
+      "kind": "thing",
+      "pos": [
+        2.5058834840541455,
+        0,
+        9.529417420270727
+      ],
+      "yaw": -2.9441970937399127,
+      "scale": 1,
+      "lib": "store/09c800d062057db2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "kind": "thing",
+      "pos": [
+        15.443541965497799,
+        0.31,
+        -14.383709409516388
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/8d9419e5c2d9e3e7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b24-well-depth",
+      "kind": "thing",
+      "pos": [
+        3.4,
+        0.375,
+        0.7
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/1935752ba39b674e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b25-welcome-village-mark",
+      "kind": "thing",
+      "pos": [
+        -3.030327212597244,
+        1.35,
+        -4.343465620622298
+      ],
+      "yaw": 0.6092,
+      "scale": 1,
+      "lib": "store/173352aa2df4450f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b27-waterline",
+      "kind": "thing",
+      "pos": [
+        30,
+        0,
+        -4.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/580706ad8e46212c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "kind": "thing",
+      "pos": [
+        18.593536600282096,
+        -1.5946487083102603e-8,
+        -18.367647009533506
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/18c1bb5da4328ae7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "kind": "thing",
+      "pos": [
+        22.347652212343093,
+        -1.5946487083102603e-8,
+        -13.43276950636487
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/a7df548e06d1412d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b30-market-tally",
+      "kind": "thing",
+      "pos": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/a2326039fcb4e080.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b31-sheaf-tally",
+      "kind": "thing",
+      "pos": [
+        12,
+        0,
+        36
+      ],
+      "yaw": -2.6,
+      "scale": 1,
+      "lib": "store/9e6d3d13f1e8d380.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b32-morning-measure",
+      "kind": "thing",
+      "pos": [
+        20,
+        0,
+        35
+      ],
+      "yaw": -2.2,
+      "scale": 1,
+      "lib": "store/adb5459562eb21b2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b33-milking-order",
+      "kind": "thing",
+      "pos": [
+        22.5,
+        0,
+        33
+      ],
+      "yaw": -2.4,
+      "scale": 1,
+      "lib": "store/ee2af59a36ee41ca.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-northneedle",
+      "kind": "thing",
+      "pos": [
+        47.3,
+        -0.033889555549561905,
+        -31.9
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/39ed7070104ddc61.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-northneedle-l",
+      "kind": "light",
+      "pos": [
+        47.959999999999994,
+        12.9,
+        -31.9
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-stable-l",
+      "kind": "light",
+      "pos": [
+        43,
+        1.9,
+        1.8
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-waystone-n",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        -22.1
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/2f006e218ffbe97e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-waystone-e",
+      "kind": "thing",
+      "pos": [
+        22.1,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/2f006e218ffbe97e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-waystone-s",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        22.1
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/2f006e218ffbe97e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-dyehouse-l",
+      "kind": "light",
+      "pos": [
+        -23.625,
+        1.62,
+        -21.971
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-waystone-w",
+      "kind": "thing",
+      "pos": [
+        -20,
+        0,
+        4.3
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "lib": "store/2f006e218ffbe97e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-kiln-l",
+      "kind": "light",
+      "pos": [
+        18.70823868946895,
+        1.07935,
+        23.848662250734773
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-halt",
+      "kind": "thing",
+      "pos": [
+        -2,
+        -0.0029731329510874916,
+        30
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/bb227fd67ca93385.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-nw-lamp-001-l",
+      "kind": "light",
+      "pos": [
+        -39.09,
+        1.96,
+        30.26
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-nw-lamp-002-l",
+      "kind": "light",
+      "pos": [
+        -47.96,
+        1.96,
+        46.71
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-ne-lamp-001-l",
+      "kind": "light",
+      "pos": [
+        39.71,
+        1.96,
+        27
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-ne-lamp-002-l",
+      "kind": "light",
+      "pos": [
+        32.89,
+        1.96,
+        50.15
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-sw-lamp-001-l",
+      "kind": "light",
+      "pos": [
+        -25.2,
+        1.96,
+        -30.67
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-sw-lamp-002-l",
+      "kind": "light",
+      "pos": [
+        -34.69,
+        1.96,
+        -43.14
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-nw-001",
+      "kind": "thing",
+      "pos": [
+        -45.42926948884058,
+        0.0155,
+        35.84093372088007
+      ],
+      "yaw": 5.419247327442394,
+      "scale": 1,
+      "lib": "store/9459eaa30382fb3c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-nw-002",
+      "kind": "thing",
+      "pos": [
+        -48.41673051115942,
+        0.0218,
+        32.34306627911993
+      ],
+      "yaw": 5.419247327442394,
+      "scale": 1,
+      "lib": "store/9459eaa30382fb3c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "kind": "thing",
+      "pos": [
+        40.9,
+        0,
+        1.285879139104721e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/afee37dd9a5b5d67.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-ne-003",
+      "kind": "thing",
+      "pos": [
+        36.875091173909254,
+        -0.0328,
+        29.423318353176594
+      ],
+      "yaw": 0.5525712411814048,
+      "scale": 1,
+      "lib": "store/9459eaa30382fb3c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-ne-004",
+      "kind": "thing",
+      "pos": [
+        40.79050882609074,
+        -0.0255,
+        27.008881646823408
+      ],
+      "yaw": 0.5525712411814048,
+      "scale": 1,
+      "lib": "store/9459eaa30382fb3c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-ne-yard-001",
+      "kind": "thing",
+      "pos": [
+        55.91,
+        -0.034,
+        87.1
+      ],
+      "yaw": 2.570869988187648,
+      "scale": 1,
+      "lib": "store/191227dafd0d05dc.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-se-stones-001",
+      "kind": "thing",
+      "pos": [
+        52.61,
+        -0.011,
+        -47.8
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "lib": "store/8dafb9e58f8354f1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-sw-005",
+      "kind": "thing",
+      "pos": [
+        -26.617995394170368,
+        -0.0472,
+        -38.80427617249866
+      ],
+      "yaw": 5.362524126752577,
+      "scale": 1,
+      "lib": "store/9459eaa30382fb3c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-sw-006",
+      "kind": "thing",
+      "pos": [
+        -30.27960460582963,
+        -0.0527,
+        -36.019923827501344
+      ],
+      "yaw": 5.362524126752577,
+      "scale": 1,
+      "lib": "store/9459eaa30382fb3c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-sw-gravel-001",
+      "kind": "thing",
+      "pos": [
+        -45.22,
+        -0.05,
+        -59.46
+      ],
+      "yaw": 2.2209314731627843,
+      "scale": 1,
+      "lib": "store/fd21de9ff797e249.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-nw-007",
+      "kind": "thing",
+      "pos": [
+        -47.51755440327094,
+        0.0282,
+        50.77024559672906
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/052120d7646f5f74.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-nw-008",
+      "kind": "thing",
+      "pos": [
+        -50.77024559672906,
+        0.0391,
+        47.51755440327094
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/052120d7646f5f74.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-nw-007-l",
+      "kind": "light",
+      "pos": [
+        -47.680188962943845,
+        0.6782,
+        50.60761103705616
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-ne-009",
+      "kind": "thing",
+      "pos": [
+        16.700647242969996,
+        0.0016,
+        68.30231603300872
+      ],
+      "yaw": 5.7115371556377275,
+      "scale": 1,
+      "lib": "store/052120d7646f5f74.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-ne-010",
+      "kind": "thing",
+      "pos": [
+        20.56929525179299,
+        -0.0006,
+        70.79100295261712
+      ],
+      "yaw": 2.569944502047934,
+      "scale": 1,
+      "lib": "store/052120d7646f5f74.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-ne-009-l",
+      "kind": "light",
+      "pos": [
+        16.894079643411146,
+        0.6516000000000001,
+        68.42675037898914
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-ne-bench-001",
+      "kind": "thing",
+      "pos": [
+        14.23,
+        0,
+        73.13
+      ],
+      "yaw": 0.19198621771937624,
+      "scale": 1,
+      "lib": "store/46f3b6b14ada6d8b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-sw-013",
+      "kind": "thing",
+      "pos": [
+        -36.908010628915626,
+        -0.042,
+        -52.336304334714455
+      ],
+      "yaw": 3.7917277999576813,
+      "scale": 1,
+      "lib": "store/052120d7646f5f74.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-sw-014",
+      "kind": "thing",
+      "pos": [
+        -40.56961984057488,
+        -0.0499,
+        -49.55195198971714
+      ],
+      "yaw": 0.6501351463678888,
+      "scale": 1,
+      "lib": "store/052120d7646f5f74.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-mile-sw-013-l",
+      "kind": "light",
+      "pos": [
+        -37.09109108949859,
+        0.608,
+        -52.19708671746459
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-sw-prayer-001",
+      "kind": "thing",
+      "pos": [
+        -52.26,
+        -0.032,
+        -64.53
+      ],
+      "yaw": 2.2209314731627843,
+      "scale": 1,
+      "lib": "store/5074600fc869789d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-logpile-001",
+      "kind": "thing",
+      "pos": [
+        -66.8,
+        0.029,
+        51.2
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/cac71bff63242766.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-dyer-001",
+      "kind": "thing",
+      "pos": [
+        -22.0867933424553,
+        2.05,
+        -22.334452405446434
+      ],
+      "yaw": 0.941,
+      "scale": 1,
+      "lib": "store/8ce2081f7d2c6858.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-crossing",
+      "kind": "thing",
+      "pos": [
+        3.6,
+        -0.005,
+        -3.6
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/216c4bd4d12ff308.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "kind": "thing",
+      "pos": [
+        15.431912072890157,
+        2.05,
+        29.886547662864707
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "lib": "store/f46e12aeeea8af74.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b7-shrine-stars",
+      "kind": "thing",
+      "pos": [
+        -26.295770450820214,
+        0.24873907394894657,
+        -3.245626790785106
+      ],
+      "yaw": 1.4118119548622732,
+      "scale": 1,
+      "lib": "store/a7ef8541e9561833.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-se-cairn-001",
+      "kind": "thing",
+      "pos": [
+        58.7,
+        0.0076,
+        -58.7
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/59031a0cf3e396f9.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-nw-lane-001",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/dc256065879371d8.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-mill-001",
+      "kind": "thing",
+      "pos": [
+        -37.5,
+        2.78,
+        1.6000000000000003
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/870256ce4a0bea37.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-spiralfolly",
+      "kind": "thing",
+      "pos": [
+        46.11396867937201,
+        -0.03721999348652881,
+        33.50375938067097
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/b85ce018f1e7678e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-ne-woodstack-001",
+      "kind": "thing",
+      "pos": [
+        59.708,
+        -0.032,
+        51.781
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/692bc54e02358cc1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/dc52264c04cfe5bb.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-skeps-001",
+      "kind": "thing",
+      "pos": [
+        -53.566,
+        0.038,
+        54.5
+      ],
+      "yaw": 2.3562,
+      "scale": 1,
+      "lib": "store/87d2dd169f216414.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-bakery",
+      "kind": "thing",
+      "pos": [
+        14.022735609615019,
+        0,
+        -18.768525175210893
+      ],
+      "yaw": 2.234032653589793,
+      "scale": 1,
+      "lib": "store/49342c523aee4d41.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-hypar",
+      "kind": "thing",
+      "pos": [
+        -27.57,
+        -0.005252018641109206,
+        4.86
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/750f82eeb03512f6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-smithy",
+      "kind": "thing",
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-hedge-001",
+      "kind": "thing",
+      "pos": [
+        -35.34,
+        0.04,
+        62.14
+      ],
+      "yaw": -2.36,
+      "scale": 1,
+      "lib": "store/3d5c7d44351e5076.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-sw-lane-003",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/fb04a144cc1fc458.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-core-paths",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/c31b6e3f22641e14.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b26-wayband",
+      "kind": "thing",
+      "pos": [
+        1.75,
+        1.5,
+        10
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/7594436a996e8ded.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b34-wayband-e",
+      "kind": "thing",
+      "pos": [
+        10,
+        1.5,
+        1.75
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/7594436a996e8ded.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b34-wayband-s",
+      "kind": "thing",
+      "pos": [
+        -1.75,
+        1.5,
+        -10
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/7594436a996e8ded.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b34-wayband-w",
+      "kind": "thing",
+      "pos": [
+        -10,
+        1.5,
+        -1.75
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/7594436a996e8ded.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-mapboard",
+      "kind": "thing",
+      "pos": [
+        2.5,
+        0,
+        9.5
+      ],
+      "yaw": -2.9441970937399127,
+      "scale": 1,
+      "lib": "store/95231f20a016b303.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-meridianstair",
+      "kind": "thing",
+      "pos": [
+        5.7,
+        -0.03775288155722453,
+        -54.7
+      ],
+      "yaw": 3.037,
+      "scale": 1,
+      "lib": "store/dec58a3b6bfcae4a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-e",
+      "kind": "thing",
+      "pos": [
+        10,
+        0,
+        1.75
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/18b69a6bb2f5862f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-s",
+      "kind": "thing",
+      "pos": [
+        -1.75,
+        0,
+        -10
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/18b69a6bb2f5862f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-n",
+      "kind": "thing",
+      "pos": [
+        1.75,
+        0,
+        10
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/18b69a6bb2f5862f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-w",
+      "kind": "thing",
+      "pos": [
+        -10,
+        0,
+        -1.75
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/18b69a6bb2f5862f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-e-l",
+      "kind": "light",
+      "pos": [
+        9.9,
+        1.96,
+        1.75
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-s-l",
+      "kind": "light",
+      "pos": [
+        -1.75,
+        1.96,
+        -9.9
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-n-l",
+      "kind": "light",
+      "pos": [
+        1.75,
+        1.96,
+        9.9
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-lamp-w-l",
+      "kind": "light",
+      "pos": [
+        -9.9,
+        1.96,
+        -1.75
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-hamlet-0007",
+      "kind": "thing",
+      "pos": [
+        86.671814,
+        -0.01918958686956854,
+        15.480445
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/edd3da3ef7737bef.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            2.2,
+            0.35,
+            1.2
+          ],
+          "count": 40,
+          "size": 0.25,
+          "speed": 0.4
+        }
+      }
+    },
+    {
+      "id": "nx-craft-hamlet-0015",
+      "kind": "thing",
+      "pos": [
+        79.285079,
+        -0.019683875057015642,
+        38.519433
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/b5a9de3d99d21ea3.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            2.2,
+            0.35,
+            1.2
+          ],
+          "count": 40,
+          "size": 0.25,
+          "speed": 0.4
+        }
+      }
+    },
+    {
+      "id": "nx-struct-ruledtower",
+      "kind": "thing",
+      "pos": [
+        58,
+        -0.042603704984153376,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/4070ecc4d8f1d0e6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-hamlet-0028",
+      "kind": "thing",
+      "pos": [
+        65.396745,
+        0.0016023565750081304,
+        58.883493
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/44d7846302be80a8.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            2.2,
+            0.35,
+            1.2
+          ],
+          "count": 40,
+          "size": 0.25,
+          "speed": 0.4
+        }
+      }
+    },
+    {
+      "id": "nx-struct-ninesbridge",
+      "kind": "thing",
+      "pos": [
+        -7.28,
+        0.02764016019864407,
+        69.62
+      ],
+      "yaw": -1.67552,
+      "scale": 1,
+      "lib": "store/8c5d9ccea9cb4076.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-craft-hamlet-0041",
+      "kind": "thing",
+      "pos": [
+        46.632895,
+        -0.023892223112273604,
+        74.628232
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/caa851af0330a949.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            2.2,
+            0.35,
+            1.2
+          ],
+          "count": 40,
+          "size": 0.25,
+          "speed": 0.4
+        }
+      }
+    },
+    {
+      "id": "nx-craft-hamlet-0054",
+      "kind": "thing",
+      "pos": [
+        24.256087,
+        0.00605516141442692,
+        84.591029
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/43f4b4ac1ebdd808.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            2.2,
+            0.35,
+            1.2
+          ],
+          "count": 40,
+          "size": 0.25,
+          "speed": 0.4
+        }
+      }
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "kind": "thing",
+      "pos": [
+        24.765,
+        0,
+        -4.57
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/65d686b023348c9b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cistern",
+      "kind": "thing",
+      "pos": [
+        15.703583236444484,
+        0,
+        -14.586880611718946
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/156b4fc8c7287a9d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-se-funguslogs-001",
+      "kind": "thing",
+      "pos": [
+        40,
+        -0.0349,
+        -63
+      ],
+      "yaw": 3.6651914291880923,
+      "scale": 1,
+      "lib": "store/fbc626eb3f016bd7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-welcome",
+      "kind": "thing",
+      "pos": [
+        -3,
+        0,
+        -4.3
+      ],
+      "yaw": 0.6092,
+      "scale": 1,
+      "lib": "store/7d1bd0c9545c44fb.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-echoarch",
+      "kind": "thing",
+      "pos": [
+        -18.5,
+        0.05145038852924074,
+        57.1
+      ],
+      "yaw": 5.027,
+      "scale": 1,
+      "lib": "store/103be93e19def0aa.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-sw-incense-001",
+      "kind": "thing",
+      "pos": [
+        -55.475,
+        -0.0316,
+        -61.329
+      ],
+      "yaw": -0.9206611804270088,
+      "scale": 1,
+      "lib": "store/c66c4fbfd0adb07b.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-cellardoor",
+      "kind": "thing",
+      "pos": [
+        36,
+        -0.04542721690550573,
+        5.55
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/fe755f78b3f300d9.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-compost-001",
+      "kind": "thing",
+      "pos": [
+        -72.78,
+        0.036,
+        57.68
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/330adcbcf0153026.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-orchard-rows-001",
+      "kind": "thing",
+      "pos": [
+        -48.062,
+        0.034,
+        67.53
+      ],
+      "yaw": 2.3562,
+      "scale": 1,
+      "lib": "store/962c5fb041d19c63.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-stillwind",
+      "kind": "thing",
+      "pos": [
+        -52,
+        -0.031,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/35eab2fbeebcf811.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-se-snagdead-001",
+      "kind": "thing",
+      "pos": [
+        60.6,
+        -0.0461,
+        -30
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/7ac8320374482a3c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-waterstair",
+      "kind": "thing",
+      "pos": [
+        0,
+        -0.03222645164101495,
+        -32
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/46c39401e07870f3.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-dryingracks-001",
+      "kind": "thing",
+      "pos": [
+        -59,
+        -0.0009,
+        33
+      ],
+      "yaw": 2.3562,
+      "scale": 1,
+      "lib": "store/f0343efb6e7ab0fa.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-seed-0003",
+      "kind": "thing",
+      "pos": [
+        -68.890997,
+        -0.006158492639495652,
+        -17.176455
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/699387abdef0b16f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-seed-0013",
+      "kind": "thing",
+      "pos": [
+        -60.211415,
+        -0.016528677980768906,
+        -37.624268
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/699387abdef0b16f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-seed-0021",
+      "kind": "thing",
+      "pos": [
+        -45.63792,
+        -0.05444576041354715,
+        -54.389155
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/699387abdef0b16f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-temple-seed-0034",
+      "kind": "thing",
+      "pos": [
+        -26.597068,
+        -0.04801350921268022,
+        -65.830054
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/699387abdef0b16f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-wavepergola",
+      "kind": "thing",
+      "pos": [
+        51,
+        -0.0221,
+        9
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/32dc2e7df1a8c76f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-ellipsecourt",
+      "kind": "thing",
+      "pos": [
+        -3.75,
+        -0.0403,
+        -50.75
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/2aa37e9d29ba43f2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-stile-001",
+      "kind": "thing",
+      "pos": [
+        -45.25,
+        0.046,
+        54.45
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1,
+      "lib": "store/2c7f1bbe435366da.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-sw-bellpost-001",
+      "kind": "thing",
+      "pos": [
+        -54,
+        -0.0294,
+        -69.8
+      ],
+      "yaw": -0.4310963252425994,
+      "scale": 1,
+      "lib": "store/fe682869f9a759af.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-garden-0019",
+      "kind": "thing",
+      "pos": [
+        -79.354255867,
+        0.03701553556368211,
+        63.545330212
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/f4b36cb365754a10.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-garden-0032",
+      "kind": "thing",
+      "pos": [
+        -70.894119993,
+        0.0276505409363984,
+        72.469434032
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/54590f7ee441bc5c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-garden-0045",
+      "kind": "thing",
+      "pos": [
+        -61.502777956,
+        0.027529785945452547,
+        80.922243372
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/7610a674dea7659d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-garden-0058",
+      "kind": "thing",
+      "pos": [
+        -53.224217316,
+        0.03137989008033212,
+        72.691689056
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/45a88727d500495a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-garden-0011",
+      "kind": "thing",
+      "pos": [
+        -86.104625929,
+        0.0456712809132166,
+        52.696406703
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/185a221846fd74fa.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-ne-glazier-001",
+      "kind": "thing",
+      "pos": [
+        60.95,
+        -0.0284,
+        28.42
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/53b31cfd38f758d6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-cairn-0022",
+      "kind": "thing",
+      "pos": [
+        28.73858,
+        -0.07426829800275718,
+        -88.448256
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/19edc8302d326f6a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-cairn-0048",
+      "kind": "thing",
+      "pos": [
+        52.00494,
+        -0.0345969160626097,
+        -77.100494
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/de186a1444a29f91.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-cairn-0043",
+      "kind": "thing",
+      "pos": [
+        71.242133,
+        0.007238005337997962,
+        -59.779248
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/c7ea6ded6cb2349c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-cairn-0047",
+      "kind": "thing",
+      "pos": [
+        84.959728,
+        -0.02598558885747508,
+        -37.826508
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/b5ed154a3251a8c7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-wild-cairn-0050",
+      "kind": "thing",
+      "pos": [
+        92.09493,
+        -0.028882407863270138,
+        -12.943098
+      ],
+      "yaw": -2.35619449,
+      "scale": 1,
+      "lib": "store/594f5192a59a5de2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-orchard-0020",
+      "kind": "thing",
+      "pos": [
+        -75.073890346,
+        0.03541361196741313,
+        43.892251036
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/a0ed327d45d3796d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-orchard-0046",
+      "kind": "thing",
+      "pos": [
+        -43.205814584,
+        0.041268072595556725,
+        82.188872132
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/53a541115488ea78.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-orchard-0059",
+      "kind": "thing",
+      "pos": [
+        -30.84178331,
+        -0.0002733106081673675,
+        91.6224328
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/369f5b03477a8e9f.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-orchard-0012",
+      "kind": "thing",
+      "pos": [
+        -88.7346892568504,
+        0.019921379876134182,
+        35.79681905684085
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/a5da671d97dfdb94.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-orchard-0033",
+      "kind": "thing",
+      "pos": [
+        -61.87184335382291,
+        0.02514020801364989,
+        61.87184335382291
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/55fdc827f0bbcbf4.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-se-mossbowls-001",
+      "kind": "thing",
+      "pos": [
+        61.31,
+        0.0083,
+        -55.2
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/6d598bd526ba3929.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-meridiandial",
+      "kind": "thing",
+      "pos": [
+        6,
+        -0.0438,
+        -45
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/7acc090a0420499e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-lavender-0027",
+      "kind": "thing",
+      "pos": [
+        -53.907189114,
+        0.02563520209327475,
+        48.166349585
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/a9076cee40e4dee1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-lavender-0040",
+      "kind": "thing",
+      "pos": [
+        -39.582634215,
+        0.04024847506294396,
+        62.891797921
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/5e04ce4b2ad6e90c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-lavender-0053",
+      "kind": "thing",
+      "pos": [
+        -24.825469984,
+        0.03635458301689514,
+        77.242548616
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/23fcec16fd6d95dd.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cultivation-lavender-0006",
+      "kind": "thing",
+      "pos": [
+        -74.311739752,
+        -0.012819972711928234,
+        24.706417735
+      ],
+      "yaw": 2.35619449,
+      "scale": 1,
+      "lib": "store/e913ef7998e2654d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-soundmirror",
+      "kind": "thing",
+      "pos": [
+        35.46,
+        -0.0331,
+        -55.66
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/f313e59a69bff540.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-catenarygate",
+      "kind": "thing",
+      "pos": [
+        0,
+        -0.0274,
+        -60.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/0e3b5e5b4d7086ab.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-rainbarrel-001",
+      "kind": "thing",
+      "pos": [
+        -59.72,
+        0.0311,
+        52.73
+      ],
+      "yaw": 2.3562,
+      "scale": 1,
+      "lib": "store/2a0d5be7c2014a55.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-pendulum",
+      "kind": "thing",
+      "pos": [
+        13.16,
+        -0.0479,
+        -60.59
+      ],
+      "yaw": -0.21380283336930536,
+      "scale": 1,
+      "lib": "store/c32a35a8cc1a433d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-millrace",
+      "kind": "thing",
+      "pos": [
+        -76.707,
+        -0.0256,
+        6.711
+      ],
+      "yaw": 1.7516247,
+      "scale": 1,
+      "lib": "store/6e82dd2e1eb8403e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-moongate",
+      "kind": "thing",
+      "pos": [
+        -43.84,
+        -0.0533,
+        -43.84
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/3291fe15600b4c52.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-sw-seats-001",
+      "kind": "thing",
+      "pos": [
+        -57,
+        -0.0263,
+        -72.5
+      ],
+      "yaw": 2.734930937875114,
+      "scale": 1,
+      "lib": "store/cb34bd36bf9ce02d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-skymirror",
+      "kind": "thing",
+      "pos": [
+        -59.89,
+        -0.02887,
+        -66.51
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/782eb8643e03780d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-sw-offering-001",
+      "kind": "thing",
+      "pos": [
+        -45.002,
+        -0.03119,
+        -84.456
+      ],
+      "yaw": 1.7622,
+      "scale": 1,
+      "lib": "store/b41efb63746c2450.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-beacon",
+      "kind": "thing",
+      "pos": [
+        60.91095257485114,
+        0.006833337382809504,
+        -66.76448518055265
+      ],
+      "yaw": -0.5235987755982988,
+      "scale": 1,
+      "lib": "store/03d278be72677877.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-observatory",
+      "kind": "thing",
+      "pos": [
+        -39.811,
+        -0.03086984857485886,
+        -87.356
+      ],
+      "yaw": 0.42761113809041884,
+      "scale": 1,
+      "lib": "store/07d18163d1ecd27d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-needlerest",
+      "kind": "thing",
+      "pos": [
+        10.273,
+        0.0028985188967211428,
+        68.737
+      ],
+      "yaw": 2.9932396671702755,
+      "scale": 1,
+      "lib": "store/bb227fd67ca93385.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-skene",
+      "kind": "thing",
+      "pos": [
+        8.258,
+        -0.0026326227299527005,
+        78.567
+      ],
+      "yaw": 3.2463124087094526,
+      "scale": 1,
+      "lib": "store/df7f7c434c0b87b2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-angler",
+      "kind": "thing",
+      "pos": [
+        3.203,
+        -0.03465,
+        -90.982
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/6ee5b4b06bc07d5e.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-nw-fieldcross-001",
+      "kind": "thing",
+      "pos": [
+        -17.845,
+        -0.0023,
+        84.294
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/7750e9b717f2b39a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "kind": "thing",
+      "pos": [
+        22.724,
+        -0.04164,
+        27.274
+      ],
+      "yaw": -2.4784945651581642,
+      "scale": 1,
+      "lib": "store/1d9a1c2d95f785b6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b3-ruled-porch",
+      "kind": "thing",
+      "pos": [
+        22.947447673236418,
+        -0.00588,
+        9.081085820153778
+      ],
+      "yaw": -1.8975354116458194,
+      "scale": 1,
+      "lib": "store/e1b66075d8e911e7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-potter-001",
+      "kind": "thing",
+      "pos": [
+        20.35898702200678,
+        0,
+        8.151101165960043
+      ],
+      "yaw": -1.8975354116458194,
+      "scale": 1,
+      "lib": "store/3a6c8fe79dc41406.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "kind": "thing",
+      "pos": [
+        18.419319135343407,
+        -0.02065,
+        21.55118647109554
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "lib": "store/1ad2a6139373b973.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "kind": "thing",
+      "pos": [
+        18.605776095530477,
+        2.4293500000000003,
+        21.773298609435155
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "lib": "store/ecbad90311fc9bff.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-screwwell",
+      "kind": "thing",
+      "pos": [
+        -88,
+        0.017,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/6fbaede8dbe95f0d.glb",
+      "parent": null,
+      "comp": {
+        "motion:well_screw": {
+          "type": "spin",
+          "axis": "y",
+          "degPerSec": -12
+        }
+      }
+    },
+    {
+      "id": "nx-struct-ogeegate",
+      "kind": "thing",
+      "pos": [
+        22.71,
+        -0.0025,
+        65.75
+      ],
+      "yaw": -0.5703735995517468,
+      "scale": 1,
+      "lib": "store/32039b5a7fb9da30.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-se-streamstones-001",
+      "kind": "thing",
+      "pos": [
+        75.05,
+        -0.0249,
+        -46.9
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/aabbc23d5552b01c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-reedpool",
+      "kind": "thing",
+      "pos": [
+        9.723,
+        -0.05907,
+        -90.982
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/7d770620bb1b7bdc.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-whisperhorn",
+      "kind": "thing",
+      "pos": [
+        -64.02,
+        -0.028,
+        -61.82
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/b6e48e4622f10108.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-se-foxden-001",
+      "kind": "thing",
+      "pos": [
+        73,
+        -0.0532,
+        -10.5
+      ],
+      "yaw": 4.71238898038469,
+      "scale": 1,
+      "lib": "store/856deec51857c60a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-reuleauxrotor",
+      "kind": "thing",
+      "pos": [
+        -12,
+        -0.0373,
+        -64.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/670e397cb6422ee2.glb",
+      "parent": null,
+      "comp": {
+        "motion:pwheel_rr": {
+          "type": "path",
+          "points": [
+            [
+              0,
+              1.5848,
+              0
+            ],
+            [
+              -0.0162,
+              1.5853,
+              0
+            ],
+            [
+              -0.0317,
+              1.5866,
+              0
+            ],
+            [
+              -0.0464,
+              1.5887,
+              0
+            ],
+            [
+              -0.0604,
+              1.5918,
+              0
+            ],
+            [
+              -0.0735,
+              1.5957,
+              0
+            ],
+            [
+              -0.0858,
+              1.6005,
+              0
+            ],
+            [
+              -0.0973,
+              1.6061,
+              0
+            ],
+            [
+              -0.108,
+              1.6126,
+              0
+            ],
+            [
+              -0.1179,
+              1.6199,
+              0
+            ],
+            [
+              -0.1269,
+              1.6281,
+              0
+            ],
+            [
+              -0.1351,
+              1.6371,
+              0
+            ],
+            [
+              -0.1424,
+              1.647,
+              0
+            ],
+            [
+              -0.1489,
+              1.6577,
+              0
+            ],
+            [
+              -0.1545,
+              1.6692,
+              0
+            ],
+            [
+              -0.1593,
+              1.6815,
+              0
+            ],
+            [
+              -0.1632,
+              1.6946,
+              0
+            ],
+            [
+              -0.1663,
+              1.7086,
+              0
+            ],
+            [
+              -0.1684,
+              1.7233,
+              0
+            ],
+            [
+              -0.1697,
+              1.7388,
+              0
+            ],
+            [
+              -0.1702,
+              1.755,
+              0
+            ],
+            [
+              -0.1697,
+              1.7712,
+              0
+            ],
+            [
+              -0.1684,
+              1.7867,
+              0
+            ],
+            [
+              -0.1663,
+              1.8014,
+              0
+            ],
+            [
+              -0.1632,
+              1.8154,
+              0
+            ],
+            [
+              -0.1593,
+              1.8285,
+              0
+            ],
+            [
+              -0.1545,
+              1.8408,
+              0
+            ],
+            [
+              -0.1489,
+              1.8523,
+              0
+            ],
+            [
+              -0.1424,
+              1.863,
+              0
+            ],
+            [
+              -0.1351,
+              1.8729,
+              0
+            ],
+            [
+              -0.1269,
+              1.8819,
+              0
+            ],
+            [
+              -0.1179,
+              1.8901,
+              0
+            ],
+            [
+              -0.108,
+              1.8974,
+              0
+            ],
+            [
+              -0.0973,
+              1.9039,
+              0
+            ],
+            [
+              -0.0858,
+              1.9095,
+              0
+            ],
+            [
+              -0.0735,
+              1.9143,
+              0
+            ],
+            [
+              -0.0604,
+              1.9182,
+              0
+            ],
+            [
+              -0.0464,
+              1.9213,
+              0
+            ],
+            [
+              -0.0317,
+              1.9234,
+              0
+            ],
+            [
+              -0.0162,
+              1.9247,
+              0
+            ],
+            [
+              0,
+              1.9252,
+              0
+            ],
+            [
+              0.0162,
+              1.9247,
+              0
+            ],
+            [
+              0.0317,
+              1.9234,
+              0
+            ],
+            [
+              0.0464,
+              1.9213,
+              0
+            ],
+            [
+              0.0604,
+              1.9182,
+              0
+            ],
+            [
+              0.0735,
+              1.9143,
+              0
+            ],
+            [
+              0.0858,
+              1.9095,
+              0
+            ],
+            [
+              0.0973,
+              1.9039,
+              0
+            ],
+            [
+              0.108,
+              1.8974,
+              0
+            ],
+            [
+              0.1179,
+              1.8901,
+              0
+            ],
+            [
+              0.1269,
+              1.8819,
+              0
+            ],
+            [
+              0.1351,
+              1.8729,
+              0
+            ],
+            [
+              0.1424,
+              1.863,
+              0
+            ],
+            [
+              0.1489,
+              1.8523,
+              0
+            ],
+            [
+              0.1545,
+              1.8408,
+              0
+            ],
+            [
+              0.1593,
+              1.8285,
+              0
+            ],
+            [
+              0.1632,
+              1.8154,
+              0
+            ],
+            [
+              0.1663,
+              1.8014,
+              0
+            ],
+            [
+              0.1684,
+              1.7867,
+              0
+            ],
+            [
+              0.1697,
+              1.7712,
+              0
+            ],
+            [
+              0.1702,
+              1.755,
+              0
+            ],
+            [
+              0.1697,
+              1.7388,
+              0
+            ],
+            [
+              0.1684,
+              1.7233,
+              0
+            ],
+            [
+              0.1663,
+              1.7086,
+              0
+            ],
+            [
+              0.1632,
+              1.6946,
+              0
+            ],
+            [
+              0.1593,
+              1.6815,
+              0
+            ],
+            [
+              0.1545,
+              1.6692,
+              0
+            ],
+            [
+              0.1489,
+              1.6577,
+              0
+            ],
+            [
+              0.1424,
+              1.647,
+              0
+            ],
+            [
+              0.1351,
+              1.6371,
+              0
+            ],
+            [
+              0.1269,
+              1.6281,
+              0
+            ],
+            [
+              0.1179,
+              1.6199,
+              0
+            ],
+            [
+              0.108,
+              1.6126,
+              0
+            ],
+            [
+              0.0973,
+              1.6061,
+              0
+            ],
+            [
+              0.0858,
+              1.6005,
+              0
+            ],
+            [
+              0.0735,
+              1.5957,
+              0
+            ],
+            [
+              0.0604,
+              1.5918,
+              0
+            ],
+            [
+              0.0464,
+              1.5887,
+              0
+            ],
+            [
+              0.0317,
+              1.5866,
+              0
+            ],
+            [
+              0.0162,
+              1.5853,
+              0
+            ],
+            [
+              0,
+              1.5848,
+              0
+            ],
+            [
+              -0.0162,
+              1.5853,
+              0
+            ],
+            [
+              -0.0317,
+              1.5866,
+              0
+            ],
+            [
+              -0.0464,
+              1.5887,
+              0
+            ],
+            [
+              -0.0604,
+              1.5918,
+              0
+            ],
+            [
+              -0.0735,
+              1.5957,
+              0
+            ],
+            [
+              -0.0858,
+              1.6005,
+              0
+            ],
+            [
+              -0.0973,
+              1.6061,
+              0
+            ],
+            [
+              -0.108,
+              1.6126,
+              0
+            ],
+            [
+              -0.1179,
+              1.6199,
+              0
+            ],
+            [
+              -0.1269,
+              1.6281,
+              0
+            ],
+            [
+              -0.1351,
+              1.6371,
+              0
+            ],
+            [
+              -0.1424,
+              1.647,
+              0
+            ],
+            [
+              -0.1489,
+              1.6577,
+              0
+            ],
+            [
+              -0.1545,
+              1.6692,
+              0
+            ],
+            [
+              -0.1593,
+              1.6815,
+              0
+            ],
+            [
+              -0.1632,
+              1.6946,
+              0
+            ],
+            [
+              -0.1663,
+              1.7086,
+              0
+            ],
+            [
+              -0.1684,
+              1.7233,
+              0
+            ],
+            [
+              -0.1697,
+              1.7388,
+              0
+            ],
+            [
+              -0.1702,
+              1.755,
+              0
+            ],
+            [
+              -0.1697,
+              1.7712,
+              0
+            ],
+            [
+              -0.1684,
+              1.7867,
+              0
+            ],
+            [
+              -0.1663,
+              1.8014,
+              0
+            ],
+            [
+              -0.1632,
+              1.8154,
+              0
+            ],
+            [
+              -0.1593,
+              1.8285,
+              0
+            ],
+            [
+              -0.1545,
+              1.8408,
+              0
+            ],
+            [
+              -0.1489,
+              1.8523,
+              0
+            ],
+            [
+              -0.1424,
+              1.863,
+              0
+            ],
+            [
+              -0.1351,
+              1.8729,
+              0
+            ],
+            [
+              -0.1269,
+              1.8819,
+              0
+            ],
+            [
+              -0.1179,
+              1.8901,
+              0
+            ],
+            [
+              -0.108,
+              1.8974,
+              0
+            ],
+            [
+              -0.0973,
+              1.9039,
+              0
+            ],
+            [
+              -0.0858,
+              1.9095,
+              0
+            ],
+            [
+              -0.0735,
+              1.9143,
+              0
+            ],
+            [
+              -0.0604,
+              1.9182,
+              0
+            ],
+            [
+              -0.0464,
+              1.9213,
+              0
+            ],
+            [
+              -0.0317,
+              1.9234,
+              0
+            ],
+            [
+              -0.0162,
+              1.9247,
+              0
+            ],
+            [
+              0,
+              1.9252,
+              0
+            ],
+            [
+              0.0162,
+              1.9247,
+              0
+            ],
+            [
+              0.0317,
+              1.9234,
+              0
+            ],
+            [
+              0.0464,
+              1.9213,
+              0
+            ],
+            [
+              0.0604,
+              1.9182,
+              0
+            ],
+            [
+              0.0735,
+              1.9143,
+              0
+            ],
+            [
+              0.0858,
+              1.9095,
+              0
+            ],
+            [
+              0.0973,
+              1.9039,
+              0
+            ],
+            [
+              0.108,
+              1.8974,
+              0
+            ],
+            [
+              0.1179,
+              1.8901,
+              0
+            ],
+            [
+              0.1269,
+              1.8819,
+              0
+            ],
+            [
+              0.1351,
+              1.8729,
+              0
+            ],
+            [
+              0.1424,
+              1.863,
+              0
+            ],
+            [
+              0.1489,
+              1.8523,
+              0
+            ],
+            [
+              0.1545,
+              1.8408,
+              0
+            ],
+            [
+              0.1593,
+              1.8285,
+              0
+            ],
+            [
+              0.1632,
+              1.8154,
+              0
+            ],
+            [
+              0.1663,
+              1.8014,
+              0
+            ],
+            [
+              0.1684,
+              1.7867,
+              0
+            ],
+            [
+              0.1697,
+              1.7712,
+              0
+            ],
+            [
+              0.1702,
+              1.755,
+              0
+            ],
+            [
+              0.1697,
+              1.7388,
+              0
+            ],
+            [
+              0.1684,
+              1.7233,
+              0
+            ],
+            [
+              0.1663,
+              1.7086,
+              0
+            ],
+            [
+              0.1632,
+              1.6946,
+              0
+            ],
+            [
+              0.1593,
+              1.6815,
+              0
+            ],
+            [
+              0.1545,
+              1.6692,
+              0
+            ],
+            [
+              0.1489,
+              1.6577,
+              0
+            ],
+            [
+              0.1424,
+              1.647,
+              0
+            ],
+            [
+              0.1351,
+              1.6371,
+              0
+            ],
+            [
+              0.1269,
+              1.6281,
+              0
+            ],
+            [
+              0.1179,
+              1.6199,
+              0
+            ],
+            [
+              0.108,
+              1.6126,
+              0
+            ],
+            [
+              0.0973,
+              1.6061,
+              0
+            ],
+            [
+              0.0858,
+              1.6005,
+              0
+            ],
+            [
+              0.0735,
+              1.5957,
+              0
+            ],
+            [
+              0.0604,
+              1.5918,
+              0
+            ],
+            [
+              0.0464,
+              1.5887,
+              0
+            ],
+            [
+              0.0317,
+              1.5866,
+              0
+            ],
+            [
+              0.0162,
+              1.5853,
+              0
+            ],
+            [
+              0,
+              1.5848,
+              0
+            ],
+            [
+              -0.0162,
+              1.5853,
+              0
+            ],
+            [
+              -0.0317,
+              1.5866,
+              0
+            ],
+            [
+              -0.0464,
+              1.5887,
+              0
+            ],
+            [
+              -0.0604,
+              1.5918,
+              0
+            ],
+            [
+              -0.0735,
+              1.5957,
+              0
+            ],
+            [
+              -0.0858,
+              1.6005,
+              0
+            ],
+            [
+              -0.0973,
+              1.6061,
+              0
+            ],
+            [
+              -0.108,
+              1.6126,
+              0
+            ],
+            [
+              -0.1179,
+              1.6199,
+              0
+            ],
+            [
+              -0.1269,
+              1.6281,
+              0
+            ],
+            [
+              -0.1351,
+              1.6371,
+              0
+            ],
+            [
+              -0.1424,
+              1.647,
+              0
+            ],
+            [
+              -0.1489,
+              1.6577,
+              0
+            ],
+            [
+              -0.1545,
+              1.6692,
+              0
+            ],
+            [
+              -0.1593,
+              1.6815,
+              0
+            ],
+            [
+              -0.1632,
+              1.6946,
+              0
+            ],
+            [
+              -0.1663,
+              1.7086,
+              0
+            ],
+            [
+              -0.1684,
+              1.7233,
+              0
+            ],
+            [
+              -0.1697,
+              1.7388,
+              0
+            ],
+            [
+              -0.1702,
+              1.755,
+              0
+            ],
+            [
+              -0.1697,
+              1.7712,
+              0
+            ],
+            [
+              -0.1684,
+              1.7867,
+              0
+            ],
+            [
+              -0.1663,
+              1.8014,
+              0
+            ],
+            [
+              -0.1632,
+              1.8154,
+              0
+            ],
+            [
+              -0.1593,
+              1.8285,
+              0
+            ],
+            [
+              -0.1545,
+              1.8408,
+              0
+            ],
+            [
+              -0.1489,
+              1.8523,
+              0
+            ],
+            [
+              -0.1424,
+              1.863,
+              0
+            ],
+            [
+              -0.1351,
+              1.8729,
+              0
+            ],
+            [
+              -0.1269,
+              1.8819,
+              0
+            ],
+            [
+              -0.1179,
+              1.8901,
+              0
+            ],
+            [
+              -0.108,
+              1.8974,
+              0
+            ],
+            [
+              -0.0973,
+              1.9039,
+              0
+            ],
+            [
+              -0.0858,
+              1.9095,
+              0
+            ],
+            [
+              -0.0735,
+              1.9143,
+              0
+            ],
+            [
+              -0.0604,
+              1.9182,
+              0
+            ],
+            [
+              -0.0464,
+              1.9213,
+              0
+            ],
+            [
+              -0.0317,
+              1.9234,
+              0
+            ],
+            [
+              -0.0162,
+              1.9247,
+              0
+            ],
+            [
+              0,
+              1.9252,
+              0
+            ],
+            [
+              0.0162,
+              1.9247,
+              0
+            ],
+            [
+              0.0317,
+              1.9234,
+              0
+            ],
+            [
+              0.0464,
+              1.9213,
+              0
+            ],
+            [
+              0.0604,
+              1.9182,
+              0
+            ],
+            [
+              0.0735,
+              1.9143,
+              0
+            ],
+            [
+              0.0858,
+              1.9095,
+              0
+            ],
+            [
+              0.0973,
+              1.9039,
+              0
+            ],
+            [
+              0.108,
+              1.8974,
+              0
+            ],
+            [
+              0.1179,
+              1.8901,
+              0
+            ],
+            [
+              0.1269,
+              1.8819,
+              0
+            ],
+            [
+              0.1351,
+              1.8729,
+              0
+            ],
+            [
+              0.1424,
+              1.863,
+              0
+            ],
+            [
+              0.1489,
+              1.8523,
+              0
+            ],
+            [
+              0.1545,
+              1.8408,
+              0
+            ],
+            [
+              0.1593,
+              1.8285,
+              0
+            ],
+            [
+              0.1632,
+              1.8154,
+              0
+            ],
+            [
+              0.1663,
+              1.8014,
+              0
+            ],
+            [
+              0.1684,
+              1.7867,
+              0
+            ],
+            [
+              0.1697,
+              1.7712,
+              0
+            ],
+            [
+              0.1702,
+              1.755,
+              0
+            ],
+            [
+              0.1697,
+              1.7388,
+              0
+            ],
+            [
+              0.1684,
+              1.7233,
+              0
+            ],
+            [
+              0.1663,
+              1.7086,
+              0
+            ],
+            [
+              0.1632,
+              1.6946,
+              0
+            ],
+            [
+              0.1593,
+              1.6815,
+              0
+            ],
+            [
+              0.1545,
+              1.6692,
+              0
+            ],
+            [
+              0.1489,
+              1.6577,
+              0
+            ],
+            [
+              0.1424,
+              1.647,
+              0
+            ],
+            [
+              0.1351,
+              1.6371,
+              0
+            ],
+            [
+              0.1269,
+              1.6281,
+              0
+            ],
+            [
+              0.1179,
+              1.6199,
+              0
+            ],
+            [
+              0.108,
+              1.6126,
+              0
+            ],
+            [
+              0.0973,
+              1.6061,
+              0
+            ],
+            [
+              0.0858,
+              1.6005,
+              0
+            ],
+            [
+              0.0735,
+              1.5957,
+              0
+            ],
+            [
+              0.0604,
+              1.5918,
+              0
+            ],
+            [
+              0.0464,
+              1.5887,
+              0
+            ],
+            [
+              0.0317,
+              1.5866,
+              0
+            ],
+            [
+              0.0162,
+              1.5853,
+              0
+            ]
+          ],
+          "speed": 0.022935,
+          "loop": "loop",
+          "face": false
+        },
+        "motion:sails": {
+          "type": "spin",
+          "axis": "z",
+          "degPerSec": 2.5
+        }
+      }
+    },
+    {
+      "id": "nx-dress-sw-lanternhook-001",
+      "kind": "thing",
+      "pos": [
+        -57,
+        -0.030565,
+        -70
+      ],
+      "yaw": 4.927732279782902,
+      "scale": 1,
+      "lib": "store/639c54800d2e5856.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-chainvault",
+      "kind": "thing",
+      "pos": [
+        52.6,
+        -0.0478,
+        -19.2
+      ],
+      "yaw": -1.2217,
+      "scale": 1,
+      "lib": "store/8fecf67df7d33970.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-conoidfan",
+      "kind": "thing",
+      "pos": [
+        25.82,
+        -0.0154,
+        48.56
+      ],
+      "yaw": -1.0821,
+      "scale": 1,
+      "lib": "store/c75f8dfbbe2cf9f6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-lemniscateseat",
+      "kind": "thing",
+      "pos": [
+        -60,
+        -0.0237,
+        -7
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/a6ae240606798330.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-vesicawindow",
+      "kind": "thing",
+      "pos": [
+        70,
+        -0.0435,
+        -3
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/f4cedc72ffb79bfa.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-ne-timberyard-001",
+      "kind": "thing",
+      "pos": [
+        76.7,
+        -0.006,
+        69.4
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/dfafb8c800cf6e90.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-fifthbench",
+      "kind": "thing",
+      "pos": [
+        -23.5,
+        -0.04,
+        -51
+      ],
+      "yaw": -0.4328,
+      "scale": 1,
+      "lib": "store/62f33173ccdae107.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-windmill",
+      "kind": "thing",
+      "pos": [
+        -40,
+        0,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/a557d918b2c14f1a.glb",
+      "parent": null,
+      "comp": {
+        "motion:sails": {
+          "type": "spin",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rpm": 1.25,
+          "phase": 0,
+          "t0": 1788827161000
+        },
+        "motion:well_millstone": {
+          "type": "spin",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "rpm": 5,
+          "phase": 0,
+          "t0": 1788827161000
+        }
+      }
+    },
+    {
+      "id": "nx-town-bunkhouse",
+      "kind": "thing",
+      "pos": [
+        -9,
+        0,
+        -26
+      ],
+      "yaw": 0.31322457341772525,
+      "scale": 1,
+      "lib": "store/2b618274fa316c78.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-garden-cottage",
+      "kind": "thing",
+      "pos": [
+        -26,
+        0.0009494488404761625,
+        19
+      ],
+      "yaw": 2.2004415094410525,
+      "scale": 1,
+      "lib": "store/b5b3f10227856571.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-longhouse",
+      "kind": "thing",
+      "pos": [
+        9,
+        0,
+        26
+      ],
+      "yaw": -2.828368080172068,
+      "scale": 1,
+      "lib": "store/e38bb2a4c7933698.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-row-cottage",
+      "kind": "thing",
+      "pos": [
+        -23,
+        0,
+        -17
+      ],
+      "yaw": 0.9411511441487406,
+      "scale": 1,
+      "lib": "store/0558b5f41bda0777.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-tower-house",
+      "kind": "thing",
+      "pos": [
+        -9,
+        0,
+        26
+      ],
+      "yaw": 2.828368080172068,
+      "scale": 1,
+      "lib": "store/90723087ca8b5eb3.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-moonmoth-001",
+      "kind": "thing",
+      "pos": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "lib": "store/df959099a243ef27.glb",
+      "parent": null,
+      "comp": {
+        "sockets": {
+          "seat": {
+            "pos": [
+              0,
+              2.47,
+              0.18
+            ],
+            "pose": "sitchair",
+            "yaw": 0
+          }
+        },
+        "motion:moon_wing_left": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 5.5,
+          "phase": 3.141592653589793,
+          "damp": 0,
+          "t0": 0
+        },
+        "motion:moon_wing_right": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 0.22,
+          "period": 5.5,
+          "phase": 0,
+          "damp": 0,
+          "t0": 0
+        },
+        "lock": true
+      }
+    }
+  ],
+  "pre": {
+    "observedAt": "2026-09-08T03:17:23.698Z",
+    "httpStatus": 200,
+    "targets": [
+      {
+        "id": "nx-town-inn",
+        "lib": "store/861225bb15230d9b.glb",
+        "kind": "thing",
+        "pos": [
+          36,
+          0,
+          0
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.5,
+            -0.2,
+            -3.473
+          ],
+          "max": [
+            4.5,
+            7.194,
+            4.9
+          ],
+          "size": [
+            9,
+            7.394,
+            8.373
+          ],
+          "center": [
+            0,
+            3.497,
+            0.714
+          ]
+        },
+        "tris": 7468
+      }
+    ],
+    "companions": [
+      {
+        "id": "nx-dress-hens",
+        "kind": "thing",
+        "pos": [
+          33.5,
+          0,
+          -6
+        ],
+        "yaw": -1.8,
+        "scale": 1,
+        "lib": "store/edc1a4c7ca62d56f.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-dress-coop",
+        "kind": "thing",
+        "pos": [
+          37.5,
+          0,
+          -6.5
+        ],
+        "yaw": -1.8,
+        "scale": 1,
+        "lib": "store/f5d4039489c1ce4b.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-dress-well",
+        "kind": "thing",
+        "pos": [
+          30,
+          0,
+          -4.5
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/35f17cf4f6a6db9f.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-town-inn-l",
+        "kind": "light",
+        "pos": [
+          36,
+          2.35,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": null,
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-artwalk-b2-inn-lintel",
+        "kind": "thing",
+        "pos": [
+          32.97,
+          2.78,
+          1.85533990070824e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/875942618767052c.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-artwalk-b2-inn-threshold",
+        "kind": "thing",
+        "pos": [
+          33.05,
+          0.198,
+          1.806354028742346e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/cc80fa377494a76c.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-artwalk-b27-waterline",
+        "kind": "thing",
+        "pos": [
+          30,
+          0,
+          -4.5
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/580706ad8e46212c.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-sign-stable-001",
+        "kind": "thing",
+        "pos": [
+          40.9,
+          0,
+          1.285879139104721e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/afee37dd9a5b5d67.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-struct-cellardoor",
+        "kind": "thing",
+        "pos": [
+          36,
+          -0.04542721690550573,
+          5.55
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/fe755f78b3f300d9.glb",
+        "parent": null,
+        "comp": {}
+      }
+    ],
+    "all17BaselineTargetsGuarded": false,
+    "protectedCount": 279,
+    "protectedTuplesSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33"
+  },
+  "rendererCheck": {
+    "request": {
+      "endpoint": "https://eidoverse.billding.dev/snap",
+      "world": "commons-next",
+      "follow": "arthur-village-eye-e266c875-c6b",
+      "view": "first",
+      "startedAt": "2026-09-08T03:17:23.699Z"
+    },
+    "completedAt": "2026-09-08T03:17:23.801Z",
+    "httpStatus": 503,
+    "contentType": "text/plain;charset=utf-8",
+    "cacheControl": null,
+    "status": "RENDERER_UNAVAILABLE"
+  },
+  "post": {
+    "observedAt": "2026-09-08T03:17:25.315Z",
+    "httpStatus": 200,
+    "targets": [
+      {
+        "id": "nx-town-inn",
+        "lib": "store/861225bb15230d9b.glb",
+        "kind": "thing",
+        "pos": [
+          36,
+          0,
+          0
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -4.5,
+            -0.2,
+            -3.473
+          ],
+          "max": [
+            4.5,
+            7.194,
+            4.9
+          ],
+          "size": [
+            9,
+            7.394,
+            8.373
+          ],
+          "center": [
+            0,
+            3.497,
+            0.714
+          ]
+        },
+        "tris": 7468
+      }
+    ],
+    "companions": [
+      {
+        "id": "nx-dress-hens",
+        "kind": "thing",
+        "pos": [
+          33.5,
+          0,
+          -6
+        ],
+        "yaw": -1.8,
+        "scale": 1,
+        "lib": "store/edc1a4c7ca62d56f.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-dress-coop",
+        "kind": "thing",
+        "pos": [
+          37.5,
+          0,
+          -6.5
+        ],
+        "yaw": -1.8,
+        "scale": 1,
+        "lib": "store/f5d4039489c1ce4b.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-dress-well",
+        "kind": "thing",
+        "pos": [
+          30,
+          0,
+          -4.5
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/35f17cf4f6a6db9f.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-town-inn-l",
+        "kind": "light",
+        "pos": [
+          36,
+          2.35,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": null,
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-artwalk-b2-inn-lintel",
+        "kind": "thing",
+        "pos": [
+          32.97,
+          2.78,
+          1.85533990070824e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/875942618767052c.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-artwalk-b2-inn-threshold",
+        "kind": "thing",
+        "pos": [
+          33.05,
+          0.198,
+          1.806354028742346e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/cc80fa377494a76c.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-artwalk-b27-waterline",
+        "kind": "thing",
+        "pos": [
+          30,
+          0,
+          -4.5
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/580706ad8e46212c.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-sign-stable-001",
+        "kind": "thing",
+        "pos": [
+          40.9,
+          0,
+          1.285879139104721e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "lib": "store/afee37dd9a5b5d67.glb",
+        "parent": null,
+        "comp": {}
+      },
+      {
+        "id": "nx-struct-cellardoor",
+        "kind": "thing",
+        "pos": [
+          36,
+          -0.04542721690550573,
+          5.55
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/fe755f78b3f300d9.glb",
+        "parent": null,
+        "comp": {}
+      }
+    ],
+    "all17BaselineTargetsGuarded": false,
+    "protectedCount": 279,
+    "protectedTuplesSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33"
+  },
+  "completedAt": "2026-09-08T03:17:25.317Z",
+  "captured": 0
+}

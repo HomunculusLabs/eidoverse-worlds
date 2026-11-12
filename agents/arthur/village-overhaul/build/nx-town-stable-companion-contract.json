@@ -1,0 +1,189 @@
+{
+  "evidenceKind": "unaltered-frozen-protected-records-not-live-readback",
+  "host": "nx-town-stable",
+  "protectedSnapshotSha256": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db",
+  "records": [
+    {
+      "geom": {
+        "id": "nx-dress-stablebench",
+        "lib": "store/c24b7628da5f74ae.glb",
+        "kind": "thing",
+        "pos": [
+          42,
+          0,
+          6
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.85,
+            0,
+            -0.225
+          ],
+          "max": [
+            1.111,
+            1.695,
+            0.225
+          ],
+          "size": [
+            1.961,
+            1.695,
+            0.45
+          ],
+          "center": [
+            0.13,
+            0.848,
+            0
+          ]
+        },
+        "tris": 72
+      },
+      "folded": {
+        "lib": "store/c24b7628da5f74ae.glb",
+        "pos": [
+          42,
+          0,
+          6
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "actor": "arthur-nvp146-place",
+        "ts": 1788025825597
+      }
+    },
+    {
+      "geom": {
+        "id": "nx-artwalk-b8-stable-harmonic-rein",
+        "lib": "store/cba8d0efb0518938.glb",
+        "kind": "thing",
+        "pos": [
+          45.16,
+          2.22,
+          -1.3226185430791415e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -2.45,
+            0,
+            -0.043
+          ],
+          "max": [
+            2.45,
+            0.42,
+            0.11
+          ],
+          "size": [
+            4.9,
+            0.42,
+            0.153
+          ],
+          "center": [
+            0,
+            0.21,
+            0.034
+          ]
+        },
+        "tris": 876
+      },
+      "folded": {
+        "lib": "store/cba8d0efb0518938.glb",
+        "pos": [
+          45.16,
+          2.22,
+          -1.3226185430791415e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "actor": "arthur-artwalk-b8-builder",
+        "ts": 1788110690312
+      }
+    },
+    {
+      "geom": {
+        "id": "nx-town-stable-l",
+        "lib": null,
+        "kind": "light",
+        "pos": [
+          43,
+          1.9,
+          1.8
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "parent": null,
+        "comp": {}
+      },
+      "folded": {
+        "kind": "light",
+        "pos": [
+          43,
+          1.9,
+          1.8
+        ],
+        "color": 16756838,
+        "intensity": 1.4,
+        "range": 5,
+        "actor": "arthur-interior-16-place",
+        "ts": 1788200172759
+      }
+    },
+    {
+      "geom": {
+        "id": "nx-sign-stable-001",
+        "lib": "store/afee37dd9a5b5d67.glb",
+        "kind": "thing",
+        "pos": [
+          40.9,
+          0,
+          1.285879139104721e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.25,
+            2.02,
+            0
+          ],
+          "max": [
+            0.25,
+            2.7,
+            0.324
+          ],
+          "size": [
+            0.5,
+            0.68,
+            0.324
+          ],
+          "center": [
+            0,
+            2.36,
+            0.162
+          ]
+        },
+        "tris": 696
+      },
+      "folded": {
+        "lib": "store/afee37dd9a5b5d67.glb",
+        "pos": [
+          40.9,
+          0,
+          1.285879139104721e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "scale": 1,
+        "actor": "arthur-waysign-1-builder",
+        "ts": 1788665179278
+      }
+    }
+  ]
+}

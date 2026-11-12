@@ -1,0 +1,7 @@
+// Deliberate unresolved red gate: no authorized production repair has been applied.
+import {test,expect} from 'bun:test';
+import {diagnose,nearest} from './forge-followup-geometry.ts';
+const d=await diagnose();
+test('distance implementation measures disjoint parallel triangle planes',()=>{const t=(z:number)=>({node:'control',triangleIndex:0,v:[[0,0,z],[1,0,z],[0,1,z]]});expect(nearest([t(0)],[t(.3)]).gap).toBeCloseTo(.3,12);expect(nearest([t(0)],[t(0)]).gap).toBe(0);});
+test('ownership: upper cap is new court architecture; lower bar is frozen B29',()=>{expect(d.upper.partName).toBe('outer_verge_cap');expect(d.upper.owner).toBe('nx-court');expect(d.upper.baselineTrianglesEntirelyInCapBox).toBe(0);expect(d.lower.owner).toBe('nx-artwalk-b29-strike-count');expect(d.lower.node).toBe('b29_0');expect(d.lower.geometryUnchanged).toBe(true);expect(d.lower.downloadPinMatches).toBe(true);expect(d.lower.tupleMatchesCapturedFolded).toBe(true);expect(d.lower.assemblyMatchesExactFrozenTuple).toBe(true);expect(d.lower.originalPart.name).toBe('back');expect(d.lower.gapBeyondCourtRear).toBeGreaterThan(.78);expect(d.frozenPins.every(x=>x.pass)).toBe(true);expect(d.assemblySelection.every((x:any)=>x.manifestShaMatches)).toBe(true);});
+test('REPAIR ACCEPTANCE: outer_verge_cap must physically connect to court architecture',()=>{expect(d.upper.nearestOtherCourtTriangle.gap).toBeLessThanOrEqual(.001);});

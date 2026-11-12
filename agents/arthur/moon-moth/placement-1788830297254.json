@@ -1,0 +1,516 @@
+{
+  "verdict": "PLACED_VERIFIED",
+  "at": "2026-09-08T01:18:17.254Z",
+  "world": "commons-next",
+  "target": "nx-moonmoth-001",
+  "counts": {
+    "uploads": 0,
+    "uploadAttempts": 0,
+    "lastUpload": 0,
+    "verbs": 6
+  },
+  "spatial": {
+    "verdict": "SPATIAL_PASS",
+    "scope": "DOCK_VERTICAL_LIFT_AND_ACTUAL_ELEVATED_CIRCUIT",
+    "spatialOnly": true,
+    "id": "nx-moonmoth-001",
+    "world": "commons-next",
+    "pos": [
+      -90,
+      0.0008015504140560737,
+      13
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "sha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+    "contractSha256": "6b837d2bd8b05487f4b0d098199ce271e73b0c08e2ddeaaaf8aa3c8391e349dd",
+    "sceneSha256": "629d9757ed040406d68c3954ed8dc46e49960c798ea414a2ff409d12c63f4593",
+    "censusCount": 295,
+    "verifiedAt": "2026-09-08T01:18:06.293Z",
+    "rest": {
+      "min": [
+        -5.550005290044006,
+        0.012882810086011887,
+        -3.9445739317657584
+      ],
+      "max": [
+        5.550059819606956,
+        3.9711774796863875,
+        3.1021860808194295
+      ]
+    },
+    "swept": {
+      "min": [
+        -5.964267855860677,
+        0.012882810086011887,
+        -4.0667368818624094
+      ],
+      "max": [
+        5.964247427526736,
+        4.804254387161146,
+        3.3638699862276518
+      ]
+    },
+    "restRadius": 6.258770500909365,
+    "sweptRadius": 6.75169107365879,
+    "site": {
+      "ok": true,
+      "x": -90,
+      "z": 13,
+      "radius": 6.8,
+      "plazaDistance": 90.93404203047393,
+      "mathAzimuthDegrees": 171.7807907511009,
+      "rim": [
+        84.13404203047394,
+        97.73404203047393
+      ],
+      "axisGap": 6.2,
+      "nearest": [
+        {
+          "id": "nx-struct-screwwell",
+          "gap": 2.6229999523162855
+        },
+        {
+          "id": "nx-cultivation-lavender-0006",
+          "gap": 2.6439625696595526
+        },
+        {
+          "id": "nx-struct-millrace",
+          "gap": 3.8111160066449683
+        },
+        {
+          "id": "nx-cultivation-orchard-0012",
+          "gap": 6.581712560111488
+        },
+        {
+          "id": "nx-temple-terrace-0035",
+          "gap": 13.649982147248643
+        },
+        {
+          "id": "nx-cultivation-orchard-0020",
+          "gap": 19.208000973147914
+        },
+        {
+          "id": "nx-temple-labyrinth-0004",
+          "gap": 20.503658364227004
+        },
+        {
+          "id": "nx-struct-lemniscateseat",
+          "gap": 25.670365874132063
+        }
+      ],
+      "nearestHigh": [
+        {
+          "id": "nx-town-windmill",
+          "height": 11.938243305369689,
+          "gap": 38.66143641670959
+        },
+        {
+          "id": "nx-town-tower-house",
+          "height": 8.287,
+          "gap": 71.5791029504087
+        },
+        {
+          "id": "nx-town-belltower",
+          "height": 7.601999999999999,
+          "gap": 87.51725320295493
+        },
+        {
+          "id": "nx-struct-shelltower",
+          "height": 8.019973998712333,
+          "gap": 88.89508379549196
+        },
+        {
+          "id": "nx-tower",
+          "height": 8.477,
+          "gap": 92.3548133086324
+        }
+      ],
+      "failures": []
+    },
+    "terrain": {
+      "source": "WorldAgent.heightAt; terrain readiness explicitly checked",
+      "center": {
+        "x": -90,
+        "z": 13,
+        "h": 0.0008015504140560737
+      },
+      "low": {
+        "x": -83.71761917892326,
+        "z": 15.60224734008261,
+        "h": -0.007182840281901335
+      },
+      "high": {
+        "x": -92.60224734008261,
+        "z": 6.717619178923252,
+        "h": 0.0126074322323608
+      },
+      "spread": 0.019790272514262137,
+      "sampleCount": 178,
+      "gridStep": 1,
+      "perimeterSamples": 32
+    },
+    "cruise": {
+      "rootBounds": {
+        "min": [
+          -90,
+          0.0008015504140560737,
+          7
+        ],
+        "max": [
+          -78,
+          22.000801550414057,
+          19
+        ]
+      },
+      "flightRim": [
+        71.51347265956223,
+        98.78369420718
+      ],
+      "cruiseBottom": 22.000801550414057,
+      "highest": {
+        "id": "nx-struct-northneedle",
+        "y": 13.338110444450438
+      },
+      "minimumVerticalGap": 8.662691105963619,
+      "flightContractSha256": "c229ea129b9dc5c12469aa0b03b8ebb3dc78b2aa3a06552262864ea3ca9962c6"
+    },
+    "clearColumn": "all elevations",
+    "dynamicGeometry": [
+      {
+        "id": "nx-hearth",
+        "lib": "store/027f6f019f9981bf.glb",
+        "servedSha256": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1",
+        "keys": [
+          "motion:well_",
+          "motion:pz_kettle"
+        ],
+        "bbox": {
+          "min": [
+            -3.0201332569122314,
+            -0.048,
+            -3.0201332569122314
+          ],
+          "max": [
+            4.150000095367432,
+            2.1783551412059436,
+            3.188
+          ]
+        }
+      },
+      {
+        "id": "nx-carousel",
+        "lib": "store/ce3633992d07055e.glb",
+        "servedSha256": "24d7a62d1454bf06fc179e88179272782ca500ff3e050f5714f3ee6a5c8ca8be",
+        "keys": [
+          "motion:carousel",
+          "motion:horse_0",
+          "motion:horse_2",
+          "motion:horse_4",
+          "motion:horse_6"
+        ],
+        "bbox": {
+          "min": [
+            -3.55,
+            -2.384185793236071e-9,
+            -3.55
+          ],
+          "max": [
+            3.55,
+            6.77,
+            3.84
+          ]
+        }
+      },
+      {
+        "id": "nx-forge",
+        "lib": "store/620120c4d6f0b4a0.glb",
+        "servedSha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+        "keys": [
+          "motion:fire_fg_coals"
+        ],
+        "bbox": {
+          "min": [
+            -0.873,
+            -0.005000011995434761,
+            -0.7770000100135803
+          ],
+          "max": [
+            1.4600000381469727,
+            2.1,
+            0.61
+          ]
+        }
+      },
+      {
+        "id": "nx-artwalk-h6",
+        "lib": "store/a61457df15380006.glb",
+        "servedSha256": "8c642f0f897d47bd1ebba72271a8eb2c700924db5669260b64ee041e718c4a5a",
+        "keys": [
+          "motion:chime"
+        ],
+        "bbox": {
+          "min": [
+            -2.1600000143051146,
+            -5.960464483090178e-9,
+            -0.42000902959715325
+          ],
+          "max": [
+            2.16,
+            4.065001827180385,
+            4.38
+          ]
+        }
+      },
+      {
+        "id": "nx-artwalk-h7",
+        "lib": "store/7baac8fd9b45bc92.glb",
+        "servedSha256": "71201d71774c82c92f9862b6c1bf8614132b48619f9f815dd1d3dc882b43e8b1",
+        "keys": [
+          "motion:scope"
+        ],
+        "bbox": {
+          "min": [
+            -2.200000047683716,
+            -1.907348634588857e-8,
+            -2.200000047683716
+          ],
+          "max": [
+            2.200000047683716,
+            3.527,
+            5.100031712651253
+          ]
+        }
+      },
+      {
+        "id": "nx-struct-orrery",
+        "lib": "store/d680b1cdb64ed9e9.glb",
+        "servedSha256": "f4603e437c448a89c9f4d1e67a188c8ff4b0b888c1f3c38b7444d4e02d7478f3",
+        "keys": [
+          "motion:orb"
+        ],
+        "bbox": {
+          "min": [
+            -1.100000023841858,
+            0,
+            -1.100000023841858
+          ],
+          "max": [
+            1.100000023841858,
+            3.175325644016266,
+            1.100000023841858
+          ]
+        }
+      },
+      {
+        "id": "nx-town-potter",
+        "lib": "store/2062c4468996b2bb.glb",
+        "servedSha256": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709",
+        "keys": [
+          "motion:pwheel"
+        ],
+        "bbox": {
+          "min": [
+            -1.725000023841858,
+            -0.002,
+            -1
+          ],
+          "max": [
+            1.7100000381469727,
+            1.015,
+            0.7063624858856201
+          ]
+        }
+      },
+      {
+        "id": "nx-struct-screwwell",
+        "lib": "store/6fbaede8dbe95f0d.glb",
+        "servedSha256": "7ef1c6cde79d2b0f704f748f7ef17ee29ba37e546f9c293727a695276234c1bd",
+        "keys": [
+          "motion:well_screw"
+        ],
+        "bbox": {
+          "min": [
+            -0.15,
+            -0.019,
+            -3.575000047683716
+          ],
+          "max": [
+            6.041,
+            4.1142714097671975,
+            1.5500528812408447
+          ]
+        }
+      },
+      {
+        "id": "nx-struct-reuleauxrotor",
+        "lib": "store/670e397cb6422ee2.glb",
+        "servedSha256": "8fda3816e7c0653a9941218490cbb48723297d63a329cda3382687dc1923ec3b",
+        "keys": [
+          "motion:pwheel_rr",
+          "motion:sails"
+        ],
+        "bbox": {
+          "min": [
+            -1.75,
+            0,
+            -1.75
+          ],
+          "max": [
+            1.75,
+            3.29,
+            1.75
+          ]
+        }
+      },
+      {
+        "id": "nx-town-windmill",
+        "lib": "store/a557d918b2c14f1a.glb",
+        "servedSha256": "0eaa560818ad969ee94376b088aacdfa18027c51dd20269afed1440e218827bb",
+        "keys": [
+          "motion:sails",
+          "motion:well_millstone"
+        ],
+        "bbox": {
+          "min": [
+            -3.736243305369688,
+            -0.18,
+            -5.49
+          ],
+          "max": [
+            3.736243305369688,
+            11.936243305369688,
+            3.21
+          ]
+        }
+      }
+    ],
+    "pending": [
+      "flight.js path parity with pinned flight-contract.ts",
+      "rider/socket and dismount fit",
+      "visual/approach review; no walk or visibility PASS implied"
+    ]
+  },
+  "servedContract": {
+    "sourceSha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+    "servedSha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+    "lib": "store/df959099a243ef27.glb",
+    "servedFile": "agents/arthur/moon-moth/served.glb",
+    "sourceBytes": 1272084,
+    "servedBytes": 128416,
+    "review": {
+      "scope": "Actual optimized served bytes; static front/aerial/night plus actual client engine part-motion in an isolated local scene",
+      "visualJudge": "configured image tool auxiliary analysis, not native image attachment",
+      "visualFinding": "Recognizable, attached wing roots, clear membranes, no observed corruption or ground intersection; passenger backrest intentionally partly hidden in frontal approach",
+      "motionStats": "agents/arthur/moon-moth/motion-review/727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c/stats.json",
+      "spatialReceipt": "agents/arthur/moon-moth/served-spatial-review.json",
+      "minimumWingPlaneClearanceM": 1.6552419810497911,
+      "staticMaxMatrixDelta": 0,
+      "rootMaxMatrixDelta": 0,
+      "liveRideVerified": false
+    }
+  },
+  "entity": {
+    "lib": "store/df959099a243ef27.glb",
+    "pos": [
+      -90,
+      0.0008015504140560737,
+      13
+    ],
+    "yaw": 1.5707963267948966,
+    "scale": 1,
+    "collide": "exact",
+    "actor": "arthur-moonmoth-builder",
+    "ts": 1788830285765,
+    "comp": {
+      "sockets": {
+        "seat": {
+          "pos": [
+            0,
+            2.47,
+            0.18
+          ],
+          "pose": "sitchair",
+          "yaw": 0
+        }
+      },
+      "motion:moon_wing_left": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 3.141592653589793,
+        "damp": 0,
+        "t0": 0
+      },
+      "motion:moon_wing_right": {
+        "type": "pendulum",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "pivot": [
+          0,
+          0,
+          0
+        ],
+        "amp": 0.22,
+        "period": 5.5,
+        "phase": 0,
+        "damp": 0,
+        "t0": 0
+      },
+      "lock": true
+    }
+  },
+  "behavior": {
+    "src": "store/scripts/4adcd4929578e650.js",
+    "attach": "nx-moonmoth-001",
+    "caps": {
+      "verbs": [
+        "motion"
+      ],
+      "selfOnly": true
+    },
+    "knobs": {
+      "perch": [
+        -90,
+        0.0008015504140560737,
+        13
+      ],
+      "groundY": 0.0008015504140560737,
+      "yaw": 1.5707963267948966
+    },
+    "author": "arthur-moonmoth-builder",
+    "ts": 1788830289570,
+    "state": {
+      "flight": {
+        "phase": "rest"
+      }
+    }
+  },
+  "debug": {
+    "type": "debug",
+    "reqId": "moon-debug-1",
+    "behavior": "nx-moonmoth-001-flight",
+    "status": "running",
+    "events": [
+      {
+        "ts": 1788830295504,
+        "kind": "script-log",
+        "line": "▶ loaded store/scripts/4adcd4929578e650.js on nx-moonmoth-001 (1 timer(s))"
+      }
+    ]
+  },
+  "scope": "exact target and scoped behavior; no seating/visual PASS implied"
+}

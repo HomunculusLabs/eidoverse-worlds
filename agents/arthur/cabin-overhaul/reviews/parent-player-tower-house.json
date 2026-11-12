@@ -1,0 +1,261 @@
+{
+  "status": "PASS",
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-tower-house",
+  "bounds": {
+    "min": [
+      -3.0941314697265625,
+      2.2351741291171123e-10,
+      -3.0999975204467773
+    ],
+    "max": [
+      3.259999990463257,
+      8.28499984741211,
+      3.305000066757202
+    ]
+  },
+  "triangles": 20264,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": true,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "ground-entry",
+      "requiredWidth": 1.6,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.8,
+        0.02,
+        1.85
+      ],
+      "max": [
+        0.8,
+        2.22,
+        3.33
+      ],
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "name": "upper-balcony-entry",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.7,
+        3.05,
+        2.48
+      ],
+      "max": [
+        0.7,
+        5.25,
+        2.73
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "outside",
+      "to": "door-threshold",
+      "pass": true,
+      "steps": 39,
+      "maxPush": 0,
+      "maxRise": 0.019999999552965164,
+      "minY": 0,
+      "maxY": 0.019999999552965164,
+      "expectedFloorRange": [
+        -0.035,
+        0.05500000000000001
+      ],
+      "arrivalXZ": 5.773159728050814e-15,
+      "floorError": 4.470348362317633e-10,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.019999999552965164,
+        2.1500000000000057
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "door-threshold",
+      "to": "study-rug",
+      "pass": true,
+      "steps": 46,
+      "maxPush": 0,
+      "maxRise": 0.02149999886751175,
+      "minY": 0.019999999552965164,
+      "maxY": 0.04149999842047691,
+      "expectedFloorRange": [
+        -0.015000000000000003,
+        0.07650000000000001
+      ],
+      "arrivalXZ": 1.807312143953211e-15,
+      "floorError": 0.0015000008940696738,
+      "geometryHits": 0,
+      "arrived": [
+        0.3500000000000003,
+        0.03999999910593033,
+        0.3499999999999982
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "study-rug",
+      "to": "study-desk-approach",
+      "pass": true,
+      "steps": 24,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.03999999910593033,
+      "maxY": 0.03999999910593033,
+      "expectedFloorRange": [
+        0.006499999999999999,
+        0.07650000000000001
+      ],
+      "arrivalXZ": 1.1102230246251565e-16,
+      "floorError": 0.0015000008940696738,
+      "geometryHits": 0,
+      "arrived": [
+        0.40000000000000013,
+        0.03999999910593033,
+        -0.6
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "study-desk-approach",
+      "to": "study-rug",
+      "pass": true,
+      "steps": 24,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.03999999910593033,
+      "maxY": 0.0415,
+      "expectedFloorRange": [
+        0.006499999999999999,
+        0.07650000000000001
+      ],
+      "arrivalXZ": 3.1401849173675503e-16,
+      "floorError": 0.0015000008940696738,
+      "geometryHits": 0,
+      "arrived": [
+        0.3500000000000002,
+        0.03999999910593033,
+        0.34999999999999976
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "study-rug",
+      "to": "door-threshold",
+      "pass": true,
+      "steps": 46,
+      "maxPush": 0,
+      "maxRise": 0.001499999314546585,
+      "minY": 0,
+      "maxY": 0.04149999842047691,
+      "expectedFloorRange": [
+        -0.015000000000000003,
+        0.07650000000000001
+      ],
+      "arrivalXZ": 2.706168622523819e-16,
+      "floorError": 0.02,
+      "geometryHits": 0,
+      "arrived": [
+        -2.706168622523819e-16,
+        0,
+        2.15
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "door-threshold",
+      "to": "outside",
+      "pass": true,
+      "steps": 39,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0,
+      "expectedFloorRange": [
+        -0.035,
+        0.05500000000000001
+      ],
+      "arrivalXZ": 5.773159728050814e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0,
+        3.6999999999999944
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b21-tower-ascension-count",
+      "min": [
+        -0.81,
+        2.22,
+        2.788
+      ],
+      "max": [
+        0.81,
+        2.68,
+        2.91
+      ],
+      "allowance": {
+        "min": [
+          -0.81,
+          2.22,
+          2.788
+        ],
+        "max": [
+          0.81,
+          2.68,
+          2.792
+        ],
+        "reason": "Only a 4mm deep backing-contact strip at the rider rear plane z=2.790 is permitted. Lintel contact is intentional; no host geometry may intrude into the relief face. Rider local origin remains [0,2.22,2.8225]."
+      },
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "neighbors": [],
+  "failures": [],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/build/nx-town-tower-house.glb",
+  "modelSha256": "90723087ca8b5eb3d5e3e7d13828ee12e254266ad63504d07f7f4d14b4b29253",
+  "contractSha256": "fe270f2bd3570c01b2f33c4c9f2256e4d5a0ced7e8d8a4548e9d5dc3495a1c97",
+  "verifierSha256": "a9e8f732a74c28b9b30aecd98793a13d88edb58dfacc2d12322a7e9c7608d360",
+  "meshes": 11
+}

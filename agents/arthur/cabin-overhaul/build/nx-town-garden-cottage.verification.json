@@ -1,0 +1,36 @@
+{
+  "status": "LOCAL_GEOMETRY_PASS",
+  "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/build/nx-town-garden-cottage.glb",
+  "sha256": "b5b3f1022785657167b43dffb04e501a83f1b76c53d06e0cf4998384177a265f",
+  "triangles": 8180,
+  "meshes": 14,
+  "bounds": {
+    "min": [
+      -5.099999904632568,
+      -0.12999999523162842,
+      -3.9000000953674316
+    ],
+    "max": [
+      3.619999885559082,
+      6.000500202178955,
+      2.700000047683716
+    ]
+  },
+  "doorLane": {
+    "min": [
+      -0.7,
+      0.149,
+      -0.72
+    ],
+    "max": [
+      0.7,
+      2.349,
+      2.69
+    ],
+    "blockingTriangles": 0
+  },
+  "limitations": [
+    "Local host geometry only; excludes separately owned b17 rider and neighbors.",
+    "Not a live player collision or walk verdict."
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "status": "ACCEPTED_GEOMETRY_RESTORED_VERIFIED",
+  "heightConstraint": "Withdrawn by parent: no +1m cap in BRIEF/validatePlan",
+  "models": [
+    {
+      "id": "nx-town-stable",
+      "modelSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+      "sourceSha256": "27d18fbdb1e0b9e5cdd73169546eb79c4bb35cbc46670accfd2635f5712b95a0",
+      "bounds": {
+        "min": [
+          -3,
+          -0.20000000298023224,
+          -2.7750000953674316
+        ],
+        "max": [
+          3,
+          4.900000095367432,
+          2.574972629547119
+        ]
+      },
+      "routeLegs": 20,
+      "routePasses": 20,
+      "supportSamples": 608,
+      "retainedTriangles": 452,
+      "renders": [
+        {
+          "directory": "reviews/nx-town-stable-after",
+          "manifestSha256": "33b019133ce40386b3303c99d1ffb0f488e47e8c87ea452115699f29c48da489",
+          "renderedModelSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+          "frameHashesVerified": 9
+        },
+        {
+          "directory": "reviews/nx-town-stable-candidate-details",
+          "manifestSha256": "08fe6cfbf171a53011192b01cd36209cb6ac4a79d5d5b395b8869c14db6de510",
+          "renderedModelSha256": "089e5ffcc199ec2f547f422e46c763f26156b51b34472c18d46d26b118c98d88",
+          "frameHashesVerified": 9
+        },
+        {
+          "directory": "reviews/nx-town-stable-roof-context",
+          "manifestSha256": "f549ba3e6419e739d03e9d09faf53733757fdab2836f6d4d2e8fe0827fd8d21d",
+          "renderedModelSha256": "089e5ffcc199ec2f547f422e46c763f26156b51b34472c18d46d26b118c98d88",
+          "frameHashesVerified": 9
+        }
+      ],
+      "reportSha256": "d8fbbbdd08a681bc9ae6c47162efebf276ca2a1ccc4a3111193131c428c08205"
+    },
+    {
+      "id": "nx-town-woodyard",
+      "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+      "sourceSha256": "f6fee33be5ae5630e1189c495616ddcbff2c2d8bd6126b1b77aa3a11223afed0",
+      "bounds": {
+        "min": [
+          -2.0999999046325684,
+          -4.76837147544984e-09,
+          -1.090248942375183
+        ],
+        "max": [
+          2.875746011734009,
+          3.559999942779541,
+          1.5084253549575806
+        ]
+      },
+      "routeLegs": 14,
+      "routePasses": 14,
+      "supportSamples": 353,
+      "retainedTriangles": 2228,
+      "renders": [
+        {
+          "directory": "reviews/nx-town-woodyard-after",
+          "manifestSha256": "bc8680da48af5998e9cdbeb86d127e6d43b2518117b08f0636340cc9cd33f528",
+          "renderedModelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+          "frameHashesVerified": 9
+        },
+        {
+          "directory": "reviews/nx-town-woodyard-candidate-details",
+          "manifestSha256": "54a88aa4b08bb5ce47875d1cb98121b77dc1c972760c95bb5d22f18ba628999c",
+          "renderedModelSha256": "25106605ee2b2587eef9a6140bee7a5d7bade161a558799162ece590d8f9125d",
+          "frameHashesVerified": 9
+        },
+        {
+          "directory": "reviews/nx-town-woodyard-roof-context",
+          "manifestSha256": "3ed71459f783cca90d2dbe6a9c3938dfe884b9a735dc3c148de4c06c5396efb8",
+          "renderedModelSha256": "25106605ee2b2587eef9a6140bee7a5d7bade161a558799162ece590d8f9125d",
+          "frameHashesVerified": 9
+        }
+      ],
+      "reportSha256": "9cf7950bec1133ecea42bdf0b4328944b43bc0493a5a93bdde4b798511acccfd"
+    }
+  ],
+  "frozenInputsUnchanged": true
+}

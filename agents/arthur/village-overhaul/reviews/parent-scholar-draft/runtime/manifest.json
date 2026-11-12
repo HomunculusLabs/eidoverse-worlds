@@ -1,0 +1,15 @@
+{
+  "provenance": "parent-fetched exact public client modules; no engine deployment",
+  "files": {
+    "colliders.js": {
+      "sourceFile": "/tmp/cabin-served-colliders.js",
+      "publicPath": "/lib/colliders.js",
+      "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+    },
+    "supportclass.js": {
+      "sourceFile": "/tmp/cabin-served-supportclass.js",
+      "publicPath": "/lib/supportclass.js",
+      "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+    }
+  }
+}

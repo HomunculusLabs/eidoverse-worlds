@@ -1,0 +1,195 @@
+{
+  "status": "STARTED",
+  "world": "commons-next",
+  "phase": "after",
+  "evidenceKind": "actual-live-snap-api",
+  "startedAt": "2026-09-08T04:31:26.170Z",
+  "bodyId": "arthur-village-eye-0cfd7238-651",
+  "sourceSha256": "c4aa3404c09271380d5281bd71ece753c510236f340a21c9f9a93b798bcc29ab",
+  "contractsSha256": "90815fda2cf7d7b16b19142c86c4463a7508ca920e857a9fcce4c5a2e7300802",
+  "viewsSha256": "a77e1712dd8d3f1cf5a63a5fa8ec047d15f4e81e61f78b751e3d60f57cf2c7d3",
+  "protectedSha256": "4f6f56a1369cc2acbf2d80d2cea5f44492d0da139a8ec07dd57351984a65f00a",
+  "expected": [
+    {
+      "id": "nx-tower",
+      "lib": "store/648ca0c0148cf1cc.glb",
+      "kind": "thing",
+      "pos": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "sockets": {
+          "study": {
+            "pos": [
+              -1.35,
+              3,
+              -0.5
+            ],
+            "yaw": -1.5707963267948966
+          }
+        }
+      },
+      "bbox": {
+        "min": [
+          -3.25,
+          -0.2,
+          -3.25
+        ],
+        "max": [
+          3.507,
+          8.4,
+          3.6
+        ],
+        "size": [
+          6.757,
+          8.6,
+          6.85
+        ],
+        "center": [
+          0.128,
+          4.1,
+          0.175
+        ]
+      },
+      "tris": 5822
+    },
+    {
+      "id": "nx-town-kiln",
+      "lib": "store/3e96c8b074852ddc.glb",
+      "kind": "thing",
+      "pos": [
+        19.158717425740413,
+        -0.02065,
+        22.431975985200914
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -2.195,
+          0,
+          -1.26
+        ],
+        "max": [
+          2.61,
+          3.111,
+          1.53
+        ],
+        "size": [
+          4.805,
+          3.111,
+          2.791
+        ],
+        "center": [
+          0.207,
+          1.555,
+          0.135
+        ]
+      },
+      "tris": 19768
+    }
+  ],
+  "views": [
+    {
+      "id": "nx-town-kiln",
+      "name": "approach",
+      "bodyLocal": [
+        5,
+        0,
+        5.5
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+    },
+    {
+      "id": "nx-tower",
+      "name": "approach",
+      "bodyLocal": [
+        7,
+        0,
+        14
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Fixed revised BEFORE approach avoiding observed neighbor occlusion; reuse these exact coordinates AFTER."
+    },
+    {
+      "id": "nx-tower",
+      "name": "interior",
+      "bodyLocal": [
+        0.7,
+        2.625,
+        0.65
+      ],
+      "lookLocal": [
+        -1.35,
+        2.625,
+        -0.5
+      ],
+      "note": "Revised matched BEFORE station following native independent framing review; nx-tower is the real upper study, not a ground-room view."
+    },
+    {
+      "id": "nx-town-kiln",
+      "name": "workstation",
+      "bodyLocal": [
+        1,
+        0,
+        4.8
+      ],
+      "lookLocal": [
+        0,
+        0,
+        0
+      ],
+      "note": "Open-air noninterior trade/ritual detail, not an enterable room."
+    }
+  ],
+  "wireCounts": {
+    "join": 0,
+    "pose": 0,
+    "verb": 0
+  },
+  "uploads": 0,
+  "frames": [
+    {
+      "id": "nx-town-kiln",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-tower",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-tower",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-kiln",
+      "view": "workstation",
+      "status": "NOT_ATTEMPTED"
+    }
+  ],
+  "limitations": [
+    "Actual live /snap imagery, not a local GLB review rig.",
+    "Observer positions are assigned; this is not collision-tested walking.",
+    "First-person pitch/eye height are public-runtime and avatar controlled; lookLocal determines yaw only.",
+    "Weather and other participants are live and not frozen. Native image review is a separate gate."
+  ]
+}

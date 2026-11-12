@@ -1,0 +1,38 @@
+{
+  "name": "Moon Moth",
+  "entityId": "nx-moonmoth-001",
+  "sha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+  "bytes": 1272084,
+  "bounds": {
+    "min": [
+      -5.608555866290459,
+      0.012882810086011887,
+      -4.2199437067273085
+    ],
+    "max": [
+      5.608555866290459,
+      5.353411039601105,
+      3.1313121188222257
+    ]
+  },
+  "wingNames": [
+    "moon_wing_left",
+    "moon_wing_right"
+  ],
+  "seat": {
+    "top": 1.97,
+    "center": [
+      0,
+      1.97,
+      0.18
+    ],
+    "socket": [
+      0,
+      2.47,
+      0.18
+    ],
+    "pose": "sitchair"
+  },
+  "nodes": 18,
+  "meshes": 14
+}

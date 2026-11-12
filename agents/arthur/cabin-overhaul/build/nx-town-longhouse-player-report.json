@@ -1,0 +1,487 @@
+{
+  "status": "PASS",
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-longhouse",
+  "bounds": {
+    "min": [
+      -4.610000133514404,
+      -0.20000000298023224,
+      -2.9100000858306885
+    ],
+    "max": [
+      4.610000133514404,
+      5.874000072479248,
+      4.287499904632568
+    ]
+  },
+  "triangles": 7482,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": true,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "grade-porch-under-feast-plaque",
+      "requiredWidth": 1.6,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.8,
+        0,
+        2.7
+      ],
+      "max": [
+        0.8,
+        2.2,
+        4.65
+      ],
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "name": "inner-door",
+      "requiredWidth": 1.68,
+      "requiredHeadroom": 2.4,
+      "min": [
+        -0.84,
+        0.2,
+        1.3
+      ],
+      "max": [
+        0.84,
+        2.6,
+        2.7
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "outside",
+      "to": "porch",
+      "pass": true,
+      "steps": 38,
+      "maxPush": 0,
+      "maxRise": 1.4901161415892261e-9,
+      "minY": 0,
+      "maxY": 1.4901161415892261e-9,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 3.1086244689504383e-15,
+      "floorError": 1.4901161415892261e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        1.4901161415892261e-9,
+        3.499999999999997
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "porch",
+      "to": "before-room-step",
+      "pass": true,
+      "steps": 12,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 1.4901161415892261e-9,
+      "maxY": 1.4901161415892261e-9,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 1.3322676295501878e-15,
+      "floorError": 1.4901161415892261e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        1.4901161415892261e-9,
+        3.050000000000001
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "before-room-step",
+      "to": "threshold",
+      "pass": true,
+      "steps": 13,
+      "maxPush": 0,
+      "maxRise": 0.2000000014901161,
+      "minY": 1.4901161415892261e-9,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.6645352591003757e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.20000000298023224,
+        2.549999999999997
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "threshold",
+      "to": "inside",
+      "pass": true,
+      "steps": 34,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.9984014443252818e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.20000000298023224,
+        1.200000000000002
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "inside",
+      "to": "hall",
+      "pass": true,
+      "steps": 31,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 5.689893001203927e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.20000000298023224,
+        -5.689893001203927e-16
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "hall",
+      "to": "hearth",
+      "pass": true,
+      "steps": 65,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.3322676295501878e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -2.6000000000000014,
+        0.20000000298023224,
+        5.854827030937197e-31
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "hearth",
+      "to": "hall-return",
+      "pass": true,
+      "steps": 66,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.579669976578771e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -4.579669976578771e-16,
+        0.20000000298023224,
+        5.692775011319569e-46
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "hall-return",
+      "to": "high-seat",
+      "pass": true,
+      "steps": 61,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.220446049250313e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        2.3999999999999977,
+        0.20000000298023224,
+        8.580954660488215e-61
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "high-seat",
+      "to": "hall-return",
+      "pass": true,
+      "steps": 60,
+      "maxPush": 0,
+      "maxRise": 2.980232227667301e-9,
+      "minY": 0.2,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.6792123247455493e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -1.6792123247455493e-15,
+        0.20000000298023224,
+        0
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "hall-return",
+      "to": "hearth",
+      "pass": true,
+      "steps": 65,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.7763568394002505e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -2.600000000000002,
+        0.20000000298023224,
+        0
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "hearth",
+      "to": "hall",
+      "pass": true,
+      "steps": 66,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.6629367034256575e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        4.6629367034256575e-15,
+        0.20000000298023224,
+        0
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "hall",
+      "to": "inside",
+      "pass": true,
+      "steps": 30,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.440892098500626e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        2.514494135391975e-30,
+        0.20000000298023224,
+        1.2000000000000004
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "inside",
+      "to": "threshold",
+      "pass": true,
+      "steps": 34,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.440892098500626e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.20000000298023224,
+        2.5500000000000003
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "threshold",
+      "to": "before-room-step",
+      "pass": true,
+      "steps": 13,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 1.4901161415892261e-9,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.3322676295501878e-15,
+      "floorError": 1.4901161415892261e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        1.4901161415892261e-9,
+        3.0499999999999985
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "before-room-step",
+      "to": "porch",
+      "pass": true,
+      "steps": 12,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 1.4901161415892261e-9,
+      "maxY": 1.4901161415892261e-9,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 4.440892098500626e-16,
+      "floorError": 1.4901161415892261e-9,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        1.4901161415892261e-9,
+        3.4999999999999996
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "porch",
+      "to": "outside",
+      "pass": true,
+      "steps": 38,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 1.4901161415892261e-9,
+      "expectedFloorRange": [
+        -0.035,
+        0.035
+      ],
+      "arrivalXZ": 7.993605777301127e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0,
+        5.000000000000008
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b19-longhouse-feast-count",
+      "min": [
+        -1.6,
+        2.22,
+        4.2875
+      ],
+      "max": [
+        1.6,
+        2.54,
+        4.405
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Single host only unless protected volumes are supplied; no live neighbors or terrain are loaded.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/build/nx-town-longhouse.glb",
+  "modelSha256": "e38bb2a4c79336980d0a6b7479959498dc0347ab69d611b089741af7cf63b29f",
+  "contractSha256": "9d1360275f31b9c0cc2e7dfd80e6631a263a8d3b53a5317e4ca63e183005bc3b",
+  "verifierSha256": "5a45cb63691f8b77d6baa068fcc5cc6bc5e15b0b6d89a962cf94d700df9c8616",
+  "meshes": 22
+}

@@ -1,0 +1,24 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/build/forge-followup.test.ts:
+(pass) distance implementation measures disjoint parallel triangle planes [0.32ms]
+(pass) ownership: upper cap is new court architecture; lower bar is frozen B29 [0.04ms]
+2 | import {test,expect} from 'bun:test';
+3 | import {diagnose,nearest} from './forge-followup-geometry.ts';
+4 | const d=await diagnose();
+5 | test('distance implementation measures disjoint parallel triangle planes',()=>{const t=(z:number)=>({node:'control',triangleIndex:0,v:[[0,0,z],[1,0,z],[0,1,z]]});expect(nearest([t(0)],[t(.3)]).gap).toBeCloseTo(.3,12);expect(nearest([t(0)],[t(0)]).gap).toBe(0);});
+6 | test('ownership: upper cap is new court architecture; lower bar is frozen B29',()=>{expect(d.upper.partName).toBe('outer_verge_cap');expect(d.upper.owner).toBe('nx-court');expect(d.upper.baselineTrianglesEntirelyInCapBox).toBe(0);expect(d.lower.owner).toBe('nx-artwalk-b29-strike-count');expect(d.lower.node).toBe('b29_0');expect(d.lower.geometryUnchanged).toBe(true);expect(d.lower.downloadPinMatches).toBe(true);expect(d.lower.tupleMatchesCapturedFolded).toBe(true);expect(d.lower.assemblyMatchesExactFrozenTuple).toBe(true);expect(d.lower.originalPart.name).toBe('back');expect(d.lower.gapBeyondCourtRear).toBeGreaterThan(.78);expect(d.frozenPins.every(x=>x.pass)).toBe(true);expect(d.assemblySelection.every((x:any)=>x.manifestShaMatches)).toBe(true);});
+7 | test('REPAIR ACCEPTANCE: outer_verge_cap must physically connect to court architecture',()=>{expect(d.upper.nearestOtherCourtTriangle.gap).toBeLessThanOrEqual(.001);});
+                                                                                                                                               ^
+error: expect(received).toBeLessThanOrEqual(expected)
+
+Expected: <= 0.001
+Received: 0.30696110808963617
+
+      at <anonymous> (/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge-followup.test.ts:7:140)
+(fail) REPAIR ACCEPTANCE: outer_verge_cap must physically connect to court architecture [0.10ms]
+
+ 2 pass
+ 1 fail
+ 16 expect() calls
+Ran 3 tests across 1 file. [320.00ms]

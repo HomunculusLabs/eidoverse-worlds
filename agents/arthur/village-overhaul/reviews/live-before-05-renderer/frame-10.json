@@ -1,0 +1,583 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-3d729595-098",
+    "view": "first",
+    "startedAt": "2026-09-08T02:26:59.830Z"
+  },
+  "completedAt": "2026-09-08T02:27:00.408Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "455b4c4bdf64a8cd6d3b04bc79c534ab4692c757681c87036f663784d2d1680a",
+  "bytes": 540573,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-belltower",
+  "view": "approach",
+  "rendererModels": [
+    {
+      "id": "nx-town-belltower",
+      "loaded": true
+    },
+    {
+      "id": "nx-hearth",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "loaded": true
+    },
+    {
+      "id": "nx-dress-fountain",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b22-mapboard-eight-ways",
+      "loaded": true
+    },
+    {
+      "id": "nx-core-paths",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-mapboard",
+      "loaded": true
+    }
+  ],
+  "companionsBefore": [
+    {
+      "id": "nx-hearth",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/027f6f019f9981bf.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            0,
+            0.7,
+            0
+          ],
+          "count": 30,
+          "size": 0.22,
+          "speed": 0.32
+        },
+        "motion:well_": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 3,
+          "period": 9,
+          "damp": 0.99,
+          "t0": null
+        },
+        "sockets": {
+          "log_0": {
+            "pos": [
+              1.344,
+              0.32,
+              1.344
+            ],
+            "yaw": -2.356
+          },
+          "log_1": {
+            "pos": [
+              -1.344,
+              0.32,
+              1.344
+            ],
+            "yaw": 2.356
+          },
+          "log_2": {
+            "pos": [
+              -1.344,
+              0.32,
+              -1.344
+            ],
+            "yaw": 0.785
+          },
+          "log_3": {
+            "pos": [
+              1.344,
+              0.32,
+              -1.344
+            ],
+            "yaw": -0.785
+          },
+          "tale_seat": {
+            "pos": [
+              0.8,
+              0.55,
+              2.9
+            ],
+            "yaw": -2.872
+          }
+        },
+        "motion:pz_kettle": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            1.55,
+            0
+          ],
+          "amp": 2.5,
+          "period": 11
+        }
+      }
+    },
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/e815a897c7d73373.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-fountain",
+      "kind": "thing",
+      "pos": [
+        12.5,
+        0,
+        4
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/72f07c2a466feae3.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "kind": "thing",
+      "pos": [
+        5.269634200735408,
+        0.65,
+        6.330294372515229
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/48aed5dabcb16a45.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b22-mapboard-eight-ways",
+      "kind": "thing",
+      "pos": [
+        2.5058834840541455,
+        0,
+        9.529417420270727
+      ],
+      "yaw": -2.9441970937399127,
+      "scale": 1,
+      "lib": "store/09c800d062057db2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-core-paths",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/c31b6e3f22641e14.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-mapboard",
+      "kind": "thing",
+      "pos": [
+        2.5,
+        0,
+        9.5
+      ],
+      "yaw": -2.9441970937399127,
+      "scale": 1,
+      "lib": "store/95231f20a016b303.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "companionsAfter": [
+    {
+      "id": "nx-hearth",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/027f6f019f9981bf.glb",
+      "parent": null,
+      "comp": {
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            0,
+            0.7,
+            0
+          ],
+          "count": 30,
+          "size": 0.22,
+          "speed": 0.32
+        },
+        "motion:well_": {
+          "type": "pendulum",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "amp": 3,
+          "period": 9,
+          "damp": 0.99,
+          "t0": null
+        },
+        "sockets": {
+          "log_0": {
+            "pos": [
+              1.344,
+              0.32,
+              1.344
+            ],
+            "yaw": -2.356
+          },
+          "log_1": {
+            "pos": [
+              -1.344,
+              0.32,
+              1.344
+            ],
+            "yaw": 2.356
+          },
+          "log_2": {
+            "pos": [
+              -1.344,
+              0.32,
+              -1.344
+            ],
+            "yaw": 0.785
+          },
+          "log_3": {
+            "pos": [
+              1.344,
+              0.32,
+              -1.344
+            ],
+            "yaw": -0.785
+          },
+          "tale_seat": {
+            "pos": [
+              0.8,
+              0.55,
+              2.9
+            ],
+            "yaw": -2.872
+          }
+        },
+        "motion:pz_kettle": {
+          "type": "pendulum",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "pivot": [
+            0,
+            1.55,
+            0
+          ],
+          "amp": 2.5,
+          "period": 11
+        }
+      }
+    },
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/e815a897c7d73373.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-fountain",
+      "kind": "thing",
+      "pos": [
+        12.5,
+        0,
+        4
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/72f07c2a466feae3.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b5-belltower-rings",
+      "kind": "thing",
+      "pos": [
+        5.269634200735408,
+        0.65,
+        6.330294372515229
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1,
+      "lib": "store/48aed5dabcb16a45.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b22-mapboard-eight-ways",
+      "kind": "thing",
+      "pos": [
+        2.5058834840541455,
+        0,
+        9.529417420270727
+      ],
+      "yaw": -2.9441970937399127,
+      "scale": 1,
+      "lib": "store/09c800d062057db2.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-core-paths",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/c31b6e3f22641e14.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-mapboard",
+      "kind": "thing",
+      "pos": [
+        2.5,
+        0,
+        9.5
+      ],
+      "yaw": -2.9441970937399127,
+      "scale": 1,
+      "lib": "store/95231f20a016b303.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "bodyPose": {
+    "p": [
+      -0.5710678118654764,
+      0,
+      -9.056349186104045
+    ],
+    "yaw": 0.42662749312687615,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    -6,
+    0,
+    16
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-belltower",
+    "lib": "store/2419fbc53a1d65e1.glb",
+    "kind": "thing",
+    "pos": [
+      6.5,
+      0,
+      6.5
+    ],
+    "yaw": -2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "ladder": {
+        "min": [
+          -0.98,
+          0.3,
+          0.98
+        ],
+        "max": [
+          -0.52,
+          5.15,
+          1.22
+        ]
+      }
+    },
+    "bbox": {
+      "min": [
+        -1.7,
+        0,
+        -1.7
+      ],
+      "max": [
+        1.7,
+        7.6,
+        1.7
+      ],
+      "size": [
+        3.4,
+        7.6,
+        3.4
+      ],
+      "center": [
+        0,
+        3.8,
+        0
+      ]
+    },
+    "tris": 1034
+  },
+  "targetAfter": {
+    "id": "nx-town-belltower",
+    "lib": "store/2419fbc53a1d65e1.glb",
+    "kind": "thing",
+    "pos": [
+      6.5,
+      0,
+      6.5
+    ],
+    "yaw": -2.356194490192345,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "ladder": {
+        "min": [
+          -0.98,
+          0.3,
+          0.98
+        ],
+        "max": [
+          -0.52,
+          5.15,
+          1.22
+        ]
+      }
+    },
+    "bbox": {
+      "min": [
+        -1.7,
+        0,
+        -1.7
+      ],
+      "max": [
+        1.7,
+        7.6,
+        1.7
+      ],
+      "size": [
+        3.4,
+        7.6,
+        3.4
+      ],
+      "center": [
+        0,
+        3.8,
+        0
+      ]
+    },
+    "tris": 1034
+  },
+  "beforeObservedAt": "2026-09-08T02:26:56.826Z",
+  "afterObservedAt": "2026-09-08T02:27:02.547Z",
+  "protectedBeforeSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "protectedAfterSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "file": "nx-town-belltower-approach.png"
+}

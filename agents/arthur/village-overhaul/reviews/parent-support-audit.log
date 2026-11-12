@@ -1,0 +1,12 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/parent-audit.test.ts:
+(pass) parent inspector consumes real approved nx-town-hall routes and frozen neighbors [11425.98ms]
+(pass) parent inspector consumes real approved nx-town-inn routes and frozen neighbors [6485.78ms]
+(pass) market approach cannot be made passing merely by declaring the phantom road-box top as floor [550.23ms]
+
+ 3 pass
+ 4 filtered out
+ 0 fail
+ 10 expect() calls
+Ran 3 tests across 1 file. [18.49s]

@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "evidence": "offline exact-byte geometry, not live locomotion",
+  "id": "nx-town-bunkhouse",
+  "sha256": "2b618274fa316c7846a1b8c0cf601b3465a5cbfd7227a5cdc0510568f87df59c",
+  "sourceSha256": "51895a6d3b0652c7c3b758c4d02249dc535d4dfc9c0a18f63aaa3c085548723c",
+  "kitSha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72",
+  "beforeServedSha256": "601895e7562552f0aa583408526f446c586e9786ed39841ad797b4d2e9770400",
+  "bounds": {
+    "min": [
+      -4,
+      -3.5762786065873797e-9,
+      -2.549999952316284
+    ],
+    "max": [
+      4,
+      4.300000190734863,
+      2.5999999046325684
+    ]
+  },
+  "floorY": 0.26,
+  "nominalDoorClearWidth": 1.86,
+  "nominalDoorHeadroom": 2.35,
+  "provedClearVolume": {
+    "min": [
+      -0.9,
+      0.27,
+      -1.7
+    ],
+    "max": [
+      0.9,
+      2.46,
+      2.621
+    ]
+  },
+  "exportedBlockingMeshes": 0,
+  "riderTrimBlockingMeshes": 0,
+  "rider": {
+    "id": "nx-artwalk-b20-bunkhouse-four-rooms",
+    "local": [
+      -2.2,
+      1.05,
+      2.0325
+    ],
+    "wallPlaneZ": 2
+  },
+  "sleepers": [
+    {
+      "id": "berth_west_rear",
+      "mattressBounds": {
+        "min": [
+          -3.1399999904632567,
+          0.5599999997019768,
+          -1.5699999988079072
+        ],
+        "max": [
+          -1.120000009536743,
+          0.7000000002980232,
+          -0.630000001192093
+        ]
+      }
+    },
+    {
+      "id": "berth_west_front",
+      "mattressBounds": {
+        "min": [
+          -3.1399999904632567,
+          0.5599999997019768,
+          0.630000001192093
+        ],
+        "max": [
+          -1.120000009536743,
+          0.7000000002980232,
+          1.5699999988079072
+        ]
+      }
+    },
+    {
+      "id": "berth_east_rear",
+      "mattressBounds": {
+        "min": [
+          1.120000009536743,
+          0.5599999997019768,
+          -1.5699999988079072
+        ],
+        "max": [
+          3.1399999904632567,
+          0.7000000002980232,
+          -0.630000001192093
+        ]
+      }
+    },
+    {
+      "id": "berth_east_front",
+      "mattressBounds": {
+        "min": [
+          1.120000009536743,
+          0.5599999997019768,
+          0.630000001192093
+        ],
+        "max": [
+          3.1399999904632567,
+          0.7000000002980232,
+          1.5699999988079072
+        ]
+      }
+    }
+  ],
+  "cubbies": 4,
+  "realWindowOpenings": 6,
+  "arrangement": "four floor-level foot-entry alcove berths, two per side; equivalent to original four stacked sleepers, no ladder component",
+  "classifier": {
+    "roomScale": true,
+    "floorShaped": false,
+    "uneven": false
+  },
+  "negativeClearanceFixture": "PASS — wide slab crossing lane caught despite out-of-band corners",
+  "unchangedPoseRequired": {
+    "id": "nx-town-bunkhouse",
+    "kind": "thing",
+    "pos": [
+      -9,
+      0,
+      -26
+    ],
+    "yaw": 0.31322457341772525,
+    "scale": 1,
+    "lib": "store/c8636968968672af.glb",
+    "bbox": {
+      "min": [
+        -4.15,
+        0,
+        -2.621
+      ],
+      "max": [
+        4.15,
+        4.05,
+        2.621
+      ],
+      "size": [
+        8.3,
+        4.05,
+        5.241
+      ],
+      "center": [
+        0,
+        2.025,
+        0
+      ]
+    },
+    "compKeys": [],
+    "comp": {}
+  },
+  "liveWorldMutations": 0
+}

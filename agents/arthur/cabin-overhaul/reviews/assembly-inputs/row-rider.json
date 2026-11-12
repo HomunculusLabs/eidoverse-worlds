@@ -1,0 +1,82 @@
+{
+  "world": "commons-next",
+  "observedAt": "2026-09-08T00:54:42.437Z",
+  "host": {
+    "id": "nx-town-row-cottage",
+    "lib": "store/add42aeacca2ecc8.glb",
+    "kind": "thing",
+    "pos": [
+      -23,
+      0,
+      -17
+    ],
+    "yaw": 0.9411511441487406,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.95,
+        -0.2,
+        -2.673
+      ],
+      "max": [
+        2.95,
+        4.495,
+        2.72
+      ],
+      "size": [
+        5.9,
+        4.695,
+        5.393
+      ],
+      "center": [
+        0,
+        2.147,
+        0.023
+      ]
+    },
+    "tris": 1320
+  },
+  "neighbors": [
+    {
+      "id": "nx-artwalk-b18-row-warp-count",
+      "lib": "store/d6d10de199f6fb03.glb",
+      "kind": "thing",
+      "pos": [
+        -21.155200197358777,
+        2.22,
+        -15.655931572361396
+      ],
+      "yaw": 0.9411511441487406,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -0.81,
+          0,
+          -0.032
+        ],
+        "max": [
+          0.81,
+          0.49,
+          0.085
+        ],
+        "size": [
+          1.62,
+          0.49,
+          0.117
+        ],
+        "center": [
+          0,
+          0.245,
+          0.026
+        ]
+      },
+      "tris": 216,
+      "sha256": "fc8926b5f4525b5304e15463cb7d5dbefee1d0b9c7dae47a8b0e669b83e49e13",
+      "file": "agents/arthur/cabin-overhaul/reviews/assembly-inputs/nx-artwalk-b18-row-warp-count-fc8926b5f4525b53.glb"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "status": "LOCAL_COMPOSITE_NOT_WORLD",
+  "sha256": "0c30427aa4c5c462c1c648a94b0e6c30153f543a628ec4128bf0af00f7b69cf7",
+  "inputs": [
+    {
+      "id": "nx-town-dyehouse",
+      "sha256": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6",
+      "pos": [
+        -23,
+        0,
+        -23
+      ],
+      "yaw": 0.941,
+      "scale": 1
+    },
+    {
+      "id": "nx-artwalk-b9-dyehouse-crossing-loom",
+      "sha256": "a8ff818d13b577994dd3aef0aaa2201ca3944b17ff217542dee741ca817e3b6b",
+      "pos": [
+        -23.62227356310568,
+        0.48,
+        -23.4535147325719
+      ],
+      "yaw": 0.941,
+      "scale": 1
+    },
+    {
+      "id": "nx-sign-dyer-001",
+      "sha256": "e436b0caa7668e374750db23ddce126a735475a03e51dac0a3ea45b34f3afaea",
+      "pos": [
+        -22.0867933424553,
+        2.05,
+        -22.334452405446434
+      ],
+      "yaw": 0.941,
+      "scale": 1
+    }
+  ]
+}

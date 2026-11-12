@@ -1,0 +1,107 @@
+{
+  "status": "STARTED",
+  "world": "commons-next",
+  "phase": "after",
+  "evidenceKind": "actual-live-snap-api",
+  "startedAt": "2026-09-08T03:17:40.039Z",
+  "bodyId": "arthur-village-eye-ef3d2868-a93",
+  "sourceSha256": "c4aa3404c09271380d5281bd71ece753c510236f340a21c9f9a93b798bcc29ab",
+  "contractsSha256": "17e3d74968453e349009af8c22c22af1fcf44c519823a3ae44be8064bee8aee5",
+  "viewsSha256": "3302444e414bba45576d643acf0277f3bb029fb1eafcdb8830b5502e3af04d90",
+  "protectedSha256": "4f6f56a1369cc2acbf2d80d2cea5f44492d0da139a8ec07dd57351984a65f00a",
+  "expected": [
+    {
+      "id": "nx-town-inn",
+      "lib": "store/861225bb15230d9b.glb",
+      "kind": "thing",
+      "pos": [
+        36,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bbox": {
+        "min": [
+          -4.5,
+          -0.2,
+          -3.473
+        ],
+        "max": [
+          4.5,
+          7.194,
+          4.9
+        ],
+        "size": [
+          9,
+          7.394,
+          8.373
+        ],
+        "center": [
+          0,
+          3.497,
+          0.714
+        ]
+      },
+      "tris": 7468
+    }
+  ],
+  "views": [
+    {
+      "id": "nx-town-inn",
+      "name": "approach",
+      "bodyLocal": [
+        1,
+        0.198,
+        3.85
+      ],
+      "lookLocal": [
+        2.85,
+        0.198,
+        3.95
+      ],
+      "note": "SUPPLEMENTAL AFTER v2: camera inside clear central porch aisle facing sideways across settle, table and sign rather than standing in front of overlapping projections. Not a matched BEFORE view."
+    },
+    {
+      "id": "nx-town-inn",
+      "name": "interior",
+      "bodyLocal": [
+        3.2,
+        0.198,
+        -0.6
+      ],
+      "lookLocal": [
+        0,
+        0.198,
+        3
+      ],
+      "note": "SUPPLEMENTAL AFTER v2: east table aisle facing doorway, central authored bulb behind left frustum edge; no field of view, exposure, lamp or sky edits."
+    }
+  ],
+  "wireCounts": {
+    "join": 0,
+    "pose": 0,
+    "verb": 0
+  },
+  "uploads": 0,
+  "frames": [
+    {
+      "id": "nx-town-inn",
+      "view": "approach",
+      "status": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "nx-town-inn",
+      "view": "interior",
+      "status": "NOT_ATTEMPTED"
+    }
+  ],
+  "limitations": [
+    "Actual live /snap imagery, not a local GLB review rig.",
+    "Observer positions are assigned; this is not collision-tested walking.",
+    "First-person pitch/eye height are public-runtime and avatar controlled; lookLocal determines yaw only.",
+    "Weather and other participants are live and not frozen. Native image review is a separate gate."
+  ]
+}

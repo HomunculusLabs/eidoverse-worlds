@@ -1,0 +1,562 @@
+{
+  "status": "FAIL",
+  "id": "nx-town-market",
+  "kind": "workstation",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "collider": {
+    "exact": true,
+    "pillar": false
+  },
+  "neighbors": [
+    "nx-hearth",
+    "nx-town-roads",
+    "nx-town-streetlamps",
+    "nx-dress-banner",
+    "nx-dress-stringlights",
+    "nx-dress-giftshelf",
+    "nx-artwalk-b6-market-lissa-left",
+    "nx-artwalk-b6-market-lissa-right",
+    "nx-artwalk-b30-market-tally",
+    "nx-core-paths"
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "plaza-left",
+      "to": "bread-approach",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0.058276183903217316,
+      "minY": 0,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 1.4432899320127035e-15,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "in",
+      "from": "bread-approach",
+      "to": "bread-counter",
+      "steps": 19,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 7.771561172376096e-16,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "in",
+      "from": "bread-counter",
+      "to": "bread-exit",
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 0,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "in",
+      "from": "bread-exit",
+      "to": "produce-approach",
+      "steps": 50,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 6.661338147750939e-16,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "in",
+      "from": "produce-approach",
+      "to": "produce-counter",
+      "steps": 19,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 1.0235750533041806e-15,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "in",
+      "from": "produce-counter",
+      "to": "produce-exit",
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 6.661338147750939e-16,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "in",
+      "from": "produce-exit",
+      "to": "plaza-right",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 1.5543122344752192e-15,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "out",
+      "from": "plaza-right",
+      "to": "produce-exit",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0.058276183903217316,
+      "minY": 0,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 1.4432899320127035e-15,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "out",
+      "from": "produce-exit",
+      "to": "produce-counter",
+      "steps": 19,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 7.771561172376096e-16,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "out",
+      "from": "produce-counter",
+      "to": "produce-approach",
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 0,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "out",
+      "from": "produce-approach",
+      "to": "bread-exit",
+      "steps": 50,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 6.661338147750939e-16,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "out",
+      "from": "bread-exit",
+      "to": "bread-counter",
+      "steps": 19,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 1.0235750533041806e-15,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "out",
+      "from": "bread-counter",
+      "to": "bread-approach",
+      "steps": 20,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 6.661338147750939e-16,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    },
+    {
+      "direction": "out",
+      "from": "bread-approach",
+      "to": "plaza-left",
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.058276183903217316,
+      "arrivalXZ": 1.5543122344752192e-15,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    }
+  ],
+  "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+  "limitations": [
+    "Not an enterable-room certification.",
+    "Only supplied neighbors and declared flat terrain checked."
+  ],
+  "modelSha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+  "neighborManifestSha256": "9162e7db23360c9ba901219ec416cf0db926fe82a846c7f992a8aa94037bf0eb",
+  "helperSha256": "ff1a4cdb4cc40c2550f9baa116b7e6da9bfe7850757ff0a065c8f45925689aa4",
+  "pathSupportWitness": [
+    {
+      "station": "plaza-left",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    },
+    {
+      "station": "bread-approach",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    },
+    {
+      "station": "bread-counter",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    },
+    {
+      "station": "bread-exit",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    },
+    {
+      "station": "produce-approach",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    },
+    {
+      "station": "produce-counter",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    },
+    {
+      "station": "produce-exit",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    },
+    {
+      "station": "plaza-right",
+      "browserGround": 0.058276183903217316,
+      "geometryGround": null,
+      "exact": false
+    }
+  ],
+  "diagnosticOnlyUnapprovedExactCorePaths": {
+    "status": "PASS",
+    "id": "nx-town-market",
+    "kind": "workstation",
+    "runtime": {
+      "mode": "served-override",
+      "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+      "files": {
+        "colliders.js": {
+          "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+          "publicPath": "/lib/colliders.js"
+        },
+        "supportclass.js": {
+          "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+          "publicPath": "/lib/supportclass.js"
+        }
+      },
+      "threeRevision": "184",
+      "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+    },
+    "collider": {
+      "exact": true,
+      "pillar": false
+    },
+    "neighbors": [
+      "nx-hearth",
+      "nx-town-roads",
+      "nx-town-streetlamps",
+      "nx-dress-banner",
+      "nx-dress-stringlights",
+      "nx-dress-giftshelf",
+      "nx-artwalk-b6-market-lissa-left",
+      "nx-artwalk-b6-market-lissa-right",
+      "nx-artwalk-b30-market-tally",
+      "nx-core-paths"
+    ],
+    "walks": [
+      {
+        "direction": "in",
+        "from": "plaza-left",
+        "to": "bread-approach",
+        "steps": 17,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 1.4432899320127035e-15,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "in",
+        "from": "bread-approach",
+        "to": "bread-counter",
+        "steps": 19,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 7.771561172376096e-16,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "in",
+        "from": "bread-counter",
+        "to": "bread-exit",
+        "steps": 20,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 0,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "in",
+        "from": "bread-exit",
+        "to": "produce-approach",
+        "steps": 50,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 6.661338147750939e-16,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "in",
+        "from": "produce-approach",
+        "to": "produce-counter",
+        "steps": 19,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 1.0235750533041806e-15,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "in",
+        "from": "produce-counter",
+        "to": "produce-exit",
+        "steps": 20,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 6.661338147750939e-16,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "in",
+        "from": "produce-exit",
+        "to": "plaza-right",
+        "steps": 17,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 1.5543122344752192e-15,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "out",
+        "from": "plaza-right",
+        "to": "produce-exit",
+        "steps": 17,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 1.4432899320127035e-15,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "out",
+        "from": "produce-exit",
+        "to": "produce-counter",
+        "steps": 19,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 7.771561172376096e-16,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "out",
+        "from": "produce-counter",
+        "to": "produce-approach",
+        "steps": 20,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 0,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "out",
+        "from": "produce-approach",
+        "to": "bread-exit",
+        "steps": 50,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 6.661338147750939e-16,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "out",
+        "from": "bread-exit",
+        "to": "bread-counter",
+        "steps": 19,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 1.0235750533041806e-15,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "out",
+        "from": "bread-counter",
+        "to": "bread-approach",
+        "steps": 20,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 6.661338147750939e-16,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      },
+      {
+        "direction": "out",
+        "from": "bread-approach",
+        "to": "plaza-left",
+        "steps": 17,
+        "maxPush": 0,
+        "maxRise": 0,
+        "minY": 0,
+        "maxY": 0,
+        "arrivalXZ": 1.5543122344752192e-15,
+        "floorError": 0,
+        "geometryHits": 0,
+        "examples": [],
+        "pass": true
+      }
+    ],
+    "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+    "limitations": [
+      "Not an enterable-room certification.",
+      "Only supplied neighbors and declared flat terrain checked."
+    ]
+  },
+  "existingPathBlocker": true
+}

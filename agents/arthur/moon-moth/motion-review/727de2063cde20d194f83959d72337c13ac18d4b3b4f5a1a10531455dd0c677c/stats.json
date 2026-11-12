@@ -1,0 +1,794 @@
+{
+  "sha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+  "seat": {
+    "anchorName": "moon_seat",
+    "cushionName": "moon_seat_cushion_0",
+    "cushionTop": 1.969984769821167,
+    "cushionCenterXZ": [
+      -0.000010401010513305664,
+      0.1799999624490738
+    ],
+    "anchorPosition": [
+      0,
+      0,
+      0
+    ],
+    "anchorMaxMatrixDelta": 0,
+    "cushionMaxMatrixDelta": 0,
+    "engineLookupVerified": true
+  },
+  "wings": [
+    {
+      "name": "moon_wing_left",
+      "vertexCount": 8908,
+      "restEuler": [
+        0.26,
+        -6.938893903907228e-18,
+        -0.45000000000000007,
+        "XYZ"
+      ],
+      "excursionRadians": 0.4399999999999987,
+      "maxDeviationRadians": 0.2199999999999966,
+      "minClearance": 1.6641329125054871,
+      "continuousClearanceLowerBound": 1.6552419810497911,
+      "interSampleErrorBound": 0.008890931455695906
+    },
+    {
+      "name": "moon_wing_right",
+      "vertexCount": 7636,
+      "restEuler": [
+        0.26,
+        6.938893903907228e-18,
+        0.45000000000000007,
+        "XYZ"
+      ],
+      "excursionRadians": 0.4399999999999987,
+      "maxDeviationRadians": 0.2199999999999966,
+      "minClearance": 1.664146280686923,
+      "continuousClearanceLowerBound": 1.655255382185911,
+      "interSampleErrorBound": 0.008890898501011777
+    }
+  ],
+  "samples": 441,
+  "sampleIntervalSeconds": 0.0125,
+  "periodSeconds": 5.5,
+  "staticMeshCount": 6,
+  "staticMeshNames": [
+    "moon_body_0",
+    "moon_body_1",
+    "moon_body_2",
+    "moon_body_3",
+    "moon_body_4",
+    "moon_seat_cushion_0"
+  ],
+  "staticMaxMatrixDelta": 0,
+  "rootMaxMatrixDelta": 0,
+  "restoreMaxDelta": 0,
+  "trajectory": [
+    {
+      "seconds": 0,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12242782077042824,
+            0.04261970945639224,
+            -0.3259949806752062,
+            0.9364412750631129
+          ],
+          "minY": 1.6858568243942373
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12242782077042824,
+            -0.04261970945639224,
+            0.3259949806752062,
+            0.9364412750631129
+          ],
+          "minY": 1.6858931663277612
+        }
+      ]
+    },
+    {
+      "seconds": 0.25,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12261650855495546,
+            0.042073777611903646,
+            -0.32181918869154347,
+            0.937884533861804
+          ],
+          "minY": 1.6856179335779238
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12261650855495546,
+            -0.042073777611903646,
+            0.3218191886915434,
+            0.937884533861804
+          ],
+          "minY": 1.685653865287316
+        }
+      ]
+    },
+    {
+      "seconds": 0.5,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12315334786466443,
+            0.040475472109270605,
+            -0.30959386904273045,
+            0.9419907777247128
+          ],
+          "minY": 1.684936291311726
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12315334786466443,
+            -0.040475472109270605,
+            0.30959386904273045,
+            0.9419907777247128
+          ],
+          "minY": 1.6849710093814767
+        }
+      ]
+    },
+    {
+      "seconds": 0.75,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12395728195052716,
+            0.03794210305427077,
+            -0.2902163179833351,
+            0.9481400096206533
+          ],
+          "minY": 1.683910074563548
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12395728195052716,
+            -0.03794210305427077,
+            0.2902163179833351,
+            0.9481400096206533
+          ],
+          "minY": 1.6839428320726126
+        }
+      ]
+    },
+    {
+      "seconds": 1,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12491352971546497,
+            0.03466440576105466,
+            -0.2651454557135102,
+            0.9554542774940786
+          ],
+          "minY": 1.6826809859848904
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12491352971546497,
+            -0.03466440576105466,
+            0.2651454557135102,
+            0.9554542774940786
+          ],
+          "minY": 1.6827111445493919
+        }
+      ]
+    },
+    {
+      "seconds": 1.25,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12589836650137728,
+            0.030896799915659107,
+            -0.23632731944680918,
+            0.9629872206578561
+          ],
+          "minY": 1.6814056466987826
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12589836650137728,
+            -0.030896799915659103,
+            0.23632731944680918,
+            0.9629872206578561
+          ],
+          "minY": 1.681432739319774
+        }
+      ]
+    },
+    {
+      "seconds": 1.5,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12680386238474298,
+            0.026940516272977305,
+            -0.20606600077307877,
+            0.9699132911722811
+          ],
+          "minY": 1.6802246733128852
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12680386238474298,
+            -0.0269405162729773,
+            0.20606600077307874,
+            0.9699132911722811
+          ],
+          "minY": 1.6802484666754256
+        }
+      ]
+    },
+    {
+      "seconds": 1.75,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.127555847643441,
+            0.02311961644808714,
+            -0.17684022282986123,
+            0.9756651703616062
+          ],
+          "minY": 1.6792379755553506
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.127555847643441,
+            -0.023119616448087136,
+            0.1768402228298612,
+            0.9756651703616062
+          ],
+          "minY": 1.6792585154600312
+        }
+      ]
+    },
+    {
+      "seconds": 2,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12812048246817018,
+            0.019752288598202626,
+            -0.15108378311331727,
+            0.9799840200469724
+          ],
+          "minY": 1.6784937282428576
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12812048246817018,
+            -0.019752288598202633,
+            0.1510837831133173,
+            0.9799840200469724
+          ],
+          "minY": 1.678511354228566
+        }
+      ]
+    },
+    {
+      "seconds": 2.25,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.1284985105741814,
+            0.01712144015439058,
+            -0.13096061947520213,
+            0.9828755288508958
+          ],
+          "minY": 1.673130390213844
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.1284985105741814,
+            -0.01712144015439058,
+            0.13096061947520216,
+            0.9828755288508958
+          ],
+          "minY": 1.673145679702852
+        }
+      ]
+    },
+    {
+      "seconds": 2.5,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12871032297995064,
+            0.01544874399879086,
+            -0.11816629126707216,
+            0.9844956661537125
+          ],
+          "minY": 1.666632019584621
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12871032297995064,
+            -0.01544874399879086,
+            0.11816629126707216,
+            0.9844956661537125
+          ],
+          "minY": 1.6666458960243122
+        }
+      ]
+    },
+    {
+      "seconds": 2.75,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.1287778811474501,
+            0.014875088568361896,
+            -0.11377844364112198,
+            0.9850124135409973
+          ],
+          "minY": 1.6641329125054871
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.1287778811474501,
+            -0.014875088568361896,
+            0.11377844364112198,
+            0.9850124135409973
+          ],
+          "minY": 1.664146280686923
+        }
+      ]
+    },
+    {
+      "seconds": 3,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12871032297995064,
+            0.015448743998790858,
+            -0.11816629126707215,
+            0.9844956661537125
+          ],
+          "minY": 1.666632019584621
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12871032297995064,
+            -0.015448743998790858,
+            0.11816629126707215,
+            0.9844956661537125
+          ],
+          "minY": 1.6666458960243122
+        }
+      ]
+    },
+    {
+      "seconds": 3.25,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.1284985105741814,
+            0.01712144015439057,
+            -0.1309606194752021,
+            0.9828755288508958
+          ],
+          "minY": 1.673130390213844
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.1284985105741814,
+            -0.01712144015439058,
+            0.13096061947520213,
+            0.9828755288508958
+          ],
+          "minY": 1.673145679702852
+        }
+      ]
+    },
+    {
+      "seconds": 3.5,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12812048246817018,
+            0.019752288598202623,
+            -0.15108378311331722,
+            0.9799840200469724
+          ],
+          "minY": 1.6784937282428576
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12812048246817018,
+            -0.019752288598202626,
+            0.15108378311331727,
+            0.9799840200469724
+          ],
+          "minY": 1.678511354228566
+        }
+      ]
+    },
+    {
+      "seconds": 3.75,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.127555847643441,
+            0.023119616448087132,
+            -0.17684022282986117,
+            0.9756651703616062
+          ],
+          "minY": 1.6792379755553506
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.127555847643441,
+            -0.023119616448087132,
+            0.1768402228298612,
+            0.9756651703616062
+          ],
+          "minY": 1.6792585154600312
+        }
+      ]
+    },
+    {
+      "seconds": 4,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12680386238474298,
+            0.026940516272977298,
+            -0.2060660007730787,
+            0.9699132911722811
+          ],
+          "minY": 1.6802246733128852
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12680386238474298,
+            -0.026940516272977298,
+            0.20606600077307874,
+            0.9699132911722811
+          ],
+          "minY": 1.6802484666754256
+        }
+      ]
+    },
+    {
+      "seconds": 4.25,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12589836650137728,
+            0.0308967999156591,
+            -0.23632731944680915,
+            0.9629872206578561
+          ],
+          "minY": 1.6814056466987826
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12589836650137728,
+            -0.0308967999156591,
+            0.23632731944680915,
+            0.9629872206578561
+          ],
+          "minY": 1.681432739319774
+        }
+      ]
+    },
+    {
+      "seconds": 4.5,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12491352971546497,
+            0.03466440576105466,
+            -0.2651454557135102,
+            0.9554542774940786
+          ],
+          "minY": 1.6826809859848904
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12491352971546497,
+            -0.03466440576105465,
+            0.26514545571351017,
+            0.9554542774940786
+          ],
+          "minY": 1.6827111445493919
+        }
+      ]
+    },
+    {
+      "seconds": 4.75,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12395728195052716,
+            0.03794210305427077,
+            -0.2902163179833351,
+            0.9481400096206533
+          ],
+          "minY": 1.683910074563548
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12395728195052716,
+            -0.03794210305427077,
+            0.2902163179833351,
+            0.9481400096206533
+          ],
+          "minY": 1.6839428320726126
+        }
+      ]
+    },
+    {
+      "seconds": 5,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12315334786466443,
+            0.040475472109270605,
+            -0.30959386904273045,
+            0.9419907777247128
+          ],
+          "minY": 1.684936291311726
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12315334786466443,
+            -0.040475472109270605,
+            0.30959386904273045,
+            0.9419907777247128
+          ],
+          "minY": 1.6849710093814767
+        }
+      ]
+    },
+    {
+      "seconds": 5.25,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12261650855495546,
+            0.042073777611903646,
+            -0.3218191886915434,
+            0.937884533861804
+          ],
+          "minY": 1.6856179335779238
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12261650855495546,
+            -0.042073777611903646,
+            0.3218191886915434,
+            0.937884533861804
+          ],
+          "minY": 1.685653865287316
+        }
+      ]
+    },
+    {
+      "seconds": 5.5,
+      "wings": [
+        {
+          "name": "moon_wing_left",
+          "quaternion": [
+            0.12242782077042824,
+            0.04261970945639224,
+            -0.3259949806752062,
+            0.9364412750631129
+          ],
+          "minY": 1.6858568243942373
+        },
+        {
+          "name": "moon_wing_right",
+          "quaternion": [
+            0.12242782077042824,
+            -0.04261970945639224,
+            0.3259949806752062,
+            0.9364412750631129
+          ],
+          "minY": 1.6858931663277612
+        }
+      ]
+    }
+  ],
+  "negativeControls": {
+    "missingWingRejected": true,
+    "frozenWingRejected": true,
+    "movingCabinRejected": true
+  },
+  "geometryContract": {
+    "boundsMaxDelta": 0,
+    "tolerance": 0.005,
+    "drawMeshes": 14,
+    "boundsMethod": "transformed accessor boxes, matching source model-contract",
+    "bounds": {
+      "min": [
+        -5.608555866290459,
+        0.012882810086011887,
+        -4.2199437067273085
+      ],
+      "max": [
+        5.608555866290459,
+        5.353411039601105,
+        3.1313121188222257
+      ]
+    }
+  },
+  "bounds": {
+    "min": [
+      -5.550005290044006,
+      0.012882810086011887,
+      -3.9445739317657584
+    ],
+    "max": [
+      5.550059819606956,
+      3.9711774796863875,
+      3.1021860808194295
+    ],
+    "size": [
+      11.100065109650963,
+      3.9582946696003756,
+      7.046760012585188
+    ]
+  },
+  "modelBytes": 128416,
+  "components": {
+    "motion:moon_wing_left": {
+      "type": "pendulum",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "amp": 0.22,
+      "period": 5.5,
+      "phase": 3.141592653589793,
+      "damp": 0,
+      "t0": 0
+    },
+    "motion:moon_wing_right": {
+      "type": "pendulum",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "amp": 0.22,
+      "period": 5.5,
+      "phase": 0,
+      "damp": 0,
+      "t0": 0
+    }
+  },
+  "provenance": {
+    "engine": {
+      "path": "client/lib/motion.js",
+      "sha256": "185da65ffd3aa4563c395f9d5166136b8abdf153ab686227a51af7c54eb7947b",
+      "entry": "tickMotion",
+      "sourceUnmodified": true
+    },
+    "evaluator": {
+      "path": "client/lib/motioneval.js",
+      "sha256": "8d08b13135b0df660a51a4aa7402bd655c28920708de2a4a1320732a0029ea08",
+      "sourceUnmodified": true
+    },
+    "partLookup": {
+      "path": "client/lib/world.js",
+      "sha256": "31d0677c8422c88b1662431742728bdb703e62d4f2db67c09ef57967fa39998b",
+      "extractedSha256": "7af56fd2ca7c853a0ead41b6884544833f22c4765af44c774a9a2f2fd897c55b",
+      "sourceUnmodified": true
+    },
+    "viewerSourceSha256": "52538e2decd102eaff101e8d45f370d0c8fb172a339ebcabc18d29b17039fe79",
+    "adapters": [
+      "isolated entities/comps maps",
+      "deterministic serverNow milliseconds",
+      "review camera",
+      "no-op collider reindex; no collision claims"
+    ]
+  },
+  "binding": {
+    "mode": "served",
+    "sourceSha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+    "sourceBytes": 1272084,
+    "sourceContractSha256": "1e06ec82f816c32b37e75447468ebcd7e7857c15f9a6a2ac1e05306ab64142fc",
+    "sourceContractVerified": true,
+    "nodeContractVerified": true,
+    "renderedSha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+    "renderedBytes": 128416,
+    "servedSha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c",
+    "expectedServedSha256": "727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c"
+  },
+  "scope": "Local exact-byte GLB rendering, actual engine tickMotion with isolated scene/clock/collider adapters. Flat plane y=0, no live terrain, mount, avatar, network, flight route, or collision proof.",
+  "clearanceMethod": "441 exact transformed-vertex samples; unit-scale rigid wing speed <= max local XY radius * amp * 2π/period; subtract speed * dt/2 to bound every intervening time.",
+  "modelCurrentAtCompletion": true,
+  "exactBytes": true,
+  "visualVerdict": "pending parent native inspection",
+  "headless": true,
+  "liveCalls": 0,
+  "groundPlaneY": 0,
+  "video": {
+    "requested": false,
+    "reason": "Not requested"
+  },
+  "browserErrors": [],
+  "browserWarnings": [
+    "[.WebGL-0x12c004f4200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x12c004f4200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x12c004f4200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x12c004f4200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead.",
+    "portable: THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead."
+  ],
+  "interactiveChecks": [
+    "all view buttons",
+    "night",
+    "scale proxy",
+    "timeline",
+    "play/pause advances clock",
+    "orbit drag",
+    "mobile no overflow",
+    "standalone file URL",
+    "reduced-motion pause"
+  ],
+  "outputs": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/moon-moth/motion-review/727de2063cde20d194f83959d72337c13ac18d4b3b4f5a1a10531455dd0c677c"
+}

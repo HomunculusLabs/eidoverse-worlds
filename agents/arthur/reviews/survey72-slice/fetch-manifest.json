@@ -1,0 +1,50 @@
+{
+ "nx-struct-catenoid": {
+  "lib": "8ac664937f96976d",
+  "http": "200",
+  "sha16": "f24580ad10da3cbe",
+  "prev_survey71_sha16": null
+ },
+ "nx-struct-geodesic": {
+  "lib": "813ad295487442d2",
+  "http": "200",
+  "sha16": "966ce4dbb69f7bf5",
+  "prev_survey71_sha16": null
+ },
+ "nx-struct-sierpinski": {
+  "lib": "7f8b5fd7a3d18b22",
+  "http": "200",
+  "sha16": "e76a1847217faf0e",
+  "prev_survey71_sha16": null
+ },
+ "nx-town-hall": {
+  "lib": "dc871edb1b45ce0f",
+  "http": "200",
+  "sha16": "8a4f16dd7a86361f",
+  "prev_survey71_sha16": "8a4f16dd7a86361f"
+ },
+ "nx-town-inn": {
+  "lib": "861225bb15230d9b",
+  "http": "200",
+  "sha16": "858604174a71249b",
+  "prev_survey71_sha16": "858604174a71249b"
+ },
+ "nx-town-kiln": {
+  "lib": "3e96c8b074852ddc",
+  "http": "200",
+  "sha16": "668692f76251e460",
+  "prev_survey71_sha16": "668692f76251e460"
+ },
+ "nx-town-tower-house": {
+  "lib": "90723087ca8b5eb3",
+  "http": "200",
+  "sha16": "4e9a9c7c538c8be6",
+  "prev_survey71_sha16": "4e9a9c7c538c8be6"
+ },
+ "nx-struct-ellipsecourt": {
+  "lib": "2aa37e9d29ba43f2",
+  "http": "200",
+  "sha16": "fbf80b5c2cdfcbba",
+  "prev_survey71_sha16": "fbf80b5c2cdfcbba"
+ }
+}

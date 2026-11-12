@@ -1,0 +1,36 @@
+{
+  "id": "forge",
+  "phase": "after",
+  "sha256": "cc066aab7eca629c760c85ef99b05eca8e9ab7ff7bf137e3bb87bbbb2b708787",
+  "inputs": [
+    {
+      "id": "nx-forge",
+      "sha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge.glb"
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb"
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb"
+    },
+    {
+      "id": "nx-sign-smithy",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "file": "agents/arthur/village-overhaul/before/nx-sign-smithy.glb"
+    },
+    {
+      "id": "nx-court",
+      "sha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/court.glb"
+    }
+  ],
+  "limitations": [
+    "Assembly model bytes are new containers of exact input decoded geometry. Not a host deployment asset.",
+    "No terrain/network/light entities in visual assembly; route assembly includes all frozen neighbors."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "nx-town-bunkhouse",
+  "scale": 1,
+  "terrainY": 0,
+  "sha256": "2b618274fa316c7846a1b8c0cf601b3465a5cbfd7227a5cdc0510568f87df59c",
+  "doors": [
+    {
+      "name": "central-gabled-entry",
+      "x": 0,
+      "z": [
+        1.55,
+        2.621
+      ],
+      "floorY": 0.26,
+      "width": 1.8,
+      "headroom": 2.2
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "outside",
+      "pos": [
+        0,
+        0,
+        3.2
+      ]
+    },
+    {
+      "name": "porch",
+      "pos": [
+        0,
+        0.26,
+        2.15
+      ]
+    },
+    {
+      "name": "threshold",
+      "pos": [
+        0,
+        0.26,
+        1.85
+      ]
+    },
+    {
+      "name": "inside",
+      "pos": [
+        0,
+        0.26,
+        0.95
+      ]
+    },
+    {
+      "name": "west-front-berth",
+      "pos": [
+        -0.7,
+        0.26,
+        1.1
+      ]
+    },
+    {
+      "name": "center-a",
+      "pos": [
+        0,
+        0.26,
+        0
+      ]
+    },
+    {
+      "name": "west-rear-berth",
+      "pos": [
+        -0.7,
+        0.26,
+        -1.1
+      ]
+    },
+    {
+      "name": "back-turn",
+      "pos": [
+        0,
+        0.26,
+        -1.35
+      ]
+    },
+    {
+      "name": "east-rear-berth",
+      "pos": [
+        0.7,
+        0.26,
+        -1.1
+      ]
+    },
+    {
+      "name": "center-b",
+      "pos": [
+        0,
+        0.26,
+        0
+      ]
+    },
+    {
+      "name": "east-front-berth",
+      "pos": [
+        0.7,
+        0.26,
+        1.1
+      ]
+    },
+    {
+      "name": "inside-return",
+      "pos": [
+        0,
+        0.26,
+        0.95
+      ]
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b20-bunkhouse-four-rooms",
+      "min": [
+        -3.110000026226044,
+        1.049999995827675,
+        2.000000001192093
+      ],
+      "max": [
+        -1.2899999737739565,
+        1.5100000083446503,
+        2.119999998509884
+      ],
+      "allowance": {
+        "min": [
+          -3.110000026226044,
+          1.049999995827675,
+          1.9995
+        ],
+        "max": [
+          -1.2899999737739565,
+          1.5100000083446503,
+          2.0005
+        ],
+        "reason": "Only the unchanged z=2.0 lime backing plane, confined to a 1mm-deep band and the exact rider X/Y footprint; no sill, frame or brace allowance."
+      }
+    }
+  ],
+  "riderProvenance": {
+    "local": [
+      -2.2,
+      1.05,
+      2.0325
+    ],
+    "sha256": "152684b8dd6ba53537d4abfbbe144c435023df30722ae9662fdfdfe1a65082c7",
+    "decodedModelMin": [
+      -0.9100000262260437,
+      -4.172325152040912e-09,
+      -0.032499998807907104
+    ],
+    "decodedModelMax": [
+      0.9100000262260437,
+      0.46000000834465027,
+      0.08749999850988388
+    ],
+    "source": "exact hash-matching assets/village_artwalk_b20.glb default-scene triangles; NOT old mkbunk.ts keep-out comment"
+  },
+  "stepSupportReason": "Outside-to-porch is one continuous 4cm-sampled segment covering both real 0.13m risers. A waypoint on the 0.20m lower tread wrongly clips the next tread inside the 0.32m body-radius sweep. Endpoint remains real porch floor 0.26; no raised clearance origin."
+}

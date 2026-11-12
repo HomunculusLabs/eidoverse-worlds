@@ -1,0 +1,1021 @@
+{
+  "status": "LOCAL_GEOMETRY_PASS_PARENT_VISUAL_REVIEW_PENDING",
+  "models": {
+    "court": {
+      "sha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "bytes": 745684,
+      "nodes": 26,
+      "meshes": 26,
+      "triangles": 11340,
+      "bounds": {
+        "min": [
+          -6.5,
+          -0.20000000298023224,
+          -2.940000057220459
+        ],
+        "max": [
+          6.5,
+          4.775000095367432,
+          3.000267505645752
+        ]
+      },
+      "xzExact": true,
+      "directedRoutes": 24,
+      "routePass": true,
+      "collider": {
+        "exact": true,
+        "pillar": false,
+        "classification": {
+          "roomScale": true,
+          "floorShaped": false,
+          "uneven": false
+        }
+      }
+    },
+    "forge": {
+      "sha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "bytes": 193268,
+      "nodes": 11,
+      "meshes": 10,
+      "triangles": 2712,
+      "bounds": {
+        "min": [
+          -0.8726182579994202,
+          -0.004999999888241291,
+          -0.7770000100135803
+        ],
+        "max": [
+          1.4600000381469727,
+          2.9600000381469727,
+          0.6099370718002319
+        ]
+      },
+      "xzExact": true,
+      "directedRoutes": 6,
+      "routePass": true,
+      "collider": {
+        "exact": false,
+        "pillar": true
+      }
+    }
+  },
+  "gateEvidence": [
+    "court-forge-determinism.json",
+    "court-forge-geometry.json",
+    "court-sign-support.json",
+    "court-roof-coverage.json",
+    "court-forge-render-proof.json",
+    "court-forge-input-integrity.json"
+  ],
+  "renderFrames": 108,
+  "inspectionMode": "auxiliary vision_analyze; not this agents native vision or live screenshots",
+  "visualInspectionScope": [
+    "court-before-sheet.jpg",
+    "forge-before-sheet.jpg",
+    "court-after-sheet.jpg",
+    "forge-after-sheet.jpg",
+    "court-assembly-detail-after-sheet.jpg",
+    "forge-assembly-detail-after-sheet.jpg",
+    "court-bakery-interior.png",
+    "forge-smithy-sign-mount.png"
+  ],
+  "outstanding": [
+    "Parent final visual review of corrected exact-hash images.",
+    "B28/B29 pre-existing displaced count boards remain unbacked; companion-scope amendment required for repair.",
+    "Live terrain, component playback, served-byte/tuple and collision verification remain parent-owned."
+  ],
+  "worldMutationCount": 0,
+  "artifactInventory": [
+    {
+      "file": "build/court-assembly-after.glb",
+      "sha256": "9fcdef9e2af7ca5df3f7ea12a420fbc2a4d49e801b48b301130b1b6a65088581",
+      "bytes": 1120404
+    },
+    {
+      "file": "build/court-assembly-after.json",
+      "sha256": "a49226d7e6e63e3b9928d597bee5c806fa50594948a9020c88bc6b2e5c027fe5",
+      "bytes": 2340
+    },
+    {
+      "file": "build/court-assembly-before.glb",
+      "sha256": "afa3477ed6c2db98fc580a48deb3b112ad0155be1e9a9fa29d2b01d7adc945ae",
+      "bytes": 449960
+    },
+    {
+      "file": "build/court-assembly-before.json",
+      "sha256": "a323f2ee225427721b893c3990d9c3a9e4be54e4c074ba4550e4022122977353",
+      "bytes": 2310
+    },
+    {
+      "file": "build/court-forge-assembly.ts",
+      "sha256": "9d455e45a8364f715fc8f42bcaa1db94b7702903abd76e63f7faa0e3c1b0577e",
+      "bytes": 3231
+    },
+    {
+      "file": "build/court-forge-determinism.json",
+      "sha256": "2e765a7ad15f5015ad7bd4b0856bec0e8e4ff1567cefd0796600f52d95d3cfc7",
+      "bytes": 1677
+    },
+    {
+      "file": "build/court-forge-geometry.json",
+      "sha256": "0243ae55e9f2200fe221b62fd2c98725b05a585b15550ff6db00922785d24138",
+      "bytes": 15061
+    },
+    {
+      "file": "build/court-forge-input-integrity.json",
+      "sha256": "2d857b381fa53091ec141b7f2c981ffc186595330b23b0548c87ab7b3721e560",
+      "bytes": 5737
+    },
+    {
+      "file": "build/court-forge-render-proof.json",
+      "sha256": "9bc4915876cf8c5ded3c07f586abc9f41225bf2b1dcc01b0fab2caf565f6af80",
+      "bytes": 7110
+    },
+    {
+      "file": "build/court-forge-review-proof.py",
+      "sha256": "5293fd326403383dac85118221ccefe17cc1b43053679d61f212e6d5d24a7409",
+      "bytes": 3922
+    },
+    {
+      "file": "build/court-forge-verify.ts",
+      "sha256": "4e29427dcf9069afdaaca6b9000939c6d3f0c448baad94ade9db43b07caedee5",
+      "bytes": 9629
+    },
+    {
+      "file": "build/court-player-report.json",
+      "sha256": "9a87d455877463a67bac7d6e78a85c2d1c419de5fd1502a454ceb53665daad83",
+      "bytes": 25266
+    },
+    {
+      "file": "build/court-preservation.json",
+      "sha256": "bd848a9487d9f0a8ac8492bdd58ced2a641de7d47fda848d402ccf1ddbda3b64",
+      "bytes": 4939
+    },
+    {
+      "file": "build/court-roof-coverage.json",
+      "sha256": "2e33c8c8962b9db53de39efefd15e4827d8d95cd010290ae2f6f9d78119f3db0",
+      "bytes": 48821
+    },
+    {
+      "file": "build/court-roof-coverage.ts",
+      "sha256": "84503eea5f3cd5dd451b0a289b9ec52c53673848705f7e8e66286ae64bf1e434",
+      "bytes": 3151
+    },
+    {
+      "file": "build/court-roof-gap.json",
+      "sha256": "5303e4f402a346ff41baf5e2e2c633d4305e6287ebb1d3e2cc06e5265bd388cf",
+      "bytes": 445
+    },
+    {
+      "file": "build/court-routes.json",
+      "sha256": "9a19136328683a70ea9d3fd780b9c1fa52bf6b6b8febe2fc0707337647bc4844",
+      "bytes": 15285
+    },
+    {
+      "file": "build/court-sign-support.json",
+      "sha256": "2b0994d84618adfaaeb8ba734202ef5b32533ae76abf06c2bf6dabeaca5d1f09",
+      "bytes": 12717
+    },
+    {
+      "file": "build/court-sign-support.ts",
+      "sha256": "c8c0320542d4d3329b33dd9eaf2b58493cfd0efed5834e7e9fb5b05f13e86335",
+      "bytes": 2239
+    },
+    {
+      "file": "build/court.glb",
+      "sha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+      "bytes": 745684
+    },
+    {
+      "file": "build/court.json",
+      "sha256": "0dbd068307122f4e487e0969211f18426d4dfce68d1a1d8665dc643ce574c919",
+      "bytes": 147708
+    },
+    {
+      "file": "build/forge-assembly-after.glb",
+      "sha256": "bdec1da2a5d9c632dc320a66fa2e934ab1dd4f8b9491404afb2222ffc8ab78ad",
+      "bytes": 1025132
+    },
+    {
+      "file": "build/forge-assembly-after.json",
+      "sha256": "311599f0c37f599754b9ac4f4222e0416375ec7d84a8ca450d98f103c86f2599",
+      "bytes": 1488
+    },
+    {
+      "file": "build/forge-assembly-before.glb",
+      "sha256": "88623eab0239c45ed2233f56b405262dd6ccd7dbba428407a346b461a6513783",
+      "bytes": 354692
+    },
+    {
+      "file": "build/forge-assembly-before.json",
+      "sha256": "f7e3f9f6cd9040c0264d802ac736307da39a61ee402da2431f2c52367d8f9845",
+      "bytes": 1458
+    },
+    {
+      "file": "build/forge-player-report.json",
+      "sha256": "ae11dae1a54206a6c3f5bfa265295606775fbde282fd4563fcb280787b0a4393",
+      "bytes": 3171
+    },
+    {
+      "file": "build/forge-preservation.json",
+      "sha256": "36f9272a341c5d169ce7542f8793c3cc0b247cf4a23a0c1f61eee9ae88e96167",
+      "bytes": 1414
+    },
+    {
+      "file": "build/forge-routes.json",
+      "sha256": "32e9534586a6f7e043ab4f6aa1770f3a069a6b4e27251616fcdd650ddacf891c",
+      "bytes": 6248
+    },
+    {
+      "file": "build/forge.glb",
+      "sha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "bytes": 193268
+    },
+    {
+      "file": "build/forge.json",
+      "sha256": "99e3d3ce162e63e92b6df670354b3301a9dcb7c5c1bb5cc849d8e94efda58cf0",
+      "bytes": 31240
+    },
+    {
+      "file": "build-court.ts",
+      "sha256": "7f54b48320c6d2346fbed1ef70b3a0b4b4e91adfdc25f222f161952d864c8a0b",
+      "bytes": 11625
+    },
+    {
+      "file": "build-forge.ts",
+      "sha256": "9b38d74f34e065592105790dd856e063cbaae59263aac4ff44e99dd0ed6c4935",
+      "bytes": 9266
+    },
+    {
+      "file": "court-forge-notes.md",
+      "sha256": "80735e9608986fa10822530f0177a846fbfb792b7c0cde24211975b75e8f264d",
+      "bytes": 14241
+    },
+    {
+      "file": "reviews/court-after/aerial.png",
+      "sha256": "fa4a511d351718d0d8bfed31939c70a55f1a01c1b4666d1d5c689b20e3614b70",
+      "bytes": 112904
+    },
+    {
+      "file": "reviews/court-after/back.png",
+      "sha256": "5f6c194351ca7e7198ff5e18b95b473eb67d4ad125312634aa126d147f5bb04d",
+      "bytes": 44119
+    },
+    {
+      "file": "reviews/court-after/camera.json",
+      "sha256": "5486b8bb3f4e8f2c3b88314e6b1323182408f6f059e2e911cce471040cbafde4",
+      "bytes": 2839
+    },
+    {
+      "file": "reviews/court-after/front.png",
+      "sha256": "781475c902e1acd7f02e050720c7b7b6105f3045f89263d9bf6120b4256e9ac7",
+      "bytes": 61677
+    },
+    {
+      "file": "reviews/court-after/gameplay.png",
+      "sha256": "32213ff9e02a7d5c4f8aed1248e6b6733c5c0a3d738eb5e8ca6774975df8e050",
+      "bytes": 109790
+    },
+    {
+      "file": "reviews/court-after/interior.png",
+      "sha256": "917aae9fb3c6bfc8527a17391a75f406bfd334e54fb6c223409e339ce449dfbe",
+      "bytes": 214387
+    },
+    {
+      "file": "reviews/court-after/left.png",
+      "sha256": "faadae25652b85c8ef84facc3aecd77b370efe500421e40950370b73f07bdba7",
+      "bytes": 40863
+    },
+    {
+      "file": "reviews/court-after/night.png",
+      "sha256": "87ed622bc20e9c1fccbd00962e0eac4c36ae0e568c0eb23bbc490744e5c128fe",
+      "bytes": 81374
+    },
+    {
+      "file": "reviews/court-after/render-manifest.json",
+      "sha256": "e8619a3431425648d840338fc91c89a035c2dd5845b8c8d55c9ed8c6eb04a48e",
+      "bytes": 10016
+    },
+    {
+      "file": "reviews/court-after/right.png",
+      "sha256": "c6831964cd309bbfda9fa810bd5a14fc0e11aadc867b933771ced3f899707eb1",
+      "bytes": 38531
+    },
+    {
+      "file": "reviews/court-after/top.png",
+      "sha256": "2ea1b05f914881967a00f07539a10af45c93b8da3cadb2620eda8a45ed7438a7",
+      "bytes": 50640
+    },
+    {
+      "file": "reviews/court-after-sheet.jpg",
+      "sha256": "00764a594eafb0b373b398b2bffef3409540370da5252858439df12897bbc952",
+      "bytes": 236796
+    },
+    {
+      "file": "reviews/court-assembly-after/aerial.png",
+      "sha256": "998d21a6f6332fde08990458a8ccbd82201239cce96b9d02dfa21361f37bd5f4",
+      "bytes": 132193
+    },
+    {
+      "file": "reviews/court-assembly-after/back.png",
+      "sha256": "6f2fe56a99a5746ba38a92b7a74f8c48ab8a42a61531cf988e990d68b13e0a8d",
+      "bytes": 47017
+    },
+    {
+      "file": "reviews/court-assembly-after/camera.json",
+      "sha256": "5486b8bb3f4e8f2c3b88314e6b1323182408f6f059e2e911cce471040cbafde4",
+      "bytes": 2839
+    },
+    {
+      "file": "reviews/court-assembly-after/front.png",
+      "sha256": "069abb83e07dc90355d047aada203cee7c5a422412ab0cbdf9b0de31af0edce7",
+      "bytes": 73264
+    },
+    {
+      "file": "reviews/court-assembly-after/gameplay.png",
+      "sha256": "928aba573cb65f8ad3582bcccf8e679c86a848f04069126bd5c3c722079451f7",
+      "bytes": 129726
+    },
+    {
+      "file": "reviews/court-assembly-after/interior.png",
+      "sha256": "917aae9fb3c6bfc8527a17391a75f406bfd334e54fb6c223409e339ce449dfbe",
+      "bytes": 214387
+    },
+    {
+      "file": "reviews/court-assembly-after/left.png",
+      "sha256": "0d414303e8ec9328cf53c0354bc122bca26102f564e6f864b501f5ce43f99a82",
+      "bytes": 41872
+    },
+    {
+      "file": "reviews/court-assembly-after/night.png",
+      "sha256": "670a7705fbfd91a58c3be40f3322ceb8a495093afc01c25b77c40279427cd792",
+      "bytes": 94745
+    },
+    {
+      "file": "reviews/court-assembly-after/render-manifest.json",
+      "sha256": "465107774327a2f896316c02e50896d60bf4b8298ce9accc5314be40990330f2",
+      "bytes": 11218
+    },
+    {
+      "file": "reviews/court-assembly-after/right.png",
+      "sha256": "b87d4a5cbdc4a6580c71407fde2fb123072741b353ce48e039e723e4ec7716ff",
+      "bytes": 44897
+    },
+    {
+      "file": "reviews/court-assembly-after/top.png",
+      "sha256": "0e3dea89440a4887730a99253b93b5052f4bd847d2d7baed596631cbb2e3f362",
+      "bytes": 56278
+    },
+    {
+      "file": "reviews/court-assembly-after-sheet.jpg",
+      "sha256": "5de47a61eaff541db0d25158dcec308f0c1faaa385ede18d6da5d0b0b105d652",
+      "bytes": 258616
+    },
+    {
+      "file": "reviews/court-assembly-before/aerial.png",
+      "sha256": "5d5233303b17e71fdbcc336642088d41afecbff0d5a7aff964204f835b44d1cf",
+      "bytes": 77585
+    },
+    {
+      "file": "reviews/court-assembly-before/back.png",
+      "sha256": "6071e394eaad9aa2783ebda81ea766e4eb261a135a884991db8a57c5963e242a",
+      "bytes": 36369
+    },
+    {
+      "file": "reviews/court-assembly-before/camera.json",
+      "sha256": "5486b8bb3f4e8f2c3b88314e6b1323182408f6f059e2e911cce471040cbafde4",
+      "bytes": 2839
+    },
+    {
+      "file": "reviews/court-assembly-before/front.png",
+      "sha256": "114cbc4c1b0c4bac8102415dbed77e19ea763b49fae3e179f5d7441f4234ab0c",
+      "bytes": 38511
+    },
+    {
+      "file": "reviews/court-assembly-before/gameplay.png",
+      "sha256": "1ef93dd982bc79cb534f13269c382c542769872a906461b1ab5d08289867a2f4",
+      "bytes": 73306
+    },
+    {
+      "file": "reviews/court-assembly-before/interior.png",
+      "sha256": "41c370c80c86ad0c64e4a906b67af05a3ea7d07ce6b40892280b4abaafbe0675",
+      "bytes": 610498
+    },
+    {
+      "file": "reviews/court-assembly-before/left.png",
+      "sha256": "d9a5ea65f19e1ce4e00e8d34bb01a9991f5f118a7b40cfa4dd0fb0b9213a73a4",
+      "bytes": 36886
+    },
+    {
+      "file": "reviews/court-assembly-before/night.png",
+      "sha256": "89da3bf8dfb0d85a8745384a572359b1c74d1b3cc31a7733660bf7b2a8ba0c31",
+      "bytes": 44590
+    },
+    {
+      "file": "reviews/court-assembly-before/render-manifest.json",
+      "sha256": "613fbb81beb28c474ce27804fcc97951aa36be2b3f641c7bf7d89d5bfb0d9bfb",
+      "bytes": 10929
+    },
+    {
+      "file": "reviews/court-assembly-before/right.png",
+      "sha256": "71fbe2b7c86d7dafb72b6768dda3fd0e199cc60bf4ba11bce8df6e23c5a0953b",
+      "bytes": 44142
+    },
+    {
+      "file": "reviews/court-assembly-before/top.png",
+      "sha256": "65196c1b8eef7fe5f8d7b73593a1476c26fa00411cbfad3c16c43e37c95d5394",
+      "bytes": 29364
+    },
+    {
+      "file": "reviews/court-assembly-before-sheet.jpg",
+      "sha256": "53382ff7858123269748239286731435d88d143001446d0d97b42d8a2e605683",
+      "bytes": 229667
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/aerial.png",
+      "sha256": "7181a6d82a5b9dd0cd2874a455445212d001238fa71bcf94e8add714ea6862da",
+      "bytes": 253838
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/back.png",
+      "sha256": "481e5dc2749e5634e442371051cf8a111065b590b5b1ab8216103af836c455a2",
+      "bytes": 132247
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/camera.json",
+      "sha256": "e0d5a88f41d9cd75bd54b47e6a7ba7c468a88c54f4bc29029937c32decd60bab",
+      "bytes": 2338
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/front.png",
+      "sha256": "23117e4dbc880a029bf2c399a26911bc2fa3eb0929b5c992638ceeeaf49cdf35",
+      "bytes": 351362
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/gameplay.png",
+      "sha256": "bf00446dc5ed6f342f6cc0a8b6d2932db94936c9df99b49444181a1eb3c9dd21",
+      "bytes": 340547
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/interior.png",
+      "sha256": "36fdbfd00af77b2efd46c894de362da72ca6f760b3aea36883b0ff5d5e295e72",
+      "bytes": 366138
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/left.png",
+      "sha256": "5e9edad29ba298eb11cfbaf17f6f3116a6e5bbfc7b8f80776a721bf26b58ace8",
+      "bytes": 323680
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/night.png",
+      "sha256": "61b4b807a05fc6cd8825241f7f5b8294f1195f6f7e15f0760b4b58c586691fa2",
+      "bytes": 231565
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/render-manifest.json",
+      "sha256": "a6cd98501f96d2cca9b2bfd88ff27e3fc9b43fc839f31c8054304c215e3cb819",
+      "bytes": 11067
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/right.png",
+      "sha256": "d0768b34c891f21b7834c9616af8b94f7012e028bf24f31f5938c2a2d12c20a7",
+      "bytes": 329232
+    },
+    {
+      "file": "reviews/court-assembly-detail-after/top.png",
+      "sha256": "ddfccc7abd82dab5e2a0ef06dfb5bce4b06f8b7d5973e96ea092938dc5862085",
+      "bytes": 70961
+    },
+    {
+      "file": "reviews/court-assembly-detail-after-sheet.jpg",
+      "sha256": "3a873e71bde81666d6593e585c60251134377e9c65f28193c36f954929b0678e",
+      "bytes": 453205
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/aerial.png",
+      "sha256": "db114e0850d3a8aa8692c48c55e87ec4b0a45abd0880acd191e87f7f9ab90e6c",
+      "bytes": 113122
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/back.png",
+      "sha256": "b71baf657933c1da4447c86fdcdd2dae957d6390e03af03837a7a558ae0cf3d8",
+      "bytes": 84937
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/camera.json",
+      "sha256": "e0d5a88f41d9cd75bd54b47e6a7ba7c468a88c54f4bc29029937c32decd60bab",
+      "bytes": 2338
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/front.png",
+      "sha256": "433f2df14a9c98b41f5ecdbda0192a336f43c3cf71a8b63f02b91cf22f030cc6",
+      "bytes": 245077
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/gameplay.png",
+      "sha256": "04b16800daa1ff08d6ab5fcc42fd27fd2678ee0efd43c233a935992a7e92e46b",
+      "bytes": 494639
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/interior.png",
+      "sha256": "a96855b58f28068a99ec35b1ac944310b672406ffe5a01e19811c843dfe8dea9",
+      "bytes": 600871
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/left.png",
+      "sha256": "e75be38a8757c4e8f98b850fdda984cfe0fc6de373e94002306243228dd52c99",
+      "bytes": 406742
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/night.png",
+      "sha256": "f59278f44f555c6679663d631add7614011d1964ba1e7d21ab964ca4dd018d1f",
+      "bytes": 145985
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/render-manifest.json",
+      "sha256": "8e45bc9c99725423e7ced647b6f2ceedd93a3e625798616b2ee70b5308d0182e",
+      "bytes": 10779
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/right.png",
+      "sha256": "70a84a042e7b2c7d5a109cda435098e0607d3b65542a86139ad5785524511d74",
+      "bytes": 237235
+    },
+    {
+      "file": "reviews/court-assembly-detail-before/top.png",
+      "sha256": "4d1ec7289ee7534a24b9162f2e917785273498dbd5f074ce6d1c65e6e03dc4ef",
+      "bytes": 42917
+    },
+    {
+      "file": "reviews/court-assembly-detail-before-sheet.jpg",
+      "sha256": "e303eb2c375d6a25d926d5ecd671fbcf7d0a32b03d92b3ffcc04abc415d4157b",
+      "bytes": 354586
+    },
+    {
+      "file": "reviews/court-bakery-interior.png",
+      "sha256": "23117e4dbc880a029bf2c399a26911bc2fa3eb0929b5c992638ceeeaf49cdf35",
+      "bytes": 351362
+    },
+    {
+      "file": "reviews/court-before/aerial.png",
+      "sha256": "d19cfb53d9d21d9a13bd1285304eded039468c3499ae7490d9eb19ed77c06451",
+      "bytes": 63105
+    },
+    {
+      "file": "reviews/court-before/back.png",
+      "sha256": "790362998d46ff124222187168a5d95c971b4f7de4b645ef067986eb3d70d52c",
+      "bytes": 34152
+    },
+    {
+      "file": "reviews/court-before/camera.json",
+      "sha256": "5486b8bb3f4e8f2c3b88314e6b1323182408f6f059e2e911cce471040cbafde4",
+      "bytes": 2839
+    },
+    {
+      "file": "reviews/court-before/front.png",
+      "sha256": "c04f86568ef8feefbe3798cb6b4322e700d5c29a4ff608e4e94b4925bfb239bf",
+      "bytes": 30301
+    },
+    {
+      "file": "reviews/court-before/gameplay.png",
+      "sha256": "4f2ab774cb257427e7321ab56f1f566b11ab5626534b4a965057abfea9d65479",
+      "bytes": 59137
+    },
+    {
+      "file": "reviews/court-before/interior.png",
+      "sha256": "41c370c80c86ad0c64e4a906b67af05a3ea7d07ce6b40892280b4abaafbe0675",
+      "bytes": 610498
+    },
+    {
+      "file": "reviews/court-before/left.png",
+      "sha256": "e026a7ce866dc3c0787f9ec028b1aab492173bb7919cd9a1aeae764c4a4c73b3",
+      "bytes": 35438
+    },
+    {
+      "file": "reviews/court-before/night.png",
+      "sha256": "83e23e4ca815b60b61d535e62d3373d42b4a932e15529a128e30ae06460e1ad5",
+      "bytes": 35626
+    },
+    {
+      "file": "reviews/court-before/render-manifest.json",
+      "sha256": "546349fa7d118e35d21169b2efea82489c47e4576efe0c9382da7f4f90d7339b",
+      "bytes": 9841
+    },
+    {
+      "file": "reviews/court-before/right.png",
+      "sha256": "e3802256e3034885d596a33c3bf12132347e0838f598374e9ef145adfc875eb4",
+      "bytes": 40766
+    },
+    {
+      "file": "reviews/court-before/top.png",
+      "sha256": "9773997c98d4611230871816bd70e8a076ab83d0c2af33bb78e3a8cf48663abe",
+      "bytes": 25742
+    },
+    {
+      "file": "reviews/court-before-sheet.jpg",
+      "sha256": "ea09946491460c269c38a711c65e3597f02622a2a54e4c4d734071f0c4897a7c",
+      "bytes": 210953
+    },
+    {
+      "file": "reviews/court-detail-after/aerial.png",
+      "sha256": "884f4de5586c9c96c01fdd85266cc99a71ccf4b6f49eb50629ffac6b3f819c79",
+      "bytes": 243697
+    },
+    {
+      "file": "reviews/court-detail-after/back.png",
+      "sha256": "1f46ed708106a9535fc5621706a51f8b135af27840dbb0f617cc8a853dbac423",
+      "bytes": 132108
+    },
+    {
+      "file": "reviews/court-detail-after/camera.json",
+      "sha256": "e0d5a88f41d9cd75bd54b47e6a7ba7c468a88c54f4bc29029937c32decd60bab",
+      "bytes": 2338
+    },
+    {
+      "file": "reviews/court-detail-after/front.png",
+      "sha256": "cf80149114f14f3122028a7edf9c8b121ac33ad876b1505b32ba3ab98dda2557",
+      "bytes": 350509
+    },
+    {
+      "file": "reviews/court-detail-after/gameplay.png",
+      "sha256": "bf00446dc5ed6f342f6cc0a8b6d2932db94936c9df99b49444181a1eb3c9dd21",
+      "bytes": 340547
+    },
+    {
+      "file": "reviews/court-detail-after/interior.png",
+      "sha256": "02e287778a3f2355bd81b3923f1b6f810c1538d8281e8e89a80f5fb8d98d0608",
+      "bytes": 366536
+    },
+    {
+      "file": "reviews/court-detail-after/left.png",
+      "sha256": "ef8ef4a7ce85352e428f35e425a1a0b7d09a7ceb5f7191f5eedd657b65640aa8",
+      "bytes": 318293
+    },
+    {
+      "file": "reviews/court-detail-after/night.png",
+      "sha256": "093dcbb42690fd063fde6bfd6d318d6e7c1ffeaff04664188ccbc30d05554afe",
+      "bytes": 230827
+    },
+    {
+      "file": "reviews/court-detail-after/render-manifest.json",
+      "sha256": "30022cb8b5b2faaf06770ed4c292314423b71e78f5285cf1a9367d988a2d2f54",
+      "bytes": 9863
+    },
+    {
+      "file": "reviews/court-detail-after/right.png",
+      "sha256": "074d282557240a64354696c2af750c93a2642398660940b1a98aa0f2f66d5d1b",
+      "bytes": 329238
+    },
+    {
+      "file": "reviews/court-detail-after/top.png",
+      "sha256": "b4e63208ee82679b64a862e98ea19fb4f26549d345dd9a48bc011305f5da5ec0",
+      "bytes": 70942
+    },
+    {
+      "file": "reviews/court-detail-after-sheet.jpg",
+      "sha256": "4ab8873cfc99d7e96a3f76e6117723a15b3e82fcc419a170b6ad14b4a7d7b8a1",
+      "bytes": 445793
+    },
+    {
+      "file": "reviews/court-detail-before/aerial.png",
+      "sha256": "6a42466b5d7b8e28293e845b00f0ef9e4049af00a482341363a3be29e54b48ce",
+      "bytes": 101062
+    },
+    {
+      "file": "reviews/court-detail-before/back.png",
+      "sha256": "e31d5d0d9aa8bb37f193d2a8ea0c35e5f2312db6b3bd819c32cb52a49a7d1c1e",
+      "bytes": 84743
+    },
+    {
+      "file": "reviews/court-detail-before/camera.json",
+      "sha256": "e0d5a88f41d9cd75bd54b47e6a7ba7c468a88c54f4bc29029937c32decd60bab",
+      "bytes": 2338
+    },
+    {
+      "file": "reviews/court-detail-before/front.png",
+      "sha256": "46c0d421dd36b98859949f847b309bd05427f0c5fe4689fdf9cfd426fa43411c",
+      "bytes": 243982
+    },
+    {
+      "file": "reviews/court-detail-before/gameplay.png",
+      "sha256": "04b16800daa1ff08d6ab5fcc42fd27fd2678ee0efd43c233a935992a7e92e46b",
+      "bytes": 494639
+    },
+    {
+      "file": "reviews/court-detail-before/interior.png",
+      "sha256": "c7257d49669591528ffd233b3b0587cb9151112b82f23a2a9f0fe554f0c29d80",
+      "bytes": 600869
+    },
+    {
+      "file": "reviews/court-detail-before/left.png",
+      "sha256": "5c7c2feb4a33cde065c6209a8dd74b419d3ee17de306197becc9eacdd8552b9a",
+      "bytes": 398884
+    },
+    {
+      "file": "reviews/court-detail-before/night.png",
+      "sha256": "16e7e6d9075e4fe6ea6b3c5dbb81e4d2ebdc2a3a72ad1bcf0391663f2f3e5f47",
+      "bytes": 145034
+    },
+    {
+      "file": "reviews/court-detail-before/render-manifest.json",
+      "sha256": "c432ae03cb673c3fb829710dc825427d08a244bf8dda623ba59af09383a3535c",
+      "bytes": 9791
+    },
+    {
+      "file": "reviews/court-detail-before/right.png",
+      "sha256": "70a84a042e7b2c7d5a109cda435098e0607d3b65542a86139ad5785524511d74",
+      "bytes": 237235
+    },
+    {
+      "file": "reviews/court-detail-before/top.png",
+      "sha256": "4d1ec7289ee7534a24b9162f2e917785273498dbd5f074ce6d1c65e6e03dc4ef",
+      "bytes": 42917
+    },
+    {
+      "file": "reviews/court-detail-before-sheet.jpg",
+      "sha256": "86b6a08c9f5466b47547d0729346875a6adbe1ff79737bc87b1ea959d1df0bd3",
+      "bytes": 346037
+    },
+    {
+      "file": "reviews/court-detail-camera.json",
+      "sha256": "e0d5a88f41d9cd75bd54b47e6a7ba7c468a88c54f4bc29029937c32decd60bab",
+      "bytes": 2338
+    },
+    {
+      "file": "reviews/court-open-courtyard.png",
+      "sha256": "bf00446dc5ed6f342f6cc0a8b6d2932db94936c9df99b49444181a1eb3c9dd21",
+      "bytes": 340547
+    },
+    {
+      "file": "reviews/court-repair-station.png",
+      "sha256": "36fdbfd00af77b2efd46c894de362da72ca6f760b3aea36883b0ff5d5e295e72",
+      "bytes": 366138
+    },
+    {
+      "file": "reviews/court-roof-separation.png",
+      "sha256": "7181a6d82a5b9dd0cd2874a455445212d001238fa71bcf94e8add714ea6862da",
+      "bytes": 253838
+    },
+    {
+      "file": "reviews/forge-after/aerial.png",
+      "sha256": "93f6da42101c25221958709cad6fedc3067ec91d87a92d25a868e874a2db39da",
+      "bytes": 66048
+    },
+    {
+      "file": "reviews/forge-after/back.png",
+      "sha256": "a9f3b7853f594edac8fef88a81cfa79117678ce7527387ddaebff5bfc264b755",
+      "bytes": 37606
+    },
+    {
+      "file": "reviews/forge-after/camera.json",
+      "sha256": "04c186c86921d7966924deb327ecad07708e7cd348aa312af62d49d9009bb406",
+      "bytes": 3157
+    },
+    {
+      "file": "reviews/forge-after/front.png",
+      "sha256": "23612cd3c21ecf4ae270957bbd5d35afb0a3bb263a36056094852ab2b630851c",
+      "bytes": 65579
+    },
+    {
+      "file": "reviews/forge-after/gameplay.png",
+      "sha256": "d7113ebb197bff1932ba631d4a76f7e270d3bc52dc58d05bae1ca3652b3ed4ee",
+      "bytes": 23681
+    },
+    {
+      "file": "reviews/forge-after/interior.png",
+      "sha256": "6d9ab4cd0c664127cc3d91a2c95a30f3daefe1dd7542476db3e9ca1efe236b86",
+      "bytes": 337244
+    },
+    {
+      "file": "reviews/forge-after/left.png",
+      "sha256": "6afa4ce01a24c8776373fe48ef2b91387e2ec0354a1a7d9a2694f39adec94e73",
+      "bytes": 33853
+    },
+    {
+      "file": "reviews/forge-after/night.png",
+      "sha256": "d1344350ef7eccbcfd59133806e62fb1a6bf90fc613c37b97b43dafbcd743f85",
+      "bytes": 18013
+    },
+    {
+      "file": "reviews/forge-after/render-manifest.json",
+      "sha256": "0b24694dc372e0775d2214a515fa1412ec9aa629cff283f322ba6aaa7e5cb547",
+      "bytes": 9725
+    },
+    {
+      "file": "reviews/forge-after/right.png",
+      "sha256": "2c4f694e7ec6fefb213ed67a6e20ecd508d28ba0d53c09c61823c0cb78b57288",
+      "bytes": 42819
+    },
+    {
+      "file": "reviews/forge-after/top.png",
+      "sha256": "3473aee3fdbfabf37f94a2687522c670814a0f09c39ff6116580f4e531d49bc6",
+      "bytes": 41496
+    },
+    {
+      "file": "reviews/forge-after-sheet.jpg",
+      "sha256": "8b5a585b979baaf59af3f173151bfcd0925b339e7e259bb56705345c4bd832cb",
+      "bytes": 197783
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/aerial.png",
+      "sha256": "789a2e90f756e96959402a3f222aaea632fd7670ccd70e056b31bcd85e26d23b",
+      "bytes": 366572
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/back.png",
+      "sha256": "3bf9d0ae4a92a8eae3e9242eecd3f05cc76450ff36a9fcc3b83a34af450e84ab",
+      "bytes": 317550
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/camera.json",
+      "sha256": "dcd4a09cb7fe5b4809d6c85d2ba4884838ca619435c7ccebb94875398135d97a",
+      "bytes": 2357
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/front.png",
+      "sha256": "d2c059dc6e9ee6939b2d2c2e9994672a2d3225cfe67347c3e9d506523c45b558",
+      "bytes": 349420
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/gameplay.png",
+      "sha256": "ec9cd922170dd017ea18aff3e0eaf98f9ff293bd212e0cdf9780f74d6828270d",
+      "bytes": 377884
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/interior.png",
+      "sha256": "49a4ed3ee1a848de0f909779d86ff61c8b12951d21accb944eb9af03200a9506",
+      "bytes": 361404
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/left.png",
+      "sha256": "ac0ce82ffa60d21da0bd6014bb7869edb2817078ee815c9be144569cbc60fc97",
+      "bytes": 319944
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/night.png",
+      "sha256": "0f17ee45e2b9be71c2d95fe87675ea465c24e8829b548003c5a619e32b3898cc",
+      "bytes": 218795
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/render-manifest.json",
+      "sha256": "325269816126666a24ffbd573e82ae17e59227aefd77533824a2ccae13be3c57",
+      "bytes": 10635
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/right.png",
+      "sha256": "fb98f5dbe9384d796b0eb524b78149bca2ee1617696fc523a51277796e907de2",
+      "bytes": 326702
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after/top.png",
+      "sha256": "e07a4e509e2f5831c289104945cbd93b15504d06d5699edbb444e3fa544b35a7",
+      "bytes": 163421
+    },
+    {
+      "file": "reviews/forge-assembly-detail-after-sheet.jpg",
+      "sha256": "db9a7a1b7ca5b3771cda8cbd3cb0fb06cff3f5a0083f315ee2c81c5262420265",
+      "bytes": 485616
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/aerial.png",
+      "sha256": "c132efeeca9379b13d872fd5ede8d4cc495da36152af9417c46b80864db7617d",
+      "bytes": 336281
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/back.png",
+      "sha256": "06df8097df708411e5f57b78d3c8f059761f218fa651fb815763eb77b20afa29",
+      "bytes": 570688
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/camera.json",
+      "sha256": "dcd4a09cb7fe5b4809d6c85d2ba4884838ca619435c7ccebb94875398135d97a",
+      "bytes": 2357
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/front.png",
+      "sha256": "6583de4e58ae87fc28504d4a11dad3ce0651e8cddecb403a313455fb211771cb",
+      "bytes": 267285
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/gameplay.png",
+      "sha256": "631259347e9054e4d7707e3affc897110747a51b1c5801d001962b9e955b2f3b",
+      "bytes": 305432
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/interior.png",
+      "sha256": "7374a403abedb183a42cbfaf576334404abdb6ccc3ed64d774412d02ba8e05ac",
+      "bytes": 325882
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/left.png",
+      "sha256": "2faf156506f52f4a14a716fd7afed3f9b2229f9ac6c1ee52ba37b98ca00b849b",
+      "bytes": 125290
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/night.png",
+      "sha256": "d23cb77d13c3a611aba20952f51f411a7b00b3188cf975cda3638c74a6f694d9",
+      "bytes": 160402
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/render-manifest.json",
+      "sha256": "690fd3eb3f1a9b99a927c88b46edc63f60a0f9f104a791d1657bcdaf876fb1f2",
+      "bytes": 10379
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/right.png",
+      "sha256": "ef617443bac16794298c8ccb1f9c7fa0a0c7303f36728337d33343f34499f32f",
+      "bytes": 340474
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before/top.png",
+      "sha256": "22740d309f4a5d498b925ff0508d464825018d8b92f4046986c9bdea6b6619a4",
+      "bytes": 173899
+    },
+    {
+      "file": "reviews/forge-assembly-detail-before-sheet.jpg",
+      "sha256": "26fec5d8b46713f72726bd36107de49fb756b37613b2ec37bb1c4ce9830c24c2",
+      "bytes": 388665
+    },
+    {
+      "file": "reviews/forge-before/aerial.png",
+      "sha256": "26714c7a239bb2e145c5983015345d1aefbeea3d4c64c300cb9b6bea247f8848",
+      "bytes": 36475
+    },
+    {
+      "file": "reviews/forge-before/back.png",
+      "sha256": "c962309193d33eec890ec517b735e14f76e50c1f4db3ba16c2ff703eab6bc902",
+      "bytes": 31734
+    },
+    {
+      "file": "reviews/forge-before/camera.json",
+      "sha256": "04c186c86921d7966924deb327ecad07708e7cd348aa312af62d49d9009bb406",
+      "bytes": 3157
+    },
+    {
+      "file": "reviews/forge-before/front.png",
+      "sha256": "61654671027991a17335a98c6f93b163b292611f0d42edbc89e52eaecf6dd260",
+      "bytes": 35414
+    },
+    {
+      "file": "reviews/forge-before/gameplay.png",
+      "sha256": "773fa626726fb0cfbc4bf6426df16e5580ce8b281c5422255b0ad9c9d95c85bb",
+      "bytes": 15783
+    },
+    {
+      "file": "reviews/forge-before/interior.png",
+      "sha256": "a61d8cf0a641b35c9864ffaf82ea282c0eabcaf228ae811b76fa607303187c7b",
+      "bytes": 76938
+    },
+    {
+      "file": "reviews/forge-before/left.png",
+      "sha256": "10f06713e630264b4383f8f794dd57248b9742455796aef679699b509cbc4d74",
+      "bytes": 26241
+    },
+    {
+      "file": "reviews/forge-before/night.png",
+      "sha256": "04ea6c006e759f5b8795f6069caf9c5cb5b2ab2d53e43126cc56eef4a2442e43",
+      "bytes": 12423
+    },
+    {
+      "file": "reviews/forge-before/render-manifest.json",
+      "sha256": "d1e9965b389c1ae19762512a5c86e82607e96729685aa1ae4c80fe8416df56db",
+      "bytes": 9521
+    },
+    {
+      "file": "reviews/forge-before/right.png",
+      "sha256": "22db3ca7b3e295fba7b8b472af5eda3c8a6762a643d37787c2ee2c526025f3f0",
+      "bytes": 33185
+    },
+    {
+      "file": "reviews/forge-before/top.png",
+      "sha256": "25caedcab42e428884520d1953ed7dc5b6680733e9af3faa266beccb5d2723eb",
+      "bytes": 31727
+    },
+    {
+      "file": "reviews/forge-before-sheet.jpg",
+      "sha256": "a242bbf51dee987260f39db04fa854cc68bca55dd58e2c109411bef7bda23483",
+      "bytes": 143239
+    },
+    {
+      "file": "reviews/forge-detail-camera.json",
+      "sha256": "dcd4a09cb7fe5b4809d6c85d2ba4884838ca619435c7ccebb94875398135d97a",
+      "bytes": 2357
+    },
+    {
+      "file": "reviews/forge-hearth-art.png",
+      "sha256": "d2c059dc6e9ee6939b2d2c2e9994672a2d3225cfe67347c3e9d506523c45b558",
+      "bytes": 349420
+    },
+    {
+      "file": "reviews/forge-open-hearth-detail.png",
+      "sha256": "49a4ed3ee1a848de0f909779d86ff61c8b12951d21accb944eb9af03200a9506",
+      "bytes": 361404
+    },
+    {
+      "file": "reviews/forge-smithy-sign-mount.png",
+      "sha256": "3bf9d0ae4a92a8eae3e9242eecd3f05cc76450ff36a9fcc3b83a34af450e84ab",
+      "bytes": 317550
+    }
+  ],
+  "artifactCount": 186
+}

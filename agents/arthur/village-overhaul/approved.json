@@ -1,0 +1,1714 @@
+{
+  "world": "commons-next",
+  "status": "reviewed",
+  "scope": [
+    "nx-town-hall",
+    "nx-town-inn",
+    "nx-town-stable",
+    "nx-town-woodyard",
+    "nx-court",
+    "nx-forge",
+    "nx-town-market",
+    "nx-town-dyehouse",
+    "nx-town-potter",
+    "nx-town-kiln",
+    "nx-town-belltower",
+    "nx-tower",
+    "nx-town-shrine",
+    "nx-town-gate-n",
+    "nx-town-gate-s",
+    "nx-town-gate-e",
+    "nx-town-gate-w"
+  ],
+  "migrations": [],
+  "capture": [
+    {
+      "file": "before/contracts.json",
+      "sha256": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f"
+    },
+    {
+      "file": "before/folded-hosts.json",
+      "sha256": "b96918a4086952fec4ce76d09ba5c2c5c5a51800e481ab83c9fb8babe4a53502"
+    },
+    {
+      "file": "before/protected.json",
+      "sha256": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db"
+    },
+    {
+      "file": "before/full-census.json",
+      "sha256": "33a8c85e265760b6a2ee5277665d6e7a93726a853dca077fe1ca129a0f10f84a"
+    },
+    {
+      "file": "before/downloads.json",
+      "sha256": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659"
+    },
+    {
+      "file": "before/capture-complete.json",
+      "sha256": "747ed11c2f15f92050a3a873bf198b96fd98e941e2dcae9cfd30e5ab43bb86b4"
+    }
+  ],
+  "engineSources": [
+    {
+      "file": "rollout.ts",
+      "sha256": "a0ccdbf9a9f61733c769e00123cc4d14fbe6b953d17f5567763d32c53b4702d0"
+    },
+    {
+      "file": "capture.ts",
+      "sha256": "178aa22a728d48f0a986738651558200e4a3d629998113ef1c6ef3e303f77414"
+    },
+    {
+      "file": "../cabin-overhaul/rollout.ts",
+      "sha256": "addc6fd0d39839028393ef4ce5ee664c7ce0e21064667e4ad0b32d887c57260a"
+    },
+    {
+      "file": "../../../shared/fold.js",
+      "sha256": "3875b6e2f362d33d9bee3ce15ab41e43c67b48f7119ad080a0b64c91ed79b4ab"
+    },
+    {
+      "file": "../../../shared/forecast.js",
+      "sha256": "456ee2f6340f81a8047a2d89eabf9e2e4520daff1902d04c325da8476e74443c"
+    },
+    {
+      "file": "../cabin-overhaul/contracts.ts",
+      "sha256": "dae068f3a7fde96363f95750c0c244c5b5a036f50fb7af5d035f3d62a9d7d0e2"
+    }
+  ],
+  "preflight": {
+    "file": "preflight.ts",
+    "sha256": "27a39c1bdfbe445f9a2b22e1b83051d2e5ed3a0b6ce78a7cd3fdbea6e122ef28",
+    "sources": [
+      {
+        "file": "preflight.ts",
+        "sha256": "27a39c1bdfbe445f9a2b22e1b83051d2e5ed3a0b6ce78a7cd3fdbea6e122ef28"
+      },
+      {
+        "file": "../cabin-overhaul/verify-player.ts",
+        "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+      },
+      {
+        "file": "../../../tools/core-stub.mjs",
+        "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+      },
+      {
+        "file": "../../../client/node_modules/three/build/three.module.js",
+        "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+      },
+      {
+        "file": "../../../client/node_modules/three/build/three.core.js",
+        "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+      },
+      {
+        "file": "verify-approach.ts",
+        "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+      },
+      {
+        "file": "../cabin-overhaul/contracts.ts",
+        "sha256": "dae068f3a7fde96363f95750c0c244c5b5a036f50fb7af5d035f3d62a9d7d0e2"
+      },
+      {
+        "file": "../cabin-overhaul/rollout.ts",
+        "sha256": "addc6fd0d39839028393ef4ce5ee664c7ce0e21064667e4ad0b32d887c57260a"
+      },
+      {
+        "file": "../../../shared/fold.js",
+        "sha256": "3875b6e2f362d33d9bee3ce15ab41e43c67b48f7119ad080a0b64c91ed79b4ab"
+      },
+      {
+        "file": "../../../shared/forecast.js",
+        "sha256": "456ee2f6340f81a8047a2d89eabf9e2e4520daff1902d04c325da8476e74443c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/index.js",
+        "sha256": "6ca769fd9657673f4a3e1a006af5e34450bd5764bc58c1d641ad227ff3630090"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/BVH.js",
+        "sha256": "2a0813bf437c245e14937bb929776b7106f48d94bc98cf96cc106f54356b8a34"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/Constants.js",
+        "sha256": "2844d2bd13dab0fcc219229eceebd5a592f411e93fb2dd8efe02663589a69e09"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ArrayBoxUtilities.js",
+        "sha256": "583898689314c583d53d1eeb627890a3559d879e922ada706424f585a6bff763"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/nodeBufferUtils.js",
+        "sha256": "8632a4444c086c1984a471bc75f0902964cbcd52013aba06c73df4403401b0b2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/buildTree.js",
+        "sha256": "14793377d68353617a7e76b560223b173a768846719cbb3a3b4aaf038fe7ef80"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/computeBoundsUtils.js",
+        "sha256": "b0596bd329f99f9dcc5f33c3af909ca853726c07d7d7ced42ca974319a46b3e4"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/splitUtils.js",
+        "sha256": "611c1b9f9fcf7e3f55997def32f0c47476269b8a1cc8b38d38ea8aff02baa4e0"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/BVHNode.js",
+        "sha256": "7cf8d828145b54d4ee2feec166c575b099cea71da07f807a8d5ef0f90b1fc7bc"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/sortUtils.js",
+        "sha256": "54923f99e4d5e779943b0c211b12a2c65b3a9f5579da6e1d589b1088128a3add"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/buildUtils.js",
+        "sha256": "a8b849fbfa2f4ae3808bd111ecf20f79213cc18c13ea4043d2d7fa8e81b3ea44"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/shapecast.js",
+        "sha256": "9fa4aed17f4e2895c2b1a34cb0f072c37acc8ded99868066d4f07fa0e2f570a2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/PrimitivePool.js",
+        "sha256": "91c2510b6414084634479cacb9af1dee2f56114025108d68ab0ae01814ba329a"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/BufferStack.js",
+        "sha256": "c94b20fde61b58d10596ff4c969667eb19ac19f09c7397f3f4fc06449abc0375"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/bvhcast.js",
+        "sha256": "be889ce017e3fb0d2758a40082969fbbc3db6d0a1bdb098a88e4f404e5e20ddd"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/BVHTraversalHelper.js",
+        "sha256": "68959d21d75001e2fdb345b4890821991c2044c9d9fd938132fc926b3035f2db"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/GeometryBVH.js",
+        "sha256": "1ce7464e1f77be01e69029ffbb3d76b182b38f6a10947763e46891696888bf7f"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/BufferUtils.js",
+        "sha256": "b83540dd60363892ce18082c5910a8e2cc87f37d6e811768830a0f34863b5658"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/build/geometryUtils.js",
+        "sha256": "ae71dfbadf9e6a3a8963b0784aaf4d3f1b12a7ee8a8f3bccc9b251c838360e3e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/MeshBVH.js",
+        "sha256": "1f917667d86e7d8e04060104bf760b7021432311ce691645f232beff2ebefff2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/OrientedBox.js",
+        "sha256": "5f24dec94ea76ee1c78da7b6593703b4d4c06eccc1e92cafca853477856dc89c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/SeparatingAxisBounds.js",
+        "sha256": "3e608a7bb5acc71d1f09af9a3b169518ea4de7cc436f11f7d868f5823ac09434"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/ExtendedTriangle.js",
+        "sha256": "85435041c00fbb0e2e69caecf1289339deef791cd2a8badc08bdca004700436f"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/math/MathUtilities.js",
+        "sha256": "9b1f8facd181b29506c32dda303097c3c2515b95c19ac1f5121e8d8a9946154b"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ExtendedTrianglePool.js",
+        "sha256": "b6bf7e421537d4cb7be66f6d7a60a87eb8a96b45b41e51e89e344f81f4295a37"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/closestPointToPoint.js",
+        "sha256": "296711939d33aab99c7b887fedd97dae5a53a35ff6bb2ad9f9ecb181a5badcd4"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/iterationUtils.generated.js",
+        "sha256": "900ed65be866c9f5e39adc523f68c0ecb1c7235d03cff965b7b72378bfd4f58e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ThreeRayIntersectUtilities.js",
+        "sha256": "157bed8831521365f325ed5c4c1827f6d7b7afa0a6cf2b0cbc2ec34df0043240"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/TriangleUtilities.js",
+        "sha256": "1b6118e427f613160570f22da94b1016420d1b692610aaade00d74a83736b8ce"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/refit.generated.js",
+        "sha256": "7dfe122498f14ac79cd4e74bd77872a4401ee6b6bf4a93ad97f80790f189af35"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycast.generated.js",
+        "sha256": "8185e10aa2f8c3c0249f2e0c770b66c4dcb7dd58ed8bfaf3efbc5838e0384f3d"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/intersectUtils.js",
+        "sha256": "b98f82110a9c6c45a3b29a9e79583a4f35f0f1f4bd7d126c8fc072112546540c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/utils/iterationUtils_indirect.generated.js",
+        "sha256": "36ca2be43e2776b3de3d32f45a47f53ac7b1aa241396e8199556cdb64b5ade5c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycastFirst.generated.js",
+        "sha256": "4e89cfc9695bcff713d3457229fda35f8ec3eb8d16c43ffeb34a7c1ae79551a0"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/intersectsGeometry.generated.js",
+        "sha256": "c618a6af5c7e0649240b54bae66f57de0c33cda9f5eef9b35d775fc5891ba2ad"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/closestPointToGeometry.generated.js",
+        "sha256": "0f981858f3971a6e1a86f4597fe02c0028e9c826ec213cc3b0cb0ffe2c040913"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/refit_indirect.generated.js",
+        "sha256": "97fa130b81de7f568abfba9eb0e2186512f9b3d027fa88c6521aca909e981c5f"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycast_indirect.generated.js",
+        "sha256": "e579930a4012c6aa26ecf156268f7e155250f47dc6b73e250335d2469d2cb296"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/raycastFirst_indirect.generated.js",
+        "sha256": "294b7c7f89c1c985a0df7a3c4a2b55a2d8a6df8c452c5c22717c80c3ca030783"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/intersectsGeometry_indirect.generated.js",
+        "sha256": "cba4c920f9cadb170de37db74655a980c9e34b90ec14e0656969adfbfb79929e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/cast/closestPointToGeometry_indirect.generated.js",
+        "sha256": "b233234d031601808be957a1f2eb37a8d4d7389f3522861b904d35ccfaa6d9d7"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/GeometryRayIntersectUtilities.js",
+        "sha256": "cbb52046616cc9e0c9c5d20e309b8ce5d0b1c7695937a5cf1db8baebdc5b5a34"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/LineBVH.js",
+        "sha256": "5e494eeab88a8f473081ef206c854d5c72a6139e50866e047ff06ab9fbdb67f3"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/PointsBVH.js",
+        "sha256": "8abcd7a85bbb9621b13837ef9ef2e431de21548f582b97a87dcbea7022e73d0e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/ObjectBVH.js",
+        "sha256": "01b3cac6e88d72bbea2c1dd04f9f10393a5364049d2d2496448752a488f3aea3"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/core/SkinnedMeshBVH.js",
+        "sha256": "8305377bc8fb72d597418b0e708754a2e452f00ddeec405356f0926542c837d0"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/objects/BVHHelper.js",
+        "sha256": "adfd391c0584e1cc645977fb697dbc83380a17098ca1a3c2c5c935c1bfaa1397"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/debug/Debug.js",
+        "sha256": "89e23aed54b12ad28e92b32aa3a6fad8388946d1eb621e1036b44352a0c789de"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/ExtensionUtilities.js",
+        "sha256": "bfd3997c8350432e4388e799e93c4dff8b84fa26094558f2f083272ae1f9859b"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/MeshBVHUniformStruct.js",
+        "sha256": "44ecf9812b1cf6855863dcef9075edac426ea7697a5f1e723ccd8ba395c71970"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/VertexAttributeTexture.js",
+        "sha256": "92faf674385c53a00b53d04f07418caf74dcd7d9c355b68556e2b1d85472c68e"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/utils/StaticGeometryGenerator.js",
+        "sha256": "1449a338f92c7c0fe90a41917b991782091b469ccbd94ce052c9a3a157ab0fd2"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/BVHShaderGLSL.js",
+        "sha256": "1680ce1b28a7eee5db9f339378c90b2eaffe64b3aa66badad3ab401e8fd4cf1c"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/common_functions.glsl.js",
+        "sha256": "19ee249214138a0d9aba7712121cccd06780640e53a3f0edb7f80c61780e0bae"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/bvh_distance_functions.glsl.js",
+        "sha256": "e8b716d9cf0740a9c0a898d9f6498ba7bc33bc09add5e4fb7f0279092f86e855"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/bvh_ray_functions.glsl.js",
+        "sha256": "1da5da042843d879e1170086a7f479b70ba89b600603ae3eaceeeafd648475a5"
+      },
+      {
+        "file": "../../../client/node_modules/three-mesh-bvh/src/webgl/glsl/bvh_struct_definitions.glsl.js",
+        "sha256": "e196322216da3954a5bace7c091cd19308b78c0988650ef71a790a5d8c88c97c"
+      },
+      {
+        "file": "../cabin-overhaul/runtime/colliders.js",
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826"
+      },
+      {
+        "file": "../cabin-overhaul/runtime/core.js",
+        "sha256": "a0dc9b2e17fd7dfeca91318c3a48c7c07399904e1242bd447de2c74c9cd799ed"
+      },
+      {
+        "file": "../cabin-overhaul/runtime/supportclass.js",
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e"
+      },
+      {
+        "file": "../cabin-overhaul/runtime/manifest.json",
+        "sha256": "17cc1515735bf558a6c20b0a693c87e59a811c57f874ea0a80923617538f2a36"
+      },
+      {
+        "file": "../../../package.json",
+        "sha256": "65a58d026d985dcdbf966bd239d0e0621e2240c7a0078f586ff937084ac3e815"
+      },
+      {
+        "file": "../../../client/package.json",
+        "sha256": "b74a07ecda37f926d042c04afa49147d89a20b46820ca3dfa8df8a10ba86a765"
+      }
+    ]
+  },
+  "slots": [
+    {
+      "id": "nx-town-hall",
+      "status": "READY",
+      "kind": "walk-in",
+      "pos": [
+        9,
+        0,
+        -26
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bounds": {
+        "min": [
+          -5,
+          -0.20000000298023224,
+          -3.4700000286102295
+        ],
+        "max": [
+          5,
+          7.164999961853027,
+          4.849999904632568
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          -0.252377580257213,
+          -3.2000000029802322,
+          -33.844660537757505
+        ],
+        "max": [
+          17.826852930116257,
+          10.164999961853027,
+          -16.841532104932295
+        ]
+      },
+      "file": "build/nx-town-hall.glb",
+      "sha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+      "lib": "store/dc871edb1b45ce0f.glb",
+      "builder": "build-hall.ts",
+      "sources": [
+        {
+          "file": "build-hall.ts",
+          "sha256": "8efca64f25ac85722102661506530d03ec319d1dbe983e468a881801a7deb0a0"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "before/nx-town-hall.glb",
+          "sha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-town-hall-route-contract.json",
+          "sha256": "25ef44983fe2adb8f7c972d97f93766752393eddac25c53a69e037a803811f44",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-hall-review.json",
+        "sha256": "b5546239d3a184f98ec479c5db682ac28a762b37adf7d74aaaded3da7a6b6370"
+      }
+    },
+    {
+      "id": "nx-town-inn",
+      "status": "READY",
+      "kind": "walk-in",
+      "pos": [
+        36,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bounds": {
+        "min": [
+          -4.5,
+          -0.20000000298023224,
+          -3.472568988800049
+        ],
+        "max": [
+          4.5,
+          7.193999767303467,
+          4.900000095367432
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          27.55,
+          -3.2000000029802322,
+          -7.5
+        ],
+        "max": [
+          42.473,
+          10.193999767303467,
+          7.5
+        ]
+      },
+      "file": "build/nx-town-inn.glb",
+      "sha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+      "lib": "store/861225bb15230d9b.glb",
+      "builder": "build-inn.ts",
+      "sources": [
+        {
+          "file": "build-inn.ts",
+          "sha256": "2d2d173571531f84b8bd079fdc188a90068e40ae99abe54ac48aa5e2c8683bec"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "before/nx-town-inn.glb",
+          "sha256": "0cac6fa0d663bf80ec8537f9e8734f5e4d5ba641206bd71fdf49e8303b2f6fec"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-town-inn-route-contract.json",
+          "sha256": "e619a3a37fff1a16fc0f3784b9b1f8d263c6e153fa13f5847be43ea9a9e04750",
+          "mode": "room"
+        },
+        {
+          "file": "build/inn-upper-route-contract.json",
+          "sha256": "7576e1b448c971d3eac2f514c4a8a37f7248738a014de04d33f0250692549e38",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-inn-review.json",
+        "sha256": "154a6ea3c5b07358ef761c7364574bcc70f286dc4d1ce821cc9d3050d9ff7328"
+      }
+    },
+    {
+      "id": "nx-town-shrine",
+      "status": "READY",
+      "kind": "workstation",
+      "pos": [
+        -25,
+        -0.0012609260510534298,
+        -4
+      ],
+      "yaw": 1.4118119548622732,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bounds": {
+        "min": [
+          -1.25,
+          -0.01600000448524952,
+          -1.4000000953674316
+        ],
+        "max": [
+          1.25,
+          2.192500114440918,
+          2.5
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          -29.58023844538363,
+          -3.017260930536303,
+          -8.455877399314987
+        ],
+        "max": [
+          -18.247923387535575,
+          5.191239188389865,
+          0.6300243999852388
+        ]
+      },
+      "file": "build/shrine.glb",
+      "sha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+      "lib": "store/f51be95de91ad5b3.glb",
+      "builder": "build-shrine.ts",
+      "sources": [
+        {
+          "file": "build-shrine.ts",
+          "sha256": "56d03e821f0f3a65ca8b87fc5e77a70cecc17e0fa18e02fcf83a62338a20400f"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "build-gates.ts",
+          "sha256": "26e9db4c12ee34bd9ab9531b2e41f5a0f379e7fd3bd31f74d733bcc3091511d8"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "verify-approach.ts",
+          "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+        },
+        {
+          "file": "before/nx-town-shrine.glb",
+          "sha256": "bd05ebe9ec4333fa304123ad5050909822765408dfd77c5fc7331c08723dfa10"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-town-shrine-route-contract.json",
+          "sha256": "43580007ad4e8540694e9731e1e3694a1f83521e9832dc469c92210b7f8bda3d",
+          "mode": "workstation"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-shrine-review.json",
+        "sha256": "f7efc13d10ef1280a5161d4277144b485dc3bbb69c65bef488394242a01b3902"
+      }
+    },
+    {
+      "id": "nx-town-gate-s",
+      "status": "READY",
+      "kind": "portal",
+      "pos": [
+        0,
+        0,
+        19.5
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bounds": {
+        "min": [
+          -1.7999999523162842,
+          -2.98023217215615e-10,
+          -0.25
+        ],
+        "max": [
+          1.7999999523162842,
+          3.7725000381469727,
+          0.25
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          -4.8,
+          -3.0000000002980234,
+          15.870000000000001
+        ],
+        "max": [
+          4.8,
+          6.772500038146973,
+          23.13
+        ]
+      },
+      "file": "build/gates.glb",
+      "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "lib": "store/a39756779c671759.glb",
+      "builder": "build-gates.ts",
+      "sources": [
+        {
+          "file": "build-gates.ts",
+          "sha256": "26e9db4c12ee34bd9ab9531b2e41f5a0f379e7fd3bd31f74d733bcc3091511d8"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "before/nx-town-gate-s.glb",
+          "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-town-gate-s-route-contract.json",
+          "sha256": "c98a8a753a8d0889bcf3fda36cb23f7acec5a195a839c1ad632b13f80cb22d12",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-southgate-review.json",
+        "sha256": "bed52a9d5456f5feab2ecf6f84793a431fc60eb4b66d8b39835460ba88e8af22"
+      },
+      "collisionAmendment": {
+        "from": null,
+        "to": "exact",
+        "reason": "Actual public automatic classifier builds invisible central pillar in narrow portal; exact source triangles clear standing passage. Before and after real route results pinned.",
+        "evidence": {
+          "file": "reviews/parent-southgate-collision.json",
+          "sha256": "50704dd3e2a22c8c6a90e18fda68052d21b97334620f7a122e5d7007bc76653b"
+        }
+      }
+    },
+    {
+      "id": "nx-town-gate-e",
+      "status": "READY",
+      "kind": "portal",
+      "pos": [
+        19.5,
+        0,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bounds": {
+        "min": [
+          -1.7999999523162842,
+          -2.98023217215615e-10,
+          -0.25
+        ],
+        "max": [
+          1.7999999523162842,
+          3.7725000381469727,
+          0.25
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          15.870000000000001,
+          -3.0000000002980234,
+          -4.8
+        ],
+        "max": [
+          23.13,
+          6.772500038146973,
+          4.8
+        ]
+      },
+      "file": "build/gates.glb",
+      "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "lib": "store/a39756779c671759.glb",
+      "builder": "build-gates.ts",
+      "sources": [
+        {
+          "file": "build-gates.ts",
+          "sha256": "26e9db4c12ee34bd9ab9531b2e41f5a0f379e7fd3bd31f74d733bcc3091511d8"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "before/nx-town-gate-e.glb",
+          "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-town-gate-e-route-contract.json",
+          "sha256": "0ee536fae4fd7be5a5687f06c67521f402a97c52beb74a6d89eae35398e5a8ef",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-eastgate-review.json",
+        "sha256": "066bb0addd399d2c08a1775e451dad404647fb7cfcbb2e642278f4bebe6a15e3"
+      },
+      "collisionAmendment": {
+        "from": null,
+        "to": "exact",
+        "reason": "Actual public automatic classifier builds invisible central pillar in narrow portal; exact source triangles clear standing passage. Before and after real route results pinned.",
+        "evidence": {
+          "file": "reviews/parent-eastgate-collision.json",
+          "sha256": "9b300a3afd3ca22c849430f37b73989b366f367a87598654d4958cf19c428611"
+        }
+      }
+    },
+    {
+      "id": "nx-town-gate-w",
+      "status": "READY",
+      "kind": "portal",
+      "pos": [
+        -19.5,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bounds": {
+        "min": [
+          -1.7999999523162842,
+          -2.98023217215615e-10,
+          -0.25
+        ],
+        "max": [
+          1.7999999523162842,
+          3.7725000381469727,
+          0.25
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          -23.13,
+          -3.0000000002980234,
+          -4.8
+        ],
+        "max": [
+          -15.870000000000001,
+          6.772500038146973,
+          4.8
+        ]
+      },
+      "file": "build/gates.glb",
+      "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "lib": "store/a39756779c671759.glb",
+      "builder": "build-gates.ts",
+      "sources": [
+        {
+          "file": "build-gates.ts",
+          "sha256": "26e9db4c12ee34bd9ab9531b2e41f5a0f379e7fd3bd31f74d733bcc3091511d8"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "before/nx-town-gate-w.glb",
+          "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-town-gate-w-route-contract.json",
+          "sha256": "b94f507bf02d8c8c5f2c714943f066d1f9bd41cfc330667677ba5a6034c9b938",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-westgate-review.json",
+        "sha256": "88fe32aac045e4d8853804d3eb688a1a19c1beac180079dc9751e3404f96a7e8"
+      },
+      "collisionAmendment": {
+        "from": null,
+        "to": "exact",
+        "reason": "Actual public automatic classifier builds invisible central pillar in narrow portal; exact source triangles clear standing passage. Before and after real route results pinned.",
+        "evidence": {
+          "file": "reviews/parent-westgate-collision.json",
+          "sha256": "2b532f23190cbf5d085e291d685e7271b3dc4b825a03e5b8c189203f64e016d3"
+        }
+      }
+    },
+    {
+      "id": "nx-town-gate-n",
+      "status": "READY",
+      "kind": "portal",
+      "pos": [
+        0,
+        0,
+        -19.5
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "parent": null,
+      "comp": {},
+      "bounds": {
+        "min": [
+          -1.7999999523162842,
+          -2.98023217215615e-10,
+          -0.25
+        ],
+        "max": [
+          1.7999999523162842,
+          3.7725000381469727,
+          0.25
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          -4.8,
+          -3.0000000002980234,
+          -22.75
+        ],
+        "max": [
+          4.8,
+          6.772500038146973,
+          -16.25
+        ]
+      },
+      "file": "build/gates.glb",
+      "sha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "lib": "store/a39756779c671759.glb",
+      "builder": "build-gates.ts",
+      "sources": [
+        {
+          "file": "build-gates.ts",
+          "sha256": "26e9db4c12ee34bd9ab9531b2e41f5a0f379e7fd3bd31f74d733bcc3091511d8"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "before/nx-town-gate-s.glb",
+          "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e"
+        },
+        {
+          "file": "before/nx-town-gate-n.glb",
+          "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-town-gate-n-route-contract.json",
+          "sha256": "c3af4efe5c266c5f09c0cee8f336e1f4603f160cc4de3773f4bcb79ae411c03d",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-northgate-review.json",
+        "sha256": "2a085c6ab97282b9b9e9b95de4c6b9c5d1a1231cc871911a858fb3c11ab88978"
+      },
+      "collisionAmendment": {
+        "from": null,
+        "to": "exact",
+        "reason": "Actual public automatic classifier builds invisible central pillar in narrow portal; exact source triangles clear standing passage. Before and after real route results pinned.",
+        "evidence": {
+          "file": "reviews/parent-northgate-collision.json",
+          "sha256": "fc9a7f5d4152d4c048739c4cd73120ffa1c0986cf96a06fb5d42d3969eaa631b"
+        }
+      }
+    },
+    {
+      "id": "nx-town-stable",
+      "file": "build/nx-town-stable.glb",
+      "lib": "store/0658345cf7e876a4.glb",
+      "kind": "walk-in",
+      "pos": [
+        43,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "bounds": {
+        "min": [
+          -3,
+          -0.20000000298023224,
+          -2.7750000953674316
+        ],
+        "max": [
+          3,
+          4.900000095367432,
+          2.574972629547119
+        ]
+      },
+      "sha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+      "builder": "build-stable.ts",
+      "sources": [
+        {
+          "file": "build-stable.ts",
+          "sha256": "27d18fbdb1e0b9e5cdd73169546eb79c4bb35cbc46670accfd2635f5712b95a0"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "before/nx-town-stable.glb",
+          "sha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-native/stable-acceptance.json",
+        "sha256": "96efe04af19a978926d68637cef6afb7070459840b28282789aa6515ae5f33ca"
+      },
+      "routes": [
+        {
+          "file": "build/nx-town-stable-route-context.json",
+          "sha256": "ecd49bd305fb8970bf971cde44c072d136788bc494249355eaa6100289894b98",
+          "mode": "room"
+        }
+      ],
+      "affectedBounds": {
+        "min": [
+          37.42502737045288,
+          -0.7000000029802322,
+          -6.0
+        ],
+        "max": [
+          48.77500009536743,
+          5.400000095367432,
+          6.0
+        ]
+      },
+      "status": "READY",
+      "comp": {},
+      "parent": null
+    },
+    {
+      "id": "nx-town-woodyard",
+      "file": "build/nx-town-woodyard.glb",
+      "lib": "store/333e85a41a745d39.glb",
+      "kind": "workstation",
+      "pos": [
+        16,
+        0,
+        31
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "bounds": {
+        "min": [
+          -2.0999999046325684,
+          -4.76837147544984e-09,
+          -1.090248942375183
+        ],
+        "max": [
+          2.875746011734009,
+          3.559999942779541,
+          1.5084253549575806
+        ]
+      },
+      "sha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+      "builder": "build-woodyard.ts",
+      "sources": [
+        {
+          "file": "build-woodyard.ts",
+          "sha256": "f6fee33be5ae5630e1189c495616ddcbff2c2d8bd6126b1b77aa3a11223afed0"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "build-stable.ts",
+          "sha256": "27d18fbdb1e0b9e5cdd73169546eb79c4bb35cbc46670accfd2635f5712b95a0"
+        },
+        {
+          "file": "before/nx-town-woodyard.glb",
+          "sha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-native/woodyard-acceptance.json",
+        "sha256": "15193e1b5bc7aa2f3231f86e3b62e57f9c227b867000be815782a854d0d2f1db"
+      },
+      "routes": [
+        {
+          "file": "build/nx-town-woodyard-route-context.json",
+          "sha256": "e9ddd55536df0c456082c26b366fcfaca938b6e0ff45fc0853dc7fcf6eb031d8",
+          "mode": "workstation"
+        }
+      ],
+      "affectedBounds": {
+        "min": [
+          9.752860519303596,
+          -0.5000000047683715,
+          25.701964536299815
+        ],
+        "max": [
+          21.36608565080371,
+          4.059999942779541,
+          36.27809345891784
+        ]
+      },
+      "status": "READY",
+      "comp": {},
+      "parent": null
+    },
+    {
+      "id": "nx-forge",
+      "file": "build/forge.glb",
+      "lib": "store/d55c86d706774923.glb",
+      "kind": "workstation",
+      "pos": [
+        22.11785473473295,
+        0,
+        -7.957568494595163
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "bounds": {
+        "min": [
+          -0.8726182579994202,
+          -0.004999999888241291,
+          -0.7770000100135803
+        ],
+        "max": [
+          1.4600000381469727,
+          2.9600000381469727,
+          0.6099370718002319
+        ]
+      },
+      "sha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "builder": "build-forge.ts",
+      "sources": [
+        {
+          "file": "build-forge.ts",
+          "sha256": "9b38d74f34e065592105790dd856e063cbaae59263aac4ff44e99dd0ed6c4935"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "before/nx-forge.glb",
+          "sha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-native/forge-acceptance.json",
+        "sha256": "23d36ced6887743b77418fda4ba87b0f7da577a454e8e89f2aa8457968a3f38a"
+      },
+      "routes": [
+        {
+          "file": "build/forge-routes.json",
+          "sha256": "b036f50663a843ee28bfb25101efbb04fe2a745e0ed2e22716f7fe61c3f8ac49",
+          "mode": "workstation"
+        }
+      ],
+      "affectedBounds": {
+        "min": [
+          18.099976819914538,
+          -0.5049999998882413,
+          -12.1235708794658
+        ],
+        "max": [
+          26.629012410780284,
+          3.4600000381469727,
+          -3.4315626956633203
+        ]
+      },
+      "status": "READY",
+      "comp": {
+        "motion:fire_fg_coals": {
+          "type": "bob",
+          "axis": "y",
+          "amp": 0.014,
+          "period": 1.8
+        },
+        "particles": {
+          "preset": "embers",
+          "origin": [
+            0,
+            0.45,
+            0.42
+          ],
+          "count": 84
+        }
+      },
+      "parent": null
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "file": "build/nx-town-dyehouse.glb",
+      "lib": "store/8a916bb1beade151.glb",
+      "kind": "workstation",
+      "pos": [
+        -23,
+        0,
+        -23
+      ],
+      "yaw": 0.941,
+      "scale": 1,
+      "bounds": {
+        "min": [
+          -1.5,
+          8.940696516468449e-10,
+          -1.0456808805465698
+        ],
+        "max": [
+          1.7750358581542969,
+          3.1105000972747803,
+          1.1456724405288696
+        ]
+      },
+      "sha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+      "builder": "build-dyehouse.ts",
+      "sources": [
+        {
+          "file": "build-dyehouse.ts",
+          "sha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "verify-approach.ts",
+          "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+        },
+        {
+          "file": "before/nx-town-dyehouse.glb",
+          "sha256": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-native/dyehouse-acceptance.json",
+        "sha256": "aa1a531966aedf8fb5b3323c52c447b615caa315e3ca5e3ae86c1e37d4e085fb"
+      },
+      "routes": [
+        {
+          "file": "build/nx-town-dyehouse-approach-contract.json",
+          "sha256": "b051f08e3658df5d9b85890563df3b7060b68f5dc374e8a4fa18ff0480869cb2",
+          "mode": "workstation"
+        }
+      ],
+      "affectedBounds": {
+        "min": [
+          -27.728534631515647,
+          -0.49999999910593035,
+          -28.050376068819023
+        ],
+        "max": [
+          -18.028666773719145,
+          3.6105000972747803,
+          -18.11300042189615
+        ]
+      },
+      "status": "READY",
+      "comp": {},
+      "parent": null
+    },
+    {
+      "id": "nx-town-potter",
+      "file": "build/nx-town-potter.glb",
+      "lib": "store/412bb53af8aca242.glb",
+      "kind": "workstation",
+      "pos": [
+        23.776412907378838,
+        -0.00402,
+        7.7254248593736845
+      ],
+      "yaw": -1.8975354116458194,
+      "scale": 1,
+      "bounds": {
+        "min": [
+          -1.7050000429153442,
+          -1.4901161415892261e-09,
+          -0.9850000143051147
+        ],
+        "max": [
+          1.6700000762939453,
+          2.109999895095825,
+          0.5849999785423279
+        ]
+      },
+      "sha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+      "builder": "build-potter.ts",
+      "sources": [
+        {
+          "file": "build-potter.ts",
+          "sha256": "f69f83e38095d983fd1fa5319c2642b64c3d7655b000daa8bc119e9f4dfada94"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "verify-approach.ts",
+          "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+        },
+        {
+          "file": "../../../client/node_modules/three-mesh-bvh/build/index.module.js",
+          "sha256": "4a1f29ae93208d5f97a1652182c2d3133ce9cf51a6ffffc04f4d20255bf21afe"
+        },
+        {
+          "file": "before/nx-town-potter.glb",
+          "sha256": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-native/potter-acceptance.json",
+        "sha256": "ebe1b16d160a9a042c388b381320b229ca01cfb7195d668c28308d3e613a3938"
+      },
+      "routes": [
+        {
+          "file": "build/nx-town-potter-approach-contract.json",
+          "sha256": "e989c534baa31428b20fc0fd6937c13044514b5007aa2a03ed0e68b31e4e100e",
+          "mode": "workstation"
+        }
+      ],
+      "affectedBounds": {
+        "min": [
+          19.686365820093375,
+          -0.5040200014901162,
+          2.9228701119860947
+        ],
+        "max": [
+          28.256531085404614,
+          2.605979895095825,
+          12.623213899126958
+        ]
+      },
+      "status": "READY",
+      "comp": {
+        "motion:pwheel": {
+          "type": "spin",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "degPerSec": 9
+        }
+      },
+      "parent": null
+    },
+    {
+      "id": "nx-town-kiln",
+      "file": "build/nx-town-kiln.glb",
+      "lib": "store/3e96c8b074852ddc.glb",
+      "kind": "workstation",
+      "pos": [
+        19.158717425740413,
+        -0.02065,
+        22.431975985200914
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "bounds": {
+        "min": [
+          -2.194999933242798,
+          -7.1525572131747595e-09,
+          -1.260323405265808
+        ],
+        "max": [
+          2.609999895095825,
+          3.1105334758758545,
+          1.5303233861923218
+        ]
+      },
+      "sha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+      "builder": "build-kiln.ts",
+      "sources": [
+        {
+          "file": "build-kiln.ts",
+          "sha256": "8d8b1162af481a7fb5a9208efb8cda13204b285fd3c75dbe691accea08c7176e"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "build-potter.ts",
+          "sha256": "f69f83e38095d983fd1fa5319c2642b64c3d7655b000daa8bc119e9f4dfada94"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "verify-approach.ts",
+          "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+        },
+        {
+          "file": "../../../client/node_modules/three-mesh-bvh/build/index.module.js",
+          "sha256": "4a1f29ae93208d5f97a1652182c2d3133ce9cf51a6ffffc04f4d20255bf21afe"
+        },
+        {
+          "file": "before/nx-town-kiln.glb",
+          "sha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-native/kiln-acceptance.json",
+        "sha256": "596ede23889684503feb1ffc5184c38954f96683fec2b60c7abd34a5e0dde17d"
+      },
+      "routes": [
+        {
+          "file": "build/nx-town-kiln-approach-contract.json",
+          "sha256": "99f0fbb66f970c58d23f5cd392e820035a171a4b77d3f99726797dc41da6e7e8",
+          "mode": "workstation"
+        }
+      ],
+      "affectedBounds": {
+        "min": [
+          13.175779134504157,
+          -0.5206500071525573,
+          16.848609037540307
+        ],
+        "max": [
+          24.65020776996922,
+          3.5898834758758547,
+          28.075375202687805
+        ]
+      },
+      "status": "READY",
+      "comp": {},
+      "parent": null
+    },
+    {
+      "id": "nx-tower",
+      "status": "READY",
+      "kind": "walk-in",
+      "pos": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1,
+      "parent": null,
+      "comp": {
+        "sockets": {
+          "study": {
+            "pos": [
+              -1.35,
+              3,
+              -0.5
+            ],
+            "yaw": -1.5707963267948966
+          }
+        }
+      },
+      "bounds": {
+        "min": [
+          -3.25,
+          -0.20000000298023224,
+          -3.25
+        ],
+        "max": [
+          3.506999969482422,
+          8.399999618530273,
+          3.5999999046325684
+        ]
+      },
+      "affectedBounds": {
+        "min": [
+          6.099451298618867,
+          -3.2000000029802322,
+          9.053181862260335
+        ],
+        "max": [
+          21.678700547257385,
+          11.475,
+          24.64389518178528
+        ]
+      },
+      "file": "build/nx-tower.glb",
+      "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "lib": "store/648ca0c0148cf1cc.glb",
+      "builder": "build-tower.ts",
+      "sources": [
+        {
+          "file": "build-tower.ts",
+          "sha256": "91943734811f405121ff657f12115209691339bbeca6f5e1f7072fdc52b36d34"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+        },
+        {
+          "file": "../assets/glbwrite.ts",
+          "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+        },
+        {
+          "file": "../assets/mergekit.ts",
+          "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+        },
+        {
+          "file": "build-belltower.ts",
+          "sha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc"
+        },
+        {
+          "file": "../cabin-overhaul/verify-player.ts",
+          "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+        },
+        {
+          "file": "../../../tools/core-stub.mjs",
+          "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.module.js",
+          "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+        },
+        {
+          "file": "../../../client/node_modules/three/build/three.core.js",
+          "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+        },
+        {
+          "file": "before/nx-tower.glb",
+          "sha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a"
+        },
+        {
+          "file": "before/contracts.json",
+          "sha256": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f"
+        },
+        {
+          "file": "before/downloads.json",
+          "sha256": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659"
+        },
+        {
+          "file": "neighbors/nx-tower.json",
+          "sha256": "e5c02c6ca4faa74f565425497aa72214cd55567c83d4ecacd185804d7d93e9de"
+        }
+      ],
+      "routes": [
+        {
+          "file": "build/nx-tower.route.json",
+          "sha256": "6fbe952600b98319aa822318baea15fd33ae14624b0aa5794c0e4ef1c5f19e27",
+          "mode": "room"
+        },
+        {
+          "file": "build/nx-tower.upper-route.json",
+          "sha256": "c7c84ca12bc4125a0f3cb48e3093751a75490789ee8852569c3c257906fb95ef",
+          "mode": "room"
+        }
+      ],
+      "review": {
+        "file": "reviews/parent-scholar-draft/review.json",
+        "sha256": "22e73cfbd007de30b17b41c8366971350abc806315c329f0142a535139061325"
+      }
+    }
+  ]
+}

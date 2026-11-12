@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "socket": {
+    "pos": [
+      -1.35,
+      3,
+      -0.5
+    ],
+    "yaw": -1.5707963267948966
+  },
+  "actualBrowserSupportY": 3,
+  "push": 0,
+  "retainedLadder": "Exact served ladder geometry and hatch retained; NO ladder comp exists and none was invented. Upper route is a separate socket/landing proof, not ground-to-upper walking."
+}

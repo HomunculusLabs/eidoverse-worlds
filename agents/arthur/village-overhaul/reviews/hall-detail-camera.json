@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "coordinateFrame": "unchanged-model-local",
+  "width": 960,
+  "height": 720,
+  "near": 0.05,
+  "far": 200,
+  "groundY": -0.20000000298023224,
+  "referenceBounds": {
+    "min": [
+      -5,
+      -0.20000000298023224,
+      -3.472568988800049
+    ],
+    "max": [
+      5,
+      6.168531894683838,
+      4.853924751281738
+    ]
+  },
+  "lighting": {
+    "day": {
+      "background": 13358815,
+      "hemi": 2,
+      "ambient": 1.2,
+      "sun": 3.2
+    },
+    "night": {
+      "background": 1120295,
+      "hemi": 0.18,
+      "ambient": 0.04,
+      "sun": 0.15
+    },
+    "sunPosition": [
+      8,
+      12,
+      6
+    ]
+  },
+  "views": {
+    "front": {
+      "eye": [
+        5.5,
+        5.0,
+        7.0
+      ],
+      "target": [
+        0,
+        3.55,
+        3.1
+      ],
+      "fov": 50,
+      "night": false
+    },
+    "right": {
+      "eye": [
+        1.7,
+        1.85,
+        1.95
+      ],
+      "target": [
+        4.25,
+        1.85,
+        0
+      ],
+      "fov": 68,
+      "night": false
+    },
+    "back": {
+      "eye": [
+        -0.8,
+        2.0,
+        -1.7
+      ],
+      "target": [
+        -4.23,
+        2.15,
+        0
+      ],
+      "fov": 65,
+      "night": false
+    },
+    "left": {
+      "eye": [
+        -2.7,
+        1.85,
+        1.9
+      ],
+      "target": [
+        2.7,
+        3.1,
+        0
+      ],
+      "fov": 75,
+      "night": false
+    },
+    "gameplay": {
+      "eye": [
+        0,
+        1.85,
+        4.55
+      ],
+      "target": [
+        -0.35,
+        1.85,
+        0
+      ],
+      "fov": 68,
+      "night": false
+    },
+    "aerial": {
+      "eye": [
+        5.0,
+        6,
+        4.8
+      ],
+      "target": [
+        0,
+        3.65,
+        3.05
+      ],
+      "fov": 45,
+      "night": false
+    },
+    "top": {
+      "eye": [
+        0,
+        2,
+        1.0
+      ],
+      "target": [
+        1.7,
+        5,
+        0
+      ],
+      "fov": 80,
+      "night": false
+    },
+    "night": {
+      "eye": [
+        0,
+        1.4499999970197677,
+        18.690677881240845
+      ],
+      "target": [
+        0,
+        2.2200421181321146,
+        0.6906778812408447
+      ],
+      "fov": 42,
+      "night": true
+    },
+    "interior": {
+      "eye": [
+        1.6,
+        1.85,
+        2.05
+      ],
+      "target": [
+        -3.8,
+        2,
+        0
+      ],
+      "fov": 72,
+      "night": false
+    }
+  },
+  "detailPurpose": {
+    "front": "porch rear connection from right front",
+    "right": "council desk ledgers and frieze",
+    "back": "west charter binding and raised banner",
+    "left": "whole timber nave and east oculus",
+    "gameplay": "supported open entry and aisle",
+    "aerial": "porch/main-roof junction",
+    "top": "hammerbeam ceiling structure",
+    "interior": "hearth and speaker station",
+    "night": "unchanged night camera; no authored world lights"
+  }
+}

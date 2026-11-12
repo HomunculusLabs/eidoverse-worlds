@@ -1,0 +1,4614 @@
+{
+  "status": "HOST_FASCIA_ATTACHED__HOLD_FROZEN_OUTBOARD_COMPANION",
+  "geometryChanged": false,
+  "modelSha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+  "baselineSha256": "87245e97b1f848df57b4c128107586d533a7c3add98b37e39c391cb757f86de8",
+  "sourceSha256": "ec0089546fe7066743f7760f8a31a23f13d234743f5e2bbb53b060f97761db51",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "hostEnvelope": {
+    "min": [
+      -1.9500000476837158,
+      -0.0010774550028145313,
+      -0.5023053884506226
+    ],
+    "max": [
+      1.9500000476837158,
+      3.0404999256134033,
+      0.5699890851974487
+    ]
+  },
+  "hostStructuralProof": {
+    "method": "Source parts census bound to exact model SHA; each selected box verified against 12 decoded face triangles (2 micrometre coordinate tolerance); strict positive 3-axis solid overlap graph to foundation. This is attachment geometry, not engineering load certification.",
+    "decodedAxisAlignedParts": [
+      {
+        "name": "market_foundation",
+        "min": [
+          -1.9500000476837158,
+          -0.0010774549888446922,
+          -0.5023053884506226
+        ],
+        "max": [
+          1.9500000476837158,
+          0.09392254381906241,
+          0.5699890851974487
+        ],
+        "index": 0,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "lime_counter_body",
+        "min": [
+          -1.850000023841858,
+          0.09500000953674315,
+          -0.39999999046325685
+        ],
+        "max": [
+          -0.1499999761581421,
+          0.8649999904632568,
+          0.3699999904632568
+        ],
+        "index": 1,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "counter_plinth",
+        "min": [
+          -1.8949999809265137,
+          0.09000000178813936,
+          -0.4450000071525574
+        ],
+        "max": [
+          -0.10500001907348633,
+          0.24999999821186067,
+          0.41500000715255736
+        ],
+        "index": 2,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "lime_counter_body",
+        "min": [
+          0.1499999761581421,
+          0.09500000953674315,
+          -0.39999999046325685
+        ],
+        "max": [
+          1.850000023841858,
+          0.8649999904632568,
+          0.3699999904632568
+        ],
+        "index": 14,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "counter_plinth",
+        "min": [
+          0.10500001907348633,
+          0.09000000178813936,
+          -0.4450000071525574
+        ],
+        "max": [
+          1.8949999809265137,
+          0.24999999821186067,
+          0.41500000715255736
+        ],
+        "index": 15,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "oak_post",
+        "min": [
+          -1.9000000002980233,
+          0.33999996662139886,
+          -0.4250000002980232
+        ],
+        "max": [
+          -1.7599999997019768,
+          2.520000033378601,
+          -0.28499999970197676
+        ],
+        "index": 28,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "oak_post",
+        "min": [
+          -1.9000000002980233,
+          0.33999996662139886,
+          0.28999999970197676
+        ],
+        "max": [
+          -1.7599999997019768,
+          2.520000033378601,
+          0.4300000002980232
+        ],
+        "index": 30,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "cross_tie",
+        "min": [
+          -1.9099999982118607,
+          2.334999997019768,
+          -0.4329999928474426
+        ],
+        "max": [
+          -1.7500000017881394,
+          2.4850000029802324,
+          0.45699999284744264
+        ],
+        "index": 31,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "oak_post",
+        "min": [
+          -0.07000000029802322,
+          0.33999996662139886,
+          -0.4250000002980232
+        ],
+        "max": [
+          0.07000000029802322,
+          2.520000033378601,
+          -0.28499999970197676
+        ],
+        "index": 35,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "oak_post",
+        "min": [
+          -0.07000000029802322,
+          0.33999996662139886,
+          0.1999999997019768
+        ],
+        "max": [
+          0.07000000029802322,
+          2.520000033378601,
+          0.34000000029802324
+        ],
+        "index": 37,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "cross_tie",
+        "min": [
+          -0.07999999821186066,
+          2.334999997019768,
+          -0.4329999928474426
+        ],
+        "max": [
+          0.07999999821186066,
+          2.4850000029802324,
+          0.45699999284744264
+        ],
+        "index": 38,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "oak_post",
+        "min": [
+          1.7599999997019768,
+          0.33999996662139886,
+          -0.4250000002980232
+        ],
+        "max": [
+          1.9000000002980233,
+          2.520000033378601,
+          -0.28499999970197676
+        ],
+        "index": 42,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "oak_post",
+        "min": [
+          1.7599999997019768,
+          0.33999996662139886,
+          0.28999999970197676
+        ],
+        "max": [
+          1.9000000002980233,
+          2.520000033378601,
+          0.4300000002980232
+        ],
+        "index": 44,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "cross_tie",
+        "min": [
+          1.7500000017881394,
+          2.334999997019768,
+          -0.4329999928474426
+        ],
+        "max": [
+          1.9099999982118607,
+          2.4850000029802324,
+          0.45699999284744264
+        ],
+        "index": 45,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "front_bressummer",
+        "min": [
+          -1.899999976158142,
+          2.299999998509884,
+          -0.4250000002980232
+        ],
+        "max": [
+          1.899999976158142,
+          2.500000001490116,
+          -0.28499999970197676
+        ],
+        "index": 48,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "front_bressummer",
+        "min": [
+          -1.899999976158142,
+          2.299999998509884,
+          0.28999999970197676
+        ],
+        "max": [
+          1.899999976158142,
+          2.500000001490116,
+          0.4300000002980232
+        ],
+        "index": 51,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "produce_shelter_fascia",
+        "min": [
+          -1.9500000476837158,
+          2.4179999964237213,
+          -0.5023053860664368
+        ],
+        "max": [
+          1.9500000476837158,
+          2.5980000035762787,
+          -0.37230539083480835
+        ],
+        "index": 67,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "produce_shelter_fascia",
+        "min": [
+          -1.9500000476837158,
+          2.4179999964237213,
+          0.4399890875816346
+        ],
+        "max": [
+          1.9500000476837158,
+          2.5980000035762787,
+          0.569989082813263
+        ],
+        "index": 68,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "woven_valance",
+        "min": [
+          -1.7900000214576721,
+          2.2899999997019767,
+          0.5059999995678663
+        ],
+        "max": [
+          -0.20999997854232788,
+          2.430000000298023,
+          0.5340000004321337
+        ],
+        "index": 73,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -1.7800000035762786,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -1.5999999964237213,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 74,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -1.5830000035762786,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -1.4029999964237212,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 75,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -1.3860000035762785,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -1.2059999964237211,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 76,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -1.1890000035762787,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -1.0089999964237213,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 77,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -0.9920000035762786,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -0.8119999964237212,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 78,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -0.7950000035762785,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -0.6149999964237212,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 79,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -0.5980000035762787,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -0.4179999964237213,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 80,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          -0.40100000357627863,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          -0.22099999642372126,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 81,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "woven_valance",
+        "min": [
+          0.20999997854232788,
+          2.2899999997019767,
+          0.5059999995678663
+        ],
+        "max": [
+          1.7900000214576721,
+          2.430000000298023,
+          0.5340000004321337
+        ],
+        "index": 82,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          0.21999999642372137,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          0.40000000357627874,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 83,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          0.41699999642372143,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          0.5970000035762788,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 84,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          0.6139999964237214,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          0.7940000035762788,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 85,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          0.8109999964237213,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          0.9910000035762787,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 86,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          1.0079999964237214,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          1.1880000035762788,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 87,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          1.2049999964237215,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          1.3850000035762788,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 88,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          1.4019999964237213,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          1.5820000035762787,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 89,
+        "decodedFaceTriangles": 12
+      },
+      {
+        "name": "valance_tab",
+        "min": [
+          1.5989999964237214,
+          2.250000000670552,
+          0.5059999995678663
+        ],
+        "max": [
+          1.7790000035762787,
+          2.3099999993294476,
+          0.5340000004321337
+        ],
+        "index": 90,
+        "decodedFaceTriangles": 12
+      }
+    ],
+    "loadPaths": [
+      {
+        "part": "woven_valance",
+        "index": 73,
+        "pass": true,
+        "path": [
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 74,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 74
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 75,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 75
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 76,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 76
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 77,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 77
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 78,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 78
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 79,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 79
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 80,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 80
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 81,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 81
+          },
+          {
+            "name": "woven_valance",
+            "index": 73
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "woven_valance",
+        "index": 82,
+        "pass": true,
+        "path": [
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 83,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 83
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 84,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 84
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 85,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 85
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 86,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 86
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 87,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 87
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 88,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 88
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 89,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 89
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      },
+      {
+        "part": "valance_tab",
+        "index": 90,
+        "pass": true,
+        "path": [
+          {
+            "name": "valance_tab",
+            "index": 90
+          },
+          {
+            "name": "woven_valance",
+            "index": 82
+          },
+          {
+            "name": "produce_shelter_fascia",
+            "index": 68
+          },
+          {
+            "name": "cross_tie",
+            "index": 31
+          },
+          {
+            "name": "oak_post",
+            "index": 28
+          },
+          {
+            "name": "lime_counter_body",
+            "index": 1
+          },
+          {
+            "name": "counter_plinth",
+            "index": 2
+          },
+          {
+            "name": "market_foundation",
+            "index": 0
+          }
+        ],
+        "joints": [
+          {
+            "from": "valance_tab",
+            "to": "woven_valance",
+            "overlap": [
+              0.18000000715255737,
+              0.0199999996274709,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "woven_valance",
+            "to": "produce_shelter_fascia",
+            "overlap": [
+              1.5800000429153442,
+              0.012000003874301779,
+              0.02800000086426735
+            ]
+          },
+          {
+            "from": "produce_shelter_fascia",
+            "to": "cross_tie",
+            "overlap": [
+              0.1599999964237213,
+              0.06700000655651106,
+              0.017010905265808063
+            ]
+          },
+          {
+            "from": "cross_tie",
+            "to": "oak_post",
+            "overlap": [
+              0.14000000059604645,
+              0.15000000596046448,
+              0.14000000059604645
+            ]
+          },
+          {
+            "from": "oak_post",
+            "to": "lime_counter_body",
+            "overlap": [
+              0.09000002413988106,
+              0.525000023841858,
+              0.11499999076128009
+            ]
+          },
+          {
+            "from": "lime_counter_body",
+            "to": "counter_plinth",
+            "overlap": [
+              1.7000000476837158,
+              0.15499998867511752,
+              0.7699999809265137
+            ]
+          },
+          {
+            "from": "counter_plinth",
+            "to": "market_foundation",
+            "overlap": [
+              1.7899999618530273,
+              0.003922542030923057,
+              0.8600000143051147
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "stringLights": {
+    "id": "nx-dress-stringlights",
+    "sha256": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+    "tuple": {
+      "id": "nx-dress-stringlights",
+      "lib": "store/0c0dee37b07aa7df.glb",
+      "pos": [
+        -6,
+        2.6,
+        7.5
+      ],
+      "yaw": 0.7853981633974483,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-stringlights.glb",
+      "sha256": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+      "hostLocalBounds": {
+        "min": [
+          -1.1940638455478656,
+          2.035000002384186,
+          -3.4185534478137325
+        ],
+        "max": [
+          -0.9272564980117772,
+          2.625000000372529,
+          2.7114466666271855
+        ]
+      },
+      "protected": true
+    },
+    "decodedMeshes": 44,
+    "wires": 24,
+    "wireGaps": [
+      {
+        "from": "sl_wire_1",
+        "to": "sl_wire_2",
+        "zGap": 0.23558759689331055
+      },
+      {
+        "from": "sl_wire_2",
+        "to": "sl_wire_3",
+        "zGap": 0.23565125465393066
+      },
+      {
+        "from": "sl_wire_3",
+        "to": "sl_wire_4",
+        "zGap": 0.23572206497192383
+      },
+      {
+        "from": "sl_wire_4",
+        "to": "sl_wire_5",
+        "zGap": 0.23585724830627441
+      },
+      {
+        "from": "sl_wire_5",
+        "to": "sl_wire_6",
+        "zGap": 0.2359972000122068
+      },
+      {
+        "from": "sl_wire_6",
+        "to": "sl_wire_7",
+        "zGap": 0.2361966371536255
+      },
+      {
+        "from": "sl_wire_7",
+        "to": "sl_wire_8",
+        "zGap": 0.23641431331634521
+      },
+      {
+        "from": "sl_wire_8",
+        "to": "sl_wire_9",
+        "zGap": 0.23668313026428223
+      },
+      {
+        "from": "sl_wire_9",
+        "to": "sl_wire_10",
+        "zGap": 0.23697906732559204
+      },
+      {
+        "from": "sl_wire_10",
+        "to": "sl_wire_11",
+        "zGap": 0.2372964322566986
+      },
+      {
+        "from": "sl_wire_11",
+        "to": "sl_wire_12",
+        "zGap": 0.23764552175998677
+      },
+      {
+        "from": "sl_wire_12",
+        "to": "sl_wire_13",
+        "zGap": 0.2378175035119056
+      },
+      {
+        "from": "sl_wire_13",
+        "to": "sl_wire_14",
+        "zGap": 0.2376404404640197
+      },
+      {
+        "from": "sl_wire_14",
+        "to": "sl_wire_15",
+        "zGap": 0.23730129003524775
+      },
+      {
+        "from": "sl_wire_15",
+        "to": "sl_wire_16",
+        "zGap": 0.23697650432586664
+      },
+      {
+        "from": "sl_wire_16",
+        "to": "sl_wire_17",
+        "zGap": 0.2366868257522583
+      },
+      {
+        "from": "sl_wire_17",
+        "to": "sl_wire_18",
+        "zGap": 0.23642182350158691
+      },
+      {
+        "from": "sl_wire_18",
+        "to": "sl_wire_19",
+        "zGap": 0.2361891269683838
+      },
+      {
+        "from": "sl_wire_19",
+        "to": "sl_wire_20",
+        "zGap": 0.23600375652313232
+      },
+      {
+        "from": "sl_wire_20",
+        "to": "sl_wire_21",
+        "zGap": 0.23584377765655518
+      },
+      {
+        "from": "sl_wire_21",
+        "to": "sl_wire_22",
+        "zGap": 0.23573374748230003
+      },
+      {
+        "from": "sl_wire_22",
+        "to": "sl_wire_23",
+        "zGap": 0.23563885688781738
+      },
+      {
+        "from": "sl_wire_23",
+        "to": "sl_wire_24",
+        "zGap": 0.2355976104736328
+      }
+    ],
+    "hookReach": [
+      {
+        "name": "sl_hook_w",
+        "min": [
+          -1.085660172152351,
+          2.574999999627471,
+          -3.4185534478137325
+        ],
+        "max": [
+          -1.035660171407293,
+          2.625000000372529,
+          -3.3685534954974483
+        ],
+        "center": [
+          -1.060660171779822,
+          2.6,
+          -3.3935534716555904
+        ],
+        "minimumDistanceOutsideHostZ": 2.8662481070468258
+      },
+      {
+        "name": "sl_hook_e",
+        "min": [
+          -1.0856601721523498,
+          2.574999999627471,
+          2.6614467143109013
+        ],
+        "max": [
+          -1.0356601714072917,
+          2.625000000372529,
+          2.7114466666271855
+        ],
+        "center": [
+          -1.0606601717798207,
+          2.6,
+          2.6864466904690434
+        ],
+        "minimumDistanceOutsideHostZ": 2.0914576291134526
+      }
+    ],
+    "meshes": [
+      {
+        "name": "sl_wire_1",
+        "min": [
+          -1.1940638455478656,
+          2.5634177647531033,
+          -3.2357667447039913
+        ],
+        "max": [
+          -0.9272564980117786,
+          2.5778473135083915,
+          -3.2213371754596065
+        ]
+      },
+      {
+        "name": "sl_wire_2",
+        "min": [
+          -1.1939498367635715,
+          2.505202887952328,
+          -2.985749578566296
+        ],
+        "max": [
+          -0.9273705067960726,
+          2.519585943222046,
+          -2.971366500944836
+        ]
+      },
+      {
+        "name": "sl_wire_3",
+        "min": [
+          -1.1937293293802247,
+          2.448498985171318,
+          -2.7357152462909053
+        ],
+        "max": [
+          -0.9275910141794191,
+          2.4628286123275758,
+          -2.721385574431164
+        ]
+      },
+      {
+        "name": "sl_wire_4",
+        "min": [
+          -1.1934168222276673,
+          2.394287472963333,
+          -2.4856635094592403
+        ],
+        "max": [
+          -0.9279035213319764,
+          2.408499500155449,
+          -2.4714516163775753
+        ]
+      },
+      {
+        "name": "sl_wire_5",
+        "min": [
+          -1.1930330279199586,
+          2.343486434221268,
+          -2.235594368071301
+        ],
+        "max": [
+          -0.9282873156396851,
+          2.3575762420892716,
+          -2.221504545302136
+        ]
+      },
+      {
+        "name": "sl_wire_6",
+        "min": [
+          -1.1926036062566743,
+          2.296975648403168,
+          -1.985507345289929
+        ],
+        "max": [
+          -0.9287167373029693,
+          2.3108836472034455,
+          -1.9715994358966185
+        ]
+      },
+      {
+        "name": "sl_wire_7",
+        "min": [
+          -1.1921574952928526,
+          2.2555458903312684,
+          -1.735402798742993
+        ],
+        "max": [
+          -0.9291628482667907,
+          2.2692533791065217,
+          -1.7216952801654173
+        ]
+      },
+      {
+        "name": "sl_wire_8",
+        "min": [
+          -1.1917250784961684,
+          2.21991223692894,
+          -1.485280966849072
+        ],
+        "max": [
+          -0.9295952650634749,
+          2.233367419242859,
+          -1.4718256951281858
+        ]
+      },
+      {
+        "name": "sl_wire_9",
+        "min": [
+          -1.1913361283866866,
+          2.190682566165924,
+          -1.2351425648639036
+        ],
+        "max": [
+          -0.9299842151729567,
+          2.2038569808006288,
+          -1.221968150229199
+        ]
+      },
+      {
+        "name": "sl_wire_10",
+        "min": [
+          -1.1910176607696517,
+          2.1683581829071046,
+          -0.984989082903607
+        ],
+        "max": [
+          -0.9303026827899915,
+          2.1812284648418427,
+          -0.9721188307711912
+        ]
+      },
+      {
+        "name": "sl_wire_11",
+        "min": [
+          -1.1907919677822094,
+          2.15332288146019,
+          -0.7348223985144926
+        ],
+        "max": [
+          -0.9305283757774335,
+          2.1658546686172486,
+          -0.7222905815551114
+        ]
+      },
+      {
+        "name": "sl_wire_12",
+        "min": [
+          -1.1906749936668377,
+          2.145833259820938,
+          -0.4846450597951246
+        ],
+        "max": [
+          -0.9306453498928051,
+          2.158015763759613,
+          -0.4724625558564496
+        ]
+      },
+      {
+        "name": "sl_wire_13",
+        "min": [
+          -1.1906749936668377,
+          2.145833230018616,
+          -0.234645052344544
+        ],
+        "max": [
+          -0.9306453498928051,
+          2.1580157339572907,
+          -0.22246254095528842
+        ]
+      },
+      {
+        "name": "sl_wire_14",
+        "min": [
+          -1.1907919677822094,
+          2.1533226132392884,
+          0.015177899508731274
+        ],
+        "max": [
+          -0.9305283757774333,
+          2.165854400396347,
+          0.0277096866657901
+        ]
+      },
+      {
+        "name": "sl_wire_15",
+        "min": [
+          -1.1910176607696512,
+          2.1683580935001374,
+          0.26501097670103785
+        ],
+        "max": [
+          -0.9303026827899913,
+          2.1812283754348756,
+          0.2778812884380984
+        ]
+      },
+      {
+        "name": "sl_wire_16",
+        "min": [
+          -1.1913361283866861,
+          2.1906822085380555,
+          0.514857792763965
+        ],
+        "max": [
+          -0.9299842151729563,
+          2.2038565933704377,
+          0.5280322073986696
+        ]
+      },
+      {
+        "name": "sl_wire_17",
+        "min": [
+          -1.191725078496168,
+          2.21991223692894,
+          0.7647190331509279
+        ],
+        "max": [
+          -0.9295952650634745,
+          2.233367419242859,
+          0.7781741856625246
+        ]
+      },
+      {
+        "name": "sl_wire_18",
+        "min": [
+          -1.1921574952928522,
+          2.2555470526218415,
+          1.0145960091641115
+        ],
+        "max": [
+          -0.9291628482667901,
+          2.269254541397095,
+          1.0283035277416872
+        ]
+      },
+      {
+        "name": "sl_wire_19",
+        "min": [
+          -1.1926036062566734,
+          2.296975648403168,
+          1.264492654710071
+        ],
+        "max": [
+          -0.9287167373029687,
+          2.3108836472034455,
+          1.2784005641033815
+        ]
+      },
+      {
+        "name": "sl_wire_20",
+        "min": [
+          -1.1930330279199577,
+          2.3434877157211305,
+          1.5144043206265139
+        ],
+        "max": [
+          -0.9282873156396843,
+          2.3575775235891343,
+          1.528494143395679
+        ]
+      },
+      {
+        "name": "sl_wire_21",
+        "min": [
+          -1.1934168222276664,
+          2.394286012649536,
+          1.764337921052234
+        ],
+        "max": [
+          -0.9279035213319755,
+          2.408498039841652,
+          1.7785498141338991
+        ]
+      },
+      {
+        "name": "sl_wire_22",
+        "min": [
+          -1.1937293293802238,
+          2.448500058054924,
+          2.014283561616199
+        ],
+        "max": [
+          -0.927591014179418,
+          2.4628296703100205,
+          2.0286132334759404
+        ]
+      },
+      {
+        "name": "sl_wire_23",
+        "min": [
+          -1.1939498367635701,
+          2.505201144516468,
+          2.2642520903637577
+        ],
+        "max": [
+          -0.9273705067960715,
+          2.5195841997861863,
+          2.2786351679852177
+        ]
+      },
+      {
+        "name": "sl_wire_24",
+        "min": [
+          -1.1940638455478643,
+          2.563418334722519,
+          2.5142327784588505
+        ],
+        "max": [
+          -0.9272564980117772,
+          2.5778478853404523,
+          2.5286623477032353
+        ]
+      },
+      {
+        "name": "sl_bulb_0",
+        "min": [
+          -1.0977256963877189,
+          2.406858316063881,
+          -3.063017702193005
+        ],
+        "max": [
+          -1.0235964129595267,
+          2.4968583196401597,
+          -2.977423286528332
+        ]
+      },
+      {
+        "name": "sl_cap_0",
+        "min": [
+          -1.0726604447616446,
+          2.4768583163619042,
+          -3.0316327572772335
+        ],
+        "max": [
+          -1.05095196747316,
+          2.5268583208322526,
+          -3.008807277769787
+        ]
+      },
+      {
+        "name": "sl_bulb_1",
+        "min": [
+          -1.0977256963877187,
+          2.2599999964237214,
+          -2.3963509560534786
+        ],
+        "max": [
+          -1.0235964129595265,
+          2.35,
+          -2.310756778807385
+        ]
+      },
+      {
+        "name": "sl_cap_1",
+        "min": [
+          -1.0726604447616443,
+          2.329999989271164,
+          -2.364966011137707
+        ],
+        "max": [
+          -1.0509519674731598,
+          2.380000001192093,
+          -2.342140531630261
+        ]
+      },
+      {
+        "name": "sl_bulb_2",
+        "min": [
+          -1.0977256963877184,
+          2.140279984474182,
+          -1.7296842099139524
+        ],
+        "max": [
+          -1.0235964129595263,
+          2.230279988050461,
+          -1.6440900326678587
+        ]
+      },
+      {
+        "name": "sl_cap_2",
+        "min": [
+          -1.0726604447616441,
+          2.2102800071239472,
+          -1.6982993842074705
+        ],
+        "max": [
+          -1.0509519674731596,
+          2.260279989242554,
+          -1.6754739047000242
+        ]
+      },
+      {
+        "name": "sl_bulb_3",
+        "min": [
+          -1.0977256963877184,
+          2.062138295173645,
+          -1.0630175829837156
+        ],
+        "max": [
+          -1.0235964129595263,
+          2.152138328552246,
+          -0.9774234057376219
+        ]
+      },
+      {
+        "name": "sl_cap_3",
+        "min": [
+          -1.0726604447616441,
+          2.13213831782341,
+          -1.0316327572772337
+        ],
+        "max": [
+          -1.0509519674731596,
+          2.182138329744339,
+          -1.0088072181651426
+        ]
+      },
+      {
+        "name": "sl_bulb_4",
+        "min": [
+          -1.0977256963877182,
+          2.035000002384186,
+          -0.39635093370173696
+        ],
+        "max": [
+          -1.023596412959526,
+          2.1250000059604646,
+          -0.31075671920274023
+        ]
+      },
+      {
+        "name": "sl_cap_4",
+        "min": [
+          -1.072660444761644,
+          2.1049999952316285,
+          -0.3649660688797069
+        ],
+        "max": [
+          -1.0509519674731593,
+          2.1550000071525575,
+          -0.3421405781963897
+        ]
+      },
+      {
+        "name": "sl_bulb_5",
+        "min": [
+          -1.097725696387718,
+          2.062138295173645,
+          0.27031573048140284
+        ],
+        "max": [
+          -1.0235964129595259,
+          2.152138328552246,
+          0.35590996733214136
+        ]
+      },
+      {
+        "name": "sl_cap_5",
+        "min": [
+          -1.0726604447616437,
+          2.13213831782341,
+          0.30170061579252955
+        ],
+        "max": [
+          -1.050951967473159,
+          2.182138329744339,
+          0.32452609529997584
+        ]
+      },
+      {
+        "name": "sl_bulb_6",
+        "min": [
+          -1.097725696387718,
+          2.140279984474182,
+          0.9369824170162844
+        ],
+        "max": [
+          -1.0235964129595259,
+          2.230279988050461,
+          1.0225765942623781
+        ]
+      },
+      {
+        "name": "sl_cap_6",
+        "min": [
+          -1.0726604447616437,
+          2.2102800071239472,
+          0.9683672427227663
+        ],
+        "max": [
+          -1.050951967473159,
+          2.260279989242554,
+          0.9911927222302126
+        ]
+      },
+      {
+        "name": "sl_bulb_7",
+        "min": [
+          -1.0977256963877178,
+          2.2599999964237214,
+          1.6036490439465212
+        ],
+        "max": [
+          -1.0235964129595256,
+          2.35,
+          1.689243221192615
+        ]
+      },
+      {
+        "name": "sl_cap_7",
+        "min": [
+          -1.0726604447616435,
+          2.329999989271164,
+          1.6350339888622927
+        ],
+        "max": [
+          -1.0509519674731589,
+          2.380000001192093,
+          1.657859468369739
+        ]
+      },
+      {
+        "name": "sl_bulb_8",
+        "min": [
+          -1.0977256963877176,
+          2.406858316063881,
+          2.270315790086048
+        ],
+        "max": [
+          -1.0235964129595254,
+          2.4968583196401597,
+          2.3559099673321415
+        ]
+      },
+      {
+        "name": "sl_cap_8",
+        "min": [
+          -1.0726604447616432,
+          2.4768583163619042,
+          2.30170049658324
+        ],
+        "max": [
+          -1.0509519674731587,
+          2.5268583208322526,
+          2.3245259760906865
+        ]
+      },
+      {
+        "name": "sl_hook_w",
+        "min": [
+          -1.085660172152351,
+          2.574999999627471,
+          -3.4185534478137325
+        ],
+        "max": [
+          -1.035660171407293,
+          2.625000000372529,
+          -3.3685534954974483
+        ]
+      },
+      {
+        "name": "sl_hook_e",
+        "min": [
+          -1.0856601721523498,
+          2.574999999627471,
+          2.6614467143109013
+        ],
+        "max": [
+          -1.0356601714072917,
+          2.625000000372529,
+          2.7114466666271855
+        ]
+      }
+    ],
+    "diagnosis": "Frozen light companion, not host textile valance. Discrete transverse sl_wire segments have positive Z gaps; hooks are outside legal host envelope. No continuous host-only support can reach them while preserving that envelope. Adding central-only hangers would leave the outboard assembly incomplete."
+  },
+  "approach": {
+    "baseline": {
+      "status": "FAIL",
+      "legs": 14,
+      "pass": 0,
+      "maxPush": 0,
+      "geometryHits": 0,
+      "floorErrors": [
+        0.058276183903217316
+      ]
+    },
+    "candidate": {
+      "status": "FAIL",
+      "legs": 14,
+      "pass": 0,
+      "maxPush": 0,
+      "geometryHits": 0,
+      "floorErrors": [
+        0.058276183903217316
+      ]
+    },
+    "hypotheticalUnapprovedExactPaths": {
+      "status": "PASS",
+      "legs": 14,
+      "pass": 14,
+      "maxPush": 0,
+      "geometryHits": 0,
+      "floorErrors": [
+        0
+      ]
+    },
+    "status": "HOLD_EXISTING_COMPANION_COLLIDER",
+    "authority": "Bill authorization required for road collision correction; timed-out clarification is not approval.",
+    "pathSupportWitness": [
+      {
+        "station": "plaza-left",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      },
+      {
+        "station": "bread-approach",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      },
+      {
+        "station": "bread-counter",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      },
+      {
+        "station": "bread-exit",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      },
+      {
+        "station": "produce-approach",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      },
+      {
+        "station": "produce-counter",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      },
+      {
+        "station": "produce-exit",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      },
+      {
+        "station": "plaza-right",
+        "browserGround": 0.058276183903217316,
+        "geometryGround": null,
+        "exact": false
+      }
+    ]
+  },
+  "companionPins": [
+    {
+      "id": "nx-hearth",
+      "sha256": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1",
+      "geom": {
+        "id": "nx-hearth",
+        "lib": "store/027f6f019f9981bf.glb",
+        "kind": "thing",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "parent": null,
+        "comp": {
+          "particles": {
+            "preset": "embers",
+            "origin": [
+              0,
+              0.7,
+              0
+            ],
+            "count": 30,
+            "size": 0.22,
+            "speed": 0.32
+          },
+          "motion:well_": {
+            "type": "pendulum",
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "pivot": [
+              0,
+              0,
+              0
+            ],
+            "amp": 3,
+            "period": 9,
+            "damp": 0.99,
+            "t0": null
+          },
+          "sockets": {
+            "log_0": {
+              "pos": [
+                1.344,
+                0.32,
+                1.344
+              ],
+              "yaw": -2.356
+            },
+            "log_1": {
+              "pos": [
+                -1.344,
+                0.32,
+                1.344
+              ],
+              "yaw": 2.356
+            },
+            "log_2": {
+              "pos": [
+                -1.344,
+                0.32,
+                -1.344
+              ],
+              "yaw": 0.785
+            },
+            "log_3": {
+              "pos": [
+                1.344,
+                0.32,
+                -1.344
+              ],
+              "yaw": -0.785
+            },
+            "tale_seat": {
+              "pos": [
+                0.8,
+                0.55,
+                2.9
+              ],
+              "yaw": -2.872
+            }
+          },
+          "motion:pz_kettle": {
+            "type": "pendulum",
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "pivot": [
+              0,
+              1.55,
+              0
+            ],
+            "amp": 2.5,
+            "period": 11
+          }
+        },
+        "bbox": {
+          "min": [
+            -3.02,
+            -0.048,
+            -3.02
+          ],
+          "max": [
+            4.15,
+            1.76,
+            3.188
+          ],
+          "size": [
+            7.17,
+            1.808,
+            6.208
+          ],
+          "center": [
+            0.565,
+            0.856,
+            0.084
+          ]
+        },
+        "tris": 1631
+      },
+      "folded": {
+        "lib": "store/027f6f019f9981bf.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "actor": "arthur-polish-hearth",
+        "ts": 1788094487368,
+        "comp": {
+          "particles": {
+            "preset": "embers",
+            "origin": [
+              0,
+              0.7,
+              0
+            ],
+            "count": 30,
+            "size": 0.22,
+            "speed": 0.32
+          },
+          "motion:well_": {
+            "type": "pendulum",
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "pivot": [
+              0,
+              0,
+              0
+            ],
+            "amp": 3,
+            "period": 9,
+            "damp": 0.99,
+            "t0": null
+          },
+          "sockets": {
+            "log_0": {
+              "pos": [
+                1.344,
+                0.32,
+                1.344
+              ],
+              "yaw": -2.356
+            },
+            "log_1": {
+              "pos": [
+                -1.344,
+                0.32,
+                1.344
+              ],
+              "yaw": 2.356
+            },
+            "log_2": {
+              "pos": [
+                -1.344,
+                0.32,
+                -1.344
+              ],
+              "yaw": 0.785
+            },
+            "log_3": {
+              "pos": [
+                1.344,
+                0.32,
+                -1.344
+              ],
+              "yaw": -0.785
+            },
+            "tale_seat": {
+              "pos": [
+                0.8,
+                0.55,
+                2.9
+              ],
+              "yaw": -2.872
+            }
+          },
+          "motion:pz_kettle": {
+            "type": "pendulum",
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "pivot": [
+              0,
+              1.55,
+              0
+            ],
+            "amp": 2.5,
+            "period": 11
+          }
+        }
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-town-roads",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "geom": {
+        "id": "nx-town-roads",
+        "lib": "store/3b76b621559fa1a1.glb",
+        "kind": "thing",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -20.63,
+            -0.05,
+            -20.63
+          ],
+          "max": [
+            20.63,
+            2.89,
+            20.63
+          ],
+          "size": [
+            41.26,
+            2.94,
+            41.26
+          ],
+          "center": [
+            0,
+            1.42,
+            0
+          ]
+        },
+        "tris": 3392
+      },
+      "folded": {
+        "lib": "store/3b76b621559fa1a1.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "actor": "arthur-nvp131-place",
+        "ts": 1788022276792
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "geom": {
+        "id": "nx-town-streetlamps",
+        "lib": "store/e815a897c7d73373.glb",
+        "kind": "thing",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -9.577,
+            0,
+            -9.577
+          ],
+          "max": [
+            9.577,
+            2.56,
+            9.577
+          ],
+          "size": [
+            19.154,
+            2.56,
+            19.154
+          ],
+          "center": [
+            0,
+            1.28,
+            0
+          ]
+        },
+        "tris": 752
+      },
+      "folded": {
+        "lib": "store/e815a897c7d73373.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "actor": "arthur-nvp132-place",
+        "ts": 1788022279914
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-dress-banner",
+      "sha256": "e3abeb89b04de03c7108271712688290c8ed41ed42d59b8799b8e733b1377750",
+      "geom": {
+        "id": "nx-dress-banner",
+        "lib": "store/d32e7bcb8b007d21.glb",
+        "kind": "thing",
+        "pos": [
+          -4,
+          0,
+          9.5
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.08,
+            0,
+            -0.08
+          ],
+          "max": [
+            0.74,
+            3.78,
+            0.08
+          ],
+          "size": [
+            0.82,
+            3.78,
+            0.16
+          ],
+          "center": [
+            0.33,
+            1.89,
+            0
+          ]
+        },
+        "tris": 56
+      },
+      "folded": {
+        "lib": "store/d32e7bcb8b007d21.glb",
+        "pos": [
+          -4,
+          0,
+          9.5
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "actor": "arthur-polish-banner",
+        "ts": 1788197411285
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-dress-stringlights",
+      "sha256": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+      "geom": {
+        "id": "nx-dress-stringlights",
+        "lib": "store/0c0dee37b07aa7df.glb",
+        "kind": "thing",
+        "pos": [
+          -6,
+          2.6,
+          7.5
+        ],
+        "yaw": 0.7853981633974483,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -3.065,
+            -0.565,
+            -0.133
+          ],
+          "max": [
+            3.065,
+            0.025,
+            0.133
+          ],
+          "size": [
+            6.13,
+            0.59,
+            0.267
+          ],
+          "center": [
+            0,
+            -0.27,
+            0
+          ]
+        },
+        "tris": 924
+      },
+      "folded": {
+        "lib": "store/0c0dee37b07aa7df.glb",
+        "pos": [
+          -6,
+          2.6,
+          7.5
+        ],
+        "yaw": 0.7853981633974483,
+        "scale": 1,
+        "actor": "arthur-nvp134-place",
+        "ts": 1788025398468
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-dress-giftshelf",
+      "sha256": "20c7645421409c41afdf200bca8e6d7bc59b126c6d5f13aa99ad725db02cb22f",
+      "geom": {
+        "id": "nx-dress-giftshelf",
+        "lib": "store/c623cfa6fbdeb48e.glb",
+        "kind": "thing",
+        "pos": [
+          -9,
+          0,
+          9
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.5,
+            0,
+            -0.16
+          ],
+          "max": [
+            0.5,
+            1.348,
+            0.16
+          ],
+          "size": [
+            1,
+            1.348,
+            0.32
+          ],
+          "center": [
+            0,
+            0.674,
+            0
+          ]
+        },
+        "tris": 174
+      },
+      "folded": {
+        "lib": "store/c623cfa6fbdeb48e.glb",
+        "pos": [
+          -9,
+          0,
+          9
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "actor": "arthur-nvp135-place",
+        "ts": 1788025402117
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-left",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "geom": {
+        "id": "nx-artwalk-b6-market-lissa-left",
+        "lib": "store/5fcdd1ef922f7794.glb",
+        "kind": "thing",
+        "pos": [
+          -5.481766235091371,
+          0.38,
+          6.895979797464467
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.725,
+            0,
+            -0.038
+          ],
+          "max": [
+            0.725,
+            0.5,
+            0.075
+          ],
+          "size": [
+            1.45,
+            0.5,
+            0.113
+          ],
+          "center": [
+            0,
+            0.25,
+            0.019
+          ]
+        },
+        "tris": 300
+      },
+      "folded": {
+        "lib": "store/5fcdd1ef922f7794.glb",
+        "pos": [
+          -5.481766235091371,
+          0.38,
+          6.895979797464467
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "actor": "arthur-artwalk-b6-builder",
+        "ts": 1788105851267
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-artwalk-b6-market-lissa-right",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "geom": {
+        "id": "nx-artwalk-b6-market-lissa-right",
+        "lib": "store/5fcdd1ef922f7794.glb",
+        "kind": "thing",
+        "pos": [
+          -6.8959797974644665,
+          0.38,
+          5.481766235091372
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.725,
+            0,
+            -0.038
+          ],
+          "max": [
+            0.725,
+            0.5,
+            0.075
+          ],
+          "size": [
+            1.45,
+            0.5,
+            0.113
+          ],
+          "center": [
+            0,
+            0.25,
+            0.019
+          ]
+        },
+        "tris": 300
+      },
+      "folded": {
+        "lib": "store/5fcdd1ef922f7794.glb",
+        "pos": [
+          -6.8959797974644665,
+          0.38,
+          5.481766235091372
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "actor": "arthur-artwalk-b6-builder",
+        "ts": 1788105851967
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-artwalk-b30-market-tally",
+      "sha256": "6cf924356bbfe0f2cb3e00ef310ff6a26c61b053318960e7c5c460058482fc83",
+      "geom": {
+        "id": "nx-artwalk-b30-market-tally",
+        "lib": "store/a2326039fcb4e080.glb",
+        "kind": "thing",
+        "pos": [
+          -6.5,
+          0,
+          6.5
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            0.29,
+            0.49,
+            0.38
+          ],
+          "max": [
+            1.71,
+            0.75,
+            0.438
+          ],
+          "size": [
+            1.42,
+            0.26,
+            0.058
+          ],
+          "center": [
+            1,
+            0.62,
+            0.409
+          ]
+        },
+        "tris": 264
+      },
+      "folded": {
+        "lib": "store/a2326039fcb4e080.glb",
+        "pos": [
+          -6.5,
+          0,
+          6.5
+        ],
+        "yaw": 2.356194490192345,
+        "scale": 1,
+        "actor": "arthur-artwalk-b30-builder",
+        "ts": 1788199224348
+      },
+      "unchanged": true
+    },
+    {
+      "id": "nx-core-paths",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "geom": {
+        "id": "nx-core-paths",
+        "lib": "store/c31b6e3f22641e14.glb",
+        "kind": "thing",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -14.628,
+            -0.001,
+            -15.2
+          ],
+          "max": [
+            17.98,
+            0.057,
+            13.982
+          ],
+          "size": [
+            32.607,
+            0.059,
+            29.182
+          ],
+          "center": [
+            1.676,
+            0.028,
+            -0.609
+          ]
+        },
+        "tris": 948
+      },
+      "folded": {
+        "lib": "store/c31b6e3f22641e14.glb",
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "actor": "arthur-town-paths-straight",
+        "ts": 1788729524293
+      },
+      "unchanged": true
+    }
+  ],
+  "scopePins": [
+    {
+      "file": "agents/arthur/village-overhaul/build-market.ts",
+      "sha256": "ec0089546fe7066743f7760f8a31a23f13d234743f5e2bbb53b060f97761db51",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/build-dyehouse.ts",
+      "sha256": "414d53f4836b2eca87e07b0380b0247ebeb2967ca2930aa1b207a740553c7a63",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/dyehouse-market-notes.md",
+      "sha256": "710e6fcee7a6bd4d0ab81fdd15824b3e16607b30fdd262d33ca736bafa746ec7",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/verify-approach.ts",
+      "sha256": "ff1a4cdb4cc40c2550f9baa116b7e6da9bfe7850757ff0a065c8f45925689aa4",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/preflight.ts",
+      "sha256": "4b9a11d33cfbda0dfce6930e45210b1470f24f43b362db363eb99d73641cc356",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/neighbors/nx-town-market.json",
+      "sha256": "9162e7db23360c9ba901219ec416cf0db926fe82a846c7f992a8aa94037bf0eb",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-charcoal.glb",
+      "sha256": "c9ca1b859b0532ed7f34e960561e77827106b3bcb83090ef8499096499248826",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b5-belltower-rings.glb",
+      "sha256": "6c81c3877cf2f4cb5678216cd41abcf333764bbe810dcba8fe9ed281fe6c4369",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-market.glb",
+      "sha256": "87245e97b1f848df57b4c128107586d533a7c3add98b37e39c391cb757f86de8",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-gate-n.glb",
+      "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-orreryring.glb",
+      "sha256": "ea4f2317a730ae68b49f5bd1ce46ecb96caa476b8aa2cd748d6f97f63517b754",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-stablebench.glb",
+      "sha256": "3b5554bb59aefce157b57cb3a57f3fb463a91eb6d56560fc3e4fce059df77301",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-dyehouse.glb",
+      "sha256": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/folded-hosts.json",
+      "sha256": "b96918a4086952fec4ce76d09ba5c2c5c5a51800e481ab83c9fb8babe4a53502",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b30-market-tally.glb",
+      "sha256": "6cf924356bbfe0f2cb3e00ef310ff6a26c61b053318960e7c5c460058482fc83",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b27-waterline.glb",
+      "sha256": "05db8263eef436e4fcc96270f4e2e704cfa5ec1d4482d52b37d180b341c57737",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-stringlights.glb",
+      "sha256": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-streetlamps.glb",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-inn.glb",
+      "sha256": "0cac6fa0d663bf80ec8537f9e8734f5e4d5ba641206bd71fdf49e8303b2f6fec",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-milkstand.glb",
+      "sha256": "77fbaae4332b9ec384611191e70db2a9648cf4bae91091fa226ffe60ba32c567",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-hall.glb",
+      "sha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-h5.glb",
+      "sha256": "22d786a4e7b64851f140ab36c8216cd62d3f83363210768e3b96e48ca2966e9b",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b22-mapboard-eight-ways.glb",
+      "sha256": "61148de2bd3b97800e0ef702deb34330b6c56fb4828a46f6617f76cf76a7e6ff",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b34-wayband-e.glb",
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/capture-complete.json",
+      "sha256": "747ed11c2f15f92050a3a873bf198b96fd98e941e2dcae9cfd30e5ab43bb86b4",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-tower.glb",
+      "sha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-well.glb",
+      "sha256": "0a3efe7f3720abb35e277a6132187fabc55fc6d79f7441920b8f68f9c984a888",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-approach-sw-lane-003.glb",
+      "sha256": "00904e9873f9180f8ab36025939ec6f0c2310b110aa32dd6d47875feda558a8d",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-kiln.glb",
+      "sha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b34-wayband-s.glb",
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-longhouse.glb",
+      "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-approach-lamp-e.glb",
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-cistern.glb",
+      "sha256": "a73d5f60417acdc0ee66b4905254b345e6bcb983d07a84fb954c199147056647",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b2-inn-threshold.glb",
+      "sha256": "937dae4febdabcb5d0e887aa588ada7b86ede319cc7cbdae4c9d6441b93a0e58",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-cellardoor.glb",
+      "sha256": "e6837a8f61f2e328c3d31dbc98ba236bef8fabb226db19cd32e53f4dc5b216cb",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-tower-house.glb",
+      "sha256": "4e9a9c7c538c8be6a2b36f574c0a69edb547aa28f5c62741f8ec161822928ad9",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-potter.glb",
+      "sha256": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b24-well-depth.glb",
+      "sha256": "d337f36d88a563dc312ebb520006567fe3efa97d8ea7fa2bf6afa981c61814e3",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-mapboard.glb",
+      "sha256": "c483ec49a7520349d41940efaae1b156c3a2e8b420596703040e5bff0c22134c",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-waterstair.glb",
+      "sha256": "23703e69cb51d688530c823616405c4acf09bb8a08c3b06173be8d8374d90100",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-bunkhouse.glb",
+      "sha256": "629c898898991499f91bd499bacbd11f22990e26416e1ef86ce197dec0d9f4a7",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b6-market-lissa-left.glb",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b6-market-lissa-right.glb",
+      "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-approach-lamp-s.glb",
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-approach-lamp-w.glb",
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-sign-kiln-001.glb",
+      "sha256": "9e44d6b26951681737d412dbeded2b11dd2f64bc44b719e4bd1db3a28f3ff3fc",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b19-longhouse-feast-count.glb",
+      "sha256": "baa1f2164bd76c20da5bb9c2e14abb86f1fe433299d630dd912da3cdeefcfce2",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-sign-dyer-001.glb",
+      "sha256": "e436b0caa7668e374750db23ddce126a735475a03e51dac0a3ea45b34f3afaea",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b23-cistern-rain-count.glb",
+      "sha256": "1cb32012817cb1d9afce50f4295e15afb6b3bb711a69d297d7d25bfd8b984d5f",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-sign-potter-001.glb",
+      "sha256": "6ea32c8a0151693738095b1835b43555927f71cee29cdbf38731c0df0334800b",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-shutters.glb",
+      "sha256": "1a5c45c57c27b8c0b812671143590ba08646325b340834d07b14f9daa5122091",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-waystone-n.glb",
+      "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b18-row-warp-count.glb",
+      "sha256": "fc8926b5f4525b5304e15463cb7d5dbefee1d0b9c7dae47a8b0e669b83e49e13",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b14-east-gate-dawn-fan.glb",
+      "sha256": "c4fa5e7c1cc04d8c6afc033c3d7f4de4c498d587c3efcd1232fb58acb8de6ce1",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b34-wayband-w.glb",
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b1-hall-charter.glb",
+      "sha256": "53f77cb8f17d264bce019915ebf3695d724f82c7b97468c45f9c5567562814d4",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-shrine.glb",
+      "sha256": "bd05ebe9ec4333fa304123ad5050909822765408dfd77c5fc7331c08723dfa10",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b31-sheaf-tally.glb",
+      "sha256": "946dc2ed6fcd3d5afdf9d4aaa70f1e9add5c29eb7cd323e9f60438940a0cc643",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/downloads.json",
+      "sha256": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-forge.glb",
+      "sha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-ne-anvilpad-001.glb",
+      "sha256": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b32-morning-measure.glb",
+      "sha256": "32246cfbc476518dc340ef211938b890465e158cb9b82c1422af439cdb29ebd3",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-halt.glb",
+      "sha256": "c3d97fe9074b9b95e57b8d9234c9a9a878665409e9480f078aeacd7da7c7687e",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b11-woodyard-heartwood-measure.glb",
+      "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-waystone-w.glb",
+      "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-harvestcart.glb",
+      "sha256": "2be1cb89ddf1dd6903b3a5018f8b72fd660e7aacd261db2894956eb5ad92ddf5",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-hens.glb",
+      "sha256": "5a6ec4335d8b6bc2d164a929cbcf85367eed3e64b9b2f7460215b85973a97bb5",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-approach-lamp-n.glb",
+      "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/contracts.json",
+      "sha256": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-approach-ne-lane-002.glb",
+      "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-giftshelf.glb",
+      "sha256": "20c7645421409c41afdf200bca8e6d7bc59b126c6d5f13aa99ad725db02cb22f",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b13-south-tide-east.glb",
+      "sha256": "b07d992ed6cb17c310c23ef1ab4d2acf72d1c64d2834280f7c026eada657ed52",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b8-stable-harmonic-rein.glb",
+      "sha256": "c4595b001a6145d78f552205d66918c3d8750884c25d6fa10596dfb6030fbc8f",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-roads.glb",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-chess.glb",
+      "sha256": "b27f865a09b82559d1a270cdeef1a28871722b79b24ff3aaa45bb2634c34d284",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-fountain.glb",
+      "sha256": "f4fcc0ac3b76b2f8bef6d7406be09efddad2d8982977a592c85ae117c9906777",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-row-cottage.glb",
+      "sha256": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b21-tower-ascension-count.glb",
+      "sha256": "efac7b00bcec16e1f2add299dff8dc3a4c148218eefbe9d20ab863ca8bd05c85",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b7-shrine-stars.glb",
+      "sha256": "6c3091de20ed0575b9ef5c530fb067dee2eee5327b50d8a4090646e6b323ce27",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-hutch.glb",
+      "sha256": "75381ffb1f2803c676f036c95d6ac8964fc1ab0641447f262aa5bdaf057f5629",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b26-wayband.glb",
+      "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b28-bake-count.glb",
+      "sha256": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-belltower.glb",
+      "sha256": "0fa6b6c117180e129deb81590bb02ff4471a3693ade35991b591240f517f5a36",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-waystone-s.glb",
+      "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-coop.glb",
+      "sha256": "5b8702617ab578cc56f65250f4333112fa58248343b92fe727153a190c3b42dc",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-waystone-e.glb",
+      "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b3-ruled-porch.glb",
+      "sha256": "232210c072caebe89bd79a10ee3ba5faac92e7498ca3ad751941bbbf0b7fc72c",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-woodyard.glb",
+      "sha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-core-paths.glb",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-churn.glb",
+      "sha256": "761baf15cf0d9ff1136337f5d0c6e4bdb4413f9e013a51de9f5c1200544f3120",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-welcome.glb",
+      "sha256": "db26307d66093da3c1cb3e22108b8916a77b67e5b4460d442ec0e13f8f05d54c",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-hearth.glb",
+      "sha256": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-gate-e.glb",
+      "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-gate-s.glb",
+      "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-banner.glb",
+      "sha256": "e3abeb89b04de03c7108271712688290c8ed41ed42d59b8799b8e733b1377750",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-sign-smithy.glb",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b25-welcome-village-mark.glb",
+      "sha256": "88dc644f10d9d5d2ad61f682a91033ff3b9a382d87b87bc63adc9303882a6da9",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b4-golden-top.glb",
+      "sha256": "b59d76d721a2eff4772e44e77ab176d852ca33efa5cec529b96041c15f264be4",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-crossing.glb",
+      "sha256": "e86a180fdcc8405c7a9292017c358f533aed06ddf6660b166b0999588e74cbb8",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-sign-bakery.glb",
+      "sha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b4-golden-threshold.glb",
+      "sha256": "d8d6c7abcf1bcd17eb6a9d860ec2a9164a2baa2ca3a3771351ba3a88c7b90c26",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b20-bunkhouse-four-rooms.glb",
+      "sha256": "ed76ed3e8cacfc85acea7aa2b02f8a704b869105760e7bf00a862d3639f2e976",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-court.glb",
+      "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-hypar.glb",
+      "sha256": "4c4ed56bb32d44c8ce49b9712db2d558a065f7497babdf92f304ca0b1c709eee",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-sign-woodyard-001.glb",
+      "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/full-census.json",
+      "sha256": "33a8c85e265760b6a2ee5277665d6e7a93726a853dca077fe1ca129a0f10f84a",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-stable.glb",
+      "sha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b2-inn-lintel.glb",
+      "sha256": "851e4027d43f12b05fcc4ecf57adf2540c8fca7c909c7893f92938b786e1fa97",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b4-golden-hinges.glb",
+      "sha256": "3e6eb8d0dbdb2e52e974e4120fe7bf6058ec11f6ec774e70c1436a1e6917711b",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b15-west-gate-dusk-arcs.glb",
+      "sha256": "1e2a09c85e2c2103c7a3cf559c5edb0a115252402016694ec2361bbe56125a5f",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-approach-nw-lane-001.glb",
+      "sha256": "b9734b4fa4b000cc1c5f57267b67a75066a52d8adf1f0da5dae0091e72c663f6",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-sign-stable-001.glb",
+      "sha256": "d470868b35865794630da8427221cb63776e2523aed56c6d934464843689bc56",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-struct-orrery.glb",
+      "sha256": "f4603e437c448a89c9f4d1e67a188c8ff4b0b888c1f3c38b7444d4e02d7478f3",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b33-milking-order.glb",
+      "sha256": "2e329f90a34ac82e64904b9bcb5b5a97d8348e6b4e49c89dccae56d547d5b007",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b9-dyehouse-crossing-loom.glb",
+      "sha256": "a8ff818d13b577994dd3aef0aaa2201ca3944b17ff217542dee741ca817e3b6b",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b12-kiln-heat-contours.glb",
+      "sha256": "29e932d59cc9f57bb3665b1dfb543b1f17c4ec5e570948d92043cbc5d9e48c57",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b13-south-tide-west.glb",
+      "sha256": "b07d992ed6cb17c310c23ef1ab4d2acf72d1c64d2834280f7c026eada657ed52",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-town-gate-w.glb",
+      "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/protected.json",
+      "sha256": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db",
+      "unchanged": true
+    },
+    {
+      "file": "agents/arthur/village-overhaul/before/nx-dress-goats.glb",
+      "sha256": "d0faeb359293cb40c866a8b7a625f50a6bb34bb12dc64f3fe575a3340f5db2ff",
+      "unchanged": true
+    }
+  ],
+  "limits": [
+    "No world mutations, uploads or live walking; pinned public runtime CPU collider on flat local terrain.",
+    "Parent preflight source read only; inspect() not invoked because it fetches public runtime, writes parent-owned verification paths, and requires accepted visual/functional gates which remain HOLD.",
+    "Source and companion bytes/pose/component records unchanged; full current live readback belongs to parent.",
+    "No valid host-only repair of the frozen outboard lights was made, and no partial support scaffold was added."
+  ]
+}

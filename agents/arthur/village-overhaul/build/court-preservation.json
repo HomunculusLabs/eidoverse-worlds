@@ -1,0 +1,363 @@
+{
+  "host": {
+    "id": "nx-court",
+    "lib": "store/77cab2c3cc3a39c7.glb",
+    "kind": "thing",
+    "pos": [
+      18.9,
+      -1.5946487083102603e-8,
+      -14.8
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "particles:smoke": {
+        "preset": "smoke",
+        "origin": [
+          -4.9,
+          3.2,
+          -0.8
+        ],
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35
+      }
+    },
+    "bbox": {
+      "min": [
+        -6.5,
+        -0.2,
+        -2.94
+      ],
+      "max": [
+        6.5,
+        4.169,
+        3
+      ],
+      "size": [
+        13,
+        4.369,
+        5.94
+      ],
+      "center": [
+        0,
+        1.984,
+        0.03
+      ]
+    },
+    "tris": 3426
+  },
+  "kept": [
+    {
+      "name": "fire",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.9,
+        1.3,
+        -0.8,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "flame",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3,
+        1.15,
+        -1.6800000000000002,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "fire2",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        4.7,
+        1.05,
+        -0.8,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "lamp_scale_0",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.45,
+        2.49,
+        1.75,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "lamp_scale_1",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.45,
+        2.49,
+        1.75,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "flame_sconce_bk_l",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.45,
+        1.85,
+        1.99,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "flame_sconce_bk_r",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.35,
+        1.85,
+        1.99,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "flame_sconce_ws_l",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2.35,
+        1.85,
+        1.99,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "flame_sconce_ws_r",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        4.45,
+        1.85,
+        1.99,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "lamp_foot",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.6,
+        0.06,
+        2.2,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "lamp_post",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.6,
+        1.295,
+        2.2,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "lamp_arm",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.47,
+        2.47,
+        2.2,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "lamp_collar",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.359999999999999,
+        2.44,
+        2.2,
+        1
+      ],
+      "children": []
+    },
+    {
+      "name": "lamp",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.359999999999999,
+        2.52,
+        2.2,
+        1
+      ],
+      "children": []
+    }
+  ],
+  "originalSha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+  "detachedRiderIssue": "B28 and B29 are already double-offset beyond original rear envelope. Their exact tuples/faces remain unchanged and unobstructed; backing requires parent-authorized companion correction."
+}

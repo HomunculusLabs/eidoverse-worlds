@@ -1,0 +1,14 @@
+{
+  "status": "ACCEPTED_HOST_PRESERVATION_AND_CONTEXT",
+  "id": "nx-town-potter",
+  "sourceSha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+  "evidence": {
+    "file": "build/nx-town-potter-functionality.json",
+    "sha256": "0f522b41e2f2a70bad3a235e8abea3f076c27182929e0ac26e153b528d2d1f6f"
+  },
+  "nativeReview": {
+    "file": "reviews/parent-native/batch-C/review.md",
+    "sha256": "089b1fc1b3a1b02a5ae4a047a0724fd896b61a8aae748aed04853d50f72c3e50"
+  },
+  "scope": "New host geometry; frozen exterior companions unchanged. Fresh pipeline independently proves neighbor body routes and physical triangle support. Not universal all-world intersection certification."
+}

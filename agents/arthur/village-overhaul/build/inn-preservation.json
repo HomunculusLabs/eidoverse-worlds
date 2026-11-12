@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "modelPath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-inn.glb",
+  "modelSha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+  "baselineSha256": "0cac6fa0d663bf80ec8537f9e8734f5e4d5ba641206bd71fdf49e8303b2f6fec",
+  "sourceSha256": "2d2d173571531f84b8bd079fdc188a90068e40ae99abe54ac48aa5e2c8683bec",
+  "exactEnvelope": true,
+  "baselineBounds": {
+    "min": [
+      -4.5,
+      -0.20000000298023224,
+      -3.472568988800049
+    ],
+    "max": [
+      4.5,
+      6.268531799316406,
+      4.900000095367432
+    ],
+    "size": [
+      9,
+      6.4685318022966385,
+      8.37256908416748
+    ]
+  },
+  "finalBounds": {
+    "min": [
+      -4.5,
+      -0.20000000298023224,
+      -3.472568988800049
+    ],
+    "max": [
+      4.5,
+      7.193999767303467,
+      4.900000095367432
+    ]
+  },
+  "hostTuple": {
+    "id": "nx-town-inn",
+    "lib": "store/6e6ff2d08df9b3fb.glb",
+    "kind": "thing",
+    "pos": [
+      36,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -4.5,
+        -0.2,
+        -3.473
+      ],
+      "max": [
+        4.5,
+        6.269,
+        4.9
+      ],
+      "size": [
+        9,
+        6.469,
+        8.373
+      ],
+      "center": [
+        0,
+        3.034,
+        0.714
+      ]
+    },
+    "tris": 4248
+  },
+  "preserved": [
+    {
+      "name": "in3_1",
+      "pass": true,
+      "fingerprint": "3be611c22d394bc1c806be252ef59b40d8e5a6eac15f1d3ff0889cb1c3bde238"
+    },
+    {
+      "name": "in3_4",
+      "pass": true,
+      "fingerprint": "b856ec271b2f01fa8f2bfab1f7569a66ac74d0a859dc892356a2f953d0aa5e1a"
+    },
+    {
+      "name": "in3_12",
+      "pass": true,
+      "fingerprint": "77e34e18af1d281bea079b757d6af6d0649c1afc22a08f5f60d40e2f6100c4fa"
+    },
+    {
+      "name": "in3_13",
+      "pass": true,
+      "fingerprint": "203e281d322fba2424c344181ffb6acdb02546fcf6bc0e96a92da1a41df7c191"
+    },
+    {
+      "name": "in3_14",
+      "pass": true,
+      "fingerprint": "2e70f1e92c47e30147d7876661a951e4a3c9474d4c765b43a378acc4a996d633"
+    },
+    {
+      "name": "in3_15",
+      "pass": true,
+      "fingerprint": "d87fb7af9c75d2b29325f50458fbf910a8f0b5e87bc5994857421b5a5e343c4a"
+    },
+    {
+      "name": "in3_16",
+      "pass": true,
+      "fingerprint": "5eff8d8fcda4b38777fe90c0ed1459b65e63e2d271d1d92258c4a89fcb98e2b5"
+    },
+    {
+      "name": "in3_17",
+      "pass": true,
+      "fingerprint": "e8e4c13b4c2f04c9e8fe430ac7e7175bd1b4ee40c45d984920ae634dafbb1164"
+    },
+    {
+      "name": "in3_18",
+      "pass": true,
+      "fingerprint": "e628273f607b209664e98e6a7bebfcb7000f2a4377a74e5ae5031752fe6e0ce4"
+    },
+    {
+      "name": "in3_19",
+      "pass": true,
+      "fingerprint": "3b41013f800e85b3bb278aa3b7d39293d0e0adb0e55a477ef3b0b437a0102a80"
+    },
+    {
+      "name": "in3_20",
+      "pass": true,
+      "fingerprint": "dbef6e215fa4eddbeefacbb117d8364d90c0f71608aea790f4bfbb1bb1f1646b"
+    },
+    {
+      "name": "in3_21",
+      "pass": true,
+      "fingerprint": "4fb0eb872b1643d192d3c327d3bf0a792d1dda281af669f2f4dcd03603bac35a"
+    },
+    {
+      "name": "in3_22",
+      "pass": true,
+      "fingerprint": "3810e60470d3d7a3b00a8a402978a754b662ac253095c58150b561845f8a2274"
+    },
+    {
+      "name": "fire",
+      "pass": true,
+      "fingerprint": "de5efcf94bd3772b42171f83c410d81d10622d3eb79592c59301a0bc03819531"
+    },
+    {
+      "name": "flame",
+      "pass": true,
+      "fingerprint": "5bb064b6bc609bb714c972cd80941e15c59d472398d07341cf5a05618d3a6591"
+    },
+    {
+      "name": "sign",
+      "pass": true,
+      "fingerprint": "21f9abb45daac6c770493df9ddb5759b47b4309b06b22525a5f218d5af27d63f"
+    },
+    {
+      "name": "sign_0",
+      "pass": true,
+      "fingerprint": "dc009675d9871aac41f2a98b614530ce95f4b402d347ba99e3ea11f856266d0b"
+    },
+    {
+      "name": "sign_1",
+      "pass": true,
+      "fingerprint": "9a5163cb986f5c6f66ea22d9eaf2dbba664f4797612f2c352072dd3a34c82b19"
+    },
+    {
+      "name": "sign_2",
+      "pass": true,
+      "fingerprint": "fcea2b5e459f309fc2c7171fc59c89a114437f05c4bf05d6309307277fe77a2c"
+    },
+    {
+      "name": "sign_3",
+      "pass": true,
+      "fingerprint": "077febae9db56c6e413f271ff5f242b1ca7d024370238e9b27671ed40c6a2544"
+    },
+    {
+      "name": "lamp",
+      "pass": true,
+      "fingerprint": "4ef60bee4937999b521bc59f9dd0f73991db6b629b70ac5bba26c5dea0539064"
+    },
+    {
+      "name": "lamp2",
+      "pass": true,
+      "fingerprint": "5a92e70fba44457ede68ef47b52c9d4807ab20c85a245a56e81a5f9b872d56f5"
+    }
+  ],
+  "note": "Sign/fire/flame/lamp/lamp2 plus all retained furnished nodes preserve exact world matrices, indexed attribute bytes, material values and embedded base-color image bytes; selection is explicit under the frozen baseline hash."
+}

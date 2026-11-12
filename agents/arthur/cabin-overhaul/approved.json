@@ -1,0 +1,363 @@
+{
+  "status": "reviewed",
+  "world": "commons-next",
+  "createdAt": "2026-09-08T01:05:55.763694+00:00",
+  "authority": "Bill direct five-cabin total overhaul; operator exact-byte visual and functional approval, not Bill eye verdict",
+  "slots": [
+    {
+      "id": "nx-town-bunkhouse",
+      "pos": [
+        -9,
+        0,
+        -26
+      ],
+      "yaw": 0.31322457341772525,
+      "scale": 1,
+      "comp": {},
+      "file": "build/nx-town-bunkhouse.glb",
+      "sha256": "2b618274fa316c7846a1b8c0cf601b3465a5cbfd7227a5cdc0510568f87df59c",
+      "lib": "store/2b618274fa316c78.glb",
+      "bounds": {
+        "min": [
+          -4,
+          -3.5762786065873797e-09,
+          -2.549999952316284
+        ],
+        "max": [
+          4,
+          4.300000190734863,
+          2.5999999046325684
+        ],
+        "size": [
+          8,
+          4.300000194311142,
+          5.1499998569488525
+        ]
+      },
+      "visualVerdict": "accepted",
+      "playerVerdict": "passed",
+      "sources": [
+        {
+          "file": "build-bunkhouse.ts",
+          "sha256": "51895a6d3b0652c7c3b758c4d02249dc535d4dfc9c0a18f63aaa3c085548723c"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72"
+        }
+      ],
+      "review": {
+        "manifest": "reviews/bunkhouse-final/render-manifest.json",
+        "sha256": "ca8116935cc150b5df0e77452550b8aa4fe0bf76507c3c96350efdb93346f7a5",
+        "cameraSha256": "ad5fa64520e0c5cfbfb041d78593762a06002e6c4f987704f56452a476b3d0ae",
+        "evidenceKind": "local-solo-render-not-in-world",
+        "judge": "parent using vision_analyze auxiliary review; not native vision claim"
+      },
+      "player": {
+        "report": "reviews/parent-player-bunkhouse.json",
+        "sha256": "016b34ef89853f0bcd6f2d4aeb73213ce5c2e230ef40b1e37604caec0e167466",
+        "walkLegs": 22
+      }
+    },
+    {
+      "id": "nx-town-garden-cottage",
+      "pos": [
+        -26,
+        0.0009494488404761625,
+        19
+      ],
+      "yaw": 2.2004415094410525,
+      "scale": 1,
+      "comp": {},
+      "file": "build/nx-town-garden-cottage.glb",
+      "sha256": "b5b3f1022785657167b43dffb04e501a83f1b76c53d06e0cf4998384177a265f",
+      "lib": "store/b5b3f10227856571.glb",
+      "bounds": {
+        "min": [
+          -5.099999904632568,
+          -0.12999999523162842,
+          -3.9000000953674316
+        ],
+        "max": [
+          3.619999885559082,
+          6.000500202178955,
+          2.700000047683716
+        ],
+        "size": [
+          8.71999979019165,
+          6.1305001974105835,
+          6.6000001430511475
+        ]
+      },
+      "visualVerdict": "accepted",
+      "playerVerdict": "passed",
+      "sources": [
+        {
+          "file": "build-garden.ts",
+          "sha256": "34a01575f7062fd73cafafcca364875f3ae546c75c6846a2b9725e0fff85cebd"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72"
+        }
+      ],
+      "review": {
+        "manifest": "reviews/after-garden-final/render-manifest.json",
+        "sha256": "4f3a039efdb2b22b7895c6555e0c1ea50051392625a5033ef5663c1621a174c6",
+        "cameraSha256": "235323dd305ee51fff97b06a40929d199cddf34eb75998b309db9678a2fdae34",
+        "evidenceKind": "local-solo-render-not-in-world",
+        "judge": "parent using vision_analyze auxiliary review; not native vision claim"
+      },
+      "player": {
+        "report": "reviews/parent-player-garden-cottage.json",
+        "sha256": "8532d3d9b17418b6723379193495e007df4fd16d77c78572de2e6b4927143e83",
+        "walkLegs": 10
+      }
+    },
+    {
+      "id": "nx-town-longhouse",
+      "pos": [
+        9,
+        0,
+        26
+      ],
+      "yaw": -2.828368080172068,
+      "scale": 1,
+      "comp": {},
+      "file": "build/nx-town-longhouse.glb",
+      "sha256": "e38bb2a4c79336980d0a6b7479959498dc0347ab69d611b089741af7cf63b29f",
+      "lib": "store/e38bb2a4c7933698.glb",
+      "bounds": {
+        "min": [
+          -4.610000133514404,
+          -0.20000000298023224,
+          -2.9100000858306885
+        ],
+        "max": [
+          4.610000133514404,
+          5.874000072479248,
+          4.287499904632568
+        ],
+        "size": [
+          9.220000267028809,
+          6.07400007545948,
+          7.197499990463257
+        ]
+      },
+      "visualVerdict": "accepted",
+      "playerVerdict": "passed",
+      "sources": [
+        {
+          "file": "build-longhouse.ts",
+          "sha256": "9cc0decd3e625a320a92edb70bd083b1c4cdbbeaec8cef32b3ef23110b9e976e"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72"
+        }
+      ],
+      "review": {
+        "manifest": "reviews/parent-longhouse/render-manifest.json",
+        "sha256": "f1624607068c83a03224c57d7c338f4018b949baf7616180d56cc0ec083f81aa",
+        "cameraSha256": "e157bb70efc5c08e64677e02797e1cb3e2c30602b773ef47ef604b9a85370081",
+        "evidenceKind": "local-solo-render-not-in-world",
+        "judge": "parent using vision_analyze auxiliary review; not native vision claim"
+      },
+      "player": {
+        "report": "reviews/parent-player-longhouse.json",
+        "sha256": "11b7edf3f6b0a9b0bfc8795a2b4ed18e359cd1be111fa28c815adbf5e821c371",
+        "walkLegs": 16
+      }
+    },
+    {
+      "id": "nx-town-row-cottage",
+      "pos": [
+        -23,
+        0,
+        -17
+      ],
+      "yaw": 0.9411511441487406,
+      "scale": 1,
+      "comp": {},
+      "file": "build/nx-town-row-cottage.glb",
+      "sha256": "0558b5f41bda077772846350737047605f628d9b97a7c159d1f6b9d4574bccfc",
+      "lib": "store/0558b5f41bda0777.glb",
+      "bounds": {
+        "min": [
+          -2.8399999141693115,
+          -0.20000000298023224,
+          -2.640000104904175
+        ],
+        "max": [
+          2.8399999141693115,
+          5.374000072479248,
+          2.640000104904175
+        ],
+        "size": [
+          5.679999828338623,
+          5.57400007545948,
+          5.28000020980835
+        ]
+      },
+      "visualVerdict": "accepted",
+      "playerVerdict": "passed",
+      "sources": [
+        {
+          "file": "build-row.ts",
+          "sha256": "ae7f9f350c371ba1a18b37a48329a7b386201e8d3c9aa17dc668b4f9e84fe2f8"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72"
+        }
+      ],
+      "review": {
+        "manifest": "reviews/parent-row-cottage/render-manifest.json",
+        "sha256": "a83cf7392396ca9e18f2e5e57d25622ec5e10fec70816f1de9036355698e1966",
+        "cameraSha256": "f05488307c89308d3e7a2e7ed3ac3aea7e3f15c91f44e0afb54256dc16107a41",
+        "evidenceKind": "local-solo-render-not-in-world",
+        "judge": "parent using vision_analyze auxiliary review; not native vision claim"
+      },
+      "player": {
+        "report": "reviews/parent-player-row-cottage.json",
+        "sha256": "8dabfe2e17945b83e4ede11300e31c42328175f4357cdac9d45d053556092e30",
+        "walkLegs": 10
+      }
+    },
+    {
+      "id": "nx-town-tower-house",
+      "pos": [
+        -9,
+        0,
+        26
+      ],
+      "yaw": 2.828368080172068,
+      "scale": 1,
+      "comp": {},
+      "file": "build/nx-town-tower-house.glb",
+      "sha256": "90723087ca8b5eb3d5e3e7d13828ee12e254266ad63504d07f7f4d14b4b29253",
+      "lib": "store/90723087ca8b5eb3.glb",
+      "bounds": {
+        "min": [
+          -3.0941314697265625,
+          2.2351741291171123e-10,
+          -3.0999975204467773
+        ],
+        "max": [
+          3.259999990463257,
+          8.28499984741211,
+          3.305000066757202
+        ],
+        "size": [
+          6.354131460189819,
+          8.284999847188592,
+          6.4049975872039795
+        ]
+      },
+      "visualVerdict": "accepted",
+      "playerVerdict": "passed",
+      "sources": [
+        {
+          "file": "build-tower.ts",
+          "sha256": "40e8d298de8dd78d63c3dd67159c3eded42fdb82dc3fbc3b680efdb32079ab8f"
+        },
+        {
+          "file": "kit.ts",
+          "sha256": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72"
+        }
+      ],
+      "review": {
+        "manifest": "reviews/tower-final/render-manifest.json",
+        "sha256": "54ad9c8b7bf48fa4c75caf1482d3bd561af1d42a1934a7ba7e0b2af67ecd4e2d",
+        "cameraSha256": "1cfe5fbe995b22b702d2aed9066542bf57ae25e645671dbc76711211f2625cfc",
+        "evidenceKind": "local-solo-render-not-in-world",
+        "judge": "parent using vision_analyze auxiliary review; not native vision claim"
+      },
+      "player": {
+        "report": "reviews/parent-player-tower-house.json",
+        "sha256": "45da3a392308daa604f077657776562a08c6181198f431fb7b256ac1a4a238c8",
+        "walkLegs": 6
+      }
+    }
+  ],
+  "migrations": [
+    {
+      "id": "nx-artwalk-b17-garden-seed-lattice",
+      "from": {
+        "id": "nx-artwalk-b17-garden-seed-lattice",
+        "lib": "store/241db6453224af9f.glb",
+        "kind": "thing",
+        "pos": [
+          -24.51890662066154,
+          2.0809494488404763,
+          17.920917680767694
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.75,
+            0,
+            -0.032
+          ],
+          "max": [
+            0.75,
+            0.46,
+            0.103
+          ],
+          "size": [
+            1.5,
+            0.46,
+            0.136
+          ],
+          "center": [
+            0,
+            0.23,
+            0.035
+          ]
+        },
+        "tris": 312
+      },
+      "to": {
+        "id": "nx-artwalk-b17-garden-seed-lattice",
+        "lib": "store/241db6453224af9f.glb",
+        "kind": "thing",
+        "pos": [
+          -24.51890662066154,
+          2.6209494488404763,
+          17.920917680767694
+        ],
+        "yaw": 2.2004415094410525,
+        "scale": 1,
+        "parent": null,
+        "comp": {},
+        "bbox": {
+          "min": [
+            -0.75,
+            0,
+            -0.032
+          ],
+          "max": [
+            0.75,
+            0.46,
+            0.103
+          ],
+          "size": [
+            1.5,
+            0.46,
+            0.136
+          ],
+          "center": [
+            0,
+            0.23,
+            0.035
+          ]
+        },
+        "tris": 312
+      },
+      "reason": "Only +0.54m local/world Y keeps same face and >=2.2m true garden entry headroom; DESIGN.md bounded amendment"
+    }
+  ]
+}

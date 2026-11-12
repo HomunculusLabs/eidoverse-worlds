@@ -1,0 +1,5740 @@
+{
+  "status": "LOCAL_GATES_PASS_PARENT_DEPLOYMENT_REVIEW_REQUIRED",
+  "id": "nx-town-woodyard",
+  "baseline": {
+    "sha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+    "bytes": 56728,
+    "triangles": 2360,
+    "bounds": {
+      "min": [
+        -2.0999999046325684,
+        -2.3841858265427618e-08,
+        -1.090248942375183
+      ],
+      "max": [
+        2.875746011734009,
+        2.5257210731506348,
+        1.5084253549575806
+      ]
+    }
+  },
+  "candidate": {
+    "sha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+    "bytes": 546460,
+    "triangles": 4952,
+    "bounds": {
+      "min": [
+        -2.0999999046325684,
+        -4.76837147544984e-09,
+        -1.090248942375183
+      ],
+      "max": [
+        2.875746011734009,
+        3.559999942779541,
+        1.5084253549575806
+      ]
+    }
+  },
+  "hostTuple": {
+    "id": "nx-town-woodyard",
+    "lib": "store/01b78fdd00f090a7.glb",
+    "kind": "thing",
+    "pos": [
+      16,
+      0,
+      31
+    ],
+    "yaw": -2.669815142409043,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.1,
+        0,
+        -1.09
+      ],
+      "max": [
+        2.876,
+        2.526,
+        1.508
+      ],
+      "size": [
+        4.976,
+        2.526,
+        2.599
+      ],
+      "center": [
+        0.388,
+        1.263,
+        0.209
+      ]
+    },
+    "tris": 2360
+  },
+  "exactDecodedXZEquality": true,
+  "restoration": {
+    "id": "nx-town-woodyard",
+    "status": "PASS",
+    "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+    "acceptedSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+    "bounds": {
+      "min": [
+        -2.0999999046325684,
+        -4.76837147544984e-09,
+        -1.090248942375183
+      ],
+      "max": [
+        2.875746011734009,
+        3.559999942779541,
+        1.5084253549575806
+      ]
+    },
+    "heightPolicy": "BRIEF: height may grow with review. No +1m rule in validatePlan; parent withdrew that invented constraint."
+  },
+  "acceptedGeometryRegression": {
+    "status": "PASS",
+    "id": "nx-town-woodyard",
+    "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+    "preRoofSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+    "triangleCount": 4952,
+    "unchangedTriangles": 4952,
+    "changedTriangles": 0,
+    "allGeometryBelowYUnchanged": 2.4,
+    "nonRoofPartsIdentical": true,
+    "materialTextureBytesIdentical": true,
+    "backing": [
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          -0.9099999666214005,
+          0.9098927044868472,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            -0.9099999666214005,
+            0.9098927044868472,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          -0.9099999666214005,
+          1.2829756259918215,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            -0.9099999666214005,
+            1.2829756259918215,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          -0.9099999666214005,
+          1.6560585474967957,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            -0.9099999666214005,
+            1.6560585474967957,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          -1.5543122344752192e-15,
+          0.9098927044868472,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            -1.5543122344752192e-15,
+            0.9098927044868472,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          -1.5543122344752192e-15,
+          1.2829756259918215,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            -1.5543122344752192e-15,
+            1.2829756259918215,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          -1.5543122344752192e-15,
+          1.6560585474967957,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            -1.5543122344752192e-15,
+            1.6560585474967957,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          0.9099999666213974,
+          0.9098927044868472,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            0.9099999666213974,
+            0.9098927044868472,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          0.9099999666213974,
+          1.2829756259918215,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            0.9099999666213974,
+            1.2829756259918215,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed artwork backing",
+        "at": [
+          0.9099999666213974,
+          1.6560585474967957,
+          -0.8340000001490117
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "maxDistance": 0.025,
+        "hit": {
+          "distance": 0.0009999783933162254,
+          "point": [
+            0.9099999666213974,
+            1.6560585474967957,
+            -0.8349999785423279
+          ],
+          "mesh": "village_nx-town-woodyard_4"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed sign top to visible hanger",
+        "at": [
+          -0.09,
+          2.049,
+          1.215
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "maxDistance": 0.015,
+        "hit": {
+          "distance": 0.0009999523162842472,
+          "point": [
+            -0.09,
+            2.049999952316284,
+            1.215
+          ],
+          "mesh": "village_nx-town-woodyard_0"
+        },
+        "pass": true
+      },
+      {
+        "name": "fixed sign top to visible hanger",
+        "at": [
+          0.09,
+          2.049,
+          1.215
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "maxDistance": 0.015,
+        "hit": {
+          "distance": 0.0009999523162842472,
+          "point": [
+            0.09,
+            2.049999952316284,
+            1.215
+          ],
+          "mesh": "village_nx-town-woodyard_0"
+        },
+        "pass": true
+      }
+    ],
+    "roofSkin": [
+      {
+        "at": [
+          -1.94,
+          6,
+          -0.85
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          2.883128873393033,
+          -0.85
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          -1.94,
+          6,
+          -0.55
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          3.0573673832528776,
+          -0.55
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          -1.94,
+          6,
+          -0.25
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          3.227606058966991,
+          -0.25
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          -1.94,
+          6,
+          0.05
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          3.401844620762868,
+          0.05
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          -1.94,
+          6,
+          0.4
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          3.384210251050867,
+          0.4
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          -1.94,
+          6,
+          0.7
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          3.2099717134105332,
+          0.7
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          -1.94,
+          6,
+          1
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          3.0357331582222207,
+          1
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          -1.94,
+          6,
+          1.15
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          -1.94,
+          2.952613798700372,
+          1.15
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          -0.85
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          0.35,
+          2.883128873393033,
+          -0.85
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          -0.55
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          0.35,
+          3.0573673832528776,
+          -0.55
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          -0.25
+        ],
+        "first": "village_nx-town-woodyard_6",
+        "material": "cabin-slate-alt",
+        "point": [
+          0.35,
+          3.227606058966991,
+          -0.25
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          0.05
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          0.35,
+          3.4018446207628674,
+          0.05
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          0.4
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          0.35,
+          3.3842102510508676,
+          0.4
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          0.7
+        ],
+        "first": "village_nx-town-woodyard_6",
+        "material": "cabin-slate-alt",
+        "point": [
+          0.35,
+          3.2099717134105332,
+          0.7
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          1
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          0.35,
+          3.0357331582222207,
+          1
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          0.35,
+          6,
+          1.15
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          0.35,
+          2.952613798700372,
+          1.15
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          -0.85
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          2.64,
+          2.883128873393033,
+          -0.85
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          -0.55
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          2.64,
+          3.0573673832528776,
+          -0.55
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          -0.25
+        ],
+        "first": "village_nx-town-woodyard_6",
+        "material": "cabin-slate-alt",
+        "point": [
+          2.64,
+          3.227606058966991,
+          -0.25
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          0.05
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          2.64,
+          3.401844620762868,
+          0.05
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          0.4
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          2.64,
+          3.384210251050867,
+          0.4
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          0.7
+        ],
+        "first": "village_nx-town-woodyard_6",
+        "material": "cabin-slate-alt",
+        "point": [
+          2.64,
+          3.2099717134105332,
+          0.7
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          1
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          2.64,
+          3.0357331582222207,
+          1
+        ],
+        "pass": true
+      },
+      {
+        "at": [
+          2.64,
+          6,
+          1.15
+        ],
+        "first": "village_nx-town-woodyard_5",
+        "material": "cabin-slate",
+        "point": [
+          2.64,
+          2.952613798700372,
+          1.15
+        ],
+        "pass": true
+      }
+    ],
+    "main": {
+      "geometryStatus": "FAIL",
+      "geometryFailures": [
+        "host is not an exact browser collider"
+      ],
+      "accessStatus": "PASS",
+      "collider": {
+        "exact": false,
+        "pillar": true,
+        "classification": {
+          "roomScale": false,
+          "floorShaped": false,
+          "uneven": false
+        }
+      },
+      "routeCount": 14,
+      "routesPassed": 14,
+      "physicalSupport": true,
+      "supportSamples": 353,
+      "neighbors": [
+        "nx-artwalk-b11-woodyard-heartwood-measure",
+        "nx-sign-woodyard-001"
+      ],
+      "doors": [
+        {
+          "name": "left_of_fixed_hanging_sign",
+          "requiredWidth": 1.4,
+          "requiredHeadroom": 2.2,
+          "min": [
+            -1.77,
+            0,
+            0.72
+          ],
+          "max": [
+            -0.3700000000000001,
+            2.2,
+            1.9
+          ],
+          "hits": 0,
+          "examples": []
+        }
+      ],
+      "protectedVolumes": [
+        {
+          "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+          "min": [
+            -1.2999999523162857,
+            0.7500000238418583,
+            -0.8350000001490117
+          ],
+          "max": [
+            1.2999999523162826,
+            1.8159512281417847,
+            -0.686587992310524
+          ],
+          "allowance": null,
+          "hits": 0,
+          "examples": []
+        },
+        {
+          "id": "nx-sign-woodyard-001",
+          "min": [
+            -0.2619999945163728,
+            1.3299999713897703,
+            1.220000000670554
+          ],
+          "max": [
+            0.26199999451637257,
+            2.049989926815033,
+            1.5440058708190936
+          ],
+          "allowance": null,
+          "hits": 0,
+          "examples": []
+        }
+      ]
+    },
+    "context": {
+      "geometryStatus": "FAIL",
+      "geometryFailures": [
+        "host is not an exact browser collider"
+      ],
+      "accessStatus": "PASS",
+      "collider": {
+        "exact": false,
+        "pillar": true,
+        "classification": {
+          "roomScale": false,
+          "floorShaped": false,
+          "uneven": false
+        }
+      },
+      "routeCount": 14,
+      "routesPassed": 14,
+      "physicalSupport": true,
+      "supportSamples": 353,
+      "neighbors": [
+        "nx-gallery-mosaic-0048",
+        "nx-dress-harvestcart",
+        "nx-dress-churn",
+        "nx-artwalk-b11-woodyard-heartwood-measure",
+        "nx-artwalk-b31-sheaf-tally",
+        "nx-artwalk-b32-morning-measure",
+        "nx-sign-woodyard-001",
+        "nx-approach-ne-lane-002",
+        "nx-dress-charcoal",
+        "nx-town-longhouse"
+      ],
+      "doors": [
+        {
+          "name": "left_of_fixed_hanging_sign",
+          "requiredWidth": 1.4,
+          "requiredHeadroom": 2.2,
+          "min": [
+            -1.77,
+            0,
+            0.72
+          ],
+          "max": [
+            -0.3700000000000001,
+            2.2,
+            1.9
+          ],
+          "hits": 0,
+          "examples": []
+        }
+      ],
+      "protectedVolumes": [
+        {
+          "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+          "min": [
+            -1.2999999523162857,
+            0.7500000238418583,
+            -0.8350000001490117
+          ],
+          "max": [
+            1.2999999523162826,
+            1.8159512281417847,
+            -0.686587992310524
+          ],
+          "allowance": null,
+          "hits": 0,
+          "examples": []
+        },
+        {
+          "id": "nx-sign-woodyard-001",
+          "min": [
+            -0.2619999945163728,
+            1.3299999713897703,
+            1.220000000670554
+          ],
+          "max": [
+            0.26199999451637257,
+            2.049989926815033,
+            1.5440058708190936
+          ],
+          "allowance": null,
+          "hits": 0,
+          "examples": []
+        }
+      ]
+    },
+    "baseline": {
+      "geometryStatus": "FAIL",
+      "geometryFailures": [
+        "host is not an exact browser collider",
+        "door left_of_fixed_hanging_sign: 11 triangles intrude into required 1.4m x 2.2m clearance"
+      ],
+      "accessStatus": "PASS",
+      "collider": {
+        "exact": false,
+        "pillar": true,
+        "classification": {
+          "roomScale": false,
+          "floorShaped": false,
+          "uneven": false
+        }
+      },
+      "routeCount": 14,
+      "routesPassed": 14,
+      "physicalSupport": true,
+      "supportSamples": 353,
+      "neighbors": [
+        "nx-artwalk-b11-woodyard-heartwood-measure",
+        "nx-sign-woodyard-001"
+      ],
+      "doors": [
+        {
+          "name": "left_of_fixed_hanging_sign",
+          "requiredWidth": 1.4,
+          "requiredHeadroom": 2.2,
+          "min": [
+            -1.77,
+            0,
+            0.72
+          ],
+          "max": [
+            -0.3700000000000001,
+            2.2,
+            1.9
+          ],
+          "hits": 11,
+          "examples": [
+            {
+              "node": "wy3_0",
+              "triangle": 33,
+              "intersectionMin": [
+                -1.7690000000000001,
+                0.0009999999999998899,
+                0.9600586295127869
+              ],
+              "intersectionMax": [
+                -1.740109920501709,
+                2.1990000000000003,
+                0.9600586295127869
+              ]
+            },
+            {
+              "node": "wy3_0",
+              "triangle": 34,
+              "intersectionMin": [
+                -1.7690000000000001,
+                1.6698852873494536,
+                0.9600586295127869
+              ],
+              "intersectionMax": [
+                -1.740166015954775,
+                2.1990000000000003,
+                0.9600586295127869
+              ]
+            },
+            {
+              "node": "wy3_0",
+              "triangle": 36,
+              "intersectionMin": [
+                -1.740109920501709,
+                0.0009999999999998899,
+                0.8399976437208684
+              ],
+              "intersectionMax": [
+                -1.740109920501709,
+                2.1990000000000003,
+                0.9600586295127869
+              ]
+            },
+            {
+              "node": "wy3_0",
+              "triangle": 37,
+              "intersectionMin": [
+                -1.740109920501709,
+                0.0009999999999998899,
+                0.8399414420127869
+              ],
+              "intersectionMax": [
+                -1.740109920501709,
+                2.1990000000000003,
+                0.9600040302190319
+              ]
+            },
+            {
+              "node": "wy3_0",
+              "triangle": 43,
+              "intersectionMin": [
+                -1.7690000000000001,
+                0.0009999999999998899,
+                0.8399414420127869
+              ],
+              "intersectionMax": [
+                -1.740109920501709,
+                2.1990000000000003,
+                0.8399414420127869
+              ]
+            },
+            {
+              "node": "wy3_0",
+              "triangle": 800,
+              "intersectionMin": [
+                -1.7690000000000001,
+                0.001,
+                0.8399414420127869
+              ],
+              "intersectionMax": [
+                -1.7401644165699748,
+                0.5301440619776334,
+                0.8399414420127869
+              ]
+            },
+            {
+              "node": "wy3_1",
+              "triangle": 0,
+              "intersectionMin": [
+                -1.7690000000000001,
+                2.074265241622925,
+                1.2790607213974
+              ],
+              "intersectionMax": [
+                -0.371,
+                2.1027600500191155,
+                1.2837043459757667
+              ]
+            },
+            {
+              "node": "wy3_1",
+              "triangle": 1,
+              "intersectionMin": [
+                -1.7690000000000001,
+                2.0797202904267977,
+                1.27994969732416
+              ],
+              "intersectionMax": [
+                -0.371,
+                2.1434834003448486,
+                1.290340781211853
+              ]
+            }
+          ]
+        }
+      ],
+      "protectedVolumes": [
+        {
+          "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+          "min": [
+            -1.2999999523162857,
+            0.7500000238418583,
+            -0.8350000001490117
+          ],
+          "max": [
+            1.2999999523162826,
+            1.8159512281417847,
+            -0.686587992310524
+          ],
+          "allowance": null,
+          "hits": 0,
+          "examples": []
+        },
+        {
+          "id": "nx-sign-woodyard-001",
+          "min": [
+            -0.2619999945163728,
+            1.3299999713897703,
+            1.220000000670554
+          ],
+          "max": [
+            0.26199999451637257,
+            2.049989926815033,
+            1.5440058708190936
+          ],
+          "allowance": null,
+          "hits": 0,
+          "examples": []
+        }
+      ]
+    }
+  },
+  "exteriorContext": {
+    "directory": "reviews/nx-town-woodyard-roof-context",
+    "manifest": {
+      "status": "RENDERED",
+      "evidenceKind": "local-solo-render-not-in-world",
+      "modelPath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-woodyard-candidate-assembly.glb",
+      "modelSha256": "25106605ee2b2587eef9a6140bee7a5d7bade161a558799162ece590d8f9125d",
+      "rendererSha256": "623d07cd956d2a1c8dfb26878b98de24c7cd076ed43d1dd57ef5ff8a783e496f",
+      "cameraSha256": "9e79588ff2c409c6c9e061aa90b065aef9acafb845f6151be1093392313ec30c",
+      "referenceModelSha256": null,
+      "cameraReference": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/reviews/nx-town-woodyard-camera.json",
+      "limitations": [
+        "No live terrain, neighbors, component evaluators or authored world lights.",
+        "Interior camera is model-local; inspect/adjust the BEFORE camera.json once per target, then reuse verbatim.",
+        "Rendered evidence is not native visual acceptance."
+      ],
+      "stats": {
+        "bounds": {
+          "min": [
+            -2.0999999046325684,
+            -4.76837147544984e-09,
+            -1.090248942375183
+          ],
+          "max": [
+            2.875746011734009,
+            3.559999942779541,
+            1.5440058708190936
+          ],
+          "size": [
+            4.975745916366577,
+            3.5599999475479125,
+            2.6342548131942767
+          ]
+        },
+        "meshes": 26,
+        "triangles": 8208,
+        "namedNodes": [
+          "village_nx-town-woodyard_0",
+          "village_nx-town-woodyard_1",
+          "village_nx-town-woodyard_2",
+          "village_nx-town-woodyard_3",
+          "village_nx-town-woodyard_4",
+          "village_nx-town-woodyard_5",
+          "village_nx-town-woodyard_6",
+          "wy_axe",
+          "wy_axe_0",
+          "wy_axe_1",
+          "lamp_workbench_globe",
+          "lamp_workbench_cap-1",
+          "lamp_workbench_cap1",
+          "lamp_workbench_bar-1-1",
+          "lamp_workbench_bar-11",
+          "lamp_workbench_bar1-1",
+          "lamp_workbench_bar11",
+          "lamp_workbench_hanger",
+          "nx-artwalk-b11-woodyard-heartwood-measure",
+          "b11_0",
+          "b11_1",
+          "b11_2",
+          "nx-sign-woodyard-001",
+          "sgwod_0",
+          "sgwod_1",
+          "sgwod_2",
+          "sgwod_3",
+          "sgwod_4",
+          "sgwod_5"
+        ],
+        "materials": [
+          "(unnamed)",
+          "cabin-amber",
+          "cabin-cedar",
+          "cabin-iron",
+          "cabin-lime",
+          "cabin-slate",
+          "cabin-slate-alt",
+          "cabin-stone",
+          "cabin-timber",
+          "iron",
+          "sign_bone"
+        ],
+        "extensionsUsed": [
+          "EXT_texture_webp"
+        ]
+      },
+      "frames": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "9706741737722335b6c46de18587af7c7d0223a243495cb45f61a64d6f175c82",
+          "bytes": 113363,
+          "camera": {
+            "eye": [
+              0.3878730535507202,
+              2.2999999761581416,
+              10.409367334842681
+            ],
+            "quaternion": [
+              -0.06527493159626001,
+              0,
+              0,
+              0.9978673174851972
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "ee65c9ea6d9b97fe081428fbdf307c140b6986d08ed6344eaae9b5f5d2b9bba4",
+          "bytes": 65509,
+          "camera": {
+            "eye": [
+              10.588152182102203,
+              2.2999999761581416,
+              0.20908820629119873
+            ],
+            "quaternion": [
+              -0.04615634677320348,
+              0.7055987469182126,
+              0.04615634677320348,
+              0.7055987469182126
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "back",
+          "file": "back.png",
+          "sha256": "629e3ca01bcfa1d32e4653301b52ab78b4c6cb8c8b48a72c015c232e266c8e74",
+          "bytes": 111049,
+          "camera": {
+            "eye": [
+              0.3878730535507202,
+              2.2999999761581416,
+              -9.991190922260284
+            ],
+            "quaternion": [
+              0,
+              0.9978673174851973,
+              0.06527493159626001,
+              0
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "1bb9ec8fe82fcd462689e61219c2205de55789e33a08a2d67059c024ddbb6a71",
+          "bytes": 50476,
+          "camera": {
+            "eye": [
+              -9.812406075000762,
+              2.2999999761581416,
+              0.20908820629119873
+            ],
+            "quaternion": [
+              -0.04615634677320348,
+              -0.7055987469182126,
+              -0.04615634677320348,
+              0.7055987469182126
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "gameplay",
+          "file": "gameplay.png",
+          "sha256": "1782f3aa64f2b82f86c26374dfcde9258185cba252976979ec11423118b5c7af",
+          "bytes": 47369,
+          "camera": {
+            "eye": [
+              0.3878730535507202,
+              1.6499999761581416,
+              18.2090882062912
+            ],
+            "quaternion": [
+              -0.01916238199213574,
+              0,
+              0,
+              0.9998163847009047
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "aerial",
+          "file": "aerial.png",
+          "sha256": "0eff783892a0e53b56ece9e2b43002dbbc82613e47d2826134f792271adae820",
+          "bytes": 122890,
+          "camera": {
+            "eye": [
+              6.109980857372284,
+              7.999999976158142,
+              5.931196010112762
+            ],
+            "quaternion": [
+              -0.32372332943699683,
+              0.35842198891673643,
+              0.13409059350937746,
+              0.8653072266955243
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "140ad70bd860e8138d8ea8e54bd74789e15d7a14ef33a29b275b2f0a4204c653",
+          "bytes": 78298,
+          "camera": {
+            "eye": [
+              0.3878730535507202,
+              10.697853696346282,
+              0.21008820629119873
+            ],
+            "quaternion": [
+              -0.7070704739805547,
+              0,
+              0,
+              0.7071430865284011
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "night",
+          "file": "night.png",
+          "sha256": "1a379535d0667c87d47c0ba1c5e6bb7e65f4ac2f344bc8b91f33a1d9031a333c",
+          "bytes": 36296,
+          "camera": {
+            "eye": [
+              0.3878730535507202,
+              1.6499999761581416,
+              18.2090882062912
+            ],
+            "quaternion": [
+              -0.01916238199213574,
+              0,
+              0,
+              0.9998163847009047
+            ],
+            "projectionMatrix": [
+              1.9538167985203512,
+              0,
+              0,
+              0,
+              0,
+              2.6050890646938014,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 27,
+            "triangles": 8210
+          }
+        },
+        {
+          "view": "interior",
+          "file": "interior.png",
+          "sha256": "ee0735aed329d9eff7a2fde94129288776fead7e6e40bb3bc9540b7c673dc592",
+          "bytes": 471016,
+          "camera": {
+            "eye": [
+              0.2,
+              1.7,
+              1.8
+            ],
+            "quaternion": [
+              -0.14176375268347757,
+              -0.02227799895231425,
+              -0.0031912593219884746,
+              0.989644655950669
+            ],
+            "projectionMatrix": [
+              0.9261728674012887,
+              0,
+              0,
+              0,
+              0,
+              1.2348971565350515,
+              0,
+              0,
+              0,
+              0,
+              -1.000500125031258,
+              -1,
+              0,
+              0,
+              -0.1000250062515629,
+              0
+            ],
+            "drawCalls": 25,
+            "triangles": 8186
+          }
+        }
+      ],
+      "errors": [],
+      "warnings": [
+        "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x114004f1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+      ]
+    }
+  },
+  "physicalSupport": {
+    "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+    "pass": true,
+    "samples": [
+      {
+        "name": "in:start",
+        "pos": [
+          -1.07,
+          0,
+          2.25
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:1",
+        "pos": [
+          -1.07,
+          0,
+          2.2125
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:2",
+        "pos": [
+          -1.07,
+          0,
+          2.175
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:3",
+        "pos": [
+          -1.07,
+          0,
+          2.1374999999999997
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:4",
+        "pos": [
+          -1.07,
+          0,
+          2.0999999999999996
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:5",
+        "pos": [
+          -1.07,
+          0,
+          2.0624999999999996
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:6",
+        "pos": [
+          -1.07,
+          0,
+          2.0249999999999995
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:7",
+        "pos": [
+          -1.07,
+          0,
+          1.9874999999999994
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:8",
+        "pos": [
+          -1.07,
+          0,
+          1.9499999999999993
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:9",
+        "pos": [
+          -1.07,
+          0,
+          1.9124999999999992
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:10",
+        "pos": [
+          -1.07,
+          0,
+          1.8749999999999991
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:11",
+        "pos": [
+          -1.07,
+          0,
+          1.837499999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:12",
+        "pos": [
+          -1.07,
+          0,
+          1.799999999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:13",
+        "pos": [
+          -1.07,
+          0,
+          1.7624999999999988
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:14",
+        "pos": [
+          -1.07,
+          0,
+          1.7249999999999988
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:15",
+        "pos": [
+          -1.07,
+          0,
+          1.6874999999999987
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:yard_approach:sign_left_entry:16",
+        "pos": [
+          -1.07,
+          0,
+          1.6499999999999986
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:1",
+        "pos": [
+          -1.07,
+          0,
+          1.6104999999999987
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:2",
+        "pos": [
+          -1.07,
+          0,
+          1.5709999999999988
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:3",
+        "pos": [
+          -1.07,
+          0,
+          1.531499999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:4",
+        "pos": [
+          -1.07,
+          0,
+          1.491999999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:5",
+        "pos": [
+          -1.07,
+          0,
+          1.4524999999999992
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:6",
+        "pos": [
+          -1.07,
+          0,
+          1.4129999999999994
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:7",
+        "pos": [
+          -1.07,
+          0,
+          1.3734999999999995
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:8",
+        "pos": [
+          -1.07,
+          0,
+          1.3339999999999996
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:9",
+        "pos": [
+          -1.07,
+          0,
+          1.2944999999999998
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:10",
+        "pos": [
+          -1.07,
+          0,
+          1.255
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:11",
+        "pos": [
+          -1.07,
+          0,
+          1.2155
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:12",
+        "pos": [
+          -1.07,
+          0,
+          1.1760000000000002
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:13",
+        "pos": [
+          -1.07,
+          0,
+          1.1365000000000003
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:14",
+        "pos": [
+          -1.07,
+          0,
+          1.0970000000000004
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:15",
+        "pos": [
+          -1.07,
+          0,
+          1.0575000000000006
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:16",
+        "pos": [
+          -1.07,
+          0,
+          1.0180000000000007
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:17",
+        "pos": [
+          -1.07,
+          0,
+          0.9785000000000007
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:18",
+        "pos": [
+          -1.07,
+          0,
+          0.9390000000000007
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:19",
+        "pos": [
+          -1.07,
+          0,
+          0.8995000000000007
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:sign_left_entry:fuel_selection_station:20",
+        "pos": [
+          -1.07,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:1",
+        "pos": [
+          -1.0306666666666668,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:2",
+        "pos": [
+          -0.9913333333333335,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:3",
+        "pos": [
+          -0.9520000000000002,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:4",
+        "pos": [
+          -0.9126666666666668,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:5",
+        "pos": [
+          -0.8733333333333335,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:6",
+        "pos": [
+          -0.8340000000000002,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:7",
+        "pos": [
+          -0.7946666666666669,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:8",
+        "pos": [
+          -0.7553333333333335,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:9",
+        "pos": [
+          -0.7160000000000002,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:10",
+        "pos": [
+          -0.6766666666666669,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:11",
+        "pos": [
+          -0.6373333333333335,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:12",
+        "pos": [
+          -0.5980000000000002,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:13",
+        "pos": [
+          -0.5586666666666669,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:14",
+        "pos": [
+          -0.5193333333333335,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:15",
+        "pos": [
+          -0.4800000000000002,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:16",
+        "pos": [
+          -0.4406666666666669,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:17",
+        "pos": [
+          -0.40133333333333354,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:18",
+        "pos": [
+          -0.3620000000000002,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:19",
+        "pos": [
+          -0.3226666666666669,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:20",
+        "pos": [
+          -0.28333333333333355,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:21",
+        "pos": [
+          -0.24400000000000022,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:22",
+        "pos": [
+          -0.20466666666666689,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:23",
+        "pos": [
+          -0.16533333333333355,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:24",
+        "pos": [
+          -0.12600000000000022,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:25",
+        "pos": [
+          -0.08666666666666689,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:26",
+        "pos": [
+          -0.04733333333333356,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:27",
+        "pos": [
+          -0.00800000000000023,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:28",
+        "pos": [
+          0.0313333333333331,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:29",
+        "pos": [
+          0.07066666666666643,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:30",
+        "pos": [
+          0.10999999999999976,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:31",
+        "pos": [
+          0.1493333333333331,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:32",
+        "pos": [
+          0.18866666666666643,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:33",
+        "pos": [
+          0.22799999999999976,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:34",
+        "pos": [
+          0.2673333333333331,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:35",
+        "pos": [
+          0.3066666666666664,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:36",
+        "pos": [
+          0.34599999999999975,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:37",
+        "pos": [
+          0.3853333333333331,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:38",
+        "pos": [
+          0.4246666666666664,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:39",
+        "pos": [
+          0.46399999999999975,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:40",
+        "pos": [
+          0.5033333333333331,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:41",
+        "pos": [
+          0.5426666666666664,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:42",
+        "pos": [
+          0.5819999999999997,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:43",
+        "pos": [
+          0.6213333333333331,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:44",
+        "pos": [
+          0.6606666666666664,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:fuel_selection_station:joiners_bench_station:45",
+        "pos": [
+          0.6999999999999997,
+          0,
+          0.8600000000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:1",
+        "pos": [
+          0.7364705882352939,
+          0,
+          0.8694117647058831
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:2",
+        "pos": [
+          0.772941176470588,
+          0,
+          0.8788235294117654
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:3",
+        "pos": [
+          0.8094117647058822,
+          0,
+          0.8882352941176478
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:4",
+        "pos": [
+          0.8458823529411763,
+          0,
+          0.8976470588235301
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:5",
+        "pos": [
+          0.8823529411764705,
+          0,
+          0.9070588235294125
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:6",
+        "pos": [
+          0.9188235294117646,
+          0,
+          0.9164705882352948
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:7",
+        "pos": [
+          0.9552941176470587,
+          0,
+          0.9258823529411772
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:8",
+        "pos": [
+          0.9917647058823529,
+          0,
+          0.9352941176470595
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:9",
+        "pos": [
+          1.028235294117647,
+          0,
+          0.9447058823529418
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:10",
+        "pos": [
+          1.064705882352941,
+          0,
+          0.9541176470588242
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:11",
+        "pos": [
+          1.101176470588235,
+          0,
+          0.9635294117647065
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:12",
+        "pos": [
+          1.137647058823529,
+          0,
+          0.9729411764705889
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:13",
+        "pos": [
+          1.174117647058823,
+          0,
+          0.9823529411764712
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:14",
+        "pos": [
+          1.210588235294117,
+          0,
+          0.9917647058823535
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:15",
+        "pos": [
+          1.247058823529411,
+          0,
+          1.0011764705882358
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:16",
+        "pos": [
+          1.2835294117647051,
+          0,
+          1.010588235294118
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:joiners_bench_station:vise_station:17",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.0200000000000002
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:1",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.0587500000000003
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:2",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.0975000000000004
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:3",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.1362500000000004
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:4",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.1750000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:5",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.2137500000000006
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:6",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.2525000000000006
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:7",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.2912500000000007
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:8",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.3300000000000007
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:9",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.3687500000000008
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:10",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.4075000000000009
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:11",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.446250000000001
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:12",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.485000000000001
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:13",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.523750000000001
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:14",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.562500000000001
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:15",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.6012500000000012
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:16",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.6400000000000012
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:17",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.6787500000000013
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:18",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.7175000000000014
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:19",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.7562500000000014
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:20",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.7950000000000015
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:21",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.8337500000000015
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:22",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.8725000000000016
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:23",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.9112500000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:vise_station:outside_transfer:24",
+        "pos": [
+          1.3199999999999992,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:1",
+        "pos": [
+          1.358787878787878,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:2",
+        "pos": [
+          1.3975757575757568,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:3",
+        "pos": [
+          1.4363636363636356,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:4",
+        "pos": [
+          1.4751515151515144,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:5",
+        "pos": [
+          1.5139393939393933,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:6",
+        "pos": [
+          1.552727272727272,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:7",
+        "pos": [
+          1.5915151515151509,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:8",
+        "pos": [
+          1.6303030303030297,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:9",
+        "pos": [
+          1.6690909090909085,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:10",
+        "pos": [
+          1.7078787878787873,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:11",
+        "pos": [
+          1.7466666666666661,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:12",
+        "pos": [
+          1.785454545454545,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:13",
+        "pos": [
+          1.8242424242424238,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:14",
+        "pos": [
+          1.8630303030303026,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:15",
+        "pos": [
+          1.9018181818181814,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:16",
+        "pos": [
+          1.9406060606060602,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:17",
+        "pos": [
+          1.979393939393939,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:18",
+        "pos": [
+          2.0181818181818176,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:19",
+        "pos": [
+          2.0569696969696967,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:20",
+        "pos": [
+          2.0957575757575757,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:21",
+        "pos": [
+          2.1345454545454547,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:22",
+        "pos": [
+          2.173333333333334,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:23",
+        "pos": [
+          2.212121212121213,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:24",
+        "pos": [
+          2.250909090909092,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:25",
+        "pos": [
+          2.289696969696971,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:26",
+        "pos": [
+          2.32848484848485,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:27",
+        "pos": [
+          2.367272727272729,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:28",
+        "pos": [
+          2.406060606060608,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:29",
+        "pos": [
+          2.444848484848487,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:30",
+        "pos": [
+          2.483636363636366,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:31",
+        "pos": [
+          2.522424242424245,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:32",
+        "pos": [
+          2.561212121212124,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:outside_transfer:chopping_approach:33",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.9500000000000017
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:1",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.9104761904761922
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:2",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.8709523809523827
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:3",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.8314285714285732
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:4",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.7919047619047637
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:5",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.7523809523809541
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:6",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.7128571428571446
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:7",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.6733333333333351
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:8",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.6338095238095256
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:9",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.594285714285716
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:10",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.5547619047619066
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:11",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.515238095238097
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:12",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.4757142857142875
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:13",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.436190476190478
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:14",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.3966666666666685
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:15",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.357142857142859
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:16",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.3176190476190495
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:17",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.27809523809524
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:18",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.2385714285714304
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:19",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.199047619047621
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:20",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.1595238095238114
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:chopping_approach:axe_stump_station:21",
+        "pos": [
+          2.600000000000003,
+          0,
+          1.1200000000000019
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:start",
+        "pos": [
+          2.6,
+          0,
+          1.12
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:1",
+        "pos": [
+          2.6,
+          0,
+          1.1595238095238096
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:2",
+        "pos": [
+          2.6,
+          0,
+          1.1990476190476191
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:3",
+        "pos": [
+          2.6,
+          0,
+          1.2385714285714287
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:4",
+        "pos": [
+          2.6,
+          0,
+          1.2780952380952382
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:5",
+        "pos": [
+          2.6,
+          0,
+          1.3176190476190477
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:6",
+        "pos": [
+          2.6,
+          0,
+          1.3571428571428572
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:7",
+        "pos": [
+          2.6,
+          0,
+          1.3966666666666667
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:8",
+        "pos": [
+          2.6,
+          0,
+          1.4361904761904762
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:9",
+        "pos": [
+          2.6,
+          0,
+          1.4757142857142858
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:10",
+        "pos": [
+          2.6,
+          0,
+          1.5152380952380953
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:11",
+        "pos": [
+          2.6,
+          0,
+          1.5547619047619048
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:12",
+        "pos": [
+          2.6,
+          0,
+          1.5942857142857143
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:13",
+        "pos": [
+          2.6,
+          0,
+          1.6338095238095238
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:14",
+        "pos": [
+          2.6,
+          0,
+          1.6733333333333333
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:15",
+        "pos": [
+          2.6,
+          0,
+          1.7128571428571429
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:16",
+        "pos": [
+          2.6,
+          0,
+          1.7523809523809524
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:17",
+        "pos": [
+          2.6,
+          0,
+          1.791904761904762
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:18",
+        "pos": [
+          2.6,
+          0,
+          1.8314285714285714
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:19",
+        "pos": [
+          2.6,
+          0,
+          1.870952380952381
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:20",
+        "pos": [
+          2.6,
+          0,
+          1.9104761904761904
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:axe_stump_station:chopping_approach:21",
+        "pos": [
+          2.6,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:1",
+        "pos": [
+          2.56,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:2",
+        "pos": [
+          2.52,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:3",
+        "pos": [
+          2.48,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:4",
+        "pos": [
+          2.44,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:5",
+        "pos": [
+          2.4,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:6",
+        "pos": [
+          2.36,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:7",
+        "pos": [
+          2.32,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:8",
+        "pos": [
+          2.28,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:9",
+        "pos": [
+          2.2399999999999998,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:10",
+        "pos": [
+          2.1999999999999997,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:11",
+        "pos": [
+          2.1599999999999997,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:12",
+        "pos": [
+          2.1199999999999997,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:13",
+        "pos": [
+          2.0799999999999996,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:14",
+        "pos": [
+          2.0399999999999996,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:15",
+        "pos": [
+          1.9999999999999996,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:16",
+        "pos": [
+          1.9599999999999995,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:17",
+        "pos": [
+          1.9199999999999995,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:18",
+        "pos": [
+          1.8799999999999994,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:19",
+        "pos": [
+          1.8399999999999994,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:20",
+        "pos": [
+          1.7999999999999994,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:21",
+        "pos": [
+          1.7599999999999993,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:22",
+        "pos": [
+          1.7199999999999993,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:23",
+        "pos": [
+          1.6799999999999993,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:24",
+        "pos": [
+          1.6399999999999992,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:25",
+        "pos": [
+          1.5999999999999992,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:26",
+        "pos": [
+          1.5599999999999992,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:27",
+        "pos": [
+          1.5199999999999991,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:28",
+        "pos": [
+          1.479999999999999,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:29",
+        "pos": [
+          1.439999999999999,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:30",
+        "pos": [
+          1.399999999999999,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:31",
+        "pos": [
+          1.359999999999999,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:chopping_approach:outside_transfer:32",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.95
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:1",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.91125
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:2",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.8724999999999998
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:3",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.8337499999999998
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:4",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.7949999999999997
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:5",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.7562499999999996
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:6",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.7174999999999996
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:7",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.6787499999999995
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:8",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.6399999999999995
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:9",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.6012499999999994
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:10",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.5624999999999993
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:11",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.5237499999999993
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:12",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.4849999999999992
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:13",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.4462499999999991
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:14",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.407499999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:15",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.368749999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:16",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.329999999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:17",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.291249999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:18",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.2524999999999988
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:19",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.2137499999999988
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:20",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.1749999999999987
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:21",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.1362499999999986
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:22",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.0974999999999986
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:23",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.0587499999999985
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:outside_transfer:vise_station:24",
+        "pos": [
+          1.319999999999999,
+          0,
+          1.0199999999999985
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:1",
+        "pos": [
+          1.283529411764705,
+          0,
+          1.0105882352941162
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:2",
+        "pos": [
+          1.2470588235294109,
+          0,
+          1.001176470588234
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:3",
+        "pos": [
+          1.2105882352941169,
+          0,
+          0.9917647058823518
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:4",
+        "pos": [
+          1.1741176470588228,
+          0,
+          0.9823529411764695
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:5",
+        "pos": [
+          1.1376470588235288,
+          0,
+          0.9729411764705873
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:6",
+        "pos": [
+          1.1011764705882348,
+          0,
+          0.9635294117647051
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:7",
+        "pos": [
+          1.0647058823529407,
+          0,
+          0.9541176470588228
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:8",
+        "pos": [
+          1.0282352941176467,
+          0,
+          0.9447058823529406
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:9",
+        "pos": [
+          0.9917647058823527,
+          0,
+          0.9352941176470584
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:10",
+        "pos": [
+          0.9552941176470586,
+          0,
+          0.9258823529411762
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:11",
+        "pos": [
+          0.9188235294117646,
+          0,
+          0.9164705882352939
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:12",
+        "pos": [
+          0.8823529411764706,
+          0,
+          0.9070588235294117
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:13",
+        "pos": [
+          0.8458823529411765,
+          0,
+          0.8976470588235295
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:14",
+        "pos": [
+          0.8094117647058825,
+          0,
+          0.8882352941176472
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:15",
+        "pos": [
+          0.7729411764705885,
+          0,
+          0.878823529411765
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:16",
+        "pos": [
+          0.7364705882352944,
+          0,
+          0.8694117647058828
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:vise_station:joiners_bench_station:17",
+        "pos": [
+          0.7000000000000004,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:1",
+        "pos": [
+          0.6606666666666671,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:2",
+        "pos": [
+          0.6213333333333337,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:3",
+        "pos": [
+          0.5820000000000004,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:4",
+        "pos": [
+          0.5426666666666671,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:5",
+        "pos": [
+          0.5033333333333337,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:6",
+        "pos": [
+          0.4640000000000004,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:7",
+        "pos": [
+          0.4246666666666671,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:8",
+        "pos": [
+          0.38533333333333375,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:9",
+        "pos": [
+          0.3460000000000004,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:10",
+        "pos": [
+          0.3066666666666671,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:11",
+        "pos": [
+          0.26733333333333376,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:12",
+        "pos": [
+          0.22800000000000042,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:13",
+        "pos": [
+          0.1886666666666671,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:14",
+        "pos": [
+          0.14933333333333376,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:15",
+        "pos": [
+          0.11000000000000042,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:16",
+        "pos": [
+          0.07066666666666707,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:17",
+        "pos": [
+          0.03133333333333373,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:18",
+        "pos": [
+          -0.007999999999999619,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:19",
+        "pos": [
+          -0.047333333333332964,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:20",
+        "pos": [
+          -0.08666666666666631,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:21",
+        "pos": [
+          -0.12599999999999967,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:22",
+        "pos": [
+          -0.165333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:23",
+        "pos": [
+          -0.20466666666666633,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:24",
+        "pos": [
+          -0.24399999999999966,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:25",
+        "pos": [
+          -0.283333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:26",
+        "pos": [
+          -0.3226666666666663,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:27",
+        "pos": [
+          -0.36199999999999966,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:28",
+        "pos": [
+          -0.401333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:29",
+        "pos": [
+          -0.4406666666666663,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:30",
+        "pos": [
+          -0.47999999999999965,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:31",
+        "pos": [
+          -0.519333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:32",
+        "pos": [
+          -0.5586666666666663,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:33",
+        "pos": [
+          -0.5979999999999996,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:34",
+        "pos": [
+          -0.637333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:35",
+        "pos": [
+          -0.6766666666666663,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:36",
+        "pos": [
+          -0.7159999999999996,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:37",
+        "pos": [
+          -0.755333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:38",
+        "pos": [
+          -0.7946666666666663,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:39",
+        "pos": [
+          -0.8339999999999996,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:40",
+        "pos": [
+          -0.873333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:41",
+        "pos": [
+          -0.9126666666666663,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:42",
+        "pos": [
+          -0.9519999999999996,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:43",
+        "pos": [
+          -0.991333333333333,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:44",
+        "pos": [
+          -1.0306666666666664,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:joiners_bench_station:fuel_selection_station:45",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          0.8600000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:1",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          0.8995000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:2",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          0.9390000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:3",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          0.9785000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:4",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.0180000000000005
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:5",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.0575000000000003
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:6",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.0970000000000002
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:7",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.1365
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:8",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.176
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:9",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.2154999999999998
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:10",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.2549999999999997
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:11",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.2944999999999995
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:12",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.3339999999999994
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:13",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.3734999999999993
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:14",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.4129999999999991
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:15",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.452499999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:16",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.4919999999999989
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:17",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.5314999999999988
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:18",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.5709999999999986
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:19",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.6104999999999985
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:fuel_selection_station:sign_left_entry:20",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.6499999999999984
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:1",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.6874999999999984
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:2",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.7249999999999985
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:3",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.7624999999999986
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:4",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.7999999999999987
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:5",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.8374999999999988
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:6",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.874999999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:7",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.912499999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:8",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.949999999999999
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:9",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          1.9874999999999992
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:10",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          2.0249999999999995
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:11",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          2.0624999999999996
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:12",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          2.0999999999999996
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:13",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          2.1374999999999997
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:14",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          2.175
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:15",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          2.2125
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:sign_left_entry:yard_approach:16",
+        "pos": [
+          -1.0699999999999998,
+          0,
+          2.25
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      }
+    ]
+  },
+  "requiredAnchorPreserved": "wy_axe",
+  "retention": {
+    "status": "PASS",
+    "id": "nx-town-woodyard",
+    "modelSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+    "sourceSha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+    "retainedComponents": 106,
+    "retainedTriangles": 2228,
+    "precision": "0.1mm vertex rounding; triangle multiplicity respected",
+    "triangleClearanceControls": {
+      "allVerticesOutsideCrossingVolume": true,
+      "crossingTriangleClips": true,
+      "clearTriangleDoesNotClip": true
+    },
+    "exactXZ": true,
+    "sourceFiles": [
+      {
+        "file": "agents/arthur/assets/mkv3-stable.ts",
+        "sha256": "31c295567d0974f304957a8353806c64ad51c9b090c46c12b75a4833e76cdc05"
+      },
+      {
+        "file": "agents/arthur/assets/mkv3-woodyard27.ts",
+        "sha256": "92f55381391275b6ff3aae57cbfa6de91c9b4a959c86ab97b4a3d6382a71fad4"
+      }
+    ],
+    "limitations": [
+      "Test proves geometry preservation with explicitly recorded rigid repositions, not original material-byte identity.",
+      "No clean static typecheck claimed: editor diagnostics reported incompatible Three Mesh/Object3D and Bun import.meta declarations. Actual Bun builds, retention tests and GLB/browser decoding were exercised."
+    ]
+  },
+  "contextGate": {
+    "status": "PASS",
+    "exactOnlyGeometryPolicyStatus": "FAIL",
+    "geometryPolicyFailures": [
+      "host is not an exact browser collider"
+    ],
+    "collider": {
+      "exact": false,
+      "pillar": true,
+      "classification": {
+        "roomScale": false,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "legs": 14,
+    "passed": 14,
+    "maxPush": 0,
+    "geometryHits": 0,
+    "doors": [
+      {
+        "name": "left_of_fixed_hanging_sign",
+        "requiredWidth": 1.4,
+        "requiredHeadroom": 2.2,
+        "min": [
+          -1.77,
+          0,
+          0.72
+        ],
+        "max": [
+          -0.3700000000000001,
+          2.2,
+          1.9
+        ],
+        "hits": 0,
+        "examples": []
+      }
+    ],
+    "protectedVolumes": [
+      {
+        "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+        "min": [
+          -1.2999999523162857,
+          0.7500000238418583,
+          -0.8350000001490117
+        ],
+        "max": [
+          1.2999999523162826,
+          1.8159512281417847,
+          -0.686587992310524
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      },
+      {
+        "id": "nx-sign-woodyard-001",
+        "min": [
+          -0.2619999945163728,
+          1.3299999713897703,
+          1.220000000670554
+        ],
+        "max": [
+          0.26199999451637257,
+          2.049989926815033,
+          1.5440058708190936
+        ],
+        "allowance": null,
+        "hits": 0,
+        "examples": []
+      }
+    ],
+    "neighborCount": 10,
+    "runtime": {
+      "mode": "served-override",
+      "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+      "files": {
+        "colliders.js": {
+          "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+          "publicPath": "/lib/colliders.js"
+        },
+        "supportclass.js": {
+          "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+          "publicPath": "/lib/supportclass.js"
+        }
+      },
+      "threeRevision": "184",
+      "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+    }
+  },
+  "cameraPairs": [
+    {
+      "before": "before",
+      "after": "after",
+      "cameraSha256": "9e79588ff2c409c6c9e061aa90b065aef9acafb845f6151be1093392313ec30c",
+      "framesEach": 9,
+      "beforeSha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+      "afterSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb"
+    },
+    {
+      "before": "baseline-details",
+      "after": "candidate-details",
+      "cameraSha256": "76728c05a84ef3069442aaf9087c78913fe90c0bde2b40acc2dd29bebe94c8e2",
+      "framesEach": 9,
+      "beforeSha256": "536f2c2b6e72805428698853c5224d53f7901f4870b39f40d759f95cd1372d52",
+      "afterSha256": "25106605ee2b2587eef9a6140bee7a5d7bade161a558799162ece590d8f9125d"
+    }
+  ],
+  "protectedCompanions": [
+    {
+      "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+      "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e",
+      "pos": [
+        16.3635762733503,
+        0.75,
+        31.712609495766586
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-woodyard-001",
+      "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7",
+      "pos": [
+        15.431912072890157,
+        2.05,
+        29.886547662864707
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1,
+      "comp": {}
+    }
+  ],
+  "inputHashes": {
+    "agents/arthur/village-overhaul/before/contracts.json": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f",
+    "agents/arthur/village-overhaul/before/protected.json": "ef0b5d51ebd7788db89b1ef6c579398bc8881eaf8c3c6bf3751589c5fabe48db",
+    "agents/arthur/village-overhaul/before/downloads.json": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659",
+    "agents/arthur/village-overhaul/kit.ts": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51",
+    "agents/arthur/assets/mkv3-stable.ts": "31c295567d0974f304957a8353806c64ad51c9b090c46c12b75a4833e76cdc05",
+    "agents/arthur/assets/mkv3-woodyard27.ts": "92f55381391275b6ff3aae57cbfa6de91c9b4a959c86ab97b4a3d6382a71fad4",
+    "agents/arthur/assets/housekit.ts": "7d76fbfce7f2afe823ea69edc4f1a15a5f8a1f89a16d91f853d6b3c17404f905",
+    "agents/arthur/assets/glbwrite.ts": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121",
+    "agents/arthur/assets/mergekit.ts": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c",
+    "agents/arthur/cabin-overhaul/kit.ts": "da453cb1e437bbc6889cffe1f16d692a933fa1c956a7dc13e09a087526690b72",
+    "agents/arthur/cabin-overhaul/render.ts": "623d07cd956d2a1c8dfb26878b98de24c7cd076ed43d1dd57ef5ff8a783e496f",
+    "agents/arthur/cabin-overhaul/verify-player.ts": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555",
+    "agents/arthur/village-overhaul/before/nx-dress-charcoal.glb": "c9ca1b859b0532ed7f34e960561e77827106b3bcb83090ef8499096499248826",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b5-belltower-rings.glb": "6c81c3877cf2f4cb5678216cd41abcf333764bbe810dcba8fe9ed281fe6c4369",
+    "agents/arthur/village-overhaul/before/nx-town-market.glb": "87245e97b1f848df57b4c128107586d533a7c3add98b37e39c391cb757f86de8",
+    "agents/arthur/village-overhaul/before/nx-town-gate-n.glb": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "agents/arthur/village-overhaul/before/nx-struct-orreryring.glb": "ea4f2317a730ae68b49f5bd1ce46ecb96caa476b8aa2cd748d6f97f63517b754",
+    "agents/arthur/village-overhaul/before/nx-dress-stablebench.glb": "3b5554bb59aefce157b57cb3a57f3fb463a91eb6d56560fc3e4fce059df77301",
+    "agents/arthur/village-overhaul/before/nx-town-dyehouse.glb": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b30-market-tally.glb": "6cf924356bbfe0f2cb3e00ef310ff6a26c61b053318960e7c5c460058482fc83",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b27-waterline.glb": "05db8263eef436e4fcc96270f4e2e704cfa5ec1d4482d52b37d180b341c57737",
+    "agents/arthur/village-overhaul/before/nx-dress-stringlights.glb": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+    "agents/arthur/village-overhaul/before/nx-town-streetlamps.glb": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+    "agents/arthur/village-overhaul/before/nx-town-inn.glb": "0cac6fa0d663bf80ec8537f9e8734f5e4d5ba641206bd71fdf49e8303b2f6fec",
+    "agents/arthur/village-overhaul/before/nx-dress-milkstand.glb": "77fbaae4332b9ec384611191e70db2a9648cf4bae91091fa226ffe60ba32c567",
+    "agents/arthur/village-overhaul/before/nx-town-hall.glb": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16",
+    "agents/arthur/village-overhaul/before/nx-artwalk-h5.glb": "22d786a4e7b64851f140ab36c8216cd62d3f83363210768e3b96e48ca2966e9b",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b22-mapboard-eight-ways.glb": "61148de2bd3b97800e0ef702deb34330b6c56fb4828a46f6617f76cf76a7e6ff",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b34-wayband-e.glb": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "agents/arthur/village-overhaul/before/nx-tower.glb": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+    "agents/arthur/village-overhaul/before/nx-dress-well.glb": "0a3efe7f3720abb35e277a6132187fabc55fc6d79f7441920b8f68f9c984a888",
+    "agents/arthur/village-overhaul/before/nx-approach-sw-lane-003.glb": "00904e9873f9180f8ab36025939ec6f0c2310b110aa32dd6d47875feda558a8d",
+    "agents/arthur/village-overhaul/before/nx-town-kiln.glb": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b34-wayband-s.glb": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "agents/arthur/village-overhaul/before/nx-town-longhouse.glb": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+    "agents/arthur/village-overhaul/before/nx-approach-lamp-e.glb": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "agents/arthur/village-overhaul/before/nx-cistern.glb": "a73d5f60417acdc0ee66b4905254b345e6bcb983d07a84fb954c199147056647",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b2-inn-threshold.glb": "937dae4febdabcb5d0e887aa588ada7b86ede319cc7cbdae4c9d6441b93a0e58",
+    "agents/arthur/village-overhaul/before/nx-struct-cellardoor.glb": "e6837a8f61f2e328c3d31dbc98ba236bef8fabb226db19cd32e53f4dc5b216cb",
+    "agents/arthur/village-overhaul/before/nx-town-tower-house.glb": "4e9a9c7c538c8be6a2b36f574c0a69edb547aa28f5c62741f8ec161822928ad9",
+    "agents/arthur/village-overhaul/before/nx-town-potter.glb": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b24-well-depth.glb": "d337f36d88a563dc312ebb520006567fe3efa97d8ea7fa2bf6afa981c61814e3",
+    "agents/arthur/village-overhaul/before/nx-town-mapboard.glb": "c483ec49a7520349d41940efaae1b156c3a2e8b420596703040e5bff0c22134c",
+    "agents/arthur/village-overhaul/before/nx-struct-waterstair.glb": "23703e69cb51d688530c823616405c4acf09bb8a08c3b06173be8d8374d90100",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+    "agents/arthur/village-overhaul/before/nx-town-bunkhouse.glb": "629c898898991499f91bd499bacbd11f22990e26416e1ef86ce197dec0d9f4a7",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b6-market-lissa-left.glb": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b6-market-lissa-right.glb": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+    "agents/arthur/village-overhaul/before/nx-approach-lamp-s.glb": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "agents/arthur/village-overhaul/before/nx-approach-lamp-w.glb": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "agents/arthur/village-overhaul/before/nx-sign-kiln-001.glb": "9e44d6b26951681737d412dbeded2b11dd2f64bc44b719e4bd1db3a28f3ff3fc",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b19-longhouse-feast-count.glb": "baa1f2164bd76c20da5bb9c2e14abb86f1fe433299d630dd912da3cdeefcfce2",
+    "agents/arthur/village-overhaul/before/nx-sign-dyer-001.glb": "e436b0caa7668e374750db23ddce126a735475a03e51dac0a3ea45b34f3afaea",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b23-cistern-rain-count.glb": "1cb32012817cb1d9afce50f4295e15afb6b3bb711a69d297d7d25bfd8b984d5f",
+    "agents/arthur/village-overhaul/before/nx-sign-potter-001.glb": "6ea32c8a0151693738095b1835b43555927f71cee29cdbf38731c0df0334800b",
+    "agents/arthur/village-overhaul/before/nx-shutters.glb": "1a5c45c57c27b8c0b812671143590ba08646325b340834d07b14f9daa5122091",
+    "agents/arthur/village-overhaul/before/nx-struct-waystone-n.glb": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b18-row-warp-count.glb": "fc8926b5f4525b5304e15463cb7d5dbefee1d0b9c7dae47a8b0e669b83e49e13",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b14-east-gate-dawn-fan.glb": "c4fa5e7c1cc04d8c6afc033c3d7f4de4c498d587c3efcd1232fb58acb8de6ce1",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b34-wayband-w.glb": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b1-hall-charter.glb": "53f77cb8f17d264bce019915ebf3695d724f82c7b97468c45f9c5567562814d4",
+    "agents/arthur/village-overhaul/before/nx-town-shrine.glb": "bd05ebe9ec4333fa304123ad5050909822765408dfd77c5fc7331c08723dfa10",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b31-sheaf-tally.glb": "946dc2ed6fcd3d5afdf9d4aaa70f1e9add5c29eb7cd323e9f60438940a0cc643",
+    "agents/arthur/village-overhaul/before/nx-forge.glb": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+    "agents/arthur/village-overhaul/before/nx-dress-ne-anvilpad-001.glb": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b32-morning-measure.glb": "32246cfbc476518dc340ef211938b890465e158cb9b82c1422af439cdb29ebd3",
+    "agents/arthur/village-overhaul/before/nx-struct-halt.glb": "c3d97fe9074b9b95e57b8d9234c9a9a878665409e9480f078aeacd7da7c7687e",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b11-woodyard-heartwood-measure.glb": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e",
+    "agents/arthur/village-overhaul/before/nx-struct-waystone-w.glb": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "agents/arthur/village-overhaul/before/nx-dress-harvestcart.glb": "2be1cb89ddf1dd6903b3a5018f8b72fd660e7aacd261db2894956eb5ad92ddf5",
+    "agents/arthur/village-overhaul/before/nx-dress-hens.glb": "5a6ec4335d8b6bc2d164a929cbcf85367eed3e64b9b2f7460215b85973a97bb5",
+    "agents/arthur/village-overhaul/before/nx-approach-lamp-n.glb": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "agents/arthur/village-overhaul/before/nx-approach-ne-lane-002.glb": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+    "agents/arthur/village-overhaul/before/nx-dress-giftshelf.glb": "20c7645421409c41afdf200bca8e6d7bc59b126c6d5f13aa99ad725db02cb22f",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b13-south-tide-east.glb": "b07d992ed6cb17c310c23ef1ab4d2acf72d1c64d2834280f7c026eada657ed52",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b8-stable-harmonic-rein.glb": "c4595b001a6145d78f552205d66918c3d8750884c25d6fa10596dfb6030fbc8f",
+    "agents/arthur/village-overhaul/before/nx-town-roads.glb": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+    "agents/arthur/village-overhaul/before/nx-dress-chess.glb": "b27f865a09b82559d1a270cdeef1a28871722b79b24ff3aaa45bb2634c34d284",
+    "agents/arthur/village-overhaul/before/nx-dress-fountain.glb": "f4fcc0ac3b76b2f8bef6d7406be09efddad2d8982977a592c85ae117c9906777",
+    "agents/arthur/village-overhaul/before/nx-town-row-cottage.glb": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b21-tower-ascension-count.glb": "efac7b00bcec16e1f2add299dff8dc3a4c148218eefbe9d20ab863ca8bd05c85",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b7-shrine-stars.glb": "6c3091de20ed0575b9ef5c530fb067dee2eee5327b50d8a4090646e6b323ce27",
+    "agents/arthur/village-overhaul/before/nx-dress-hutch.glb": "75381ffb1f2803c676f036c95d6ac8964fc1ab0641447f262aa5bdaf057f5629",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b26-wayband.glb": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b28-bake-count.glb": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+    "agents/arthur/village-overhaul/before/nx-town-belltower.glb": "0fa6b6c117180e129deb81590bb02ff4471a3693ade35991b591240f517f5a36",
+    "agents/arthur/village-overhaul/before/nx-struct-waystone-s.glb": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "agents/arthur/village-overhaul/before/nx-dress-coop.glb": "5b8702617ab578cc56f65250f4333112fa58248343b92fe727153a190c3b42dc",
+    "agents/arthur/village-overhaul/before/nx-struct-waystone-e.glb": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b3-ruled-porch.glb": "232210c072caebe89bd79a10ee3ba5faac92e7498ca3ad751941bbbf0b7fc72c",
+    "agents/arthur/village-overhaul/before/nx-town-woodyard.glb": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+    "agents/arthur/village-overhaul/before/nx-core-paths.glb": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+    "agents/arthur/village-overhaul/before/nx-dress-churn.glb": "761baf15cf0d9ff1136337f5d0c6e4bdb4413f9e013a51de9f5c1200544f3120",
+    "agents/arthur/village-overhaul/before/nx-welcome.glb": "db26307d66093da3c1cb3e22108b8916a77b67e5b4460d442ec0e13f8f05d54c",
+    "agents/arthur/village-overhaul/before/nx-hearth.glb": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1",
+    "agents/arthur/village-overhaul/before/nx-town-gate-e.glb": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "agents/arthur/village-overhaul/before/nx-town-gate-s.glb": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "agents/arthur/village-overhaul/before/nx-dress-banner.glb": "e3abeb89b04de03c7108271712688290c8ed41ed42d59b8799b8e733b1377750",
+    "agents/arthur/village-overhaul/before/nx-sign-smithy.glb": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b25-welcome-village-mark.glb": "88dc644f10d9d5d2ad61f682a91033ff3b9a382d87b87bc63adc9303882a6da9",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b4-golden-top.glb": "b59d76d721a2eff4772e44e77ab176d852ca33efa5cec529b96041c15f264be4",
+    "agents/arthur/village-overhaul/before/nx-struct-crossing.glb": "e86a180fdcc8405c7a9292017c358f533aed06ddf6660b166b0999588e74cbb8",
+    "agents/arthur/village-overhaul/before/nx-sign-bakery.glb": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b4-golden-threshold.glb": "d8d6c7abcf1bcd17eb6a9d860ec2a9164a2baa2ca3a3771351ba3a88c7b90c26",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b20-bunkhouse-four-rooms.glb": "ed76ed3e8cacfc85acea7aa2b02f8a704b869105760e7bf00a862d3639f2e976",
+    "agents/arthur/village-overhaul/before/nx-court.glb": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+    "agents/arthur/village-overhaul/before/nx-struct-hypar.glb": "4c4ed56bb32d44c8ce49b9712db2d558a065f7497babdf92f304ca0b1c709eee",
+    "agents/arthur/village-overhaul/before/nx-sign-woodyard-001.glb": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7",
+    "agents/arthur/village-overhaul/before/nx-town-stable.glb": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b2-inn-lintel.glb": "851e4027d43f12b05fcc4ecf57adf2540c8fca7c909c7893f92938b786e1fa97",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b4-golden-hinges.glb": "3e6eb8d0dbdb2e52e974e4120fe7bf6058ec11f6ec774e70c1436a1e6917711b",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b15-west-gate-dusk-arcs.glb": "1e2a09c85e2c2103c7a3cf559c5edb0a115252402016694ec2361bbe56125a5f",
+    "agents/arthur/village-overhaul/before/nx-approach-nw-lane-001.glb": "b9734b4fa4b000cc1c5f57267b67a75066a52d8adf1f0da5dae0091e72c663f6",
+    "agents/arthur/village-overhaul/before/nx-sign-stable-001.glb": "d470868b35865794630da8427221cb63776e2523aed56c6d934464843689bc56",
+    "agents/arthur/village-overhaul/before/nx-struct-orrery.glb": "f4603e437c448a89c9f4d1e67a188c8ff4b0b888c1f3c38b7444d4e02d7478f3",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b33-milking-order.glb": "2e329f90a34ac82e64904b9bcb5b5a97d8348e6b4e49c89dccae56d547d5b007",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b9-dyehouse-crossing-loom.glb": "a8ff818d13b577994dd3aef0aaa2201ca3944b17ff217542dee741ca817e3b6b",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b12-kiln-heat-contours.glb": "29e932d59cc9f57bb3665b1dfb543b1f17c4ec5e570948d92043cbc5d9e48c57",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b13-south-tide-west.glb": "b07d992ed6cb17c310c23ef1ab4d2acf72d1c64d2834280f7c026eada657ed52",
+    "agents/arthur/village-overhaul/before/nx-town-gate-w.glb": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+    "agents/arthur/village-overhaul/before/nx-dress-goats.glb": "d0faeb359293cb40c866a8b7a625f50a6bb34bb12dc64f3fe575a3340f5db2ff"
+  },
+  "sourceHashes": {
+    "build-stable.ts": "27d18fbdb1e0b9e5cdd73169546eb79c4bb35cbc46670accfd2635f5712b95a0",
+    "build-woodyard.ts": "f6fee33be5ae5630e1189c495616ddcbff2c2d8bd6126b1b77aa3a11223afed0"
+  },
+  "limits": [
+    "No live mutation or live walk performed; parent owns deployment and served-byte verification.",
+    "Terrain Y=0 is the frozen local caller contract, not a fresh terrain sample.",
+    "Geometry and furnishings are preserved with explicitly recorded rigid repositions; original material bytes are intentionally redesigned.",
+    "No clean static typecheck claimed; Bun execution and actual public CPU collider modules exercised."
+  ],
+  "workstationCollision": {
+    "preserved": "automatic",
+    "original": null,
+    "roomClaim": false,
+    "defaultClassification": {
+      "exact": false,
+      "pillar": true,
+      "classification": {
+        "roomScale": false,
+        "floorShaped": false,
+        "uneven": false
+      }
+    },
+    "defaultFailures": [
+      "host is not an exact browser collider"
+    ],
+    "defaultWalkLegsPassed": 14,
+    "interpretation": "Automatic collision is preserved with no amendment. Actual default probeApproach and independent triangle support pass all 14 legs, including all 10 frozen neighbors. The exact-only room-policy negative is not blocked access. Original served geometry also passes these 14 routes; its separate full-height approach volume has 11 intrusions."
+  }
+}

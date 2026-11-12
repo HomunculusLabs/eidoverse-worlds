@@ -1,0 +1,19 @@
+{
+  "id": "nx-town-stable",
+  "status": "PASS",
+  "modelSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "acceptedSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+  "bounds": {
+    "min": [
+      -3,
+      -0.20000000298023224,
+      -2.7750000953674316
+    ],
+    "max": [
+      3,
+      4.900000095367432,
+      2.574972629547119
+    ]
+  },
+  "heightPolicy": "BRIEF: height may grow with review. No +1m rule in validatePlan; parent withdrew that invented constraint."
+}

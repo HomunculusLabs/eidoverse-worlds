@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "modelPath": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-inn.glb",
+  "sourceSha256": "2d2d173571531f84b8bd079fdc188a90068e40ae99abe54ac48aa5e2c8683bec",
+  "runs": [
+    {
+      "run": 1,
+      "sha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+      "bytes": 589224,
+      "mtimeNs": 1788833690049220916,
+      "mtimeAdvanced": true,
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "sha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+      "bytes": 589224,
+      "mtimeNs": 1788833690675724541,
+      "mtimeAdvanced": true,
+      "exitCode": 0
+    }
+  ]
+}

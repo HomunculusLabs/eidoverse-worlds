@@ -1,0 +1,662 @@
+[
+  {
+    "id": "nx-town-hall",
+    "lib": "store/c92c1f91ed4fd45f.glb",
+    "sha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16",
+    "bytes": 56612
+  },
+  {
+    "id": "nx-town-inn",
+    "lib": "store/6e6ff2d08df9b3fb.glb",
+    "sha256": "0cac6fa0d663bf80ec8537f9e8734f5e4d5ba641206bd71fdf49e8303b2f6fec",
+    "bytes": 67748
+  },
+  {
+    "id": "nx-town-stable",
+    "lib": "store/98f2d5b6e1b6c429.glb",
+    "sha256": "3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1",
+    "bytes": 47652
+  },
+  {
+    "id": "nx-town-woodyard",
+    "lib": "store/01b78fdd00f090a7.glb",
+    "sha256": "0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781",
+    "bytes": 56728
+  },
+  {
+    "id": "nx-court",
+    "lib": "store/77cab2c3cc3a39c7.glb",
+    "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245",
+    "bytes": 69636
+  },
+  {
+    "id": "nx-forge",
+    "lib": "store/620120c4d6f0b4a0.glb",
+    "sha256": "783c3bb2b7ed4f4bd33876853d8bbfb7818713203a702a5a00035c2d3ecf0d37",
+    "bytes": 29132
+  },
+  {
+    "id": "nx-town-market",
+    "lib": "store/8c16ea9a756a95ad.glb",
+    "sha256": "87245e97b1f848df57b4c128107586d533a7c3add98b37e39c391cb757f86de8",
+    "bytes": 27296
+  },
+  {
+    "id": "nx-town-dyehouse",
+    "lib": "store/888be3597d2f772f.glb",
+    "sha256": "0e5204b8fd1d0afb11d9a38583a3155287d91e81de43dbb31e8588856af40fa6",
+    "bytes": 27736
+  },
+  {
+    "id": "nx-town-potter",
+    "lib": "store/2062c4468996b2bb.glb",
+    "sha256": "698f2bc412d25fff39453521a18983a5d88f6c0a2d3c713938e765700c711709",
+    "bytes": 27132
+  },
+  {
+    "id": "nx-town-kiln",
+    "lib": "store/4d8ef8fc0b0955de.glb",
+    "sha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545",
+    "bytes": 23960
+  },
+  {
+    "id": "nx-town-belltower",
+    "lib": "store/2419fbc53a1d65e1.glb",
+    "sha256": "0fa6b6c117180e129deb81590bb02ff4471a3693ade35991b591240f517f5a36",
+    "bytes": 27544
+  },
+  {
+    "id": "nx-tower",
+    "lib": "store/a989bdc3cad37b39.glb",
+    "sha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a",
+    "bytes": 32976
+  },
+  {
+    "id": "nx-town-shrine",
+    "lib": "store/948d5c494252078b.glb",
+    "sha256": "bd05ebe9ec4333fa304123ad5050909822765408dfd77c5fc7331c08723dfa10",
+    "bytes": 24740
+  },
+  {
+    "id": "nx-town-gate-n",
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "bytes": 8060
+  },
+  {
+    "id": "nx-town-gate-s",
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "bytes": 8060
+  },
+  {
+    "id": "nx-town-gate-e",
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "bytes": 8060
+  },
+  {
+    "id": "nx-town-gate-w",
+    "lib": "store/d1b90d6fc66b2db8.glb",
+    "sha256": "4ba832841e728ae72150804662a0990eb644e5f383f848ca7f1f9b4c7c7d761e",
+    "bytes": 8060
+  },
+  {
+    "id": "nx-hearth",
+    "lib": "store/027f6f019f9981bf.glb",
+    "sha256": "3975f6cacb475b4daddb4798729e0a0a6afc7ccd4fadfb2efd2bdbff989efed1",
+    "bytes": 35660
+  },
+  {
+    "id": "nx-shutters",
+    "lib": "store/26259f89feb92736.glb",
+    "sha256": "1a5c45c57c27b8c0b812671143590ba08646325b340834d07b14f9daa5122091",
+    "bytes": 16284
+  },
+  {
+    "id": "nx-town-roads",
+    "lib": "store/3b76b621559fa1a1.glb",
+    "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+    "bytes": 99604
+  },
+  {
+    "id": "nx-town-streetlamps",
+    "lib": "store/e815a897c7d73373.glb",
+    "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+    "bytes": 10940
+  },
+  {
+    "id": "nx-dress-banner",
+    "lib": "store/d32e7bcb8b007d21.glb",
+    "sha256": "e3abeb89b04de03c7108271712688290c8ed41ed42d59b8799b8e733b1377750",
+    "bytes": 4708
+  },
+  {
+    "id": "nx-dress-stringlights",
+    "lib": "store/0c0dee37b07aa7df.glb",
+    "sha256": "3ce2cdb28d3685512391e3c31c268408ebf6f34a82a7838ce7a300f7d4df9f2f",
+    "bytes": 18768
+  },
+  {
+    "id": "nx-dress-giftshelf",
+    "lib": "store/c623cfa6fbdeb48e.glb",
+    "sha256": "20c7645421409c41afdf200bca8e6d7bc59b126c6d5f13aa99ad725db02cb22f",
+    "bytes": 19448
+  },
+  {
+    "id": "nx-dress-fountain",
+    "lib": "store/72f07c2a466feae3.glb",
+    "sha256": "f4fcc0ac3b76b2f8bef6d7406be09efddad2d8982977a592c85ae117c9906777",
+    "bytes": 9804
+  },
+  {
+    "id": "nx-dress-goats",
+    "lib": "store/c47861e473e6f088.glb",
+    "sha256": "d0faeb359293cb40c866a8b7a625f50a6bb34bb12dc64f3fe575a3340f5db2ff",
+    "bytes": 25108
+  },
+  {
+    "id": "nx-dress-hens",
+    "lib": "store/edc1a4c7ca62d56f.glb",
+    "sha256": "5a6ec4335d8b6bc2d164a929cbcf85367eed3e64b9b2f7460215b85973a97bb5",
+    "bytes": 4328
+  },
+  {
+    "id": "nx-dress-hutch",
+    "lib": "store/f5f47791dadb5abe.glb",
+    "sha256": "75381ffb1f2803c676f036c95d6ac8964fc1ab0641447f262aa5bdaf057f5629",
+    "bytes": 21692
+  },
+  {
+    "id": "nx-dress-harvestcart",
+    "lib": "store/ee30d6709625bf2f.glb",
+    "sha256": "2be1cb89ddf1dd6903b3a5018f8b72fd660e7aacd261db2894956eb5ad92ddf5",
+    "bytes": 24684
+  },
+  {
+    "id": "nx-dress-churn",
+    "lib": "store/a509c3d2c1f3026e.glb",
+    "sha256": "761baf15cf0d9ff1136337f5d0c6e4bdb4413f9e013a51de9f5c1200544f3120",
+    "bytes": 20788
+  },
+  {
+    "id": "nx-dress-milkstand",
+    "lib": "store/bd2e613a10b9762e.glb",
+    "sha256": "77fbaae4332b9ec384611191e70db2a9648cf4bae91091fa226ffe60ba32c567",
+    "bytes": 16768
+  },
+  {
+    "id": "nx-dress-coop",
+    "lib": "store/f5d4039489c1ce4b.glb",
+    "sha256": "5b8702617ab578cc56f65250f4333112fa58248343b92fe727153a190c3b42dc",
+    "bytes": 17400
+  },
+  {
+    "id": "nx-dress-stablebench",
+    "lib": "store/c24b7628da5f74ae.glb",
+    "sha256": "3b5554bb59aefce157b57cb3a57f3fb463a91eb6d56560fc3e4fce059df77301",
+    "bytes": 4948
+  },
+  {
+    "id": "nx-dress-well",
+    "lib": "store/35f17cf4f6a6db9f.glb",
+    "sha256": "0a3efe7f3720abb35e277a6132187fabc55fc6d79f7441920b8f68f9c984a888",
+    "bytes": 26632
+  },
+  {
+    "id": "nx-dress-chess",
+    "lib": "store/cb215e8c13c8ac79.glb",
+    "sha256": "b27f865a09b82559d1a270cdeef1a28871722b79b24ff3aaa45bb2634c34d284",
+    "bytes": 9292
+  },
+  {
+    "id": "nx-artwalk-h5",
+    "lib": "store/3c48f921d262907a.glb",
+    "sha256": "22d786a4e7b64851f140ab36c8216cd62d3f83363210768e3b96e48ca2966e9b",
+    "bytes": 25692
+  },
+  {
+    "id": "nx-artwalk-b1-hall-charter",
+    "lib": "store/100eb5e9e89694a9.glb",
+    "sha256": "53f77cb8f17d264bce019915ebf3695d724f82c7b97468c45f9c5567562814d4",
+    "bytes": 4836
+  },
+  {
+    "id": "nx-struct-orrery",
+    "lib": "store/d680b1cdb64ed9e9.glb",
+    "sha256": "f4603e437c448a89c9f4d1e67a188c8ff4b0b888c1f3c38b7444d4e02d7478f3",
+    "bytes": 16960
+  },
+  {
+    "id": "nx-artwalk-b2-inn-lintel",
+    "lib": "store/875942618767052c.glb",
+    "sha256": "851e4027d43f12b05fcc4ecf57adf2540c8fca7c909c7893f92938b786e1fa97",
+    "bytes": 6308
+  },
+  {
+    "id": "nx-artwalk-b2-inn-threshold",
+    "lib": "store/cc80fa377494a76c.glb",
+    "sha256": "937dae4febdabcb5d0e887aa588ada7b86ede319cc7cbdae4c9d6441b93a0e58",
+    "bytes": 3048
+  },
+  {
+    "id": "nx-artwalk-b4-golden-top",
+    "lib": "store/98fabb814c668f29.glb",
+    "sha256": "b59d76d721a2eff4772e44e77ab176d852ca33efa5cec529b96041c15f264be4",
+    "bytes": 2040
+  },
+  {
+    "id": "nx-artwalk-b4-golden-threshold",
+    "lib": "store/db99bae44aa6ebcc.glb",
+    "sha256": "d8d6c7abcf1bcd17eb6a9d860ec2a9164a2baa2ca3a3771351ba3a88c7b90c26",
+    "bytes": 3032
+  },
+  {
+    "id": "nx-artwalk-b4-golden-hinges",
+    "lib": "store/78a457a5bab6874d.glb",
+    "sha256": "3e6eb8d0dbdb2e52e974e4120fe7bf6058ec11f6ec774e70c1436a1e6917711b",
+    "bytes": 4700
+  },
+  {
+    "id": "nx-artwalk-b5-belltower-rings",
+    "lib": "store/48aed5dabcb16a45.glb",
+    "sha256": "6c81c3877cf2f4cb5678216cd41abcf333764bbe810dcba8fe9ed281fe6c4369",
+    "bytes": 6580
+  },
+  {
+    "id": "nx-artwalk-b6-market-lissa-left",
+    "lib": "store/5fcdd1ef922f7794.glb",
+    "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+    "bytes": 4476
+  },
+  {
+    "id": "nx-artwalk-b6-market-lissa-right",
+    "lib": "store/5fcdd1ef922f7794.glb",
+    "sha256": "3d692a75d5be2045df21999c3476d4a87865c1db746b44a5f25822e4d07d6a53",
+    "bytes": 4476
+  },
+  {
+    "id": "nx-artwalk-b8-stable-harmonic-rein",
+    "lib": "store/cba8d0efb0518938.glb",
+    "sha256": "c4595b001a6145d78f552205d66918c3d8750884c25d6fa10596dfb6030fbc8f",
+    "bytes": 6420
+  },
+  {
+    "id": "nx-artwalk-b9-dyehouse-crossing-loom",
+    "lib": "store/6c3c85dee69191cf.glb",
+    "sha256": "a8ff818d13b577994dd3aef0aaa2201ca3944b17ff217542dee741ca817e3b6b",
+    "bytes": 4360
+  },
+  {
+    "id": "nx-artwalk-b11-woodyard-heartwood-measure",
+    "lib": "store/aa5f2550365c1f7f.glb",
+    "sha256": "8615fefe15b806f744219b9353cd15513d7b200da522160f8e6bd1c5e2865e7e",
+    "bytes": 9808
+  },
+  {
+    "id": "nx-artwalk-b13-south-tide-west",
+    "lib": "store/8a6b49f61bcf138e.glb",
+    "sha256": "b07d992ed6cb17c310c23ef1ab4d2acf72d1c64d2834280f7c026eada657ed52",
+    "bytes": 4016
+  },
+  {
+    "id": "nx-artwalk-b13-south-tide-east",
+    "lib": "store/8a6b49f61bcf138e.glb",
+    "sha256": "b07d992ed6cb17c310c23ef1ab4d2acf72d1c64d2834280f7c026eada657ed52",
+    "bytes": 4016
+  },
+  {
+    "id": "nx-artwalk-b14-east-gate-dawn-fan",
+    "lib": "store/c67c0402bbfb7fd8.glb",
+    "sha256": "c4fa5e7c1cc04d8c6afc033c3d7f4de4c498d587c3efcd1232fb58acb8de6ce1",
+    "bytes": 4064
+  },
+  {
+    "id": "nx-artwalk-b15-west-gate-dusk-arcs",
+    "lib": "store/f1efad77be904a59.glb",
+    "sha256": "1e2a09c85e2c2103c7a3cf559c5edb0a115252402016694ec2361bbe56125a5f",
+    "bytes": 4856
+  },
+  {
+    "id": "nx-artwalk-b16-forge-seven-strikes",
+    "lib": "store/54555b39274bc00c.glb",
+    "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+    "bytes": 4040
+  },
+  {
+    "id": "nx-artwalk-b18-row-warp-count",
+    "lib": "store/d6d10de199f6fb03.glb",
+    "sha256": "fc8926b5f4525b5304e15463cb7d5dbefee1d0b9c7dae47a8b0e669b83e49e13",
+    "bytes": 4468
+  },
+  {
+    "id": "nx-artwalk-b19-longhouse-feast-count",
+    "lib": "store/98a4c17e73e4bac4.glb",
+    "sha256": "baa1f2164bd76c20da5bb9c2e14abb86f1fe433299d630dd912da3cdeefcfce2",
+    "bytes": 4204
+  },
+  {
+    "id": "nx-artwalk-b20-bunkhouse-four-rooms",
+    "lib": "store/152684b8dd6ba535.glb",
+    "sha256": "ed76ed3e8cacfc85acea7aa2b02f8a704b869105760e7bf00a862d3639f2e976",
+    "bytes": 4484
+  },
+  {
+    "id": "nx-artwalk-b21-tower-ascension-count",
+    "lib": "store/ba8f63884184b13e.glb",
+    "sha256": "efac7b00bcec16e1f2add299dff8dc3a4c148218eefbe9d20ab863ca8bd05c85",
+    "bytes": 4108
+  },
+  {
+    "id": "nx-struct-orreryring",
+    "lib": "store/f095519b61b3bf17.glb",
+    "sha256": "ea4f2317a730ae68b49f5bd1ce46ecb96caa476b8aa2cd748d6f97f63517b754",
+    "bytes": 22680
+  },
+  {
+    "id": "nx-artwalk-b22-mapboard-eight-ways",
+    "lib": "store/09c800d062057db2.glb",
+    "sha256": "61148de2bd3b97800e0ef702deb34330b6c56fb4828a46f6617f76cf76a7e6ff",
+    "bytes": 10192
+  },
+  {
+    "id": "nx-artwalk-b23-cistern-rain-count",
+    "lib": "store/8d9419e5c2d9e3e7.glb",
+    "sha256": "1cb32012817cb1d9afce50f4295e15afb6b3bb711a69d297d7d25bfd8b984d5f",
+    "bytes": 4024
+  },
+  {
+    "id": "nx-artwalk-b24-well-depth",
+    "lib": "store/1935752ba39b674e.glb",
+    "sha256": "d337f36d88a563dc312ebb520006567fe3efa97d8ea7fa2bf6afa981c61814e3",
+    "bytes": 4076
+  },
+  {
+    "id": "nx-artwalk-b25-welcome-village-mark",
+    "lib": "store/173352aa2df4450f.glb",
+    "sha256": "88dc644f10d9d5d2ad61f682a91033ff3b9a382d87b87bc63adc9303882a6da9",
+    "bytes": 5376
+  },
+  {
+    "id": "nx-artwalk-b27-waterline",
+    "lib": "store/580706ad8e46212c.glb",
+    "sha256": "05db8263eef436e4fcc96270f4e2e704cfa5ec1d4482d52b37d180b341c57737",
+    "bytes": 5904
+  },
+  {
+    "id": "nx-artwalk-b28-bake-count",
+    "lib": "store/18c1bb5da4328ae7.glb",
+    "sha256": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+    "bytes": 4004
+  },
+  {
+    "id": "nx-artwalk-b29-strike-count",
+    "lib": "store/a7df548e06d1412d.glb",
+    "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+    "bytes": 3992
+  },
+  {
+    "id": "nx-artwalk-b30-market-tally",
+    "lib": "store/a2326039fcb4e080.glb",
+    "sha256": "6cf924356bbfe0f2cb3e00ef310ff6a26c61b053318960e7c5c460058482fc83",
+    "bytes": 4404
+  },
+  {
+    "id": "nx-artwalk-b31-sheaf-tally",
+    "lib": "store/9e6d3d13f1e8d380.glb",
+    "sha256": "946dc2ed6fcd3d5afdf9d4aaa70f1e9add5c29eb7cd323e9f60438940a0cc643",
+    "bytes": 3932
+  },
+  {
+    "id": "nx-artwalk-b32-morning-measure",
+    "lib": "store/adb5459562eb21b2.glb",
+    "sha256": "32246cfbc476518dc340ef211938b890465e158cb9b82c1422af439cdb29ebd3",
+    "bytes": 4940
+  },
+  {
+    "id": "nx-artwalk-b33-milking-order",
+    "lib": "store/ee2af59a36ee41ca.glb",
+    "sha256": "2e329f90a34ac82e64904b9bcb5b5a97d8348e6b4e49c89dccae56d547d5b007",
+    "bytes": 3860
+  },
+  {
+    "id": "nx-struct-waystone-n",
+    "lib": "store/2f006e218ffbe97e.glb",
+    "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "bytes": 3124
+  },
+  {
+    "id": "nx-struct-waystone-e",
+    "lib": "store/2f006e218ffbe97e.glb",
+    "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "bytes": 3124
+  },
+  {
+    "id": "nx-struct-waystone-s",
+    "lib": "store/2f006e218ffbe97e.glb",
+    "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "bytes": 3124
+  },
+  {
+    "id": "nx-struct-waystone-w",
+    "lib": "store/2f006e218ffbe97e.glb",
+    "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+    "bytes": 3124
+  },
+  {
+    "id": "nx-struct-halt",
+    "lib": "store/bb227fd67ca93385.glb",
+    "sha256": "c3d97fe9074b9b95e57b8d9234c9a9a878665409e9480f078aeacd7da7c7687e",
+    "bytes": 4920
+  },
+  {
+    "id": "nx-sign-stable-001",
+    "lib": "store/afee37dd9a5b5d67.glb",
+    "sha256": "d470868b35865794630da8427221cb63776e2523aed56c6d934464843689bc56",
+    "bytes": 14832
+  },
+  {
+    "id": "nx-sign-dyer-001",
+    "lib": "store/8ce2081f7d2c6858.glb",
+    "sha256": "e436b0caa7668e374750db23ddce126a735475a03e51dac0a3ea45b34f3afaea",
+    "bytes": 18884
+  },
+  {
+    "id": "nx-struct-crossing",
+    "lib": "store/216c4bd4d12ff308.glb",
+    "sha256": "e86a180fdcc8405c7a9292017c358f533aed06ddf6660b166b0999588e74cbb8",
+    "bytes": 20904
+  },
+  {
+    "id": "nx-sign-woodyard-001",
+    "lib": "store/f46e12aeeea8af74.glb",
+    "sha256": "99753d4dcf823a7651774467a331fbf0e3c247261130a982293b008ac751f7b7",
+    "bytes": 21792
+  },
+  {
+    "id": "nx-artwalk-b7-shrine-stars",
+    "lib": "store/a7ef8541e9561833.glb",
+    "sha256": "6c3091de20ed0575b9ef5c530fb067dee2eee5327b50d8a4090646e6b323ce27",
+    "bytes": 4708
+  },
+  {
+    "id": "nx-approach-nw-lane-001",
+    "lib": "store/dc256065879371d8.glb",
+    "sha256": "b9734b4fa4b000cc1c5f57267b67a75066a52d8adf1f0da5dae0091e72c663f6",
+    "bytes": 119188
+  },
+  {
+    "id": "nx-approach-ne-lane-002",
+    "lib": "store/dc52264c04cfe5bb.glb",
+    "sha256": "d33d266282ad67510c01c0433f387a8f4ead2d65fc46ae3d64d05f7f76874b0e",
+    "bytes": 122988
+  },
+  {
+    "id": "nx-sign-bakery",
+    "lib": "store/49342c523aee4d41.glb",
+    "sha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+    "bytes": 16952
+  },
+  {
+    "id": "nx-struct-hypar",
+    "lib": "store/750f82eeb03512f6.glb",
+    "sha256": "4c4ed56bb32d44c8ce49b9712db2d558a065f7497babdf92f304ca0b1c709eee",
+    "bytes": 47996
+  },
+  {
+    "id": "nx-sign-smithy",
+    "lib": "store/3522e5ab0c3a5100.glb",
+    "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+    "bytes": 31920
+  },
+  {
+    "id": "nx-approach-sw-lane-003",
+    "lib": "store/fb04a144cc1fc458.glb",
+    "sha256": "00904e9873f9180f8ab36025939ec6f0c2310b110aa32dd6d47875feda558a8d",
+    "bytes": 120280
+  },
+  {
+    "id": "nx-core-paths",
+    "lib": "store/c31b6e3f22641e14.glb",
+    "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+    "bytes": 69012
+  },
+  {
+    "id": "nx-artwalk-b26-wayband",
+    "lib": "store/7594436a996e8ded.glb",
+    "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "bytes": 4160
+  },
+  {
+    "id": "nx-artwalk-b34-wayband-e",
+    "lib": "store/7594436a996e8ded.glb",
+    "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "bytes": 4160
+  },
+  {
+    "id": "nx-artwalk-b34-wayband-s",
+    "lib": "store/7594436a996e8ded.glb",
+    "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "bytes": 4160
+  },
+  {
+    "id": "nx-artwalk-b34-wayband-w",
+    "lib": "store/7594436a996e8ded.glb",
+    "sha256": "d3e986971a543365613d5753e62b7b2505fe1efb17eab892ec6c4995aa0d5368",
+    "bytes": 4160
+  },
+  {
+    "id": "nx-town-mapboard",
+    "lib": "store/95231f20a016b303.glb",
+    "sha256": "c483ec49a7520349d41940efaae1b156c3a2e8b420596703040e5bff0c22134c",
+    "bytes": 40392
+  },
+  {
+    "id": "nx-approach-lamp-e",
+    "lib": "store/18b69a6bb2f5862f.glb",
+    "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "bytes": 7648
+  },
+  {
+    "id": "nx-approach-lamp-s",
+    "lib": "store/18b69a6bb2f5862f.glb",
+    "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "bytes": 7648
+  },
+  {
+    "id": "nx-approach-lamp-n",
+    "lib": "store/18b69a6bb2f5862f.glb",
+    "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "bytes": 7648
+  },
+  {
+    "id": "nx-approach-lamp-w",
+    "lib": "store/18b69a6bb2f5862f.glb",
+    "sha256": "9e1808dd873b5ea0718cf7413c178aefe9ffa40a9e699cf3ae58c9a43bfa500a",
+    "bytes": 7648
+  },
+  {
+    "id": "nx-dress-ne-anvilpad-001",
+    "lib": "store/65d686b023348c9b.glb",
+    "sha256": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+    "bytes": 12888
+  },
+  {
+    "id": "nx-cistern",
+    "lib": "store/156b4fc8c7287a9d.glb",
+    "sha256": "a73d5f60417acdc0ee66b4905254b345e6bcb983d07a84fb954c199147056647",
+    "bytes": 19196
+  },
+  {
+    "id": "nx-welcome",
+    "lib": "store/7d1bd0c9545c44fb.glb",
+    "sha256": "db26307d66093da3c1cb3e22108b8916a77b67e5b4460d442ec0e13f8f05d54c",
+    "bytes": 21784
+  },
+  {
+    "id": "nx-struct-cellardoor",
+    "lib": "store/fe755f78b3f300d9.glb",
+    "sha256": "e6837a8f61f2e328c3d31dbc98ba236bef8fabb226db19cd32e53f4dc5b216cb",
+    "bytes": 58556
+  },
+  {
+    "id": "nx-struct-waterstair",
+    "lib": "store/46c39401e07870f3.glb",
+    "sha256": "23703e69cb51d688530c823616405c4acf09bb8a08c3b06173be8d8374d90100",
+    "bytes": 7984
+  },
+  {
+    "id": "nx-dress-charcoal",
+    "lib": "store/1d9a1c2d95f785b6.glb",
+    "sha256": "c9ca1b859b0532ed7f34e960561e77827106b3bcb83090ef8499096499248826",
+    "bytes": 21644
+  },
+  {
+    "id": "nx-artwalk-b3-ruled-porch",
+    "lib": "store/e1b66075d8e911e7.glb",
+    "sha256": "232210c072caebe89bd79a10ee3ba5faac92e7498ca3ad751941bbbf0b7fc72c",
+    "bytes": 20364
+  },
+  {
+    "id": "nx-sign-potter-001",
+    "lib": "store/3a6c8fe79dc41406.glb",
+    "sha256": "6ea32c8a0151693738095b1835b43555927f71cee29cdbf38731c0df0334800b",
+    "bytes": 19692
+  },
+  {
+    "id": "nx-artwalk-b12-kiln-heat-contours",
+    "lib": "store/1ad2a6139373b973.glb",
+    "sha256": "29e932d59cc9f57bb3665b1dfb543b1f17c4ec5e570948d92043cbc5d9e48c57",
+    "bytes": 8344
+  },
+  {
+    "id": "nx-sign-kiln-001",
+    "lib": "store/ecbad90311fc9bff.glb",
+    "sha256": "9e44d6b26951681737d412dbeded2b11dd2f64bc44b719e4bd1db3a28f3ff3fc",
+    "bytes": 20952
+  },
+  {
+    "id": "nx-town-bunkhouse",
+    "lib": "store/2b618274fa316c78.glb",
+    "sha256": "629c898898991499f91bd499bacbd11f22990e26416e1ef86ce197dec0d9f4a7",
+    "bytes": 46624
+  },
+  {
+    "id": "nx-town-longhouse",
+    "lib": "store/e38bb2a4c7933698.glb",
+    "sha256": "31bc9d44d85c05ab5475aecfcb49d78c5f8f3d06c89237082bdd6125f1cf6ed2",
+    "bytes": 59320
+  },
+  {
+    "id": "nx-town-row-cottage",
+    "lib": "store/0558b5f41bda0777.glb",
+    "sha256": "09024a91d298093bf2ba15583e004158af0b864c4e8cec27d8a1158bd50c6038",
+    "bytes": 51352
+  },
+  {
+    "id": "nx-town-tower-house",
+    "lib": "store/90723087ca8b5eb3.glb",
+    "sha256": "4e9a9c7c538c8be6a2b36f574c0a69edb547aa28f5c62741f8ec161822928ad9",
+    "bytes": 114788
+  }
+]

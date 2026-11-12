@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "run": 1,
+      "exitCode": 0,
+      "sha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+      "bytes": 961972,
+      "previousMtimeNs": 1788833702100913624,
+      "mtimeNs": 1788833755253946374,
+      "log": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/hall-double-build-1.log",
+      "assemblyBeforeSha256": "6f77d1cb6d0397adea87e7b8e91ed64edf08c9f99d76544fb8b9b54a0d1c0cae",
+      "assemblyAfterSha256": "86178f736ce2aa761e69ac41493123c3a3f3a8583fba7dc0a67902f115d554a6"
+    },
+    {
+      "run": 2,
+      "exitCode": 0,
+      "sha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+      "bytes": 961972,
+      "previousMtimeNs": 1788833755253946374,
+      "mtimeNs": 1788833756320245624,
+      "log": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/hall-double-build-2.log",
+      "assemblyBeforeSha256": "6f77d1cb6d0397adea87e7b8e91ed64edf08c9f99d76544fb8b9b54a0d1c0cae",
+      "assemblyAfterSha256": "86178f736ce2aa761e69ac41493123c3a3f3a8583fba7dc0a67902f115d554a6"
+    }
+  ],
+  "sourceSha256": "8efca64f25ac85722102661506530d03ec319d1dbe983e468a881801a7deb0a0",
+  "kitSha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+}

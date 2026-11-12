@@ -1,0 +1,252 @@
+{
+  "generatedAt": "2026-09-08T04:34:25.043428+00:00",
+  "world": "commons-next",
+  "liveUrl": "https://eidoverse.billding.dev/?world=commons-next",
+  "built": 17,
+  "live": 14,
+  "held": 3,
+  "items": [
+    {
+      "id": "nx-town-hall",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-hall.glb",
+      "sourceSha256": "dc871edb1b45ce0f22906bc8ed8227da2cb1a0dbc1e908e1bd3522c3b581286a",
+      "liveLib": "store/dc871edb1b45ce0f.glb",
+      "position": [
+        9,
+        0,
+        -26
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-inn",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-inn.glb",
+      "sourceSha256": "861225bb15230d9bf6cbf7ac7b18a52f6ecb2893e0ac3aa47a073afe6de8f692",
+      "liveLib": "store/861225bb15230d9b.glb",
+      "position": [
+        36,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-stable",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-stable.glb",
+      "sourceSha256": "0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202",
+      "liveLib": "store/0658345cf7e876a4.glb",
+      "position": [
+        43,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-woodyard",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-woodyard.glb",
+      "sourceSha256": "333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb",
+      "liveLib": "store/333e85a41a745d39.glb",
+      "position": [
+        16,
+        0,
+        31
+      ],
+      "yaw": -2.669815142409043,
+      "scale": 1
+    },
+    {
+      "id": "nx-court",
+      "status": "BUILT_HELD_NOT_DEPLOYED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/court.glb",
+      "sourceSha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+      "liveLib": "store/77cab2c3cc3a39c7.glb",
+      "position": [
+        18.9,
+        -1.5946487083102603e-08,
+        -14.8
+      ],
+      "yaw": -0.90756,
+      "scale": 1
+    },
+    {
+      "id": "nx-forge",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge.glb",
+      "sourceSha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "liveLib": "store/d55c86d706774923.glb",
+      "position": [
+        22.11785473473295,
+        0,
+        -7.957568494595163
+      ],
+      "yaw": -0.90756,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-market",
+      "status": "BUILT_HELD_NOT_DEPLOYED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-market.glb",
+      "sourceSha256": "4950c6d432619891bd778af42c46e69d5e5a9c4c66ab54200126ba1d35500ab3",
+      "liveLib": "store/8c16ea9a756a95ad.glb",
+      "position": [
+        -6.5,
+        0,
+        6.5
+      ],
+      "yaw": 2.356194490192345,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-dyehouse",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-dyehouse.glb",
+      "sourceSha256": "8a916bb1beade151d0bb77694e7363757806dd3165c4b0fc44eb294d3bb2d275",
+      "liveLib": "store/8a916bb1beade151.glb",
+      "position": [
+        -23,
+        0,
+        -23
+      ],
+      "yaw": 0.941,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-potter",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-potter.glb",
+      "sourceSha256": "412bb53af8aca242f1e6f015b529b54025921ac961cb778c340c8f668ce24aed",
+      "liveLib": "store/412bb53af8aca242.glb",
+      "position": [
+        23.776412907378838,
+        -0.00402,
+        7.7254248593736845
+      ],
+      "yaw": -1.8975354116458194,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-kiln",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-kiln.glb",
+      "sourceSha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+      "liveLib": "store/3e96c8b074852ddc.glb",
+      "position": [
+        19.158717425740413,
+        -0.02065,
+        22.431975985200914
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-belltower",
+      "status": "BUILT_HELD_NOT_DEPLOYED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-belltower.glb",
+      "sourceSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+      "liveLib": "store/2419fbc53a1d65e1.glb",
+      "position": [
+        6.5,
+        0,
+        6.5
+      ],
+      "yaw": -2.356194490192345,
+      "scale": 1
+    },
+    {
+      "id": "nx-tower",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-tower.glb",
+      "sourceSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+      "liveLib": "store/648ca0c0148cf1cc.glb",
+      "position": [
+        14.1,
+        0,
+        16.9
+      ],
+      "yaw": -2.44347,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-shrine",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/shrine.glb",
+      "sourceSha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+      "liveLib": "store/f51be95de91ad5b3.glb",
+      "position": [
+        -25,
+        -0.0012609260510534298,
+        -4
+      ],
+      "yaw": 1.4118119548622732,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-gate-n",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/gates.glb",
+      "sourceSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "liveLib": "store/a39756779c671759.glb",
+      "position": [
+        0,
+        0,
+        -19.5
+      ],
+      "yaw": 0,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-gate-s",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/gates.glb",
+      "sourceSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "liveLib": "store/a39756779c671759.glb",
+      "position": [
+        0,
+        0,
+        19.5
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-gate-e",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/gates.glb",
+      "sourceSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "liveLib": "store/a39756779c671759.glb",
+      "position": [
+        19.5,
+        0,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "nx-town-gate-w",
+      "status": "LIVE_VERIFIED",
+      "sourceFile": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/gates.glb",
+      "sourceSha256": "a39756779c671759dc5f02f878f8122ef7e2a38498f84edb35c1d0d16f7aaed7",
+      "liveLib": "store/a39756779c671759.glb",
+      "position": [
+        -19.5,
+        0,
+        0
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1
+    }
+  ],
+  "roadChanged": false,
+  "committed": false,
+  "pushed": false,
+  "sourceRoot": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul"
+}

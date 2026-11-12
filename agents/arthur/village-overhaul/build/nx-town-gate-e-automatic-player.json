@@ -1,0 +1,534 @@
+{
+  "status": "FAIL",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-town-gate-e",
+  "bounds": {
+    "min": [
+      -1.7999999523162842,
+      -2.98023217215615e-10,
+      -0.25
+    ],
+    "max": [
+      1.7999999523162842,
+      3.7725000381469727,
+      0.25
+    ]
+  },
+  "triangles": 5024,
+  "collider": {
+    "exact": false,
+    "pillar": true,
+    "classification": {
+      "roomScale": false,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "central-traversal",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.7,
+        0.10110785067081451,
+        -0.4
+      ],
+      "max": [
+        0.7,
+        2.3011078506708147,
+        0.4
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "outside",
+      "to": "threshold",
+      "pass": false,
+      "steps": 16,
+      "maxPush": 0.03937500000000005,
+      "maxRise": 0,
+      "minY": 0.0701073706150055,
+      "maxY": 0.0701073706150055,
+      "expectedFloorRange": [
+        0.03510737061500549,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 0.5700000000000001,
+      "floorError": 0.03100048005580902,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.0701073706150055,
+        0.5700000000000001
+      ],
+      "issues": [
+        {
+          "sample": 2,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.018750000000000155,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 3,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 4,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 5,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 6,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 7,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        }
+      ]
+    },
+    {
+      "direction": "in",
+      "from": "threshold",
+      "to": "inside",
+      "pass": false,
+      "steps": 31,
+      "maxPush": 0.03870967741935483,
+      "maxRise": 0,
+      "minY": 0.0701073706150055,
+      "maxY": 0.0701073706150055,
+      "expectedFloorRange": [
+        0.06610785067081451,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 1.2000000000000002,
+      "floorError": 0.03100048005580902,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.0701073706150055,
+        0.5700000000000001
+      ],
+      "issues": [
+        {
+          "sample": 1,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 2,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 3,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 4,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 5,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        },
+        {
+          "sample": 6,
+          "pos": [
+            0,
+            0.0701073706150055,
+            0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.0701073706150055,
+          "geometry": []
+        }
+      ]
+    },
+    {
+      "direction": "out",
+      "from": "inside",
+      "to": "threshold",
+      "pass": false,
+      "steps": 16,
+      "maxPush": 0.03937500000000005,
+      "maxRise": 0,
+      "minY": 0.10110785067081451,
+      "maxY": 0.10110785067081451,
+      "expectedFloorRange": [
+        0.06610785067081451,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 0.5700000000000001,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.10110785067081451,
+        -0.5700000000000001
+      ],
+      "issues": [
+        {
+          "sample": 2,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.018750000000000155,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 3,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 4,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 5,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 6,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 7,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03937500000000005,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        }
+      ]
+    },
+    {
+      "direction": "out",
+      "from": "threshold",
+      "to": "outside",
+      "pass": false,
+      "steps": 31,
+      "maxPush": 0.03870967741935483,
+      "maxRise": 0,
+      "minY": 0.10110785067081451,
+      "maxY": 0.10110785067081451,
+      "expectedFloorRange": [
+        0.03510737061500549,
+        0.13610785067081452
+      ],
+      "arrivalXZ": 1.2000000000000002,
+      "floorError": 0.03100048005580902,
+      "geometryHits": 0,
+      "arrived": [
+        0,
+        0.10110785067081451,
+        -0.5700000000000001
+      ],
+      "issues": [
+        {
+          "sample": 1,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 2,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 3,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 4,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 5,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        },
+        {
+          "sample": 6,
+          "pos": [
+            0,
+            0.10110785067081451,
+            -0.5700000000000001
+          ],
+          "push": 0.03870967741935483,
+          "ground": 0.10110785067081451,
+          "geometry": []
+        }
+      ]
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b14-east-gate-dawn-fan",
+      "min": [
+        -1.149999976158142,
+        2.719999998211861,
+        0.2000000011920946
+      ],
+      "max": [
+        1.149999976158142,
+        3.086950958967209,
+        0.3150466960668581
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "nx-town-roads",
+      "triangles": 3392,
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/3b76b621559fa1a1.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-artwalk-b14-east-gate-dawn-fan",
+      "triangles": 108,
+      "sha256": "c4fa5e7c1cc04d8c6afc033c3d7f4de4c498d587c3efcd1232fb58acb8de6ce1",
+      "sourceTuple": {
+        "pos": [
+          19.7325,
+          2.72,
+          1.423651904008798e-17
+        ],
+        "yaw": 1.5707963267948966,
+        "scale": 1,
+        "lib": "store/c67c0402bbfb7fd8.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-struct-waystone-e",
+      "triangles": 92,
+      "sha256": "d554bdeb1e46951ab19d5adfdd3a093c913cf1fc37223bf20bfbcba9e818657a",
+      "sourceTuple": {
+        "pos": [
+          22.1,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/2f006e218ffbe97e.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-core-paths",
+      "triangles": 948,
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/c31b6e3f22641e14.glb"
+      },
+      "colliderExact": false
+    }
+  ],
+  "failures": [
+    "host is not an exact browser collider",
+    "walk in outside->threshold failed",
+    "walk in threshold->inside failed",
+    "walk out inside->threshold failed",
+    "walk out threshold->outside failed"
+  ],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ]
+}

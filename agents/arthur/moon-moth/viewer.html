@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'wasm-unsafe-eval'; worker-src blob:; style-src 'unsafe-inline'; img-src data: blob:; connect-src blob: data:; media-src blob:; base-uri 'none'; form-action 'none'">
+<title>Moon Moth — a quiet machine</title><link rel="icon" href="data:,">
+<style>
+:root{--ink:#eee9d9;--muted:#a5b4b4;--line:#3a4b52;--gold:#d4bc82;--surface:#14242d;--bg:#102029;color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--ink)}canvas{display:block;width:100%;height:100%;touch-action:none}
+header{position:absolute;top:35px;left:44px;pointer-events:none}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}h1{font:normal clamp(34px,4vw,56px)/1.05 Georgia,serif;letter-spacing:-.035em;margin:12px 0 12px}.subtitle{font-size:12px;letter-spacing:.03em;color:var(--muted)}
+.status{position:absolute;right:44px;top:40px;max-width:340px;text-align:right}.status strong{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gold)}.status p{font-size:11px;line-height:1.6;color:var(--muted);margin:9px 0}.status code{font-size:10px;color:var(--ink)}
+footer{position:absolute;left:44px;right:44px;bottom:28px;display:flex;justify-content:space-between;gap:24px;align-items:end;pointer-events:none}.facts{font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:.025em}.facts b{font-weight:500;color:var(--ink)}.hint{margin-top:11px;font-size:10px;color:var(--muted)}
+.controls{pointer-events:auto;background:var(--surface);border:1px solid var(--line);padding:12px 14px;min-width:400px}.row{display:flex;gap:6px;align-items:center;justify-content:space-between}.row+.row{border-top:1px solid var(--line);margin-top:9px;padding-top:9px}button{font:inherit;font-size:11px;min-height:36px;padding:0 11px;border:0;background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap}button:hover,button[aria-pressed=true]{color:var(--ink);background:#2a3b42}button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}.accent{color:var(--gold)}label{font-size:10px;color:var(--muted);white-space:nowrap}input[type=range]{width:155px;accent-color:var(--gold)}output{font:10px ui-monospace,monospace;min-width:42px;color:var(--muted)}
+#error{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:#251c1c;color:#f4c5ad;padding:30px;z-index:10}#error pre{white-space:pre-wrap;max-width:900px}.proxy-label{position:absolute;left:44px;top:184px;font-size:10px;color:var(--gold);display:none}.clean header,.clean footer,.clean .status,.clean .proxy-label{display:none}
+@media(max-width:720px){header{left:22px;top:24px}.status{right:22px;top:28px;max-width:140px}.status p{font-size:10px}.status .detail{display:none}h1{font-size:34px}.subtitle{max-width:190px;line-height:1.5}footer{left:16px;right:16px;bottom:16px;display:block}.facts{display:none}.controls{min-width:0;width:100%}button{min-height:44px;padding:0 8px}input[type=range]{width:115px}.proxy-label{left:22px;top:150px;max-width:250px}}
+</style></head><body>
+<header><div class="eyebrow">Eidoverse / Arthur's workshop</div><h1>Moon Moth</h1><div class="subtitle">Ivory silk. Brass veins. A lantern heart.</div></header>
+<aside class="status"><strong id="state">Loading exact model bytes</strong><p>Local motion study · not a live-world view<br><span class="detail">SHA-256 <code id="sha">verifying…</code></span></p></aside>
+<div class="proxy-label" id="proxy-label">1.70 m standing mannequin · scale proxy, not a live avatar</div>
+<footer><div class="facts"><b id="span">—</b> rest wingspan<br><b>5.50 s</b> natural stroke · <b>±0.22 rad</b> hinge travel<br><b id="clearance">—</b> certified wing / plane clearance<div class="hint">Drag to orbit · scroll to approach · Space to pause</div></div>
+<section class="controls" aria-label="Model controls"><div class="row" aria-label="Camera views"><button data-view="close3quarter" aria-pressed="true">Three-quarter</button><button data-view="front" aria-pressed="false">Front</button><button data-view="top" aria-pressed="false">Above</button><button id="night" aria-pressed="false">Night</button></div><div class="row"><button id="play" class="accent" aria-pressed="true">Pause</button><label for="time">Stroke</label><input id="time" type="range" min="0" max="5.5" step=".001" value="0"><output id="clock">0.00 s</output><button id="scale" aria-pressed="false">Scale proxy</button></div></section></footer>
+<div id="error" role="alert"><pre></pre></div>
+<script type="module" id="review-source">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { tickMotion } from '/engine/motion.js';
+import { findPart } from 'review:world';
+import { entities, comps, setNow, camera } from 'review:environment';
+
+const fail = error => {window.reviewReady=false;document.querySelector('#error').style.display='flex';document.querySelector('#error pre').textContent='Review stopped — no verification claim\n\n'+(error?.stack||error);};
+window.addEventListener('error',e=>fail(e.error||e.message));
+window.addEventListener('unhandledrejection',e=>fail(e.reason));
+const check=(ok,message)=>{if(!ok)throw new Error(message);};
+const meta=JSON.parse(document.querySelector('#review-meta').textContent);
+const ID=meta.contract.entityId, names=['moon_wing_left','moon_wing_right'], period=5.5;
+const motionBag={};
+for(let i=0;i<names.length;i++)motionBag['motion:'+names[i]]={type:'pendulum',axis:[0,0,1],pivot:[0,0,0],amp:.22,period,phase:i===0?Math.PI:0,damp:0,t0:0};
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;document.body.prepend(renderer.domElement);
+renderer.domElement.addEventListener('webglcontextlost',event=>{event.preventDefault();fail(new Error('WebGL context lost'));});
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x10232e);scene.fog=new THREE.FogExp2(0x10232e,.012);
+const hemi=new THREE.HemisphereLight(0xb9d8ec,0x41504a,2.1);scene.add(hemi);
+const fill=new THREE.DirectionalLight(0xb4cddd,2.2);fill.position.set(-7,8,-6);scene.add(fill);
+const sun=new THREE.DirectionalLight(0xffe3b6,4.1);sun.position.set(7,12,9);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-10,right:10,top:10,bottom:-10,near:.5,far:45});sun.shadow.normalBias=.025;sun.shadow.bias=-.0001;scene.add(sun);
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(220,220),new THREE.MeshStandardMaterial({color:0x233b42,roughness:.93,metalness:.06}));ground.rotation.x=-Math.PI/2;ground.receiveShadow=true;scene.add(ground);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=false;controls.minDistance=5;controls.maxDistance=42;controls.maxPolarAngle=Math.PI*.485;controls.target.set(0,2,0);camera.fov=37;camera.near=.05;camera.far=240;camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
+let currentTime=0,playing=false,last=performance.now(),night=false,root,stats;
+const render=()=>{controls.update();renderer.render(scene,camera);};
+function at(t){currentTime=t;setNow(t*1000);tickMotion();root.updateMatrixWorld(true);document.querySelector('#time').value=String(t%period);document.querySelector('#clock').value=(t%period).toFixed(2)+' s';}
+function setPlay(on){playing=on;last=performance.now();document.querySelector('#play').textContent=on?'Pause':'Play';document.querySelector('#play').setAttribute('aria-pressed',String(on));}
+const views={close3quarter:[11,7.8,17],front:[0,4.5,21],top:[0,22,.001]};
+let currentView='close3quarter';
+function setView(name){check(views[name],'Unknown camera view');currentView=name;camera.up.set(0,1,0);controls.target.set(0,2,0);camera.position.fromArray(views[name]).sub(controls.target).multiplyScalar(Math.max(1,1.15/camera.aspect)).add(controls.target);document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));render();}
+function setNight(on){night=on;scene.background.set(on?0x080f1b:0x10232e);scene.fog.color.copy(scene.background);hemi.intensity=on?.26:2.1;fill.intensity=on?.38:2.2;sun.intensity=on?.3:4.1;renderer.toneMappingExposure=on?1.05:1.15;ground.material.color.set(on?0x182630:0x233b42);document.querySelector('#night').setAttribute('aria-pressed',String(on));render();}
+function vertices(o){const out=[];o.updateWorldMatrix(true,true);const inv=o.matrixWorld.clone().invert(),v=new THREE.Vector3();o.traverse(m=>{if(!m.isMesh)return;check(!m.isSkinnedMesh&&!m.morphTargetInfluences?.some(x=>x!==0),'Unsupported deformed geometry');const p=m.geometry.attributes.position;const transform=inv.clone().multiply(m.matrixWorld);for(let i=0;i<p.count;i++){v.fromBufferAttribute(p,i).applyMatrix4(transform);out.push(v.x,v.y,v.z);}});check(out.length>0,'Empty geometry '+o.name);return new Float64Array(out);}
+function requiredNode(name){const hits=[];root.traverse(o=>{if(o.name===name)hits.push(o);});check(hits.length===1,'Expected exactly one '+name);check(findPart(root,name)===hits[0],'Engine part lookup mismatch: '+name);return hits[0];}
+function requiredParts(){return names.map(requiredNode);}
+function isWing(o,parts){for(let p=o;p;p=p.parent)if(parts.includes(p))return true;return false;}
+const matrixDelta=(a,b)=>Math.max(...a.map((x,i)=>Math.abs(x-b[i])));
+function measure(bag=motionBag){
+  const parts=requiredParts();comps.set(ID,{});setNow(0);tickMotion();root.updateMatrixWorld(true);
+  const baseline=root.matrixWorld.toArray(),statics=[];root.traverse(o=>{if(o.isMesh&&!isWing(o,parts))statics.push({o,m:o.matrixWorld.toArray()});});
+  const anchor=requiredNode('moon_seat'),cushion=requiredNode('moon_seat_cushion_0');
+  check(cushion.isMesh&&cushion.parent===anchor,'Cushion must be a mesh under its exact seat anchor');
+  const anchorMatrix=anchor.matrixWorld.toArray(),cushionMatrix=cushion.matrixWorld.toArray();
+  const cushionBounds=new THREE.Box3().setFromObject(cushion,true),center=cushionBounds.getCenter(new THREE.Vector3());
+  check(Math.abs(cushionBounds.max.y-meta.contract.seat.top)<=.005&&Math.abs(center.x-meta.contract.seat.center[0])<=.005&&Math.abs(center.z-meta.contract.seat.center[2])<=.005,'Decoded cushion disagrees with source seat contract');
+  const seat={anchorName:anchor.name,cushionName:cushion.name,cushionTop:cushionBounds.max.y,cushionCenterXZ:[center.x,center.z],anchorPosition:anchor.getWorldPosition(new THREE.Vector3()).toArray(),anchorMaxMatrixDelta:0,cushionMaxMatrixDelta:0,engineLookupVerified:true};
+  const wingData=parts.map((o,index)=>{const scale=o.getWorldScale(new THREE.Vector3());check(scale.distanceTo(new THREE.Vector3(1,1,1))<1e-8,'Clearance bound requires unit world scale');const points=vertices(o);let radialMax=0;for(let j=0;j<points.length;j+=3)radialMax=Math.max(radialMax,Math.hypot(points[j],points[j+1]));return {o,points,radialMax,baseQuaternion:o.quaternion.clone(),basePosition:o.position.toArray(),minClearance:Infinity,maxAngle:0,firstQuaternion:null,excursionRadians:0,name:names[index],restEuler:o.rotation.toArray()};});
+  comps.set(ID,bag);const steps=440,dt=period/steps;let staticMaxMatrixDelta=0,rootMaxMatrixDelta=0;
+  const trajectory=[];
+  for(let i=0;i<=steps;i++){
+    const t=i*dt;setNow(t*1000);tickMotion();root.updateMatrixWorld(true);
+    rootMaxMatrixDelta=Math.max(rootMaxMatrixDelta,matrixDelta(baseline,root.matrixWorld.elements));
+    seat.anchorMaxMatrixDelta=Math.max(seat.anchorMaxMatrixDelta,matrixDelta(anchorMatrix,anchor.matrixWorld.elements));
+    seat.cushionMaxMatrixDelta=Math.max(seat.cushionMaxMatrixDelta,matrixDelta(cushionMatrix,cushion.matrixWorld.elements));
+    for(const s of statics)staticMaxMatrixDelta=Math.max(staticMaxMatrixDelta,matrixDelta(s.m,s.o.matrixWorld.elements));
+    const sample={seconds:t,wings:[]};
+    for(const w of wingData){
+      const q=w.o.quaternion;if(!w.firstQuaternion)w.firstQuaternion=q.clone();w.excursionRadians=Math.max(w.excursionRadians,q.angleTo(w.firstQuaternion));w.maxAngle=Math.max(w.maxAngle,q.angleTo(w.baseQuaternion));
+      const m=w.o.matrixWorld.elements,p=w.points;let y=Infinity;
+      for(let j=0;j<p.length;j+=3)y=Math.min(y,m[1]*p[j]+m[5]*p[j+1]+m[9]*p[j+2]+m[13]);
+      w.minClearance=Math.min(w.minClearance,y);if(i%20===0)sample.wings.push({name:w.name,quaternion:q.toArray(),minY:y});
+    }
+    if(i%20===0)trajectory.push(sample);
+  }
+  comps.set(ID,{});tickMotion();root.updateMatrixWorld(true);let restoreMaxDelta=0;
+  for(const w of wingData){restoreMaxDelta=Math.max(restoreMaxDelta,matrixDelta(w.baseQuaternion.toArray(),w.o.quaternion.toArray()),matrixDelta(w.basePosition,w.o.position.toArray()));}
+  return {sha256:meta.sha256,seat,wings:wingData.map(w=>({name:w.name,vertexCount:w.points.length/3,restEuler:w.restEuler,excursionRadians:w.excursionRadians,maxDeviationRadians:w.maxAngle,minClearance:w.minClearance,continuousClearanceLowerBound:w.minClearance-w.radialMax*.22*(2*Math.PI/period)*dt/2,interSampleErrorBound:w.radialMax*.22*(2*Math.PI/period)*dt/2})),samples:steps+1,sampleIntervalSeconds:dt,periodSeconds:period,staticMeshCount:statics.length,staticMeshNames:statics.map(s=>s.o.name),staticMaxMatrixDelta,rootMaxMatrixDelta,restoreMaxDelta,trajectory};
+}
+function validate(r){check(r.wings.length===2,'Both wings required');for(const w of r.wings){check(w.excursionRadians>.43,'Frozen/incomplete wing: '+w.name);check(w.continuousClearanceLowerBound>0,'Ground contact: '+w.name);}check(r.staticMeshCount>0&&r.staticMaxMatrixDelta===0,'Cabin moved');check(r.rootMaxMatrixDelta===0,'Root moved');check(r.seat.anchorMaxMatrixDelta===0&&r.seat.cushionMaxMatrixDelta===0,'Seat anchor/cushion moved');check(r.restoreMaxDelta===0,'Rest pose not restored');}
+function expectRejected(fn){try{fn();return false;}catch{return true;}}
+function verify(){
+  setPlay(false);const r=measure();validate(r);const parts=requiredParts();const keep=parts[1].name;parts[1].name='missing_for_negative_control';const missingWingRejected=expectRejected(requiredParts);parts[1].name=keep;
+  const frozen={...motionBag};delete frozen['motion:'+names[1]];const frozenWingRejected=expectRejected(()=>validate(measure(frozen)));
+  const moving={...motionBag,'motion:moon_seat':{type:'bob',axis:[0,1,0],amp:.1,period,t0:0}};const movingCabinRejected=expectRejected(()=>validate(measure(moving)));
+  r.negativeControls={missingWingRejected,frozenWingRejected,movingCabinRejected};check(Object.values(r.negativeControls).every(Boolean),'Negative control escaped');
+  comps.set(ID,motionBag);at(0);return r;
+}
+// A plain standing 1.70m mannequin is only a scale illustration. Never a VRM,
+// mount, pose, collider, client embodiment, or live-world evidence claim.
+const proxy=new THREE.Group();proxy.visible=false;proxy.name='labeled_scale_proxy';
+const proxyMat=new THREE.MeshStandardMaterial({color:0xb7bdba,roughness:.95});
+function proxyPiece(g,x,y,z){const m=new THREE.Mesh(g,proxyMat);m.position.set(x,y,z);m.castShadow=true;proxy.add(m);}
+proxyPiece(new THREE.SphereGeometry(.115,16,12),0,1.585,0);proxyPiece(new THREE.CylinderGeometry(.16,.12,.5,12),0,1.185,0);
+for(const s of [-1,1]){proxyPiece(new THREE.CylinderGeometry(.058,.058,.78,10),s*.085,.46,0);proxyPiece(new THREE.CylinderGeometry(.04,.04,.54,10),s*.205,1.15,0);proxyPiece(new THREE.BoxGeometry(.12,.07,.23),s*.085,.035,.045);}
+proxy.position.set(-2.3,0,3.8);scene.add(proxy);
+function setProxy(on){proxy.visible=on;document.querySelector('#proxy-label').style.display=on?'block':'none';document.querySelector('#scale').setAttribute('aria-pressed',String(on));render();}
+try{
+  const bytes=Uint8Array.from(atob(document.querySelector('#review-model').textContent.trim()),c=>c.charCodeAt(0));
+  const sha=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),x=>x.toString(16).padStart(2,'0')).join('');check(sha===meta.sha256,'Browser GLB SHA mismatch');
+  const binding=meta.binding;
+  check(binding?.sourceContractVerified===true&&binding.nodeContractVerified===true&&binding.sourceSha256===meta.contract.sha256&&binding.sourceBytes===meta.contract.bytes,'Source contract binding mismatch');
+  check(binding.renderedSha256===sha&&binding.renderedBytes===bytes.length,'Rendered byte binding mismatch');
+  check(binding.mode==='served'?(binding.servedSha256===sha&&binding.expectedServedSha256===sha):(binding.mode==='source'&&binding.sourceSha256===sha),'Source/served mode binding mismatch');
+  const contractData=Uint8Array.from(atob(document.querySelector('#review-contract').textContent.trim()),c=>c.charCodeAt(0));
+  const contractSha=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',contractData)),x=>x.toString(16).padStart(2,'0')).join('');
+  check(contractSha===binding.sourceContractSha256&&JSON.stringify(JSON.parse(new TextDecoder().decode(contractData)))===JSON.stringify(meta.contract),'Source contract bytes mismatch');
+  const manager=new THREE.LoadingManager(),decoderURLs=new Map();
+  for(const [name,asset] of Object.entries(JSON.parse(document.querySelector('#review-draco').textContent))){
+    const data=Uint8Array.from(atob(asset.base64),c=>c.charCodeAt(0));
+    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',data)),x=>x.toString(16).padStart(2,'0')).join('');
+    check(digest===asset.sha256,'DRACO decoder SHA mismatch: '+name);
+    decoderURLs.set('review-draco/'+name,URL.createObjectURL(new Blob([data],{type:name.endsWith('.wasm')?'application/wasm':'text/javascript'})));
+  }
+  manager.setURLModifier(url=>{if(decoderURLs.has(url))return decoderURLs.get(url);check(url.startsWith('blob:')||url.startsWith('data:'),'Denied external model resource');return url;});
+  const loader=new GLTFLoader(manager),draco=decoderURLs.size?new DRACOLoader(manager).setDecoderPath('review-draco/').setWorkerLimit(2):null;
+  if(draco)loader.setDRACOLoader(draco);
+  let gltf,loadTimer;
+  try{gltf=await Promise.race([loader.parseAsync(bytes.buffer,''),new Promise((_,reject)=>{loadTimer=setTimeout(()=>reject(new Error('Model/DRACO load exceeded 45 seconds')),45_000);})]);}
+  finally{clearTimeout(loadTimer);draco?.dispose();for(const url of decoderURLs.values())URL.revokeObjectURL(url);}
+  root=gltf.scene;scene.add(root);root.updateMatrixWorld(true);entities.set(ID,root);
+  root.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}});
+  const bounds=new THREE.Box3().setFromObject(root,true),size=bounds.getSize(new THREE.Vector3());check(bounds.min.y>=0,'Authored feet are below y=0');requiredParts();
+  let drawMeshes=0;root.traverse(o=>{if(o.isMesh)drawMeshes++;});
+  // The source contract uses transformed accessor boxes (conservative), not
+  // exact transformed vertices. Compare like-for-like; keep precise bounds and
+  // vertex-only motion clearance separately, never widen their tolerances.
+  const contractBounds=new THREE.Box3().setFromObject(root);
+  const boundsMaxDelta=Math.max(matrixDelta(contractBounds.min.toArray(),meta.contract.bounds.min),matrixDelta(contractBounds.max.toArray(),meta.contract.bounds.max));
+  check(boundsMaxDelta<=.005,'Decoded bounds disagree with source model-contract');check(drawMeshes===meta.contract.meshes,'Decoded mesh census mismatch');
+  stats=verify();stats.geometryContract={boundsMaxDelta,tolerance:.005,drawMeshes,boundsMethod:'transformed accessor boxes, matching source model-contract',bounds:{min:contractBounds.min.toArray(),max:contractBounds.max.toArray()}};stats.bounds={min:bounds.min.toArray(),max:bounds.max.toArray(),size:size.toArray()};stats.modelBytes=bytes.length;stats.components=motionBag;stats.provenance=meta.provenance;stats.binding=meta.binding;stats.scope='Local exact-byte GLB rendering, actual engine tickMotion with isolated scene/clock/collider adapters. Flat plane y=0, no live terrain, mount, avatar, network, flight route, or collision proof.';stats.clearanceMethod='441 exact transformed-vertex samples; unit-scale rigid wing speed <= max local XY radius * amp * 2π/period; subtract speed * dt/2 to bound every intervening time.';
+  document.querySelector('#sha').textContent=sha.slice(0,16);document.querySelector('#sha').title=sha;document.querySelector('#span').textContent=size.x.toFixed(2)+' m';document.querySelector('#clearance').textContent=Math.min(...stats.wings.map(w=>w.continuousClearanceLowerBound)).toFixed(3)+' m';document.querySelector('#state').textContent='Exact bytes · engine motion';
+  window.moonReview={verify:()=>stats,setTime:t=>{setPlay(false);at(t);render();},setPlay,setView,setNight,setProxy,render,state:()=>({playing,time:currentTime,night,proxy:proxy.visible,camera:camera.position.toArray()}),stats,
+    screenBounds(){render();const points=vertices(root),v=new THREE.Vector3();let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;for(let i=0;i<points.length;i+=3){v.set(points[i],points[i+1],points[i+2]).applyMatrix4(root.matrixWorld).project(camera);minX=Math.min(minX,v.x);minY=Math.min(minY,v.y);maxX=Math.max(maxX,v.x);maxY=Math.max(maxY,v.y);}return {minX,minY,maxX,maxY};}
+  };
+  document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));document.querySelector('#play').onclick=()=>setPlay(!playing);document.querySelector('#night').onclick=()=>setNight(!night);document.querySelector('#scale').onclick=()=>setProxy(!proxy.visible);document.querySelector('#time').oninput=e=>{setPlay(false);at(Number(e.target.value));render();};
+  addEventListener('keydown',e=>{if(e.code==='Space'&&!['INPUT','BUTTON'].includes(document.activeElement.tagName)){e.preventDefault();setPlay(!playing);}});
+  addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();setView(currentView);});
+  setView('close3quarter');setPlay(!matchMedia('(prefers-reduced-motion: reduce)').matches);window.reviewReady=true;
+  function loop(now){if(window.reviewReady!==true)return;if(playing)at(currentTime+(now-last)/1000);last=now;render();requestAnimationFrame(loop);}requestAnimationFrame(loop);
+}catch(e){fail(e);throw e;}
+</script></body></html>

@@ -1,0 +1,20 @@
+{
+  "id": "nx-court",
+  "modelSha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+  "status": "PASS",
+  "basis": "parent deterministic double rebuild + actual public-runtime routes/protection tests; independent native ensemble visual acceptance; preflight must rerun every route on actual supplied neighborhood",
+  "evidence": [
+    {
+      "file": "build/court-player-report.json",
+      "sha256": "9a87d455877463a67bac7d6e78a85c2d1c419de5fd1502a454ceb53665daad83"
+    },
+    {
+      "file": "court-forge-notes.md",
+      "sha256": "80735e9608986fa10822530f0177a846fbfb792b7c0cde24211975b75e8f264d"
+    }
+  ],
+  "limits": [
+    "Constrained host envelope and measured supplied geometry, not a whole-world solid-intersection certificate.",
+    "Two previously displaced rear count boards remain at original external tuples; neither new obstruction nor host-backed artwork is claimed for those inherited boards."
+  ]
+}

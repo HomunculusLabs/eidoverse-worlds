@@ -1,0 +1,123 @@
+{
+  "id": "nx-tower",
+  "status": "READY",
+  "kind": "walk-in",
+  "pos": [
+    14.1,
+    0,
+    16.9
+  ],
+  "yaw": -2.44347,
+  "scale": 1,
+  "parent": null,
+  "comp": {
+    "sockets": {
+      "study": {
+        "pos": [
+          -1.35,
+          3,
+          -0.5
+        ],
+        "yaw": -1.5707963267948966
+      }
+    }
+  },
+  "bounds": {
+    "min": [
+      -3.25,
+      -0.20000000298023224,
+      -3.25
+    ],
+    "max": [
+      3.506999969482422,
+      8.399999618530273,
+      3.5999999046325684
+    ]
+  },
+  "affectedBounds": {
+    "min": [
+      6.099451298618867,
+      -3.2000000029802322,
+      9.053181862260335
+    ],
+    "max": [
+      21.678700547257385,
+      11.475,
+      24.64389518178528
+    ]
+  },
+  "file": "build/nx-tower.glb",
+  "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "lib": "store/648ca0c0148cf1cc.glb",
+  "builder": "build-tower.ts",
+  "sources": [
+    {
+      "file": "build-tower.ts",
+      "sha256": "91943734811f405121ff657f12115209691339bbeca6f5e1f7072fdc52b36d34"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "build-belltower.ts",
+      "sha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc"
+    },
+    {
+      "file": "../cabin-overhaul/verify-player.ts",
+      "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+    },
+    {
+      "file": "../../../tools/core-stub.mjs",
+      "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.module.js",
+      "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.core.js",
+      "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+    },
+    {
+      "file": "before/nx-tower.glb",
+      "sha256": "14afdbc05d8dadab4bfee34e21fbcbd7d4c0760bf5d69b51af3d3da82ff05c6a"
+    },
+    {
+      "file": "before/contracts.json",
+      "sha256": "3938ad0f20e62aa69d9aa148830fe145673976bdcee91d390ed75ebc1c4fb85f"
+    },
+    {
+      "file": "before/downloads.json",
+      "sha256": "e7852444d3d9819838d2ad5dc29307f3bd29dac6b6cabef0b2fa19d086ec7659"
+    },
+    {
+      "file": "neighbors/nx-tower.json",
+      "sha256": "e5c02c6ca4faa74f565425497aa72214cd55567c83d4ecacd185804d7d93e9de"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-tower.route.json",
+      "sha256": "6fbe952600b98319aa822318baea15fd33ae14624b0aa5794c0e4ef1c5f19e27",
+      "mode": "room"
+    },
+    {
+      "file": "build/nx-tower.upper-route.json",
+      "sha256": "c7c84ca12bc4125a0f3cb48e3093751a75490789ee8852569c3c257906fb95ef",
+      "mode": "room"
+    }
+  ],
+  "review": {
+    "file": "reviews/parent-scholar-draft/review.json",
+    "sha256": "22e73cfbd007de30b17b41c8366971350abc806315c329f0142a535139061325"
+  }
+}

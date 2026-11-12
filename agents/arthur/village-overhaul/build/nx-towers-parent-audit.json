@@ -1,0 +1,13 @@
+{
+  "command": [
+    "bun",
+    "test",
+    "agents/arthur/village-overhaul/parent-audit.test.ts",
+    "--test-name-pattern",
+    "submitted|scholar upper"
+  ],
+  "exitCode": 1,
+  "stdout": "bun test v1.2.22 (6bafe260)\n",
+  "stderr": "\nagents/arthur/village-overhaul/parent-audit.test.ts:\n(pass) submitted nx-tower.route.json must not certify a physically unsupported approach height [1597.85ms]\n(pass) submitted nx-town-belltower.route.json must not certify a physically unsupported approach height [478.33ms]\n(pass) submitted nx-town-belltower.ladder-approach.json must not certify a physically unsupported approach height [353.80ms]\n114 |   const report=verifyPlayerMesh(m.root,k,ns);results[frame]={status:report.status,doorHits:report.doors.map(d=>d.hits),failures:report.failures};\n115 |  }\n116 |  console.log(JSON.stringify(results));\n117 |  `);\n118 |  expect(r['builder-rotated'].status,JSON.stringify(r)).toBe('PASS');\n119 |  expect(r['parent-direct'].status,JSON.stringify(r)).toBe('PASS');\n                                                           ^\nerror: {\"parent-direct\":{\"status\":\"FAIL\",\"doorHits\":[365],\"failures\":[\"door east-study-lookout-door: 365 triangles intrude into required 1.4m x 2.2m clearance\"]},\"builder-rotated\":{\"status\":\"PASS\",\"doorHits\":[0],\"failures\":[]}}\n\nExpected: \"PASS\"\nReceived: \"FAIL\"\n\n      at <anonymous> (/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/parent-audit.test.ts:119:54)\n(fail) scholar upper route is consumable directly by the parent, without an unencoded builder-only proof frame [3016.79ms]\n\n 3 pass\n 3 filtered out\n 1 fail\n 9 expect() calls\nRan 4 tests across 1 file. [5.49s]\n",
+  "parentTestSha256": "7e425c8289ae158259ff1234f670c1d2be48581374f1fa5ee70d0176fa4c5e1d"
+}

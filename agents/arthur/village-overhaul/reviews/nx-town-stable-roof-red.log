@@ -1,0 +1,38 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/build/nx-town-stable-roof-envelope.test.ts:
+{"id":"nx-town-stable","modelSha256":"0658345cf7e876a456e43c4c3647655849d5ec5cfa2fa3334d27874cee34d202","baselineSha256":"3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1","originalTop":3.4417715072631836,"contractTop":3.442,"allowedTop":4.441771507263184,"actualTop":4.900000095367432,"overrun":0.45822858810424805,"bounds":{"min":[-3,-0.20000000298023224,-2.7750000953674316],"max":[3,4.900000095367432,2.574972629547119]},"pass":false}
+11 |  // Enforce BOTH rounded frozen host contract and the stricter true decoded top. No height epsilon.
+12 |  const cap=Math.min(host.bbox.max[1],a.max.y)+1;
+13 |  const report={id,modelSha256:current.sha256,baselineSha256:original.sha256,originalTop:a.max.y,contractTop:host.bbox.max[1],allowedTop:cap,actualTop:b.max.y,overrun:b.max.y-cap,bounds:{min:b.min.toArray(),max:b.max.toArray()},pass:b.max.y<=cap};
+14 |  writeFileSync(`${base}/build/${id}-roof-envelope.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+15 |  for(const axis of ['x','z'] as const)for(const side of ['min','max'] as const)expect(b[side][axis]).toBe(a[side][axis]);
+16 |  expect(b.max.y,`${id} actual ${b.max.y} exceeds strict original+1 cap ${cap}`).toBeLessThanOrEqual(cap);
+                                                                                     ^
+error: nx-town-stable actual 4.900000095367432 exceeds strict original+1 cap 4.441771507263184
+
+Expected: <= 4.441771507263184
+Received: 4.900000095367432
+
+      at <anonymous> (/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-stable-roof-envelope.test.ts:16:81)
+(fail) nx-town-stable: actual top <= original top + exactly 1m; XZ unchanged [40.24ms]
+{"id":"nx-town-woodyard","modelSha256":"333e85a41a745d394da953d387ef6a24bb898982ec9d70223876e029a28221bb","baselineSha256":"0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781","originalTop":2.5257210731506348,"contractTop":2.526,"allowedTop":3.5257210731506348,"actualTop":3.559999942779541,"overrun":0.03427886962890625,"bounds":{"min":[-2.0999999046325684,-4.76837147544984e-9,-1.090248942375183],"max":[2.875746011734009,3.559999942779541,1.5084253549575806]},"pass":false}
+11 |  // Enforce BOTH rounded frozen host contract and the stricter true decoded top. No height epsilon.
+12 |  const cap=Math.min(host.bbox.max[1],a.max.y)+1;
+13 |  const report={id,modelSha256:current.sha256,baselineSha256:original.sha256,originalTop:a.max.y,contractTop:host.bbox.max[1],allowedTop:cap,actualTop:b.max.y,overrun:b.max.y-cap,bounds:{min:b.min.toArray(),max:b.max.toArray()},pass:b.max.y<=cap};
+14 |  writeFileSync(`${base}/build/${id}-roof-envelope.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+15 |  for(const axis of ['x','z'] as const)for(const side of ['min','max'] as const)expect(b[side][axis]).toBe(a[side][axis]);
+16 |  expect(b.max.y,`${id} actual ${b.max.y} exceeds strict original+1 cap ${cap}`).toBeLessThanOrEqual(cap);
+                                                                                     ^
+error: nx-town-woodyard actual 3.559999942779541 exceeds strict original+1 cap 3.5257210731506348
+
+Expected: <= 3.5257210731506348
+Received: 3.559999942779541
+
+      at <anonymous> (/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/nx-town-stable-roof-envelope.test.ts:16:81)
+(fail) nx-town-woodyard: actual top <= original top + exactly 1m; XZ unchanged [22.59ms]
+
+ 0 pass
+ 2 fail
+ 10 expect() calls
+Ran 2 tests across 1 file. [137.00ms]

@@ -1,0 +1,17 @@
+// Regression uses real default-scene vertices, not builder metadata/accessor bbox claims.
+import {test,expect} from 'bun:test';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {THREE,loadPlayerMesh} from '../../cabin-overhaul/verify-player.ts';
+const base=resolve(import.meta.dir,'..');
+const contracts=JSON.parse(readFileSync(`${base}/before/contracts.json`,'utf8'));
+for(const id of ['nx-town-stable','nx-town-woodyard'])test(`${id}: actual top <= original top + exactly 1m; XZ unchanged`,async()=>{
+ const original=await loadPlayerMesh(`${base}/before/${id}.glb`),current=await loadPlayerMesh(`${base}/build/${id}.glb`);
+ const a=new THREE.Box3().setFromObject(original.root),b=new THREE.Box3().setFromObject(current.root),host=contracts.find((h:any)=>h.id===id);
+ // Enforce BOTH rounded frozen host contract and the stricter true decoded top. No height epsilon.
+ const cap=Math.min(host.bbox.max[1],a.max.y)+1;
+ const report={id,modelSha256:current.sha256,baselineSha256:original.sha256,originalTop:a.max.y,contractTop:host.bbox.max[1],allowedTop:cap,actualTop:b.max.y,overrun:b.max.y-cap,bounds:{min:b.min.toArray(),max:b.max.toArray()},pass:b.max.y<=cap};
+ writeFileSync(`${base}/build/${id}-roof-envelope.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+ for(const axis of ['x','z'] as const)for(const side of ['min','max'] as const)expect(b[side][axis]).toBe(a[side][axis]);
+ expect(b.max.y,`${id} actual ${b.max.y} exceeds strict original+1 cap ${cap}`).toBeLessThanOrEqual(cap);
+},30000);

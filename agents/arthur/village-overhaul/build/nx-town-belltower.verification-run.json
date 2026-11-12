@@ -1,0 +1,10 @@
+{
+  "command": [
+    "bun",
+    "agents/arthur/village-overhaul/build-belltower.ts",
+    "--verify"
+  ],
+  "stdout": "{\"id\":\"nx-town-belltower\",\"suffix\":\"route\",\"status\":\"FAIL\",\"collider\":{\"exact\":true,\"pillar\":false,\"classification\":{\"roomScale\":false,\"floorShaped\":false,\"uneven\":false}},\"failures\":[\"walk out rear-threshold->rear-approach failed\"]}\n{\"id\":\"nx-town-belltower\",\"suffix\":\"landing-route\",\"status\":\"PASS\",\"collider\":{\"exact\":true,\"pillar\":false,\"classification\":{\"roomScale\":false,\"floorShaped\":false,\"uneven\":false}},\"failures\":[]}\n{\"id\":\"nx-town-belltower\",\"suffix\":\"ladder-approach\",\"status\":\"FAIL\",\"collider\":{\"exact\":true,\"pillar\":false,\"classification\":{\"roomScale\":false,\"floorShaped\":false,\"uneven\":false}},\"failures\":[\"walk out ladder-grab-station->front-approach failed\"]}\n{\"id\":\"nx-town-belltower\",\"special\":\"PASS\",\"hits\":0,\"ground\":4.820000171661377}\n",
+  "stderr": "",
+  "exitCode": 1
+}

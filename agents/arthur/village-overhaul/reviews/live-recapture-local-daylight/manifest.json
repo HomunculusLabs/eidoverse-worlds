@@ -1,0 +1,177 @@
+{
+  "status": "RENDERED",
+  "evidenceKind": "LOCAL_EXACT_SERVED_BYTE_DAYLIGHT_FILL_NOT_LIVE",
+  "at": "2026-09-08T03:18:30.426Z",
+  "rendererSourceSha256": "86ff4829b2b1a071633ce08c2453692215a3b7d61751ad11be9dec38b52f4b7c",
+  "lighting": {
+    "ambient": {
+      "color": "ffffff",
+      "intensity": 1.2
+    },
+    "hemisphere": {
+      "sky": "ffffff",
+      "ground": "626775",
+      "intensity": 2
+    },
+    "directional": {
+      "color": "fff0d5",
+      "intensity": 2.4,
+      "pos": [
+        8,
+        12,
+        6
+      ]
+    },
+    "shadows": false,
+    "toneMapping": "ACESFilmic",
+    "exposure": 1
+  },
+  "limitations": [
+    "Not a live world image or lighting fix.",
+    "Uses exact downloaded served host bytes; no remodel or recolor.",
+    "No terrain, neighbors, avatar, authored point-light gizmos, weather, public-runtime postprocessing or physics.",
+    "Same observed live camera positions/quaternions/fov; additional 44px labeling outside canvas."
+  ],
+  "frames": [
+    {
+      "file": "nx-town-hall-interior-LOCAL-DAYLIGHT.png",
+      "sha256": "a7afa75541a9526c3d11232cf0b5a62ad59fa3e6d63aaebd00fcb4a1dbc58f41",
+      "width": 1280,
+      "height": 1004,
+      "sourceLiveFile": "live-recapture-01-renderer/nx-town-hall-interior.png",
+      "sourceLiveSha256": "b8e31b45e271ff697e78068f98b8edefde6809f82cc9a80c9c010091e63679aa",
+      "sourceLib": "store/dc871edb1b45ce0f.glb",
+      "sourceServedSha256": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+      "receipt": {
+        "hashes": {
+          "nx-town-hall": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+          "nx-town-inn": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a"
+        },
+        "camera": {
+          "pos": [
+            8.46311493267276,
+            1.6192184951178392,
+            -28.170531245576246
+          ],
+          "quaternion": [
+            -0.0008508005868528543,
+            0.9990412715108024,
+            0.0374115115189592,
+            0.0227198759307242
+          ],
+          "fov": 55,
+          "aspect": 1.3333333333333333,
+          "near": 0.15
+        }
+      },
+      "identicalRawPixelControl": true
+    },
+    {
+      "file": "nx-town-inn-detail-LOCAL-DAYLIGHT.png",
+      "sha256": "948fc564fb79e8502fa6bfbc52b7d40778922ac81f7bc9bf9a529ed65be086a4",
+      "width": 1280,
+      "height": 1004,
+      "sourceLiveFile": "live-recapture-01-renderer/nx-town-inn-detail.png",
+      "sourceLiveSha256": "42b28f6fc2da4a93e65ff0612c6fd81a0ba572825ab153bfe41fa3a4c825ac35",
+      "sourceLib": "store/861225bb15230d9b.glb",
+      "sourceServedSha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "receipt": {
+        "hashes": {
+          "nx-town-hall": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+          "nx-town-inn": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a"
+        },
+        "camera": {
+          "pos": [
+            37.50707948265795,
+            1.6173022594994058,
+            -1.557492312550103
+          ],
+          "quaternion": [
+            -0.020137387079945168,
+            0.8422727758304062,
+            0.03154093684981888,
+            0.5377510818577406
+          ],
+          "fov": 55,
+          "aspect": 1.3333333333333333,
+          "near": 0.15
+        }
+      },
+      "identicalRawPixelControl": true
+    },
+    {
+      "file": "nx-town-inn-approach-LOCAL-DAYLIGHT.png",
+      "sha256": "0c38a54ce7fd9e907ff032734c7401257f25783cfd43aa6e52aa6262bbcd3294",
+      "width": 1280,
+      "height": 1004,
+      "sourceLiveFile": "live-recapture-02-renderer/nx-town-inn-approach.png",
+      "sourceLiveSha256": "fc79bb039cf2f236e82d40db32275062f1880f4483d1f0b7cb4e2cf59ad3fe04",
+      "sourceLib": "store/861225bb15230d9b.glb",
+      "sourceServedSha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "receipt": {
+        "hashes": {
+          "nx-town-hall": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+          "nx-town-inn": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a"
+        },
+        "camera": {
+          "pos": [
+            32.15978958623372,
+            1.6176009265861768,
+            1.1740165449188327
+          ],
+          "quaternion": [
+            -0.001010277290774099,
+            0.9989353393704652,
+            0.037407544634305415,
+            0.026978560025353503
+          ],
+          "fov": 55,
+          "aspect": 1.3333333333333333,
+          "near": 0.15
+        }
+      },
+      "identicalRawPixelControl": true
+    },
+    {
+      "file": "nx-town-inn-interior-LOCAL-DAYLIGHT.png",
+      "sha256": "e4f3c9c5da9fcd1af72ff3dcfbb4efd16d86b7724c82d984183e5d6dec59450d",
+      "width": 1280,
+      "height": 1004,
+      "sourceLiveFile": "live-recapture-02-renderer/nx-town-inn-interior.png",
+      "sourceLiveSha256": "243b6bc82536ccfea468eec25912084be96732173085e4ebd44181ff13fdb5cc",
+      "sourceLib": "store/861225bb15230d9b.glb",
+      "sourceServedSha256": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a",
+      "receipt": {
+        "hashes": {
+          "nx-town-hall": "8a4f16dd7a86361f9d4496bfba5cf94a5385be6fb1523b290bb7a6225217d13c",
+          "nx-town-inn": "858604174a71249b4b0cae77d6bb38988c014acbf5a51d48db36bfb6a9723a5a"
+        },
+        "camera": {
+          "pos": [
+            36.45697941019907,
+            1.6173950175776541,
+            3.1023833247732213
+          ],
+          "quaternion": [
+            -0.034137103514437654,
+            0.4093691211677106,
+            0.015329814722180292,
+            0.9116011066133061
+          ],
+          "fov": 55,
+          "aspect": 1.3333333333333333,
+          "near": 0.15
+        }
+      },
+      "identicalRawPixelControl": true
+    }
+  ],
+  "errors": [],
+  "localReads": 11,
+  "refused": 0,
+  "worldRequests": 0,
+  "uploads": 0,
+  "verbs": 0,
+  "browserClosed": true,
+  "serverClosed": true
+}

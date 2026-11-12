@@ -1,0 +1,13 @@
+bun test v1.2.22 (6bafe260)
+{"id":"nx-town-stable","modelSha256":"7eff6d0292df63548fe8f58cb45649aee9d5a55cfcdcd3a704d2b344ab04535a","baselineSha256":"3173e66c056459e5551cc9ce3eacf0453a7e54c608c4ce8ba7fe307ddc48cdc1","originalTop":3.4417715072631836,"contractTop":3.442,"allowedTop":4.441771507263184,"actualTop":4.429999828338623,"overrun":-0.011771678924560547,"bounds":{"min":[-3,-0.20000000298023224,-2.7750000953674316],"max":[3,4.429999828338623,2.574972629547119]},"pass":true}
+{"id":"nx-town-woodyard","modelSha256":"0b654117b12909ae8a30289258335913fc17fc76b415de15a6384eea6e25cc6e","baselineSha256":"0ff7b5de90d9d4d1a7af925ca2b508c292f17045714d63c49886d01887d38781","originalTop":2.5257210731506348,"contractTop":2.526,"allowedTop":3.5257210731506348,"actualTop":3.5199999809265137,"overrun":-0.005721092224121094,"bounds":{"min":[-2.0999999046325684,-4.76837147544984e-9,-1.090248942375183],"max":[2.875746011734009,3.5199999809265137,1.5084253549575806]},"pass":true}
+
+
+agents/arthur/village-overhaul/build/nx-town-stable-roof-envelope.test.ts:
+(pass) nx-town-stable: actual top <= original top + exactly 1m; XZ unchanged [40.84ms]
+(pass) nx-town-woodyard: actual top <= original top + exactly 1m; XZ unchanged [19.70ms]
+
+ 2 pass
+ 0 fail
+ 10 expect() calls
+Ran 2 tests across 1 file. [104.00ms]

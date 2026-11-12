@@ -1,0 +1,29 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/live-eye.test.ts:
+(pass) explicit subset contracts fail closed on cross-scope IDs and immutable tuple drift [5.67ms]
+(pass) immutable unavailable manifest contains all requested views and no join [6.96ms]
+(pass) actual HTTP PNG bytes and exact per-frame tuples survive a pose-only capture [48.88ms]
+(pass) renderer endpoint and health require connected exact world and identity, never just HUD [0.24ms]
+(pass) public-client guard enforces whitelist on a real browser WebSocket and correlates snap replies [388.32ms]
+(pass) temporary renderer is scoped and always closed on completed or failed work [0.47ms]
+(pass) CLI requires explicit target subset, expected contract, phase, and campaign output [0.24ms]
+(pass) frozen protected records use their geom contract, not wrapper IDs [0.72ms]
+(pass) pre-existing protected drift is reported while capture-start tuples are frozen for read-only evidence [0.24ms]
+(pass) nearby companions are selected in the host world frame, excluding unrelated carousel [1.38ms]
+(pass) renderer preparation waits for real models instead of capturing streaming placeholder boxes [261.92ms]
+(pass) wire whitelist admits only owned stationary presence or renderer protocol [0.54ms]
+
+agents/arthur/cabin-overhaul/live-eye.test.ts:
+(pass) all five targets receive explicit unavailable evidence on a 503, without joining [6.23ms]
+(pass) a serving snapshot path captures actual HTTP PNG bytes via pose-only WS [84.55ms]
+(pass) the no-verbs encoder refuses any authored world message [0.17ms]
+(pass) an absent real snapshot renderer is recorded, never promoted to an image [2.37ms]
+
+agents/arthur/cabin-overhaul/temporary-renderer.test.ts:
+(pass) temporary renderer targets only the commissioned world and never embeds a key in URL [0.73ms]
+
+ 17 pass
+ 0 fail
+ 170 expect() calls
+Ran 17 tests across 3 files. [858.00ms]

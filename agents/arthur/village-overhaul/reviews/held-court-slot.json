@@ -1,0 +1,95 @@
+{
+  "status": "HOLD_PUBLIC_ROAD_PHANTOM_SUPPORT",
+  "slot": {
+    "id": "nx-court",
+    "file": "build/court.glb",
+    "lib": "store/17a9b700194c544e.glb",
+    "kind": "walk-in",
+    "pos": [
+      18.9,
+      -1.5946487083102603e-08,
+      -14.8
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "bounds": {
+      "min": [
+        -6.5,
+        -0.20000000298023224,
+        -2.940000057220459
+      ],
+      "max": [
+        6.5,
+        4.775000095367432,
+        3.000267505645752
+      ]
+    },
+    "sha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+    "builder": "build-court.ts",
+    "sources": [
+      {
+        "file": "build-court.ts",
+        "sha256": "5522b6de97665a94ee199db46dcf1b9599b23ffbf50e68b799e30581edb81fdc"
+      },
+      {
+        "file": "kit.ts",
+        "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+      },
+      {
+        "file": "../assets/glbwrite.ts",
+        "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+      },
+      {
+        "file": "../assets/mergekit.ts",
+        "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+      },
+      {
+        "file": "build-forge.ts",
+        "sha256": "9b38d74f34e065592105790dd856e063cbaae59263aac4ff44e99dd0ed6c4935"
+      },
+      {
+        "file": "before/nx-court.glb",
+        "sha256": "06b47d4fb436d642ac4f6a030848c2acb3b0c7a8bff0f8ec416e2e1d8f956245"
+      }
+    ],
+    "review": {
+      "file": "reviews/parent-native/court-acceptance.json",
+      "sha256": "0dd0e3335130234da338046948f575a5f1e505e1a16533f1270db93d430ac76b"
+    },
+    "routes": [
+      {
+        "file": "build/court-routes.json",
+        "sha256": "a25692e824b35269fc3ea5967e73fbda0e5ec9266dcdca546cfe065abd35fc66",
+        "mode": "room"
+      }
+    ],
+    "affectedBounds": {
+      "min": [
+        9.533920637379417,
+        -0.7000000189267193,
+        -24.73209577955916
+      ],
+      "max": [
+        28.218588381150195,
+        5.275000079420945,
+        -4.83079934180373
+      ]
+    },
+    "status": "READY",
+    "comp": {
+      "particles:smoke": {
+        "preset": "smoke",
+        "origin": [
+          -4.9,
+          3.2,
+          -0.8
+        ],
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35
+      }
+    },
+    "parent": null
+  },
+  "evidence": "verification/nx-court/local-17a9b700194c544e-90faeed4c927e745/details.json"
+}

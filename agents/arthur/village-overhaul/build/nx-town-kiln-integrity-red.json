@@ -1,0 +1,25 @@
+{
+  "id": "nx-town-kiln",
+  "sha256": "8c80dd87f082d5efeefefb3b0953ac430f759698d3d59a4d7cbf56d7ddcdbb34",
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "ladder-top-masonry-support",
+      "x": -0.69,
+      "z": -0.54,
+      "hitY": 2.0730301946476954,
+      "pass": false
+    },
+    {
+      "name": "ladder-top-masonry-support",
+      "x": -0.69,
+      "z": -0.06,
+      "hitY": 3.0999999046325684,
+      "pass": true
+    },
+    {
+      "name": "named-fire-group-and-emissive-heat",
+      "pass": true
+    }
+  ]
+}

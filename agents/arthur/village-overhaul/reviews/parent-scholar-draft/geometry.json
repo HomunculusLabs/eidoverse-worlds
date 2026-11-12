@@ -1,0 +1,666 @@
+{
+  "id": "nx-tower",
+  "status": "PASS",
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "decoded": {
+    "bounds": {
+      "min": [
+        -3.25,
+        -0.20000000298023224,
+        -3.25
+      ],
+      "max": [
+        3.506999969482422,
+        8.399999618530273,
+        3.5999999046325684
+      ]
+    },
+    "nodes": [
+      "village_nx-tower_0",
+      "village_nx-tower_1",
+      "village_nx-tower_2",
+      "village_nx-tower_3",
+      "village_nx-tower_4",
+      "village_nx-tower_5",
+      "village_nx-tower_6",
+      "village_nx-tower_7",
+      "village_nx-tower_8",
+      "tw3_4",
+      "tw3_6",
+      "tw3_7",
+      "tw3_8",
+      "tw3_9",
+      "tw3_10",
+      "tw3_11",
+      "flame",
+      "lamp"
+    ],
+    "triangles": 5822,
+    "sha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+    "bytes": 537072
+  },
+  "actualBounds": {
+    "min": [
+      -3.25,
+      -0.20000000298023224,
+      -3.25
+    ],
+    "max": [
+      3.506999969482422,
+      8.399999618530273,
+      3.5999999046325684
+    ]
+  },
+  "originalPose": {
+    "pos": [
+      14.1,
+      0,
+      16.9
+    ],
+    "yaw": -2.44347,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "sockets": {
+        "study": {
+          "pos": [
+            -1.35,
+            3,
+            -0.5
+          ],
+          "yaw": -1.5707963267948966
+        }
+      }
+    }
+  },
+  "capturedHost": {
+    "lib": "store/a989bdc3cad37b39.glb",
+    "pos": [
+      14.1,
+      0,
+      16.9
+    ],
+    "yaw": -2.44347,
+    "scale": 1,
+    "actor": "arthur-polish-tower",
+    "ts": 1788096904876,
+    "comp": {
+      "sockets": {
+        "study": {
+          "pos": [
+            -1.35,
+            3,
+            -0.5
+          ],
+          "yaw": -1.5707963267948966
+        }
+      }
+    }
+  },
+  "planGate": "PASS",
+  "decodedBoundsGate": "PASS",
+  "retained": [
+    {
+      "name": "tw3_4",
+      "status": "PASS",
+      "signature": {
+        "name": "tw3_4",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "3591a884089f413f71627e424ac6cf9e064e6a380321c4612f2aff05e61fe6b4",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "06545ab2b492ab8aabbc1047734ba19b06bf3190d04080e375bf48a579bc7b40"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "1040c404e480abeef43338be7ecf57ea4679a3eb6f312522875775f2663dd355"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "1253b9a825781657a9c48ee81d60308edad9accae7e740c2e2f9e95c4d3f4c8b"
+              },
+              "TEXCOORD_0": {
+                "type": "VEC2",
+                "normalized": false,
+                "sha256": "7500cc8d08c81dd6d6b0d80f145670201882cb8d9ef7d2c24e6015eb5491a503"
+              }
+            },
+            "material": {
+              "name": "timber",
+              "base": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "emissive": [
+                0,
+                0,
+                0
+              ],
+              "rough": 0.9,
+              "metal": 0,
+              "alpha": "OPAQUE",
+              "double": false,
+              "images": [
+                "49242733388ffea4e6ad765412f6f8dfabec3a570a1131dec86ff2a9a869d096",
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "tw3_6",
+      "status": "PASS",
+      "signature": {
+        "name": "tw3_6",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "55f62ce48b0d8b234d3e52e68032808af29112f0e7f621fbeccef71dca023985",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "9efcfab6cd852eabfe6fd209b4448d56cd1490f35ce1c9bfe213abf380c274ce"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "f5c86aee3cb8951b28df2b8d5aad61479ea527c130d0c4c2f283cf122f95e53e"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "db89d3f9c12b48c49bd2bee06279770255c2762601a3c1e2b9bb8e12c4ccfa36"
+              }
+            },
+            "material": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "tw3_7",
+      "status": "PASS",
+      "signature": {
+        "name": "tw3_7",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "55f62ce48b0d8b234d3e52e68032808af29112f0e7f621fbeccef71dca023985",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "00f15b6dd22b257ffb2dd017bc5dc85ff5e0f46dce5614192212493d7e67ad23"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "3b0a10613b75924c52d165efbc5fe0a0d66eb4446b40ef6e9a69d6b7b89b4cd3"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "f5c86aee3cb8951b28df2b8d5aad61479ea527c130d0c4c2f283cf122f95e53e"
+              }
+            },
+            "material": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "tw3_8",
+      "status": "PASS",
+      "signature": {
+        "name": "tw3_8",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "02e6207572960842f0bacb4613f54b4ebbc042ac1d37205e3163a16c7d3c912f",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "b10da4b08dbf68893e04157cd13b86dd941c8aa041737317b68600a9d51439cc"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "d80ecced85b4582474cdca77c6c02e76a2cb2db784cdd3d9be291820935afddb"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "d16c616e703501a646c2f355e535fdd8b91c1fb7e98be5acbb229179644c598e"
+              }
+            },
+            "material": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "tw3_9",
+      "status": "PASS",
+      "signature": {
+        "name": "tw3_9",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "a9a389794042df5d9354757bd3784b0145ac4bef199ce148f4c4693dacc64421",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "354dcaeda513416a01d676d99b55f4553553937f56927853fa0a6e765c04aaaf"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "481b98540f522b87075f84185f3fd8fdba21cb05e8f1759bb4965d4a135fedc2"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "b8a7d8afc69dbb9ee36964a2c2aabdfbdc4c4a4c390a2fd93e1eaf4912ee8d6d"
+              }
+            },
+            "material": {
+              "name": "glow1",
+              "base": [
+                1,
+                0.6939,
+                0.3515,
+                1
+              ],
+              "emissive": [
+                0.9911,
+                0.8879,
+                0.2542
+              ],
+              "rough": 0.3,
+              "metal": 0,
+              "alpha": "OPAQUE",
+              "double": false,
+              "images": [
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "tw3_10",
+      "status": "PASS",
+      "signature": {
+        "name": "tw3_10",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "02a14f2908cbb034d6637a70bddc3824bdfbbbcefed967766979e57e0ef7e8c1",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "82c843f2fca81effe72ac137a51e33a3351767edf1706380ecdac2e31b1eb547"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "02db7546a7a86e28609dbbf0464658af081397cb7dd925024dfe6d78dc18df4c"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "a5a2ea4dbf3615b3cf06b7628e6cab7224947724731f196c77b36cea7f2e370c"
+              }
+            },
+            "material": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "tw3_11",
+      "status": "PASS",
+      "signature": {
+        "name": "tw3_11",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "55f62ce48b0d8b234d3e52e68032808af29112f0e7f621fbeccef71dca023985",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "0064110feeed1f8c35d548134f6f195084880cb85b92db6ae7cdd5f646dccf3f"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "e8bc0fb1357b96af97c1ac6af4c11c67b7ce7a45dcb517845888cf55d2189ef2"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "f5c86aee3cb8951b28df2b8d5aad61479ea527c130d0c4c2f283cf122f95e53e"
+              }
+            },
+            "material": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "flame",
+      "status": "PASS",
+      "signature": {
+        "name": "flame",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.4,
+          3.35,
+          -1.6,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "497b7e68d948ff275180c9fee69d8893c78d4fe3517c16b46bf0d34583f2f84f",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "6611641c677935512ed54cb3d9f5070eec60b35802f5830b91c2d5b16036de2d"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "105dd51832bdd442c98f85449d2f63566eda6cfbde341f321894cc63564296cd"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "986bccbac6c064de92fc002fd0c66412a8285d36381273f6cf2f7b8a91f8b7d1"
+              }
+            },
+            "material": {
+              "name": "glow3",
+              "base": [
+                1,
+                0.5841,
+                0.2542,
+                1
+              ],
+              "emissive": [
+                0.9,
+                0.5257,
+                0.2287
+              ],
+              "rough": 0.4,
+              "metal": 0,
+              "alpha": "OPAQUE",
+              "double": false,
+              "images": [
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "lamp",
+      "status": "PASS",
+      "signature": {
+        "name": "lamp",
+        "world": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          2.15,
+          3.25,
+          1
+        ],
+        "primitives": [
+          {
+            "mode": 4,
+            "indices": "497b7e68d948ff275180c9fee69d8893c78d4fe3517c16b46bf0d34583f2f84f",
+            "attributes": {
+              "POSITION": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "6611641c677935512ed54cb3d9f5070eec60b35802f5830b91c2d5b16036de2d"
+              },
+              "NORMAL": {
+                "type": "VEC3",
+                "normalized": false,
+                "sha256": "105dd51832bdd442c98f85449d2f63566eda6cfbde341f321894cc63564296cd"
+              },
+              "COLOR_0": {
+                "type": "VEC3",
+                "normalized": true,
+                "sha256": "986bccbac6c064de92fc002fd0c66412a8285d36381273f6cf2f7b8a91f8b7d1"
+              }
+            },
+            "material": {
+              "name": "glow3",
+              "base": [
+                1,
+                0.5841,
+                0.2542,
+                1
+              ],
+              "emissive": [
+                0.9,
+                0.5257,
+                0.2287
+              ],
+              "rough": 0.4,
+              "metal": 0,
+              "alpha": "OPAQUE",
+              "double": false,
+              "images": [
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "decodedRecord": {
+    "file": "build/nx-tower.decoded.json",
+    "sha256": "89155856a74b65d979109ff6708bbb030dffcb24a6363c2310c387176987171f"
+  },
+  "functional": {
+    "file": "reviews/parent-scholar-draft/functional.json",
+    "sha256": "af5e3d0f1464db7dc2ef026869581b36bb98713513949befc1e0fe1c127d6dfc"
+  },
+  "visual": {
+    "file": "reviews/parent-scholar-draft/visual-binding.json",
+    "sha256": "3ccc6b42b456ea570d6f2322b290aa32d53ca047741166ae88a9772926c9d3d5"
+  },
+  "neighbors": {
+    "file": "reviews/parent-scholar-draft/neighbors.json",
+    "sha256": "93a74a7a0e093aa7bfe8b7ca1c83940487944efd2b47eb807583d60616e70a9c"
+  },
+  "limits": [
+    "Retained attributes/indices/materials/image hashes and exact node world matrices compared afresh to frozen served baseline.",
+    "Source-bound native design acceptance and actual route protected-volume clipping, not a universal solid-intersection or structural engineering certificate."
+  ]
+}

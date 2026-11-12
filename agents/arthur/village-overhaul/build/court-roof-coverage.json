@@ -1,0 +1,2654 @@
+{
+  "sha256": "4ec651b30c2686f95693aa06cb345e51f9d4bd670740c15e8d2669657cd70d21",
+  "roofMeshNames": [
+    "village_court_4",
+    "village_court_6"
+  ],
+  "samples": [
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        0
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -4.1,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.34177658822994,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        0
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.7249999999999996,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.619554337705419,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        0
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -3.3499999999999996,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.8973320871808985,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        -1.7
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        -1.275
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        -0.85
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        0
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.9749999999999996,
+        2.4,
+        1.7
+      ],
+      "roofY": 4.175109836656378,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        -1.7
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        -1.275
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        -0.85
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        0
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.5999999999999996,
+        2.4,
+        1.7
+      ],
+      "roofY": 4.363998748638012,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        -1.7
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        -1.275
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        -0.85
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        0
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -2.2249999999999996,
+        2.4,
+        1.7
+      ],
+      "roofY": 4.086220970860234,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        0
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.85,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.8084431930824563,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        0
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.475,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.5306654153046786,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        0
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "bakehouse",
+      "pos": [
+        -1.1,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.252887637526901,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        -0.85
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        0
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.72,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.6515965061691604,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        -0.85
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        0
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.5649999999999995,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.679496523272245,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        -0.85
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        0
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.41,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.707396540375329,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        -0.85
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        0
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.255,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.7352965574784136,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.76319655628868,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.76319655628868,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.7631965562886798,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        0
+      ],
+      "roofY": 2.7631965562886798,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.7631965562886798,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.7631965562886798,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.7631965562886798,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -5.1,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.7631965562886798,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        0
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.945,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.791096538448391,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        0
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.79,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.818996520608102,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        0
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.635,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.8468965027678124,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        -1.7
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        -1.275
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        -0.85
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        -0.42500000000000004
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        0
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        0.42500000000000004
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        0.8499999999999999
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        1.2750000000000001
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "oven-lean-to",
+      "pos": [
+        -4.48,
+        2.2,
+        1.7
+      ],
+      "roofY": 2.8747964959085306,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        0
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.08,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.44261901176482,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        0
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        1.6600000000000001,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.7210190366557208,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        0
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.24,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.9994190615466216,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        -1.7
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        -1.275
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        -0.85
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        0
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        2.82,
+        2.4,
+        1.7
+      ],
+      "roofY": 4.277819086437523,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        -1.7
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        -1.275
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        -0.85
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        0
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.4,
+        2.4,
+        1.7
+      ],
+      "roofY": 4.556219088084298,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        -1.7
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        -1.275
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        -0.85
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        0
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        3.98,
+        2.4,
+        1.7
+      ],
+      "roofY": 4.27781905489643,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        0
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        4.56,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.999419021708561,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        0
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.14,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.721018988520692,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        -1.7
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        -1.275
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        -0.85
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        -0.42500000000000004
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        0
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        0.42500000000000004
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        0.8499999999999999
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        1.2750000000000001
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    },
+    {
+      "bay": "repair-hall",
+      "pos": [
+        5.72,
+        2.4,
+        1.7
+      ],
+      "roofY": 3.4426189553328226,
+      "node": "village_court_4",
+      "pass": true
+    }
+  ],
+  "excludedVolume": {
+    "reason": "Hollow smoke shaft intentional aperture, separately tested in court-forge-geometry.json",
+    "x": [
+      -5.2,
+      -4.6
+    ],
+    "z": [
+      -1.1,
+      -0.5
+    ]
+  },
+  "pass": true,
+  "limitations": [
+    "Discrete upward-ray roof coverage, not a watertight mesh or weather simulation.",
+    "The central court is intentionally uncovered; no roof should bridge it."
+  ]
+}

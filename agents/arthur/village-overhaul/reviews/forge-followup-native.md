@@ -1,0 +1,6 @@
+The **BEFORE** image shows the long dark lower bar floating to the right of the smithy sign. The **AFTER** image retains that bar and adds a small dark block above it, separated visibly from the building and sign.
+
+- **New upper cap:** Still visibly disconnected in AFTER. Your supplied ray and geometry results identify it as the court’s positive-X `outer_verge_cap` and establish the 0.307 m nearest-triangle separation; that distance was not visually measured.
+- **Inherited lower board:** Still visibly disconnected in both renders. Your supplied hits identify it as protected B29 geometry, with unchanged triangles, geometry hashes, and frozen GLB SHA. Its position behind the original court envelope is supplied geometry evidence, not an image measurement.
+
+**HOLD.** The new detached cap remains unresolved, and the inherited board remains visibly detached. Neither piece belongs to the forge or smithy sign, so neither can be repaired within the current forge-only edit scope. No repairs have been applied.

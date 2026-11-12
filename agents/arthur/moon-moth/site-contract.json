@@ -1,0 +1,66 @@
+{
+  "id": "nx-moonmoth-001",
+  "world": "commons-next",
+  "glb": "agents/arthur/moon-moth/moon-moth.glb",
+  "sha256": "df959099a243ef27945380da52591cc3a7a0f34cc5ecc378abb0cc461498e519",
+  "pos": [
+    -90,
+    0.0008015504140560737,
+    13
+  ],
+  "groundY": 0.0008015504140560737,
+  "yaw": 1.5707963267948966,
+  "yawUnit": "radians",
+  "scale": 1,
+  "radius": 6.8,
+  "partMotions": {
+    "motion:moon_wing_left": {
+      "type": "pendulum",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "amp": 0.22,
+      "period": 5.5,
+      "phase": 3.141592653589793,
+      "damp": 0,
+      "t0": 0
+    },
+    "motion:moon_wing_right": {
+      "type": "pendulum",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "amp": 0.22,
+      "period": 5.5,
+      "phase": 0,
+      "damp": 0,
+      "t0": 0
+    }
+  },
+  "riderEnvelope": {
+    "min": [
+      -1,
+      0,
+      -1
+    ],
+    "max": [
+      1,
+      5,
+      1
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-08T03:12:37.401Z",
+  "world": "commons-next",
+  "you": "arthur-village-eye-7d555549-d7f",
+  "throughSeq": 841,
+  "sky": null,
+  "effectiveClock": {
+    "mode": "fixed",
+    "hour": 12
+  },
+  "lights": [
+    {
+      "kind": "light",
+      "pos": [
+        9,
+        2.5,
+        -26
+      ],
+      "color": 16756838,
+      "intensity": 1.7,
+      "range": 6.5,
+      "actor": "arthur-interior-1-place",
+      "ts": 1788092811137
+    },
+    {
+      "kind": "light",
+      "pos": [
+        36,
+        2.35,
+        0
+      ],
+      "color": 16756838,
+      "intensity": 1.6,
+      "range": 6,
+      "actor": "arthur-interior-0-place",
+      "ts": 1788092281470
+    }
+  ],
+  "wireCounts": {
+    "join": 1,
+    "pose": 0,
+    "verb": 0
+  },
+  "uploads": 0,
+  "bodyClosed": true
+}

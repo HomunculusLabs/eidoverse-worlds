@@ -1,0 +1,317 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-a872c498-7e5",
+    "view": "first",
+    "startedAt": "2026-09-08T04:25:32.613Z"
+  },
+  "completedAt": "2026-09-08T04:25:32.982Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "cf3ce24cfe49ffb3208aad6b5451ef7431305d0ffd3e605d3c80f45f637ba48d",
+  "bytes": 444283,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-kiln",
+  "view": "approach",
+  "rendererModels": [
+    {
+      "id": "nx-town-kiln",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "loaded": true
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "loaded": true
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "loaded": true
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "loaded": true
+    }
+  ],
+  "companionsBefore": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-kiln-l",
+      "kind": "light",
+      "pos": [
+        18.70823868946895,
+        1.07935,
+        23.848662250734773
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/dc52264c04cfe5bb.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "kind": "thing",
+      "pos": [
+        22.724,
+        -0.04164,
+        27.274
+      ],
+      "yaw": -2.4784945651581642,
+      "scale": 1,
+      "lib": "store/1d9a1c2d95f785b6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "kind": "thing",
+      "pos": [
+        18.419319135343407,
+        -0.02065,
+        21.55118647109554
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "lib": "store/1ad2a6139373b973.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "kind": "thing",
+      "pos": [
+        18.605776095530477,
+        2.4293500000000003,
+        21.773298609435155
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "lib": "store/ecbad90311fc9bff.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "companionsAfter": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-kiln-l",
+      "kind": "light",
+      "pos": [
+        18.70823868946895,
+        1.07935,
+        23.848662250734773
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-approach-ne-lane-002",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/dc52264c04cfe5bb.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-dress-charcoal",
+      "kind": "thing",
+      "pos": [
+        22.724,
+        -0.04164,
+        27.274
+      ],
+      "yaw": -2.4784945651581642,
+      "scale": 1,
+      "lib": "store/1d9a1c2d95f785b6.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b12-kiln-heat-contours",
+      "kind": "thing",
+      "pos": [
+        18.419319135343407,
+        -0.02065,
+        21.55118647109554
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "lib": "store/1ad2a6139373b973.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-kiln-001",
+      "kind": "thing",
+      "pos": [
+        18.605776095530477,
+        2.4293500000000003,
+        21.773298609435155
+      ],
+      "yaw": -2.443242374354201,
+      "scale": 1,
+      "lib": "store/ecbad90311fc9bff.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "bodyPose": {
+    "p": [
+      11.792945105992224,
+      -0.02065,
+      21.43427957164046
+    ],
+    "yaw": 1.4361653393560572,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    5,
+    0,
+    5.5
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-kiln",
+    "lib": "store/3e96c8b074852ddc.glb",
+    "kind": "thing",
+    "pos": [
+      19.158717425740413,
+      -0.02065,
+      22.431975985200914
+    ],
+    "yaw": -2.443242374354201,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.195,
+        0,
+        -1.26
+      ],
+      "max": [
+        2.61,
+        3.111,
+        1.53
+      ],
+      "size": [
+        4.805,
+        3.111,
+        2.791
+      ],
+      "center": [
+        0.207,
+        1.555,
+        0.135
+      ]
+    },
+    "tris": 19768
+  },
+  "targetAfter": {
+    "id": "nx-town-kiln",
+    "lib": "store/3e96c8b074852ddc.glb",
+    "kind": "thing",
+    "pos": [
+      19.158717425740413,
+      -0.02065,
+      22.431975985200914
+    ],
+    "yaw": -2.443242374354201,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -2.195,
+        0,
+        -1.26
+      ],
+      "max": [
+        2.61,
+        3.111,
+        1.53
+      ],
+      "size": [
+        4.805,
+        3.111,
+        2.791
+      ],
+      "center": [
+        0.207,
+        1.555,
+        0.135
+      ]
+    },
+    "tris": 19768
+  },
+  "beforeObservedAt": "2026-09-08T04:25:29.609Z",
+  "afterObservedAt": "2026-09-08T04:25:34.646Z",
+  "protectedBeforeSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "protectedAfterSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "file": "nx-town-kiln-approach.png"
+}

@@ -1,0 +1,121 @@
+{
+  "id": "nx-town-kiln",
+  "sourceSha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+  "kind": "workstation",
+  "verdict": "accepted",
+  "visual": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/final-kiln-belltower.md",
+        "sha256": "4db6e74ec4b1a2d75c9d14e40b74e82f20314b973d9acbdab5533b35119bf315"
+      },
+      {
+        "file": "reviews/nx-town-kiln-assembly-final/front.png",
+        "sha256": "fba3e85316aa68432b0c98ded9a9e8f798a5e26047ea04f275bc398e7a427877"
+      },
+      {
+        "file": "reviews/nx-town-kiln-assembly-final/aerial.png",
+        "sha256": "4346530345e01d05b3ffd9d729c479e37e9b8601ab5f4117738f6160e036352e"
+      },
+      {
+        "file": "reviews/nx-town-kiln-assembly-final/interior.png",
+        "sha256": "0e40d8a73c270698f5f965ea4f425748181b5cbb8db115976a47516527001e1f"
+      }
+    ],
+    "reviewer": "Independent native gpt-6-astra image reviewer; parent adjudication; not Bill taste approval",
+    "verdict": "accepted"
+  },
+  "geometry": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "reviews/parent-native/kiln-geometry.json",
+        "sha256": "69c0a4e1da85137cca56dcf4d275469a15f3dbf3441b6b751985735a53668bb8"
+      }
+    ],
+    "verdict": "passed",
+    "evidence": {
+      "file": "reviews/parent-native/kiln-geometry.json",
+      "sha256": "69c0a4e1da85137cca56dcf4d275469a15f3dbf3441b6b751985735a53668bb8"
+    }
+  },
+  "functional": {
+    "status": "passed",
+    "evidence": {
+      "file": "build/nx-town-kiln-functionality.json",
+      "sha256": "f3a3ee19d5b8acb239cbbe572eab8eff10e3d583d6f9ea3df0a0954c3f498646"
+    },
+    "kind": "workstation",
+    "verdict": "passed"
+  },
+  "sources": [
+    {
+      "file": "build-kiln.ts",
+      "sha256": "8d8b1162af481a7fb5a9208efb8cda13204b285fd3c75dbe691accea08c7176e"
+    },
+    {
+      "file": "kit.ts",
+      "sha256": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+    },
+    {
+      "file": "../assets/glbwrite.ts",
+      "sha256": "9cafcfdd32cae952bd0b7f4f354ae701802cbdf744d052bea51c82da39810121"
+    },
+    {
+      "file": "../assets/mergekit.ts",
+      "sha256": "3571ef4e809c48bc4d1857ace0bdae9d3d3a95e322e659e15e495970ea6afd2c"
+    },
+    {
+      "file": "build-potter.ts",
+      "sha256": "f69f83e38095d983fd1fa5319c2642b64c3d7655b000daa8bc119e9f4dfada94"
+    },
+    {
+      "file": "../cabin-overhaul/verify-player.ts",
+      "sha256": "9374c69b48e18d4f59b09e8803f01610847eb705ae56fe7fa27d0e5a940d6555"
+    },
+    {
+      "file": "../../../tools/core-stub.mjs",
+      "sha256": "cf1aebe36c2e90b0ec66757ff2dffb2ef13130ec89e50f33dd227a086093c866"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.module.js",
+      "sha256": "61134198639a10885daf893fb29669ca26386e2a4cde76e8399f51e329f741f2"
+    },
+    {
+      "file": "../../../client/node_modules/three/build/three.core.js",
+      "sha256": "368dc78835287709a48939e8eb9a7a61d0732098bdf916e56840d458aae9ccf3"
+    },
+    {
+      "file": "verify-approach.ts",
+      "sha256": "8d1cce47cea3b82aa21209f325c274d7809e849f7e6c2972477e4a57e992fb90"
+    },
+    {
+      "file": "../../../client/node_modules/three-mesh-bvh/build/index.module.js",
+      "sha256": "4a1f29ae93208d5f97a1652182c2d3133ce9cf51a6ffffc04f4d20255bf21afe"
+    },
+    {
+      "file": "before/nx-town-kiln.glb",
+      "sha256": "b2a415c8daeb62a1f0ec7614520ca5335612043165ffe3b4c21755424156c545"
+    }
+  ],
+  "routes": [
+    {
+      "file": "build/nx-town-kiln-approach-contract.json",
+      "sha256": "99f0fbb66f970c58d23f5cd392e820035a171a4b77d3f99726797dc41da6e7e8",
+      "mode": "workstation"
+    }
+  ],
+  "deterministic": {
+    "sha256": [
+      "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03",
+      "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03"
+    ],
+    "evidence": {
+      "file": "reviews/parent-nx-town-kiln-determinism.json",
+      "sha256": "753e6b11ab99948da55183af9be8e8ed368890172cf919fa377e2e9f326c27ed"
+    }
+  },
+  "schema": "village-review-v1",
+  "modelSha256": "3e96c8b074852ddc150212f35c8236973751c79633c6d7290bcc44da03211e03"
+}

@@ -1,0 +1,703 @@
+{
+  "id": "nx-court",
+  "lib": "store/77cab2c3cc3a39c7.glb",
+  "kind": "thing",
+  "pos": [
+    18.9,
+    -1.5946487083102603e-8,
+    -14.8
+  ],
+  "yaw": -0.90756,
+  "scale": 1,
+  "parent": null,
+  "comp": {
+    "particles:smoke": {
+      "preset": "smoke",
+      "origin": [
+        -4.9,
+        3.2,
+        -0.8
+      ],
+      "count": 50,
+      "size": 0.4,
+      "speed": 0.35
+    }
+  },
+  "bbox": {
+    "min": [
+      -6.5,
+      -0.2,
+      -2.94
+    ],
+    "max": [
+      6.5,
+      4.169,
+      3
+    ],
+    "size": [
+      13,
+      4.369,
+      5.94
+    ],
+    "center": [
+      0,
+      1.984,
+      0.03
+    ]
+  },
+  "tris": 3426,
+  "sha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e",
+  "terrainY": 0,
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-h2",
+      "min": [
+        -6.308385784372051,
+        -0.035161336131530545,
+        -15.008803763219348
+      ],
+      "max": [
+        -2.53913782008259,
+        2.6096307441665356,
+        -11.149280680467232
+      ]
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "min": [
+        -10.020718779771046,
+        -0.015837086362615927,
+        -8.171362577187848
+      ],
+      "max": [
+        -3.4371854396826698,
+        3.6385024673511825,
+        -4.625043026517595
+      ]
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "min": [
+        7.002999995231628,
+        1.0200000087939298,
+        2.0345000011920953
+      ],
+      "max": [
+        7.743000004768371,
+        1.8800000302516018,
+        2.1544844342470193
+      ]
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "min": [
+        -2.059999990463259,
+        0.100000022502998,
+        2.9574999991059303
+      ],
+      "max": [
+        -1.5400000095367452,
+        0.5199865983449017,
+        3.0299951764941215
+      ]
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "min": [
+        -6.799999952316286,
+        0.3100000023841858,
+        -3.951000051498415
+      ],
+      "max": [
+        -5.200000047683718,
+        0.6499621272087097,
+        -3.8874777126312274
+      ]
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "min": [
+        5.600000095367431,
+        0.6800000071525574,
+        -3.7910000085830684
+      ],
+      "max": [
+        7.199999999999999,
+        0.9800182580947876,
+        -3.7274777889251705
+      ]
+    },
+    {
+      "id": "nx-sign-bakery",
+      "min": [
+        -6.829999988079072,
+        1.850000039788345,
+        1.2249872177839283
+      ],
+      "max": [
+        -6.100000000670553,
+        2.4500129382334745,
+        1.5749999970197681
+      ]
+    },
+    {
+      "id": "nx-sign-smithy",
+      "min": [
+        6.100000000670551,
+        1.850000023841858,
+        -1.5199999973177882
+      ],
+      "max": [
+        6.82999998807907,
+        2.450010061264038,
+        -1.2800055012106868
+      ]
+    },
+    {
+      "id": "nx-cistern",
+      "min": [
+        -2.249999988079072,
+        1.3562301345377684e-8,
+        2.3099999964237212
+      ],
+      "max": [
+        -0.5837703227996838,
+        0.7555339495860135,
+        3.140000456571579
+      ]
+    }
+  ],
+  "assembly": [
+    {
+      "id": "nx-forge",
+      "lib": "store/620120c4d6f0b4a0.glb",
+      "pos": [
+        22.11785473473295,
+        0,
+        -7.957568494595163
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/village-overhaul/build/forge.glb",
+      "sha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "hostLocalBounds": {
+        "min": [
+          6.500381742000579,
+          -0.004999996048947678,
+          0.8999999899864211
+        ],
+        "max": [
+          8.833000038146972,
+          2.0999999205790556,
+          2.2869370718002333
+        ]
+      },
+      "protected": false
+    },
+    {
+      "id": "nx-town-roads",
+      "lib": "store/3b76b621559fa1a1.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-roads.glb",
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "hostLocalBounds": {
+        "min": [
+          -28.9315086180089,
+          -0.04999998479857098,
+          -4.952603390410008
+        ],
+        "max": [
+          28.984084911236614,
+          2.8900413672648466,
+          52.96299013883551
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "lib": "store/e815a897c7d73373.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-streetlamps.glb",
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "hostLocalBounds": {
+        "min": [
+          -9.736903699286447,
+          3.978834534853022e-8,
+          14.242001528312443
+        ],
+        "max": [
+          9.789479992514163,
+          2.5599999587260283,
+          33.76838522011305
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-h2",
+      "lib": "store/f14d70564a107879.glb",
+      "pos": [
+        27,
+        -0.03516135170548859,
+        -27
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/neighbors/nx-artwalk-h2.glb",
+      "sha256": "93ee3f01223c31f6d3693be28846301b2124e44351a42610cfdd7fc1d200640b",
+      "hostLocalBounds": {
+        "min": [
+          -6.308385784372051,
+          -0.035161336131530545,
+          -15.008803763219348
+        ],
+        "max": [
+          -2.53913782008259,
+          2.6096307441665356,
+          -11.149280680467232
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "lib": "store/3c48f921d262907a.glb",
+      "pos": [
+        19.79898987322333,
+        -0.015837100520963706,
+        -24.041630560342615
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-h5.glb",
+      "sha256": "22d786a4e7b64851f140ab36c8216cd62d3f83363210768e3b96e48ca2966e9b",
+      "hostLocalBounds": {
+        "min": [
+          -10.020718779771046,
+          -0.015837086362615927,
+          -8.171362577187848
+        ],
+        "max": [
+          -3.4371854396826698,
+          3.6385024673511825,
+          -4.625043026517595
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "lib": "store/54555b39274bc00c.glb",
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b16-forge-seven-strikes.glb",
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "hostLocalBounds": {
+        "min": [
+          7.002999995231628,
+          1.0200000087939298,
+          2.0345000011920953
+        ],
+        "max": [
+          7.743000004768371,
+          1.8800000302516018,
+          2.1544844342470193
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "lib": "store/8d9419e5c2d9e3e7.glb",
+      "pos": [
+        15.443541965497799,
+        0.31,
+        -14.383709409516388
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b23-cistern-rain-count.glb",
+      "sha256": "1cb32012817cb1d9afce50f4295e15afb6b3bb711a69d297d7d25bfd8b984d5f",
+      "hostLocalBounds": {
+        "min": [
+          -2.059999990463259,
+          0.100000022502998,
+          2.9574999991059303
+        ],
+        "max": [
+          -1.5400000095367452,
+          0.5199865983449017,
+          3.0299951764941215
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "lib": "store/18c1bb5da4328ae7.glb",
+      "pos": [
+        18.593536600282096,
+        -1.5946487083102603e-8,
+        -18.367647009533506
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b28-bake-count.glb",
+      "sha256": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+      "hostLocalBounds": {
+        "min": [
+          -6.799999952316286,
+          0.3100000023841858,
+          -3.951000051498415
+        ],
+        "max": [
+          -5.200000047683718,
+          0.6499621272087097,
+          -3.8874777126312274
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "lib": "store/a7df548e06d1412d.glb",
+      "pos": [
+        22.347652212343093,
+        -1.5946487083102603e-8,
+        -13.43276950636487
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-artwalk-b29-strike-count.glb",
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "hostLocalBounds": {
+        "min": [
+          5.600000095367431,
+          0.6800000071525574,
+          -3.7910000085830684
+        ],
+        "max": [
+          7.199999999999999,
+          0.9800182580947876,
+          -3.7274777889251705
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-town-hall",
+      "lib": "store/c92c1f91ed4fd45f.glb",
+      "pos": [
+        9,
+        0,
+        -26
+      ],
+      "yaw": -0.31322457341772525,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-town-hall.glb",
+      "sha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16",
+      "hostLocalBounds": {
+        "min": [
+          -20.966450785259102,
+          -0.19999998703374516,
+          -4.743158335917978
+        ],
+        "max": [
+          -8.10163514468584,
+          6.168667809220413,
+          7.699058595102359
+        ]
+      },
+      "protected": false
+    },
+    {
+      "id": "nx-sign-bakery",
+      "lib": "store/49342c523aee4d41.glb",
+      "pos": [
+        14.022735609615019,
+        0,
+        -18.768525175210893
+      ],
+      "yaw": 2.234032653589793,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-bakery.glb",
+      "sha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+      "hostLocalBounds": {
+        "min": [
+          -6.829999988079072,
+          1.850000039788345,
+          1.2249872177839283
+        ],
+        "max": [
+          -6.100000000670553,
+          2.4500129382334745,
+          1.5749999970197681
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-sign-smithy",
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-sign-smithy.glb",
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "hostLocalBounds": {
+        "min": [
+          6.100000000670551,
+          1.850000023841858,
+          -1.5199999973177882
+        ],
+        "max": [
+          6.82999998807907,
+          2.450010061264038,
+          -1.2800055012106868
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-core-paths",
+      "lib": "store/c31b6e3f22641e14.glb",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-core-paths.glb",
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "hostLocalBounds": {
+        "min": [
+          -20.957361860778533,
+          -0.00148067111390631,
+          0.47876410924743595
+        ],
+        "max": [
+          21.43132164921257,
+          0.0582761998497044,
+          43.60695194637354
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "lib": "store/65d686b023348c9b.glb",
+      "pos": [
+        24.765,
+        0,
+        -4.57
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-dress-ne-anvilpad-001.glb",
+      "sha256": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+      "hostLocalBounds": {
+        "min": [
+          10.252185808680771,
+          1.6840556734749448e-8,
+          0.8766646681695853
+        ],
+        "max": [
+          12.872185813449143,
+          1.1899944703303371,
+          2.4766646920114432
+        ]
+      },
+      "protected": true
+    },
+    {
+      "id": "nx-cistern",
+      "lib": "store/156b4fc8c7287a9d.glb",
+      "pos": [
+        15.703583236444484,
+        0,
+        -14.586880611718946
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "file": "agents/arthur/village-overhaul/before/nx-cistern.glb",
+      "sha256": "a73d5f60417acdc0ee66b4905254b345e6bcb983d07a84fb954c199147056647",
+      "hostLocalBounds": {
+        "min": [
+          -2.249999988079072,
+          1.3562301345377684e-8,
+          2.3099999964237212
+        ],
+        "max": [
+          -0.5837703227996838,
+          0.7555339495860135,
+          3.140000456571579
+        ]
+      },
+      "protected": true
+    }
+  ],
+  "doors": [
+    {
+      "name": "bakery-arch",
+      "x": -3.35,
+      "z": [
+        1.4,
+        2.99
+      ],
+      "width": 1.4,
+      "headroom": 2.2,
+      "floorY": 0.2
+    },
+    {
+      "name": "repair-arch",
+      "x": 3.4,
+      "z": [
+        1.4,
+        2.99
+      ],
+      "width": 1.8,
+      "headroom": 2.2,
+      "floorY": 0.2
+    },
+    {
+      "name": "central-court",
+      "x": 0,
+      "z": [
+        0.5,
+        2
+      ],
+      "width": 1.4,
+      "headroom": 2.2,
+      "floorY": 0.2
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "bakery-approach",
+      "pos": [
+        -3.35,
+        0.06320172,
+        3.8
+      ]
+    },
+    {
+      "name": "bakery-ground-edge",
+      "pos": [
+        -3.35,
+        0,
+        3.35
+      ]
+    },
+    {
+      "name": "bakery-landing",
+      "pos": [
+        -3.35,
+        0.2,
+        2.7
+      ]
+    },
+    {
+      "name": "bread-display",
+      "pos": [
+        -3.35,
+        0.2,
+        0.6
+      ]
+    },
+    {
+      "name": "kneading-counter",
+      "pos": [
+        -3.35,
+        0.2,
+        -0.75
+      ]
+    },
+    {
+      "name": "oven-station",
+      "pos": [
+        -3.75,
+        0.2,
+        -0.15
+      ]
+    },
+    {
+      "name": "bakery-side-door",
+      "pos": [
+        -2,
+        0.2,
+        0.1
+      ]
+    },
+    {
+      "name": "shared-court",
+      "pos": [
+        0,
+        0.2,
+        0.1
+      ]
+    },
+    {
+      "name": "repair-side-door",
+      "pos": [
+        2.8,
+        0.2,
+        0.1
+      ]
+    },
+    {
+      "name": "ironware-bench",
+      "pos": [
+        3.2,
+        0.2,
+        -0.75
+      ]
+    },
+    {
+      "name": "anvil-quench-station",
+      "pos": [
+        4.03,
+        0.2,
+        0.45
+      ]
+    },
+    {
+      "name": "repair-landing",
+      "pos": [
+        3.4,
+        0.2,
+        2.7
+      ]
+    },
+    {
+      "name": "repair-approach",
+      "pos": [
+        3.4,
+        0,
+        3.8
+      ]
+    }
+  ]
+}

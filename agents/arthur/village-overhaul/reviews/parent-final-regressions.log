@@ -1,0 +1,147 @@
+bun test v1.2.22 (6bafe260)
+
+agents/arthur/village-overhaul/court-verge.test.ts:
+(pass) court verge cap at X=-6.500000000745058 connects to real structure [149.35ms]
+(pass) court verge cap at X=6.399999999254942 connects to real structure [133.79ms]
+
+agents/arthur/village-overhaul/parent-audit.test.ts:
+(pass) parent inspector consumes real approved nx-town-hall routes and frozen neighbors [10931.65ms]
+(pass) parent inspector consumes real approved nx-town-inn routes and frozen neighbors [5878.29ms]
+(pass) market approach cannot be made passing merely by declaring the phantom road-box top as floor [681.26ms]
+(pass) submitted nx-tower.route.json must not certify a physically unsupported approach height [1715.25ms]
+(pass) submitted nx-town-belltower.route.json must not certify a physically unsupported approach height [461.30ms]
+(pass) submitted nx-town-belltower.ladder-approach.json must not certify a physically unsupported approach height [317.45ms]
+(pass) scholar upper route is consumable directly by the parent, without an unencoded builder-only proof frame [5172.81ms]
+
+agents/arthur/village-overhaul/verify-approach.test.ts:
+(pass) cloned high-yaw road neighbors preserve the actual public scalar-yaw support path [735.80ms]
+(pass) external workstation approach executes real box collider without pretending it is a room [0.64ms]
+(pass) external access rejects a high neighbor beam missed by the hip collider [4.14ms]
+(pass) vacuous one-point routes are refused, not reported as passing access
+(pass) declared floating approach elevations do not become physical ground [0.40ms]
+
+agents/arthur/village-overhaul/rollout.test.ts:
+(pass) exact frozen campaign allows a READY approval subset, never narrowed baselines or migrations [48.47ms]
+(pass) model, transitive sources and acceptance evidence are hash-pinned and confined [7.65ms]
+(pass) focused live gate protects every unselected host and exact originals, but permits unrelated new arrivals [14.80ms]
+(pass) only explicitly evidenced eligible collision amendments alter spawn-only collide in the real fold [0.98ms]
+(pass) full GLB decoding traverses real default-scene triangles and refuses malformed or external content [19.75ms]
+(pass) midflight shared-fold scope accepts distant new entities but stops intruders, riders and lost ACKs [10.12ms]
+(pass) parent preflight must bind exact local/served bytes, fresh context and bounded geometry coverage without invented residuals [1.30ms]
+(pass) OFFLINE injected network: complete dry-run writes nothing; focused apply/readback then rerun is no-op [104.49ms]
+(pass) OFFLINE retry/drift: 429 is paced and regated; changed sources or malformed served bytes never reach remove [94.93ms]
+(pass) successful send without authoritative receipt cannot claim completion [46.60ms]
+(pass) CLI rejects invalid options before loading credentials, approval, or preflight [0.23ms]
+(pass) OFFLINE network adapter uses read-only snapshots and actual cabin ACK transport, checking before each send [712.40ms]
+(pass) loader audits every saved original byte without importing builders or touching credentials [10.25ms]
+(pass) paced upload resumes from the previous process attempt timestamp [62.72ms]
+(pass) all 17 real captured host component bags roundtrip through unchanged core and actual shared fold [1.83ms]
+(pass) only a pinned passing collision evidence report admits an eligible functional type [3.18ms]
+(pass) regional protection permits unrelated outside carousel drift but refuses neighbor movement into or out of scope [7.37ms]
+(pass) persistent upload clock reads only recorded attempts and refuses corrupt receipts [2.97ms]
+(pass) affected region must contain the removed original extent, not merely the smaller candidate [2.18ms]
+(pass) CLI is dry-run by default and has an exact focused target
+
+agents/arthur/village-overhaul/live-eye.test.ts:
+(pass) explicit subset contracts fail closed on cross-scope IDs and immutable tuple drift [3.55ms]
+(pass) immutable unavailable manifest contains all requested views and no join [6.15ms]
+(pass) actual HTTP PNG bytes and exact per-frame tuples survive a pose-only capture [75.33ms]
+(pass) renderer endpoint and health require connected exact world and identity, never just HUD [0.27ms]
+(pass) public-client guard enforces whitelist on a real browser WebSocket and correlates snap replies [716.19ms]
+(pass) temporary renderer is scoped and always closed on completed or failed work [0.44ms]
+(pass) CLI requires explicit target subset, expected contract, phase, and campaign output [0.26ms]
+(pass) frozen protected records use their geom contract, not wrapper IDs [0.84ms]
+(pass) pre-existing protected drift is reported while capture-start tuples are frozen for read-only evidence [0.14ms]
+(pass) nearby companions are selected in the host world frame, excluding unrelated carousel [0.94ms]
+(pass) renderer preparation waits for real models instead of capturing streaming placeholder boxes [243.06ms]
+(pass) wire whitelist admits only owned stationary presence or renderer protocol [0.57ms]
+
+agents/arthur/village-overhaul/preflight.test.ts:
+(pass) terrain binding tolerates only negligible captured pose roundoff, not raised phantom floors [1.02ms]
+(pass) world-zero terrain datum converts to a lowered host frame without lifting waypoints [0.12ms]
+(pass) explicit quarter-turn proof frames rotate the whole assembly and route, without changing world placement or mutating inputs [0.53ms]
+(pass) preflight refuses content/source/route binding drift before decoding [0.34ms]
+(pass) bidirectional surface proof rejects hidden displacement despite equal outer bounds [3.62ms]
+(pass) full inspection refuses unbound source before any runtime network or file operation [0.86ms]
+(pass) live neighbor adapter keeps loaded wrapper and composes neighbor into host, never reversed
+
+agents/arthur/village-overhaul/assembly.test.ts:
+(pass) neighbor selection uses transformed mesh extents, not center distance, including road networks [0.18ms]
+(pass) inverted decoded bounds cannot silently skip an obstacle
+
+agents/arthur/cabin-overhaul/verify-player.test.ts:
+(pass) actual browser collider and triangle corridor agree on an open door [7.39ms]
+(pass) sub-1.4m width is refused even when the avatar fits [6.16ms]
+(pass) sub-2.2m headroom is refused even above the browser hip probe [4.89ms]
+(pass) a triangle crossing the corridor is caught with all its corners outside [4.50ms]
+(pass) explicit host backing allowance protects rider space without exempting a whole host [8.71ms]
+(pass) a high side beam inside the body's radius blocks the whole sweep [4.32ms]
+(pass) non-finite required door width is a schema error, not a geometry verdict [0.57ms]
+(pass) a separately fitted neighboring side beam participates in the player's sweep [4.98ms]
+(pass) world-space neighbor transforms are composed into the host frame [0.22ms]
+(pass) an explicit public runtime reports the exact pinned module bytes [50.12ms]
+(pass) a documented threshold step is stepped onto and off without invented lateral motion [4.13ms]
+
+agents/arthur/cabin-overhaul/rollout.test.ts:
+(pass) fresh folded-host drift blocks the preapply gate even when /geom is unchanged [0.23ms]
+(pass) a no-op rejects missing/nonfinite/wrong reviewed bounds instead of claiming success
+(pass) live-folded join snapshots do not replay their overlapping tail twice [0.37ms]
+(pass) paced sequences wait for the matching authoritative echo before sending the next verb
+(pass) observed scope drift aborts before the next write and cannot be retried in-session [0.08ms]
+(pass) optional migration is limited to the exact b17 source and +0.54m destination [0.08ms]
+(pass) migration uses only place, preserves folded provenance and bags, and recognizes rollback endpoints [0.15ms]
+(pass) host sequence finishes respawn/comps before its optional rider-only place and resumes migration-only [0.23ms]
+(pass) protection allows only approved b17 endpoints, keeps every other companion exact, and rejects riders
+(pass) transport aborts on disconnect after remove instead of sending spawn blindly [703.23ms]
+(pass) unrestorable spawn parameters and server-truncated component payloads fail before remove [1.25ms]
+(pass) complete no-op readback fetches actual served bytes and rejects malformed chunk framing [1.46ms]
+(pass) missing log entries and malformed snapshot sequence metadata fail closed [1.31ms]
+(pass) a stale/boundary snapshot whose tail changes folded host params cannot authorize a write [0.20ms]
+(pass) transport waits through a slow handshake instead of treating CONNECTING as failure [1408.41ms]
+(pass) rollout is import-safe without approval or a live connection [0.40ms]
+(pass) replacement roundtrips the folded collision override and complete comp bag [1.05ms]
+
+agents/arthur/cabin-overhaul/live-eye.test.ts:
+(pass) all five targets receive explicit unavailable evidence on a 503, without joining [7.90ms]
+(pass) a serving snapshot path captures actual HTTP PNG bytes via pose-only WS [70.30ms]
+(pass) the no-verbs encoder refuses any authored world message [0.11ms]
+(pass) an absent real snapshot renderer is recorded, never promoted to an image [2.11ms]
+
+agents/arthur/cabin-overhaul/temporary-renderer.test.ts:
+(pass) temporary renderer targets only the commissioned world and never embeds a key in URL [1.09ms]
+
+agents/arthur/cabin-overhaul/capture.test.ts:
+(pass) capture does not replay an already-folded join tail or corrupt its input snapshot [1.65ms]
+(pass) capture refuses an ambiguous entity fold before persisting any baseline [0.11ms]
+
+agents/arthur/cabin-overhaul/render.test.ts:
+{"status":"RENDERED","evidenceKind":"local-solo-render-not-in-world","modelSha256":"44f475cd75bfc239105fd14034086c43bebc993cb0325ce00d8a57eb10241963","cameraSha256":"f05488307c89308d3e7a2e7ed3ac3aea7e3f15c91f44e0afb54256dc16107a41","views":9,"meshes":29,"triangles":1320,"errors":[],"warnings":["[.WebGL-0x124004e6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels","[.WebGL-0x124004e6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels","[.WebGL-0x124004e6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels","[.WebGL-0x124004e6600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"],"outDir":"/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/reviews/before-row"}
+
+(pass) Draco baseline renders all nine requested local views with exact-byte evidence [1590.92ms]
+(pass) a different Draco model preserves the baseline cameras and lighting exactly [1283.66ms]
+
+agents/arthur/cabin-overhaul/contracts.test.ts:
+(pass) explicit same-pose bounded replacement is admitted [0.08ms]
+(pass) already exact live state emits no replacement
+(pass) unknown lib drift fails closed [0.08ms]
+(pass) pose drift fails closed even if lib is known
+(pass) component value drift fails closed [0.03ms]
+(pass) array/object ordering semantics preserve structural bags [0.13ms]
+(pass) larger footprint is not silently allowed [0.06ms]
+(pass) source/lib identity must match [0.02ms]
+(pass) nonhex SHA cannot authorize bytes [0.03ms]
+(pass) NaN yaw cannot pass equality [0.01ms]
+(pass) missing target is not an idempotent noop [0.02ms]
+(pass) replacement restores full component values after destructive spawn [0.08ms]
+(pass) locked model is never silently unlocked [0.03ms]
+(pass) rider exact contract protected, extra comp forbidden [0.03ms]
+
+agents/arthur/village-overhaul/build/forge-followup.test.ts:
+(pass) distance implementation measures disjoint parallel triangle planes [1.11ms]
+(pass) ownership: upper cap is new court architecture; lower bar is frozen B29 [0.06ms]
+(pass) REPAIR ACCEPTANCE: outer_verge_cap must physically connect to court architecture [0.01ms]
+
+ 109 pass
+ 0 fail
+ 633 expect() calls
+Ran 109 tests across 15 files. [33.93s]

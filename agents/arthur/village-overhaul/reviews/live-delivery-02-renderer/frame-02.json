@@ -1,0 +1,221 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-a872c498-7e5",
+    "view": "first",
+    "startedAt": "2026-09-08T04:24:48.712Z"
+  },
+  "completedAt": "2026-09-08T04:24:49.539Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "67c9b3aebf742a73e53e8fd377003be342f9983029d726221f6cef4fcc9e3dfc",
+  "bytes": 850710,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-town-stable",
+  "view": "approach",
+  "rendererModels": [
+    {
+      "id": "nx-town-stable",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b8-stable-harmonic-rein",
+      "loaded": true
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "loaded": true
+    }
+  ],
+  "companionsBefore": [
+    {
+      "id": "nx-artwalk-b8-stable-harmonic-rein",
+      "kind": "thing",
+      "pos": [
+        45.16,
+        2.22,
+        -1.3226185430791415e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/cba8d0efb0518938.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-stable-l",
+      "kind": "light",
+      "pos": [
+        43,
+        1.9,
+        1.8
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "kind": "thing",
+      "pos": [
+        40.9,
+        0,
+        1.285879139104721e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/afee37dd9a5b5d67.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "companionsAfter": [
+    {
+      "id": "nx-artwalk-b8-stable-harmonic-rein",
+      "kind": "thing",
+      "pos": [
+        45.16,
+        2.22,
+        -1.3226185430791415e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/cba8d0efb0518938.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-town-stable-l",
+      "kind": "light",
+      "pos": [
+        43,
+        1.9,
+        1.8
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-stable-001",
+      "kind": "thing",
+      "pos": [
+        40.9,
+        0,
+        1.285879139104721e-16
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": 1,
+      "lib": "store/afee37dd9a5b5d67.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "bodyPose": {
+    "p": [
+      51,
+      0,
+      1.9999999999999996
+    ],
+    "yaw": -1.8157749899217608,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    2,
+    0,
+    -8
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-town-stable",
+    "lib": "store/0658345cf7e876a4.glb",
+    "kind": "thing",
+    "pos": [
+      43,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -3,
+        -0.2,
+        -2.775
+      ],
+      "max": [
+        3,
+        4.9,
+        2.575
+      ],
+      "size": [
+        6,
+        5.1,
+        5.35
+      ],
+      "center": [
+        0,
+        2.35,
+        -0.1
+      ]
+    },
+    "tris": 4432
+  },
+  "targetAfter": {
+    "id": "nx-town-stable",
+    "lib": "store/0658345cf7e876a4.glb",
+    "kind": "thing",
+    "pos": [
+      43,
+      0,
+      0
+    ],
+    "yaw": -1.5707963267948966,
+    "scale": 1,
+    "parent": null,
+    "comp": {},
+    "bbox": {
+      "min": [
+        -3,
+        -0.2,
+        -2.775
+      ],
+      "max": [
+        3,
+        4.9,
+        2.575
+      ],
+      "size": [
+        6,
+        5.1,
+        5.35
+      ],
+      "center": [
+        0,
+        2.35,
+        -0.1
+      ]
+    },
+    "tris": 4432
+  },
+  "beforeObservedAt": "2026-09-08T04:24:45.703Z",
+  "afterObservedAt": "2026-09-08T04:24:52.483Z",
+  "protectedBeforeSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "protectedAfterSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "file": "nx-town-stable-approach.png"
+}

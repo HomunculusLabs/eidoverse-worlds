@@ -1,0 +1,529 @@
+{
+  "request": {
+    "endpoint": "https://eidoverse.billding.dev/snap",
+    "world": "commons-next",
+    "follow": "arthur-village-eye-3d729595-098",
+    "view": "first",
+    "startedAt": "2026-09-08T02:26:15.865Z"
+  },
+  "completedAt": "2026-09-08T02:26:16.334Z",
+  "httpStatus": 200,
+  "contentType": "image/png",
+  "cacheControl": "no-store",
+  "status": "CAPTURED",
+  "pngSha256": "6910e68db3453398f4c55531d1f97598e44234a6fa43345f7fe19e7a02009958",
+  "bytes": 325225,
+  "width": 1280,
+  "height": 960,
+  "id": "nx-court",
+  "view": "approach",
+  "rendererModels": [
+    {
+      "id": "nx-court",
+      "loaded": true
+    },
+    {
+      "id": "nx-town-roads",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "loaded": true
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "loaded": true
+    },
+    {
+      "id": "nx-sign-bakery",
+      "loaded": true
+    },
+    {
+      "id": "nx-sign-smithy",
+      "loaded": true
+    },
+    {
+      "id": "nx-core-paths",
+      "loaded": true
+    },
+    {
+      "id": "nx-cistern",
+      "loaded": true
+    }
+  ],
+  "companionsBefore": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-forge-l",
+      "kind": "light",
+      "pos": [
+        21.60565223135312,
+        1.5,
+        -7.557382793287093
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "kind": "thing",
+      "pos": [
+        19.79898987322333,
+        -0.015837100520963706,
+        -24.041630560342615
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/3c48f921d262907a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5-l-right",
+      "kind": "light",
+      "pos": [
+        21.20613236778456,
+        0.6041628994790363,
+        -22.125371183327072
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "kind": "thing",
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/54555b39274bc00c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "kind": "thing",
+      "pos": [
+        15.443541965497799,
+        0.31,
+        -14.383709409516388
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/8d9419e5c2d9e3e7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "kind": "thing",
+      "pos": [
+        18.593536600282096,
+        -1.5946487083102603e-8,
+        -18.367647009533506
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/18c1bb5da4328ae7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "kind": "thing",
+      "pos": [
+        22.347652212343093,
+        -1.5946487083102603e-8,
+        -13.43276950636487
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/a7df548e06d1412d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-bakery",
+      "kind": "thing",
+      "pos": [
+        14.022735609615019,
+        0,
+        -18.768525175210893
+      ],
+      "yaw": 2.234032653589793,
+      "scale": 1,
+      "lib": "store/49342c523aee4d41.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-smithy",
+      "kind": "thing",
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-core-paths",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/c31b6e3f22641e14.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cistern",
+      "kind": "thing",
+      "pos": [
+        15.703583236444484,
+        0,
+        -14.586880611718946
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/156b4fc8c7287a9d.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "companionsAfter": [
+    {
+      "id": "nx-town-roads",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3b76b621559fa1a1.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-forge-l",
+      "kind": "light",
+      "pos": [
+        21.60565223135312,
+        1.5,
+        -7.557382793287093
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "kind": "thing",
+      "pos": [
+        19.79898987322333,
+        -0.015837100520963706,
+        -24.041630560342615
+      ],
+      "yaw": -0.7853981633974483,
+      "scale": 1,
+      "lib": "store/3c48f921d262907a.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-h5-l-right",
+      "kind": "light",
+      "pos": [
+        21.20613236778456,
+        0.6041628994790363,
+        -22.125371183327072
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": null,
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "kind": "thing",
+      "pos": [
+        21.81053323270505,
+        1.02,
+        -7.717457073810321
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/54555b39274bc00c.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "kind": "thing",
+      "pos": [
+        15.443541965497799,
+        0.31,
+        -14.383709409516388
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/8d9419e5c2d9e3e7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "kind": "thing",
+      "pos": [
+        18.593536600282096,
+        -1.5946487083102603e-8,
+        -18.367647009533506
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/18c1bb5da4328ae7.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "kind": "thing",
+      "pos": [
+        22.347652212343093,
+        -1.5946487083102603e-8,
+        -13.43276950636487
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/a7df548e06d1412d.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-bakery",
+      "kind": "thing",
+      "pos": [
+        14.022735609615019,
+        0,
+        -18.768525175210893
+      ],
+      "yaw": 2.234032653589793,
+      "scale": 1,
+      "lib": "store/49342c523aee4d41.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-sign-smithy",
+      "kind": "thing",
+      "pos": [
+        23.777264390384975,
+        -1.5946487083102603e-8,
+        -10.831474824789108
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/3522e5ab0c3a5100.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-core-paths",
+      "kind": "thing",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "scale": 1,
+      "lib": "store/c31b6e3f22641e14.glb",
+      "parent": null,
+      "comp": {}
+    },
+    {
+      "id": "nx-cistern",
+      "kind": "thing",
+      "pos": [
+        15.703583236444484,
+        0,
+        -14.586880611718946
+      ],
+      "yaw": -0.90756,
+      "scale": 1,
+      "lib": "store/156b4fc8c7287a9d.glb",
+      "parent": null,
+      "comp": {}
+    }
+  ],
+  "bodyPose": {
+    "p": [
+      5.503934526988974,
+      -1.5946487083102603e-8,
+      -4.333604735019705
+    ],
+    "yaw": 2.2340326535897934,
+    "speed": 0,
+    "clip": "idle"
+  },
+  "requestedBodyLocal": [
+    0,
+    0,
+    17
+  ],
+  "requestedLookLocal": [
+    0,
+    0,
+    0
+  ],
+  "targetBefore": {
+    "id": "nx-court",
+    "lib": "store/77cab2c3cc3a39c7.glb",
+    "kind": "thing",
+    "pos": [
+      18.9,
+      -1.5946487083102603e-8,
+      -14.8
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "particles:smoke": {
+        "preset": "smoke",
+        "origin": [
+          -4.9,
+          3.2,
+          -0.8
+        ],
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35
+      }
+    },
+    "bbox": {
+      "min": [
+        -6.5,
+        -0.2,
+        -2.94
+      ],
+      "max": [
+        6.5,
+        4.169,
+        3
+      ],
+      "size": [
+        13,
+        4.369,
+        5.94
+      ],
+      "center": [
+        0,
+        1.984,
+        0.03
+      ]
+    },
+    "tris": 3426
+  },
+  "targetAfter": {
+    "id": "nx-court",
+    "lib": "store/77cab2c3cc3a39c7.glb",
+    "kind": "thing",
+    "pos": [
+      18.9,
+      -1.5946487083102603e-8,
+      -14.8
+    ],
+    "yaw": -0.90756,
+    "scale": 1,
+    "parent": null,
+    "comp": {
+      "particles:smoke": {
+        "preset": "smoke",
+        "origin": [
+          -4.9,
+          3.2,
+          -0.8
+        ],
+        "count": 50,
+        "size": 0.4,
+        "speed": 0.35
+      }
+    },
+    "bbox": {
+      "min": [
+        -6.5,
+        -0.2,
+        -2.94
+      ],
+      "max": [
+        6.5,
+        4.169,
+        3
+      ],
+      "size": [
+        13,
+        4.369,
+        5.94
+      ],
+      "center": [
+        0,
+        1.984,
+        0.03
+      ]
+    },
+    "tris": 3426
+  },
+  "beforeObservedAt": "2026-09-08T02:26:12.859Z",
+  "afterObservedAt": "2026-09-08T02:26:18.220Z",
+  "protectedBeforeSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "protectedAfterSha256": "eaa3eaa63ef7d206b401feeb5ccf27fb82b1a2e7f0e0997bdd0e7544dfe5ad33",
+  "file": "nx-court-approach.png"
+}

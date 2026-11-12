@@ -1,0 +1,555 @@
+{
+  "evidenceKind": "read-only-actual-runtime-clone-reproduction-not-fixed-parent-inspector",
+  "modelSha256": "648ca0c0148cf1cc7ef7197b0eddbfdf6e755c1c22ecd855b28916fd7ec17a1b",
+  "routeSha256": "6fbe952600b98319aa822318baea15fd33ae14624b0aa5794c0e4ef1c5f19e27",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "results": [
+    {
+      "mode": "original",
+      "support": 0,
+      "pos": [
+        0.4,
+        0,
+        3.95
+      ],
+      "maxMatrixError": 0,
+      "rotations": [
+        {
+          "id": "nx-shutters",
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "nx-town-roads",
+          "rotation": [
+            0,
+            5.585062653589793,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.34201589252490033,
+            0,
+            -0.9396941679399717
+          ]
+        },
+        {
+          "id": "nx-town-streetlamps",
+          "rotation": [
+            0,
+            5.585062653589793,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.34201589252490033,
+            0,
+            -0.9396941679399717
+          ]
+        },
+        {
+          "id": "nx-artwalk-b19-longhouse-feast-count",
+          "rotation": [
+            0,
+            -0.38489808017206784,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.19126329394046757,
+            0,
+            0.9815387676454977
+          ]
+        },
+        {
+          "id": "nx-approach-ne-lane-002",
+          "rotation": [
+            0,
+            2.44347,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.9396941679399718,
+            0,
+            0.34201589252490006
+          ]
+        },
+        {
+          "id": "nx-core-paths",
+          "rotation": [
+            0,
+            2.44347,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.9396941679399718,
+            0,
+            0.34201589252490006
+          ]
+        },
+        {
+          "id": "nx-artwalk-b3-ruled-porch",
+          "rotation": [
+            0,
+            0.5459345883541806,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.2695900499987554,
+            0,
+            0.9629751839697992
+          ]
+        },
+        {
+          "id": "nx-town-kiln",
+          "rotation": [
+            0,
+            0.00022762564579892341,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.00011381282265375199,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-artwalk-b12-kiln-heat-contours",
+          "rotation": [
+            0,
+            0.00022762564579892341,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.00011381282265375199,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-sign-kiln-001",
+          "rotation": [
+            0,
+            0.00022762564579892341,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.00011381282265375199,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-town-longhouse",
+          "rotation": [
+            0,
+            -0.38489808017206784,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.19126329394046757,
+            0,
+            0.9815387676454977
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "clone",
+      "support": 0.058276183903217316,
+      "pos": [
+        0.4,
+        0,
+        3.95
+      ],
+      "maxMatrixError": 0,
+      "rotations": [
+        {
+          "id": "nx-shutters",
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "nx-town-roads",
+          "rotation": [
+            0,
+            -0.6981226535897938,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.34201589252490033,
+            0,
+            -0.9396941679399717
+          ]
+        },
+        {
+          "id": "nx-town-streetlamps",
+          "rotation": [
+            0,
+            -0.6981226535897938,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.34201589252490033,
+            0,
+            -0.9396941679399717
+          ]
+        },
+        {
+          "id": "nx-artwalk-b19-longhouse-feast-count",
+          "rotation": [
+            0,
+            -0.38489808017206784,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.19126329394046757,
+            0,
+            0.9815387676454977
+          ]
+        },
+        {
+          "id": "nx-approach-ne-lane-002",
+          "rotation": [
+            -3.141592653589793,
+            0.6981226535897932,
+            -3.141592653589793,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.9396941679399718,
+            0,
+            0.34201589252490006
+          ]
+        },
+        {
+          "id": "nx-core-paths",
+          "rotation": [
+            -3.141592653589793,
+            0.6981226535897932,
+            -3.141592653589793,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.9396941679399718,
+            0,
+            0.34201589252490006
+          ]
+        },
+        {
+          "id": "nx-artwalk-b3-ruled-porch",
+          "rotation": [
+            0,
+            0.5459345883541806,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.2695900499987554,
+            0,
+            0.9629751839697992
+          ]
+        },
+        {
+          "id": "nx-town-kiln",
+          "rotation": [
+            0,
+            0.00022762564579892344,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.00011381282265375199,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-artwalk-b12-kiln-heat-contours",
+          "rotation": [
+            0,
+            0.00022762564579892344,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.00011381282265375199,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-sign-kiln-001",
+          "rotation": [
+            0,
+            0.00022762564579892344,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.00011381282265375199,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-town-longhouse",
+          "rotation": [
+            0,
+            -0.38489808017206784,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.19126329394046757,
+            0,
+            0.9815387676454977
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "clone-with-same-matrix-pure-yaw",
+      "support": 0,
+      "pos": [
+        0.4,
+        0,
+        3.95
+      ],
+      "maxMatrixError": 1.1102230246251565e-16,
+      "rotations": [
+        {
+          "id": "nx-shutters",
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "nx-town-roads",
+          "rotation": [
+            0,
+            -0.6981226535897938,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.3420158925249003,
+            0,
+            0.9396941679399717
+          ]
+        },
+        {
+          "id": "nx-town-streetlamps",
+          "rotation": [
+            0,
+            -0.6981226535897938,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.3420158925249003,
+            0,
+            0.9396941679399717
+          ]
+        },
+        {
+          "id": "nx-artwalk-b19-longhouse-feast-count",
+          "rotation": [
+            0,
+            -0.3848980801720679,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.1912632939404676,
+            0,
+            0.9815387676454976
+          ]
+        },
+        {
+          "id": "nx-approach-ne-lane-002",
+          "rotation": [
+            0,
+            2.44347,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.9396941679399718,
+            0,
+            0.34201589252490006
+          ]
+        },
+        {
+          "id": "nx-core-paths",
+          "rotation": [
+            0,
+            2.44347,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.9396941679399718,
+            0,
+            0.34201589252490006
+          ]
+        },
+        {
+          "id": "nx-artwalk-b3-ruled-porch",
+          "rotation": [
+            0,
+            0.5459345883541806,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.2695900499987554,
+            0,
+            0.9629751839697992
+          ]
+        },
+        {
+          "id": "nx-town-kiln",
+          "rotation": [
+            0,
+            0.00022762564579892344,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.000113812822653752,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-artwalk-b12-kiln-heat-contours",
+          "rotation": [
+            0,
+            0.00022762564579892344,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.000113812822653752,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-sign-kiln-001",
+          "rotation": [
+            0,
+            0.00022762564579892344,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            0.000113812822653752,
+            0,
+            0.9999999935233207
+          ]
+        },
+        {
+          "id": "nx-town-longhouse",
+          "rotation": [
+            0,
+            -0.3848980801720679,
+            0,
+            "XYZ"
+          ],
+          "quaternion": [
+            0,
+            -0.1912632939404676,
+            0,
+            0.9815387676454976
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": "Clone preserves the quaternion but may introduce X/Z Euler PI aliases. Public colliders read rotation.y only. Normalize the same matrix to pure-Y after every clone and rigid frame transform. This changes representation, not geometry, road data, neighbor coverage or placement."
+}

@@ -1,0 +1,35 @@
+OpenAI Codex v0.153.4
+--------
+workdir: /Users/t3rpz/projects/eidoverse-worlds
+model: gpt-6-astra
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 01a07f06-ce3e-7bd0-9e7f-7b62e0303abf
+--------
+user
+Native visual review only. No tools, shell, file edits, web, or extra image processing. Confirm actual sight. Six images in order: 1 GENUINE LIVE corrected inn porch, from central aisle facing sideways across settle/table/sign; 2 GENUINE LIVE corrected inn interior from east aisle facing doorway with central bulb intended outside frustum; 3 LOCAL EXACT SERVED-BYTE DAYLIGHT/FILL hall doorway interior; 4 LOCAL EXACT SERVED-BYTE DAYLIGHT/FILL inn rear-left detail; 5 LOCAL EXACT SERVED-BYTE DAYLIGHT/FILL corrected inn porch; 6 LOCAL EXACT SERVED-BYTE DAYLIGHT/FILL corrected inn east-aisle interior. Local images are prominently labeled and use the same observed cameras as corresponding live frames, downloaded served host bytes and synthetic ambient/hemi/directional fill. They omit world terrain/neighbors/weather, authored point-light gizmos and world postprocessing. They are NOT live, a lighting fix or walkability proof. Live exposure/lights/sky were unmodified; live diagnostics found dayness=1 and authored point-light intensity zero after runtime daytime dimming, not verified night. Judge whether corrected live porch separates sign/table/settle more usefully and live interior reduces lamp dominance while establishing doorway/circulation. Record remaining projection ambiguity and darkness honestly. Then judge local supplement legibility and any actual visible material obstruction, floating part or interface issue without claiming hidden physical collisions. Identify best evidence filenames by image number. Keep verdict concise and discriminating; no blanket PASS.
+
+codex
+I can see all six images directly, including the labels on 3–6.
+
+- **Live porch (1):** Settle left, table right, and sign beyond the right post read as distinct objects. This is useful separation, although the post still partly obscures the sign and overlaps the table in projection. The aisle is discernible; deep exterior darkness limits assessment of its continuation.
+- **Live interior (2):** Lamp dominance is restrained: small candle/sconce shapes remain, with no large central bulb visible. The doorway and right-hand stair establish the room’s layout. The foreground table overlaps the lower doorway in projection, so the full circulation route remains unproven. Outside and the ceiling remain very dark; that appearance does **not** establish nighttime.
+- **Local supplements (3–6):** Clearly labeled and substantially more legible for geometry and materials. Hall framing and threshold read cleanly in 3; 4 gives the clearest inn doorway/furniture relationship. Matched views 5/6 clarify surfaces lost in live shadow. I see no definite floating part or solid obstruction across a doorway. The small porch tabletop piece appears to rest on the table, though its purpose is unclear. Thin background-colored slivers along some inn window bottoms in 4/6 warrant an interface check; these views cannot establish their cause or hidden collisions.
+
+**Best evidence:** live porch **1 — `nx-town-inn-approach.png`**; live interior **2 — `nx-town-inn-interior.png`**; doorway detail **4 — `nx-town-inn-detail-LOCAL-DAYLIGHT.png`**; hall threshold **3 — `nx-town-hall-interior-LOCAL-DAYLIGHT.png`**.
+
+The corrected views support composition and legibility; they leave darkness, some projected overlaps, and physical clearance unresolved.
+tokens used
+19,801
+I can see all six images directly, including the labels on 3–6.
+
+- **Live porch (1):** Settle left, table right, and sign beyond the right post read as distinct objects. This is useful separation, although the post still partly obscures the sign and overlaps the table in projection. The aisle is discernible; deep exterior darkness limits assessment of its continuation.
+- **Live interior (2):** Lamp dominance is restrained: small candle/sconce shapes remain, with no large central bulb visible. The doorway and right-hand stair establish the room’s layout. The foreground table overlaps the lower doorway in projection, so the full circulation route remains unproven. Outside and the ceiling remain very dark; that appearance does **not** establish nighttime.
+- **Local supplements (3–6):** Clearly labeled and substantially more legible for geometry and materials. Hall framing and threshold read cleanly in 3; 4 gives the clearest inn doorway/furniture relationship. Matched views 5/6 clarify surfaces lost in live shadow. I see no definite floating part or solid obstruction across a doorway. The small porch tabletop piece appears to rest on the table, though its purpose is unclear. Thin background-colored slivers along some inn window bottoms in 4/6 warrant an interface check; these views cannot establish their cause or hidden collisions.
+
+**Best evidence:** live porch **1 — `nx-town-inn-approach.png`**; live interior **2 — `nx-town-inn-interior.png`**; doorway detail **4 — `nx-town-inn-detail-LOCAL-DAYLIGHT.png`**; hall threshold **3 — `nx-town-hall-interior-LOCAL-DAYLIGHT.png`**.
+
+The corrected views support composition and legibility; they leave darkness, some projected overlaps, and physical clearance unresolved.

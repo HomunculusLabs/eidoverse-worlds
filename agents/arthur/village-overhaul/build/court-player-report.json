@@ -1,0 +1,1079 @@
+{
+  "status": "PASS",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "evidenceKind": "actual-browser-collider-local-geometry-not-live-walk",
+  "id": "nx-court",
+  "bounds": {
+    "min": [
+      -6.5,
+      -0.20000000298023224,
+      -2.940000057220459
+    ],
+    "max": [
+      6.5,
+      4.775000095367432,
+      3.000267505645752
+    ]
+  },
+  "triangles": 35574,
+  "collider": {
+    "exact": true,
+    "pillar": false,
+    "classification": {
+      "roomScale": true,
+      "floorShaped": false,
+      "uneven": false
+    }
+  },
+  "constants": {
+    "requiredWidth": 1.4,
+    "requiredHeadroom": 2.2,
+    "bodyRadius": 0.32,
+    "bodyHeight": 1.9,
+    "sampleStep": 0.04,
+    "boundaryTolerance": 0.001,
+    "floorTolerance": 0.035
+  },
+  "doors": [
+    {
+      "name": "bakery-arch",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -4.05,
+        0.2,
+        1.4
+      ],
+      "max": [
+        -2.6500000000000004,
+        2.4000000000000004,
+        2.99
+      ],
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "name": "repair-arch",
+      "requiredWidth": 1.8,
+      "requiredHeadroom": 2.2,
+      "min": [
+        2.5,
+        0.2,
+        1.4
+      ],
+      "max": [
+        4.3,
+        2.4000000000000004,
+        2.99
+      ],
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "name": "central-court",
+      "requiredWidth": 1.4,
+      "requiredHeadroom": 2.2,
+      "min": [
+        -0.7,
+        0.2,
+        0.5
+      ],
+      "max": [
+        0.7,
+        2.4000000000000004,
+        2
+      ],
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "bakery-approach",
+      "to": "bakery-ground-edge",
+      "pass": true,
+      "steps": 12,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0.06320172,
+      "expectedFloorRange": [
+        -0.035,
+        0.09820172
+      ],
+      "arrivalXZ": 1.3322676295501878e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -3.35,
+        0,
+        3.3499999999999988
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "bakery-ground-edge",
+      "to": "bakery-landing",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0.20000000298023224,
+      "minY": 0,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 8.881784197001252e-16,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.35,
+        0.20000000298023224,
+        2.700000000000001
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "bakery-landing",
+      "to": "bread-display",
+      "pass": true,
+      "steps": 53,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 3.1086244689504383e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.35,
+        0.20000000298023224,
+        0.5999999999999969
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "bread-display",
+      "to": "kneading-counter",
+      "pass": true,
+      "steps": 34,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 0,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.35,
+        0.20000000298023224,
+        -0.75
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "kneading-counter",
+      "to": "oven-station",
+      "pass": true,
+      "steps": 19,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.3554841079649082e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.7500000000000013,
+        0.20000000298023224,
+        -0.15000000000000024
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "oven-station",
+      "to": "bakery-side-door",
+      "pass": true,
+      "steps": 45,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 7.549835443708629e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -2.0000000000000075,
+        0.20000000298023224,
+        0.10000000000000007
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "bakery-side-door",
+      "to": "shared-court",
+      "pass": true,
+      "steps": 51,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.1539445236012583e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -1.1518563880486e-15,
+        0.20000000298023224,
+        0.10000000000000007
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "shared-court",
+      "to": "repair-side-door",
+      "pass": true,
+      "steps": 71,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.2215299868541707e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        2.7999999999999976,
+        0.20000000298023224,
+        0.10000000000000007
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "repair-side-door",
+      "to": "ironware-bench",
+      "pass": true,
+      "steps": 24,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.002966042486721e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        3.199999999999996,
+        0.20000000298023224,
+        -0.7499999999999998
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "ironware-bench",
+      "to": "anvil-quench-station",
+      "pass": true,
+      "steps": 37,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 7.108895957933346e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        4.030000000000007,
+        0.20000000298023224,
+        0.45000000000000023
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "anvil-quench-station",
+      "to": "repair-landing",
+      "pass": true,
+      "steps": 59,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 7.562566735475685e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        3.4000000000000075,
+        0.20000000298023224,
+        2.6999999999999997
+      ],
+      "issues": []
+    },
+    {
+      "direction": "in",
+      "from": "repair-landing",
+      "to": "repair-approach",
+      "pass": true,
+      "steps": 28,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 6.311693569372732e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        3.399999999999995,
+        0,
+        3.799999999999996
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "repair-approach",
+      "to": "repair-landing",
+      "pass": true,
+      "steps": 28,
+      "maxPush": 0,
+      "maxRise": 0.20000000298023224,
+      "minY": 0,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 3.552713678800501e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        3.4,
+        0.20000000298023224,
+        2.7000000000000037
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "repair-landing",
+      "to": "anvil-quench-station",
+      "pass": true,
+      "steps": 59,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.8318679906315083e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        4.03,
+        0.20000000298023224,
+        0.4499999999999982
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "anvil-quench-station",
+      "to": "ironware-bench",
+      "pass": true,
+      "steps": 37,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.453364592678439e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        3.2000000000000046,
+        0.20000000298023224,
+        -0.7500000000000003
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "ironware-bench",
+      "to": "repair-side-door",
+      "pass": true,
+      "steps": 24,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.460365043975677e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        2.7999999999999954,
+        0.20000000298023224,
+        0.09999999999999959
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "repair-side-door",
+      "to": "shared-court",
+      "pass": true,
+      "steps": 70,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 4.2531514201421415e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -4.232725281383409e-15,
+        0.20000000298023224,
+        0.09999999999999959
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "shared-court",
+      "to": "bakery-side-door",
+      "pass": true,
+      "steps": 50,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 2.4582102826059027e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -1.9999999999999976,
+        0.20000000298023224,
+        0.10000000000000028
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "bakery-side-door",
+      "to": "oven-station",
+      "pass": true,
+      "steps": 45,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 8.437877587646513e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.7499999999999916,
+        0.20000000298023224,
+        -0.15000000000000005
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "oven-station",
+      "to": "kneading-counter",
+      "pass": true,
+      "steps": 19,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.336885555457667e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.3499999999999988,
+        0.20000000298023224,
+        -0.7499999999999999
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "kneading-counter",
+      "to": "bread-display",
+      "pass": true,
+      "steps": 34,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.4043333874306805e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.3499999999999988,
+        0.20000000298023224,
+        0.5999999999999995
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "bread-display",
+      "to": "bakery-landing",
+      "pass": true,
+      "steps": 53,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.20000000298023224,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        0.165,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 3.794299872214038e-15,
+      "floorError": 2.980232227667301e-9,
+      "geometryHits": 0,
+      "arrived": [
+        -3.3499999999999988,
+        0.20000000298023224,
+        2.7000000000000037
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "bakery-landing",
+      "to": "bakery-ground-edge",
+      "pass": true,
+      "steps": 17,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0,
+      "maxY": 0.20000000298023224,
+      "expectedFloorRange": [
+        -0.035,
+        0.23500000000000001
+      ],
+      "arrivalXZ": 1.88411095042053e-15,
+      "floorError": 0,
+      "geometryHits": 0,
+      "arrived": [
+        -3.3499999999999988,
+        0,
+        3.3500000000000014
+      ],
+      "issues": []
+    },
+    {
+      "direction": "out",
+      "from": "bakery-ground-edge",
+      "to": "bakery-approach",
+      "pass": true,
+      "steps": 12,
+      "maxPush": 0,
+      "maxRise": 0.0582761998497044,
+      "minY": 0,
+      "maxY": 0.0582761998497044,
+      "expectedFloorRange": [
+        -0.035,
+        0.09820172
+      ],
+      "arrivalXZ": 2.9790409838967277e-15,
+      "floorError": 0.004925520150295605,
+      "geometryHits": 0,
+      "arrived": [
+        -3.3499999999999988,
+        0.0582761998497044,
+        3.799999999999997
+      ],
+      "issues": []
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-h2",
+      "min": [
+        -6.308385784372051,
+        -0.035161336131530545,
+        -15.008803763219348
+      ],
+      "max": [
+        -2.53913782008259,
+        2.6096307441665356,
+        -11.149280680467232
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "min": [
+        -10.020718779771046,
+        -0.015837086362615927,
+        -8.171362577187848
+      ],
+      "max": [
+        -3.4371854396826698,
+        3.6385024673511825,
+        -4.625043026517595
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "min": [
+        7.002999995231628,
+        1.0200000087939298,
+        2.0345000011920953
+      ],
+      "max": [
+        7.743000004768371,
+        1.8800000302516018,
+        2.1544844342470193
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "min": [
+        -2.059999990463259,
+        0.100000022502998,
+        2.9574999991059303
+      ],
+      "max": [
+        -1.5400000095367452,
+        0.5199865983449017,
+        3.0299951764941215
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "min": [
+        -6.799999952316286,
+        0.3100000023841858,
+        -3.951000051498415
+      ],
+      "max": [
+        -5.200000047683718,
+        0.6499621272087097,
+        -3.8874777126312274
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "min": [
+        5.600000095367431,
+        0.6800000071525574,
+        -3.7910000085830684
+      ],
+      "max": [
+        7.199999999999999,
+        0.9800182580947876,
+        -3.7274777889251705
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-sign-bakery",
+      "min": [
+        -6.829999988079072,
+        1.850000039788345,
+        1.2249872177839283
+      ],
+      "max": [
+        -6.100000000670553,
+        2.4500129382334745,
+        1.5749999970197681
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-sign-smithy",
+      "min": [
+        6.100000000670551,
+        1.850000023841858,
+        -1.5199999973177882
+      ],
+      "max": [
+        6.82999998807907,
+        2.450010061264038,
+        -1.2800055012106868
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    },
+    {
+      "id": "nx-cistern",
+      "min": [
+        -2.249999988079072,
+        1.3562301345377684e-8,
+        2.3099999964237212
+      ],
+      "max": [
+        -0.5837703227996838,
+        0.7555339495860135,
+        3.140000456571579
+      ],
+      "allowance": null,
+      "hits": 0,
+      "examples": []
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "nx-forge",
+      "triangles": 2712,
+      "sha256": "d55c86d706774923e57bcec0d30b6ef4bca8cc50879a5c55c15fcd7aff897c58",
+      "sourceTuple": {
+        "pos": [
+          22.11785473473295,
+          0,
+          -7.957568494595163
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/620120c4d6f0b4a0.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-roads",
+      "triangles": 3392,
+      "sha256": "b3a939e4fd112ba927f1bae49fdabb167aac8af40ca70569db681e876b7c6448",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/3b76b621559fa1a1.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-town-streetlamps",
+      "triangles": 752,
+      "sha256": "65cfe522db39d20908f4269acd3e445cc4cfb7951457b9a06b037833e1e0443d",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 3.141592653589793,
+        "scale": 1,
+        "lib": "store/e815a897c7d73373.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-artwalk-h2",
+      "triangles": 9860,
+      "sha256": "93ee3f01223c31f6d3693be28846301b2124e44351a42610cfdd7fc1d200640b",
+      "sourceTuple": {
+        "pos": [
+          27,
+          -0.03516135170548859,
+          -27
+        ],
+        "yaw": -0.7853981633974483,
+        "scale": 1,
+        "lib": "store/f14d70564a107879.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-h5",
+      "triangles": 1628,
+      "sha256": "22d786a4e7b64851f140ab36c8216cd62d3f83363210768e3b96e48ca2966e9b",
+      "sourceTuple": {
+        "pos": [
+          19.79898987322333,
+          -0.015837100520963706,
+          -24.041630560342615
+        ],
+        "yaw": -0.7853981633974483,
+        "scale": 1,
+        "lib": "store/3c48f921d262907a.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-artwalk-b16-forge-seven-strikes",
+      "triangles": 108,
+      "sha256": "8720e8af788cb7a560bcccea4840d96c0dc2fa49279790f2e565d207b110f170",
+      "sourceTuple": {
+        "pos": [
+          21.81053323270505,
+          1.02,
+          -7.717457073810321
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/54555b39274bc00c.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b23-cistern-rain-count",
+      "triangles": 108,
+      "sha256": "1cb32012817cb1d9afce50f4295e15afb6b3bb711a69d297d7d25bfd8b984d5f",
+      "sourceTuple": {
+        "pos": [
+          15.443541965497799,
+          0.31,
+          -14.383709409516388
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/8d9419e5c2d9e3e7.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b28-bake-count",
+      "triangles": 108,
+      "sha256": "caee97d0ef878fab344a809520da760bf6edc157b2cf96cbc3c07c15ed73b56d",
+      "sourceTuple": {
+        "pos": [
+          18.593536600282096,
+          -1.5946487083102603e-8,
+          -18.367647009533506
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/18c1bb5da4328ae7.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-artwalk-b29-strike-count",
+      "triangles": 108,
+      "sha256": "b912719db9d6db68f1f88869c0b136905988c5c11154113c8586cd79e3102418",
+      "sourceTuple": {
+        "pos": [
+          22.347652212343093,
+          -1.5946487083102603e-8,
+          -13.43276950636487
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/a7df548e06d1412d.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-town-hall",
+      "triangles": 2100,
+      "sha256": "b36554d18d70bc5cb45af9892667e59c4600caf3131c82ca3308f4a55e57de16",
+      "sourceTuple": {
+        "pos": [
+          9,
+          0,
+          -26
+        ],
+        "yaw": -0.31322457341772525,
+        "scale": 1,
+        "lib": "store/c92c1f91ed4fd45f.glb"
+      },
+      "colliderExact": true
+    },
+    {
+      "id": "nx-sign-bakery",
+      "triangles": 984,
+      "sha256": "dd5cc8ea899c7670cbb965db6907b2f37f034b5cfc50a8dc2a501aa68555c808",
+      "sourceTuple": {
+        "pos": [
+          14.022735609615019,
+          0,
+          -18.768525175210893
+        ],
+        "yaw": 2.234032653589793,
+        "scale": 1,
+        "lib": "store/49342c523aee4d41.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-sign-smithy",
+      "triangles": 520,
+      "sha256": "f0a038e3196c9adbe6764812578e441c73d1ad23e9957e6802aa78cead7a1286",
+      "sourceTuple": {
+        "pos": [
+          23.777264390384975,
+          -1.5946487083102603e-8,
+          -10.831474824789108
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/3522e5ab0c3a5100.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-core-paths",
+      "triangles": 948,
+      "sha256": "2a6a725528cf444e0eae773996bc2fef105c8a5386a301fe7e8c5325a0237999",
+      "sourceTuple": {
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "scale": 1,
+        "lib": "store/c31b6e3f22641e14.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-dress-ne-anvilpad-001",
+      "triangles": 674,
+      "sha256": "9b6a60d59facb9203b24c8c8f202de24d326bcc05b3429c8b0573f86a01c4502",
+      "sourceTuple": {
+        "pos": [
+          24.765,
+          0,
+          -4.57
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/65d686b023348c9b.glb"
+      },
+      "colliderExact": false
+    },
+    {
+      "id": "nx-cistern",
+      "triangles": 220,
+      "sha256": "a73d5f60417acdc0ee66b4905254b345e6bcb983d07a84fb954c199147056647",
+      "sourceTuple": {
+        "pos": [
+          15.703583236444484,
+          0,
+          -14.586880611718946
+        ],
+        "yaw": -0.90756,
+        "scale": 1,
+        "lib": "store/156b4fc8c7287a9d.glb"
+      },
+      "colliderExact": false
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Only explicitly supplied assembly neighbors are checked; coverage and terrain remain caller contracts.",
+    "Door floorY is the highest authorized threshold surface, not a fabricated clearance lift.",
+    "Swept square conservatively encloses the standing body and may reject near-corner contacts.",
+    "Physical geometry checks do not prove visual quality or live runtime deployment parity."
+  ],
+  "modelSha256": "17a9b700194c544ed04c716fcbd7eafa384cfc1b2780c7b3bd4e4039ef9d4e7e"
+}

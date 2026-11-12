@@ -1,0 +1,34 @@
+OpenAI Codex v0.153.4
+--------
+workdir: /Users/t3rpz/projects/eidoverse-worlds
+model: gpt-6-astra
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 01a07f49-cab6-7e10-a679-01262f76eaf4
+--------
+user
+Inspect these ten actual live Eidoverse snapshots, filename labeled N/S/E/W gates, dyehouse, potter, kiln, and closer craft station views. No tools. Verify visible new architecture/identity and identify any definite materially broken new-host geometry. Distinguish crop/occlusion from physical blockage. Existing mounted artworks remain unchanged; do not blame an inherited neighbor for a new-host defect without evidence. No taste score, walking/motion claims, or parent direct-sight claims. Fixed-noon public lighting, not night. 500 words maximum.
+codex
+The ten snapshots visibly establish new architectural and craft identities. **No definite materially broken new-host geometry is demonstrated.** Several views contain occlusion or tight framing that limits inspection.
+
+- **N/S/E/W gates:** All four show substantial timber portals with pitched caps, shaped opening corners, and stone footings. E most clearly exposes the decorative fan-shaped header; N shows small gold details along the right upright. The openings are visually identifiable. Posts and other objects overlap the passage sightlines, but these projections alone do not establish a physically blocked opening.
+- **W gate:** A large foreground upright and diagonal framework obscure much of the gate. Their depth relative to the gate is apparent, but the image does not establish an intersection with the new portal. This is an obstructed camera view, not evidence that the gate itself is broken. Nothing here justifies attributing a new-host defect to an unchanged neighboring artwork.
+- **Dyehouse:** The approach and close view clearly establish a roofed timber workstation, hanging textile sign, suspended cloth, three colored dye vats with stirring implements, and a side display of folded material and a blue roll. The vats appear coherently seated on the paved base. The central sign obscures part of the cloth and backing; this is visual overlap, with no definite malformed join or penetration visible.
+- **Potter:** Shelves of varied vessels, a central wheel with a pot, adjoining work surfaces, and a hanging pot silhouette establish its identity. In the approach view, foreground supports overlap the workstation and the sign assembly extends beyond the top edge. The close view clarifies the wheel and benches. Neither framing nor those overlaps prove a blocked station or defective structure.
+- **Kiln:** Both views clearly show a tapered masonry body, layered circular mouth, visible fire, hanging sign, material bin, and adjacent covered work area. The closer image crops the upper silhouette and right-hand shelter. The approach provides broader context; neither shows a definite break in the kiln body or shelter.
+
+**Review limitation:** Under the stated fixed-noon public lighting, substantial timber, pottery, and recessed surfaces render very dark. That reduces certainty about concealed connections and clearances; it is not evidence of night conditions or broken geometry. These stills support recognition of the new architecture and craft identities, but cannot settle the physical clearances hidden by foreground objects.
+tokens used
+22,966
+The ten snapshots visibly establish new architectural and craft identities. **No definite materially broken new-host geometry is demonstrated.** Several views contain occlusion or tight framing that limits inspection.
+
+- **N/S/E/W gates:** All four show substantial timber portals with pitched caps, shaped opening corners, and stone footings. E most clearly exposes the decorative fan-shaped header; N shows small gold details along the right upright. The openings are visually identifiable. Posts and other objects overlap the passage sightlines, but these projections alone do not establish a physically blocked opening.
+- **W gate:** A large foreground upright and diagonal framework obscure much of the gate. Their depth relative to the gate is apparent, but the image does not establish an intersection with the new portal. This is an obstructed camera view, not evidence that the gate itself is broken. Nothing here justifies attributing a new-host defect to an unchanged neighboring artwork.
+- **Dyehouse:** The approach and close view clearly establish a roofed timber workstation, hanging textile sign, suspended cloth, three colored dye vats with stirring implements, and a side display of folded material and a blue roll. The vats appear coherently seated on the paved base. The central sign obscures part of the cloth and backing; this is visual overlap, with no definite malformed join or penetration visible.
+- **Potter:** Shelves of varied vessels, a central wheel with a pot, adjoining work surfaces, and a hanging pot silhouette establish its identity. In the approach view, foreground supports overlap the workstation and the sign assembly extends beyond the top edge. The close view clarifies the wheel and benches. Neither framing nor those overlaps prove a blocked station or defective structure.
+- **Kiln:** Both views clearly show a tapered masonry body, layered circular mouth, visible fire, hanging sign, material bin, and adjacent covered work area. The closer image crops the upper silhouette and right-hand shelter. The approach provides broader context; neither shows a definite break in the kiln body or shelter.
+
+**Review limitation:** Under the stated fixed-noon public lighting, substantial timber, pottery, and recessed surfaces render very dark. That reduces certainty about concealed connections and clearances; it is not evidence of night conditions or broken geometry. These stills support recognition of the new architecture and craft identities, but cannot settle the physical clearances hidden by foreground objects.

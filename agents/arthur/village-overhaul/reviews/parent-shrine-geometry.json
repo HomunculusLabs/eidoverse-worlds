@@ -1,0 +1,19 @@
+{
+  "id": "nx-town-shrine",
+  "modelSha256": "f51be95de91ad5b3b6c5ce7d88a64172a84d31a5e4511847da3ba98bd4060c67",
+  "status": "PASS",
+  "basis": "parent deterministic rebuild + public-runtime complete neighbor route rerun; independent native ensemble visual acceptance",
+  "evidence": [
+    {
+      "file": "build/shrine-exterior-player.json",
+      "sha256": "1bdda6a9c07fac4c6446a261d1797ad8c561f4253c321703a0b10d296e6739ca"
+    },
+    {
+      "file": "shrine-gates-notes.md",
+      "sha256": "152b4f1126709bdbf0cdf2d830e9c1a085a4f96285609a3979b8594f489e4df9"
+    }
+  ],
+  "limits": [
+    "Constrained envelope and supplied route/artwork volumes, not a universal world-solid certificate."
+  ]
+}

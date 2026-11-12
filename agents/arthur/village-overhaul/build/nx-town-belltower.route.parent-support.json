@@ -1,0 +1,1326 @@
+{
+  "status": "FAIL",
+  "id": "nx-town-belltower",
+  "kind": "workstation",
+  "runtime": {
+    "mode": "served-override",
+    "root": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/cabin-overhaul/runtime",
+    "files": {
+      "colliders.js": {
+        "sha256": "b251bf7d894fb7be25d477bffab781d8a192e9f076d201aa9bdd342f32f34826",
+        "publicPath": "/lib/colliders.js"
+      },
+      "supportclass.js": {
+        "sha256": "b19727b1e13e02dd4adcba3459705dcc9a5356d7352342d2d1b6a3efe3c5672e",
+        "publicPath": "/lib/supportclass.js"
+      }
+    },
+    "threeRevision": "184",
+    "bindings": "repo core-stub, three and three-mesh-bvh; not a full renderer deployment clone"
+  },
+  "collider": {
+    "exact": true,
+    "pillar": false
+  },
+  "neighbors": [
+    "nx-hearth",
+    "nx-town-roads",
+    "nx-town-streetlamps",
+    "nx-dress-fountain",
+    "nx-artwalk-b5-belltower-rings",
+    "nx-artwalk-b22-mapboard-eight-ways",
+    "nx-core-paths",
+    "nx-artwalk-b26-wayband",
+    "nx-artwalk-b34-wayband-e",
+    "nx-town-mapboard",
+    "nx-approach-lamp-e",
+    "nx-approach-lamp-n"
+  ],
+  "walks": [
+    {
+      "direction": "in",
+      "from": "rear-approach",
+      "to": "rear-threshold",
+      "steps": 39,
+      "maxPush": 0,
+      "maxRise": 0.24172382801771164,
+      "minY": 0,
+      "maxY": 0.30000001192092896,
+      "arrivalXZ": 8.881784197001252e-16,
+      "floorError": 1.1920928966180355e-8,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "in",
+      "from": "rear-threshold",
+      "to": "bell-rope-station",
+      "steps": 15,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.30000001192092896,
+      "maxY": 0.30000001192092896,
+      "arrivalXZ": 2.3592239273284576e-16,
+      "floorError": 1.1920928966180355e-8,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "bell-rope-station",
+      "to": "rear-threshold",
+      "steps": 15,
+      "maxPush": 0,
+      "maxRise": 1.1920928966180355e-8,
+      "minY": 0.3,
+      "maxY": 0.30000001192092896,
+      "arrivalXZ": 0,
+      "floorError": 1.1920928966180355e-8,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": true
+    },
+    {
+      "direction": "out",
+      "from": "rear-threshold",
+      "to": "rear-approach",
+      "steps": 39,
+      "maxPush": 0,
+      "maxRise": 0,
+      "minY": 0.058276183903217316,
+      "maxY": 0.30000001192092896,
+      "arrivalXZ": 8.881784197001252e-16,
+      "floorError": 0.058276183903217316,
+      "geometryHits": 0,
+      "examples": [],
+      "pass": false
+    }
+  ],
+  "physicalSupport": {
+    "method": "independent-default-scene-triangle-ray-and-declared-terrain",
+    "pass": false,
+    "samples": [
+      {
+        "name": "in:start",
+        "pos": [
+          0,
+          0,
+          -2.2
+        ],
+        "ground": 0,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:1",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.1602564102564106
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:2",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.120512820512821
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:3",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.0807692307692314
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:4",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.0410256410256418
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:5",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.001282051282052
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:6",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.9615384615384623
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:7",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.9217948717948725
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:8",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.8820512820512827
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:9",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.8423076923076929
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:10",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.802564102564103
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:11",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.7628205128205132
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:12",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.7230769230769234
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:13",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.6833333333333336
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:14",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.6435897435897437
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:15",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.603846153846154
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:16",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.564102564102564
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:17",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.5243589743589743
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:18",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.4846153846153844
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:19",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.4448717948717946
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:20",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.4051282051282048
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:21",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.365384615384615
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:22",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.3256410256410252
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:23",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.2858974358974353
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:24",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.2461538461538455
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:25",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.2064102564102557
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:26",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.1666666666666659
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:27",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.126923076923076
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:28",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.0871794871794862
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:29",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.0474358974358964
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:30",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.0076923076923066
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:31",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.9679487179487168
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:32",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.9282051282051271
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:33",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.8884615384615374
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:34",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.8487179487179477
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:35",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.808974358974358
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:36",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.7692307692307683
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:37",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.7294871794871786
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:38",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.6897435897435888
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-approach:rear-threshold:39",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.6499999999999991
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:1",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.6099999999999992
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:2",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.5699999999999993
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:3",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.5299999999999994
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:4",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.48999999999999944
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:5",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.4499999999999995
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:6",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.4099999999999996
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:7",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.36999999999999966
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:8",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.32999999999999974
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:9",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.2899999999999998
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:10",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.2499999999999999
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:11",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.20999999999999996
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:12",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.17000000000000004
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:13",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.13000000000000012
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:14",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.09000000000000018
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "in:rear-threshold:bell-rope-station:15",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.05000000000000024
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:start",
+        "pos": [
+          0,
+          0.3,
+          -0.05
+        ],
+        "ground": 0.30000001192092896,
+        "gap": -1.1920928966180355e-8,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:1",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.09
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:2",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.13
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:3",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.17
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:4",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.21000000000000002
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:5",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.25
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:6",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.29
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:7",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.32999999999999996
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:8",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.36999999999999994
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:9",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.4099999999999999
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:10",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.4499999999999999
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:11",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.4899999999999999
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:12",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.5299999999999999
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:13",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.57
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:14",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.61
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:bell-rope-station:rear-threshold:15",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.65
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:1",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.6897435897435897
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:2",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.7294871794871794
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:3",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.7692307692307692
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:4",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.8089743589743589
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:5",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.8487179487179486
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:6",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.8884615384615383
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:7",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.928205128205128
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:8",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -0.9679487179487177
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:9",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.0076923076923074
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:10",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.0474358974358973
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:11",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.087179487179487
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:12",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.126923076923077
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:13",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.1666666666666667
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:14",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.2064102564102566
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:15",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.2461538461538464
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:16",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.2858974358974362
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:17",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.325641025641026
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:18",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.3653846153846159
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:19",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.4051282051282057
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:20",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.4448717948717955
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:21",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.4846153846153853
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:22",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.5243589743589752
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:23",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.564102564102565
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:24",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.6038461538461548
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:25",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.6435897435897446
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:26",
+        "pos": [
+          0,
+          0.30000001192092896,
+          -1.6833333333333345
+        ],
+        "ground": 0.30000001192092896,
+        "gap": 0,
+        "pass": true
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:27",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.7230769230769243
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:28",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.762820512820514
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:29",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.802564102564104
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:30",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.8423076923076938
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:31",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.8820512820512836
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:32",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.9217948717948734
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:33",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -1.9615384615384632
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:34",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.001282051282053
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:35",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.0410256410256427
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:36",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.0807692307692323
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:37",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.120512820512822
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:38",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.1602564102564115
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      },
+      {
+        "name": "out:rear-threshold:rear-approach:39",
+        "pos": [
+          0,
+          0.058276183903217316,
+          -2.200000000000001
+        ],
+        "ground": 0,
+        "gap": 0.058276183903217316,
+        "pass": false
+      }
+    ]
+  },
+  "evidenceKind": "actual-browser-collider-external-access-not-live-walk",
+  "limitations": [
+    "Not an enterable-room certification.",
+    "Only supplied neighbors and declared flat terrain checked."
+  ],
+  "modelSha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+  "routeSha256": "08a583bfcffb6e329b22ed49ffb54e074d895ca93b4cc55a4acbe2c08f51b06c",
+  "adapterSha256": "abda1150a2bb52a5f0a1defd892fa1c36855fcb89e645f3a65785c68dcbfda79",
+  "proofFrame": "host-local"
+}

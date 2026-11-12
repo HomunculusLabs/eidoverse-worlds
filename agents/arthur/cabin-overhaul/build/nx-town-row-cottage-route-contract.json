@@ -1,0 +1,84 @@
+{
+  "id": "nx-town-row-cottage",
+  "scale": 1,
+  "terrainY": 0,
+  "doors": [
+    {
+      "name": "west-gabled-entry",
+      "x": -1.565,
+      "z": [
+        1.4,
+        2.68
+      ],
+      "floorY": 0.2,
+      "width": 1.45,
+      "headroom": 2.35
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "outside",
+      "pos": [
+        -1.565,
+        0,
+        3.2
+      ]
+    },
+    {
+      "name": "before-threshold",
+      "pos": [
+        -1.565,
+        0,
+        2.9
+      ]
+    },
+    {
+      "name": "threshold",
+      "pos": [
+        -1.565,
+        0.2,
+        2.4
+      ]
+    },
+    {
+      "name": "inside",
+      "pos": [
+        -1.565,
+        0.2,
+        1.6
+      ]
+    },
+    {
+      "name": "turn",
+      "pos": [
+        0,
+        0.2,
+        0.85
+      ]
+    },
+    {
+      "name": "weaver-room",
+      "pos": [
+        0,
+        0.2,
+        -0.3
+      ]
+    }
+  ],
+  "protectedVolumes": [
+    {
+      "id": "nx-artwalk-b18-row-warp-count",
+      "min": [
+        -0.81,
+        2.22,
+        2.25
+      ],
+      "max": [
+        0.81,
+        2.68,
+        2.37
+      ]
+    }
+  ],
+  "sha256": "0558b5f41bda077772846350737047605f628d9b97a7c159d1f6b9d4574bccfc"
+}

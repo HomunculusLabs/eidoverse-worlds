@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "id": "nx-town-belltower",
+  "sources": {
+    "build-belltower.ts": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc",
+    "kit.ts": "7390386a362c80a9b5b28b04091007ceca39d603cb361ce89de5fd5c18db4e51"
+  },
+  "sourceSha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc",
+  "sharedLaneHelperSha256": "37ee4e7246e4b46dcc4a8f27d79f7f5eb3a47769de2e01ea8719080555b39fbc",
+  "beforeSha256": "0fa6b6c117180e129deb81590bb02ff4471a3693ade35991b591240f517f5a36",
+  "runs": [
+    {
+      "run": 1,
+      "startTimeNs": "1788837817028188000",
+      "mtimeNs": "1788837817333194124",
+      "mtimeChanged": true,
+      "sha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+      "bytes": 271272,
+      "command": [
+        "bun",
+        "agents/arthur/village-overhaul/build-belltower.ts"
+      ],
+      "stdout": "{\"id\":\"nx-town-belltower\",\"sha256\":\"7700217c84d7ef750decc8d36bede555aead793016cad9e01ce311f6f00ee0e8\",\"bytes\":215820,\"nodes\":7,\"meshes\":7,\"bounds\":{\"min\":[-1.7000000476837158,-5.960464483090178e-9,-1.7000000476837158],\"max\":[1.7000000476837158,8.490000004172325,1.7000000476837158]},\"parts\":78}\n{\"id\":\"nx-town-belltower\",\"sha256\":\"5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145\",\"bytes\":271272,\"triangles\":2590,\"bounds\":{\"min\":[-1.7000000476837158,-5.9604645663569045e-9,-1.7000000476837158],\"max\":[1.7000000476837158,8.489999771118164,1.7000000476837158]},\"retained\":[\"bt3_2\",\"bt3_3\",\"bt3_4\",\"bt3_5\",\"bell\",\"bell_0\",\"bell_1\",\"bell_2\",\"lamp\",\"bt3_1_retained_hardware\"]}\n",
+      "stderr": "",
+      "exitCode": 0
+    },
+    {
+      "run": 2,
+      "startTimeNs": "1788837817344574000",
+      "mtimeNs": "1788837817663980791",
+      "mtimeChanged": true,
+      "sha256": "5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145",
+      "bytes": 271272,
+      "command": [
+        "bun",
+        "agents/arthur/village-overhaul/build-belltower.ts"
+      ],
+      "stdout": "{\"id\":\"nx-town-belltower\",\"sha256\":\"7700217c84d7ef750decc8d36bede555aead793016cad9e01ce311f6f00ee0e8\",\"bytes\":215820,\"nodes\":7,\"meshes\":7,\"bounds\":{\"min\":[-1.7000000476837158,-5.960464483090178e-9,-1.7000000476837158],\"max\":[1.7000000476837158,8.490000004172325,1.7000000476837158]},\"parts\":78}\n{\"id\":\"nx-town-belltower\",\"sha256\":\"5568ac44953b9d22209315c8283ac85bd8bdab8bf3fcb32977ce4b63f9978145\",\"bytes\":271272,\"triangles\":2590,\"bounds\":{\"min\":[-1.7000000476837158,-5.9604645663569045e-9,-1.7000000476837158],\"max\":[1.7000000476837158,8.489999771118164,1.7000000476837158]},\"retained\":[\"bt3_2\",\"bt3_3\",\"bt3_4\",\"bt3_5\",\"bell\",\"bell_0\",\"bell_1\",\"bell_2\",\"lamp\",\"bt3_1_retained_hardware\"]}\n",
+      "stderr": "",
+      "exitCode": 0
+    }
+  ]
+}
